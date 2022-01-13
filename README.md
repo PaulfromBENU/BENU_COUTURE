@@ -5,4 +5,4 @@ BENU COUTURE est une plate-forme web d'achat de vêtements de seconde main, con�
 
 Le site est développé en php avec le framework Laravel (version 8) & Livewire.
 
-A compléter.
+A compléter au fur et à mesure du développement.
