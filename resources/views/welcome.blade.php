@@ -76,7 +76,7 @@
     <section class="universe">
         <div class="text-center">
             <h2>
-                L'univers BENU
+                L'univers de BENU
             </h2>
             <div class="universe__links">
                 <div>
