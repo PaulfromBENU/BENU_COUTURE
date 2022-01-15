@@ -61,6 +61,7 @@
                     </h2>
                     <!-- <div>
                         <form method="POST" class="contact_form">
+                            @csrf
                             <input type="email" name="newsletter_email" placeholder="Je m'inscris à la newsletter">
                             <input type="submit" name="newsletter_btn" value="Je m'inscris">
                         </form>
@@ -76,7 +77,7 @@
     <section class="universe">
         <div class="text-center">
             <h2>
-                L'univers de BENU
+                L'univers BENU
             </h2>
             <div class="universe__links">
                 <div>
@@ -91,15 +92,4 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript">
-        $(function() {
-            let newTop = '130px';
-            $('#header-bird-pic').css('top', newTop);
-            setInterval(function() {
-                newTop = 60 + 150*Math.random();
-                newTop += 'px';
-                $('#header-bird-pic').css('top', newTop);
-            }, 2500);
-        });
-    </script>
 @endsection

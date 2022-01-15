@@ -18,7 +18,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style_landing_page.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/tailwindcss.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
 
         <!-- Font awesome icons -->
@@ -33,15 +33,17 @@
 
     <body class="antialiased overflow-x-hidden">
         <div class="min-h-screen">
+            <!-- Page header -->
             @yield('header')
 
             <!-- Page Content -->
             <main>
                 @yield('main-content')
             </main>
+
+            <!-- Footer -->
+            @include('footer.footer')
         </div>
-        
-        @include('footer.footer')
 
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

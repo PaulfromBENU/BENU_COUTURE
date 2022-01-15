@@ -1,0 +1,33 @@
+.btn-large {
+	text-transform: uppercase;
+	width: 333px;
+	padding: 10px 25px 10px 25px;
+	color: $benu_reuse;
+	text-align: center;
+	font: normal normal 500 42px/50px "Barlow Condensed";
+	letter-spacing: 0px;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 3px;
+	text-decoration: none;
+	margin: 10px;
+	display: inline-block;
+}
+
+.btn-yellow {
+	color: var $benu_reuse;
+	border-color: $benu_reuse;
+	&:hover {
+		background: $benu_reuse;
+		color:  white;
+	}
+}
+
+.btn-green {
+	color: $benu_village;
+	border-color: $benu_village;
+	&:hover {
+		background: $benu_village;
+		color: white;
+	}
+}

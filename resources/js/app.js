@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./landing_bird_animation');
 
 import Alpine from 'alpinejs';
 
