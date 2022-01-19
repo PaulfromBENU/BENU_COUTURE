@@ -21,11 +21,11 @@
 	text-align: justify;
 	h1 {
 		text-transform: uppercase;
-		color:  $benu_couture_couleur_principale;
+		color:  $primary-color;
 		text-align: center;
 		margin-top: 50px;
 		margin-bottom: 5px;
-		color: $benu_couture_couleur_principale;
+		color: $primary-color;
 		text-align: center;
 		font: normal normal 600 72px/86px "Barlow Condensed";
 		letter-spacing: 0px;
@@ -74,7 +74,7 @@
 
 .contact_form {
 	padding: 10px;
-	background: $benu_couture_couleur_principale;
+	background: $primary-color;
 	border-radius: 10px;
 }
 
@@ -96,10 +96,10 @@
 
 .contact-link {
 	a {
-		border: solid 3px $benu_couture_couleur_principale;
+		border: solid 3px $primary-color;
 		height: 40px;
 		background: white;
-		color: $benu_couture_couleur_principale;
+		color: $primary-color;
 		padding: 5px 30px;
 		font-size: 1rem;
 		border-radius: 5px;
@@ -107,7 +107,7 @@
 		text-decoration: none;
 		font: normal normal 500 22px/23px "Barlow Condensed";
 		&:hover {
-			background: $benu_couture_couleur_principale;
+			background: $primary-color;
 			color: white;
 		}
 	}
@@ -135,7 +135,7 @@
 		box-sizing: border-box;
 		&__header {
 			width: 350px;
-			background: $benu_couture_couleur_principale;
+			background: $primary-color;
 			color:  white;
 			padding: 5px 25px 5px 25px;
 			text-align: center;
@@ -161,7 +161,7 @@
 			text-align: center;
 			border-radius: 10px;
 			a {
-				color: $benu_couture_couleur_principale;
+				color: $primary-color;
 			}
 		}
 		&__icons {

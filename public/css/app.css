@@ -1,1 +1,383 @@
-body{box-sizing:border-box;color:#3c3c3c;font-family:Barlow,sans-serif;margin:0}footer{background:#d41c1b;height:233px;position:relative}header{background:#d41c1b 0 0 no-repeat padding-box;height:704px;width:100%}input[type=email]{border:none;border-radius:5px;font-size:1rem;height:30px;padding:5px 10px;width:300px}input[type=submit]{background:#fff;border:none;border-radius:5px;color:#d41c1b;cursor:pointer;font-size:1rem;height:40px;margin-left:10px;padding:5px 30px}input[type=submit]:hover{background:#d41c1b;color:#fff}::-moz-placeholder{color:#d0d0d0}:-ms-input-placeholder{color:#d0d0d0}::placeholder{color:#d0d0d0}.btn-large{border-radius:10px;border-style:solid;border-width:3px;color:#f9941d;display:inline-block;font:normal normal 500 42px/50px Barlow Condensed;letter-spacing:0;margin:10px;padding:10px 25px;text-align:center;text-decoration:none;text-transform:uppercase;width:333px}.btn-yellow{border-color:#f9941d;color:var #f9941d}.btn-yellow:hover{background:#f9941d;color:#fff}.btn-green{border-color:#27955b;color:#27955b}.btn-green:hover{background:#27955b;color:#fff}.central_col{box-sizing:border-box;margin-left:22vw;margin-top:-140px;position:absolute;width:56vw}@media only screen and (max-width:768px){.central_col{box-sizing:border-box;margin-left:10vw;margin-top:-50px;position:absolute;width:80vw}}.central_textbox{background:#fff;border-radius:15px;box-shadow:0 3px 66px #00000029;padding:20px 0;text-align:justify}.central_textbox h1{color:#d41c1b;font:normal normal 600 72px/86px Barlow Condensed;letter-spacing:0;margin-bottom:5px;margin-top:50px;text-align:center;text-transform:uppercase}.central_textbox__desc{color:#2e1414;font:normal normal 400 18px/33px Barlow;letter-spacing:0;margin:auto auto 65px;width:75%}@media only screen and (max-width:768px){.central_textbox__desc{font-size:.8rem;line-height:1.5rem;padding:20px 10px}}.central_textbox__sub{color:#2e141480;font:normal normal 400 16px/28px Barlow Condensed;letter-spacing:.16px;margin-bottom:16px;margin-top:16px;text-align:center}.central_textbox__teaser{display:flex;justify-content:center;position:absolute;top:-22px;width:100%}.central_textbox__teaser p{background:#323232;border-radius:10px;color:#fff;font:normal normal 300 28px/34px Barlow Condensed;letter-spacing:0;margin:0;padding:5px 40px;text-align:center;text-transform:uppercase}.contact_form{background:#d41c1b;border-radius:10px;padding:10px}.contact_form_container{display:flex;flex-wrap:wrap;height:53px;justify-content:center;margin-top:70px}.contact_form_container h2{color:#2e1414;font:normal normal 800 44px/53px Barlow Condensed;letter-spacing:0;margin:0 0 30px;text-align:center}.contact-link a{background:#fff;border:3px solid #d41c1b;border-radius:5px;color:#d41c1b;cursor:pointer;font-size:1rem;font:normal normal 500 22px/23px Barlow Condensed;height:40px;padding:5px 30px;text-decoration:none}.contact-link a:hover{background:#d41c1b;color:#fff}.footer__copyright{bottom:25px;color:#fff;font:normal normal 500 18px/33px Barlow;letter-spacing:0;position:absolute;text-align:center;width:100%}.footer__links{background:#fff;border-radius:15px;box-shadow:0 3px 66px #00000029;box-sizing:border-box;margin-left:calc(50vw - 300px);margin-top:-125px;min-height:240px;position:absolute;width:600px}.footer__links__header{background:#d41c1b;border-radius:10px;color:#fff;font:normal normal 600 44px/53px Barlow Condensed;letter-spacing:0;padding:5px 25px;text-align:center;width:350px}.footer__links__header-container{display:flex;justify-content:center;position:absolute;top:-35px;width:100%}.footer__links__icon{background:#f6f6f6;border-radius:10px;font-family:Barlow Condensed;font-size:2.8rem;margin:85px 10px 10px;padding:12px 0;text-align:center;width:95px}.footer__links__icon a{color:#d41c1b}.footer__links__icons{display:flex;justify-content:space-around;padding:0 78px}.header_bckgnd{height:100%}.header_bckgnd__bird{left:calc(50vw - 220px);position:absolute;top:100px;transition:top 2.5s ease-in-out}.header_bckgnd__font{height:100%;overflow:hidden;position:relative}.header_bckgnd__moving{color:#fff;height:100%;position:absolute;width:100vw}.header_bckgnd__moving--1{-webkit-animation:clouds1 15s linear infinite;animation:clouds1 15s linear infinite;left:0}.header_bckgnd__moving--2{-webkit-animation:clouds2 15s linear infinite;animation:clouds2 15s linear infinite;left:100vw}@-webkit-keyframes clouds1{0%{left:0}to{left:-100vw}}@keyframes clouds1{0%{left:0}to{left:-100vw}}@-webkit-keyframes clouds2{0%{left:100vw}to{left:0}}@keyframes clouds2{0%{left:100vw}to{left:0}}.header_logo{color:#fff;left:10vw;position:absolute;top:0}.header_socialmedia{color:#fff;display:flex;flex-wrap:wrap;font-size:1.5rem;font-weight:300;height:25px;left:80vw;position:absolute;top:75px}.header_socialmedia a,.header_socialmedia a:hover{color:#fff}.header_socialmedia p{margin:5px 12px}.pattern_bg{background:transparent url(/images/pattern_solo_benu_couture_OK.svg) 0 0 repeat padding-box;background-size:15%;height:638px}.universe{padding-bottom:150px;padding-top:50px}.universe h2{color:#2e1414;font:normal normal 500 44px/53px Barlow Condensed;letter-spacing:0;margin-top:36px;text-align:center}.universe__links{display:flex;flex-wrap:wrap;justify-content:center;margin:50px auto 100px;width:50vw}
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  color: #3c3c3c;
+  font-family: "Barlow", sans-serif;
+}
+
+footer {
+  background: #D41C1B;
+  height: 233px;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 704px;
+  background: #D41C1B 0% 0% no-repeat padding-box;
+}
+
+input[type=email] {
+  width: 300px;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+input[type=submit] {
+  border: none;
+  height: 40px;
+  background: white;
+  color: #D41C1B;
+  padding: 5px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+input[type=submit]:hover {
+  background: #D41C1B;
+  color: white;
+}
+
+::-moz-placeholder {
+  color: #D0D0D0;
+}
+
+:-ms-input-placeholder {
+  color: #D0D0D0;
+}
+
+::placeholder {
+  color: #D0D0D0;
+}
+
+.btn-large {
+  text-transform: uppercase;
+  width: 333px;
+  padding: 10px 25px 10px 25px;
+  color: #F9941D;
+  text-align: center;
+  font: normal normal 500 42px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 3px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+}
+
+.btn-yellow {
+  color: var #F9941D;
+  border-color: #F9941D;
+}
+.btn-yellow:hover {
+  background: #F9941D;
+  color: white;
+}
+
+.btn-green {
+  color: #27955B;
+  border-color: #27955B;
+}
+.btn-green:hover {
+  background: #27955B;
+  color: white;
+}
+
+.central_col {
+  width: 56vw;
+  margin-left: 22vw;
+  margin-top: -140px;
+  position: absolute;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 768px) {
+  .central_col {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: -50px;
+    position: absolute;
+    box-sizing: border-box;
+  }
+}
+
+.central_textbox {
+  background: white;
+  padding: 20px 0px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 66px #00000029;
+  text-align: justify;
+}
+.central_textbox h1 {
+  text-transform: uppercase;
+  color: #D41C1B;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  color: #D41C1B;
+  text-align: center;
+  font: normal normal 600 72px/86px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.central_textbox__desc {
+  font: normal normal 400 18px/33px "Barlow";
+  letter-spacing: 0px;
+  /*padding: 20px 70px;*/
+  width: 75%;
+  margin: auto;
+  margin-bottom: 65px;
+  color: #2E1414;
+}
+@media only screen and (max-width: 768px) {
+  .central_textbox__desc {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding: 20px 10px;
+  }
+}
+.central_textbox__sub {
+  font: normal normal 400 16px/28px "Barlow Condensed";
+  letter-spacing: 0.16px;
+  color: #2E141480;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.central_textbox__teaser {
+  position: absolute;
+  top: -22px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.central_textbox__teaser p {
+  background: #323232;
+  color: white;
+  text-align: center;
+  padding: 5px 40px 5px 40px;
+  font: normal normal 300 28px/34px "Barlow Condensed";
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.contact_form {
+  padding: 10px;
+  background: #D41C1B;
+  border-radius: 10px;
+}
+
+.contact_form_container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 53px;
+}
+.contact_form_container h2 {
+  color: #2E1414;
+  text-align: center;
+  font: normal normal 800 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.contact-link a {
+  border: solid 3px #D41C1B;
+  height: 40px;
+  background: white;
+  color: #D41C1B;
+  padding: 5px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font: normal normal 500 22px/23px "Barlow Condensed";
+}
+.contact-link a:hover {
+  background: #D41C1B;
+  color: white;
+}
+
+.footer__copyright {
+  text-align: center;
+  font: normal normal 500 18px/33px "Barlow";
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+}
+.footer__links {
+  position: absolute;
+  width: 600px;
+  margin-left: calc(50vw - 300px);
+  margin-top: -125px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 66px #00000029;
+  min-height: 240px;
+  box-sizing: border-box;
+}
+.footer__links__header {
+  width: 350px;
+  background: #D41C1B;
+  color: white;
+  padding: 5px 25px 5px 25px;
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  border-radius: 10px;
+}
+.footer__links__header-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+}
+.footer__links__icon {
+  background: #f6f6f6;
+  width: 95px;
+  padding: 12px 0px 12px 0px;
+  margin: 10px;
+  margin-top: 85px;
+  font-size: 2.8rem;
+  font-family: "Barlow Condensed";
+  text-align: center;
+  border-radius: 10px;
+}
+.footer__links__icon a {
+  color: #D41C1B;
+}
+.footer__links__icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 78px;
+}
+
+.header_bckgnd {
+  height: 100%;
+}
+.header_bckgnd__bird {
+  position: absolute;
+  top: 100px;
+  left: calc(50vw - 220px);
+  transition: top 2.5s ease-in-out;
+}
+.header_bckgnd__font {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.header_bckgnd__moving {
+  width: 100vw;
+  position: absolute;
+  height: 100%;
+  color: white;
+}
+.header_bckgnd__moving--1 {
+  left: 0px;
+  -webkit-animation: clouds1 15s linear infinite;
+          animation: clouds1 15s linear infinite;
+}
+.header_bckgnd__moving--2 {
+  left: 100vw;
+  -webkit-animation: clouds2 15s linear infinite;
+          animation: clouds2 15s linear infinite;
+}
+
+@-webkit-keyframes clouds1 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes clouds1 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+@-webkit-keyframes clouds2 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes clouds2 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.header_logo {
+  position: absolute;
+  top: 0px;
+  left: 10vw;
+  color: white;
+}
+
+.header_socialmedia {
+  position: absolute;
+  top: 75px;
+  left: 80vw;
+  height: 25px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header_socialmedia a {
+  color: white;
+}
+.header_socialmedia a:hover {
+  color: white;
+}
+.header_socialmedia p {
+  margin: 5px 12px;
+}
+
+.pattern_bg {
+  height: 638px;
+  background: transparent url("/images/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
+  background-size: 15%;
+}
+
+.universe {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+.universe h2 {
+  color: #2E1414;
+  text-align: center;
+  font: normal normal 500 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-top: 36px;
+}
+.universe__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
