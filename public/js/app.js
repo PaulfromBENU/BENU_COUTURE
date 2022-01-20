@@ -5479,6 +5479,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./landing_bird_animation */ "./resources/js/landing_bird_animation.js");
 
+__webpack_require__(/*! ./header_creations_menu */ "./resources/js/header_creations_menu.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5513,6 +5515,59 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/header_creations_menu.js":
+/*!***********************************************!*\
+  !*** ./resources/js/header_creations_menu.js ***!
+  \***********************************************/
+/***/ (() => {
+
+$(function () {
+  var creationsBarStatus = 'off';
+  $('#creations-nav-toggle').on('click', function () {
+    $(this).toggleClass('header__main-nav__btn--active');
+
+    if (creationsBarStatus == 'off') {
+      $('.creations-navbar').fadeIn();
+      creationsBarStatus = 'on';
+    } else {
+      $('.creations-navbar').fadeOut();
+      creationsBarStatus = 'off';
+    }
+  });
+  $('.creations-navbar__nav__toggle').on('mouseenter', function () {
+    $('.creations-navbar__menu').css('max-height', '280px');
+  });
+  $('#nav-toggle-adult').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-adult').show();
+  });
+  $('#nav-toggle-woman').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-woman').show();
+  });
+  $('#nav-toggle-man').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-man').show();
+  });
+  $('#nav-toggle-child').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-child').show();
+  });
+  $('#nav-toggle-accessories').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-accessories').show();
+  });
+  $('#nav-toggle-home').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-home').show();
+  });
+  $('.creations-navbar__menu').on('mouseleave', function () {
+    $('.creations-navbar__menu').css('max-height', '0px'); //$('.creations-navbar__menu__list').fadeOut('fast');
+  });
+});
 
 /***/ }),
 

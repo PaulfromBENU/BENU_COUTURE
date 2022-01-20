@@ -8,3 +8,15 @@ $benu_couture_couleur_principale: #D41C1B;
 // Colors for BENU COUTURE
 $primary-color: $benu_couture_couleur_principale;
 $text-bg-color: $benu_couture_couleur_texte;
+$dark-text: $benu_couture_couleur_texte;
+$light-grey: #D9D9D9;
+
+//Media queries breakpoints - inherited from TailwindCSS native breakpoints
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+//Transitions
+$transition-base: all .2s ease-in-out !default;
+$transition-village: all .5s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;

@@ -8,6 +8,6 @@ class GeneralController extends Controller
 {
     public function home()
     {
-        return view('landing');
+        return view('welcome');
     }
 }
