@@ -5,7 +5,7 @@
 @endsection
 
 @section('main-content')
-    <section class="benu-container ">
+    <section class="benu-container welcome-presentation">
         
     </section>
     <div style="height: 200vh;">

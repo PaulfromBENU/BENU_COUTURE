@@ -59,7 +59,9 @@
 @endsection
 
 @section('main-content-top')
-	@yield('main-content')
+	<div class="main-content-container">
+		@yield('main-content')
+	</div>
 @endsection
 
 @section('footer')

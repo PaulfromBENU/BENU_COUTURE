@@ -22,6 +22,15 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+.main-content-container {
+  padding-top: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
 .btn-large {
   text-transform: uppercase;
   width: 333px;
@@ -178,6 +187,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 50px;
+  z-index: 10;
 }
 
 .header {
@@ -398,6 +408,7 @@ body {
 .header__top-menu {
   padding-top: 7px;
   padding-bottom: 18px;
+  overflow: hidden;
 }
 .header__top-nav__links {
   color: #CFCFCF;
