@@ -31,3 +31,68 @@
 		color: white;
 	}
 }
+
+.btn-trans {
+	color: white;
+	background: transparent;
+	// height: 50px;
+	padding: 10px 20px;
+	font-family: 'Barlow Condensed';
+	font-weight: 500;
+	&--b-white {
+		border: solid 2px $white;
+		border-radius: 5px;
+		transition: all 0.2s;
+		&:hover {
+			background: $white;
+		}	
+	}
+}
+
+.btn-hover-village {
+	&:hover {
+		color: $benu_village;
+	}
+}
+
+.btn-hover-sis {
+	&:hover {
+		color: $benu_sis;
+	}
+}
+
+.btn-hover-sloow {
+	&:hover {
+		color: $benu_sloow;
+	}
+}
+
+.btn-hover-couture {
+	&:hover {
+		color: $benu_couture;
+	}
+}
+
+.btn-hover-reuse {
+	&:hover {
+		color: $benu_reuse;
+	}
+}
+
+.btn-hover-break {
+	&:hover {
+		color: $benu_break;
+	}
+}
+
+.btn-hover-lasa {
+	&:hover {
+		color: $benu_lasa;
+	}
+}
+
+.btn-hover-design {
+	&:hover {
+		color: $benu_design;
+	}
+}

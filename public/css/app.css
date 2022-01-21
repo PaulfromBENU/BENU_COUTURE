@@ -56,9 +56,56 @@ body {
   color: white;
 }
 
+.btn-trans {
+  color: white;
+  background: transparent;
+  padding: 10px 20px;
+  font-family: "Barlow Condensed";
+  font-weight: 500;
+}
+.btn-trans--b-white {
+  border: solid 2px #FFFFFF;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.btn-trans--b-white:hover {
+  background: #FFFFFF;
+}
+
+.btn-hover-village:hover {
+  color: #27955B;
+}
+
+.btn-hover-sis:hover {
+  color: #7BAC2A;
+}
+
+.btn-hover-sloow:hover {
+  color: #793162;
+}
+
+.btn-hover-couture:hover {
+  color: #D41C1B;
+}
+
+.btn-hover-reuse:hover {
+  color: #F9941D;
+}
+
+.btn-hover-break:hover {
+  color: #769DBE;
+}
+
+.btn-hover-lasa:hover {
+  color: #0079A7;
+}
+
+.btn-hover-design:hover {
+  color: #6E4522;
+}
+
 .creations-navbar {
   display: none;
-  position: relative;
   z-index: 9;
 }
 .creations-navbar__container {
@@ -122,19 +169,26 @@ body {
   background-color: #2E1414;
   color: white;
 }
+.creations-navbar__nav__toggle--active {
+  background-color: #2E1414;
+  color: white;
+}
 
-.header {
+.header-group {
   position: -webkit-sticky;
   position: sticky;
+  top: 50px;
+}
+
+.header {
   z-index: 10;
   border-bottom: solid 1px #D9D9D9;
   background-color: white;
 }
 .header__home-title {
   color: #D41C1B;
-  font-size: 1.4rem;
-  font-family: "Barlow Condensed";
-  font-weight: 600;
+  font: normal normal 600 24px/29px "Barlow Condensed";
+  letter-spacing: 0px;
   padding-right: 0.8rem;
 }
 .header__logo-container {
@@ -145,7 +199,7 @@ body {
 .header__logo {
   position: absolute;
   z-index: 10;
-  height: 200px;
+  height: 226px;
   left: 0;
   top: 0;
 }
@@ -165,6 +219,21 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .header__logo--scroll {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__logo--scroll {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header__logo--scroll {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
   .header__logo--mobile {
     display: none;
   }
@@ -180,11 +249,11 @@ body {
   }
 }
 .header__main-menu {
-  padding-top: 10px;
+  padding-top: 0px;
 }
 .header__main-menu__icons button {
-  height: 42px;
-  width: 42px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
 }
 .header__main-menu__icons__btn img {
@@ -195,13 +264,13 @@ body {
   fill: #D41C1B;
 }
 .header__main-menu__icons__lang-btn {
-  background-color: #fdf1f1;
+  background-color: #D41C1B1A;
   color: #2E1414;
-  font-size: 1.1rem;
   text-transform: uppercase;
   border-radius: 5px;
-  font-family: "Barlow Condensed";
-  font-weight: 500;
+  text-align: center;
+  font: normal normal 500 20px/24px "Barlow Condensed";
+  letter-spacing: 0px;
   transition: all 0.2s ease-in-out;
 }
 .header__main-menu__icons__lang-btn:hover {
@@ -215,6 +284,8 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+  width: 190px;
+  height: 50px;
   color: #2E1414;
   font-size: 1.05rem;
   font-weight: 500;
@@ -254,13 +325,13 @@ body {
 .header__main-nav__link {
   position: relative;
   display: block;
-  padding-top: 10px;
+  padding-top: 12px;
   height: 70px;
   text-transform: uppercase;
-  margin-left: 30px;
-  font-size: 1.1rem;
-  font-family: "Barlow Condensed";
-  font-weight: 600;
+  margin-left: 35px;
+  text-align: center;
+  font: normal normal 600 18px/22px "Barlow Condensed";
+  letter-spacing: 0.36px;
   transition: color 0.3s ease-in-out;
 }
 .header__main-nav__link::before {
@@ -283,7 +354,7 @@ body {
 }
 .header__menus-container {
   padding-left: 4%;
-  padding-top: 23px;
+  padding-top: 20px;
   width: 100%;
 }
 .header__newsletter-btn {
@@ -325,10 +396,11 @@ body {
   min-width: 100%;
 }
 .header__top-menu {
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 18px;
 }
 .header__top-nav__links {
-  color: lightgrey;
+  color: #CFCFCF;
 }
 .header__top-nav__links li {
   padding-top: 5px;
@@ -336,9 +408,8 @@ body {
 .header__top-nav__links li a {
   color: #2E1414;
   padding: 0.5rem;
-  font-family: "Barlow Condensed";
-  font-size: 1rem;
-  font-weight: 400;
+  font: normal normal normal 18px/22px Barlow Condensed;
+  letter-spacing: 0.36px;
   transition: color 0.3s ease-in-out;
 }
 .header__top-nav__links li a:hover {
@@ -351,4 +422,193 @@ body {
 .header__top-nav__links li:nth-child(even) {
   padding-left: 0;
   padding-right: 0;
+}
+
+.harmonica-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 10;
+  background: #D0D0D033 0% 0% no-repeat padding-box;
+  cursor: pointer;
+  color: #2E1414;
+  transition: color 0.2s, background 0.3s;
+}
+.harmonica-bar:hover {
+  color: #FFFFFF;
+  background: #2E1414 0% 0% no-repeat padding-box;
+}
+.harmonica-bar--active {
+  color: #FFFFFF;
+  background: #2E1414 0% 0% no-repeat padding-box;
+}
+.harmonica-bar__title {
+  height: 50px;
+  vertical-align: middle;
+  padding-top: 15px;
+  text-transform: uppercase;
+  font: normal normal bold 16px/19px "Barlow Condensed";
+  letter-spacing: 0.32px;
+}
+.harmonica-bar__title--active {
+  position: absolute;
+  top: -50px;
+  color: #FFFFFF;
+  width: 100%;
+  cursor: pointer;
+}
+.harmonica-bar__close {
+  position: absolute;
+  top: -50px;
+  right: -40px;
+  color: #FFFFFF;
+  width: 40px;
+  padding-top: 12px;
+  text-transform: uppercase;
+  font: normal normal bold 20px/27px "Barlow Condensed";
+  letter-spacing: 0.32px;
+}
+.harmonica-bar__close button {
+  cursor: pointer;
+}
+
+.harmonica-menu {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: #2E1414 0% 0% no-repeat padding-box;
+  padding: 50px;
+  display: none;
+}
+.harmonica-menu__content {
+  position: relative;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  height: 100%;
+  width: 100%;
+}
+.harmonica-menu__content__col {
+  border-right: 1px solid #D9D9D9;
+  height: 100%;
+  width: 12.5%;
+  transition: width 0.5s;
+  cursor: pointer;
+  position: relative;
+}
+.harmonica-menu__content__col:hover {
+  width: 43%;
+}
+.harmonica-menu__content__col__banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.harmonica-menu__content__col__banner img {
+  height: 21vh;
+  width: 3vw;
+}
+.harmonica-menu__content__col__title {
+  position: absolute;
+  top: 22vh;
+  width: 100%;
+  height: calc(100% - 21vh);
+}
+.harmonica-menu__content__col__title h3 {
+  transform: translate3d(-50%, -50%, 0) rotateZ(-90deg);
+  transform-origin: center;
+  min-width: calc(80vh - 100px);
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  font: normal normal bold 52px/62px "Barlow Condensed";
+  font-size: 4vh;
+  letter-spacing: 1.04px;
+  text-transform: uppercase;
+}
+.harmonica-menu__content__col__title--village {
+  color: #27955B;
+}
+.harmonica-menu__content__col__title--sis {
+  color: #7BAC2A;
+}
+.harmonica-menu__content__col__title--sloow {
+  color: #793162;
+}
+.harmonica-menu__content__col__title--couture {
+  color: #D41C1B;
+}
+.harmonica-menu__content__col__title--reuse {
+  color: #F9941D;
+}
+.harmonica-menu__content__col__title--lasa {
+  color: #0079A7;
+}
+.harmonica-menu__content__col__title--design {
+  color: #6E4522;
+}
+.harmonica-menu__content__col__title--break {
+  color: #769DBE;
+}
+.harmonica-menu__content__col__closed {
+  height: 100%;
+  position: relative;
+}
+.harmonica-menu__content__col__open {
+  color: #FFFFFF;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  width: 100%;
+}
+.harmonica-menu__content__col__open__desc {
+  padding: 5% 12%;
+  padding-top: 30vh;
+  max-height: 100%;
+}
+.harmonica-menu__content__col__open__desc h4 {
+  text-align: center;
+  font: normal normal bold 52px/62px "Barlow Condensed";
+  font-size: 4vh;
+  letter-spacing: 1.04px;
+}
+.harmonica-menu__content__col__open__desc__text {
+  margin-top: 4vh;
+  margin-bottom: 8vh;
+  text-align: left;
+  font: normal normal normal 16px/28px "Barlow Condensed";
+  font-size: 2vh;
+  letter-spacing: 0px;
+  overflow: hidden;
+}
+.harmonica-menu__content__col__open__desc a {
+  font-size: 2vh;
+}
+.harmonica-menu__content__col__open--village {
+  background: #27955B 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--sis {
+  background: #7BAC2A 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--sloow {
+  background: #793162 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--reuse {
+  background: #F9941D 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--couture {
+  background: #D41C1B 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--design {
+  background: #6E4522 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--lasa {
+  background: #0079A7 0% 0% no-repeat padding-box;
+}
+.harmonica-menu__content__col__open--break {
+  background: #769DBE 0% 0% no-repeat padding-box;
 }

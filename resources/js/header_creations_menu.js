@@ -1,5 +1,6 @@
 $(function() {
     let creationsBarStatus = 'off';
+    let fullMenuStatus = 'off';
     $('#creations-nav-toggle').on('click', function() {
         $(this).toggleClass('header__main-nav__btn--active');
         if (creationsBarStatus == 'off') {
@@ -12,7 +13,13 @@ $(function() {
     })
 
     $('.creations-navbar__nav__toggle').on('mouseenter', function() {
+        //Remove all menus to avoid multiple display
+        $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
+
+        //Add menu of hovered toggle
+        $(this).addClass('creations-navbar__nav__toggle--active');
         $('.creations-navbar__menu').css('max-height', '280px');
+        fullMenuStatus = 'on';
     });
 
     $('#nav-toggle-adult').on('mouseenter', function() {
@@ -47,6 +54,16 @@ $(function() {
 
     $('.creations-navbar__menu').on('mouseleave', function() {
         $('.creations-navbar__menu').css('max-height', '0px');
+        $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
+        fullMenuStatus = 'off';
         //$('.creations-navbar__menu__list').fadeOut('fast');
+    });
+
+    $('.creations-navbar__nav__toggle').on('click', function() {
+        if (fullMenuStatus == 'on') {
+            $('.creations-navbar__menu').css('max-height', '0px');
+            $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
+            fullMenuStatus = 'off';
+        }
     });
 });
