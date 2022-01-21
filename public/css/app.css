@@ -431,7 +431,7 @@ body {
   height: 50px;
   width: 100%;
   z-index: 10;
-  background: #D0D0D033 0% 0% no-repeat padding-box;
+  background: #f3f3f3 0% 0% no-repeat padding-box;
   cursor: pointer;
   color: #2E1414;
   transition: color 0.2s, background 0.3s;
@@ -611,4 +611,75 @@ body {
 }
 .harmonica-menu__content__col__open--break {
   background: #769DBE 0% 0% no-repeat padding-box;
+}
+
+.modal {
+  position: fixed;
+  margin: auto;
+  background: #FFFFFF;
+  opacity: 1;
+  z-index: 102;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.lang-modal {
+  width: 370px;
+  height: 155px;
+  right: 5vw;
+  top: 25vh;
+  border-radius: 6px;
+  padding: 16px 22px;
+}
+.lang-modal__block {
+  width: 79px;
+  height: 104px;
+  border-radius: 8px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  transition: background-color 0.3s;
+}
+.lang-modal__block:hover {
+  background-color: #D41C1B1A;
+}
+.lang-modal__block:hover .lang-modal__block__btn {
+  background-color: #D41C1B;
+  color: #FFFFFF;
+}
+.lang-modal__block p {
+  text-align: center;
+  font: normal normal 400 12px/14px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+}
+.lang-modal__block__btn {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: #D41C1B1A;
+  color: #2E1414;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-align: center;
+  font: normal normal 500 20px/24px "Barlow Condensed";
+  letter-spacing: 0px;
+  transition: all 0.2s ease-in-out;
+  margin: 15px;
+}
+.lang-modal__title {
+  text-align: left;
+  font: normal normal 500 16px/19px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+  margin-bottom: 2px;
+}
+
+.modal-opacifier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+  background: #2E1414;
+  opacity: 0.7;
 }

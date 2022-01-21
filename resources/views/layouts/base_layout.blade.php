@@ -21,7 +21,11 @@
 @endsection
 
 @section('robots-behaviour-top')
-	@yield('robots-behaviour', 'index, follow')
+	@if(App::environment('stage'))
+		noindex, nofollow
+	@else
+		@yield('robots-behaviour', 'index, follow')
+	@endif
 @endsection
 
 @section('seo-keywords-top')
@@ -41,17 +45,15 @@
 	<div id="modal-opacifier" class="modal-opacifier" style="display: none;"></div>
 
 	<!-- Language selection -->
-	<div class="lang-modal" id="lang-modal" style="display: none;">
-		@yield('lang_modal')
-	</div>
+	@include('modals.lang_modal')
 
 	<!-- Central Modal -->
-    <div class="modal" id="general_modal" style="display: none;">
+    <div class="modal general-modal" id="general_modal" style="display: none;">
         @yield('modal')
     </div>
 
     <!-- Side modal -->
-    <div class="side-modal" id="general-side-modal" style="display: none;">
+    <div class="modal side-modal" id="general-side-modal" style="display: none;">
         @yield('side_modal')
     </div>
 @endsection

@@ -5485,6 +5485,8 @@ __webpack_require__(/*! ./header_scroll_behaviour */ "./resources/js/header_scro
 
 __webpack_require__(/*! ./harmonica_animation */ "./resources/js/harmonica_animation.js");
 
+__webpack_require__(/*! ./modals_handle.js */ "./resources/js/modals_handle.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5690,6 +5692,59 @@ $(function () {
     newTop += 'px';
     $('#header-bird-pic').css('top', newTop);
   }, 2500);
+});
+
+/***/ }),
+
+/***/ "./resources/js/modals_handle.js":
+/*!***************************************!*\
+  !*** ./resources/js/modals_handle.js ***!
+  \***************************************/
+/***/ (() => {
+
+function clearAllModals() {
+  $('#modal-opacifier').fadeOut('fast');
+  $('.modal').fadeOut('fast');
+}
+
+function showModal(modal) {
+  $('#modal-opacifier').fadeIn('fast');
+
+  switch (modal) {
+    case 'general':
+      $('#general-modal').fadeIn();
+      break;
+
+    case 'lang':
+      $('#lang-modal').fadeIn();
+      break;
+
+    case 'side':
+      $('#side-modal').fadeIn();
+      break;
+
+    default:
+      $('#general-modal').fadeIn();
+  }
+}
+
+$(function () {
+  var modalStatus = 'off';
+  $('#lang-selector').on('click', function () {
+    showModal('lang');
+    modalStatus = 'on';
+  });
+  $('#modal-opacifier').on('click', function () {
+    clearAllModals();
+  });
+  $(document).on('keyup', function (e) {
+    if (e.keyCode == 27) {
+      if (modalStatus == 'on') {
+        clearAllModals();
+        modalStatus = 'off';
+      }
+    }
+  });
 });
 
 /***/ }),

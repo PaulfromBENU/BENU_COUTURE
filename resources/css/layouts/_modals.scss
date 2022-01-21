@@ -1,0 +1,71 @@
+.modal {
+	position: fixed;
+	margin: auto;
+	background: $white;
+	opacity: 1;
+	z-index: 102;
+	border-radius: 20px;
+	padding: 30px;
+}
+
+.lang-modal {
+	width: 370px;
+	height: 155px;
+	right: 5vw;
+	top: 25vh;
+	border-radius: 6px;
+	padding: 16px 22px;
+	&__block {
+		width: 79px;
+		height: 104px;
+		border-radius: 8px;
+		background: $white 0% 0% no-repeat padding-box;
+		//padding: 15px;
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $primary-color-transparent;
+			.lang-modal__block__btn {
+				background-color: $primary-color;
+				color: $white;
+			}
+		}
+		p {
+			text-align: center;
+			font: normal normal 400 12px/14px 'Barlow Condensed';
+			letter-spacing: 0px;
+			color: $dark-text;
+		}
+		&__btn {
+			height: 50px;
+			width: 50px;
+			cursor: pointer;
+			background-color: $primary-color-transparent;
+			color: $dark-text;
+			text-transform: uppercase;
+			border-radius: 5px;
+			text-align: center;
+			font: normal normal 500 20px/24px "Barlow Condensed";
+			letter-spacing: 0px;
+			transition: $transition-base;
+			margin: 15px;
+		}
+	}
+	&__title {
+		text-align: left;
+		font: normal normal 500 16px/19px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		margin-bottom: 2px;
+	}
+}
+
+.modal-opacifier {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 101;
+	background: $dark-bg;
+	opacity: 0.7;
+}

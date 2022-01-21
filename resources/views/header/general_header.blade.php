@@ -74,7 +74,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="header__main-menu__icons__lang-btn">
+                        <button class="header__main-menu__icons__lang-btn" id="lang-selector">
                             FR
                         </button>
                     </li>
