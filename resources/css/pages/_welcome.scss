@@ -1,0 +1,78 @@
+.welcome-presentation {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	&__desc {
+		padding-top: 139px;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		&__bar {
+			padding: 10px 5px;
+			margin-bottom: 50px;
+			background: $primary-color-light 0% 0% no-repeat padding-box;
+			border-radius: 8px;
+			width: fit-content;
+			&__btn {
+				margin-left: 5px;
+				margin-right: 5px;
+				display: block;
+				text-align: center;
+				padding: 6px 12px;
+				font: normal normal 500 18px/22px 'Barlow Condensed';
+				letter-spacing: 0.36px;
+				color: $dark-text;
+				border-radius: 8px;
+				background: $primary-color-light 0% 0% no-repeat padding-box;
+				transition: $transition-base;
+				&:hover {
+					color: $white;
+					background: $primary-color 0% 0% no-repeat padding-box;
+				}
+				&.--active {
+					color: $white;
+					background: $primary-color 0% 0% no-repeat padding-box;
+				}
+			}
+		}
+		&__title {
+			text-align: left;
+			font: normal normal bold 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			color: $dark-text;
+			margin-bottom: 55px;
+		}
+		&__text {
+			width: 32vw;
+			text-align: left;
+			font: normal normal 600 18px/33px 'Barlow';
+			letter-spacing: 0px;
+			color: #2E1739;
+			margin-bottom: 30px;
+		}
+		&__link {
+			text-align: left;
+			font: normal normal 800 22px/33px 'Barlow';
+			letter-spacing: 0px;
+			color: $primary-color;
+		}
+	}
+	&__illustration {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		overflow: hidden;
+		z-index: 1;
+		background: lightgrey;
+		img {
+			height: 100vh;
+			max-width: 80vw;
+		}
+	}
+}
+
+.welcome-illustration-2, .welcome-illustration-3, .welcome-illustration-4, .welcome-illustration-5 {
+	display: none;
+}

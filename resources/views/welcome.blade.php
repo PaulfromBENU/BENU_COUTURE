@@ -5,16 +5,12 @@
 @endsection
 
 @section('main-content')
-    <section class="benu-container welcome-presentation">
-        
-    </section>
-    <div style="height: 200vh;">
-        blabla
-    </div>
+    @include('includes.welcome.presentation')
+    
 @endsection
 
 @section('scripts')
 <script type="text/javascript">
-    // 
+    //
 </script>
 @endsection
