@@ -46,7 +46,7 @@ function animateWelcomePres(i) {
 
 $(function() {
     let i = 1;
-    setInterval(function() {
+    let welcomeAnimation = setInterval(function() {
         animateWelcomePres(i);
         if (i < 4) {
             i++;
@@ -57,11 +57,21 @@ $(function() {
 
     $('.welcome-presentation__desc__bar__btn').on('click', function() {
         let index = $('.welcome-presentation__desc__bar__btn').index(this);
+        //Upon click, stop current animation, and restart from new selected menu
+        clearInterval(welcomeAnimation);
         animateWelcomePres(index);
         if (index < 4) {
             i = index + 1;
         } else {
             i = 0;
         }
+        welcomeAnimation = setInterval(function() {
+        animateWelcomePres(i);
+        if (i < 4) {
+                i++;
+            } else {
+                i = 0;
+            }
+        }, 7000);
     });
 });

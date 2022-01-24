@@ -1,9 +1,9 @@
 <header class="header-group">
     <div class="header benu-container flex">
         <a class="header__logo-container" href="{{ route('home') }}">
-            <img src="{{ asset('images/logo_benu_couture.svg') }}" class="header__logo header__logo--desktop">
-            <img src="{{ asset('images/logo_benu_couture_blanc.svg') }}" class="header__logo header__logo--scroll">
-            <img src="{{ asset('images/logo_benu_couture.svg') }}" class="header__logo header__logo--mobile">
+            <img src="{{ asset('images/svg/logo_benu_couture.svg') }}" class="header__logo header__logo--desktop">
+            <img src="{{ asset('images/svg/benu-icon-menu-scroll.svg') }}" class="header__logo header__logo--scroll">
+            <img src="{{ asset('images/svg/benu-icon-menu-scroll.svg') }}" class="header__logo header__logo--mobile">
         </a>
         <div class="header__menus-container">
             <div class="flex justify-between header__top-menu">
@@ -29,9 +29,11 @@
                 <nav class="header__main-nav flex justify-start">
                     <div>
                         <button class="header__main-nav__btn" type="button" id="creations-nav-toggle">
-                            <img src="{{ asset('images/logo_benu_couture.svg') }}" class="header__main-nav__btn--logo-1">
+                            @svg('benu-icon-squares-categories', 'header__main-nav__btn--logo-1')
+                            <!-- <img src="{{ asset('images/svg/benu-icon-squares-categories.svg') }}" class="header__main-nav__btn--logo-1 svg-hover-white"> -->
                             Créations
-                            <img src="{{ asset('images/logo_benu_couture.svg') }}" class="header__main-nav__btn--logo-2">
+                            <!-- <img src="{{ asset('images/svg/benu-icon-arrow-down.svg') }}" class="header__main-nav__btn--logo-2 svg-hover-white"> -->
+                            @svg('benu-icon-arrow-down', 'header__main-nav__btn--logo-2')
                         </button>
                     </div>
                     <a href="#" class="header__main-nav__link">Actualités</a>
@@ -40,37 +42,37 @@
                 <ul class="header__main-menu__icons flex justify-end">
                     <li>
                         <button class="header__main-menu__icons__btn">
-                            <img src="{{ asset('images/logo_benu_couture.svg') }}">
+                            @svg('benu-icon-magnifying-glass-search')
                         </button>
                     </li>
                     @auth
                         <li>
                             <button class="header__main-menu__icons__btn">
-                                <img src="{{ asset('images/logo_benu_couture.svg') }}">
+                                @svg('benu-icon-heart-favorites', '')
                             </button>
                         </li>
                     @endauth
                     @guest
                         <li>
                             <button class="header__main-menu__icons__btn">
-                                <img src="{{ asset('images/logo_benu_couture.svg') }}">
+                                @svg('benu-icon-silhouette-connect')
                             </button>
                         </li>
                     @else
                         <li>
                             <button class="header__main-menu__icons__btn">
-                                <img src="{{ asset('images/logo_benu_couture.svg') }}">
+                                @svg('benu-icon-silhouette-disconnect')
                             </button>
                         </li>
                     @endguest
                     <li>
                         <button class="header__main-menu__icons__btn">
-                            <img src="{{ asset('images/logo_benu_couture.svg') }}">
+                            @svg('benu-icon-mail-contact')
                         </button>
                     </li>
                     <li>
                         <button class="header__main-menu__icons__btn">
-                            <img src="{{ asset('images/logo_benu_couture.svg') }}">
+                            @svg('benu-icon-bag-cart')
                         </button>
                     </li>
                     <li>

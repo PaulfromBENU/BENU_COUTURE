@@ -1,10 +1,10 @@
 <section class="welcome-presentation">
     <div class="welcome-presentation__illustration">
-        <img src="{{ asset('images/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-1 welcome-presentation__img">
-        <img src="{{ asset('images/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-2 welcome-presentation__img">
-        <img src="{{ asset('images/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-3 welcome-presentation__img">
-        <img src="{{ asset('images/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-4 welcome-presentation__img">
-        <img src="{{ asset('images/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-5 welcome-presentation__img">
+        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-1 welcome-presentation__img">
+        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-2 welcome-presentation__img">
+        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-3 welcome-presentation__img">
+        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-4 welcome-presentation__img">
+        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-5 welcome-presentation__img">
     </div>
     <div class="benu-container welcome-presentation__desc">
         <div class="flex justify-start welcome-presentation__desc__bar">

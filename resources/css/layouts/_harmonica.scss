@@ -70,7 +70,8 @@
 			cursor: pointer;
 			position: relative;
 			&:hover {
-				width: 43%;
+				//Activate to widen columns on hover, otherwise only on click in JS
+				//width: 43%;
 			}
 			&__banner {
 				position: absolute;

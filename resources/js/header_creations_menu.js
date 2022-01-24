@@ -3,6 +3,7 @@ $(function() {
     let fullMenuStatus = 'off';
     $('#creations-nav-toggle').on('click', function() {
         $(this).toggleClass('header__main-nav__btn--active');
+        //$('#creations-nav-toggle path').toggleClass('svg-primary-white--active');
         if (creationsBarStatus == 'off') {
             $('.creations-navbar').fadeIn();
             creationsBarStatus = 'on';
@@ -11,6 +12,16 @@ $(function() {
             creationsBarStatus = 'off';
         }
     })
+
+    $('#creations-nav-toggle').on('mouseenter', function() {
+        $('#creations-nav-toggle path').addClass('svg-primary-white--active');
+    });
+
+    $('#creations-nav-toggle').on('mouseleave', function() {
+        if (creationsBarStatus == 'off') {
+            $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
+        }
+    });
 
     $('.creations-navbar__nav__toggle').on('mouseenter', function() {
         //Remove all menus to avoid multiple display

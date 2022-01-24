@@ -30,3 +30,31 @@ body {
 .primary-color {
 	color: $primary-color;
 }
+
+.svg-fill-primary-light {
+	opacity: 0.5;
+	fill: $primary-color;
+}
+
+.svg-primary-white {
+	//transition: filter 0.3s;
+	// &:hover {
+	// 	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(310deg) brightness(104%) contrast(103%);
+	// }
+	fill: $primary-color;
+	transition: fill 0.3s;
+	&--active {
+		fill: $white;
+	}
+}
+
+.svg-primary {
+	fill: $dark-bg;
+	transition: fill 0.3s;
+	// &:hover {
+	// 	fill: $primary-color;
+	// }
+	&--active {
+		fill: $primary-color;
+	}
+}
