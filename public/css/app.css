@@ -132,6 +132,7 @@ body {
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.4s;
+  background: white;
 }
 .creations-navbar__menu__list {
   display: none;
