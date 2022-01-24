@@ -56,6 +56,42 @@ body {
   fill: #D41C1B;
 }
 
+.svg-village {
+  fill: #27955B;
+}
+
+.svg-sis {
+  fill: #7BAC2A;
+}
+
+.svg-couture {
+  fill: #D41C1B;
+}
+
+.svg-sloow {
+  fill: #793162;
+}
+
+.svg-reuse {
+  fill: #F9941D;
+}
+
+.svg-lasa {
+  fill: #0079A7;
+}
+
+.svg-design {
+  fill: #6E4522;
+}
+
+.svg-break {
+  fill: #769DBE;
+}
+
+.svg-white {
+  fill: #FFFFFF;
+}
+
 .btn-large {
   text-transform: uppercase;
   width: 333px;
@@ -546,7 +582,7 @@ body {
   top: 0;
   width: 100%;
 }
-.harmonica-menu__content__col__banner img {
+.harmonica-menu__content__col__banner img, .harmonica-menu__content__col__banner svg {
   height: 21vh;
   width: 3vw;
 }
