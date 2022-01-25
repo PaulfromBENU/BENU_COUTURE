@@ -294,7 +294,7 @@ body {
   display: none;
 }
 .creations-navbar__menu__lists {
-  padding: 25px 115px 35px 115px;
+  padding: 25px calc(55px + 4vw) 35px calc(55px + 4vw);
   height: 100%;
   font-family: "Barlow Condensed";
   font-weight: 500;
@@ -323,7 +323,7 @@ body {
 }
 .creations-navbar__nav {
   height: 100%;
-  padding-left: 100px;
+  padding-left: calc(55px + 9%);
 }
 .creations-navbar__nav__toggle {
   padding: 7px 20px 7px 20px;
@@ -351,6 +351,7 @@ body {
   width: 100vw;
   border-bottom: solid 1px #D9D9D9;
   background-color: white;
+  max-height: 150px;
 }
 
 .header {
@@ -372,7 +373,7 @@ body {
 .header__logo {
   position: absolute;
   z-index: 10;
-  height: 226px;
+  width: 55px;
   left: 0;
   top: 0;
 }
@@ -536,7 +537,7 @@ body {
   width: 100%;
 }
 .header__menus-container {
-  padding-left: 4%;
+  padding-left: 4vw;
   padding-top: 20px;
   width: 100%;
 }

@@ -18,7 +18,8 @@
 			display: none;
 		}
 		&__lists {
-			padding: 25px 115px 35px 115px;
+			//Alignment on top header titles, with logo 55px wide + 4vw padding
+			padding: 25px calc(55px + 4vw) 35px calc(55px + 4vw);
 			height: 100%;
 			font-family: 'Barlow Condensed';
 			font-weight: 500;
@@ -48,7 +49,7 @@
 	}
 	&__nav {
 		height: 100%;
-		padding-left: 100px;
+		padding-left: calc(55px + 9%);//100px;
 		&__toggle {
 			padding: 7px 20px 7px 20px;
 			font-weight: 500;
@@ -77,6 +78,7 @@
 	width: 100vw;
 	border-bottom: solid 1px $light-grey;
 	background-color: white;
+	max-height: 150px;
 }
 
 .header {
@@ -97,7 +99,7 @@
 	&__logo {
 		position: absolute;
 		z-index: 10;
-		height: 226px;
+		width: 55px;
 		left: 0;
 		top: 0;
 		&--desktop {
@@ -254,7 +256,7 @@
 		}
 	}
 	&__menus-container {
-		padding-left: 4%;
+		padding-left: 4vw;
 		padding-top: 20px;
 		width: 100%;
 	}
