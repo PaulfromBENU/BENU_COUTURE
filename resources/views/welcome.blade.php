@@ -6,18 +6,13 @@
 
 @section('main-content')
     @include('includes.welcome.presentation')
-    
+    @include('includes.welcome.campaign')
+    @include('includes.welcome.last_creations')
+    @include('includes.welcome.other_creations')
 @endsection
 
 @section('scripts')
 <script type="text/javascript">
-    $(function() {
-        $('.header__main-menu__icons__btn').on('mouseenter', function() {
-            $('path', this).toggleClass('svg-primary--active');
-        });
-        $('.header__main-menu__icons__btn').on('mouseleave', function() {
-            $('path', this).toggleClass('svg-primary--active');
-        });
-    });
+    //
 </script>
 @endsection

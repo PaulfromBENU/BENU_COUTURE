@@ -9,11 +9,13 @@
 
 //Specific components
 @import './components/buttons';
+@import './components/model_overview';
 
 //Layout elements
 @import './layouts/header';
 @import './layouts/harmonica';
 @import './layouts/modals';
+@import './layouts/footer';
 
 //Application pages
 @import './pages/welcome';

@@ -30,9 +30,7 @@
                     <div>
                         <button class="header__main-nav__btn" type="button" id="creations-nav-toggle">
                             @svg('benu-icon-squares-categories', 'header__main-nav__btn--logo-1')
-                            <!-- <img src="{{ asset('images/svg/benu-icon-squares-categories.svg') }}" class="header__main-nav__btn--logo-1 svg-hover-white"> -->
                             Créations
-                            <!-- <img src="{{ asset('images/svg/benu-icon-arrow-down.svg') }}" class="header__main-nav__btn--logo-2 svg-hover-white"> -->
                             @svg('benu-icon-arrow-down', 'header__main-nav__btn--logo-2')
                         </button>
                     </div>

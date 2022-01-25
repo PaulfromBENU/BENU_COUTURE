@@ -59,12 +59,14 @@
 @endsection
 
 @section('main-content-top')
-	<div class="main-content-container">
-		@yield('main-content')
-	</div>
+	@yield('main-content')
 @endsection
 
 @section('footer')
+	@include('footer.connect')
+	@include('footer.learn_more')
+	@include('footer.more_questions')
+	@include('footer.all_infos')
 	@include('footer.footer')
 @endsection
 

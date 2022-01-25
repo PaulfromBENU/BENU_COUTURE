@@ -5489,6 +5489,8 @@ __webpack_require__(/*! ./modals_handle */ "./resources/js/modals_handle.js");
 
 __webpack_require__(/*! ./welcome_presentation_animation */ "./resources/js/welcome_presentation_animation.js");
 
+__webpack_require__(/*! ./header_icons_hover */ "./resources/js/header_icons_hover.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5684,6 +5686,23 @@ $(function () {
       $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
       fullMenuStatus = 'off';
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/header_icons_hover.js":
+/*!********************************************!*\
+  !*** ./resources/js/header_icons_hover.js ***!
+  \********************************************/
+/***/ (() => {
+
+$(function () {
+  $('.header__main-menu__icons__btn').on('mouseenter', function () {
+    $('path', this).toggleClass('svg-primary--active');
+  });
+  $('.header__main-menu__icons__btn').on('mouseleave', function () {
+    $('path', this).toggleClass('svg-primary--active');
   });
 });
 

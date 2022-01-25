@@ -49,6 +49,24 @@
 	}
 }
 
+.btn-couture {
+	color: $primary-color;
+	background: $white;
+	padding: 10px 20px;
+	text-align: center;
+	font: normal normal 600 22px/26px 'Barlow Condensed';
+	letter-spacing: 0px;
+	border: solid 2px $primary-color;
+	border-radius: 5px;
+	transition: $transition-base;
+	margin-left: 10px;
+	margin-right: 10px;
+	&:hover {
+		background: $primary-color;
+		color: $white;
+	}
+}
+
 .btn-hover-village {
 	&:hover {
 		color: $benu_village;

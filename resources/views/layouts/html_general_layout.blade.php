@@ -58,13 +58,15 @@
             <!-- Modals -->
             @yield('modals')
 
-            <!-- Page Content -->
-            <main>
-                @yield('main-content-top')
-            </main>
+            <div class="content-wrapper">
+                <!-- Page Content -->
+                <main>
+                    @yield('main-content-top')
+                </main>
 
-            <!-- Footer -->
-            @yield('footer')
+                <!-- Footer -->
+                @yield('footer')
+            </div>
         </div>
 
         <!-- Scripts -->
