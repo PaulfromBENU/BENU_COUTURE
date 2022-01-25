@@ -4,7 +4,7 @@
 	position: relative;
 	&__desc {
 		padding-top: 139px;
-		position: absolute;
+		position: relative;
 		z-index: 2;
 		top: 0;
 		left: 0;
@@ -60,16 +60,12 @@
 	}
 	&__illustration {
 		position: absolute;
-		right: 0;
+		right: 5vw;
 		top: 0;
-		height: 100vh;
+		width: 70%;
 		overflow: hidden;
 		z-index: 1;
-		background: lightgrey;
-		img {
-			height: 100vh;
-			max-width: 80vw;
-		}
+		//background: lightgrey;
 	}
 }
 

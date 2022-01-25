@@ -2,6 +2,8 @@
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+  margin: auto;
+  max-width: 1720px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .benu-container {
@@ -36,8 +38,7 @@ body {
 }
 
 .svg-fill-primary-light {
-  opacity: 0.5;
-  fill: #D41C1B;
+  fill: #D41C1B80;
 }
 
 .svg-primary-white {
@@ -248,6 +249,10 @@ body {
   margin-top: 22px;
   margin-bottom: 33px;
 }
+.model-overview__img-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 .color-circle {
   height: 14px;
@@ -344,11 +349,12 @@ body {
   top: 50px;
   z-index: 10;
   width: 100vw;
+  border-bottom: solid 1px #D9D9D9;
+  background-color: white;
 }
 
 .header {
   z-index: 10;
-  border-bottom: solid 1px #D9D9D9;
   background-color: white;
 }
 .header__home-title {
@@ -361,6 +367,7 @@ body {
   position: relative;
   display: block;
   min-width: 55px;
+  background-color: #D41C1B;
 }
 .header__logo {
   position: absolute;
@@ -383,6 +390,11 @@ body {
   .header__logo--desktop {
     display: none;
   }
+}
+.header__logo--scroll {
+  height: 60%;
+  top: 20%;
+  left: 5px;
 }
 @media (min-width: 1024px) {
   .header__logo--scroll {
@@ -433,7 +445,7 @@ body {
   fill: #D41C1B;
 }
 .header__main-menu__icons__lang-btn {
-  background-color: #D41C1B1A;
+  background-color: #F9E2E2;
   color: #2E1414;
   text-transform: uppercase;
   border-radius: 5px;
@@ -460,7 +472,7 @@ body {
   font-weight: 500;
   padding: 0.6rem 1rem;
   cursor: pointer;
-  background-color: #fdf1f1;
+  background-color: #F9E2E2;
   font-family: "Barlow Condensed";
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
@@ -695,7 +707,6 @@ body {
   font: normal normal bold 52px/62px "Barlow Condensed";
   font-size: 4vh;
   letter-spacing: 1.04px;
-  text-transform: uppercase;
 }
 .harmonica-menu__content__col__title--village {
   color: #27955B;
@@ -807,7 +818,7 @@ body {
   transition: background-color 0.3s;
 }
 .lang-modal__block:hover {
-  background-color: #D41C1B1A;
+  background-color: #F9E2E2;
 }
 .lang-modal__block:hover .lang-modal__block__btn {
   background-color: #D41C1B;
@@ -823,7 +834,7 @@ body {
   height: 50px;
   width: 50px;
   cursor: pointer;
-  background-color: #D41C1B1A;
+  background-color: #F9E2E2;
   color: #2E1414;
   text-transform: uppercase;
   border-radius: 5px;
@@ -917,7 +928,7 @@ body {
 }
 .welcome-presentation__desc {
   padding-top: 139px;
-  position: absolute;
+  position: relative;
   z-index: 2;
   top: 0;
   left: 0;
@@ -975,16 +986,11 @@ body {
 }
 .welcome-presentation__illustration {
   position: absolute;
-  right: 0;
+  right: 5vw;
   top: 0;
-  height: 100vh;
+  width: 70%;
   overflow: hidden;
   z-index: 1;
-  background: lightgrey;
-}
-.welcome-presentation__illustration img {
-  height: 100vh;
-  max-width: 80vw;
 }
 
 .welcome-illustration-2, .welcome-illustration-3, .welcome-illustration-4, .welcome-illustration-5 {

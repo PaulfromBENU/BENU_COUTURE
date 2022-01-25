@@ -54,6 +54,9 @@
 		background: lightgrey;
 		margin-top: 22px;
 		margin-bottom: 33px;
+		img {
+			object-fit: contain;
+		}
 	}
 }
 

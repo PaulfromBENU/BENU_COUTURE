@@ -5643,6 +5643,20 @@ $(function () {
       $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
     }
   });
+  $(window).on('scroll', function () {
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > 120 && creationsBarStatus == 'on') {
+      $('#creations-nav-toggle').removeClass('header__main-nav__btn--active');
+      $('.creations-navbar__menu').css('max-height', '0px');
+      $('.creations-navbar').fadeOut(400, function () {
+        $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
+        $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
+      });
+      creationsBarStatus = 'off';
+      fullMenuStatus = 'off';
+    }
+  });
   $('.creations-navbar__nav__toggle').on('mouseenter', function () {
     //Remove all menus to avoid multiple display
     $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active'); //Add menu of hovered toggle
@@ -5700,9 +5714,11 @@ $(function () {
 $(function () {
   $('.header__main-menu__icons__btn').on('mouseenter', function () {
     $('path', this).toggleClass('svg-primary--active');
+    $('circle', this).toggleClass('svg-primary--active');
   });
   $('.header__main-menu__icons__btn').on('mouseleave', function () {
     $('path', this).toggleClass('svg-primary--active');
+    $('circle', this).toggleClass('svg-primary--active');
   });
 });
 

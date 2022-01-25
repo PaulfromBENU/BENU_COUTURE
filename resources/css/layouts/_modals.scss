@@ -23,7 +23,7 @@
 		//padding: 15px;
 		transition: background-color 0.3s;
 		&:hover {
-			background-color: $primary-color-transparent;
+			background-color: $primary-color-light;
 			.lang-modal__block__btn {
 				background-color: $primary-color;
 				color: $white;
@@ -39,7 +39,7 @@
 			height: 50px;
 			width: 50px;
 			cursor: pointer;
-			background-color: $primary-color-transparent;
+			background-color: $primary-color-light;
 			color: $dark-text;
 			text-transform: uppercase;
 			border-radius: 5px;

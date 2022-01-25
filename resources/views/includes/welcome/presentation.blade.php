@@ -1,12 +1,12 @@
-<section class="welcome-presentation">
+<section class="benu-container welcome-presentation">
     <div class="welcome-presentation__illustration">
-        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-1 welcome-presentation__img">
-        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-2 welcome-presentation__img">
-        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-3 welcome-presentation__img">
-        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-4 welcome-presentation__img">
-        <img src="{{ asset('images/svg/benu_landing_clouds_illustration.svg') }}" class="welcome-illustration-5 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/benu-reuse-illustration1-echange.png') }}" class="welcome-illustration-1 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/benu-reuse-illustration2-environnement.png') }}" class="welcome-illustration-2 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/benu-reuse-illustration3-conseils.png') }}" class="welcome-illustration-3 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/benu-reuse-illustration4-services.png') }}" class="welcome-illustration-4 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/benu-reuse-illustration5-utiles.png') }}" class="welcome-illustration-5 welcome-presentation__img">
     </div>
-    <div class="benu-container welcome-presentation__desc">
+    <div class="welcome-presentation__desc">
         <div class="flex justify-start welcome-presentation__desc__bar">
             <button class="welcome-presentation__desc__bar__btn --active welcome-illustration-btn-1">Nachhaltig</button>
             <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-2">Sozial und lokal</button>

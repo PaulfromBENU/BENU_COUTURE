@@ -2,9 +2,12 @@
 	width: 100%;
 	padding-left: 5%;
 	padding-right: 5%;
+	margin: auto;
+	max-width: $max-display-width;
 	@include tablet {
 		padding-left: 2%;
 		padding-right: 2%;
+		//max-width: 720px;
 	}
 	@include mobile {
 		padding-left: 4px;
@@ -32,8 +35,8 @@ body {
 }
 
 .svg-fill-primary-light {
-	opacity: 0.5;
-	fill: $primary-color;
+	//opacity: 0.5;
+	fill: $primary-color-medium;
 }
 
 .svg-primary-white {
