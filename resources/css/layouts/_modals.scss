@@ -59,6 +59,96 @@
 	}
 }
 
+.search-modal {
+	width: 74vw;
+	left: 13vw;
+	top: 200px;
+	border-radius: 0px;
+	padding-bottom: 20px;
+	label {
+		width: 50%;
+		left: 25%;
+		text-align: center;
+		display: block;
+		font-family: 'Barlow Condensed';
+		position: absolute;
+		top: 60px;
+		transform: scale(1);
+		transition: $transition-base;
+		z-index: -1;
+	}
+	&__form {
+		padding-top: 20px;
+	}
+	&__icon {
+		height: 45px;
+		margin-left: 20px;
+		margin-right: 20px;
+		transition: $transition-base;
+		cursor: pointer;
+	}
+	button {
+		&:hover {
+			.svg-primary {
+				fill: $primary-color;
+			}
+		}
+	}
+	input[type=text] {
+		width: 50%;
+		margin-left: 25%;
+		background: transparent;
+		text-align: center;
+		&:focus, :active {
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			outline: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.connect-modal {
+	width: 45vw;
+	right: 0;
+	top: 200px;
+	border-radius: 0px;
+	&__btn {
+		margin-left: 0;
+	}
+	&__register {
+		font-family: 'Barlow Condensed';
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+	&__input-group {
+		position: relative;
+		margin-bottom: 30px;
+		margin-right: 20px;
+		width: 45%;
+		label {
+			position: absolute;
+			transform: scale(1);
+			transition: $transition-base;
+			z-index: -1;
+			top: 3px;
+			left: 10px;
+			font-size: 0.9rem;
+		}
+		input[type=text], input[type=password] {
+			width: 100%;
+			background: transparent;
+		}
+	}
+	&__title {
+		font-family: 'Barlow Condensed';
+		font-weight: 600;
+		font-size: 1.1rem;
+		margin-bottom: 30px;
+	}
+}
+
 .modal-opacifier {
 	position: fixed;
 	top: 0;

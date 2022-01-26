@@ -30,6 +30,18 @@ body {
 	z-index: 1;
 }
 
+.input-underline {
+	border: none;
+	border-bottom: solid 1px $light-grey;
+	padding-bottom: 0.3rem;
+	&:focus, :active {
+		border: none;
+		border-bottom: solid 1px $light-grey;
+		box-shadow: none;
+		outline: none;
+	}
+}
+
 .primary-color {
 	color: $primary-color;
 }

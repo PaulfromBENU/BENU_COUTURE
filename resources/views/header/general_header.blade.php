@@ -39,7 +39,7 @@
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">
                     <li>
-                        <button class="header__main-menu__icons__btn">
+                        <button class="header__main-menu__icons__btn" id="general-search-btn">
                             @svg('benu-icon-magnifying-glass-search')
                         </button>
                     </li>
@@ -52,7 +52,7 @@
                     @endauth
                     @guest
                         <li>
-                            <button class="header__main-menu__icons__btn">
+                            <button class="header__main-menu__icons__btn" id="connect-btn">
                                 @svg('benu-icon-silhouette-connect')
                             </button>
                         </li>

@@ -12,6 +12,12 @@ function showModal(modal) {
         case 'lang':
             $('#lang-modal').fadeIn();
             break;
+        case 'search':
+            $('#search-modal').fadeIn();
+            break;
+        case 'connect':
+            $('#connect-modal').fadeIn();
+            break;
         case 'side':
             $('#side-modal').fadeIn();
             break;
@@ -25,6 +31,16 @@ $(function() {
 
     $('#lang-selector').on('click', function() {
         showModal('lang');
+        modalStatus = 'on';
+    });
+
+    $('#general-search-btn').on('click', function() {
+        showModal('search');
+        modalStatus = 'on';
+    });
+
+    $('#connect-btn').on('click', function() {
+        showModal('connect');
         modalStatus = 'on';
     });
 

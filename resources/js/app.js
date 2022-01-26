@@ -6,6 +6,7 @@ require('./harmonica_animation');
 require('./modals_handle');
 require('./welcome_presentation_animation');
 require('./header_icons_hover');
+require('./inputs_handle');
 
 import Alpine from 'alpinejs';
 

@@ -33,6 +33,18 @@ body {
   z-index: 1;
 }
 
+.input-underline {
+  border: none;
+  border-bottom: solid 1px #D9D9D9;
+  padding-bottom: 0.3rem;
+}
+.input-underline:focus, .input-underline :active {
+  border: none;
+  border-bottom: solid 1px #D9D9D9;
+  box-shadow: none;
+  outline: none;
+}
+
 .primary-color {
   color: #D41C1B;
 }
@@ -125,6 +137,33 @@ body {
 .btn-green:hover {
   background: #27955B;
   color: white;
+}
+
+.btn-slider-left {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+  height: 40px;
+}
+.btn-slider-left::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 20%;
+  height: 5px;
+  border-radius: 10px;
+  background: #D41C1B;
+  transition: width 0.5s ease-in-out;
+}
+.btn-slider-left:hover {
+  color: #D41C1B;
+}
+.btn-slider-left:hover::after {
+  width: 100%;
 }
 
 .btn-trans {
@@ -851,6 +890,92 @@ body {
   letter-spacing: 0px;
   color: #2E1414;
   margin-bottom: 2px;
+}
+
+.search-modal {
+  width: 74vw;
+  left: 13vw;
+  top: 200px;
+  border-radius: 0px;
+  padding-bottom: 20px;
+}
+.search-modal label {
+  width: 50%;
+  left: 25%;
+  text-align: center;
+  display: block;
+  font-family: "Barlow Condensed";
+  position: absolute;
+  top: 60px;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+.search-modal__form {
+  padding-top: 20px;
+}
+.search-modal__icon {
+  height: 45px;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.search-modal button:hover .svg-primary {
+  fill: #D41C1B;
+}
+.search-modal input[type=text] {
+  width: 50%;
+  margin-left: 25%;
+  background: transparent;
+  text-align: center;
+}
+.search-modal input[type=text]:focus, .search-modal input[type=text] :active {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.connect-modal {
+  width: 45vw;
+  right: 0;
+  top: 200px;
+  border-radius: 0px;
+}
+.connect-modal__btn {
+  margin-left: 0;
+}
+.connect-modal__register {
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.connect-modal__input-group {
+  position: relative;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  width: 45%;
+}
+.connect-modal__input-group label {
+  position: absolute;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+  top: 3px;
+  left: 10px;
+  font-size: 0.9rem;
+}
+.connect-modal__input-group input[type=text], .connect-modal__input-group input[type=password] {
+  width: 100%;
+  background: transparent;
+}
+.connect-modal__title {
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
 .modal-opacifier {

@@ -47,6 +47,12 @@
 	<!-- Language selection -->
 	@include('modals.lang_modal')
 
+	<!-- Search bar -->
+	@include('modals.search_modal')
+
+	<!-- Connection form -->
+	@include('modals.connect_modal')
+
 	<!-- Central Modal -->
     <div class="modal general-modal" id="general_modal" style="display: none;">
         @yield('modal')

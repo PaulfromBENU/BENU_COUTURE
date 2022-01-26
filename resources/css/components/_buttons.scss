@@ -32,6 +32,31 @@
 	}
 }
 
+.btn-slider-left {
+	position: relative;
+	display: block;
+	width: fit-content;
+	transition: $transition-base;
+	height: 40px;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 20%;
+		height: 5px;
+		border-radius: 10px;
+		background: $primary-color;
+		transition: width 0.5s ease-in-out;
+	}
+	&:hover {
+		color: $primary-color;
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
 .btn-trans {
 	color: white;
 	background: transparent;
