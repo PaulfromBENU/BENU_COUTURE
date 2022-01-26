@@ -65,6 +65,7 @@
 @endsection
 
 @section('main-content-top')
+	@yield('breadcrumbs')
 	@yield('main-content')
 @endsection
 

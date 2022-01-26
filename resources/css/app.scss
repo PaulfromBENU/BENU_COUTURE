@@ -10,6 +10,7 @@
 //Specific components
 @import './components/buttons';
 @import './components/model_overview';
+@import './components/breadcrumbs';
 
 //Layout elements
 @import './layouts/header';
@@ -19,4 +20,5 @@
 
 //Application pages
 @import './pages/welcome';
+@import './pages/contact';
 //@import './pages/landing_page';

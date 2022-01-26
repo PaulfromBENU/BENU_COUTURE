@@ -64,9 +64,9 @@
                         </li>
                     @endguest
                     <li>
-                        <button class="header__main-menu__icons__btn">
+                        <a href="{{ route('contact') }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
-                        </button>
+                        </a>
                     </li>
                     <li>
                         <button class="header__main-menu__icons__btn">
