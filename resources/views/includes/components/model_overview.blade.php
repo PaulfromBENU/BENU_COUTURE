@@ -1,4 +1,4 @@
-<a href="#" class="block model-overview">
+<a href="{{ route('model', ['locale' => app()->getLocale(), 'name' => 'caretta']) }}" class="block model-overview">
 	<div class="model-overview__header flex justify-between">
 		<div>
 			<p class="model-overview__header__txt">

@@ -108,10 +108,14 @@
 	}
 	&__right {
 		width: 50%;
-		padding-top: 40px;
+		border-radius: 25px;
+		max-height: 1072px;
+		overflow: hidden;
+		//padding-top: 40px;
 		img {
 			width: 100%;
-			border-radius: 25px;
+			object-fit: cover;
+			object-position: center center;
 		}
 	}
 }

@@ -10,7 +10,7 @@
 			{{ __('header.universe') }}
 		</h4>
 		<div class="text-center harmonica-bar__close">
-			<button>&#x2715</button>
+			<button>&#x2715;</button>
 		</div>
 		<div class="flex justify-center" style="height: 100%; overflow: hidden;">
 			<div class="harmonica-menu__content__col harmonica-menu__content__col--village">

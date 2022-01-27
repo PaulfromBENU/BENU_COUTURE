@@ -1327,11 +1327,16 @@ body {
 }
 .welcome-campaign__right {
   width: 50%;
-  padding-top: 40px;
+  border-radius: 25px;
+  max-height: 1072px;
+  overflow: hidden;
 }
 .welcome-campaign__right img {
   width: 100%;
-  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .welcome-creations {
@@ -1482,4 +1487,118 @@ body {
   font-family: "Barlow";
   font-weight: 500;
   margin-bottom: 40px;
+}
+
+.model-pres {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.model-pres__img-container {
+  width: 25%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.model-pres__desc {
+  width: 50%;
+  min-height: 400px;
+  background: whitesmoke;
+  border-radius: 25px;
+  padding: 30px 60px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.model-pres__desc__title {
+  color: #D41C1B;
+  font-family: "Barlow Condensed";
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.model-pres__desc__txt {
+  margin-bottom: 30px;
+  font-family: "Barlow";
+}
+.model-pres__desc__keywords {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.model-pres__desc__keywords ul {
+  width: 100%;
+}
+.model-pres__desc__keywords li {
+  width: 40%;
+}
+.model-pres__desc__link {
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+}
+.model-pres__desc__seemore {
+  color: #D41C1B;
+  font-weight: 600;
+}
+.model-pres__desc__seemore a {
+  display: block;
+  width: 45%;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.model-pres__desc__seemore a:hover {
+  text-decoration: underline;
+}
+
+.model-articles {
+  margin-top: 50px;
+}
+.model-articles h2 {
+  text-align: center;
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.model-articles__filters {
+  border-bottom: solid 1px #D9D9D9;
+  position: relative;
+}
+.model-articles__filters__filter {
+  height: 40px;
+  cursor: pointer;
+  padding: 5px 30px 5px 3px;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.model-articles__filters__filter:hover {
+  color: #D41C1B;
+}
+.model-articles__active-filters {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.model-articles__active-filters__filter {
+  min-width: 110px;
+  padding: 3px 10px;
+  background: #fdf7f7;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #D41C1B;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.model-articles__active-filters__filter:hover {
+  background: #FFFFFF;
+  border: 2px solid #D41C1B;
+}
+.model-articles__active-filters__filter p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Barlow Condensed";
 }

@@ -24,10 +24,14 @@ Route::group([
   'middleware' => 'setlocale'], function() {
 	Route::get('/', 'GeneralController@home')->name('home');
 
-	Route::get('/contact', 'GeneralController@contact')->name('contact');
+	Route::get('/'.trans("slugs.contact"), 'ContactController@show')->name('contact');
+
+	Route::get('/models/{name?}', 'ModelController@show')->name('model');
 
 	require __DIR__.'/auth.php';
 });
+
+//Route::get('/change-lang/{lang}', 'GeneralController@changeLocale')->name('locale.update');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

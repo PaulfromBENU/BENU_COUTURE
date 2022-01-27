@@ -1,0 +1,113 @@
+.model-pres {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 100%;
+	&__img-container {
+		width: 25%;
+		min-height: 400px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 25px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	&__desc {
+		width: 50%;
+		min-height: 400px;
+		background: lighten($light-grey, 11);
+		border-radius: 25px;
+		padding: 30px 60px;
+		margin-right: 10px;
+		margin-left: 10px;
+		&__title {
+			color: $primary-color;
+			font-family: 'Barlow Condensed';
+			font-size: 2.2rem;
+			font-weight: 700;
+			margin-bottom: 30px;
+		}
+		&__txt {
+			margin-bottom: 30px;
+			font-family: 'Barlow';
+		}
+		&__keywords {
+			width: 100%;
+			margin-bottom: 30px;
+			ul {
+				width: 100%;
+			}
+			li {
+				width: 40%;
+			}
+		}
+		&__link {
+			font-family: 'Barlow Condensed';
+			font-weight: 600;
+			font-size: 1.2rem;
+			margin-bottom: 60px;
+		}
+		&__seemore {
+			color: $primary-color;
+			font-weight: 600;
+			a {
+				display: block;
+				width: 45%;
+				cursor: pointer;
+				margin-right: 10px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.model-articles {
+	margin-top: 50px;
+	h2 {
+		text-align: center;
+		font-family: 'Barlow Condensed';
+		font-weight: 600;
+		font-size: 2rem;
+		margin-bottom: 30px;
+	}
+	&__filters {
+		border-bottom: solid 1px $light-grey;
+		position: relative;
+		&__filter {
+			height: 40px;
+			cursor: pointer;
+			padding: 5px 30px 5px 3px;
+			transition: $transition-base;
+			font-size: 0.9rem;
+			font-weight: 600;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	&__active-filters {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		&__filter {
+			min-width: 110px;
+			padding: 3px 10px;
+			background: lighten($primary-color-light, 5);
+			border: 2px solid transparent;
+			border-radius: 20px;
+			color: $primary-color;
+			transition: $transition-base;
+			cursor: pointer;
+			margin-right: 10px;
+			&:hover {
+				background: $white;
+				border: 2px solid $primary-color;
+			}
+			p {
+				font-size: 0.9rem;
+				font-weight: 500;
+				font-family: 'Barlow Condensed';
+			}
+		}
+	}
+}

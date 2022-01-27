@@ -11,8 +11,10 @@ class GeneralController extends Controller
         return view('welcome');
     }
 
-    public function contact()
+    public function changeLocale($lang)
     {
-        return view('contact');
+        app()->setLocale($lang);
+
+        return redirect()->back();
     }
 }

@@ -12,4 +12,5 @@
 return [
     "home" => "Accueil",
     "contact" => "Contact",
+    "model" => "Modèle",
 ];
