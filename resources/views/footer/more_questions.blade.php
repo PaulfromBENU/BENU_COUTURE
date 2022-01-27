@@ -1,12 +1,12 @@
 <section class="benu-container footer-more">
 	<div class="benu-container footer-more__wrapper">
 		<div class="footer-more__block">
-			<h3>Tu as encore des questions&nbsp;?</h3>
+			<h3>{{ __('footer.questions-title') }}&nbsp;?</h3>
 			<p>
-				Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui.
+				{{ __('footer.questions-txt-1') }}
 			</p>
 			<div class="text-center">
-				<a href="#" class="btn-couture">Nous contacter</a>
+				<a href="#" class="btn-couture">{{ __('footer.questions-contact') }}</a>
 			</div>
 		</div>
 		<div class="footer-more__illustration footer-more__illustration--left">

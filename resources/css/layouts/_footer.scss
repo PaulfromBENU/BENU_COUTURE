@@ -5,11 +5,11 @@
 	overflow: hidden;
 	&__pictures {
 		margin-top: 72px;
-		width: fit-content;
+		//width: fit-content;
 		margin-bottom: 20px;
 		&__img-container {
 			width: 12vw;
-			height: 12vw;
+			height: 12vw !important;
 			border-radius: 10px;
 			margin-left: 6px;
 			margin-right: 6px;
@@ -20,6 +20,10 @@
 			}
 		}
 	}
+}
+
+.slick-arrow {
+	display: none;
 }
 
 .footer-learnmore {

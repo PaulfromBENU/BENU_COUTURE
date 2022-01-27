@@ -2,7 +2,7 @@
 	<div class="model-overview__header flex justify-between">
 		<div>
 			<p class="model-overview__header__txt">
-				Catégorie de l'objet&nbsp;- 26 déclinaisons
+				{!! __('components.models-header') !!}
 			</p>
 			<div class="flex flex-start">
 				<div class="color-circle color-circle--green"></div>
@@ -26,7 +26,7 @@
 	</div>
 	<div class="model-overview__footer flex justify-between">
 		<p>
-			Modèle XXXX
+			{{ __('components.models-model') }} XXXX
 		</p>
 		<p>
 			129,90&euro;

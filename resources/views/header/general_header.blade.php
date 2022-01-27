@@ -1,6 +1,6 @@
 <header class="header-group">
     <div class="header benu-container flex">
-        <a class="header__logo-container" href="{{ route('home') }}">
+        <a class="header__logo-container" href="{{ route('home', [app()->getLocale()]) }}">
             <img src="{{ asset('images/svg/logo_benu_couture.svg') }}" class="header__logo header__logo--desktop">
             <img src="{{ asset('images/svg/benu-icon-menu-scroll.svg') }}" class="header__logo header__logo--scroll">
             <img src="{{ asset('images/svg/benu-icon-menu-scroll.svg') }}" class="header__logo header__logo--mobile">
@@ -9,19 +9,19 @@
             <div class="flex justify-between header__top-menu">
                 <nav class="header__top-nav flex justify-start">
                     <div>
-                        <a href="{{ route('home') }}" class="header__home-title">BENU COUTURE</a>
+                        <a href="{{ route('home', [app()->getLocale()]) }}" class="header__home-title">BENU COUTURE</a>
                     </div>
                     <ul class="flex justify-start header__top-nav__links">
-                        <li><a href="#">Service Client</a></li>
+                        <li><a href="#">{{ __('header.support') }}</a></li>
                         <li>|</li>
-                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">{{ __('header.about') }}</a></li>
                         <li>|</li>
-                        <li><a href="#">Partenaires</a></li>
+                        <li><a href="#">{{ __('header.partners') }}</a></li>
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
                     <a href="https://benu.lu/" class="header__newsletter-btn__link" target="_blank">
-                        {{ __('Abonnez-vous à la newsletter') }}
+                        {{ __('header.newsletter') }}
                     </a>
                 </div>
             </div>
@@ -30,12 +30,12 @@
                     <div>
                         <button class="header__main-nav__btn" type="button" id="creations-nav-toggle">
                             @svg('benu-icon-squares-categories', 'header__main-nav__btn--logo-1')
-                            Créations
+                            {{ __('header.creations') }}
                             @svg('benu-icon-arrow-down', 'header__main-nav__btn--logo-2')
                         </button>
                     </div>
-                    <a href="#" class="header__main-nav__link">Actualités</a>
-                    <a href="#" class="header__main-nav__link">Histoire</a>
+                    <a href="#" class="header__main-nav__link">{{ __('header.news') }}</a>
+                    <a href="#" class="header__main-nav__link">{{ __('header.story') }}</a>
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">
                     <li>
@@ -64,7 +64,7 @@
                         </li>
                     @endguest
                     <li>
-                        <a href="{{ route('contact') }}" class="header__main-menu__icons__btn">
+                        <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
                         </a>
                     </li>
@@ -75,7 +75,7 @@
                     </li>
                     <li>
                         <button class="header__main-menu__icons__lang-btn" id="lang-selector">
-                            FR
+                            {{ strtoupper(app()->getLocale()) }}
                         </button>
                     </li>
                 </ul>
@@ -87,22 +87,22 @@
         <div class="creations-navbar__container">
             <nav class="creations-navbar__nav flex justify-start benu-container">
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-adult">
-                    Adultes <i class="fas fa-angle-down"></i>
+                    {{ __('header.adults') }} <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-woman">
-                    Femmes <i class="fas fa-angle-down"></i>
+                    {{ __('header.women') }} <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-man">
-                    Hommes <i class="fas fa-angle-down"></i>
+                    {{ __('header.men') }} <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-child">
-                    Enfants <i class="fas fa-angle-down"></i>
+                    {{ __('header.children') }} <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-accessories">
-                    Accessoires <i class="fas fa-angle-down"></i>
+                    {{ __('header.accessories') }} <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-home">
-                    Maison <i class="fas fa-angle-down"></i>
+                    {{ __('header.house') }} <i class="fas fa-angle-down"></i>
                 </div>
             </nav>
         </div>
@@ -110,7 +110,7 @@
             <div class="benu-container">
                 <div class="creations-navbar__menu__lists flex justify-start">
                     <div class="creations-navbar__menu__list navbar-list-adult">
-                        <h4>Vêtements</h4>
+                        <h4>{{ __('header.menu-title-1') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-woman">
-                        <h4>Vêtements</h4>
+                        <h4>{{ __('header.menu-title-1') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-man">
-                        <h4>Vêtements</h4>
+                        <h4>{{ __('header.menu-title-1') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-child">
-                        <h4>Vêtements</h4>
+                        <h4>{{ __('header.menu-title-1') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -174,7 +174,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-accessories">
-                        <h4>Vêtements</h4>
+                        <h4>{{ __('header.menu-title-1') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-home">
-                        <h4>Vêtements</h4>
+                        <h4>{{ __('header.menu-title-1') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -208,7 +208,7 @@
                     
 
                     <div class="creations-navbar__menu__list navbar-list-adult">
-                        <h4>Accessoires</h4>
+                        <h4>{{ __('header.menu-title-2') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-woman">
-                        <h4>Accessoires</h4>
+                        <h4>{{ __('header.menu-title-2') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-man">
-                        <h4>Accessoires</h4>
+                        <h4>{{ __('header.menu-title-2') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -256,7 +256,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-child">
-                        <h4>Accessoires</h4>
+                        <h4>{{ __('header.menu-title-2') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -272,7 +272,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-accessories">
-                        <h4>Accessoires</h4>
+                        <h4>{{ __('header.menu-title-2') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                     <div class="creations-navbar__menu__list navbar-list-home">
-                        <h4>Accessoires</h4>
+                        <h4>{{ __('header.menu-title-2') }}</h4>
                         <div class="flex">
                             <ul>
                                 <li><a href="#">Voir tout</a></li>

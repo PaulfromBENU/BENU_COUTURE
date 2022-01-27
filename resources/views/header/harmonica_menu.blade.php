@@ -1,13 +1,13 @@
 <div class="harmonica-bar">
 	<h4 class="harmonica-bar__title text-center">
-		Découvre tous les univers BENU
+		{{ __('header.universe') }}
 	</h4>
 </div>
 
 <div class="harmonica-menu">
 	<div class="harmonica-menu__content">
 		<h4 class="harmonica-bar__title harmonica-bar__title--active text-center">
-			Découvre tous les univers BENU
+			{{ __('header.universe') }}
 		</h4>
 		<div class="text-center harmonica-bar__close">
 			<button>&#x2715</button>
@@ -30,10 +30,11 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU VILLAGE ESCH ASBL</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.village-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-village">Découvrir le site BENU VILLAGE ESCH ASBL</a>
+							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-village">
+							{{ __('header.discover-village') }}</a>
 						</div>
 					</div>
 				</div>
@@ -55,10 +56,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU VILLAGE SIS</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.sis-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">Découvrir le site BENU VILLAGE SIS</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{{ __('header.discover-sis') }}</a>
 						</div>
 					</div>
 				</div>
@@ -80,10 +81,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU SLOOW</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.sloow-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">Découvrir le site BENU SLOOW</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{{ __('header.discover-sloow') }}</a>
 						</div>
 					</div>
 				</div>
@@ -105,10 +106,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU COUTURE</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.couture-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="{{ route('home') }}" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">Découvrir le site BENU COUTURE</a>
+							<a href="{{ route('home', [app()->getLocale()]) }}" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">{{ __('header.discover-couture') }}</a>
 						</div>
 					</div>
 				</div>
@@ -130,10 +131,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU REUSE</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.reuse-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="https://www.benureuse.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-reuse">Découvrir le site BENU REUSE</a>
+							<a href="https://www.benureuse.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-reuse">{{ __('header.discover-reuse') }}</a>
 						</div>
 					</div>
 				</div>
@@ -155,10 +156,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU LaSA</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.lasa-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">Découvrir le site BENU LaSA</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{{ __('header.discover-lasa') }}</a>
 						</div>
 					</div>
 				</div>
@@ -180,10 +181,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU DESIGN</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.design-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">Découvrir le site BENU DESIGN</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{{ __('header.discover-design') }}</a>
 						</div>
 					</div>
 				</div>
@@ -205,10 +206,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU BREAK</h4>
 						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.
+							{{ __('header.break-desc') }}
 						</p>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">Découvrir le site BENU BREAK</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{{ __('header.discover-break') }}</a>
 						</div>
 					</div>
 				</div>

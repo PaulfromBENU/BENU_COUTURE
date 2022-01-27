@@ -5493,6 +5493,8 @@ __webpack_require__(/*! ./header_icons_hover */ "./resources/js/header_icons_hov
 
 __webpack_require__(/*! ./inputs_handle */ "./resources/js/inputs_handle.js");
 
+__webpack_require__(/*! ./footer_animations */ "./resources/js/footer_animations.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5527,6 +5529,24 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/footer_animations.js":
+/*!*******************************************!*\
+  !*** ./resources/js/footer_animations.js ***!
+  \*******************************************/
+/***/ (() => {
+
+$(function () {
+  $('.footer-connect__pictures').slick({
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false
+  });
+});
 
 /***/ }),
 

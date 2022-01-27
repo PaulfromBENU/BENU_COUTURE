@@ -13,12 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'GeneralController@home')->name('home');
+// Redirect welcome page to localized page if not specified
+// Route::get('/', function () {
+//     return redirect()->route('home', ['locale' => app()->getLocale()]);
+// });  
 
-Route::get('/contact', 'GeneralController@contact')->name('contact');
+//All routes to be localized
+Route::group([
+  'prefix' => '{locale?}',
+  'middleware' => 'setlocale'], function() {
+	Route::get('/', 'GeneralController@home')->name('home');
+
+	Route::get('/contact', 'GeneralController@contact')->name('contact');
+
+	require __DIR__.'/auth.php';
+});
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';

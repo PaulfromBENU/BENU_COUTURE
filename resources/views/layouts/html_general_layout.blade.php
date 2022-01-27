@@ -37,6 +37,7 @@
         <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
         <link rel="stylesheet" href="{{ asset('css/tailwindcss.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
+        @yield('more-styles')
 
         <!-- Font awesome icons -->
         <script src="https://kit.fontawesome.com/983b1bd0fa.js" crossorigin="anonymous"></script>

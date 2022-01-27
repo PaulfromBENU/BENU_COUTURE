@@ -1,9 +1,9 @@
 <section class="benu-container welcome-others">
 	<h3 class="text-center">
-		Les créations
+		{{ __('welcome.others-title') }}
 	</h3>
 	<p>
-		pantalon short jupe robe tshirt sweet pull blouse accessoires
+		{{ __('welcome.others-words') }}
 	</p>
 	<a href="#" class="block welcome-others__plus">
 		<div class="welcome-others__plus__symbol">

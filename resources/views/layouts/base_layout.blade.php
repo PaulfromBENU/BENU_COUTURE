@@ -20,6 +20,10 @@
 	@yield('description')
 @endsection
 
+@section('more-styles')
+	<link rel="stylesheet" type="text/css" href="{{ asset('js/services/slick-1.8.1/slick/slick.css') }}"/>
+@endsection
+
 @section('robots-behaviour-top')
 	@if(App::environment('stage'))
 		noindex, nofollow
@@ -78,6 +82,7 @@
 @endsection
 
 @section('scripts-top')
+	<script type="text/javascript" src="{{ asset('js/services/slick-1.8.1/slick/slick.min.js') }}"></script>
 	@yield('scripts')
 @endsection
 

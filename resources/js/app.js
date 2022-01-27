@@ -7,6 +7,7 @@ require('./modals_handle');
 require('./welcome_presentation_animation');
 require('./header_icons_hover');
 require('./inputs_handle');
+require('./footer_animations');
 
 import Alpine from 'alpinejs';
 

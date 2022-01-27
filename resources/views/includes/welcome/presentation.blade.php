@@ -8,53 +8,53 @@
     </div>
     <div class="welcome-presentation__desc">
         <div class="flex justify-start welcome-presentation__desc__bar">
-            <button class="welcome-presentation__desc__bar__btn --active welcome-illustration-btn-1">Nachhaltig</button>
-            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-2">Sozial und lokal</button>
-            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-3">Individuell</button>
-            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-4">Informativ</button>
-            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-5">Wichtig</button>
+            <button class="welcome-presentation__desc__bar__btn --active welcome-illustration-btn-1">{{ __('welcome.bar-title-1') }}</button>
+            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-2">{{ __('welcome.bar-title-2') }}</button>
+            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-3">{{ __('welcome.bar-title-3') }}</button>
+            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-4">{{ __('welcome.bar-title-4') }}</button>
+            <button class="welcome-presentation__desc__bar__btn welcome-illustration-btn-5">{{ __('welcome.bar-title-5') }}</button>
         </div>
         <div>
             <h3 class="welcome-presentation__desc__title welcome-illustration-1">
-                <span class="primary-color">100% nachhaltige</span> Kleidung und Accessoires
+                <span class="primary-color">{{ __('welcome.pres-title-1-1') }}</span> {{ __('welcome.pres-title-1-2') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-2">
-                <span class="primary-color">Un deuxieme</span> titre
+                <span class="primary-color">{{ __('welcome.pres-title-2-1') }}</span> {{ __('welcome.pres-title-2-2') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-3">
-                <span class="primary-color">Un troisieme</span> titre
+                <span class="primary-color">{{ __('welcome.pres-title-3-1') }}</span> {{ __('welcome.pres-title-3-2') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-4">
-                <span class="primary-color">Un quatrieme</span> titre
+                <span class="primary-color">{{ __('welcome.pres-title-4-1') }}</span> {{ __('welcome.pres-title-4-2') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-5">
-                <span class="primary-color">Un cinquieme</span> titre
+                <span class="primary-color">{{ __('welcome.pres-title-5-1') }}</span> {{ __('welcome.pres-title-5-2') }}
             </h3>
         </div>
 
         <div class="">
             <p class="welcome-illustration-1 welcome-presentation__desc__text">
-                BENU Couture produziert hochwertige Kleidung & Accessoires im Up-Cycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich. Als Verpackung für den Versand benutzen wir wiederverwendete Papierboxen sowie umweltschonenden Kleber und Paketband.
+                {{ __('welcome.pres-txt-1') }}
             </p>
             <p class="welcome-illustration-2 welcome-presentation__desc__text">
-                Text description 2
+                {{ __('welcome.pres-txt-2') }}
             </p>
             <p class="welcome-illustration-3 welcome-presentation__desc__text">
-                Text description 3
+                {{ __('welcome.pres-txt-3') }}
             </p>
             <p class="welcome-illustration-4 welcome-presentation__desc__text">
-                Text description 4
+                {{ __('welcome.pres-txt-4') }}
             </p>
             <p class="welcome-illustration-5 welcome-presentation__desc__text">
-                Text description 5
+                {{ __('welcome.pres-txt-5') }}
             </p>
         </div>
         <div class="">
-            <a href="#" class="welcome-illustration-1 welcome-presentation__desc__link">Link 1</a>
-            <a href="#" class="welcome-illustration-2 welcome-presentation__desc__link">Link 2</a>
-            <a href="#" class="welcome-illustration-3 welcome-presentation__desc__link">Link 3</a>
-            <a href="#" class="welcome-illustration-4 welcome-presentation__desc__link">Link 4</a>
-            <a href="#" class="welcome-illustration-5 welcome-presentation__desc__link">Link 5</a>
+            <a href="#" class="welcome-illustration-1 welcome-presentation__desc__link">{{ __('welcome.pres-link-1') }}</a>
+            <a href="#" class="welcome-illustration-2 welcome-presentation__desc__link">{{ __('welcome.pres-link-2') }}</a>
+            <a href="#" class="welcome-illustration-3 welcome-presentation__desc__link">{{ __('welcome.pres-link-3') }}</a>
+            <a href="#" class="welcome-illustration-4 welcome-presentation__desc__link">{{ __('welcome.pres-link-4') }}</a>
+            <a href="#" class="welcome-illustration-5 welcome-presentation__desc__link">{{ __('welcome.pres-link-5') }}</a>
         </div>
     </div>
 </section>

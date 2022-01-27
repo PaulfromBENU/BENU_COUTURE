@@ -1,6 +1,6 @@
 <div class="modal connect-modal" id="connect-modal" style="display: none;">
 	<p class="connect-modal__title">Je me connecte à mon compte</p>
-	<form method="POST" action="{{ route('login') }}">
+	<form method="POST" action="{{ route('login', [app()->getLocale()]) }}">
 		@csrf
 		<div class="flex justify-start">
 			<div class="connect-modal__input-group">
@@ -15,7 +15,7 @@
 
 		<div class="flex justify-start">
 			<div class="connect-modal__input-group">
-				<a href="{{ route('register') }}" class="btn-slider-left connect-modal__register">Je crée mon compte ici</a>
+				<a href="{{ route('register', [app()->getLocale()]) }}" class="btn-slider-left connect-modal__register">Je crée mon compte ici</a>
 			</div>
 			<div class="connect-modal__input-group">
 				<button type="submit" class="btn-couture connect-modal__btn">Je me connecte</button>

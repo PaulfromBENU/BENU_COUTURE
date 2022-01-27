@@ -1018,14 +1018,11 @@ body {
 }
 .footer-connect__pictures {
   margin-top: 72px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin-bottom: 20px;
 }
 .footer-connect__pictures__img-container {
   width: 12vw;
-  height: 12vw;
+  height: 12vw !important;
   border-radius: 10px;
   margin-left: 6px;
   margin-right: 6px;
@@ -1035,6 +1032,10 @@ body {
 .footer-connect__pictures__img-container img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.slick-arrow {
+  display: none;
 }
 
 .footer-learnmore {
