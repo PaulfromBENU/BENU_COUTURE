@@ -11,11 +11,14 @@
 @section('main-content')
     <section class="benu-container mt-10 pt-5 mb-10 pb-10">
         <h1 class="mt-10 mb-10 text-center text-3xl">Vous souhaitez vous inscrire sur BENU COUTURE&nbsp;?</h1>
-        <form method="POST" action="{{ route('register') }}" class="w-1/3 m-auto mb-10">
+        <form method="POST" action="{{ route('register', ['locale' => app()->getLocale()]) }}" class="w-1/3 m-auto mb-10">
             @csrf
             <div class="input-group">
-                <label>Prénom</label><br/>
-                <input type="text" name="register_first_name" class="input-underline w-full mb-5" placeholder="Prénom" required>
+                <label for="register_first_name">Prénom</label><br/>
+                <input type="text" id="register_first_name" name="register_first_name" class="input-underline w-full mb-5" placeholder="Prénom" required>
+                @error('register_first_name')
+                    <div class="primary-color">{{ $message }}</div>
+                @enderror
             </div>
             <div class="input-group">
                 <label>Nom</label><br/>
@@ -23,7 +26,7 @@
             </div>
             <div class="input-group">
                 <label>Adresse e-mail</label><br/>
-                <input type="email" name="register_email" class="input-underline w-full mb-5" placeholder="exemple@email.com" required>
+                <input type="email" name="email" class="input-underline w-full mb-5" placeholder="example@email.com" required>
             </div>
             <div class="input-group">
                 <label>Mot de passe</label><br/>
@@ -33,10 +36,19 @@
                 <label>Confirmation mot de passe</label><br/>
                 <input type="password" name="register_password_confirmation" class="input-underline w-full mb-5" required>
             </div>
+            <div class="block mt-4">
+                <label for="register_newsletter" class="inline-flex items-center">
+                    <input id="register_newsletter" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_newsletter" value="1" checked>
+                    <span class="ml-2 text-sm text-gray-600">S'abonner à la newsletter</span>
+                </label>
+            </div>
             <div class="flex justify-around m-auto mt-5 pt-5">
                 <input type="submit" name="register_submit" class="btn-couture" value="Je m'inscris">
                 <a href="{{ route('login') }}" class="btn-slider-left mt-3">Déjà inscrit.e ?</a>
             </div>
+            @if($errors->any())
+                {!! implode('', $errors->all('<div>:message</div>')) !!}
+            @endif
         </form>
     </section>
     

@@ -194,6 +194,7 @@ body {
   transition: all 0.2s ease-in-out;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .btn-couture:hover {
   background: #D41C1B;

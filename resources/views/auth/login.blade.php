@@ -1,56 +1,54 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.base_layout')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('title')
+    Rejoignez BENU COUTURE !
+@endsection
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@section('description')
+    Inscrivez-vous sur BENU COUTURE pour accéder à l'ensemble de nos services et acheter nos créations uniques entièrement à partir de tissus réutilisés, en ligne ou dans notre magasin à Esch-Sur-Alzette. 
+@endsection
 
-        <form method="POST" action="{{ route('login') }}">
+@section('main-content')
+    <section class="benu-container mt-10 pt-5 mb-10 pb-10">
+        <h1 class="mt-10 mb-10 text-center text-3xl">Connectez-vous sur BENU COUTURE</h1>
+        <form method="POST" action="{{ route('login.connect', ['locale' => app()->getLocale()]) }}" class="w-1/3 m-auto mb-10">
             @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <div class="input-group">
+                <label for="login_email">Adresse e-mail</label><br/>
+                <input type="email" id="login_email" name="email" class="input-underline w-full mb-5" placeholder="example@email.com" required>
             </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+            <div class="input-group">
+                <label for="login_password">Mot de passe</label><br/>
+                <input type="password" id="login_password" name="password" class="input-underline w-full mb-5" required>
             </div>
 
             <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">Se souvenir de moi</span>
                 </label>
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        Mot de passe oublié&nbsp;?
                     </a>
                 @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
             </div>
+            <div class="flex justify-around m-auto mt-5 pt-5">
+                <input type="submit" name="login_submit" class="btn-couture" value="Je me connecte">
+                <a href="{{ route('register') }}" class="btn-slider-left mt-3">Pas encore inscrit.e ?</a>
+            </div>
+            @if($errors->any())
+                {!! implode('', $errors->all('<div>:message</div>')) !!}
+            @endif
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </section>
+@endsection
+
+@section('scripts')
+
+@endsection
+

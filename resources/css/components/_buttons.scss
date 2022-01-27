@@ -86,6 +86,7 @@
 	transition: $transition-base;
 	margin-left: 10px;
 	margin-right: 10px;
+	cursor: pointer;
 	&:hover {
 		background: $primary-color;
 		color: $white;

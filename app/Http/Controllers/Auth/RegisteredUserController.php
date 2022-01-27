@@ -33,16 +33,24 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        if (!isset($request->register_newsletter)) {
+            $request->register_newsletter = 0;
+        }
+        
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'register_first_name' => ['required', 'string', 'max:255'],
+            'register_last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
+            'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'register_newsletter' => ['integer'],
         ]);
 
         $user = User::create([
-            'name' => $request->name,
+            'first_name' => $request->register_first_name,
+            'last_name' => $request->register_last_name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'newsletter' => $request->register_newsletter,
         ]);
 
         event(new Registered($user));
