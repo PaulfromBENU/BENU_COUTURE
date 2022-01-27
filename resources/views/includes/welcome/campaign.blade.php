@@ -4,7 +4,7 @@
 			<p class="welcome-campaign__left__title-1">{{ __('welcome.campaign-title-1') }}</p>
 			<p class="welcome-campaign__left__title-2">{{ __('welcome.campaign-title-2') }}</p>
 			<div>
-				<div>
+				<div class="welcome-campaign__left__img-container">
 					<img src="{{ asset('images/pictures/welcome-campaign-1.jpg') }}" class="m-auto">
 				</div>
 				<div class="flex justify-center welcome-campaign__left__links">

@@ -1300,8 +1300,10 @@ body {
   width: 50%;
   margin-top: 50px;
 }
-.welcome-campaign__left img {
+.welcome-campaign__left__img-container {
   width: 29vw;
+  max-height: 432px;
+  overflow: hidden;
   border-radius: 25px;
   margin-top: 100px;
   margin-bottom: 64px;
