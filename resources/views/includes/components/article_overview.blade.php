@@ -13,12 +13,12 @@
 		</div>
 
 		<div class="model-overview__header__heart">
-			<!-- <div class="model-overview__header__heart__icon">
+			<div class="model-overview__header__heart__icon">
 				<i class="far fa-heart"></i>
 			</div>
 			<div class="model-overview__header__heart__icon model-overview__header__heart__icon--hovered">
 				<i class="fas fa-heart"></i>
-			</div> -->
+			</div>
 		</div>
 	</div>
 	<div class="model-overview__img-container">

@@ -47,11 +47,6 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if (User::where('email', $this->email)->count() == 1) {
-            $user = User::where('email', $this->email)->first();
-            dd('Authentication is not ready yet. Please try again later :)');
-            dd(Hash::check($this->password, $user->password));
-        }
         if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 

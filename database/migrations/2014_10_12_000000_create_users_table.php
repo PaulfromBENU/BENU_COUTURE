@@ -20,7 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
+            $table->string('role')->default('newsletter');//4 levels: newsletter (not registered, just newsletter), user, editor, admin
             $table->boolean('newsletter')->default('0');
+            $table->string('origin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
