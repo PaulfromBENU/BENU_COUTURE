@@ -586,7 +586,7 @@ body {
   color: white;
 }
 .creations-navbar__menu {
-  box-shadow: lightgrey 0 50px 50px;
+  box-shadow: 0px 12px 20px #2A294433;
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.4s;
