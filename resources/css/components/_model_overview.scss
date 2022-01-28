@@ -54,27 +54,9 @@
 		background: lightgrey;
 		margin-top: 22px;
 		margin-bottom: 33px;
+		overflow: hidden;
 		img {
 			object-fit: contain;
 		}
-	}
-}
-
-.color-circle {
-	height: 14px;
-	width: 14px;
-	border-radius: 50%;
-	margin-right: 5px;
-	&--green {
-		background: $benu_village;
-	}
-	&--blue {
-		background: $unnamed-color-00c3d5;
-	}
-	&--yellow {
-		background: $benu_reuse;
-	}
-	&--purple {
-		background: $unnamed-color-58566a;
 	}
 }

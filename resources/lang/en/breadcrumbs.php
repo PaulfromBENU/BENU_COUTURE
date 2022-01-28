@@ -13,4 +13,5 @@ return [
     "home" => "Home",
     "contact" => "Contact",
     "model" => "Model",
+    "models" => "Creations",
 ];

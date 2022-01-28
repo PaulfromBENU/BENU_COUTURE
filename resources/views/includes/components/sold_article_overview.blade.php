@@ -1,6 +1,6 @@
-<a href="#" class="block article-overview">
-	<div class="article-overview__cap article-overview__cap--red"></div>
-	<div class="article-overview__img-container">
+<a href="#" class="block sold-overview">
+	<div class="sold-overview__cap sold-overview__cap--grey"></div>
+	<div class="sold-overview__img-container">
 		<img src="{{ asset('images/pictures/modele_2.png') }}">
 		<img src="{{ asset('images/pictures/modele_3.png') }}" style="display: none;">
 		<img src="{{ asset('images/pictures/modele_4.png') }}" style="display: none;">
@@ -12,28 +12,28 @@
 			<i class="fas fa-chevron-right"></i>
 		</div>
 	</div>
-	<div class="article-overview__footer">
+	<div class="sold-overview__footer">
 		<div class="flex justify-between">
-			<p class="article-overview__footer__size">
+			<p class="sold-overview__footer__size">
 				Taille XS
 			</p>
 			<div class="color-circle color-circle--green"></div>
 		</div>
-		<p class="article-overview__footer__category">
+		<p class="sold-overview__footer__category">
 			Catégorie de l'objet
 		</p>
-		<p class="article-overview__footer__name">
+		<p class="sold-overview__footer__name">
 			Caretta-01
 		</p>
 		<div class="flex justify-between">
-			<p class="article-overview__footer__price">
-				129,90&euro;
+			<p class="sold-overview__footer__price">
+				VENDU
 			</p>
-			<div class="article-overview__footer__heart">
-				<div class="article-overview__footer__heart__icon">
+			<div class="sold-overview__footer__heart">
+				<div class="sold-overview__footer__heart__icon">
 					<i class="far fa-heart"></i>
 				</div>
-				<div class="article-overview__footer__heart__icon article-overview__footer__heart__icon--hovered">
+				<div class="sold-overview__footer__heart__icon sold-overview__footer__heart__icon--hovered">
 					<i class="fas fa-heart"></i>
 				</div>
 			</div>

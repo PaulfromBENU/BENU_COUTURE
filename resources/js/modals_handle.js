@@ -36,6 +36,7 @@ $(function() {
 
     $('#general-search-btn').on('click', function() {
         showModal('search');
+        $('.search-modal input[type=text]').focus();
         modalStatus = 'on';
     });
 

@@ -24,6 +24,25 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+.color-circle {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.color-circle--green {
+  background: #27955B;
+}
+.color-circle--blue {
+  background: #00C3D5;
+}
+.color-circle--yellow {
+  background: #F9941D;
+}
+.color-circle--purple {
+  background: #58566A;
+}
+
 .content-wrapper {
   padding-top: 200px;
   position: absolute;
@@ -47,6 +66,48 @@ body {
 
 .primary-color {
   color: #D41C1B;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: calc(50% - 28px);
+  height: 56px;
+  transition: all 0.2s ease-in-out;
+  width: 28px;
+  cursor: pointer;
+}
+.slider-arrow:hover {
+  opacity: 0.9;
+}
+.slider-arrow--color-1 {
+  background: #401c1c;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.slider-arrow--color-2 {
+  background: #FFFFFF;
+  color: #D41C1B;
+  opacity: 0.7;
+}
+.slider-arrow--left {
+  left: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.slider-arrow--left i {
+  font-size: 1.5rem;
+  padding-top: 15px;
+  padding-left: 4px;
+}
+.slider-arrow--right {
+  right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.slider-arrow--right i {
+  font-size: 1.5rem;
+  padding-top: 15px;
+  padding-left: 8px;
 }
 
 .svg-fill-primary-light {
@@ -288,33 +349,217 @@ body {
   background: lightgrey;
   margin-top: 22px;
   margin-bottom: 33px;
+  overflow: hidden;
 }
 .model-overview__img-container img {
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.color-circle {
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
-  margin-right: 5px;
+.article-overview {
+  width: 23.8%;
+  min-width: 280px;
+  background: white;
+  box-shadow: 0px 6px 15px #00000029;
+  border-radius: 25px;
+  padding: 16px 18px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
 }
-.color-circle--green {
-  background: #27955B;
+.article-overview:hover .article-overview__cap {
+  height: 15%;
 }
-.color-circle--blue {
-  background: #00C3D5;
+.article-overview__cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9%;
+  width: 100%;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
 }
-.color-circle--yellow {
-  background: #F9941D;
+.article-overview__cap--red {
+  background: #D41C1B;
 }
-.color-circle--purple {
-  background: #58566A;
+.article-overview__cap--grey {
+  background: #D0D0D0;
+}
+.article-overview__img-container {
+  width: 100%;
+  min-height: 300px;
+  max-height: 60vh;
+  background: white;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 22px;
+}
+.article-overview__img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article-overview__footer .color-circle {
+  margin-top: 12px;
+}
+.article-overview__footer__size {
+  background: #D41C1B;
+  border-radius: 8px;
+  padding: 4px 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  font: normal normal 600 20px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.article-overview__footer__category {
+  margin-top: 20px;
+  text-align: left;
+  font: normal normal 500 14px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  opacity: 0.5;
+}
+.article-overview__footer__name {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 600 26px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #D41C1B;
+}
+.article-overview__footer__price {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 500 42px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.article-overview__footer__heart {
+  position: relative;
+  font-size: 1.6rem;
+  color: #D41C1B;
+}
+.article-overview__footer__heart__icon {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  cursor: pointer;
+}
+.article-overview__footer__heart__icon--hovered {
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+.article-overview__footer__heart__icon--hovered.--active {
+  transform: scale(1);
+}
+.article-overview__footer__heart:hover .article-overview__footer__heart__icon--hovered {
+  transform: scale(1);
+}
+
+.sold-overview {
+  width: 23.8%;
+  min-width: 280px;
+  background: white;
+  box-shadow: 0px 6px 15px #00000029;
+  border-radius: 25px;
+  padding: 16px 18px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.sold-overview:hover .sold-overview__cap {
+  height: 15%;
+}
+.sold-overview__cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9%;
+  width: 100%;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+}
+.sold-overview__cap--red {
+  background: #D41C1B;
+}
+.sold-overview__cap--grey {
+  background: #D0D0D0;
+}
+.sold-overview__img-container {
+  width: 100%;
+  min-height: 300px;
+  max-height: 60vh;
+  background: white;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 22px;
+}
+.sold-overview__img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sold-overview__footer .color-circle {
+  margin-top: 12px;
+}
+.sold-overview__footer__size {
+  background: #D0D0D0;
+  border-radius: 8px;
+  padding: 4px 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  font: normal normal 600 20px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.sold-overview__footer__category {
+  margin-top: 20px;
+  text-align: left;
+  font: normal normal 500 14px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  opacity: 0.5;
+}
+.sold-overview__footer__name {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 600 26px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #D0D0D0;
+}
+.sold-overview__footer__price {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 500 42px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.sold-overview__footer__heart {
+  position: relative;
+  font-size: 1.6rem;
+  color: #D41C1B;
+}
+.sold-overview__footer__heart__icon {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  cursor: pointer;
+}
+.sold-overview__footer__heart__icon--hovered {
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+.sold-overview__footer__heart__icon--hovered.--active {
+  transform: scale(1);
+}
+.sold-overview__footer__heart:hover .sold-overview__footer__heart__icon--hovered {
+  transform: scale(1);
 }
 
 .breadcrumbs {
-  margin-top: 110px;
+  margin-top: 111px;
   width: 100%;
   background: #f8f8f8 url("/images/svg/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
   background-size: 12%;
@@ -1491,60 +1736,77 @@ body {
 
 .model-pres {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 97px;
   width: 100%;
 }
 .model-pres__img-container {
-  width: 25%;
-  min-height: 400px;
+  width: 29%;
+  height: 640px;
   position: relative;
   overflow: hidden;
   border-radius: 25px;
-  margin-right: 10px;
-  margin-left: 10px;
+}
+.model-pres__img-container img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .model-pres__desc {
-  width: 50%;
-  min-height: 400px;
-  background: whitesmoke;
+  width: 67%;
+  height: 640px;
+  background: #D0D0D033;
   border-radius: 25px;
-  padding: 30px 60px;
-  margin-right: 10px;
-  margin-left: 10px;
+  padding: 33px 71px;
+  position: relative;
 }
 .model-pres__desc__title {
   color: #D41C1B;
-  font-family: "Barlow Condensed";
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
+  text-align: left;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 35px;
 }
 .model-pres__desc__txt {
-  margin-bottom: 30px;
-  font-family: "Barlow";
+  margin-bottom: 55px;
+  text-align: left;
+  font: normal normal 600 16px/28px "Barlow";
+  letter-spacing: 0px;
 }
 .model-pres__desc__keywords {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 55px;
 }
 .model-pres__desc__keywords ul {
   width: 100%;
 }
 .model-pres__desc__keywords li {
+  display: flex;
+  justify-content: flex-start;
   width: 40%;
+  text-align: left;
+  font: normal normal 600 16px/26px "Barlow";
+  letter-spacing: 0px;
+}
+.model-pres__desc__keywords li svg {
+  margin-top: 9px;
+  margin-right: 5px;
+  width: 19px;
 }
 .model-pres__desc__link {
-  font-family: "Barlow Condensed";
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 60px;
+  text-align: left;
+  font: normal normal 700 22px/26px "Barlow Condensed";
+  letter-spacing: 0.44px;
 }
 .model-pres__desc__seemore {
   color: #D41C1B;
   font-weight: 600;
+  position: absolute;
+  bottom: 33px;
+  left: 70px;
+  width: 90%;
 }
 .model-pres__desc__seemore a {
-  display: block;
+  display: flex;
   width: 45%;
   cursor: pointer;
   margin-right: 10px;
@@ -1552,35 +1814,43 @@ body {
 .model-pres__desc__seemore a:hover {
   text-decoration: underline;
 }
-
-.model-articles {
-  margin-top: 50px;
+.model-pres__desc__seemore a svg {
+  margin-left: 10px;
 }
+
 .model-articles h2 {
   text-align: center;
-  font-family: "Barlow Condensed";
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 30px;
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 73px;
 }
 .model-articles__filters {
   border-bottom: solid 1px #D9D9D9;
   position: relative;
+  margin-bottom: 20px;
 }
 .model-articles__filters__filter {
   height: 40px;
   cursor: pointer;
-  padding: 5px 30px 5px 3px;
+  padding: 5px 3px;
   transition: all 0.2s ease-in-out;
-  font-size: 0.9rem;
-  font-weight: 600;
+  text-align: left;
+  font: normal normal 600 16px/18px "Barlow";
+  letter-spacing: 0px;
+  margin-right: 50px;
 }
 .model-articles__filters__filter:hover {
   color: #D41C1B;
 }
+.model-articles__filters__filter img {
+  width: 16px;
+  height: 8px;
+  margin-top: 7px;
+  margin-left: 15px;
+}
 .model-articles__active-filters {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .model-articles__active-filters__filter {
   min-width: 110px;
@@ -1593,6 +1863,9 @@ body {
   cursor: pointer;
   margin-right: 10px;
 }
+.model-articles__active-filters__filter .color-circle {
+  margin-top: 5px;
+}
 .model-articles__active-filters__filter:hover {
   background: #FFFFFF;
   border: 2px solid #D41C1B;
@@ -1601,4 +1874,58 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   font-family: "Barlow Condensed";
+  padding-top: 1px;
+}
+.model-articles__list {
+  margin-bottom: 150px;
+}
+
+.model-sold {
+  width: 100%;
+  background: #f8f8f8 url("/images/svg/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
+  background-size: 12%;
+  min-height: 100px;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.model-sold__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+  margin-bottom: 26px;
+}
+.model-sold__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 50px;
+}
+.model-sold__list {
+  margin-bottom: 75px;
+}
+.model-sold__link {
+  font: normal normal 700 22px/26px "Barlow Condensed";
+  letter-spacing: 0.44px;
+}
+
+.model-request {
+  padding-top: 100px;
+}
+.model-request__title {
+  text-align: center;
+  font: normal normal 600 105px/126px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #D41C1B;
+  margin-bottom: 30px;
+}
+.model-request__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  margin-bottom: 50px;
+}
+.model-request__link {
+  margin-bottom: 120px;
 }

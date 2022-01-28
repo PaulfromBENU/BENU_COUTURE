@@ -8,6 +8,7 @@ require('./welcome_presentation_animation');
 require('./header_icons_hover');
 require('./inputs_handle');
 require('./footer_animations');
+require('./model_article_sliders');
 
 import Alpine from 'alpinejs';
 

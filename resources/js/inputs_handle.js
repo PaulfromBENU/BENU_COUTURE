@@ -8,9 +8,7 @@ $(function() {
 	if ($('.connect-modal input[type=text]').val() != '') {
 		$(".connect-modal label[for='" + $('.connect-modal input[type=text]').attr('id') + "']").css('top', '-10px').css('transform', 'scale(0.75)').css('color', 'grey');
 	}
-	if ($('.search-modal input[type=text]').val() != '') {
-		$('.search-modal label').css('top', '60px').css('transform', 'scale(1)').css('color', labelColorSearch);
-	}
+	$('.search-modal input[type=text]').val('');
 
 	// Handle search label behaviour depending on input status
 	$('.search-modal input[type=text]').on('focus', function() {

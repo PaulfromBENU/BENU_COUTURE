@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	<div class="model-overview__img-container">
-		
+		<img src="{{ asset('images/pictures/modele_2.png') }}">
 	</div>
 	<div class="model-overview__footer flex justify-between">
 		<p>
