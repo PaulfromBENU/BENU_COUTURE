@@ -16,7 +16,7 @@
 	&__desc {
 		width: 67%;
 		height: 640px;
-		background: $light-grey-transparent;
+		background: $bg-light-grey;
 		border-radius: 25px;
 		padding: 33px 71px; //2.5% 3%;
 		position: relative;
@@ -149,8 +149,8 @@
 
 .model-sold {
 	width: 100%;
-	background: lighten($light-grey, 12) url('/images/svg/pattern_solo_benu_couture_OK.svg') 0% 0% repeat padding-box;
-	background-size: 12%;
+	//background: lighten($light-grey, 12) url('/images/svg/pattern_solo_benu_couture_OK.svg') 0% 0% repeat padding-box;
+	//background-size: 12%;
 	min-height: 100px;
 	padding-top: 110px;
 	padding-bottom: 110px;

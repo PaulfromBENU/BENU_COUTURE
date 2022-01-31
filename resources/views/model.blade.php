@@ -9,7 +9,7 @@
 @endsection
 
 @section('breadcrumbs')
-	<div class="breadcrumbs">
+	<div class="breadcrumbs pattern-bg">
 		<div class="benu-container breadcrumbs__content flex justify-start">
 			<a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.home') }}</a>
 			<div class="pl-5 pr-5">

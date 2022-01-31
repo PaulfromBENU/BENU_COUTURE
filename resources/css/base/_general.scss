@@ -61,6 +61,27 @@ body {
 	}
 }
 
+.pattern-bg {
+	background: $bg-light-grey;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: transparent url('/images/svg/pattern_solo_benu_couture_OK.svg') 0% 0% repeat padding-box;
+		background-size: 12%;
+		opacity: 0.5;
+		z-index: 0;
+	}
+	> div {
+		position: relative;
+		z-index: 1;
+	}
+}
+
 .primary-color {
 	color: $primary-color;
 }

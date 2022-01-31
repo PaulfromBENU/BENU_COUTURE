@@ -1,4 +1,4 @@
-<section class="model-sold">
+<section class="model-sold pattern-bg">
 	<div class="benu-container">
 		<h2 class="model-sold__title">Les déclinaisons vendues</h2>
 		<p class="model-sold__subtitle w-1/2 m-auto">

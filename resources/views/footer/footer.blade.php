@@ -34,6 +34,14 @@
 			</div>
 			<div class="footer__lists__col">
 				<h4>{{ __('footer.footer-title-4') }}</h4>
+				<p class="footer__contact">
+					<span class="primary-color"><strong>BENU Village Esch asbl</strong></span>
+					<br/>51 rue d'Audun
+					<br/>4018 Esch-sur-Alzette
+					<br/>Luxembourg
+					<br/><span class="primary-color">+352 27 91 19 49</span>
+				</p>
+				<h4>{{ __('footer.footer-title-5') }}</h4>
 				<a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
 			</div>
 		</div>

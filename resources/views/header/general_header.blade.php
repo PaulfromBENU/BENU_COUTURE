@@ -17,6 +17,8 @@
                         <li><a href="#">{{ __('header.about') }}</a></li>
                         <li>|</li>
                         <li><a href="#">{{ __('header.partners') }}</a></li>
+                        <li>|</li>
+                        <li><a href="#">{{ __('header.vouchers') }}</a></li>
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
@@ -36,6 +38,7 @@
                     </div>
                     <a href="#" class="header__main-nav__link">{{ __('header.news') }}</a>
                     <a href="#" class="header__main-nav__link">{{ __('header.story') }}</a>
+                    <a href="#" class="header__main-nav__link">{{ __('header.locations') }}</a>
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">
                     <li>

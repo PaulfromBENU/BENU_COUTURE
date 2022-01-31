@@ -64,6 +64,27 @@ body {
   outline: none;
 }
 
+.pattern-bg {
+  background: #F4F4F4;
+  position: relative;
+}
+.pattern-bg::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent url("/images/svg/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
+  background-size: 12%;
+  opacity: 0.5;
+  z-index: 0;
+}
+.pattern-bg > div {
+  position: relative;
+  z-index: 1;
+}
+
 .primary-color {
   color: #D41C1B;
 }
@@ -318,7 +339,7 @@ body {
 }
 .model-overview__header__txt {
   text-align: left;
-  font: normal normal 400 14px/28px "Barlow";
+  font: normal normal 500 14px/28px "Barlow";
   letter-spacing: 0px;
   color: #D41C1B;
   margin-bottom: 11px;
@@ -484,7 +505,7 @@ body {
   background: #D41C1B;
 }
 .sold-overview__cap--grey {
-  background: #D0D0D0;
+  background: #867576;
 }
 .sold-overview__img-container {
   width: 100%;
@@ -506,7 +527,7 @@ body {
   margin-top: 12px;
 }
 .sold-overview__footer__size {
-  background: #D0D0D0;
+  background: #867576;
   border-radius: 8px;
   padding: 4px 30px;
   text-transform: uppercase;
@@ -528,7 +549,7 @@ body {
   text-align: left;
   font: normal normal 600 26px/28px "Barlow Condensed";
   letter-spacing: 0px;
-  color: #D0D0D0;
+  color: #867576;
 }
 .sold-overview__footer__price {
   margin-top: 4px;
@@ -561,12 +582,12 @@ body {
 .breadcrumbs {
   margin-top: 111px;
   width: 100%;
-  background: #f8f8f8 url("/images/svg/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
-  background-size: 12%;
   height: 80px;
 }
 .breadcrumbs__content {
   padding-top: 26px;
+  position: relative;
+  z-index: 1;
 }
 .breadcrumbs__content a {
   transition: all 0.2s ease-in-out;
@@ -1400,6 +1421,12 @@ body {
   background: white;
   position: relative;
 }
+.footer__contact {
+  font: normal normal 500 22px/46px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 45px;
+  line-height: 1.9rem;
+}
 .footer__copyright {
   border-top: solid 1px #D9D9D9;
   padding: 23px 0px;
@@ -1587,8 +1614,6 @@ body {
 .welcome-creations {
   min-height: 100vh;
   padding: 79px 100px;
-  background: transparent url("/images/svg/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
-  background-size: 12%;
 }
 .welcome-creations__list__link {
   width: 100%;
@@ -1633,7 +1658,7 @@ body {
 }
 .welcome-creations__subtitle {
   text-align: center;
-  font: normal normal 500 16px/28px Barlow;
+  font: normal normal 500 16px/28px "Barlow";
   letter-spacing: 0px;
   color: #2E1414;
   width: 45%;
@@ -1754,7 +1779,7 @@ body {
 .model-pres__desc {
   width: 67%;
   height: 640px;
-  background: #D0D0D033;
+  background: #F4F4F4;
   border-radius: 25px;
   padding: 33px 71px;
   position: relative;
@@ -1882,8 +1907,6 @@ body {
 
 .model-sold {
   width: 100%;
-  background: #f8f8f8 url("/images/svg/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
-  background-size: 12%;
   min-height: 100px;
   padding-top: 110px;
   padding-bottom: 110px;

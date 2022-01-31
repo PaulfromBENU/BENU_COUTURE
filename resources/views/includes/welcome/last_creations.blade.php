@@ -1,4 +1,4 @@
-<section class="welcome-creations">
+<section class="welcome-creations pattern-bg">
 	<div class="benu-container">
 		<h2 class="welcome-creations__title">{{ __('welcome.last-title') }}</h2>
 		<p class="welcome-creations__subtitle">
