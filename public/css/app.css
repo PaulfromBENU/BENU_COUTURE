@@ -179,11 +179,11 @@ body {
 }
 
 .svg-design {
-  fill: #6E4522;
+  fill: #64422C;
 }
 
 .svg-break {
-  fill: #769DBE;
+  fill: #a1b2cf;
 }
 
 .svg-white {
@@ -307,7 +307,7 @@ body {
 }
 
 .btn-hover-break:hover {
-  color: #769DBE;
+  color: #a1b2cf;
 }
 
 .btn-hover-lasa:hover {
@@ -315,7 +315,7 @@ body {
 }
 
 .btn-hover-design:hover {
-  color: #6E4522;
+  color: #64422C;
 }
 
 .model-overview {
@@ -1058,10 +1058,10 @@ body {
   color: #0079A7;
 }
 .harmonica-menu__content__col__title--design {
-  color: #6E4522;
+  color: #64422C;
 }
 .harmonica-menu__content__col__title--break {
-  color: #769DBE;
+  color: #a1b2cf;
 }
 .harmonica-menu__content__col__closed {
   height: 100%;
@@ -1114,13 +1114,13 @@ body {
   background: #D41C1B 0% 0% no-repeat padding-box;
 }
 .harmonica-menu__content__col__open--design {
-  background: #6E4522 0% 0% no-repeat padding-box;
+  background: #64422C 0% 0% no-repeat padding-box;
 }
 .harmonica-menu__content__col__open--lasa {
   background: #0079A7 0% 0% no-repeat padding-box;
 }
 .harmonica-menu__content__col__open--break {
-  background: #769DBE 0% 0% no-repeat padding-box;
+  background: #a1b2cf 0% 0% no-repeat padding-box;
 }
 
 .modal {
@@ -1429,6 +1429,10 @@ body {
   letter-spacing: 0px;
   margin-bottom: 45px;
   line-height: 1.9rem;
+  transition: all 0.2s ease-in-out;
+}
+.footer__contact:hover {
+  color: #D41C1B;
 }
 .footer__copyright {
   border-top: solid 1px #D9D9D9;
