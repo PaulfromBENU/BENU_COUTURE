@@ -14,4 +14,5 @@ return [
     "contact" => "Contact",
     "model" => "Model",
     "models" => "Creations",
+    "sold" => "Sold Items",
 ];

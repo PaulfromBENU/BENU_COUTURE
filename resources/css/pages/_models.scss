@@ -196,3 +196,23 @@
 		margin-bottom: 120px;
 	}
 }
+
+.sold {
+	padding-top: 72px;
+	margin-bottom: 65px;
+	&__title {
+		text-align: center;
+		font: normal normal 600 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 72px;
+	}
+	.pattern-bg {
+		padding-top: 48px;
+		padding-bottom: 55px;
+	}
+	&__link {
+		margin-top: -50px;
+		font: normal normal 600 22px/26px 'Barlow Condensed';
+		letter-spacing: 0.44px;
+	}
+}

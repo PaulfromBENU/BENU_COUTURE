@@ -1,14 +1,14 @@
 $(function() {
-    if ($(window).scrollTop() > 50) {
+    if ($(window).scrollTop() > 40) {
         $('.header__logo').hide();
         $('.header__logo--scroll').show();
         $('.header__top-menu').hide();
         $('.header-group').css('max-height', '91px');
     }
-    
+
     $(window).on('scroll', function() {
         var scrollTop = $(window).scrollTop();
-        if ( scrollTop > 50 ) { 
+        if ( scrollTop > 40 ) { 
             $('.header__logo').hide();
             $('.header__logo--scroll').show();
             $('.header__top-menu').hide();

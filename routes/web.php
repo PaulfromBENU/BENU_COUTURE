@@ -20,13 +20,15 @@ use Illuminate\Support\Facades\Route;
 
 //All routes to be localized
 Route::group([
-  'prefix' => '{locale?}',
-  'middleware' => 'setlocale'], function() {
+	'prefix' => '{locale?}',
+	'middleware' => 'setlocale'], function() {
 	Route::get('/', 'GeneralController@home')->name('home');
 
 	Route::get('/'.trans("slugs.contact"), 'ContactController@show')->name('contact');
 
 	Route::get('/models/{name?}', 'ModelController@show')->name('model');
+
+	Route::get('/models/{name?}/sold', 'ModelController@soldItems')->name('sold');
 
 	require __DIR__.'/auth.php';
 });
