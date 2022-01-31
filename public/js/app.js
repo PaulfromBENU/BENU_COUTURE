@@ -5755,10 +5755,17 @@ $(function () {
 /***/ (() => {
 
 $(function () {
+  if ($(window).scrollTop() > 50) {
+    $('.header__logo').hide();
+    $('.header__logo--scroll').show();
+    $('.header__top-menu').hide();
+    $('.header-group').css('max-height', '91px');
+  }
+
   $(window).on('scroll', function () {
     var scrollTop = $(window).scrollTop();
 
-    if (scrollTop > 80) {
+    if (scrollTop > 50) {
       $('.header__logo').hide();
       $('.header__logo--scroll').show();
       $('.header__top-menu').hide();
