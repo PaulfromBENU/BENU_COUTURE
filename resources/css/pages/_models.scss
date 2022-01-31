@@ -1,3 +1,125 @@
+.all-models {
+	padding-top: 45px;
+	margin-bottom: 80px;
+	&__filters-container {
+		position: relative;
+		&__options {
+			position: absolute;
+			top: 45px;
+			width: 100%;
+			background: $white;
+			border-bottom: solid 1px $light-grey;
+			min-height: 175px;
+		}
+	}
+	&__filters {
+		border-bottom: solid 1px $light-grey;
+		position: relative;
+		margin-bottom: 20px;
+		height: 45px;
+		&__filter {
+			height: 40px;
+			cursor: pointer;
+			padding: 5px 3px;
+			transition: $transition-base;
+			text-align: left;
+			font: normal normal 600 16px/18px 'Barlow';
+			letter-spacing: 0px;
+			margin-right: 50px;
+			&:hover {
+				color: $primary-color;
+			}
+			img {
+				width: 16px;
+				height: 8px;
+				margin-top: 7px;
+				margin-left: 15px;
+				transition: $transition-base;
+				transform: rotate(0deg);
+			}
+		}
+	}
+	&__filter-tag {
+		height: 30px;
+		min-width: 70px;
+		text-align: center;
+		font: normal normal 500 18px/22px Barlow Condensed;
+		letter-spacing: 0px;
+		margin: 30px 7px 30px 0px;
+		padding-top: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border: solid 1px $light-grey;
+		cursor: pointer;
+		transition: $transition-base;
+		&--active, &:hover {
+			color: $primary-color;
+			border: solid 1px $primary-color;
+		}
+		&--inactive {
+			color: white;
+			background: $light-grey;
+		}
+	}
+	&__active-filters {
+		margin-bottom: 20px;
+		&__filter {
+			min-width: 110px;
+			padding: 3px 10px;
+			background: lighten($primary-color-light, 5);
+			border: 2px solid transparent;
+			border-radius: 20px;
+			color: $primary-color;
+			transition: $transition-base;
+			cursor: pointer;
+			margin-right: 10px;
+			.color-circle {
+				margin-top: 5px;
+			}
+			&:hover {
+				background: $white;
+				border: 2px solid $primary-color;
+			}
+			p {
+				font-size: 0.9rem;
+				font-weight: 500;
+				font-family: 'Barlow Condensed';
+				padding-top: 1px;
+			}
+		}
+	}
+	&__list {
+		padding-top: 40px;
+		&__separator {
+			background-size: 100%;
+			border-radius: 25px;
+			overflow: hidden;
+			height: 350px;
+			width: 100%;
+			margin-bottom: 50px;
+			padding: 140px 125px;
+			&--1 {
+				background: transparent url('/images/pictures/models_separator_1.png') 0% 0% no-repeat padding-box;
+			}
+			&--2 {
+				background: transparent url('/images/pictures/models_separator_2.png') 0% 0% no-repeat padding-box;
+			}
+			&__title {
+				text-align: left;
+				font: normal normal 600 36px/30px 'Barlow';
+				letter-spacing: 0px;
+				padding-bottom: 10px;
+			}
+			&__subtitle {
+				text-align: left;
+				font: normal normal 500 16px/30px 'Barlow';
+				letter-spacing: 0px;
+				width: 40%;
+			}
+		}
+	}
+}
+
 .model-pres {
 	margin-top: 50px;
 	margin-bottom: 97px;

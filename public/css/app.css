@@ -42,6 +42,9 @@ body {
 .color-circle--purple {
   background: #58566A;
 }
+.color-circle--red {
+  background: #D41C1B;
+}
 
 .content-wrapper {
   padding-top: 200px;
@@ -366,7 +369,7 @@ body {
   transform: scale(1);
 }
 .model-overview__img-container {
-  height: min(65vh, 747px);
+  height: min(60vh, 700px);
   background: lightgrey;
   margin-top: 22px;
   margin-bottom: 33px;
@@ -1757,6 +1760,128 @@ body {
   font-family: "Barlow";
   font-weight: 500;
   margin-bottom: 40px;
+}
+
+.all-models {
+  padding-top: 45px;
+  margin-bottom: 80px;
+}
+.all-models__filters-container {
+  position: relative;
+}
+.all-models__filters-container__options {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: solid 1px #D9D9D9;
+  min-height: 175px;
+}
+.all-models__filters {
+  border-bottom: solid 1px #D9D9D9;
+  position: relative;
+  margin-bottom: 20px;
+  height: 45px;
+}
+.all-models__filters__filter {
+  height: 40px;
+  cursor: pointer;
+  padding: 5px 3px;
+  transition: all 0.2s ease-in-out;
+  text-align: left;
+  font: normal normal 600 16px/18px "Barlow";
+  letter-spacing: 0px;
+  margin-right: 50px;
+}
+.all-models__filters__filter:hover {
+  color: #D41C1B;
+}
+.all-models__filters__filter img {
+  width: 16px;
+  height: 8px;
+  margin-top: 7px;
+  margin-left: 15px;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(0deg);
+}
+.all-models__filter-tag {
+  height: 30px;
+  min-width: 70px;
+  text-align: center;
+  font: normal normal 500 18px/22px Barlow Condensed;
+  letter-spacing: 0px;
+  margin: 30px 7px 30px 0px;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 1px #D9D9D9;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.all-models__filter-tag--active, .all-models__filter-tag:hover {
+  color: #D41C1B;
+  border: solid 1px #D41C1B;
+}
+.all-models__filter-tag--inactive {
+  color: white;
+  background: #D9D9D9;
+}
+.all-models__active-filters {
+  margin-bottom: 20px;
+}
+.all-models__active-filters__filter {
+  min-width: 110px;
+  padding: 3px 10px;
+  background: #fdf7f7;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #D41C1B;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.all-models__active-filters__filter .color-circle {
+  margin-top: 5px;
+}
+.all-models__active-filters__filter:hover {
+  background: #FFFFFF;
+  border: 2px solid #D41C1B;
+}
+.all-models__active-filters__filter p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Barlow Condensed";
+  padding-top: 1px;
+}
+.all-models__list {
+  padding-top: 40px;
+}
+.all-models__list__separator {
+  background-size: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 140px 125px;
+}
+.all-models__list__separator--1 {
+  background: transparent url("/images/pictures/models_separator_1.png") 0% 0% no-repeat padding-box;
+}
+.all-models__list__separator--2 {
+  background: transparent url("/images/pictures/models_separator_2.png") 0% 0% no-repeat padding-box;
+}
+.all-models__list__separator__title {
+  text-align: left;
+  font: normal normal 600 36px/30px "Barlow";
+  letter-spacing: 0px;
+  padding-bottom: 10px;
+}
+.all-models__list__separator__subtitle {
+  text-align: left;
+  font: normal normal 500 16px/30px "Barlow";
+  letter-spacing: 0px;
+  width: 40%;
 }
 
 .model-pres {

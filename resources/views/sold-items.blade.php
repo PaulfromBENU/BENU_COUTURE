@@ -15,11 +15,11 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.models') }}</a>
+			<a href="{{ route('model', ['locale' => app()->getLocale()]) }}">{{ __('breadcrumbs.models') }}</a>
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('model', [app()->getLocale(), 'name' => 'caretta']) }}">{{ __('breadcrumbs.model') }} XXXX</a>
+			<a href="{{ route('model', ['locale' => app()->getLocale(), 'name' => 'caretta']) }}">{{ __('breadcrumbs.model') }} XXXX</a>
 			<div class="pl-5 pr-5">
 				>
 			</div>

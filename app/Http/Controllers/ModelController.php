@@ -6,23 +6,21 @@ use Illuminate\Http\Request;
 
 class ModelController extends Controller
 {
-    public function __construct(Request $request)
+    public function show(Request $request)
     {
         $model_name = $request->name;
         //For locale change. Slug is memorized when first coming to the page, and reinjected in case of locale change. Added to avoid parameters in header locale link.
         if ($model_name == '' || $model_name == null) {
-            if (session('model_name') != null) {
-                $model_name = session('model_name');
-                $request->session()->forget('model_name');
-                return redirect()->route('model', ['locale' => app()->getLocale(), 'name' => $model_name]);
-            }
-            return redirect()->route('home');//To be changed to page full with models
+        //     if (session('model_name') != null) {
+        //         $model_name = session('model_name');
+        //         $request->session()->forget('model_name');
+        //         return redirect()->route('model', ['locale' => app()->getLocale(), 'name' => $model_name]);
+        //     }
+            return view('models');
         }
-        //$request->session()->put('model_name', $model_name);
-    }
 
-    public function show()
-    {
+        // $request->session()->flash('model_name', $model_name);
+
         return view('model');
     }
 

@@ -10,7 +10,7 @@
 			@endfor
 		</div>
 		<div class="model-sold__link">
-			<a href="#" class="btn-slider-left m-auto">Voir toutes les déclinaisons vendues</a>
+			<a href="{{ route('sold', ['locale' => app()->getLocale(), 'name' => 'caretta']) }}" class="btn-slider-left m-auto">Voir toutes les déclinaisons vendues</a>
 		</div>
 	</div>
 </section>

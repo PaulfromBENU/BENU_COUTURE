@@ -12,5 +12,6 @@
 return [
     'seo-title' => "Le modèle :name par BENU COUTURE",
     'seo-description' => "BENU COUTURE vous propose un ensemble de modèles cousus à partir de tissus recyclés. Les créations sont uniques, découvrez celles qui vous conviennent le mieux !",
-
+    'seo-title-all' => "Tous les modèles de BENU COUTURE",
+    'seo-description-all' => "BENU COUTURE vous propose un ensemble de modèles cousus à partir de tissus recyclés. Les créations sont uniques, découvrez celles qui vous conviennent le mieux !",
 ];
