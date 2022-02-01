@@ -15,4 +15,12 @@ return [
     "model" => "Model",
     "models" => "Creations",
     "sold" => "Sold Items",
+    "client-service" => "Client Service",
+    "faq" => "FAQ",
+    "delivery" => "Delivery",
+    "sizes" => "Size Guide",
+    "return" => "Return",
+    "payment" => "Payment options",
+    "care" => "Clothes care",
+    "shops" => "Shops",
 ];

@@ -30,6 +30,8 @@ Route::group([
 
 	Route::get('/models/{name?}/sold', 'ModelController@soldItems')->name('sold');
 
+	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service');
+
 	require __DIR__.'/auth.php';
 });
 

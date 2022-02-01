@@ -10,4 +10,9 @@ class ContactController extends Controller
     {
         return view('contact');
     }
+
+    public function showAll($locale, $page = '')
+    {
+        return view('client-service', ['page' => $page]);
+    }
 }

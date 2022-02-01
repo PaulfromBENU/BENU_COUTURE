@@ -1715,6 +1715,206 @@ body {
   color: #D41C1B;
 }
 
+.service {
+  padding-top: 66px;
+}
+.service__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+}
+.service__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.service__nav {
+  border-bottom: solid 1px #D9D9D9;
+}
+.service__nav__link {
+  display: block;
+  height: 40px;
+  border-bottom: solid 2px transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font: normal normal 600 18px/22px "Barlow Condensed";
+  letter-spacing: 0.36px;
+  color: #2E1414;
+  text-transform: uppercase;
+  margin-bottom: -1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.service__nav__link--active {
+  color: #D41C1B;
+  border-bottom: solid 2px #D41C1B;
+}
+.service__nav__link:hover {
+  color: #D41C1B;
+  border-bottom: solid 2px #D41C1B;
+}
+
+.delivery {
+  padding-top: 60px;
+  margin-bottom: 90px;
+}
+.delivery__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.delivery__subtitle {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 60px;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.delivery__box {
+  width: 32%;
+  height: 350px;
+  background: #D0D0D0 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 0.2;
+  margin-bottom: 65px;
+}
+
+.sizes {
+  padding-top: 60px;
+}
+.sizes__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+}
+
+.return {
+  padding-top: 60px;
+}
+.return__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+}
+.return__txt {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.return__highlight {
+  text-align: center;
+  font: normal normal 600 20px/36px Barlow;
+  letter-spacing: 0px;
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.return__link {
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+
+.payment {
+  padding-top: 60px;
+  margin-bottom: 120px;
+}
+.payment__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+}
+.payment__subtitle {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 45px;
+}
+.payment__option {
+  background: #D0D0D033 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  padding: 40px 65px;
+  margin-bottom: 30px;
+}
+.payment__option__title {
+  text-align: center;
+  font: normal normal 600 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+}
+.payment__option img {
+  height: 44px;
+  margin: auto;
+  margin-bottom: 28px;
+}
+.payment__option__txt {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+
+.care {
+  padding-top: 60px;
+  margin-bottom: 100px;
+}
+.care__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+}
+.care__subtitle {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 43px;
+}
+.care__grid__box {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 30px 30px #CFCFCF80;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 35px;
+  width: 32%;
+}
+.care__grid__box__img-container {
+  margin-bottom: 20px;
+  height: 45px;
+}
+.care__grid__box__img-container svg {
+  margin: auto;
+}
+.care__grid__box__txt {
+  width: 100%;
+  text-align: center;
+  font: normal normal 600 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #D41C1B;
+}
+
+.shops {
+  padding-top: 60px;
+}
+.shops__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+}
+
 .contact {
   margin-top: 60px;
   margin-bottom: 100px;

@@ -12,7 +12,7 @@
                         <a href="{{ route('home', [app()->getLocale()]) }}" class="header__home-title">BENU COUTURE</a>
                     </div>
                     <ul class="flex justify-start header__top-nav__links">
-                        <li><a href="#">{{ __('header.support') }}</a></li>
+                        <li><a href="{{ route('client-service') }}">{{ __('header.support') }}</a></li>
                         <li>|</li>
                         <li><a href="#">{{ __('header.about') }}</a></li>
                         <li>|</li>
@@ -38,7 +38,7 @@
                     </div>
                     <a href="#" class="header__main-nav__link">{{ __('header.news') }}</a>
                     <a href="#" class="header__main-nav__link">{{ __('header.story') }}</a>
-                    <a href="#" class="header__main-nav__link">{{ __('header.locations') }}</a>
+                    <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'shops']) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">
                     <li>
@@ -70,7 +70,7 @@
                         </li>
                     @endguest
                     <li>
-                        <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="header__main-menu__icons__btn">
+                        <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
                         </a>
                     </li>
