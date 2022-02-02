@@ -6,7 +6,7 @@
 				{{ __('footer.questions-txt-1') }}
 			</p>
 			<div class="text-center">
-				<a href="#" class="btn-couture">{{ __('footer.questions-contact') }}</a>
+				<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="btn-couture">{{ __('footer.questions-contact') }}</a>
 			</div>
 		</div>
 		<div class="footer-more__illustration footer-more__illustration--left">

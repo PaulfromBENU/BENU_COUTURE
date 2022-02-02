@@ -28,9 +28,19 @@ Route::group([
 
 	Route::get('/models/{name?}', 'ModelController@show')->name('model');
 
-	Route::get('/models/{name?}/sold', 'ModelController@soldItems')->name('sold');
+	Route::get('/models/{name}/sold', 'ModelController@soldItems')->name('sold');
 
 	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service');
+
+	Route::get('/benu-toute-l-histoire', 'GeneralController@showFullStory')->name('full-story');
+
+	Route::get('/benu-a-propos', 'GeneralController@showAbout')->name('about');
+
+	Route::get('/partenaires-benu-couture', 'GeneralController@showPartners')->name('partners');
+
+	Route::get('/bons-achat', 'GeneralController@showVouchers')->name('vouchers');
+
+	Route::get('/news/{slug?}', 'GeneralController@showNews')->name('news');
 
 	require __DIR__.'/auth.php';
 });

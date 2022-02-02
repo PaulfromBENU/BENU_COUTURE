@@ -1,6 +1,7 @@
 <section class="w-1/2 m-auto text-center faq service-panel" id="services-faq">
 	<h2 class="faq__title">Toutes les réponses <br/>à mes questions</h2>
 	<ul class="faq__accordion">
+		<!-- Qui peut participer -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Qui peut participer&nbsp;?</p>
@@ -64,6 +65,7 @@
 			</div>
 		</li>
 
+		<!-- Qu'est-ce qui est transmis -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Qu’est-ce qui est transmis&nbsp;?</p>
@@ -127,6 +129,7 @@
 			</div>
 		</li>
 
+		<!-- Garantie pour les articles proposés -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Y a-t-il une garantie pour les articles proposés&nbsp;?</p>
@@ -190,6 +193,7 @@
 			</div>
 		</li>
 
+		<!-- A quoi dois-je faire attention -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>À quoi dois-je faire attention si je continue à utiliser des objets ou des matériaux usagés&nbsp;?</p>
@@ -253,6 +257,7 @@
 			</div>
 		</li>
 
+		<!-- Annuler ma commande -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Puis-je annuler ma commande&nbsp;?</p>
@@ -316,6 +321,7 @@
 			</div>
 		</li>
 
+		<!-- Collecte de mon article -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Comment fonctionne la collecte de mon article&nbsp;?</p>
@@ -379,6 +385,7 @@
 			</div>
 		</li>
 
+		<!-- Obtenir l'article commandé -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Comment obtenir l’article que j’ai commandé&nbsp;?</p>
@@ -442,6 +449,7 @@
 			</div>
 		</li>
 
+		<!-- Temps de livraison -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Combien de temps prend la livraison&nbsp;?</p>
@@ -505,6 +513,7 @@
 			</div>
 		</li>
 
+		<!-- Quels sont les couts -->
 		<li>
 			<div class="faq__accordion__header flex justify-between">
 				<p>Quels sont les coûts&nbsp;?</p>

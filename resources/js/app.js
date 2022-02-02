@@ -10,6 +10,7 @@ require('./inputs_handle');
 require('./footer_animations');
 require('./model_article_sliders');
 require('./model_filters_handle');
+require('./faq_accordion_handle');
 
 import Alpine from 'alpinejs';
 

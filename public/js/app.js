@@ -5499,6 +5499,8 @@ __webpack_require__(/*! ./model_article_sliders */ "./resources/js/model_article
 
 __webpack_require__(/*! ./model_filters_handle */ "./resources/js/model_filters_handle.js");
 
+__webpack_require__(/*! ./faq_accordion_handle */ "./resources/js/faq_accordion_handle.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5533,6 +5535,45 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/faq_accordion_handle.js":
+/*!**********************************************!*\
+  !*** ./resources/js/faq_accordion_handle.js ***!
+  \**********************************************/
+/***/ (() => {
+
+$(function () {
+  $('.faq__accordion__header').on('click', function () {
+    $('.faq__accordion__header__chevron').removeClass('.faq__accordion__header__chevron--active');
+    $('.faq__accordion__header__chevron', this).addClass('.faq__accordion__header__chevron--active');
+    var status = $(this).parent().children('.faq__accordion__answer').css('display');
+    $('.faq__accordion__answer').hide();
+
+    if (status == 'none') {
+      $(this).parent().children('.faq__accordion__answer').fadeIn('slow');
+    }
+  });
+  $('.faq__accordion__answer__header').on('click', function () {
+    $('.faq__accordion__answer__header').removeClass('faq__accordion__answer__header--active');
+    $(this).addClass('faq__accordion__answer__header--active');
+    var answerStatus = $(this).parent().children('.faq__accordion__answer__subanswer').css('display');
+    $('.faq__accordion__answer__subanswer').hide();
+
+    if (answerStatus == 'none') {
+      $('.faq__accordion__answer__header__minus').hide();
+      $('.faq__accordion__answer__header__plus').show();
+      $('.faq__accordion__answer__header__plus', this).hide();
+      $('.faq__accordion__answer__header__minus', this).show();
+      $(this).parent().children('.faq__accordion__answer__subanswer').show();
+    } else {
+      $(this).removeClass('faq__accordion__answer__header--active');
+      $('.faq__accordion__answer__header__plus').show();
+      $('.faq__accordion__answer__header__minus').hide();
+    }
+  });
+});
 
 /***/ }),
 

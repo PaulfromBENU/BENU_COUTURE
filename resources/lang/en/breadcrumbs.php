@@ -23,4 +23,10 @@ return [
     "payment" => "Payment options",
     "care" => "Clothes care",
     "shops" => "Shops",
+    "full-story" => "The whole story behind BENU",
+    "about" => "About BENU COUTURE",
+    "partners" => "Partners of BENU COUTURE",
+    "vouchers" => "Vouchers",
+    "news" => "All news",
+    "news-example" => "Title of the article",
 ];

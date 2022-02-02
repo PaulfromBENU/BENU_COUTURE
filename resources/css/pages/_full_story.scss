@@ -1,0 +1,65 @@
+.full-story {
+	padding-top: 66px;
+	color: $dark-text;
+	line-height: 2rem;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 75px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__lowtitle {
+		text-align: center;
+		font: normal normal 700 33px/40px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-top: 65px;
+		margin-bottom: 32px;
+	}
+	&__txt {
+		margin-bottom: 45px;
+		font: normal normal 400 1.05rem 'Barlow';
+		line-height: 2rem;
+		a {
+			color: $primary-color;
+			font-weight: 500;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__highlight {
+		background: $primary-color-light;
+		border-radius: 0.5rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+		padding: 1.75rem;
+		margin-bottom: 45px;
+		a {
+			color: $primary-color;
+			font-weight: 500;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__bullets {
+		margin-bottom: 45px;
+		font-weight: 500;
+		margin-left: 20px;
+		li::before {
+			content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+			color: $primary-color; /* Change the color */
+			font-weight: bold; /* If you want it to be bold */
+			display: inline-block; /* Needed to add space between the bullet and the text */
+			width: 1em; /* Also needed for space (tweak if needed) */
+			margin-left: -1em; /* Also needed for space (tweak if needed) */
+		}
+	}
+}

@@ -1,0 +1,99 @@
+.all-news {
+	padding-top: 60px;
+	&__title {
+		text-align: center;
+		font: normal normal 600 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__link {
+		border: 3px solid $primary-color;
+		border-radius: 8px;
+		background: $white;
+		color: $primary-color;
+		text-align: left;
+		font: normal normal 700 28px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		display: block;
+		padding: 34px 50px;
+		transition: $transition-base;
+		margin-bottom: 30px;
+		&:hover {
+			background: $primary-color;
+			color: $white;
+		}
+	}
+}
+
+.single-news {
+	padding-top: 60px;
+	&__title {
+		text-align: center;
+		font: normal normal 600 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__txt {
+		text-align: left;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+		margin-bottom: 30px;
+		a {
+			color: $primary-color;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__highlight {
+		text-align: center;
+		font: normal normal 700 20px/36px 'Barlow';
+		letter-spacing: 0px;
+		background: $primary-color-light 0% 0% no-repeat padding-box;
+		border-radius: 8px;
+		padding-top: 28px;
+		padding-bottom: 28px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	&__link {
+		padding-top: 20px;
+		text-align: center;
+		margin-bottom: 50px;
+		a {
+			display: inline-block;
+		}
+	}
+	&__img-container {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 50px;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__nextprev {
+		margin-top: 20px;
+		font: normal normal 700 22px/26px 'Barlow Condensed';
+		letter-spacing: 0.44px;
+		margin-bottom: 100px;
+	}
+	&__backlink {
+		margin-bottom: 100px;
+	}
+}

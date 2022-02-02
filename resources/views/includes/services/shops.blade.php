@@ -3,7 +3,7 @@
 
 	<div class="shops__card flex justify-start">
 		<div class="shops__card__img-container">
-			<img src="{{ asset('images/pictures/benu_shop.png') }}">
+			<img src="{{ asset('images/pictures/shops/benu_shop.png') }}">
 		</div>
 		<div class="shops__card__txt-container">
 			<div class="flex justify-between">
@@ -33,7 +33,7 @@
 
 	<div class="shops__card flex justify-start">
 		<div class="shops__card__img-container">
-			<img src="{{ asset('images/pictures/popup_store_1.png') }}">
+			<img src="{{ asset('images/pictures/shops/popup_store_1.png') }}">
 		</div>
 		<div class="shops__card__txt-container">
 			<div class="flex justify-between">
@@ -63,7 +63,7 @@
 
 	<div class="shops__card flex justify-start">
 		<div class="shops__card__img-container">
-			<img src="{{ asset('images/pictures/popup_store_2.png') }}">
+			<img src="{{ asset('images/pictures/shops/popup_store_2.png') }}">
 		</div>
 		<div class="shops__card__txt-container">
 			<div class="flex justify-between">

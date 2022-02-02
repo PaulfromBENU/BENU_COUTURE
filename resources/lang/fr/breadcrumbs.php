@@ -23,4 +23,10 @@ return [
     "payment" => "Méthodes de paiement",
     "care" => "Entretien des vêtements",
     "shops" => "Points de vente",
+    "full-story" => "Toute l'histoire de BENU",
+    "about" => "À propos de BENU COUTURE",
+    "partners" => "Les partenaires de BENU COUTURE",
+    "vouchers" => "Bons d'achat",
+    "news" => "Toutes les actualités",
+    "news-example" => "Le titre de l'article",
 ];

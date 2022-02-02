@@ -14,11 +14,11 @@
                     <ul class="flex justify-start header__top-nav__links">
                         <li><a href="{{ route('client-service') }}">{{ __('header.support') }}</a></li>
                         <li>|</li>
-                        <li><a href="#">{{ __('header.about') }}</a></li>
+                        <li><a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('header.about') }}</a></li>
                         <li>|</li>
-                        <li><a href="#">{{ __('header.partners') }}</a></li>
+                        <li><a href="{{ route('partners', ['locale' => app()->getLocale()]) }}">{{ __('header.partners') }}</a></li>
                         <li>|</li>
-                        <li><a href="#">{{ __('header.vouchers') }}</a></li>
+                        <li><a href="{{ route('vouchers', ['locale' => app()->getLocale()]) }}">{{ __('header.vouchers') }}</a></li>
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
@@ -36,8 +36,8 @@
                             @svg('benu-icon-arrow-down', 'header__main-nav__btn--logo-2')
                         </button>
                     </div>
-                    <a href="#" class="header__main-nav__link">{{ __('header.news') }}</a>
-                    <a href="#" class="header__main-nav__link">{{ __('header.story') }}</a>
+                    <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.news') }}</a>
+                    <a href="{{ route('full-story', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.story') }}</a>
                     <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'shops']) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .benu-container {
   width: 100%;
   padding-left: 5%;
@@ -248,6 +249,33 @@ body {
   color: #D41C1B;
 }
 .btn-slider-left:hover::after {
+  width: 100%;
+}
+
+.btn-slider-right {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+  height: 40px;
+}
+.btn-slider-right::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 20%;
+  height: 5px;
+  border-radius: 10px;
+  background: #D41C1B;
+  transition: width 0.5s ease-in-out;
+}
+.btn-slider-right:hover {
+  color: #D41C1B;
+}
+.btn-slider-right:hover::after {
   width: 100%;
 }
 
@@ -2444,4 +2472,240 @@ body {
   margin-top: -50px;
   font: normal normal 600 22px/26px "Barlow Condensed";
   letter-spacing: 0.44px;
+}
+
+.full-story {
+  padding-top: 66px;
+  color: #2E1414;
+  line-height: 2rem;
+}
+.full-story__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 75px;
+}
+.full-story__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.full-story__lowtitle {
+  text-align: center;
+  font: normal normal 700 33px/40px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-top: 65px;
+  margin-bottom: 32px;
+}
+.full-story__txt {
+  margin-bottom: 45px;
+  font: normal normal 400 1.05rem "Barlow";
+  line-height: 2rem;
+}
+.full-story__txt a {
+  color: #D41C1B;
+  font-weight: 500;
+}
+.full-story__txt a:hover {
+  text-decoration: underline;
+}
+.full-story__highlight {
+  background: #F9E2E2;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.75rem;
+  margin-bottom: 45px;
+}
+.full-story__highlight a {
+  color: #D41C1B;
+  font-weight: 500;
+}
+.full-story__highlight a:hover {
+  text-decoration: underline;
+}
+.full-story__bullets {
+  margin-bottom: 45px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.full-story__bullets li::before {
+  content: "•";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #D41C1B;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+.partners {
+  padding-top: 65px;
+  margin-bottom: 60px;
+}
+.partners__side-title {
+  text-align: left;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+}
+.partners__side-txt {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.partners__box {
+  padding: 34px;
+  margin-bottom: 50px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 40px #26254433;
+  border-radius: 8px;
+}
+.partners__box__img-container {
+  margin-right: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 30%;
+  height: auto;
+}
+.partners__box__img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.partners__box__txt-container {
+  width: 65%;
+}
+.partners__box__title {
+  text-align: left;
+  font: normal normal 700 28px/34px "Barlow Condensed";
+  letter-spacing: 0.28px;
+}
+.partners__box__desc {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.partners__box__highlight {
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.partners__box__link {
+  text-align: left;
+  font: normal normal 700 16px/28px "Barlow Condensed";
+  letter-spacing: 0.16px;
+}
+.partners__box__link:hover {
+  text-decoration: underline;
+}
+
+.all-news {
+  padding-top: 60px;
+}
+.all-news__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+}
+.all-news__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.all-news__link {
+  border: 3px solid #D41C1B;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #D41C1B;
+  text-align: left;
+  font: normal normal 700 28px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  display: block;
+  padding: 34px 50px;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 30px;
+}
+.all-news__link:hover {
+  background: #D41C1B;
+  color: #FFFFFF;
+}
+
+.single-news {
+  padding-top: 60px;
+}
+.single-news__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+}
+.single-news__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.single-news__txt {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+}
+.single-news__txt a {
+  color: #D41C1B;
+}
+.single-news__txt a:hover {
+  text-decoration: underline;
+}
+.single-news__highlight {
+  text-align: center;
+  font: normal normal 700 20px/36px "Barlow";
+  letter-spacing: 0px;
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.single-news__link {
+  padding-top: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.single-news__link a {
+  display: inline-block;
+}
+.single-news__img-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.single-news__img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single-news__nextprev {
+  margin-top: 20px;
+  font: normal normal 700 22px/26px "Barlow Condensed";
+  letter-spacing: 0.44px;
+  margin-bottom: 100px;
+}
+.single-news__backlink {
+  margin-bottom: 100px;
 }
