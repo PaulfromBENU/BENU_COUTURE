@@ -286,6 +286,28 @@ body {
   color: #FFFFFF;
 }
 
+.btn-couture-plain {
+  color: #FFFFFF;
+  background: #D41C1B;
+  height: 27px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  text-align: center;
+  font: normal normal 600 20px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  border: solid 2px #D41C1B;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.btn-couture-plain:hover {
+  color: #D41C1B;
+  background: #FFFFFF;
+}
+
 .btn-hover-village:hover {
   color: #27955B;
 }
@@ -1759,6 +1781,81 @@ body {
   border-bottom: solid 2px #D41C1B;
 }
 
+.faq {
+  padding-top: 60px;
+  margin-bottom: 90px;
+}
+.faq__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.faq__accordion__header {
+  margin-bottom: 30px;
+  background: #D41C1B 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  color: #FFFFFF;
+  padding: 34px 120px 34px 50px;
+  text-align: left;
+  font: normal normal 700 28px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+.faq__accordion__header p {
+  margin-right: 15px;
+}
+.faq__accordion__header__chevron {
+  margin-top: 7px;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+.faq__accordion__header__chevron--active {
+  transform: rotate(180deg);
+}
+.faq__accordion__answer {
+  width: 75%;
+  margin: auto;
+  padding-top: 10px;
+}
+.faq__accordion__answer li {
+  border-bottom: 1px solid #D9D9D9;
+}
+.faq__accordion__answer__txt {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.faq__accordion__answer__subanswer {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.faq__accordion__answer__header {
+  text-align: left;
+  font: normal normal 700 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  border-bottom: 2px solid transparent;
+  margin-top: 25px;
+  height: 40px;
+  cursor: pointer;
+}
+.faq__accordion__answer__header--active {
+  border-bottom: 2px solid #D41C1B;
+  color: #D41C1B;
+}
+.faq__accordion__answer__header__plus {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.faq__accordion__answer__header__minus {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
 .delivery {
   padding-top: 60px;
   margin-bottom: 90px;
@@ -1913,6 +2010,53 @@ body {
   font: normal normal 600 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
+}
+.shops__card {
+  padding: 34px;
+  margin-bottom: 50px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 40px #26254433;
+  border-radius: 8px;
+}
+.shops__card__img-container {
+  margin-right: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 30%;
+  height: auto;
+}
+.shops__card__img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.shops__card__txt-container {
+  width: 65%;
+}
+.shops__card__title {
+  text-align: left;
+  font: normal normal 700 28px/34px "Barlow Condensed";
+  letter-spacing: 0.28px;
+}
+.shops__card__desc {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.shops__card__highlight {
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.shops__card__link {
+  text-align: left;
+  font: normal normal 700 16px/28px "Barlow Condensed";
+  letter-spacing: 0.16px;
+}
+.shops__card__link:hover {
+  text-decoration: underline;
 }
 
 .contact {

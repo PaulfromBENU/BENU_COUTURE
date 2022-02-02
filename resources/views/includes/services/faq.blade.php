@@ -1,25 +1,571 @@
-<section class="w-1/2 m-auto text-center contact service-panel" id="services-faq" @if($page != 'faq') style="display: none;" @endif>
-	<div class="contact__subtitle">
-		{{ __('contact.subtitle') }}
-	</div>
-	<div class="contact__title">
-		<h1>
-			{{ __('contact.title') }}
-		</h1>
-	</div>
-	<div class="contact__mail">
-		<a href="mailto:info@benucouture.lu" class="btn-slider-left m-auto">info@benucouture.lu</a>
-	</div>
-	<div class="contact__phone">
-		+352 123 456 789
-	</div>
-	<div class="contact__opening">
-		{{ __('contact.opening') }}
-	</div>
-	<div class="contact__moreinfo">
-		{{ __('contact.extra-txt') }}
-	</div>
-	<div class="contact__form">
-		<!-- To be completed with the contact form -->
-	</div>
+<section class="w-1/2 m-auto text-center faq service-panel" id="services-faq">
+	<h2 class="faq__title">Toutes les réponses <br/>à mes questions</h2>
+	<ul class="faq__accordion">
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Qui peut participer&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Qu’est-ce qui est transmis&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Y a-t-il une garantie pour les articles proposés&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>À quoi dois-je faire attention si je continue à utiliser des objets ou des matériaux usagés&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Puis-je annuler ma commande&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Comment fonctionne la collecte de mon article&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Comment obtenir l’article que j’ai commandé&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Combien de temps prend la livraison&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<div class="faq__accordion__header flex justify-between">
+				<p>Quels sont les coûts&nbsp;?</p>
+				<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+			</div>
+
+			<div class="faq__accordion__answer" style="display: none;">
+				<p class="faq__accordion__answer__txt">
+					Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				</p>
+				<ul class="mb-10">
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 1</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 2</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 3</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+					<li>
+						<div class="flex justify-between faq__accordion__answer__header">
+							<p>Sous-titre 4</p>
+							<p>
+								<span class="faq__accordion__answer__header__plus">+</span>
+								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
+							</p>
+						</div>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
 </section>
