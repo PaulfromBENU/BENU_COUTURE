@@ -200,7 +200,7 @@
 <script type="text/javascript">
     $(function() {
         $('.register_optionnal_star').hide();
-        $('#register-address-name').on('change', function() {
+        $('#register-address-name').on('input', function() {
             if ($(this).val().length > 0) {
                 $('.register_optionnal_star').css('display', 'inline');
             } else {
