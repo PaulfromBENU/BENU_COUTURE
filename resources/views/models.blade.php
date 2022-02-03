@@ -15,7 +15,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('contact') }}" class="primary-color"><strong>{{ __('breadcrumbs.models') }}</strong></a>
+			<a href="{{ route('model', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.models') }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -28,9 +28,6 @@
 					<div class="all-models__filters__filter flex" id="filter-category">
 						<p>Catégorie</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
 					</div>
-					<div class="all-models__filters__filter flex" id="filter-size">
-						<p>Taille</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
-					</div>
 					<div class="all-models__filters__filter flex" id="filter-color">
 						<p>Couleur</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
 					</div>
@@ -42,6 +39,9 @@
 					</div>
 					<div class="all-models__filters__filter flex" id="filter-partners">
 						<p>Partenaires</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+					</div>
+					<div class="all-models__filters__filter flex" id="filter-shops">
+						<p>Points de vente</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
 					</div>
 				</div>
 
@@ -67,7 +67,7 @@
 			</div>
 
 			<div class="all-models__active-filters__filter flex justify-between">
-				<p class="w-4/5">Taille XS</p>
+				<p class="w-4/5">Femme</p>
 				<div class="w-1/5">&#x2715;</div>
 			</div>
 

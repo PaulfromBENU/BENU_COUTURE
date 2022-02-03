@@ -11,6 +11,7 @@ require('./footer_animations');
 require('./model_article_sliders');
 require('./model_filters_handle');
 require('./faq_accordion_handle');
+require('./model_overview_animation');
 
 import Alpine from 'alpinejs';
 

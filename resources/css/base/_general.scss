@@ -41,6 +41,15 @@ body {
 	&--red {
 		background: $primary-color;
 	}
+	&--orange {
+		background: orange;
+	}
+	&--grey {
+		background: lightgrey;
+	}
+	&--beige {
+		background: brown;
+	}
 }
 
 .content-wrapper {

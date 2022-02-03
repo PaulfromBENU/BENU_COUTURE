@@ -8,6 +8,7 @@
 	&__footer {
 		padding-left: 30px;
 		padding-right: 30px;
+		transition: $transition-base;
 		p {
 			color: $dark-text;
 			text-align: left;
@@ -18,6 +19,7 @@
 	&__header {
 		padding-left: 30px;
 		padding-right: 30px;
+		transition: $transition-base;
 		&__txt {
 			text-align: left;
 			font: normal normal 500 14px/28px 'Barlow';

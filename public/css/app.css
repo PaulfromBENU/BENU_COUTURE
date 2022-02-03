@@ -46,6 +46,15 @@ body {
 .color-circle--red {
   background: #D41C1B;
 }
+.color-circle--orange {
+  background: orange;
+}
+.color-circle--grey {
+  background: lightgrey;
+}
+.color-circle--beige {
+  background: brown;
+}
 
 .content-wrapper {
   padding-top: 200px;
@@ -379,6 +388,7 @@ body {
 .model-overview__footer {
   padding-left: 30px;
   padding-right: 30px;
+  transition: all 0.2s ease-in-out;
 }
 .model-overview__footer p {
   color: #2E1414;
@@ -389,6 +399,7 @@ body {
 .model-overview__header {
   padding-left: 30px;
   padding-right: 30px;
+  transition: all 0.2s ease-in-out;
 }
 .model-overview__header__txt {
   text-align: left;
@@ -2151,7 +2162,7 @@ body {
   width: 100%;
   background: #FFFFFF;
   border-bottom: solid 1px #D9D9D9;
-  min-height: 175px;
+  min-height: 100px;
 }
 .all-models__filters {
   border-bottom: solid 1px #D9D9D9;

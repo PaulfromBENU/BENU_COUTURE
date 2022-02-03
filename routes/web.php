@@ -28,7 +28,7 @@ Route::group([
 
 	Route::get('/models/{name?}', 'ModelController@show')->name('model');
 
-	Route::get('/models/{name}/sold', 'ModelController@soldItems')->name('sold');
+	Route::get('/models/{name?}/sold', 'ModelController@soldItems')->name('sold');
 
 	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service');
 

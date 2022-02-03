@@ -11,8 +11,8 @@ $(function() {
 		filtersHandle('category');
 	});
 
-	$('#filter-size').on('mouseover', function() {
-		filtersHandle('size');
+	$('#filter-shops').on('mouseover', function() {
+		filtersHandle('shops');
 	});
 
 	$('#filter-color').on('mouseover', function() {
@@ -35,8 +35,12 @@ $(function() {
 		filtersHandle('order');
 	});
 
+	$('#filter-size').on('mouseover', function() {
+		filtersHandle('size');
+	});
+
 	$('.all-models__filters-container__options').on('mouseleave', function() {
-		$(this).fadeOut();
+		$(this).hide();
 		$('.all-models__filters-container__options').children('div').hide();
 		$('.all-models__filters__filter img').css('transform', 'rotate(0deg)');
 	})
@@ -62,5 +66,8 @@ $(function() {
 $(function() {
 	$('.all-models__active-filters__filter').on('click', function() {
 		$(this).hide();
-	})
+	});
+	$('.model-articles__active-filters__filter').on('click', function() {
+		$(this).hide();
+	});
 })

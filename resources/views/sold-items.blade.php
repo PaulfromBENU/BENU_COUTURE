@@ -23,7 +23,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('sold') }}" class="primary-color"><strong>{{ __('breadcrumbs.sold') }}</strong></a>
+			<a href="{{ route('sold', ['locale' => app()->getLocale(), 'name' => 'caretta']) }}" class="primary-color"><strong>{{ __('breadcrumbs.sold') }}</strong></a>
 		</div>
 	</div>
 @endsection
