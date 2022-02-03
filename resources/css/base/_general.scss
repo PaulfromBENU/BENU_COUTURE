@@ -64,12 +64,58 @@ body {
 .input-underline {
 	border: none;
 	border-bottom: solid 1px $light-grey;
-	padding-bottom: 0.3rem;
+	padding-bottom: 5px;
 	&:focus, :active {
 		border: none;
 		border-bottom: solid 1px $light-grey;
 		box-shadow: none;
 		outline: none;
+	}
+}
+
+input[type="radio"] {
+	color: $primary-color;
+	margin-top: 4px;
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+input[type="checkbox"] {
+	color: $primary-color;
+	margin-top: -3px;
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.reactive-label-input {
+	position: relative;
+	height: 65px;
+	background: transparent;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	label {
+		position: absolute;
+		bottom: 9px;
+		left: 12px;
+		transform: scale(1);
+		transform-origin: left top;
+		transition: $transition-base;
+		z-index: -1;
+		display: block;
+	}
+	input {
+		background: transparent;
+		position: absolute;
+		bottom: 5px;
+	}
+	&__show-btn {
+		position: absolute;
+		bottom: 12px;
+		right: 5px;
+		cursor: pointer;
+		transition: $transition-base;
 	}
 }
 

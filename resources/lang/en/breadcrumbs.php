@@ -29,4 +29,7 @@ return [
     "vouchers" => "Vouchers",
     "news" => "All news",
     "news-example" => "Title of the article",
+    "register" => "Create an account",
+    "login" => "Connection",
+    "forgotten-pwd" => "Forgotten password",
 ];

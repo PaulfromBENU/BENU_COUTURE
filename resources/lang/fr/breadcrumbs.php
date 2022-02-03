@@ -29,4 +29,7 @@ return [
     "vouchers" => "Bons d'achat",
     "news" => "Toutes les actualités",
     "news-example" => "Le titre de l'article",
+    "register" => "Création de compte",
+    "login" => "Connexion",
+    "forgotten-pwd" => "Mot de passe oublié",
 ];

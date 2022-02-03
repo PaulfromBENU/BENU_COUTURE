@@ -122,30 +122,33 @@
 		font-weight: 600;
 		font-size: 1.1rem;
 	}
-	&__input-group {
-		position: relative;
+	// &__input-group {
+	// 	position: relative;
+	// 	margin-bottom: 15px;
+	// 	margin-right: 20px;
+	// 	width: 45%;
+	// 	label {
+	// 		position: absolute;
+	// 		transform: scale(1);
+	// 		transition: $transition-base;
+	// 		z-index: -1;
+	// 		top: 3px;
+	// 		left: 10px;
+	// 		font-size: 0.9rem;
+	// 	}
+	// 	input[type=text], input[type=password] {
+	// 		width: 100%;
+	// 		background: transparent;
+	// 	}
+	// }
+	&__checkbox {
 		margin-bottom: 30px;
-		margin-right: 20px;
-		width: 45%;
-		label {
-			position: absolute;
-			transform: scale(1);
-			transition: $transition-base;
-			z-index: -1;
-			top: 3px;
-			left: 10px;
-			font-size: 0.9rem;
-		}
-		input[type=text], input[type=password] {
-			width: 100%;
-			background: transparent;
-		}
 	}
 	&__title {
 		font-family: 'Barlow Condensed';
 		font-weight: 600;
 		font-size: 1.1rem;
-		margin-bottom: 30px;
+		margin-bottom: -5px;
 	}
 }
 

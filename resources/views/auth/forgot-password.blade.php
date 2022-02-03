@@ -1,36 +1,62 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.base_layout')
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+@section('title')
+    BENU COUTURE - Mot de passe oublié
+@endsection
+
+@section('description')
+    Utilisez votre adresse e-mail pour définir un nouveau mot de passe
+@endsection
+
+@section('robots-behaviour')
+noindex, nofollow
+@endsection
+
+@section('breadcrumbs')
+    <div class="breadcrumbs pattern-bg">
+        <div class="benu-container breadcrumbs__content flex justify-start">
+            <a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.home') }}</a>
+            <div class="pl-5 pr-5">
+                >
+            </div>
+            <a href="{{ route('login', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.forgotten-pwd') }}</strong></a>
         </div>
+    </div>
+@endsection
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('main-content')
+    <section class="benu-container login">
+        <h3 class="login__subtitle">BENU COUTURE</h3>
+        <h1 class="login__title">J'ai oublié mon <br/>mot de passe</h1>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('password.email') }}">
+        <form method="POST" action="{{ route('password.email', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
             @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <div class="input-group reactive-label-input">
+                <label for="email">Adresse e-mail *</label>
+                <input type="email" id="email" name="email" class="input-underline w-full" required>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
+            <p class="login__info">
+                <em>* Champs obligatoires</em>
+            </p>
+            
+            <div class="m-auto login__validate">
+                <input type="submit" name="login_submit" class="btn-couture-plain" value="Mettre à jour mon mot de passe">
+                <div class="login__validate__question">
+                    Je n’ai pas encore de compte BENU COUTURE.
+                </div>
+                <a href="{{ route('register') }}" class="btn-slider-left mt-3">Je crée mon compte ici</a>
             </div>
+            @if($errors->any())
+                {!! implode('', $errors->all('<div>:message</div>')) !!}
+            @endif
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </section>
+@endsection
+
+@section('scripts')
+
+@endsection
+
+
+

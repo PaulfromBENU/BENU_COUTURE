@@ -687,6 +687,12 @@ select {
 .-mr-2 {
   margin-right: -0.5rem;
 }
+.ml-10 {
+  margin-left: 2.5rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -776,6 +782,12 @@ select {
 }
 .w-6 {
   width: 1.5rem;
+}
+.w-5\/12 {
+  width: 41.666667%;
+}
+.w-5\/6 {
+  width: 83.333333%;
 }
 .max-w-xl {
   max-width: 36rem;
@@ -1239,6 +1251,10 @@ select {
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+.hover\:underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .focus\:z-10:focus {
   z-index: 10;
