@@ -30,12 +30,12 @@
             <div class="flex justify-between">
                 <div class="w-5/12">
                     <div class="flex justify-between input-group register__form__radio-group">
-                        <input type="radio" id="html" name="fav_language" value="HTML">
-                        <label for="html">Monsieur</label><br>
-                        <input type="radio" id="css" name="fav_language" value="CSS">
-                        <label for="css">Madame</label><br>
-                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                        <label for="javascript">Non genré</label> 
+                        <input type="radio" id="register_gender_male" name="register_gender" value="male">
+                        <label for="register_gender_male">Monsieur</label><br>
+                        <input type="radio" id="register_gender_female" name="register_gender" value="female">
+                        <label for="register_gender_female">Madame</label><br>
+                        <input type="radio" id="register_gender_neutral" name="register_gender" value="neutral">
+                        <label for="register_gender_neutral">Non genré</label> 
                     </div>
                     <div class="input-group reactive-label-input">
                         <label for="register_first_name">Prénom *</label>
@@ -54,15 +54,15 @@
                 <div class="w-5/12">
                     <div class="input-group reactive-label-input">
                         <label>Société, organisation</label>
-                        <input type="text" name="register_last_name" class="input-underline w-full" required>
+                        <input type="text" name="register_company" class="input-underline w-full">
                     </div>
                     <div class="input-group reactive-label-input">
                         <label>Nom *</label>
                         <input type="text" name="register_last_name" class="input-underline w-full" required>
                     </div>
                     <div class="input-group reactive-label-input">
-                        <label>Numéro de téléphone</label>
-                        <input type="text" name="register_last_name" class="input-underline w-full" required>
+                        <label>Numéro de téléphone (avec indicatif)</label>
+                        <input type="text" name="register_phone" class="input-underline w-full">
                     </div>
                 </div>
             </div>
@@ -98,18 +98,19 @@
                 <h4 class="register__address__title">Ajouter une adresse</h4>
                 <div class="register__address__address-name">
                     <div class="reactive-label-input">
-                        <label>Donnez un titre à cette adresse</label>
-                        <input type="text" name="register_address_name" class="input-underline w-full">
+                        <label>Donnez un titre à cette adresse <span class="register_optionnal_star">*</span></label>
+                        <input type="text" name="register_address_name" class="input-underline w-full" id="register-address-name">
                     </div>
+                    <p class="text-sm text-white"><em>(requis pour créer une adresse)</em></p>
                 </div>
                 <div class="flex justify-between">
                     <div class="w-5/12">
                         <div class="input-group reactive-label-input">
-                            <label>Prénom</label>
+                            <label>Prénom <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_first_name" class="input-underline w-full">
                         </div>
                         <div class="input-group reactive-label-input">
-                            <label>Numéro de rue</label>
+                            <label>Numéro de rue <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_number" class="input-underline w-full">
                         </div>
                         <div class="input-group reactive-label-input">
@@ -117,32 +118,32 @@
                             <input type="text" name="register_address_floor" class="input-underline w-full">
                         </div>
                         <div class="input-group reactive-label-input">
-                            <label>Ville</label>
+                            <label>Ville <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_city" class="input-underline w-full">
                         </div>
                     </div>
 
                     <div class="w-5/12">
                         <div class="input-group reactive-label-input">
-                            <label>Nom</label>
+                            <label>Nom <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_last_name" class="input-underline w-full">
                         </div>
                         <div class="input-group reactive-label-input">
-                            <label>Nom de la rue</label>
+                            <label>Nom de la rue <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_street" class="input-underline w-full">
                         </div>
                         <div class="input-group reactive-label-input">
-                            <label>Code postal</label>
+                            <label>Code postal <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_zip" class="input-underline w-full">
                         </div>
                         <div class="input-group reactive-label-input">
-                            <label>Téléphone de contact</label>
+                            <label>Téléphone de contact <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_phone" class="input-underline w-full">
                         </div>
                     </div>
                 </div>
                 <div class="w-full reactive-label-input">
-                    <label>Pays</label>
+                    <label>Pays <span class="register_optionnal_star">*</span></label>
                     <input type="text" name="register_address_country" class="input-underline w-full">
                 </div>
 
@@ -175,13 +176,13 @@
                     <span class="ml-10">Je m'abonne à la newsletter</span>
                 </label>
             </div>
-            
+
             <div class="register__validate">
                 <input type="submit" name="register_submit" class="btn-couture-plain" value="Je m'inscris">
                 <a href="{{ route('login') }}" class="btn-slider-left mt-3">Déjà inscrit.e ?</a>
             </div>
             @if($errors->any())
-                {!! implode('', $errors->all('<div>:message</div>')) !!}
+                {!! implode('', $errors->all('<div class="primary-color">:message</div>')) !!}
             @endif
         </form>
     </section>
@@ -195,6 +196,18 @@
             $('.register__address').fadeIn();
         })
     })
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.register_optionnal_star').hide();
+        $('#register-address-name').on('change', function() {
+            if ($(this).val().length > 0) {
+                $('.register_optionnal_star').css('display', 'inline');
+            } else {
+                $('.register_optionnal_star').hide();
+            }
+        });
+    });
 </script>
 @endsection
 

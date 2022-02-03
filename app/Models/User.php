@@ -12,17 +12,27 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    // Choice of the database
+    protected $connection = 'mysql_common';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'role',
+        'gender',
+        'company',
+        'phone',
         'first_name',
         'last_name',
         'email',
         'password',
-        'newsletter'
+        'is_over_18',
+        'legal_ok',
+        'newsletter',
+        'origin'
     ];
 
     /**
@@ -40,10 +50,17 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 
-    // Choice of the database
-    protected $connection = 'mysql_common';
+    public function addresses()
+    {
+        return $this->hasMany('App\Models\Address');
+    }
+
+    public function kulturpasses()
+    {
+        return $this->hasMany('App\Models\Kulturpass');
+    }
 }

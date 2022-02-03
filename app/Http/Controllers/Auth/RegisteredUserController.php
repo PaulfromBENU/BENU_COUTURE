@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Address;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Validation\Rule;
 
 class RegisteredUserController extends Controller
 {
@@ -37,23 +39,96 @@ class RegisteredUserController extends Controller
             $request->register_newsletter = 0;
         }
         
-        $request->validate([
-            'register_first_name' => ['required', 'string', 'max:255'],
-            'register_last_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
-            'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'register_newsletter' => ['integer'],
-        ]);
+        //Case address name has been provided, address info then becomes required
+        if (isset($request->register_address_name) && strlen($request->register_address_name) > 0) {
+            $request->validate([
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
+                'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'register_company' => ['nullable', 'string', 'max:255'],
+                'register_phone' => ['nullable', 'string', 'max:30'],
+                'register_gender' => ['nullable', 'string', 'max:7', Rule::in(['male', 'female', 'neutral'])],
+                'register_first_name' => ['required', 'string', 'max:255'],
+                'register_last_name' => ['required', 'string', 'max:255'],
+                'register_age' => ['required', 'integer'],
+                'register_legal' => ['required', 'integer'],
+                'register_newsletter' => ['integer'],
+                'register_address_name' => ['required', 'string', 'max:150'],
+                'register_address_first_name' => ['required', 'string', 'max:255'],
+                'register_address_last_name' => ['required', 'string', 'max:255'],
+                'register_address_number' => ['required', 'integer'],
+                'register_address_street' => ['required', 'string', 'max:255'],
+                'register_address_floor' => ['nullable', 'string', 'max:255'],
+                'register_address_city' => ['required', 'string', 'max:150'],
+                'register_address_zip' => ['required', 'string', 'max:10'],
+                'register_address_phone' => ['required', 'string', 'max:30'],
+                'register_address_country' => ['required', 'string', 'max:50'],
+                'register_address_other' => ['nullable', 'string', 'max:255'],
+            ]);
 
+            $new_address = new Address();
+            $new_address->address_name = $request->register_address_name;
+            $new_address->first_name = $request->register_address_first_name;
+            $new_address->last_name = $request->register_address_last_name;
+            $new_address->street_number = (int) $request->register_address_number;
+            $new_address->street = $request->register_address_street;
+            if (isset($request->register_address_floor)) {
+                $new_address->floor = $request->register_address_floor;
+            }
+            $new_address->zip_code = $request->register_address_zip;
+            $new_address->phone = $request->register_address_phone;
+            $new_address->city = $request->register_address_city;
+            $new_address->country = $request->register_address_country;
+            if (isset($request->register_address_other)) {
+                $new_address->other_infos = $request->register_address_other;
+            }
+
+        } else { //case no address provided, address data is nullable
+            $request->validate([
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
+                'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'register_company' => ['nullable', 'string', 'max:255'],
+                'register_phone' => ['nullable', 'string', 'max:30'],
+                'register_gender' => ['nullable', 'string', 'max:7', Rule::in(['male', 'female', 'neutral'])],
+                'register_first_name' => ['required', 'string', 'max:255'],
+                'register_last_name' => ['required', 'string', 'max:255'],
+                'register_age' => ['required', 'integer'],
+                'register_legal' => ['required', 'integer'],
+                'register_newsletter' => ['integer'],
+                'register_address_name' => ['nullable', 'string', 'max:150'],
+                'register_address_first_name' => ['nullable', 'string', 'max:255'],
+                'register_address_last_name' => ['nullable', 'string', 'max:255'],
+                'register_address_number' => ['nullable', 'integer'],
+                'register_address_street' => ['nullable', 'string', 'max:255'],
+                'register_address_floor' => ['nullable', 'string', 'max:255'],
+                'register_address_city' => ['nullable', 'string', 'max:150'],
+                'register_address_zip' => ['nullable', 'string', 'max:10'],
+                'register_address_phone' => ['nullable', 'string', 'max:30'],
+                'register_address_country' => ['nullable', 'string', 'max:50'],
+                'register_address_other' => ['nullable', 'string', 'max:255'],
+            ]);
+        }
+
+        //Create user in any case, even if no address has been added
         $user = User::create([
-            'first_name' => $request->register_first_name,
-            'last_name' => $request->register_last_name,
             'email' => $request->email,
             'password' => Hash::make($request->register_password),
             'role' => 'user',
+            'first_name' => $request->register_first_name,
+            'last_name' => $request->register_last_name,
+            'gender' => $request->register_gender,
+            'company' => $request->register_company,
+            'phone' => $request->register_phone,
+            'is_over_18' => $request->register_age,
+            'legal_ok' => $request->register_legal,
             'newsletter' => $request->register_newsletter,
             'origin' => 'couture',
         ]);
+
+        //Condition must be same as above!! User creation was required to establish user_id
+        if (isset($request->register_address_name) && strlen($request->register_address_name) > 0) {
+            $new_address->user_id = $user->id;
+            $new_address->save();
+        }
 
         event(new Registered($user));
 
