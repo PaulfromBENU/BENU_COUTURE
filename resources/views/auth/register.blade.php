@@ -29,8 +29,11 @@
             <div class="register__errors w-2/3 m-auto mt-5 mb-5">
                 Une erreur s'est produite. Merci de vérifier que tous les champs ci-dessous sont correctement remplis.
                 @if(App::environment('stage'))
-                    Infos supplémentaires. Les messages ci-dessous n'apparaitront pas en production&nbsp;: <br/>
-                    {!! implode('', $errors->all('<div class="primary-color">:message</div>')) !!}
+                <br/>
+                    <p>
+                        Infos supplémentaires. Les messages ci-dessous n'apparaitront pas en production&nbsp;: <br/>
+                        {!! implode('', $errors->all('<div class="primary-color">:message</div>')) !!}
+                    </p>
                 @endif
             </div>
         @endif
