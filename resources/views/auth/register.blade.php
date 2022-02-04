@@ -219,6 +219,7 @@
         if (filledInputs == 0) {
             $('.register_address_field_mandatory').removeAttr('required');
             $('.register_optionnal_star').hide();
+            $('.register_address_field_mandatory').css('border-color', '#D9D9D9');
         } else {
             $('.register_address_field_mandatory').attr('required', 'true');
             $('.register_optionnal_star').css('display', 'inline');
