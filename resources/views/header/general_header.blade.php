@@ -48,9 +48,9 @@
                     </li>
                     @auth
                         <li>
-                            <button class="header__main-menu__icons__btn">
+                            <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'wishlist']) }}" class="header__main-menu__icons__btn">
                                 @svg('benu-icon-heart-favorites', '')
-                            </button>
+                            </a>
                         </li>
                     @endauth
                     @guest
