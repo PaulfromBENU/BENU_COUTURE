@@ -391,6 +391,28 @@ input[type=checkbox]:focus {
   background: #FFFFFF;
 }
 
+.btn-dashboard-plain {
+  display: inline-block;
+  width: 100%;
+  color: #FFFFFF;
+  background: #D41C1B;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  text-align: center;
+  text-align: center;
+  font: normal normal 600 18px/22px "Barlow Condensed";
+  letter-spacing: 0px;
+  border: solid 2px #D41C1B;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn-dashboard-plain:hover {
+  color: #D41C1B;
+  background: #FFFFFF;
+}
+
 .btn-hover-village:hover {
   color: #27955B;
 }
@@ -2894,4 +2916,114 @@ input[type=checkbox]:focus {
   margin-top: 20px;
   margin-bottom: 15px;
   padding: 15px 20px;
+}
+
+.dashboard {
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+.dashboard__nav {
+  padding: 29px 0px 29px 100px;
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  margin-right: 20px;
+  width: 27vw;
+  position: relative;
+}
+.dashboard__nav__title {
+  text-align: left;
+  font: normal normal 300 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 45px;
+}
+.dashboard__nav__title strong {
+  font-weight: 700;
+}
+.dashboard__nav__links {
+  margin-bottom: 80px;
+}
+.dashboard__nav__link {
+  text-align: left;
+  font: normal normal 700 16px/19px "Barlow Condensed";
+  letter-spacing: 0.32px;
+  margin-bottom: 10px;
+  height: 32px;
+  cursor: pointer;
+}
+.dashboard__nav__link--active {
+  color: #D41C1B;
+}
+.dashboard__nav__link--active::after {
+  width: 100%;
+}
+.dashboard__nav__link:hover {
+  color: #D41C1B;
+}
+.dashboard__nav__logout button {
+  display: inline-block;
+  height: 55px;
+  margin-bottom: 70px;
+}
+.dashboard__content {
+  width: calc(73vw - 20px);
+}
+.dashboard__content__box {
+  margin-right: 20px;
+  padding: 18px 40px;
+  background: #D0D0D033 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  height: 215px;
+  margin-bottom: 60px;
+  position: relative;
+}
+.dashboard__content__box--normal {
+  width: calc(22vw - 10px);
+}
+.dashboard__content__box--large {
+  width: 44vw;
+}
+.dashboard__content__box__title {
+  text-align: left;
+  font: normal normal 700 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 21px;
+}
+.dashboard__content__box__subtitle {
+  text-align: left;
+  font: normal normal 700 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 15px;
+}
+.dashboard__content__box__low-links {
+  position: absolute;
+  bottom: 18px;
+  right: 40px;
+}
+.dashboard__content__box__low-links a {
+  margin-top: 20px;
+}
+.dashboard__content__box__bottom-link {
+  position: absolute;
+  bottom: 18px;
+  right: 40px;
+  width: calc(100% - 80px);
+}
+
+.dashboard-wishlist__title {
+  text-align: left;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 50px;
+}
+.dashboard-wishlist__title--couture {
+  color: #D41C1B;
+}
+.dashboard-wishlist__title--design {
+  color: #64422C;
+}
+.dashboard-wishlist__title--lasa {
+  color: #0079A7;
+}
+.dashboard-wishlist .article-overview, .dashboard-wishlist .sold-overview {
+  width: 30%;
+  margin-right: 2%;
 }

@@ -12,4 +12,5 @@
 return [
     'contact' => 'contact-us',
     'models' => 'models',
+    "full-story" => "benu-the-full-story",
 ];

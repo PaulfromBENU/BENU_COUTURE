@@ -32,4 +32,5 @@ return [
     "register" => "Création de compte",
     "login" => "Connexion",
     "forgotten-pwd" => "Mot de passe oublié",
+    "my-account" => "Mon compte BENU",
 ];

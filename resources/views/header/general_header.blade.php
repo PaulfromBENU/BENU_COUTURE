@@ -61,9 +61,9 @@
                         </li>
                     @else
                         <li>
-                            <a href="{{ Route::currentRouteName() }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="header__main-menu__icons__btn">
+                            <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="header__main-menu__icons__btn">
                                 @svg('benu-icon-silhouette-disconnect')
-                            </a>
+                            </button>
                             <form id="logout-form" action="{{ route('logout', ['locale' => app()->getLocale()]) }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

@@ -32,7 +32,8 @@ class SetLocale
             //Changes the locale to the prefixed value
             app()->setLocale($segment);
         }
-        
+        session(['locale' => app()->getLocale()]);
+
         return $next($request);
     }
 }

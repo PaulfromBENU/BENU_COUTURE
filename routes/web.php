@@ -13,18 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Redirect welcome page to localized page if not specified
-// Route::get('/', function () {
-//     return redirect()->route('home', ['locale' => app()->getLocale()]);
-// });  
-
 //All routes to be localized
 Route::group([
 	'prefix' => '{locale?}',
 	'middleware' => 'setlocale'], function() {
+
 	Route::get('/', 'GeneralController@home')->name('home');
 
-	Route::get('/'.trans("slugs.contact"), 'ContactController@show')->name('contact');
+	Route::get('/'.trans("slugs.contact", [], 'fr'), 'ContactController@show')->name('contact');
 
 	Route::get('/models/{name?}', 'ModelController@show')->name('model');
 
@@ -32,7 +28,7 @@ Route::group([
 
 	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service');
 
-	Route::get('/benu-toute-l-histoire', 'GeneralController@showFullStory')->name('full-story');
+	Route::get('/'.trans("slugs.full-story", [], 'fr'), 'GeneralController@showFullStory')->name('full-story');
 
 	Route::get('/benu-a-propos', 'GeneralController@showAbout')->name('about');
 
@@ -42,11 +38,7 @@ Route::group([
 
 	Route::get('/news/{slug?}', 'GeneralController@showNews')->name('news');
 
+	Route::get('/dashboard/{section?}', 'UserController@show')->name('dashboard');
+
 	require __DIR__.'/auth.php';
 });
-
-//Route::get('/change-lang/{lang}', 'GeneralController@changeLocale')->name('locale.update');
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');

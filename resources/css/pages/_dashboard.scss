@@ -1,0 +1,113 @@
+.dashboard {
+	padding-top: 60px;
+	margin-bottom: 60px;
+	&__nav {
+		padding: 29px 0px 29px 100px;
+		background: $primary-color-light 0% 0% no-repeat padding-box;
+		margin-right: 20px;
+		width: 27vw;
+		position: relative;
+		&__title {
+			text-align: left;
+			font: normal normal 300 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			margin-bottom: 45px;
+			strong {
+				font-weight: 700;
+			}
+		}
+		&__links {
+			margin-bottom: 80px;
+		}
+		&__link {
+			text-align: left;
+			font: normal normal 700 16px/19px 'Barlow Condensed';
+			letter-spacing: 0.32px;
+			margin-bottom: 10px;
+			height: 32px;
+			cursor: pointer;
+			&--active {
+				color: $primary-color;
+				&::after {
+					width: 100%;
+				}
+			}
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		&__logout {
+			button {
+				display: inline-block;
+				height: 55px;
+				margin-bottom: 70px;
+			}
+		}
+	}
+	&__content {
+		width: calc(73vw - 20px);
+		&__box {
+			margin-right: 20px;
+			padding: 18px 40px;
+			background: $light-grey-transparent 0% 0% no-repeat padding-box;
+			border-radius: 8px;
+			height: 215px;
+			margin-bottom: 60px;
+			position: relative;
+			&--normal {
+				width: calc(22vw - 10px);
+			}
+			&--large {
+				width: 44vw;
+			}
+			&__title {
+				text-align: left;
+				font: normal normal 700 22px/28px 'Barlow Condensed';
+				letter-spacing: 0px;
+				margin-bottom: 21px;
+			}
+			&__subtitle {
+				text-align: left;
+				font: normal normal 700 22px/28px 'Barlow Condensed';
+				letter-spacing: 0px;
+				margin-bottom: 15px;
+			}
+			&__low-links {
+				position: absolute;
+				bottom: 18px;
+				right: 40px;
+				a {
+					margin-top: 20px;
+				}
+			}
+			&__bottom-link {
+				position: absolute;
+				bottom: 18px;
+				right: 40px;
+				width: calc(100% - 80px);
+			}
+		}
+	}
+}
+
+.dashboard-wishlist {
+	&__title {
+		text-align: left;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 50px;
+		&--couture {
+			color: $benu_couture;
+		}
+		&--design {
+			color: $benu_design;
+		}
+		&--lasa {
+			color: $benu_lasa;
+		}
+	}
+	.article-overview, .sold-overview {
+		width: 30%;
+		margin-right: 2%;
+	}
+}

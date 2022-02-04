@@ -15,7 +15,7 @@
 	<div class="sold-overview__footer">
 		<div class="flex justify-between">
 			<p class="sold-overview__footer__size">
-				Taille XS
+				XS
 			</p>
 			<div class="color-circle color-circle--green"></div>
 		</div>

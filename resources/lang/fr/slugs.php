@@ -12,4 +12,5 @@
 return [
     'contact' => 'nous-contacter',
     'models' => 'modeles',
+    "full-story" => "benu-toute-l-histoire",
 ];

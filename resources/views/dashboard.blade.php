@@ -1,17 +1,35 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.base_layout')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
+@section('title')
+    {{ __('models.seo-title', ['name' => 'Caretta']) }}
+@endsection
+
+@section('description')
+    {{ __('models.seo-description') }}
+@endsection
+
+@section('robots-behaviour')
+    noindex, nofollow
+@endsection
+
+@section('breadcrumbs')
+    <div class="breadcrumbs pattern-bg">
+        <div class="benu-container breadcrumbs__content flex justify-start">
+            <a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.home') }}</a>
+            <div class="pl-5 pr-5">
+                >
             </div>
+            <a href="{{ route('dashboard', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.my-account') }}</strong></a>
         </div>
     </div>
-</x-app-layout>
+@endsection
+
+@section('main-content')
+    @livewire('dashboard.dashboard-navigation', ['section' => $section])
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    
+</script>
+@endsection
