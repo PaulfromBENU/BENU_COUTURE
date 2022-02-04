@@ -1,5 +1,12 @@
 .register {
 	padding-top: 60px;
+	&__errors {
+		border-radius: 20px;
+		background: $primary-color-light;
+		color: $primary-color;
+		font: normal normal 500 16px/28px 'Barlow';
+		padding: 20px 40px;
+	}
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';

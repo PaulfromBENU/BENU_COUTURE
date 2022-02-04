@@ -35,12 +35,27 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        //Newsletter boolean to false if not checked
         if (!isset($request->register_newsletter)) {
             $request->register_newsletter = 0;
         }
+
+        $address_entered = false;
         
-        //Case address name has been provided, address info then becomes required
-        if (isset($request->register_address_name) && strlen($request->register_address_name) > 0) {
+        //Case any address field has been provided, address info then becomes required
+        if (isset($request->register_address_name) && strlen($request->register_address_name) > 0
+            || isset($request->register_address_first_name) && strlen($request->register_address_first_name) > 0
+            || isset($request->register_address_last_name) && strlen($request->register_address_last_name) > 0
+            || isset($request->register_address_number) && strlen($request->register_address_number) > 0
+            || isset($request->register_address_street) && strlen($request->register_address_street) > 0
+            || isset($request->register_address_floor) && strlen($request->register_address_floor) > 0
+            || isset($request->register_address_city) && strlen($request->register_address_city) > 0
+            || isset($request->register_address_zip) && strlen($request->register_address_zip) > 0
+            || isset($request->register_address_phone) && strlen($request->register_address_phone) > 0
+            || isset($request->register_address_country) && strlen($request->register_address_country) > 0
+            || isset($request->register_address_other) && strlen($request->register_address_other) > 0) {
+
+            $address_entered = true;
             $request->validate([
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
                 'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
@@ -124,8 +139,8 @@ class RegisteredUserController extends Controller
             'origin' => 'couture',
         ]);
 
-        //Condition must be same as above!! User creation was required to establish user_id
-        if (isset($request->register_address_name) && strlen($request->register_address_name) > 0) {
+        //User creation was required to establish user_id
+        if ($address_entered) {
             $new_address->user_id = $user->id;
             $new_address->save();
         }

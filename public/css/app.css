@@ -2754,6 +2754,13 @@ input[type=checkbox]:focus {
 .register {
   padding-top: 60px;
 }
+.register__errors {
+  border-radius: 20px;
+  background: #F9E2E2;
+  color: #D41C1B;
+  font: normal normal 500 16px/28px "Barlow";
+  padding: 20px 40px;
+}
 .register__title {
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
