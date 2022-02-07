@@ -38,7 +38,7 @@
 					<div class="flex justify-between">
 						<h3 class="partners__box__title">Repair Café Lëtzebuerg</h3>
 						<p>
-							<a href="{{ route('model') }}" class="btn-couture-plain">Voir tous les articles</a>
+							<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
 						</p>
 					</div>
 					<p class="partners__box__desc">
