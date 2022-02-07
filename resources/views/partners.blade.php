@@ -15,7 +15,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('partners', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.partners') }}</strong></a>
+			<a href="{{ route('partners-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.partners') }}</strong></a>
 		</div>
 	</div>
 @endsection

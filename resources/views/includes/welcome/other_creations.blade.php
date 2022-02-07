@@ -5,7 +5,7 @@
 	<p>
 		{{ __('welcome.others-words') }}
 	</p>
-	<a href="{{ route('model', ['locale' => app()->getLocale()]) }}" class="block welcome-others__plus">
+	<a href="{{ route('model-'.app()->getLocale()) }}" class="block welcome-others__plus">
 		<div class="welcome-others__plus__symbol">
 			+
 			<!-- <i class="fas fa-plus"></i> -->

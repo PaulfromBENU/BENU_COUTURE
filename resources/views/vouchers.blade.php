@@ -15,7 +15,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('vouchers', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.vouchers') }}</strong></a>
+			<a href="{{ route('vouchers-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.vouchers') }}</strong></a>
 		</div>
 	</div>
 @endsection

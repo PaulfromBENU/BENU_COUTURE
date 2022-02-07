@@ -11,12 +11,12 @@ class GeneralController extends Controller
         return view('welcome');
     }
 
-    public function changeLocale(string $lang)
-    {
-        app()->setLocale($lang);
+    // public function changeLocale(string $lang)
+    // {
+    //     app()->setLocale($lang);
 
-        return redirect()->back();
-    }
+    //     return redirect()->back();
+    // }
 
     public function showFullStory()
     {
@@ -38,7 +38,7 @@ class GeneralController extends Controller
         return view('vouchers');
     }
 
-    public function showNews(string $locale, string $slug = '')
+    public function showNews(string $slug = '')
     {
         if ($slug == '') {
             return view('news');

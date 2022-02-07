@@ -24,7 +24,7 @@ class ModelController extends Controller
         return view('model');
     }
 
-    public function soldItems(string $locale, string $name) 
+    public function soldItems(string $name) 
     {
         return view('sold-items');
     }

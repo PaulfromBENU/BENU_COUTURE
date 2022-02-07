@@ -49,7 +49,7 @@
 	<div id="modal-opacifier" class="modal-opacifier" style="display: none;"></div>
 
 	<!-- Language selection -->
-	@include('modals.lang_modal')
+	@livewire('modals.lang-modal')
 
 	<!-- Search bar -->
 	@include('modals.search_modal')

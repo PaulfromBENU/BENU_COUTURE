@@ -15,45 +15,45 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('client-service', [app()->getLocale()]) }}">{{ __('breadcrumbs.client-service') }}</a>
+			<a href="{{ route('client-service-'.app()->getLocale()) }}">{{ __('breadcrumbs.client-service') }}</a>
 			<div class="pl-5 pr-5">
 				>
 			</div>
 			@switch($page)
 				@case('faq')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'faq']) }}" class="primary-color"><strong>{{ __('breadcrumbs.faq') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'faq']) }}" class="primary-color"><strong>{{ __('breadcrumbs.faq') }}</strong></a>
 					@break
 
 				@case('delivery')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'delivery']) }}" class="primary-color"><strong>{{ __('breadcrumbs.delivery') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'delivery']) }}" class="primary-color"><strong>{{ __('breadcrumbs.delivery') }}</strong></a>
 					@break
 
 				@case('sizes')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'sizes']) }}" class="primary-color"><strong>{{ __('breadcrumbs.sizes') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'sizes']) }}" class="primary-color"><strong>{{ __('breadcrumbs.sizes') }}</strong></a>
 					@break
 
 				@case('return')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'return']) }}" class="primary-color"><strong>{{ __('breadcrumbs.return') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'return']) }}" class="primary-color"><strong>{{ __('breadcrumbs.return') }}</strong></a>
 					@break
 
 				@case('payment')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'payment']) }}" class="primary-color"><strong>{{ __('breadcrumbs.payment') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'payment']) }}" class="primary-color"><strong>{{ __('breadcrumbs.payment') }}</strong></a>
 					@break
 
 				@case('care')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'care']) }}" class="primary-color"><strong>{{ __('breadcrumbs.care') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'care']) }}" class="primary-color"><strong>{{ __('breadcrumbs.care') }}</strong></a>
 					@break
 
 				@case('shops')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'shops']) }}" class="primary-color"><strong>{{ __('breadcrumbs.shops') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'shops']) }}" class="primary-color"><strong>{{ __('breadcrumbs.shops') }}</strong></a>
 					@break
 
 				@case('contact')
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="primary-color"><strong>{{ __('breadcrumbs.contact') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="primary-color"><strong>{{ __('breadcrumbs.contact') }}</strong></a>
 					@break
 
 				@default
-					<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="primary-color"><strong>{{ __('breadcrumbs.contact') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="primary-color"><strong>{{ __('breadcrumbs.contact') }}</strong></a>
 					@break
 			@endswitch
 		</div>
@@ -65,28 +65,28 @@
 		<h4 class="service__subtitle">BENU COUTURE</h4>
 		<h2 class="service__title">Service Client</h2>
 		<div class="service__nav flex justify-center">
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'faq']) }}" class="service__nav__link @if($page == 'faq') service__nav__link--active @endif" id="service-nav-faq">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'faq']) }}" class="service__nav__link @if($page == 'faq') service__nav__link--active @endif" id="service-nav-faq">
 				{{ __('breadcrumbs.faq') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'delivery']) }}" class="service__nav__link @if($page == 'delivery') service__nav__link--active @endif" id="service-nav-delivery">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'delivery']) }}" class="service__nav__link @if($page == 'delivery') service__nav__link--active @endif" id="service-nav-delivery">
 				{{ __('breadcrumbs.delivery') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'sizes']) }}" class="service__nav__link @if($page == 'sizes') service__nav__link--active @endif" id="service-nav-sizes">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'sizes']) }}" class="service__nav__link @if($page == 'sizes') service__nav__link--active @endif" id="service-nav-sizes">
 				{{ __('breadcrumbs.sizes') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'return']) }}" class="service__nav__link @if($page == 'return') service__nav__link--active @endif" id="service-nav-return">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'return']) }}" class="service__nav__link @if($page == 'return') service__nav__link--active @endif" id="service-nav-return">
 				{{ __('breadcrumbs.return') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'payment']) }}" class="service__nav__link @if($page == 'payment') service__nav__link--active @endif" id="service-nav-payment">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'payment']) }}" class="service__nav__link @if($page == 'payment') service__nav__link--active @endif" id="service-nav-payment">
 				{{ __('breadcrumbs.payment') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'care']) }}" class="service__nav__link @if($page == 'care') service__nav__link--active @endif" id="service-nav-care">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'care']) }}" class="service__nav__link @if($page == 'care') service__nav__link--active @endif" id="service-nav-care">
 				{{ __('breadcrumbs.care') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'shops']) }}" class="service__nav__link @if($page == 'shops') service__nav__link--active @endif" id="service-nav-shops">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'shops']) }}" class="service__nav__link @if($page == 'shops') service__nav__link--active @endif" id="service-nav-shops">
 				{{ __('breadcrumbs.shops') }}
 			</a>
-			<a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="service__nav__link @if($page == '' || $page == 'contact') service__nav__link--active @endif" id="service-nav-contact">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="service__nav__link @if($page == '' || $page == 'contact') service__nav__link--active @endif" id="service-nav-contact">
 				{{ __('breadcrumbs.contact') }}
 			</a>
 		</div>

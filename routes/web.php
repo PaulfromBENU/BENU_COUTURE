@@ -14,52 +14,86 @@ use Illuminate\Support\Facades\App;
 |
 */
 
-//All routes to be localized
+// Home does not need URI translation. Any locale may land on this page, middleware will ensure locale is prepended to the URI.
+// Same for auth requests, no translation needed.
+// Dashboard is also common to everyone, due to several redirections that would need to be handled in the auth process
 Route::group([
 	'prefix' => '{locale?}',
 	'middleware' => 'setlocale'], function() {
 
 	Route::get('/', 'GeneralController@home')->name('home');
-
-	//Route::get('/'.trans("slugs.contact", [], 'en'), 'ContactController@show')->name('contact');
-
-	Route::get('/models/{name?}', 'ModelController@show')->name('model-en');
-	Route::get('/modeles/{name?}', 'ModelController@show')->name('model-fr');
-	Route::get('/models-de/{name?}', 'ModelController@show')->name('model-de');
-	Route::get('/models-lu/{name?}', 'ModelController@show')->name('model-lu');
-	Route::get('/models/{name?}', 'ModelController@show')->name('model');
-
-	Route::get('/models/{name?}/sold', 'ModelController@soldItems')->name('sold-en');
-	Route::get('/modeles/{name?}/vendu', 'ModelController@soldItems')->name('sold-fr');
-	Route::get('/modeles-de/{name?}/vendu-de', 'ModelController@soldItems')->name('sold-de');
-	Route::get('/modeles-lu/{name?}/vendu-lu', 'ModelController@soldItems')->name('sold-lu');
-	Route::get('/models/{name?}/sold', 'ModelController@soldItems')->name('sold');
-
-	Route::get('/client-support/{page?}', 'ContactController@showAll')->name('client-service-en');
-	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service-fr');
-	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service-de');
-	Route::get('/service-client/{page?}', 'ContactController@showAll')->name('client-service-lu');
-	Route::get('/benu-service-client/{page?}', 'ContactController@showAll')->name('client-service');
-
-	Route::get('/benu-the-full-story', 'GeneralController@showFullStory')->name('full-story-en');
-	Route::get('/benu-toute-l-histoire', 'GeneralController@showFullStory')->name('full-story-fr');
-	Route::get('/benu-toute-l-histoire-de', 'GeneralController@showFullStory')->name('full-story-de');
-	Route::get('/benu-toute-l-histoire-lu', 'GeneralController@showFullStory')->name('full-story-lu');
-	Route::get('/benu-toute-l-histoire', 'GeneralController@showFullStory')->name('full-story');
-
-	Route::get('/benu-about', 'GeneralController@showAbout')->name('about-en');
-	Route::get('/benu-a-propos', 'GeneralController@showAbout')->name('about-fr');
-	Route::get('/benu-a-propos-de', 'GeneralController@showAbout')->name('about-de');
-	Route::get('/benu-a-propos-lu', 'GeneralController@showAbout')->name('about-lu');
-	Route::get('/benu-apropos', 'GeneralController@showAbout')->name('about');
-
-	Route::get('/partenaires-benu-couture', 'GeneralController@showPartners')->name('partners');
-
-	Route::get('/bons-achat', 'GeneralController@showVouchers')->name('vouchers');
-
-	Route::get('/news/{slug?}', 'GeneralController@showNews')->name('news');
-
 	Route::get('/dashboard/{section?}', 'UserController@show')->name('dashboard');
-
+	//Auth routes
 	require __DIR__.'/auth.php';
+});
+
+// All other routes to be localized, by language. Separated route groups for each locale allows same translations for URIs in different languages, since localized prefix will ensure route names are unique.
+Route::group([
+	'prefix' => 'lu',
+	'middleware' => 'setlocale'], function() {
+
+	Route::get('/'.trans("slugs.models", [], "lu").'/{name?}', 'ModelController@show')->name('model-lu');
+	Route::get('/'.trans("slugs.models", [], "lu").'/{name?}/'.trans("slugs.sold", [], "lu"), 'ModelController@soldItems')->name('sold-lu');
+	Route::get('/'.trans("slugs.client-support", [], "lu").'/{page?}', 'ContactController@showAll')->name('client-service-lu');
+	Route::get('/'.trans("slugs.full-story", [], "lu"), 'GeneralController@showFullStory')->name('full-story-lu');
+	Route::get('/'.trans("slugs.about", [], "lu"), 'GeneralController@showAbout')->name('about-lu');
+	Route::get('/'.trans("slugs.partners", [], "lu"), 'GeneralController@showPartners')->name('partners-lu');
+	Route::get('/'.trans("slugs.vouchers", [], "lu"), 'GeneralController@showVouchers')->name('vouchers-lu');
+	Route::get('/'.trans("slugs.news", [], "lu").'/{slug?}', 'GeneralController@showNews')->name('news-lu');
+});
+
+Route::group([
+	'prefix' => 'fr',
+	'middleware' => 'setlocale'], function() {
+
+	Route::get('/'.trans("slugs.models", [], "fr").'/{name?}', 'ModelController@show')->name('model-fr');
+	Route::get('/'.trans("slugs.models", [], "fr").'/{name?}/'.trans("slugs.sold", [], "fr"), 'ModelController@soldItems')->name('sold-fr');
+	Route::get('/'.trans("slugs.client-support", [], "fr").'/{page?}', 'ContactController@showAll')->name('client-service-fr');
+	Route::get('/'.trans("slugs.full-story", [], "fr"), 'GeneralController@showFullStory')->name('full-story-fr');
+	Route::get('/'.trans("slugs.about", [], "fr"), 'GeneralController@showAbout')->name('about-fr');
+	Route::get('/'.trans("slugs.partners", [], "fr"), 'GeneralController@showPartners')->name('partners-fr');
+	Route::get('/'.trans("slugs.vouchers", [], "fr"), 'GeneralController@showVouchers')->name('vouchers-fr');
+	Route::get('/'.trans("slugs.news", [], "fr").'/{slug?}', 'GeneralController@showNews')->name('news-fr');
+});
+
+Route::group([
+	'prefix' => 'en',
+	'middleware' => 'setlocale'], function() {
+
+	Route::get('/'.trans("slugs.models", [], "en").'/{name?}', 'ModelController@show')->name('model-en');
+	Route::get('/'.trans("slugs.models", [], "en").'/{name?}/'.trans("slugs.sold", [], "en"), 'ModelController@soldItems')->name('sold-en');
+	Route::get('/'.trans("slugs.client-support", [], "en").'/{page?}', 'ContactController@showAll')->name('client-service-en');
+	Route::get('/'.trans("slugs.full-story", [], "en"), 'GeneralController@showFullStory')->name('full-story-en');
+	Route::get('/'.trans("slugs.about", [], "en"), 'GeneralController@showAbout')->name('about-en');
+	Route::get('/'.trans("slugs.partners", [], "en"), 'GeneralController@showPartners')->name('partners-en');
+	Route::get('/'.trans("slugs.vouchers", [], "en"), 'GeneralController@showVouchers')->name('vouchers-en');
+	Route::get('/'.trans("slugs.news", [], "en").'/{slug?}', 'GeneralController@showNews')->name('news-en');
+});
+
+Route::group([
+	'prefix' => 'de',
+	'middleware' => 'setlocale'], function() {
+
+	Route::get('/'.trans("slugs.models", [], "de").'/{name?}', 'ModelController@show')->name('model-de');
+	Route::get('/'.trans("slugs.models", [], "de").'/{name?}/'.trans("slugs.sold", [], "de"), 'ModelController@soldItems')->name('sold-de');
+	Route::get('/'.trans("slugs.client-support", [], "de").'/{page?}', 'ContactController@showAll')->name('client-service-de');
+	Route::get('/'.trans("slugs.full-story", [], "de"), 'GeneralController@showFullStory')->name('full-story-de');
+	Route::get('/'.trans("slugs.about", [], "de"), 'GeneralController@showAbout')->name('about-de');
+	Route::get('/'.trans("slugs.partners", [], "de"), 'GeneralController@showPartners')->name('partners-de');
+	Route::get('/'.trans("slugs.vouchers", [], "de"), 'GeneralController@showVouchers')->name('vouchers-de');
+	Route::get('/'.trans("slugs.news", [], "de").'/{slug?}', 'GeneralController@showNews')->name('news-de');
+});
+
+Route::group([
+	'middleware' => 'setlocale'], function() {
+
+	Route::get('/{slug?}', 'ModelController@show')->where('slug', '[a-zA-Z0-9]{3, }');
+	// Route::get('/modeles/{name?}', 'ModelController@show')->name('model');
+	// Route::get('/modeles/{name?}/sold', 'ModelController@soldItems')->name('sold');
+	// Route::get('/benu-service-client/{page?}', 'ContactController@showAll')->name('client-service');
+	// Route::get('/benu-toute-l-histoire', 'GeneralController@showFullStory')->name('full-story');
+	// Route::get('/benu-apropos', 'GeneralController@showAbout')->name('about');
+	// Route::get('/partenaires-benu-couture', 'GeneralController@showPartners')->name('partners');
+	// Route::get('/bons-achat', 'GeneralController@showVouchers')->name('vouchers');
+	// Route::get('/actualites/{slug?}', 'GeneralController@showNews')->name('news');
 });

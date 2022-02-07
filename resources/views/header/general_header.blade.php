@@ -12,13 +12,37 @@
                         <a href="{{ route('home', [app()->getLocale()]) }}" class="header__home-title">BENU COUTURE</a>
                     </div>
                     <ul class="flex justify-start header__top-nav__links">
-                        <li><a href="{{ route('client-service') }}">{{ __('header.support') }}</a></li>
+                        <li>
+                            @if(Route::has('client-service-'.app()->getLocale()))
+                            <a href="{{ route('client-service-'.app()->getLocale()) }}">{{ __('header.support') }}</a>
+                            @else
+                            <a href="{{ route('client-service', ['locale' => app()->getLocale()]) }}">{{ __('header.support') }}</a>
+                            @endif
+                        </li>
                         <li>|</li>
-                        <li><a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('header.about') }}</a></li>
+                        <li>
+                            @if(Route::has('about-'.app()->getLocale()))
+                            <a href="{{ route('about-'.app()->getLocale()) }}">{{ __('header.about') }}</a>
+                            @else
+                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('header.about') }}</a>
+                            @endif
+                        </li>
                         <li>|</li>
-                        <li><a href="{{ route('partners', ['locale' => app()->getLocale()]) }}">{{ __('header.partners') }}</a></li>
+                        <li>
+                            @if(Route::has('partners-'.app()->getLocale()))
+                            <a href="{{ route('partners-'.app()->getLocale()) }}">{{ __('header.partners') }}</a>
+                            @else
+                            <a href="{{ route('partners', ['locale' => app()->getLocale()]) }}">{{ __('header.partners') }}</a>
+                            @endif
+                        </li>
                         <li>|</li>
-                        <li><a href="{{ route('vouchers', ['locale' => app()->getLocale()]) }}">{{ __('header.vouchers') }}</a></li>
+                        <li>
+                            @if(Route::has('vouchers-'.app()->getLocale()))
+                            <a href="{{ route('vouchers-'.app()->getLocale()) }}">{{ __('header.vouchers') }}</a>
+                            @else
+                            <a href="{{ route('vouchers', ['locale' => app()->getLocale()]) }}">{{ __('header.vouchers') }}</a>
+                            @endif
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
@@ -36,9 +60,21 @@
                             @svg('benu-icon-arrow-down', 'header__main-nav__btn--logo-2')
                         </button>
                     </div>
+                    @if(Route::has('news-'.app()->getLocale()))
+                    <a href="{{ route('news-'.app()->getLocale()) }}" class="header__main-nav__link">{{ __('header.news') }}</a>
+                    @else 
                     <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.news') }}</a>
+                    @endif
+                    @if(Route::has('full-story-'.app()->getLocale()))
+                    <a href="{{ route('full-story-'.app()->getLocale()) }}" class="header__main-nav__link">{{ __('header.story') }}</a>
+                    @else
                     <a href="{{ route('full-story', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.story') }}</a>
+                    @endif
+                    @if(Route::has('client-service-'.app()->getLocale()))
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'shops']) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
+                    @else
                     <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'shops']) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
+                    @endif
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">
                     <li>
@@ -70,9 +106,15 @@
                         </li>
                     @endguest
                     <li>
+                        @if(Route::has('client-service-'.app()->getLocale()))
+                        <a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="header__main-menu__icons__btn">
+                            @svg('benu-icon-mail-contact')
+                        </a>
+                        @else
                         <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
                         </a>
+                        @endif
                     </li>
                     <li>
                         <button class="header__main-menu__icons__btn">

@@ -15,7 +15,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('full-story', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.about') }}</strong></a>
+			<a href="{{ route('full-story-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.about') }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -52,7 +52,7 @@
 	</p>
 
 	<p class="text-center mb-10">
-		<a href="{{ route('full-story', ['locale' => app()->getLocale()]) }}" class="btn-couture m-auto">Alors lis toute l'histoire !</a>
+		<a href="{{ route('full-story-'.app()->getLocale()) }}" class="btn-couture m-auto">Alors lis toute l'histoire !</a>
 	</p>
 
 </section>

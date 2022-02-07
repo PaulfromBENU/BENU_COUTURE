@@ -11,11 +11,11 @@
 @section('breadcrumbs')
     <div class="breadcrumbs pattern-bg">
         <div class="benu-container breadcrumbs__content flex justify-start">
-            <a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.home') }}</a>
+            <a href="{{ route('home') }}">{{ __('breadcrumbs.home') }}</a>
             <div class="pl-5 pr-5">
                 >
             </div>
-            <a href="{{ route('register', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.register') }}</strong></a>
+            <a href="{{ route('register-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.register') }}</strong></a>
         </div>
     </div>
 @endsection
@@ -38,7 +38,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('register', ['locale' => app()->getLocale()]) }}" class="w-1/2 m-auto mb-10" id="register-form">
+        <form method="POST" action="{{ route('register-'.app()->getLocale()) }}" class="w-1/2 m-auto mb-10" id="register-form">
             @csrf
             <div class="flex justify-between">
                 <div class="w-5/12">

@@ -3,7 +3,11 @@
 		Je choisis ma langue&nbsp;:
 	</p>
 	<div class="flex justify-between">
-		<a href="{{ route(Route::currentRouteName(), ['locale' => 'de']) }}" class="lang-modal__block"> <!--  -->
+		@if(isset($route_parameters))
+		<a href="{{ route(Route::currentRouteName().'-'.de, array_merge($route_parameters, ['locale' => 'de'])) }}" class="lang-modal__block">
+		@else 
+		<a href="{{ route(Route::currentRouteName().'-'.de, ['locale' => 'de']) }}" class="lang-modal__block">
+		@endif
 			<button class="lang-modal__block__btn">
                 DE
             </button>

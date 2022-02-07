@@ -15,11 +15,11 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('news', ['locale' => app()->getLocale()]) }}">{{ __('breadcrumbs.news') }}</a>
+			<a href="{{ route('news-'.app()->getLocale()) }}">{{ __('breadcrumbs.news') }}</a>
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('news', ['locale' => app()->getLocale(), 'slug' => 'premier-article-benu-couture']) }}" class="primary-color"><strong>{{ __('breadcrumbs.news-example') }}</strong></a>
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="primary-color"><strong>{{ __('breadcrumbs.news-example') }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -42,7 +42,7 @@
 			Container pour mise en avant d’un contenu
 		</p>
 		<div class="single-news__link">
-			<a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="btn-couture">Qui sommes-nous</a>
+			<a href="{{ route('about-'.app()->getLocale()) }}" class="btn-couture">Qui sommes-nous</a>
 		</div>
 		<p class="single-news__txt">
 			Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula, eu luctus sapien auctor quis. Pellentesque pellentesque molestie erat. Nulla cursus sit amet enim dictum dapibus. Morbi tincidunt commodo magna vitae ullamcorper. Vivamus eu nisi ac velit ultricies.
@@ -60,11 +60,11 @@
 			Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula, eu luctus sapien auctor quis. Pellentesque pellentesque molestie erat. Nulla cursus sit amet enim dictum dapibus. Morbi tincidunt commodo magna vitae ullamcorper. Vivamus eu nisi ac velit ultricies.
 		</p>
 		<div class="flex justify-between single-news__nextprev">
-			<a href="{{ route('news', ['locale' => app()->getLocale(), 'slug' => 'premier-article-benu-couture']) }}" class="btn-slider-left">Actualité précédente</a>
-			<a href="{{ route('news', ['locale' => app()->getLocale(), 'slug' => 'premier-article-benu-couture']) }}" class="btn-slider-right">Actualité suivante</a>
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="btn-slider-left">Actualité précédente</a>
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="btn-slider-right">Actualité suivante</a>
 		</div>
 		<div class="single-news__backlink">
-			<a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="btn-couture">Toutes les actualités</a>
+			<a href="{{ route('news-'.app()->getLocale()) }}" class="btn-couture">Toutes les actualités</a>
 		</div>
 	</div>
 @endsection

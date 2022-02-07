@@ -11,11 +11,11 @@
 @section('breadcrumbs')
     <div class="breadcrumbs pattern-bg">
         <div class="benu-container breadcrumbs__content flex justify-start">
-            <a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.home') }}</a>
+            <a href="{{ route('home') }}">{{ __('breadcrumbs.home') }}</a>
             <div class="pl-5 pr-5">
                 >
             </div>
-            <a href="{{ route('login', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.login') }}</strong></a>
+            <a href="{{ route('login') }}" class="primary-color"><strong>{{ __('breadcrumbs.login') }}</strong></a>
         </div>
     </div>
 @endsection
@@ -25,7 +25,7 @@
         <h3 class="login__subtitle">BENU COUTURE</h3>
         <h1 class="login__title">Je me connecte <br/>à mon compte BENU</h1>
 
-        <form method="POST" action="{{ route('login.connect', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
+        <form method="POST" action="{{ route('login.connect') }}" class="w-1/4 m-auto mb-10">
             @csrf
             <div class="input-group reactive-label-input">
                 <label for="login_email">Adresse e-mail *</label>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="flex items-center justify-end login__options">
-                    <a class="hover:underline" href="{{ route('password.request', ['locale' => app()->getLocale()]) }}">
+                    <a class="hover:underline" href="{{ route('password.request') }}">
                         Mot de passe oublié&nbsp;?
                     </a>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="login__validate__question">
                     Je n’ai pas encore de compte BENU COUTURE.
                 </div>
-                <a href="{{ route('register') }}" class="btn-slider-left mt-3">Je crée mon compte ici</a>
+                <a href="{{ route('register-'.app()->getLocale()) }}" class="btn-slider-left mt-3">Je crée mon compte ici</a>
             </div>
             @if($errors->any())
                 {!! implode('', $errors->all('<div>:message</div>')) !!}

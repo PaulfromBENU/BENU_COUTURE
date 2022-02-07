@@ -14,6 +14,22 @@ Route::get('/register', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register');
 
+Route::get('/inscription', [RegisteredUserController::class, 'create'])
+                ->middleware('guest')
+                ->name('register-fr');
+
+Route::get('/inscription-de', [RegisteredUserController::class, 'create'])
+                ->middleware('guest')
+                ->name('register-de');
+
+Route::get('/inscription-en', [RegisteredUserController::class, 'create'])
+                ->middleware('guest')
+                ->name('register-en');
+
+Route::get('/inscription-lu', [RegisteredUserController::class, 'create'])
+                ->middleware('guest')
+                ->name('register-lu');
+
 Route::post('/register', [RegisteredUserController::class, 'store'])
                 ->middleware('guest');
 

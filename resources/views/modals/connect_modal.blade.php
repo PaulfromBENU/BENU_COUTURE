@@ -23,7 +23,7 @@
 
 		<div class="flex justify-start w-full">
 			<div class="w-1/2"> <!-- connect-modal__input-group -->
-				<a href="{{ route('register', [app()->getLocale()]) }}" class="btn-slider-left connect-modal__register">Je crée mon compte ici</a>
+				<a href="{{ route('register-'.app()->getLocale()) }}" class="btn-slider-left connect-modal__register">Je crée mon compte ici</a>
 			</div>
 			<div class="w-1/2"> <!-- connect-modal__input-group -->
 				<button type="submit" class="btn-couture connect-modal__btn">Je me connecte</button>

@@ -9,7 +9,7 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">BENU VILLAGE Esch Asbl</h3>
 				<p>
-					<a href="{{ route('model') }}" class="btn-couture-plain">Voir tous les articles</a>
+					<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
@@ -39,7 +39,7 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">POP-UP Store 1</h3>
 				<p>
-					<a href="{{ route('model') }}" class="btn-couture-plain">Voir tous les articles</a>
+					<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
@@ -69,7 +69,7 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">POP-UP Store 2</h3>
 				<p>
-					<a href="{{ route('model') }}" class="btn-couture-plain">Voir tous les articles</a>
+					<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">

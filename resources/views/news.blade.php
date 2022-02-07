@@ -15,7 +15,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="primary-color"><strong>{{ __('breadcrumbs.news') }}</strong></a>
+			<a href="{{ route('news-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.news') }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -27,7 +27,7 @@
 
 		<div>
 			@for($i = 1; $i <= 5; $i++)
-			<a href="{{ route('news', ['locale' => app()->getLocale(), 'slug' => 'premier-article-benu-couture']) }}" class="all-news__link">
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="all-news__link">
 				Titre de l'actualité {{ $i }}
 			</a>
 			@endfor
