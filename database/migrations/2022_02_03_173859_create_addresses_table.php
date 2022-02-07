@@ -16,7 +16,7 @@ class CreateAddressesTable extends Migration
         Schema::connection('mysql_common')->create('addresses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('user_id')->onUpdate('cascade')->nullOnDelete()->constrained();
+            $table->foreignId('user_id')->onUpdate('cascade')->nullOnDelete();//->constrained();
             $table->string('address_name');
             $table->string('first_name');
             $table->string('last_name');
@@ -38,9 +38,9 @@ class CreateAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::connection('mysql_common')->table('addresses', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
-        });
+        // Schema::connection('mysql_common')->table('addresses', function (Blueprint $table) {
+        //     $table->dropForeign(['user_id']);
+        // });
         Schema::connection('mysql_common')->dropIfExists('addresses');
     }
 }

@@ -16,7 +16,7 @@ class CreateKulturpassesTable extends Migration
         Schema::connection('mysql_common')->create('kulturpasses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('user_id')->onUpdate('cascade')->onDelete('cascade')->constrained();
+            $table->foreignId('user_id')->onUpdate('cascade')->onDelete('cascade');//->constrained();
             $table->string('file_name');
             $table->boolean('approved')->default('0');
             $table->date('expiry_date')->default('2100-01-01');
@@ -30,9 +30,9 @@ class CreateKulturpassesTable extends Migration
      */
     public function down()
     {
-        Schema::connection('mysql_common')->table('kulturpasses', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
-        });
+        // Schema::connection('mysql_common')->table('kulturpasses', function (Blueprint $table) {
+        //     $table->dropForeign(['user_id']);
+        // });
         Schema::connection('mysql_common')->dropIfExists('kulturpasses');
     }
 }

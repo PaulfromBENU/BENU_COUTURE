@@ -38,7 +38,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('register-'.app()->getLocale()) }}" class="w-1/2 m-auto mb-10" id="register-form">
+        <form method="POST" action="{{ route('register', [app()->getLocale()]) }}" class="w-1/2 m-auto mb-10" id="register-form">
             @csrf
             <div class="flex justify-between">
                 <div class="w-5/12">
