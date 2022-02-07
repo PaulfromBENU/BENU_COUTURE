@@ -19,4 +19,12 @@ return [
     "partners" => "partners-benu-couture-de",
     "vouchers" => "vouchers-de",
     "news" => "news-de",
+    "services-faq" => "faq-de",
+    "services-delivery" => "livraison-de",
+    "services-sizes" => "guide-des-tailles-de",
+    "services-return" => "retours-de",
+    "services-payment" => "moyens-de-paiement-de",
+    "services-care" => "entretien-des-vetements-de",
+    "services-shops" => "points-de-vente-de",
+    "services-contact" => "contact-de",
 ];

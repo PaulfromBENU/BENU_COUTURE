@@ -19,4 +19,12 @@ return [
     "partners" => "partners-benu-couture",
     "vouchers" => "vouchers",
     "news" => "news",
+    "services-faq" => "faq",
+    "services-delivery" => "delivery",
+    "services-sizes" => "sizes",
+    "services-return" => "returns",
+    "services-payment" => "payment",
+    "services-care" => "clothes-care",
+    "services-shops" => "shops",
+    "services-contact" => "contact",
 ];

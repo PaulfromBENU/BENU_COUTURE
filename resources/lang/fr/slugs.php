@@ -19,4 +19,12 @@ return [
     "partners" => "partenaires-benu",
     "vouchers" => "bons-d-achat",
     "news" => "actualites",
+    "services-faq" => "faq",
+    "services-delivery" => "livraison",
+    "services-sizes" => "guide-des-tailles",
+    "services-return" => "retours",
+    "services-payment" => "moyens-de-paiement",
+    "services-care" => "entretien-des-vetements",
+    "services-shops" => "points-de-vente",
+    "services-contact" => "contact",
 ];
