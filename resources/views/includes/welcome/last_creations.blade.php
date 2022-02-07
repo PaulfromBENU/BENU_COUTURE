@@ -9,7 +9,7 @@
 				@include('includes.components.model_overview')
 			@endfor
 			<div class="text-center welcome-creations__list__link">
-				<a href="{{ route('model') }}" class="">{{ __('welcome.last-link') }}</a>
+				<a href="{{ route('model-'.app()->getLocale()) }}" class="">{{ __('welcome.last-link') }}</a>
 			</div>
 		</div>
 	</div>
