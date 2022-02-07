@@ -93,35 +93,35 @@
 	</div>
 
 	@switch($page)
-		@case('faq')
+		@case(__('slugs.services-faq'))
 			@include('includes.services.faq')
 			@break
 
-		@case('delivery')
+		@case(__('slugs.services-delivery'))
 			@include('includes.services.delivery')
 			@break
 
-		@case('sizes')
+		@case(__('slugs.services-sizes'))
 			@include('includes.services.sizes')
 			@break
 
-		@case('return')
+		@case(__('slugs.services-return'))
 			@include('includes.services.return')
 			@break
 
-		@case('payment')
+		@case(__('slugs.services-payment'))
 			@include('includes.services.payment')
 			@break
 
-		@case('care')
+		@case(__('slugs.services-care'))
 			@include('includes.services.care')
 			@break
 
-		@case('shops')
+		@case(__('slugs.services-shops'))
 			@include('includes.services.shops')
 			@break
 
-		@case('contact')
+		@case(__('slugs.services-contact'))
 			@include('includes.services.contact')
 			@break
 
