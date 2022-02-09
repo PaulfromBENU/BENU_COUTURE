@@ -51,7 +51,7 @@
 	&__nav {
 		height: 100%;
 		padding-left: calc(55px + 9%);//100px;
-		&__toggle {
+		&__toggle, &__toggle-link {
 			padding: 7px 20px 7px 20px;
 			font-weight: 500;
 			font-family: 'Barlow Condensed';

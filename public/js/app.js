@@ -6038,8 +6038,9 @@ $(function () {
     e.preventDefault();
     var currentContainer = $(this).parent();
     var currentIndex = 0;
+    articleImgCount = currentContainer.children('img').length;
 
-    for (var i = 0; i < currentContainer.children('img').length; i++) {
+    for (var i = 0; i < articleImgCount; i++) {
       if (currentContainer.children('img').eq(i).css('display') != 'none') {
         currentIndex = i;
       }
@@ -6059,8 +6060,9 @@ $(function () {
     e.preventDefault();
     var currentContainer = $(this).parent();
     var currentIndex = 0;
+    articleImgCount = currentContainer.children('img').length;
 
-    for (var i = 0; i < currentContainer.children('img').length; i++) {
+    for (var i = 0; i < articleImgCount; i++) {
       if (currentContainer.children('img').eq(i).css('display') != 'none') {
         currentIndex = i;
       }

@@ -42,6 +42,12 @@ class ModelController extends Controller
         // To be updated when relationship with shops including stock has been established
         $sold_articles = $this->getSoldArticles($creation)->slice(0, 4);
 
+        //Select pictures to display next to the creation description
+        $model_pictures = collect([]);
+        foreach ($creation_articles as $article) {
+            $model_pictures->push($article->photos()->first()->file_name);
+        }
+        
         // Keywords selection with localized description for current model
         $localized_keyword_query = 'keyword_'.app()->getLocale();
         // Provide creation keywords in an array
@@ -55,7 +61,9 @@ class ModelController extends Controller
             'localized_description' => $localized_desc, 
             'articles' => $creation_articles, 
             'sold_articles' => $sold_articles, 
-            'keywords' => $keywords]);
+            'keywords' => $keywords,
+            'model_pictures' => $model_pictures,
+        ]);
     }
 
     public function soldItems(string $name) 

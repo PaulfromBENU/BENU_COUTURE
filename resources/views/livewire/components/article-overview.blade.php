@@ -1,16 +1,17 @@
 <a href="#" class="block article-overview">
     <div class="article-overview__cap article-overview__cap--red"></div>
     <div class="article-overview__img-container">
-        <img src="{{ asset('images/pictures/articles/modele_2.png') }}">
-        <img src="{{ asset('images/pictures/articles/modele_3.png') }}" style="display: none;">
-        <img src="{{ asset('images/pictures/articles/modele_4.png') }}" style="display: none;">
-        <img src="{{ asset('images/pictures/articles/modele_5.png') }}" style="display: none;">
-        <div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">
-            <i class="fas fa-chevron-left"></i>
-        </div>
-        <div class="slider-arrow slider-arrow--color-2 slider-arrow--right article-arrow-right">
-            <i class="fas fa-chevron-right"></i>
-        </div>
+        @foreach($pictures as $picture)
+            <img src="{{ asset('images/pictures/articles/'.$picture->file_name) }}" @if($loop->index > 0) style="display: none;" @endif>
+        @endforeach
+        @if($pictures->count() > 1)
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right article-arrow-right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        @endif
     </div>
     <div class="article-overview__footer">
         <div class="flex justify-between">

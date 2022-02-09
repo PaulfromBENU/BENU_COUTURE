@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             PhotoSeeder::class,
             CreationKeywordSeeder::class,
             ArticleShopSeeder::class,
+            ArticlePhotoSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

@@ -24,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //View::share('youVarName', [1, 2, 3]);
+
         Password::defaults(function () {
             $rule = Password::min(8);
 

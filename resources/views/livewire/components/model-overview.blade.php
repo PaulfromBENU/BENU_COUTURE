@@ -16,7 +16,17 @@
         </div>
     </div>
     <div class="model-overview__img-container">
-        <img src="{{ asset('images/pictures/articles/'.$pictures[rand(0, 2)]) }}">
+        @foreach($pictures as $picture)
+            <img src="{{ asset('images/pictures/articles/'.$picture) }}" @if($loop->index > 0) style="display: none;" @endif>
+        @endforeach
+        @if($pictures->count() > 1)
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right article-arrow-right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        @endif
     </div>
     <div class="model-overview__footer flex justify-between">
         <p>

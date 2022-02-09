@@ -19,7 +19,10 @@ class ModelOverview extends Component
     public function mount()
     {
         $this->available_colors = [];
-        $this->pictures = ['modele_caretta_1.png', 'modele_2.png', 'modele_3.png'];
+        $this->pictures = collect([]);
+        foreach ($this->model->articles as $article) {
+            $this->pictures->push($article->photos()->first()->file_name);
+        }
         $this->initializeData();
     }
 

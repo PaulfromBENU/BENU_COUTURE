@@ -32,4 +32,9 @@ class Article extends Model
     {
         return $this->belongsToMany(Shop::class)->withPivot('stock')->withTimestamps();
     }
+
+    public function photos()
+    {
+        return $this->belongsToMany(Photo::class)->withTimestamps();
+    }
 }

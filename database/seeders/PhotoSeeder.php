@@ -22,7 +22,7 @@ class PhotoSeeder extends Seeder
         for ($i=0; $i < 5; $i++) { 
             DB::connection('mysql')->table('photos')->insert([
                 'file_name' => $filename_options[$i],
-                'use_for_model' => rand(0, 1),
+                'use_for_model' => '1',
                 'title' => "Article Picture",
                 'author' => "BENU Village Esch Asbl",
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

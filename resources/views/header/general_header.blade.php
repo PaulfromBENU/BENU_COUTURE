@@ -152,6 +152,9 @@
                 <div class="creations-navbar__nav__toggle" id="nav-toggle-home">
                     {{ __('header.house') }} <i class="fas fa-angle-down"></i>
                 </div>
+                <a href="{{ route('vouchers-'.app()->getLocale()) }}" class="creations-navbar__nav__toggle-link">
+                    {{ __('header.vouchers') }}
+                </a>
             </nav>
         </div>
         <div class="creations-navbar__menu">

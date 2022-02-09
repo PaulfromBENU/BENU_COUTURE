@@ -506,6 +506,7 @@ input[type=checkbox]:focus {
   margin-top: 22px;
   margin-bottom: 33px;
   overflow: hidden;
+  position: relative;
 }
 .model-overview__img-container img {
   -o-object-fit: contain;
@@ -785,21 +786,21 @@ input[type=checkbox]:focus {
   height: 100%;
   padding-left: calc(55px + 9%);
 }
-.creations-navbar__nav__toggle {
+.creations-navbar__nav__toggle, .creations-navbar__nav__toggle-link {
   padding: 7px 20px 7px 20px;
   font-weight: 500;
   font-family: "Barlow Condensed";
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.creations-navbar__nav__toggle i {
+.creations-navbar__nav__toggle i, .creations-navbar__nav__toggle-link i {
   padding-left: 8px;
 }
-.creations-navbar__nav__toggle:hover {
+.creations-navbar__nav__toggle:hover, .creations-navbar__nav__toggle-link:hover {
   background-color: #2E1414;
   color: white;
 }
-.creations-navbar__nav__toggle--active {
+.creations-navbar__nav__toggle--active, .creations-navbar__nav__toggle-link--active {
   background-color: #2E1414;
   color: white;
 }
