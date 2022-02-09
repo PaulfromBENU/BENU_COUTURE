@@ -10,6 +10,6 @@
 */
 
 return [
-    "models-header" => "Catégorie de l'objet&nbsp;- 26 déclinaisons",
+    "models-header" => "déclinaison disponible|déclinaisons disponibles",
     "models-model" => "Modèle",
 ];

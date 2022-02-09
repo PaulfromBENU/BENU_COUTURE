@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Livewire\Components;
+
+use Livewire\Component;
+
+class SoldArticleOverview extends Component
+{
+    public $article;
+    public $localized_creation_category;
+
+    public function mount()
+    {
+        $localized_query = 'name_'.app()->getLocale();
+        $this->localized_creation_category = $this->article->creation->creation_category->$localized_query;
+    }
+
+    public function toggleWishlist()
+    {
+        
+    }
+    
+    public function render()
+    {
+        return view('livewire.components.sold-article-overview');
+    }
+}

@@ -40,9 +40,9 @@
 		</div>
 	</div>
 
-	<div class="model-articles__list flex flex-wrap justify-between benu-container">
-		@for($i = 0; $i < 5; $i++)
-			@include('includes.components.article_overview')
-		@endfor
+	<div class="model-articles__list flex flex-wrap justify-start benu-container">
+		@foreach($articles as $article)
+			@livewire('components.article-overview', ['article' => $article], key($article->id))
+		@endforeach
 	</div>
 </section>

@@ -33,7 +33,7 @@ Route::group([
 	'middleware' => 'setlocale'], function() {
 
 	Route::get('/'.trans("slugs.models", [], "lu").'/{name?}', 'ModelController@show')->name('model-lu');
-	Route::get('/'.trans("slugs.models", [], "lu").'/{name?}/'.trans("slugs.sold", [], "lu"), 'ModelController@soldItems')->name('sold-lu');
+	Route::get('/'.trans("slugs.models", [], "lu").'/{name}/'.trans("slugs.sold", [], "lu"), 'ModelController@soldItems')->name('sold-lu');
 	Route::get('/'.trans("slugs.client-support", [], "lu").'/{page?}', 'ContactController@showAll')->name('client-service-lu');
 	Route::get('/'.trans("slugs.full-story", [], "lu"), 'GeneralController@showFullStory')->name('full-story-lu');
 	Route::get('/'.trans("slugs.about", [], "lu"), 'GeneralController@showAbout')->name('about-lu');
@@ -47,7 +47,7 @@ Route::group([
 	'middleware' => 'setlocale'], function() {
 
 	Route::get('/'.trans("slugs.models", [], "fr").'/{name?}', 'ModelController@show')->name('model-fr');
-	Route::get('/'.trans("slugs.models", [], "fr").'/{name?}/'.trans("slugs.sold", [], "fr"), 'ModelController@soldItems')->name('sold-fr');
+	Route::get('/'.trans("slugs.models", [], "fr").'/{name}/'.trans("slugs.sold", [], "fr"), 'ModelController@soldItems')->name('sold-fr');
 	Route::get('/'.trans("slugs.client-support", [], "fr").'/{page?}', 'ContactController@showAll')->name('client-service-fr');
 	Route::get('/'.trans("slugs.full-story", [], "fr"), 'GeneralController@showFullStory')->name('full-story-fr');
 	Route::get('/'.trans("slugs.about", [], "fr"), 'GeneralController@showAbout')->name('about-fr');
@@ -61,7 +61,7 @@ Route::group([
 	'middleware' => 'setlocale'], function() {
 
 	Route::get('/'.trans("slugs.models", [], "en").'/{name?}', 'ModelController@show')->name('model-en');
-	Route::get('/'.trans("slugs.models", [], "en").'/{name?}/'.trans("slugs.sold", [], "en"), 'ModelController@soldItems')->name('sold-en');
+	Route::get('/'.trans("slugs.models", [], "en").'/{name}/'.trans("slugs.sold", [], "en"), 'ModelController@soldItems')->name('sold-en');
 	Route::get('/'.trans("slugs.client-support", [], "en").'/{page?}', 'ContactController@showAll')->name('client-service-en');
 	Route::get('/'.trans("slugs.full-story", [], "en"), 'GeneralController@showFullStory')->name('full-story-en');
 	Route::get('/'.trans("slugs.about", [], "en"), 'GeneralController@showAbout')->name('about-en');
@@ -75,7 +75,7 @@ Route::group([
 	'middleware' => 'setlocale'], function() {
 
 	Route::get('/'.trans("slugs.models", [], "de").'/{name?}', 'ModelController@show')->name('model-de');
-	Route::get('/'.trans("slugs.models", [], "de").'/{name?}/'.trans("slugs.sold", [], "de"), 'ModelController@soldItems')->name('sold-de');
+	Route::get('/'.trans("slugs.models", [], "de").'/{name}/'.trans("slugs.sold", [], "de"), 'ModelController@soldItems')->name('sold-de');
 	Route::get('/'.trans("slugs.client-support", [], "de").'/{page?}', 'ContactController@showAll')->name('client-service-de');
 	Route::get('/'.trans("slugs.full-story", [], "de"), 'GeneralController@showFullStory')->name('full-story-de');
 	Route::get('/'.trans("slugs.about", [], "de"), 'GeneralController@showAbout')->name('about-de');

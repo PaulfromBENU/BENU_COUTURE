@@ -5,9 +5,9 @@
 			{{ __('welcome.last-subtitle') }}
 		</p>
 		<div class="welcome-creations__list flex flex-wrap justify-between">
-			@for($i = 0; $i < 6; $i++)
-				@include('includes.components.model_overview')
-			@endfor
+			@foreach($latest_models as $model)
+				@livewire('components.model-overview', ['model' => $model])
+			@endforeach
 			<div class="text-center welcome-creations__list__link">
 				<a href="{{ route('model-'.app()->getLocale()) }}" class="">{{ __('welcome.last-link') }}</a>
 			</div>

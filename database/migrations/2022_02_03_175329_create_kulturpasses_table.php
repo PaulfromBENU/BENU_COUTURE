@@ -19,6 +19,7 @@ class CreateKulturpassesTable extends Migration
             $table->foreignId('user_id')->onUpdate('cascade')->onDelete('cascade');//->constrained();
             $table->string('file_name');
             $table->boolean('approved')->default('0');
+            $table->date('approval_date')->default('2100-01-01');
             $table->date('expiry_date')->default('2100-01-01');
         });
     }

@@ -19,7 +19,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('model-'.app()->getLocale(), ['name' => 'caretta']) }}" class="primary-color"><strong>{{ __('breadcrumbs.model') }} XXXX</strong></a>
+			<a href="{{ route('model-'.app()->getLocale(), ['name' => $model->name]) }}" class="primary-color"><strong>{{ __('breadcrumbs.model') }} {{ $model->name }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -32,4 +32,11 @@
 @endsection
 
 @section('scripts')
+<script type="text/javascript">
+	$(function() {
+		$('.article-overview__footer__heart').on('click', function(e) {
+			e.preventDefault();
+		})
+	});
+</script>
 @endsection

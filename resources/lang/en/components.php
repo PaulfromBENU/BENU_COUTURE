@@ -10,6 +10,6 @@
 */
 
 return [
-    "models-header" => "Object category&nbsp;- 26 articles",
+    "models-header" => "available article|available articles",
     "models-model" => "Model",
 ];

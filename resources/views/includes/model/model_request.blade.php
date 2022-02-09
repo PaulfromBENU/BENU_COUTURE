@@ -4,6 +4,6 @@
 		Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas.
 	</p>
 	<div class="text-center model-request__link">
-		<a href="#" class="btn-couture m-auto">Fais-nous une demande</a>
+		<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="btn-couture m-auto">Fais-nous une demande</a>
 	</div>
 </section>

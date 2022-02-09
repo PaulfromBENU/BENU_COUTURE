@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::connection('mysql_common')->create('users', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->string('email')->unique();
             //$table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
@@ -28,8 +29,9 @@ class CreateUsersTable extends Migration
             $table->boolean('legal_ok')->default('0');
             $table->boolean('newsletter')->default('0');
             $table->string('origin')->nullable();
+            $table->string('badge')->default('standard');
+            $table->string('rating')->default('10');
             $table->rememberToken();
-            $table->timestamps();
         });
     }
 

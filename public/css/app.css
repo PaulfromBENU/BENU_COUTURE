@@ -53,6 +53,9 @@ body {
   background: lightgrey;
 }
 .color-circle--beige {
+  background: lightbrown;
+}
+.color-circle--brown {
   background: brown;
 }
 
@@ -519,6 +522,7 @@ input[type=checkbox]:focus {
   margin-bottom: 50px;
   position: relative;
   overflow: hidden;
+  margin-right: 1.15%;
 }
 .article-overview:hover .article-overview__cap {
   height: 15%;
@@ -620,6 +624,7 @@ input[type=checkbox]:focus {
   margin-bottom: 50px;
   position: relative;
   overflow: hidden;
+  margin-right: 1.15%;
 }
 .sold-overview:hover .sold-overview__cap {
   height: 15%;

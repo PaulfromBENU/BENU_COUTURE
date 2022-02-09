@@ -3,20 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Creation;
+
+use App\Traits\ArticleAnalyzer;
+
 
 class GeneralController extends Controller
 {
+    use ArticleAnalyzer;
+
     public function home()
     {
-        return view('welcome');
+        // Include last 6 creations where at least 1 article is present and in stock
+        $latest_models = $this->getAvailableCreations()->slice(0, 6);
+
+        return view('welcome', ['latest_models' => $latest_models]);
     }
-
-    // public function changeLocale(string $lang)
-    // {
-    //     app()->setLocale($lang);
-
-    //     return redirect()->back();
-    // }
 
     public function showFullStory()
     {

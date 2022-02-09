@@ -19,11 +19,11 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('model-'.app()->getLocale(), ['name' => 'caretta']) }}">{{ __('breadcrumbs.model') }} XXXX</a>
+			<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model_name)]) }}">{{ __('breadcrumbs.model') }} {{ ucwords($model_name) }}</a>
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('sold-'.app()->getLocale(), ['name' => 'caretta']) }}" class="primary-color"><strong>{{ __('breadcrumbs.sold') }}</strong></a>
+			<a href="{{ route('sold-'.app()->getLocale(), ['name' => strtolower($model_name)]) }}" class="primary-color"><strong>{{ __('breadcrumbs.sold') }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -31,9 +31,9 @@
 @section('main-content')
 	<section class="sold">
 		<div>
-			<h1 class="sold__title">Découvrez les déclinaisons vendues du modèle Caretta</h1>
+			<h1 class="sold__title">Découvrez les déclinaisons vendues du modèle {{ $model_name }}</h1>
 		</div>
-		<div class="">
+		<div>
 			<div class="model-articles__filters flex benu-container">
 				<div class="model-articles__filters__filter flex">
 					<p>Taille</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
@@ -58,14 +58,14 @@
 			</div>
 
 			<div class="pattern-bg">
-				<div class="model-articles__list flex flex-wrap justify-between benu-container">
-					@for($i = 0; $i < 12; $i++)
-						@include('includes.components.sold_article_overview')
-					@endfor
+				<div class="model-articles__list flex flex-wrap justify-start benu-container">
+					@foreach($sold_articles as $article)
+						@livewire('components.sold-article-overview', ['article' => $article], key($article->id))
+					@endforeach
 				</div>
 				<div class="sold__link text-center">
-					<a href="{{ route('model-'.app()->getLocale(), ['name' => 'caretta']) }}" class="btn-slider-left m-auto block">
-						Retour au modèle Caretta
+					<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model_name)]) }}" class="btn-slider-left m-auto block">
+						Retour au modèle {{ strtoupper($model_name) }}
 					</a>
 				</div>
 			</div>

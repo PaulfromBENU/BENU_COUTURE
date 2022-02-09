@@ -3,29 +3,69 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Creation;
+
+use App\Traits\ArticleAnalyzer;
 
 class ModelController extends Controller
 {
+    use ArticleAnalyzer;
+
     public function show(Request $request)
     {
         $model_name = $request->name;
-        //For locale change. Slug is memorized when first coming to the page, and reinjected in case of locale change. Added to avoid parameters in header locale link.
+
+        // Case model name is not specified, all models are displayed
         if ($model_name == '' || $model_name == null) {
-        //     if (session('model_name') != null) {
-        //         $model_name = session('model_name');
-        //         $request->session()->forget('model_name');
-        //         return redirect()->route('model', ['locale' => app()->getLocale(), 'name' => $model_name]);
-        //     }
-            return view('models');
+            //Count number of required sections based on total number of creations
+            $sections_number = floor(Creation::count() / 6) + 1;
+
+            for ($i=0; $i < $sections_number; $i++) { 
+                $all_models[$i] = Creation::orderBy('updated_at', 'desc')->offset(6 * $i)->limit(6)->get();
+            }
+
+            return view('models', ['sections_number' => $sections_number, 'all_models' => $all_models]);
         }
 
-        // $request->session()->flash('model_name', $model_name);
+        // Case incorrect creation name has been written in URL
+        if (Creation::where('name', $model_name)->count() == 0) {
+            return redirect()->route('model-'.app()->getLocale());
+        }
 
-        return view('model');
+        // Case model name is specified, dedicated page with articles is displayed
+        $creation = Creation::where('name', $model_name)->first();
+        $localized_desc_query = 'description_'.app()->getLocale();
+        $localized_desc = $creation->$localized_desc_query;
+
+        $creation_articles = $this->getAvailableArticles($creation);
+
+        // To be updated when relationship with shops including stock has been established
+        $sold_articles = $this->getSoldArticles($creation)->slice(0, 4);
+
+        // Keywords selection with localized description for current model
+        $localized_keyword_query = 'keyword_'.app()->getLocale();
+        // Provide creation keywords in an array
+        $keywords = [];
+        foreach ($creation->keywords as $keyword) {
+            array_push($keywords, $keyword->$localized_keyword_query);
+        }
+        
+        return view('model', [
+            'model' => $creation, 
+            'localized_description' => $localized_desc, 
+            'articles' => $creation_articles, 
+            'sold_articles' => $sold_articles, 
+            'keywords' => $keywords]);
     }
 
     public function soldItems(string $name) 
     {
-        return view('sold-items');
+        if ($name == '' || $name == null) {
+            return redirect()->route('model-'.app()->getLocale());
+        }
+
+        $creation = Creation::where('name', $name)->first();
+        $sold_articles = $this->getSoldArticles($creation);
+        return view('sold-items', ['model_name' => $name, 'sold_articles' => $sold_articles]);
     }
 }
