@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Shop;
+
 class ContactController extends Controller
 {
     //Request mandatory in all functions to allow for parameters conservation in locale selector
@@ -29,6 +31,14 @@ class ContactController extends Controller
             return redirect()->route('client-service-'.app()->getLocale());
         }
 
-        return view('client-service', ['page' => $page]);
+        $shops_benu = collect([]);
+        $shops_other = collect([]);
+        if ($page == __('slugs.services-shops')) {
+            $shops_benu = Shop::where('type', 'BENU owned')->orderBy('created_at', 'desc')->get();
+            $shops_other = Shop::where('type', '<>', 'BENU owned')->orderBy('created_at', 'desc')->get();
+        }
+        $localized_desc_query = "description_".app()->getLocale();
+
+        return view('client-service', ['page' => $page, 'shops_benu' => $shops_benu, 'shops_other' => $shops_other, 'desc_query' => $localized_desc_query]);
     }
 }

@@ -29,42 +29,42 @@
 			</p>
 		</div>
 		<div class="w-9/12">
-			@for($i = 0; $i < 3; $i++)
+			@foreach($partners as $partner)
 			<div class="partners__box flex justify-start">
 				<div class="partners__box__img-container">
-					<img src="{{ asset('images/pictures/partners/repair_cafe.png') }}">
+					<img src="{{ asset('images/pictures/partners/'.$partner->picture) }}">
 				</div>
 				<div class="partners__box__txt-container">
 					<div class="flex justify-between">
-						<h3 class="partners__box__title">Repair Café Lëtzebuerg</h3>
+						<h3 class="partners__box__title">{{ $partner->name }}</h3>
 						<p>
 							<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
 						</p>
 					</div>
 					<p class="partners__box__desc">
-						Repair Café Lëtzebuerg organise des Repair Cafés. Ce sont des réunions volontaires où les participants travaillent ensemble pour réparer leurs objets cassés: petits appareils électriques, vêtements, vélos, jouets, petits meubles et bien plus encore.
+						{{ $partner->$desc_query }}
 					</p>
 					<div class="text-left partners__box__highlight">
 						<div class="flex justify-start">
 							<p class="w-7/12 mb-2">
-								<strong>Adresse&nbsp;:</strong> 34, r. Josy Welter, 7256 Walferdange
+								<strong>Adresse&nbsp;:</strong> {{ $partner->address }}
 							</p>
 							<p>
-								<strong>E-mail&nbsp;:</strong> <span class="primary-color"><a href="mailto:repaircafe@cell.lu" class="partners__box__link" target="_blank">repaircafe@cell.lu</a></span>
+								<strong>E-mail&nbsp;:</strong> <span class="primary-color"><a href="mailto:{{ $partner->email }}" class="partners__box__link" target="_blank">{{ $partner->email }}</a></span>
 							</p>
 						</div>
 						<div class="flex justify-start">
 							<p class="w-7/12">
-								<strong>Téléphone&nbsp;:</strong> +352 26 33 28 19
+								<strong>Téléphone&nbsp;:</strong> {{ $partner->email }}
 							</p>
 							<p>
-								<strong>Site&nbsp;:</strong> <span class="primary-color"><a href="https://www.repaircafe.lu/" class="partners__box__link" target="_blank">www.repaircafe.lu</a></span>
+								<strong>Site&nbsp;:</strong> <span class="primary-color"><a href="https://{{ $partner->website }}" class="partners__box__link" target="_blank">{{ $partner->website }}</a></span>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			@endfor
+			@endforeach
 		</div>
 	</section>
 @endsection

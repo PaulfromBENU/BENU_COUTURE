@@ -14,20 +14,25 @@
 	</div>
 	<div class="article-overview__footer">
 		<div class="flex justify-start">
+			@if($voucher->voucher_type == 'pdf')
 			<p class="article-overview__footer__size">
 				FORMAT PDF
 			</p>
-			
+			@else
+			<p class="article-overview__footer__size">
+				FORMAT TISSU
+			</p>
+			@endif
 		</div>
 		<p class="article-overview__footer__category">
-			Catégorie de l'objet
+			
 		</p>
 		<p class="article-overview__footer__name">
 			Bon d'achat
 		</p>
 		<div class="flex justify-between">
 			<p class="article-overview__footer__price" style="font-size: 2rem;">
-				Par tranches de 30&euro;
+				{{ $voucher->voucher_value }}&euro;
 			</p>
 			<div class="article-overview__footer__heart">
 				<div class="article-overview__footer__heart__icon">

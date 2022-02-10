@@ -7,8 +7,8 @@
 	</div>
 
 	<div class="model-articles__list flex flex-wrap justify-start">
-		@for($i = 0; $i < 2; $i++)
+		@foreach($vouchers as $voucher)
 			@include('includes.components.voucher_overview')
-		@endfor
+		@endforeach
 	</div>
 </section>

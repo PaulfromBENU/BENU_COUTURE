@@ -25,6 +25,7 @@ class CreateArticlesTable extends Migration
             $table->string('mask_stripes')->nullable();
             $table->boolean('mask_filter')->default('0');
             $table->integer('voucher_value')->default('0');
+            $table->string('voucher_type')->default('pdf');
             $table->text('singularity_lu');
             $table->text('singularity_fr');
             $table->text('singularity_en');

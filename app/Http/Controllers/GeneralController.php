@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 use App\Models\Creation;
+use App\Models\Partner;
 
 use App\Traits\ArticleAnalyzer;
 
@@ -32,12 +34,16 @@ class GeneralController extends Controller
 
     public function showPartners()
     {
-        return view('partners');
+        $partners = Partner::orderBy('created_at', 'desc')->get();
+        $localized_desc_query = "description_".app()->getLocale();
+        return view('partners', ['partners' => $partners, 'desc_query' => $localized_desc_query]);
     }
 
     public function showVouchers()
     {
-        return view('vouchers');
+        $vouchers = Article::where('type', 'voucher')->orderBy('voucher_value', 'asc')->get();
+
+        return view('vouchers', ['vouchers' => $vouchers]);
     }
 
     public function showNews(string $slug = '')
