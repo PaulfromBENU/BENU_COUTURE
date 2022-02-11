@@ -6,27 +6,28 @@ use Illuminate\Http\Request;
 use App\Models\Creation;
 
 use App\Traits\ArticleAnalyzer;
+use App\Traits\FiltersGenerator;
 
 class ModelController extends Controller
 {
     use ArticleAnalyzer;
+    use FiltersGenerator;
 
     public function show(Request $request)
     {
         $model_name = $request->name;
 
-        // Case model name is not specified, all models are displayed
+        // Case model name is not specified, all models are displayed ---------------------------------------
         if ($model_name == '' || $model_name == null) {
-            //Count number of required sections based on total number of creations
-            $sections_number = floor(Creation::count() / 6) + 1;
+            // Compute all filter options, names and status from FiltersGenerator Trait
+            $filter_names = $this->getFilterOptions()[1];
+            $initial_filters = $this->getInitialFilters($request);
 
-            for ($i=0; $i < $sections_number; $i++) { 
-                $all_models[$i] = Creation::orderBy('updated_at', 'desc')->offset(6 * $i)->limit(6)->get();
-            }
-
-            return view('models', ['sections_number' => $sections_number, 'all_models' => $all_models]);
+            return view('models', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters]);
         }
 
+
+        // Case model name is specified, specific model is displayed ---------------------------------------
         // Case incorrect creation name has been written in URL
         if (Creation::where('name', $model_name)->count() == 0) {
             return redirect()->route('model-'.app()->getLocale());
@@ -46,6 +47,13 @@ class ModelController extends Controller
         $model_pictures = collect([]);
         foreach ($creation_articles as $article) {
             $model_pictures->push($article->photos()->first()->file_name);
+        }
+
+        // If no article available, display sold article pictures
+        if ($model_pictures->count() == 0) {
+            foreach ($sold_articles as $sold_article) {
+                $model_pictures->push($sold_article->photos()->first()->file_name);
+            }
         }
         
         // Keywords selection with localized description for current model

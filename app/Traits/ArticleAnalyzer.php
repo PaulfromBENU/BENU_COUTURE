@@ -30,13 +30,14 @@ trait ArticleAnalyzer {
             }
         }
 
-         return $available_creations;
+        return $available_creations;
     }
 
     public function getAvailableArticles(Creation $creation)
     {
         $available_articles = collect([]);
-        foreach ($creation->articles as $article) {
+        $creation_full = Creation::find($creation->id);
+        foreach ($creation_full->articles as $article) {
              if ($this->stock($article) > 0) {
                  $available_articles->push($article);
              }

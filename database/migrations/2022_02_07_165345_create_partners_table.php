@@ -26,6 +26,7 @@ class CreatePartnersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('website');
+            $table->string('filter_key');
         });
     }
 

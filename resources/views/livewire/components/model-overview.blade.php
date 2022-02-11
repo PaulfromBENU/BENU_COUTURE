@@ -6,7 +6,7 @@
             </p>
             <div class="flex flex-start">
                 @foreach($available_colors as $color)
-                <div class="color-circle color-circle--{{ $color->name }}" wire:key={{ $color->id }}></div>
+                <div class="color-circle color-circle--{{ $color->name }}" wire:key="{{ $color->id }}"></div>
                 @endforeach
                 <div class="color-circle"></div>
             </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="model-overview__img-container">
         @foreach($pictures as $picture)
-            <img src="{{ asset('images/pictures/articles/'.$picture) }}" @if($loop->index > 0) style="display: none;" @endif>
+            <img src="{{ asset('images/pictures/articles/'.$picture) }}" wire:key="{{ $picture }}" @if($loop->index > 0) style="display: none;" @endif>
         @endforeach
         @if($pictures->count() > 1)
             <div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">

@@ -29,6 +29,7 @@ class ShopSeeder extends Seeder
             'website' => "www.benu.lu",
             'opening_time' => "Du lundi au samedi, de 9h à 18h",
             'picture' => "benu_shop.png",
+            'filter_key' => 'benu-esch',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -45,6 +46,7 @@ class ShopSeeder extends Seeder
             'website' => "www.xxxx.lu",
             'opening_time' => "Du lundi au vendredi, de 9h à 18h",
             'picture' => "popup_store_1.png",
+            'filter_key' => 'pop-up-1',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -61,6 +63,7 @@ class ShopSeeder extends Seeder
             'website' => "www.xxxx.lu",
             'opening_time' => "Du lundi au vendredi, de 9h à 18h",
             'picture' => "popup_store_2.png",
+            'filter_key' => 'pop-up-2',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

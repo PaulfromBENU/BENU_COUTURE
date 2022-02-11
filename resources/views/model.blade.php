@@ -27,7 +27,9 @@
 @section('main-content')
 	@include('includes.model.model_details')
 	@include('includes.model.model_articles')
-	@include('includes.model.model_sold')
+	@if($sold_articles->count() > 0)
+		@include('includes.model.model_sold')
+	@endif
 	@include('includes.model.model_request')
 @endsection
 

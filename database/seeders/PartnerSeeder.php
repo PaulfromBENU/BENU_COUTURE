@@ -29,6 +29,7 @@ class PartnerSeeder extends Seeder
                 'phone' => "+352 26 33 28 19",
                 'email' => "repaircafe@cell.lu",
                 'website' => "www.repaircafe.lu",
+                'filter_key' => 'repair-cafe',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);

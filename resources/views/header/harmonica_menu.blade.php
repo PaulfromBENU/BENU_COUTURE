@@ -71,7 +71,7 @@
 						@svg('logo_benu_sloow', 'm-auto')
 					</div>
 					<div class="flex flex-col justify-center harmonica-menu__content__col__title">
-						<h3 class="harmonica-menu__content__col__title--sloow">BENU SLO0W</h3>
+						<h3 class="harmonica-menu__content__col__title--sloow">BENU SLOOW</h3>
 					</div>
 				</div>
 				<div class="harmonica-menu__content__col__open harmonica-menu__content__col__open--sloow">

@@ -6142,13 +6142,12 @@ $(function () {
     }
   });
 });
-$(function () {
-  $('.all-models__active-filters__filter').on('click', function () {
-    $(this).hide();
-  });
-  $('.model-articles__active-filters__filter').on('click', function () {
-    $(this).hide();
-  });
+$(function () {// $('.all-models__active-filters__filter').on('click', function() {
+  // 	$(this).hide();
+  // });
+  // $('.model-articles__active-filters__filter').on('click', function() {
+  // 	$(this).hide();
+  // });
 });
 
 /***/ }),

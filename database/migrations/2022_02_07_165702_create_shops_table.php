@@ -27,6 +27,7 @@ class CreateShopsTable extends Migration
             $table->string('website')->nullable();
             $table->text('opening_time')->nullable();
             $table->string('picture')->nullable();
+            $table->string('filter_key');
         });
     }
 

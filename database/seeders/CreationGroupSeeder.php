@@ -21,6 +21,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Unisex',
             'name_lu' => 'Unisex Lu',
             'name_de' => 'group.unisex',
+            'filter_key' => 'unisex',
         ]);
 
         DB::connection('mysql')->table('creation_groups')->insert([
@@ -28,6 +29,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Ladies',
             'name_lu' => 'Ladies Lu',
             'name_de' => 'group.ladies',
+            'filter_key' => 'ladies',
         ]);
 
         DB::connection('mysql')->table('creation_groups')->insert([
@@ -35,6 +37,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Gentlemen',
             'name_lu' => 'Messieurs Lu',
             'name_de' => 'group.gentlemen',
+            'filter_key' => 'gentlemen',
         ]);
 
         DB::connection('mysql')->table('creation_groups')->insert([
@@ -42,6 +45,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Kids',
             'name_lu' => 'Kids Lu',
             'name_de' => 'group.kids',
+            'filter_key' => 'kids',
         ]);
 
         DB::connection('mysql')->table('creation_groups')->insert([
@@ -49,6 +53,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Accessories',
             'name_lu' => 'Accessories Lu',
             'name_de' => 'group.accessories',
+            'filter_key' => 'accessories',
         ]);
 
         DB::connection('mysql')->table('creation_groups')->insert([
@@ -56,6 +61,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Home',
             'name_lu' => 'Home Lu',
             'name_de' => 'group.home',
+            'filter_key' => 'home',
         ]);
 
         DB::connection('mysql')->table('creation_groups')->insert([
@@ -63,6 +69,7 @@ class CreationGroupSeeder extends Seeder
             'name_en' => 'Voucher',
             'name_lu' => 'Voucher Lu',
             'name_de' => 'group.voucher',
+            'filter_key' => 'voucher',
         ]);
     }
 }

@@ -64,10 +64,10 @@ $(function() {
 });
 
 $(function() {
-	$('.all-models__active-filters__filter').on('click', function() {
-		$(this).hide();
-	});
-	$('.model-articles__active-filters__filter').on('click', function() {
-		$(this).hide();
-	});
+	// $('.all-models__active-filters__filter').on('click', function() {
+	// 	$(this).hide();
+	// });
+	// $('.model-articles__active-filters__filter').on('click', function() {
+	// 	$(this).hide();
+	// });
 })
