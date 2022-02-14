@@ -6,11 +6,13 @@ use Livewire\Component;
 
 use App\Models\Creation;
 
+use App\Traits\ArticleAnalyzer;
 use App\Traits\FiltersGenerator;
 
 class FilteredModels extends Component
 {
     use FiltersGenerator;
+    use ArticleAnalyzer;
 
     public $initial_filters;
     public $sections_number;

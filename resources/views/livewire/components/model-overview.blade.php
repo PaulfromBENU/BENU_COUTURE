@@ -16,6 +16,11 @@
         </div>
     </div>
     <div class="model-overview__img-container">
+        @if($model->partner != null)
+        <div class="model-overview__img-container__partner-icon">
+            @svg('icone_partenaire')
+        </div>
+        @endif
         @foreach($pictures as $picture)
             <img src="{{ asset('images/pictures/articles/'.$picture) }}" wire:key="{{ $picture }}" @if($loop->index > 0) style="display: none;" @endif>
         @endforeach

@@ -2,6 +2,8 @@
 
 namespace App\Traits;
 
+use Illuminate\Support\Collection;
+
 use App\Models\Color;
 use App\Models\Creation;
 use App\Models\CreationCategory;
@@ -122,7 +124,7 @@ trait FiltersGenerator {
             if ($filter_value == '1') {
                 $category_filters_applied ++;
                 if($available_creations->where('creation_category.filter_key', $category)->count() > 0) {
-                    $models_filtered_by_category->push($available_creations->where('creation_category.filter_key', $category));
+                    $models_filtered_by_category = $models_filtered_by_category->merge($available_creations->where('creation_category.filter_key', $category));
                     $category_models_count ++;
                 }
             }
@@ -143,7 +145,7 @@ trait FiltersGenerator {
             if ($filter_value == '1') {
                 $type_filters_applied ++;
                 if ($models_filtered_by_category->where('creation_group.filter_key', $type)->count() > 0) {
-                    $models_filtered_by_type->push($models_filtered_by_category->where('creation_group.filter_key', $type));
+                    $models_filtered_by_type = $models_filtered_by_type->merge($models_filtered_by_category->where('creation_group.filter_key', $type));
                     $type_models_count ++;
                 }
             }
@@ -168,9 +170,9 @@ trait FiltersGenerator {
                     $model_ok = 0;
                     // If model has at least one article with the requested color, consider it OK for filtering
                     // Issues on object type. Reset to Creation instance if not set as so.
-                    if (!($model_checked_for_color instanceof Creation)) {
-                        $model_checked_for_color = $model_checked_for_color->first();
-                    }
+                    // if (!($model_checked_for_color instanceof Creation)) {
+                    //     $model_checked_for_color = $model_checked_for_color->first();
+                    // }
                     foreach ($this->getAvailableArticles($model_checked_for_color) as $article) {
                         if ($article->color->name == $color) {
                             $model_ok = 1;
@@ -200,14 +202,14 @@ trait FiltersGenerator {
                 $price_filters_applied ++;
                 if ($price == 'more') {
                     if($models_filtered_by_color->where('price', '>', '180')->count() > 0) {
-                        $models_filtered_by_price->push($models_filtered_by_color->where('price', '>', '180'));
+                        $models_filtered_by_price = $models_filtered_by_price->merge($models_filtered_by_color->where('price', '>', '180'));
                         $price_models_count ++;
                     }
                 } else {
                     $min_price = intval(explode("-", $price)[0]);
                     $max_price = intval(explode("-", $price)[1]) + 1;
                     if ($models_filtered_by_color->where('price', '>=', $min_price)->where('price', '<', $max_price)->count() > 0) {
-                        $models_filtered_by_price->push($models_filtered_by_color->where('price', '>=', $min_price)->where('price', '<', $max_price));
+                        $models_filtered_by_price = $models_filtered_by_price->merge($models_filtered_by_color->where('price', '>=', $min_price)->where('price', '<', $max_price));
                         $price_models_count ++;
                     }
                 }
@@ -228,8 +230,8 @@ trait FiltersGenerator {
         foreach ($applied_filters['partners'] as $partner => $filter_value) {
             if ($filter_value == '1') {
                 $partner_filters_applied ++;
-                if ($models_filtered_by_price->where('partners.filter_key', $partner)->count() > 0) {
-                    $models_filtered_by_partner->push($models_filtered_by_price->where('partners.filter_key', $partner));
+                if ($models_filtered_by_price->where('partner.filter_key', $partner)->count() > 0) {
+                    $models_filtered_by_partner = $models_filtered_by_partner->merge($models_filtered_by_price->where('partner.filter_key', $partner));
                     $partner_models_count ++;
                 }
             }
@@ -252,9 +254,9 @@ trait FiltersGenerator {
                 foreach ($models_filtered_by_partner as $model_checked_for_shop) {
                     $model_ok = 0;
                     // If model has at elast one article with the requested color, consider it OK for filtering
-                    if (!($model_checked_for_shop instanceof Creation)) {
-                        $model_checked_for_shop = $model_checked_for_shop->first();
-                    }
+                    // if (!($model_checked_for_shop instanceof Creation)) {
+                    //     $model_checked_for_shop = $model_checked_for_shop->first();
+                    // }
                     foreach ($this->getAvailableArticles($model_checked_for_shop) as $article) {
                         foreach ($article->shops as $article_shop) {
                             if ($article_shop->filter_key == $shop) {

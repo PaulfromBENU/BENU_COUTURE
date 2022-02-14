@@ -1,10 +1,9 @@
-<div class="benu-container flex flex-wrap justify-between all-models__list">
-
-        @foreach($filtered_models as $model)
-            @livewire('components.model-overview', ['model' => $model], key($loop->index))
+<div class="benu-container flex flex-wrap justify-start all-models__list">
+    @for($j = 0; $j < $sections_number; $j++)
+        @foreach($displayed_models[$j] as $model)
+            @livewire('components.model-overview', ['model' => $model], key($model->id))
         @endforeach
-
-        @php $j = 0 @endphp
+        
         @if($j < $sections_number - 1)
             @switch($j)
                 @case(0)
@@ -48,5 +47,5 @@
                 </p>
             </div>
         @endif
-
+    @endfor
 </div>
