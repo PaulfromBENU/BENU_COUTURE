@@ -1,85 +1,50 @@
-<div class="all-models__filters-container__options benu-container" style="display: none; z-index: 10;">
-
-	<div id="filters-size" style="display: none;">
-		<div class="flex justify-start">
-			<div class="all-models__filter-tag">
-				XS
+<div class="all-models__filters-container__options" style="display: none; z-index: 5;">
+	<div class="benu-container" id="filters-size" style="display: none;">
+		<div class="flex justify-start flex-wrap pt-4 pb-4">
+			@foreach($active_filters['sizes'] as $size => $filter)
+			<div wire:click="toggleFilter('sizes', '{{ $size }}')"  wire:key="{{ $size }}">
+				@if($filter == 1)
+					<div class="all-models__filter-tag all-models__filter-tag--active">
+				@else
+					<div class="all-models__filter-tag">
+				@endif
+					{{ $filter_names['sizes'][$size] }}
+				</div>
 			</div>
-			<div class="all-models__filter-tag">
-				S
-			</div>
-			<div class="all-models__filter-tag">
-				M
-			</div>
-			<div class="all-models__filter-tag">
-				L
-			</div>
-			<div class="all-models__filter-tag">
-				XL
-			</div>
+			@endforeach
 		</div>
-<!-- 		<div>
-			<button class="btn-couture">Appliquer</button>
-		</div> -->
 	</div>
 
-	<div id="filters-color" style="display: none;">
-		<div class="flex justify-start">
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--green w-1/5 mt-1 mr-2"></div>
-				<p>Vert</p>
+	<div class="benu-container" id="filters-color" style="display: none;">
+		<div class="flex justify-start flex-wrap pt-4 pb-4">
+			@foreach($active_filters['colors'] as $color => $filter)
+			<div wire:click="toggleFilter('colors', '{{ $color }}')" wire:key="{{ $color }}">
+				@if($filter == 1)
+					<div class="all-models__filter-tag all-models__filter-tag--active flex justify-between">
+				@else
+					<div class="all-models__filter-tag flex justify-between">
+				@endif
+					<div class="color-circle color-circle--{{ $color }} w-1/5 mt-1 mr-2"></div>
+					<p>{{ $filter_names['colors'][$color] }}</p>
+				</div>
 			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--blue w-1/5 mt-1"></div>
-				<p>Bleu</p>
-			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--yellow w-1/5 mt-1"></div>
-				<p>Jaune</p>
-			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--red w-1/5 mt-1"></div>
-				<p>Rouge</p>
-			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--orange w-1/5 mt-1"></div>
-				<p>Orange</p>
-			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--purple w-1/5 mt-1"></div>
-				<p>Violet</p>
-			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--grey w-1/5 mt-1"></div>
-				<p>Gris</p>
-			</div>
-			<div class="all-models__filter-tag flex justify-between">
-				<div class="color-circle color-circle--beige w-1/5 mt-1"></div>
-				<p>Beige</p>
-			</div>
+			@endforeach
 		</div>
-<!-- 		<div>
-			<button class="btn-couture">Appliquer</button>
-		</div> -->
 	</div>
 
-	<div id="filters-shops" style="display: none;">
-		<div class="flex justify-start">
-			<div class="all-models__filter-tag">
-				En ligne
+	<div class="benu-container" id="filters-shops" style="display: none;">
+		<div class="flex justify-start flex-wrap pt-4 pb-4">
+			@foreach($active_filters['shops'] as $shop => $filter)
+			<div wire:click="toggleFilter('shops', '{{ $shop }}')" wire:key="{{ $shop }}">
+				@if($filter == 1)
+					<div class="all-models__filter-tag all-models__filter-tag--active">
+				@else
+				<div class="all-models__filter-tag">
+				@endif
+					{{ $filter_names['shops'][$shop] }}
+				</div>
 			</div>
-			<div class="all-models__filter-tag">
-				Magasin Esch
-			</div>
-			<div class="all-models__filter-tag">
-				Autre magasin 1
-			</div>
-			<div class="all-models__filter-tag">
-				Autre magasin 2
-			</div>
+			@endforeach
 		</div>
-<!-- 		<div>
-			<button class="btn-couture">Appliquer</button>
-		</div> -->
 	</div>
 </div>

@@ -22,6 +22,7 @@ class ModelController extends Controller
             // Compute all filter options, names and status from FiltersGenerator Trait
             $filter_names = $this->getFilterOptions()[1];
             $initial_filters = $this->getInitialFilters($request);
+            $request->session()->flash('model_filters', $initial_filters);
 
             return view('models', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters]);
         }
@@ -63,6 +64,14 @@ class ModelController extends Controller
         foreach ($creation->keywords as $keyword) {
             array_push($keywords, $keyword->$localized_keyword_query);
         }
+
+        // Compute all filter options, names and status from FiltersGenerator Trait
+        $filter_names = $this->getArticlesFilterOptions()[1];
+        $initial_filters = $this->getArticlesInitialFilters($request);
+        if (session('model_filters') != null) {
+            $initial_filters['colors'] = session('model_filters')['colors'];
+            $initial_filters['shops'] = session('model_filters')['shops'];
+        }
         
         return view('model', [
             'model' => $creation, 
@@ -71,10 +80,12 @@ class ModelController extends Controller
             'sold_articles' => $sold_articles, 
             'keywords' => $keywords,
             'model_pictures' => $model_pictures,
+            'filter_names' => $filter_names,
+            'initial_filters' => $initial_filters,
         ]);
     }
 
-    public function soldItems(string $name) 
+    public function soldItems(Request $request, string $name) 
     {
         if ($name == '' || $name == null) {
             return redirect()->route('model-'.app()->getLocale());
@@ -82,6 +93,11 @@ class ModelController extends Controller
 
         $creation = Creation::where('name', $name)->first();
         $sold_articles = $this->getSoldArticles($creation);
-        return view('sold-items', ['model_name' => $name, 'sold_articles' => $sold_articles]);
+
+        // Compute all filter options, names and status from FiltersGenerator Trait
+        $filter_names = $this->getArticlesFilterOptions()[1];
+        $initial_filters = $this->getArticlesInitialFilters($request);
+
+        return view('sold-items', ['model_name' => $name, 'model' => $creation, 'sold_articles' => $sold_articles, 'initial_filters' => $initial_filters, 'filter_names' => $filter_names]);
     }
 }

@@ -1,4 +1,9 @@
-<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model->name)]) }}" class="block model-overview">
+<div class="model-overview">
+@if($filters_color_link == "" && $filters_shop_link == "")
+<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model->name)]) }}" class="block">
+@else
+<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model->name), 'colors' => $filters_color_link, 'shops' => $filters_shop_link]) }}" class="block">
+@endif
     <div class="model-overview__header flex justify-between">
         <div>
             <p class="model-overview__header__txt">
@@ -42,3 +47,4 @@
         </p>
     </div>
 </a>
+</div>

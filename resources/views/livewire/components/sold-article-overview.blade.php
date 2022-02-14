@@ -18,7 +18,7 @@
             <p class="sold-overview__footer__size">
                 {{ $article->size->value }}
             </p>
-            <div class="color-circle color-circle--green"></div>
+            <div class="color-circle color-circle--{{ $article->color->name }}"></div>
         </div>
         <p class="sold-overview__footer__category">
             {{ $localized_creation_category }}

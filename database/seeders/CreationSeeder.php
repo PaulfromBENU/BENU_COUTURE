@@ -49,7 +49,7 @@ class CreationSeeder extends Seeder
                 'description_de' => 'Une description du modèle partenaire en langue allemande. Très intéréssant !',
                 'description_fr' => 'Une description du modèle partenaire en langue française. Très intéréssant !',
                 'origin_link' => 'https://de.wikipedia.org/wiki/Narwal',
-                'partner_id' => rand(1, 3),
+                'partner_id' => '1',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);

@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Filters;
 
 use Livewire\Component;
 
-class AllModelsFilter extends Component
+class SoldArticlesFilter extends Component
 {
     public $initial_filters;
     public $filter_names;
@@ -23,7 +23,6 @@ class AllModelsFilter extends Component
         } else {
             $this->active_filters[$filter][$value] = 0;
         }
-
         $this->sendFilters();
     }
 
@@ -34,6 +33,6 @@ class AllModelsFilter extends Component
 
     public function render()
     {
-        return view('livewire.filters.all-models-filter');
+        return view('livewire.filters.sold-articles-filter');
     }
 }

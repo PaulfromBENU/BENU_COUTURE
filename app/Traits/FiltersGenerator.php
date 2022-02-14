@@ -10,6 +10,7 @@ use App\Models\CreationCategory;
 use App\Models\CreationGroup;
 use App\Models\Partner;
 use App\Models\Shop;
+use App\Models\Size;
 
 use App\Traits\ArticleAnalyzer;
 
@@ -82,6 +83,45 @@ trait FiltersGenerator {
         return [$filter_options, $filter_names];
 	}
 
+    public function getArticlesFilterOptions()
+    {
+        $filter_options = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $filter_names = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $name_query = "name_".app()->getLocale();
+
+        $size_filter_options = Size::all();
+        foreach ($size_filter_options as $filter_option) {
+            array_push($filter_options['sizes'], $filter_option->value);
+            $filter_names['sizes'][$filter_option->value] = $filter_option->value;
+        }
+
+        $color_filter_options = Color::all();
+        foreach ($color_filter_options as $filter_option) {
+            array_push($filter_options['colors'], $filter_option->name);
+            $filter_names['colors'][$filter_option->name] = __("colors.".$filter_option->name);
+        }
+
+        $shops_filter_options = Shop::all();
+        foreach ($shops_filter_options as $filter_option) {
+            array_push($filter_options['shops'], $filter_option->filter_key);
+            $filter_names['shops'][$filter_option->filter_key] = $filter_option->name;
+        }
+
+        return [$filter_options, $filter_names];
+    }
+
+
+
 	public function getInitialFilters($request)
 	{
 		$filter_options = $this->getFilterOptions()[0]; // Get only filter keys
@@ -110,6 +150,34 @@ trait FiltersGenerator {
 
         return $initial_filters;
 	}
+
+    public function getArticlesInitialFilters($request)
+    {
+        $filter_options = $this->getArticlesFilterOptions()[0]; // Get only filter keys
+
+        $initial_filters = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        // Initialize all filters to 0 by default, and to 1 if present in request
+        foreach ($filter_options as $filter => $options) {
+            foreach ($options as $option) {
+                $initial_filters[$filter][$option] = 0;
+                if (isset($request->$filter)) {
+                    $requested_filters = explode("*", $request->$filter);
+                    foreach ($requested_filters as $requested_filter) {
+                        $initial_filters[$filter][$requested_filter] = 1;
+                    }
+                }
+            }
+        }
+
+        return $initial_filters;
+    }
+
+
 
     public function getFilteredCreations($applied_filters)
     {
@@ -282,5 +350,90 @@ trait FiltersGenerator {
         $filtered_models = $models_filtered_by_shop;
         
         return $filtered_models;
+    }
+
+    public function getFilteredArticles(Creation $creation, $applied_filters, string $article_type)
+    {
+        if ($article_type == 'available') {
+            $available_articles = $this->getAvailableArticles($creation);
+        } else if ($article_type == 'sold') {
+            $available_articles = $this->getSoldArticles($creation);
+        }
+
+        // Apply filters on all creations available
+        // Get filtered category creations. If no filter selected, keep all creations
+        $articles_filtered_by_size = collect([]);
+        $size_filters_applied = 0;
+        $size_articles_count = 0;
+        foreach ($applied_filters['sizes'] as $size => $filter_value) {
+            if ($filter_value == '1') {
+                $size_filters_applied ++;
+                if($available_articles->where('size.value', $size)->count() > 0) {
+                    $articles_filtered_by_size = $articles_filtered_by_size->merge($available_articles->where('size.value', $size));
+                    $size_articles_count ++;
+                }
+            }
+         } 
+        if ($size_filters_applied == 0) {
+            $size_articles_count ++;
+            $articles_filtered_by_size = $available_articles;
+        }
+        if ($size_articles_count == 0) {
+            return collect([]);
+        }
+
+        // Filter remaining creations by color. If no filter selected, keep all previous creations
+        $articles_filtered_by_color = collect([]);
+        $color_filters_applied = 0;
+        $color_articles_count = 0;
+        foreach ($applied_filters['colors'] as $color => $filter_value) {
+            if ($filter_value == '1') {
+                $color_filters_applied ++;
+                if($articles_filtered_by_size->where('color.name', $color)->count() > 0) {
+                    $articles_filtered_by_color = $articles_filtered_by_color->merge($articles_filtered_by_size->where('color.name', $color));
+                    $color_articles_count ++;
+                }
+            }
+        }
+        if ($color_filters_applied == 0) {
+            $color_articles_count ++;
+            $articles_filtered_by_color = $articles_filtered_by_size;
+        }
+        if ($color_articles_count == 0) {
+            return collect([]);
+        }
+
+        // Filter remaining creations by shop. If no shop selected, keep all previous creations
+        $articles_filtered_by_shop = collect([]);
+        $shop_filters_applied = 0;
+        $shop_articles_count = 0;
+        foreach ($applied_filters['shops'] as $shop => $filter_value) {
+            if ($filter_value == '1') {
+                $shop_filters_applied ++;
+                foreach ($articles_filtered_by_color as $article_checked_for_shop) {
+                    $article_ok = 0;
+                    foreach ($article_checked_for_shop->shops as $article_shop) {
+                        if ($article_shop->filter_key == $shop) {
+                            $article_ok = 1;
+                        }
+                    }
+                    if ($article_ok == 1) {
+                        $shop_articles_count ++;
+                        $articles_filtered_by_shop->push($article_checked_for_shop);
+                    }
+                }
+            }
+         } 
+        if ($shop_filters_applied == 0) {
+            $shop_articles_count ++;
+            $articles_filtered_by_shop = $articles_filtered_by_color;
+        }
+        if ($shop_articles_count == 0) {
+            return collect([]);
+        }
+        
+        $filtered_articles = $articles_filtered_by_shop;
+        
+        return $filtered_articles;
     }
 }
