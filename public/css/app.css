@@ -2558,6 +2558,11 @@ input[type=checkbox]:focus {
   letter-spacing: 0.44px;
 }
 
+.filter-no-result {
+  font: normal normal 400 22px/26px "Barlow Condensed";
+  letter-spacing: 0.44px;
+}
+
 .full-story {
   padding-top: 66px;
   color: #2E1414;

@@ -1,4 +1,9 @@
 <div class="benu-container flex flex-wrap justify-start all-models__list">
+    @if($sections_number == 0 || $filtered_models->count() == 0)
+        <div class="filter-no-result">
+            Malheureusement, il n'y a aucun modèle correspondant actuellement à votre recherche...
+        </div>
+    @endif
     @for($j = 0; $j < $sections_number; $j++)
         @foreach($displayed_models[$j] as $model)
             @livewire('components.model-overview', ['model' => $model], key($model->id))
