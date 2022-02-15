@@ -6008,7 +6008,7 @@ $(function () {
   \***********************************************/
 /***/ (() => {
 
-$(function () {
+function enablePictureSliders() {
   var modelImgCount = $('.model-pres__img-container img').length;
   var currentModelImg = 0;
   $('#model-picture-arrow-left').on('click', function () {
@@ -6078,6 +6078,10 @@ $(function () {
 
     currentContainer.children('img').eq(currentIndex).show();
   });
+}
+
+$(function () {
+  enablePictureSliders();
 });
 
 /***/ }),

@@ -34,6 +34,7 @@ class UserSeeder extends Seeder
             'legal_ok' => '1',
             'newsletter' => '1',
             'origin' => 'couture',
+            'client_number' => 'C00001',
         ]);
 
         $role_options = ['user', 'newsletter', 'author'];
@@ -56,6 +57,7 @@ class UserSeeder extends Seeder
                 'legal_ok' => '1',
                 'newsletter' => '1',
                 'origin' => 'couture',
+                'client_number' => 'C00'.rand(10, 99).$i,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);

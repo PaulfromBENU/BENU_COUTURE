@@ -43,7 +43,7 @@ trait FiltersGenerator {
 		$category_filter_options = CreationCategory::all();
 		foreach ($category_filter_options as $filter_option) {
             // Include in filter options only if options are available
-            if (Creation::where('creation_category_id', $filter_option->id)->count() > 0) {
+            if ($this->checkIfFilterHasArticles('creation_category', $filter_option)) {
                 array_push($filter_options['categories'], $filter_option->filter_key);
                 $filter_names['categories'][$filter_option->filter_key] = $filter_option->$name_query;
             }
@@ -59,20 +59,21 @@ trait FiltersGenerator {
 
         $type_filter_options = CreationGroup::all();
         foreach ($type_filter_options as $filter_option) {
-            // Include in filter options only if options are available
             if($this->checkIfFilterHasArticles('creation_group', $filter_option)) {
                 array_push($filter_options['types'], $filter_option->filter_key);
                 $filter_names['types'][$filter_option->filter_key] = $filter_option->$name_query;
             }
         }
 
-        $filter_options['prices'] = ['0-30', '31-60', '61-120', '121-180', 'more'];
-        foreach ($filter_options['prices'] as $price) {
+        $price_options = ['0-30', '31-60', '61-120', '121-180', 'more'];
+        foreach ($price_options as $price) {
             if($this->checkIfFilterHasArticles('prices', $price)) {
                 if($price == 'more') {
-                    $filter_names['prices'][$price] = "+180&euro;";
+                    array_push($filter_options['prices'], 'more');
+                    $filter_names['prices']['more'] = "+180&euro;";
                 }
                 else {
+                    array_push($filter_options['prices'], $price);
                     $filter_names['prices'][$price] = $price."&euro;";
                 }
             }
@@ -98,7 +99,7 @@ trait FiltersGenerator {
         return [$filter_options, $filter_names];
 	}
 
-    public function getArticlesFilterOptions()
+    public function getArticlesFilterOptions($creation)
     {
         $filter_options = [
             'sizes' => [],
@@ -116,20 +117,26 @@ trait FiltersGenerator {
 
         $size_filter_options = Size::all();
         foreach ($size_filter_options as $filter_option) {
-            array_push($filter_options['sizes'], $filter_option->value);
-            $filter_names['sizes'][$filter_option->value] = $filter_option->value;
+            if($this->checkIfArticleFilterHasArticles($creation, 'sizes', $filter_option)) {
+                array_push($filter_options['sizes'], $filter_option->value);
+                $filter_names['sizes'][$filter_option->value] = $filter_option->value;
+            }
         }
 
         $color_filter_options = Color::all();
         foreach ($color_filter_options as $filter_option) {
-            array_push($filter_options['colors'], $filter_option->name);
-            $filter_names['colors'][$filter_option->name] = __("colors.".$filter_option->name);
+            if($this->checkIfArticleFilterHasArticles($creation, 'colors', $filter_option)) {
+                array_push($filter_options['colors'], $filter_option->name);
+                $filter_names['colors'][$filter_option->name] = __("colors.".$filter_option->name);
+            }
         }
 
         $shops_filter_options = Shop::all();
         foreach ($shops_filter_options as $filter_option) {
-            array_push($filter_options['shops'], $filter_option->filter_key);
-            $filter_names['shops'][$filter_option->filter_key] = $filter_option->name;
+            if($this->checkIfArticleFilterHasArticles($creation, 'shops', $filter_option)) {
+                array_push($filter_options['shops'], $filter_option->filter_key);
+                $filter_names['shops'][$filter_option->filter_key] = $filter_option->name;
+            }
         }
 
         return [$filter_options, $filter_names];
@@ -157,7 +164,9 @@ trait FiltersGenerator {
                 if (isset($request->$filter)) {
                     $requested_filters = explode("*", $request->$filter);
                     foreach ($requested_filters as $requested_filter) {
-                        $initial_filters[$filter][$requested_filter] = 1;
+                        if (isset($initial_filters[$filter][$requested_filter])) {
+                            $initial_filters[$filter][$requested_filter] = 1;
+                        }
                     }
                 }
 			}
@@ -166,9 +175,9 @@ trait FiltersGenerator {
         return $initial_filters;
 	}
 
-    public function getArticlesInitialFilters($request)
+    public function getArticlesInitialFilters($request, $creation)
     {
-        $filter_options = $this->getArticlesFilterOptions()[0]; // Get only filter keys
+        $filter_options = $this->getArticlesFilterOptions($creation)[0]; // Get only filter keys
 
         $initial_filters = [
             'sizes' => [],
@@ -183,7 +192,9 @@ trait FiltersGenerator {
                 if (isset($request->$filter)) {
                     $requested_filters = explode("*", $request->$filter);
                     foreach ($requested_filters as $requested_filter) {
-                        $initial_filters[$filter][$requested_filter] = 1;
+                        if (isset($initial_filters[$filter][$requested_filter])) {
+                            $initial_filters[$filter][$requested_filter] = 1;
+                        }
                     }
                 }
             }

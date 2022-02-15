@@ -100,7 +100,7 @@
 	</div>
 
 	<div class="benu-container" id="filters-order" style="display: none;">
-		<div class="flex justify-start flex-wrap pt-4 pb-4">
+		<div class="flex justify-end flex-wrap pt-4 pb-4">
 			<div class="all-models__filter-tag @if($sorting_order == 'asc') all-models__filter-tag--active @endif" wire:click="updateSorting('asc')">
 				Prix croissant
 			</div>

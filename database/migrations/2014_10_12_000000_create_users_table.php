@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->boolean('newsletter')->default('0');
             $table->string('origin')->nullable();
             $table->string('badge')->default('standard');
+            $table->string('client_number')->unique();
             $table->string('rating')->default('10');
             $table->rememberToken();
         });

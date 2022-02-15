@@ -81,14 +81,19 @@ class ModelController extends Controller
         }
 
         // Compute all filter options, names and status from FiltersGenerator Trait
-        $filter_names = $this->getArticlesFilterOptions()[1];
-        $initial_filters = $this->getArticlesInitialFilters($request);
+        $filter_names = $this->getArticlesFilterOptions($creation)[1];
+        $initial_filters = $this->getArticlesInitialFilters($request, $creation);
 
         // Handle persisted filters to keep consistency from one page to another
         if (session('secret_id') != null) {
             $applied_filters = json_decode(ModelFilter::where('session_id', session('secret_id'))->first()->applied_filters, true);
-            $initial_filters['colors'] = $applied_filters['colors'];
-            $initial_filters['shops'] = $applied_filters['shops'];
+            // Take only filter values that are avaiolable for this specific creation
+            foreach ($initial_filters['colors'] as $color => $filter_value) {
+                $initial_filters['colors'][$color] = $applied_filters['colors'][$color];
+            }
+            foreach ($initial_filters['shops'] as $shop => $filter_value) {
+                $initial_filters['shops'][$shop] = $applied_filters['shops'][$shop];
+            }
 
             // Destroy secret_id and DB temporary data after it has been applied
             ModelFilter::where('session_id', session('secret_id'))->delete();
@@ -117,8 +122,8 @@ class ModelController extends Controller
         $sold_articles = $this->getSoldArticles($creation);
 
         // Compute all filter options, names and status from FiltersGenerator Trait
-        $filter_names = $this->getArticlesFilterOptions()[1];
-        $initial_filters = $this->getArticlesInitialFilters($request);
+        $filter_names = $this->getArticlesFilterOptions($creation)[1];
+        $initial_filters = $this->getArticlesInitialFilters($request, $creation);
 
         return view('sold-items', ['model_name' => $name, 'model' => $creation, 'sold_articles' => $sold_articles, 'initial_filters' => $initial_filters, 'filter_names' => $filter_names]);
     }

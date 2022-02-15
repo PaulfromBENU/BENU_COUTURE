@@ -94,17 +94,6 @@ trait ArticleAnalyzer {
                 return false;
                 break;
 
-            case 'sizes':
-                foreach (Creation::all() as $creation) {
-                    foreach ($this->getAvailableArticles($creation) as $article) {
-                        if ($article->size_id == $filter_option->id) {
-                            return true; // To return true, at least one creation of the group must have available articles
-                        }
-                    }
-                }
-                return false;
-                break;
-
             case 'prices':
                 if ($filter_option == 'more') {
                     $min_price = 180;
@@ -141,6 +130,44 @@ trait ArticleAnalyzer {
                             if ($shop->id == $filter_option->id && $shop->pivot->stock > 0) {
                                 return true; // To return true, at least one article of one creation must have a positive stock in the shop
                             }
+                        }
+                    }
+                }
+                return false;
+                break;
+            
+            default:
+                return true;
+                break;
+        }
+    }
+
+    public function checkIfArticleFilterHasArticles($creation, $filter, $filter_option)
+    {
+        switch ($filter) {
+            case 'sizes':
+                foreach ($this->getAvailableArticles($creation) as $article) {
+                    if ($article->color_id == $filter_option->id) {
+                        return true; // To return true, at least one creation of the group must have available articles
+                    }
+                }
+                return false;
+                break;
+
+            case 'colors':
+                foreach ($this->getAvailableArticles($creation) as $article) {
+                    if ($article->color_id == $filter_option->id) {
+                        return true; // To return true, at least one creation of the group must have available articles
+                    }
+                }
+                return false;
+                break;
+
+            case 'shops':
+                foreach ($this->getAvailableArticles($creation) as $article) {
+                    foreach ($article->shops as $shop) {
+                        if ($shop->id == $filter_option->id && $shop->pivot->stock > 0) {
+                            return true; // To return true, at least one article of one creation must have a positive stock in the shop
                         }
                     }
                 }

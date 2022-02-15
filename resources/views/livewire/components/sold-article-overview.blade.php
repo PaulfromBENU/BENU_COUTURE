@@ -1,14 +1,12 @@
 <a href="#" class="block sold-overview">
     <div class="sold-overview__cap sold-overview__cap--grey"></div>
     <div class="sold-overview__img-container">
-        @foreach($pictures as $picture)
-            <img src="{{ asset('images/pictures/articles/'.$picture->file_name) }}" @if($loop->index > 0) style="display: none;" @endif>
-        @endforeach
+        <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">
         @if($pictures->count() > 1)
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent="changePicture('left')">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right article-arrow-right">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right" wire:click.prevent="changePicture('right')">
                 <i class="fas fa-chevron-right"></i>
             </div>
         @endif
