@@ -741,6 +741,10 @@ input[type=checkbox]:focus {
   padding-top: 26px;
   position: relative;
   z-index: 1;
+  text-align: left;
+  font: normal normal 500 18px/22px "Barlow";
+  letter-spacing: 0px;
+  color: #262544;
 }
 .breadcrumbs__content a {
   transition: all 0.2s ease-in-out;
@@ -1854,7 +1858,7 @@ input[type=checkbox]:focus {
 }
 .service__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 58px;
 }
@@ -1899,7 +1903,7 @@ input[type=checkbox]:focus {
 }
 .faq__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
   margin-bottom: 60px;
@@ -1974,7 +1978,7 @@ input[type=checkbox]:focus {
 }
 .delivery__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
   margin-bottom: 60px;
@@ -2001,7 +2005,7 @@ input[type=checkbox]:focus {
 }
 .sizes__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
 }
@@ -2011,7 +2015,7 @@ input[type=checkbox]:focus {
 }
 .return__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
 }
@@ -2042,7 +2046,7 @@ input[type=checkbox]:focus {
 }
 .payment__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
 }
@@ -2081,7 +2085,7 @@ input[type=checkbox]:focus {
 }
 .care__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
 }
@@ -2119,12 +2123,14 @@ input[type=checkbox]:focus {
 }
 .shops__title {
   text-align: center;
-  font: normal normal 600 44px/53px "Barlow Condensed";
+  font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 60px;
 }
 .shops__card {
   padding: 34px;
+  width: 75%;
+  margin: auto;
   margin-bottom: 50px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 40px #26254433;
@@ -2184,9 +2190,9 @@ input[type=checkbox]:focus {
   margin-bottom: 40px;
 }
 .contact__title {
-  font-size: 2.8rem;
-  font-family: "Barlow Condensed";
-  font-weight: 700;
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
   color: #2E1414;
   margin-bottom: 50px;
 }
@@ -2380,6 +2386,12 @@ input[type=checkbox]:focus {
   margin-bottom: 55px;
   text-align: left;
   font: normal normal 600 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.model-pres__desc__txt-vouchers {
+  margin-bottom: 40px;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
   letter-spacing: 0px;
 }
 .model-pres__desc__keywords {

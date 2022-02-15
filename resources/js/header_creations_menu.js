@@ -91,4 +91,17 @@ $(function() {
             fullMenuStatus = 'off';
         }
     });
+
+    $('.creations-navbar').on('mouseleave', function() {
+        if (creationsBarStatus == 'on') {
+            $('#creations-nav-toggle').removeClass('header__main-nav__btn--active');
+            $('.creations-navbar__menu').css('max-height', '0px');
+            $('.creations-navbar').fadeOut(400, function() {
+                $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
+                $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
+            });
+            creationsBarStatus = 'off';
+            fullMenuStatus = 'off';
+        }
+    });
 });

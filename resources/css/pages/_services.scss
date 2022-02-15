@@ -2,7 +2,7 @@
 	padding-top: 66px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 58px;
 	}
@@ -47,7 +47,7 @@
 	margin-bottom: 90px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 		margin-bottom: 60px;
@@ -129,7 +129,7 @@
 	margin-bottom: 90px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 		margin-bottom: 60px;
@@ -156,7 +156,7 @@
 	padding-top: 60px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 	}
@@ -166,7 +166,7 @@
 	padding-top: 60px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 	}
@@ -197,7 +197,7 @@
 	margin-bottom: 120px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 	}
@@ -236,7 +236,7 @@
 	margin-bottom: 100px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 	}
@@ -276,12 +276,14 @@
 	padding-top: 60px;
 	&__title {
 		text-align: center;
-		font: normal normal 600 44px/53px 'Barlow Condensed';
+		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 60px;
 	}
 	&__card {
 		padding: 34px;
+		width: 75%;
+		margin: auto;
 		margin-bottom: 50px;
 		background: $white 0% 0% no-repeat padding-box;
 		box-shadow: 0px 0px 40px #26254433;
@@ -340,9 +342,9 @@
 		margin-bottom: 40px;
 	}
 	&__title {
-		font-size: 2.8rem;
-		font-family: 'Barlow Condensed';
-		font-weight: 700;
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
 		color: $dark-text;
 		margin-bottom: 50px;
 	}

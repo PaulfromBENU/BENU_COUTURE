@@ -19,7 +19,6 @@ class ArticleSeeder extends Seeder
         
         $name_options = ['article-01', 'model-02', 'declinaison-03', 'article-name'];
         $mask_options = ['mask-01', 'mask-02', 'mask-03', 'mask-04'];
-        $voucher_options = ['voucher-1', 'voucher-2', 'super-voucher'];
         $type_options = ['article', 'mask', ''];
         $vouchertype_options = ['pdf', 'fabric'];
 
@@ -57,12 +56,12 @@ class ArticleSeeder extends Seeder
             ]);
         }
 
-        for ($i=0; $i < 5; $i++) { 
+        for ($i=0; $i < 2; $i++) { 
             DB::connection('mysql')->table('articles')->insert([
-                'name' => $voucher_options[array_rand($voucher_options)],
+                'name' => "Bon d'achat",
                 'type' => 'voucher',
-                'voucher_value' => 30 * rand(1, 6),
-                'voucher_type' => $vouchertype_options[rand(0,1)],
+                'voucher_value' => "Par tranches de 30",
+                'voucher_type' => $vouchertype_options[$i],
                 'singularity_lu' => 'Une particularité de cet article, écrit en luxembourgeois',
                 'singularity_de' => 'article.singularity-modelname-articlename',
                 'singularity_en' => 'Une particularité de cet article, écrit en anglais',

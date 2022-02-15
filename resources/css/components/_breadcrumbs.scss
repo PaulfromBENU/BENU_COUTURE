@@ -6,6 +6,10 @@
 		padding-top: 26px;
 		position: relative;
 		z-index: 1;
+		text-align: left;
+		font: normal normal 500 18px/22px 'Barlow';
+		letter-spacing: 0px;
+		color: #262544;
 		a {
 			transition: $transition-base;
 			&:hover {

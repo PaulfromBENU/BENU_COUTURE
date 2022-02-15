@@ -53,7 +53,7 @@
 					@break
 
 				@default
-					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="primary-color"><strong>{{ __('breadcrumbs.contact') }}</strong></a>
+					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="primary-color"><strong>{{ __('breadcrumbs.faq') }}</strong></a>
 					@break
 			@endswitch
 		</div>
@@ -65,7 +65,7 @@
 		<h4 class="service__subtitle">BENU COUTURE</h4>
 		<h2 class="service__title">Service Client</h2>
 		<div class="service__nav flex justify-center">
-			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="service__nav__link @if($page == __('slugs.services-faq')) service__nav__link--active @endif" id="service-nav-faq">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="service__nav__link @if($page == '' || $page == __('slugs.services-faq')) service__nav__link--active @endif" id="service-nav-faq">
 				{{ __('breadcrumbs.faq') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="service__nav__link @if($page == __('slugs.services-delivery')) service__nav__link--active @endif" id="service-nav-delivery">
@@ -86,7 +86,7 @@
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="service__nav__link @if($page == __('slugs.services-shops')) service__nav__link--active @endif" id="service-nav-shops">
 				{{ __('breadcrumbs.shops') }}
 			</a>
-			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="service__nav__link @if($page == '' || $page == __('slugs.services-contact')) service__nav__link--active @endif" id="service-nav-contact">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="service__nav__link @if($page == __('slugs.services-contact')) service__nav__link--active @endif" id="service-nav-contact">
 				{{ __('breadcrumbs.contact') }}
 			</a>
 		</div>
@@ -126,7 +126,7 @@
 			@break
 
 		@default
-			@include('includes.services.contact')
+			@include('includes.services.faq')
 			@break
 	@endswitch
 @endsection

@@ -1,4 +1,4 @@
-<section class="w-3/4 m-auto text-center shops service-panel" id="services-shops">
+<section class="w-3/4 m-auto text-center shops service-panel benu-container" id="services-shops">
 	<h2 class="shops__title">Points de vente</h2>
 
 	@foreach($shops_benu as $shop)
@@ -17,11 +17,16 @@
 				{{ $shop->$desc_query }}
 			</p>
 			<div class="text-left shops__card__highlight">
-				<p class="mb-2">
-					<strong>Adresse&nbsp;:</strong> {{ $shop->address }}
-				</p>
+				<div class="flex justify-start flex-wrap">
+					<p class="mb-2 w-2/3">
+						<strong>Adresse&nbsp;:</strong> {{ $shop->address }}
+					</p>
+					<p class="mb-2 w-1/3">
+						<strong>E-mail&nbsp;:</strong> {{ $shop->email }}
+					</p>
+				</div>
 				<div class="flex justify-start">
-					<p class="w-1/2">
+					<p class="w-2/3">
 						<strong>Téléphone&nbsp;:</strong> {{ $shop->phone }}
 					</p>
 					<p>
@@ -49,11 +54,16 @@
 				{{ $shop->$desc_query }}
 			</p>
 			<div class="text-left shops__card__highlight">
-				<p class="mb-2">
-					<strong>Adresse&nbsp;:</strong> {{ $shop->address }}
-				</p>
+				<div class="flex justify-start flex-wrap">
+					<p class="mb-2 w-2/3">
+						<strong>Adresse&nbsp;:</strong> {{ $shop->address }}
+					</p>
+					<p class="mb-2 w-1/3">
+						<strong>E-mail&nbsp;:</strong> {{ $shop->email }}
+					</p>
+				</div>
 				<div class="flex justify-start">
-					<p class="w-1/2">
+					<p class="w-2/3">
 						<strong>Téléphone&nbsp;:</strong> {{ $shop->phone }}
 					</p>
 					<p>
