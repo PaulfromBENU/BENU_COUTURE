@@ -142,6 +142,49 @@ trait FiltersGenerator {
         return [$filter_options, $filter_names];
     }
 
+    public function getSoldFilterOptions($creation)
+    {
+        $filter_options = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $filter_names = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $name_query = "name_".app()->getLocale();
+
+        $size_filter_options = Size::all();
+        foreach ($size_filter_options as $filter_option) {
+            if($this->checkIfSoldFilterHasArticles($creation, 'sizes', $filter_option)) {
+                array_push($filter_options['sizes'], $filter_option->value);
+                $filter_names['sizes'][$filter_option->value] = $filter_option->value;
+            }
+        }
+
+        $color_filter_options = Color::all();
+        foreach ($color_filter_options as $filter_option) {
+            if($this->checkIfSoldFilterHasArticles($creation, 'colors', $filter_option)) {
+                array_push($filter_options['colors'], $filter_option->name);
+                $filter_names['colors'][$filter_option->name] = __("colors.".$filter_option->name);
+            }
+        }
+
+        $shops_filter_options = Shop::all();
+        foreach ($shops_filter_options as $filter_option) {
+            if($this->checkIfSoldFilterHasArticles($creation, 'shops', $filter_option)) {
+                array_push($filter_options['shops'], $filter_option->filter_key);
+                $filter_names['shops'][$filter_option->filter_key] = $filter_option->name;
+            }
+        }
+        
+        return [$filter_options, $filter_names];
+    }
+
 
 
 	public function getInitialFilters($request)
@@ -178,6 +221,34 @@ trait FiltersGenerator {
     public function getArticlesInitialFilters($request, $creation)
     {
         $filter_options = $this->getArticlesFilterOptions($creation)[0]; // Get only filter keys
+
+        $initial_filters = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        // Initialize all filters to 0 by default, and to 1 if present in request
+        foreach ($filter_options as $filter => $options) {
+            foreach ($options as $option) {
+                $initial_filters[$filter][$option] = 0;
+                if (isset($request->$filter)) {
+                    $requested_filters = explode("*", $request->$filter);
+                    foreach ($requested_filters as $requested_filter) {
+                        if (isset($initial_filters[$filter][$requested_filter])) {
+                            $initial_filters[$filter][$requested_filter] = 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        return $initial_filters;
+    }
+
+    public function getSoldInitialFilters($request, $creation)
+    {
+        $filter_options = $this->getSoldFilterOptions($creation)[0]; // Get only filter keys
 
         $initial_filters = [
             'sizes' => [],

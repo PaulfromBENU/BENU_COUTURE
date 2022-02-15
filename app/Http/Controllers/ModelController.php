@@ -122,8 +122,8 @@ class ModelController extends Controller
         $sold_articles = $this->getSoldArticles($creation);
 
         // Compute all filter options, names and status from FiltersGenerator Trait
-        $filter_names = $this->getArticlesFilterOptions($creation)[1];
-        $initial_filters = $this->getArticlesInitialFilters($request, $creation);
+        $filter_names = $this->getSoldFilterOptions($creation)[1];
+        $initial_filters = $this->getSoldInitialFilters($request, $creation);
 
         return view('sold-items', ['model_name' => $name, 'model' => $creation, 'sold_articles' => $sold_articles, 'initial_filters' => $initial_filters, 'filter_names' => $filter_names]);
     }
