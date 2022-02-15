@@ -16,11 +16,13 @@ class FilteredModels extends Component
     public $sections_number;
     public $filtered_models;
     public $displayed_models;
+    public $sort_direction;
 
-    protected $listeners = ['filtersUpdated' => 'applyFilters'];
+    protected $listeners = ['filtersUpdated' => 'applyFilters', 'sortUpdated' => 'changeSorting'];
 
     public function mount()
     {
+        $this->sort_direction = 'asc';
         $this->applyFilters($this->initial_filters);
     }
 
@@ -32,40 +34,37 @@ class FilteredModels extends Component
         // Compute collection of filtered models in FiltersGenerator Trait (required to keep full object relationships)
         $this->filtered_models = $this->getFilteredCreations($applied_filters);
 
+        $this->sortAndDivide();
+    }
+
+    public function changeSorting(string $sort_dir, $applied_filters)
+    {
+        if ($sort_dir == 'desc') {
+            $this->sort_direction = 'desc';
+        } else {
+            $this->sort_direction = 'asc';
+        }
+
+        $this->applyFilters($applied_filters); //Necessary to avoid models conversion to array
+    }
+
+    public function sortAndDivide()
+    {   
         //Count number of required sections based on total number of creations
         $this->sections_number = floor($this->filtered_models->count() / 6) + 1;
 
         for ($i=0; $i < $this->sections_number; $i++) { 
-            $this->displayed_models[$i] = $this->filtered_models->sortByDesc('updated_at')->slice(6 * $i, 6);
+            if ($this->sort_direction == 'desc') {
+                $this->displayed_models[$i] = $this->filtered_models->sortByDesc(function($creation){
+                    return $creation->price;
+                })->slice(6 * $i, 6)->values();
+            } else {
+                $this->displayed_models[$i] = $this->filtered_models->sortBy(function($creation){
+                    return $creation->price;
+                })->slice(6 * $i, 6)->values();
+            }
         }
     }
-
-    // public function addFiltersToLinks($applied_filters)
-    // {
-    //     $this->filters_color_link = "";
-    //     $this->filters_shop_link = "";
-
-    //     //Create strings to append to links, to preserve filter selection from one page to the other
-    //     foreach ($applied_filters['colors'] as $color => $filter) {
-    //         if ($filter == 1) {
-    //             $this->filters_color_link .= $color.'*';
-    //         }
-    //     }
-    //     //Clean string
-    //     if (substr($this->filters_color_link, -1) == '*') {
-    //         $this->filters_color_link = substr($this->filters_color_link, 0, -1);
-    //     }
-
-    //     foreach ($applied_filters['shops'] as $shop => $filter) {
-    //         if ($filter == 1) {
-    //             $this->filters_shop_link .= $shop.'*';
-    //         }
-    //     }
-    //     // Clean string
-    //     if (substr($this->filters_shop_link, -1) == '*') {
-    //         $this->filters_shop_link = substr($this->filters_shop_link, 0, -1);
-    //     }
-    // }
 
     public function render()
     {

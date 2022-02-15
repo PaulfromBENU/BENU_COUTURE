@@ -42,42 +42,57 @@ trait FiltersGenerator {
 
 		$category_filter_options = CreationCategory::all();
 		foreach ($category_filter_options as $filter_option) {
-            array_push($filter_options['categories'], $filter_option->filter_key);
-            $filter_names['categories'][$filter_option->filter_key] = $filter_option->$name_query;
+            // Include in filter options only if options are available
+            if (Creation::where('creation_category_id', $filter_option->id)->count() > 0) {
+                array_push($filter_options['categories'], $filter_option->filter_key);
+                $filter_names['categories'][$filter_option->filter_key] = $filter_option->$name_query;
+            }
         }
 
         $color_filter_options = Color::all();
         foreach ($color_filter_options as $filter_option) {
-            array_push($filter_options['colors'], $filter_option->name);
-            $filter_names['colors'][$filter_option->name] = __("colors.".$filter_option->name);
+            if($this->checkIfFilterHasArticles('colors', $filter_option)) {
+                array_push($filter_options['colors'], $filter_option->name);
+                $filter_names['colors'][$filter_option->name] = __("colors.".$filter_option->name);
+            }
         }
 
         $type_filter_options = CreationGroup::all();
         foreach ($type_filter_options as $filter_option) {
-            array_push($filter_options['types'], $filter_option->filter_key);
-            $filter_names['types'][$filter_option->filter_key] = $filter_option->$name_query;
+            // Include in filter options only if options are available
+            if($this->checkIfFilterHasArticles('creation_group', $filter_option)) {
+                array_push($filter_options['types'], $filter_option->filter_key);
+                $filter_names['types'][$filter_option->filter_key] = $filter_option->$name_query;
+            }
         }
 
         $filter_options['prices'] = ['0-30', '31-60', '61-120', '121-180', 'more'];
         foreach ($filter_options['prices'] as $price) {
-            if($price == 'more') {
-                $filter_names['prices'][$price] = "+180&euro;";
-            }
-            else {
-                $filter_names['prices'][$price] = $price."&euro;";
+            if($this->checkIfFilterHasArticles('prices', $price)) {
+                if($price == 'more') {
+                    $filter_names['prices'][$price] = "+180&euro;";
+                }
+                else {
+                    $filter_names['prices'][$price] = $price."&euro;";
+                }
             }
         }
 
         $partners_filter_options = Partner::all();
         foreach ($partners_filter_options as $filter_option) {
-            array_push($filter_options['partners'], $filter_option->filter_key);
-            $filter_names['partners'][$filter_option->filter_key] = $filter_option->name;
+            // Include in filter options only if options are available
+            if($this->checkIfFilterHasArticles('partners', $filter_option)) {
+                array_push($filter_options['partners'], $filter_option->filter_key);
+                $filter_names['partners'][$filter_option->filter_key] = $filter_option->name;
+            }
         }
 
         $shops_filter_options = Shop::all();
         foreach ($shops_filter_options as $filter_option) {
-            array_push($filter_options['shops'], $filter_option->filter_key);
-            $filter_names['shops'][$filter_option->filter_key] = $filter_option->name;
+            if($this->checkIfFilterHasArticles('shops', $filter_option)) {
+                array_push($filter_options['shops'], $filter_option->filter_key);
+                $filter_names['shops'][$filter_option->filter_key] = $filter_option->name;
+            }
         }
 
         return [$filter_options, $filter_names];

@@ -57,4 +57,99 @@ trait ArticleAnalyzer {
 
          return $sold_articles;
     }
+
+    public function checkIfFilterHasArticles($filter, $filter_option)
+    {
+        switch ($filter) {
+            case 'creation_category':
+                if (Creation::where('creation_category_id', $filter_option->id)->count() > 0) {
+                    foreach (Creation::where('creation_category_id', $filter_option->id)->get() as $creation) {
+                        if ($this->getAvailableArticles($creation)->count() > 0) {
+                            return true; // To return true, at least one creation of the group must have available articles
+                        }
+                    }
+                }
+                return false;
+                break;
+
+            case 'creation_group':
+                if (Creation::where('creation_group_id', $filter_option->id)->count() > 0) {
+                    foreach (Creation::where('creation_group_id', $filter_option->id)->get() as $creation) {
+                        if ($this->getAvailableArticles($creation)->count() > 0) {
+                            return true; // To return true, at least one creation of the group must have available articles
+                        }
+                    }
+                }
+                return false;
+                break;
+
+            case 'colors':
+                foreach (Creation::all() as $creation) {
+                    foreach ($this->getAvailableArticles($creation) as $article) {
+                        if ($article->color_id == $filter_option->id) {
+                            return true; // To return true, at least one creation of the group must have available articles
+                        }
+                    }
+                }
+                return false;
+                break;
+
+            case 'sizes':
+                foreach (Creation::all() as $creation) {
+                    foreach ($this->getAvailableArticles($creation) as $article) {
+                        if ($article->size_id == $filter_option->id) {
+                            return true; // To return true, at least one creation of the group must have available articles
+                        }
+                    }
+                }
+                return false;
+                break;
+
+            case 'prices':
+                if ($filter_option == 'more') {
+                    $min_price = 180;
+                    $max_price = 1000000;
+                } else {
+                    $min_price = explode("-", $filter_option)[0];
+                    $max_price = explode("-", $filter_option)[1];
+                }
+                if (Creation::where('price', '>=', $min_price)->where('price', '<', $max_price + 1)->count() > 0) {
+                    foreach (Creation::where('price', '>=', $min_price)->where('price', '<', $max_price + 1)->get() as $creation) {
+                        if ($this->getAvailableArticles($creation)->count() > 0) {
+                            return true; // To return true, at least one creation of the group must have available articles
+                        }
+                    }
+                }
+                return false;
+                break;
+
+            case 'partners':
+                if (Creation::where('partner_id', $filter_option->id)->count() > 0) {
+                    foreach (Creation::where('partner_id', $filter_option->id)->get() as $creation) {
+                        if ($this->getAvailableArticles($creation)->count() > 0) {
+                            return true; // To return true, at least one creation of the group must have available articles
+                        }
+                    }
+                }
+                return false;
+                break;
+
+            case 'shops':
+                foreach (Creation::all() as $creation) {
+                    foreach ($this->getAvailableArticles($creation) as $article) {
+                        foreach ($article->shops as $shop) {
+                            if ($shop->id == $filter_option->id && $shop->pivot->stock > 0) {
+                                return true; // To return true, at least one article of one creation must have a positive stock in the shop
+                            }
+                        }
+                    }
+                }
+                return false;
+                break;
+            
+            default:
+                return true;
+                break;
+        }
+    }
 }

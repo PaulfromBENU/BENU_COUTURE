@@ -12,9 +12,11 @@ class AllModelsFilter extends Component
     public $filter_names;
 
     public $active_filters;
+    public $sorting_order;
 
     public function mount()
     {
+        $this->sorting_order = 'asc';
         $this->active_filters = $this->initial_filters;
     }
 
@@ -27,6 +29,14 @@ class AllModelsFilter extends Component
         }
 
         $this->sendFilters();
+    }
+
+    public function updateSorting(string $sort_order)
+    {
+        if (in_array($sort_order, ['asc', 'desc'])) {
+            $this->sorting_order = $sort_order;
+            $this->emit('sortUpdated', $this->sorting_order, $this->active_filters);
+        }
     }
 
     public function sendFilters()
