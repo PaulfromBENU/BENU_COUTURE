@@ -4,6 +4,8 @@ namespace App\Http\Livewire\Filters;
 
 use Livewire\Component;
 
+use App\Models\ModelFilter;
+
 class AllModelsFilter extends Component
 {
     public $initial_filters;
@@ -29,6 +31,11 @@ class AllModelsFilter extends Component
 
     public function sendFilters()
     {
+        // Update active filters in DB, to be transferred to specific model page
+        $stored_filters = ModelFilter::where('session_id', session('secret_id'))->first();
+        $stored_filters->applied_filters = json_encode($this->active_filters);
+        $stored_filters->save();
+
         $this->emit('filtersUpdated', $this->active_filters);
     }
 

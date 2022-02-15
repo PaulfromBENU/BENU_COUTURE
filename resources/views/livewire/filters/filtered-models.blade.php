@@ -1,7 +1,7 @@
 <div class="benu-container flex flex-wrap justify-start all-models__list">
     @for($j = 0; $j < $sections_number; $j++)
         @foreach($displayed_models[$j] as $model)
-            @livewire('components.model-overview', ['model' => $model, 'filters_color_link' => $filters_color_link, 'filters_shop_link' => $filters_shop_link], key($model->id))
+            @livewire('components.model-overview', ['model' => $model], key($model->id))
         @endforeach
         
         @if($j < $sections_number - 1)

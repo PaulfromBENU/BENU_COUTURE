@@ -17,9 +17,6 @@ class FilteredModels extends Component
     public $filtered_models;
     public $displayed_models;
 
-    public $filters_color_link;
-    public $filters_shop_link;
-
     protected $listeners = ['filtersUpdated' => 'applyFilters'];
 
     public function mount()
@@ -31,12 +28,6 @@ class FilteredModels extends Component
     {
         //Initialize filtered models
         $this->filtered_models = collect([]);
-
-        // Update links of model cards with filters
-        $this->emit('updateLinksWithFilters', $applied_filters);
-
-        // Send filters to model overview for links update
-        $this->addFiltersToLinks($applied_filters);
         
         // Compute collection of filtered models in FiltersGenerator Trait (required to keep full object relationships)
         $this->filtered_models = $this->getFilteredCreations($applied_filters);
@@ -49,32 +40,32 @@ class FilteredModels extends Component
         }
     }
 
-    public function addFiltersToLinks($applied_filters)
-    {
-        $this->filters_color_link = "";
-        $this->filters_shop_link = "";
+    // public function addFiltersToLinks($applied_filters)
+    // {
+    //     $this->filters_color_link = "";
+    //     $this->filters_shop_link = "";
 
-        //Create strings to append to links, to preserve filter selection from one page to the other
-        foreach ($applied_filters['colors'] as $color => $filter) {
-            if ($filter == 1) {
-                $this->filters_color_link .= $color.'*';
-            }
-        }
-        //Clean string
-        if (substr($this->filters_color_link, -1) == '*') {
-            $this->filters_color_link = substr($this->filters_color_link, 0, -1);
-        }
+    //     //Create strings to append to links, to preserve filter selection from one page to the other
+    //     foreach ($applied_filters['colors'] as $color => $filter) {
+    //         if ($filter == 1) {
+    //             $this->filters_color_link .= $color.'*';
+    //         }
+    //     }
+    //     //Clean string
+    //     if (substr($this->filters_color_link, -1) == '*') {
+    //         $this->filters_color_link = substr($this->filters_color_link, 0, -1);
+    //     }
 
-        foreach ($applied_filters['shops'] as $shop => $filter) {
-            if ($filter == 1) {
-                $this->filters_shop_link .= $shop.'*';
-            }
-        }
-        // Clean string
-        if (substr($this->filters_shop_link, -1) == '*') {
-            $this->filters_shop_link = substr($this->filters_shop_link, 0, -1);
-        }
-    }
+    //     foreach ($applied_filters['shops'] as $shop => $filter) {
+    //         if ($filter == 1) {
+    //             $this->filters_shop_link .= $shop.'*';
+    //         }
+    //     }
+    //     // Clean string
+    //     if (substr($this->filters_shop_link, -1) == '*') {
+    //         $this->filters_shop_link = substr($this->filters_shop_link, 0, -1);
+    //     }
+    // }
 
     public function render()
     {

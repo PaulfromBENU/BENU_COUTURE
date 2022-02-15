@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 use App\Models\Creation;
+use App\Models\ModelFilter;
 
 use App\Traits\ArticleAnalyzer;
 use App\Traits\FiltersGenerator;
@@ -22,7 +25,19 @@ class ModelController extends Controller
             // Compute all filter options, names and status from FiltersGenerator Trait
             $filter_names = $this->getFilterOptions()[1];
             $initial_filters = $this->getInitialFilters($request);
-            $request->session()->flash('model_filters', $initial_filters);
+
+            // Persists initial filters in the database to be reused on specific model pages
+            if (session('secret_id') != null) {
+                $stored_filters = ModelFilter::where('session_id', session('secret_id'))->first();
+            } else {
+                $secret_session_id = Str::random(40);
+                $stored_filters = new ModelFilter();
+                $stored_filters->session_id = $secret_session_id;
+                session(['secret_id' => $secret_session_id]);
+            }
+            
+            $stored_filters->applied_filters = json_encode($initial_filters);
+            $stored_filters->save();
 
             return view('models', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters]);
         }
@@ -68,9 +83,16 @@ class ModelController extends Controller
         // Compute all filter options, names and status from FiltersGenerator Trait
         $filter_names = $this->getArticlesFilterOptions()[1];
         $initial_filters = $this->getArticlesInitialFilters($request);
-        if (session('model_filters') != null) {
-            $initial_filters['colors'] = session('model_filters')['colors'];
-            $initial_filters['shops'] = session('model_filters')['shops'];
+
+        // Handle persisted filters to keep consistency from one page to another
+        if (session('secret_id') != null) {
+            $applied_filters = json_decode(ModelFilter::where('session_id', session('secret_id'))->first()->applied_filters, true);
+            $initial_filters['colors'] = $applied_filters['colors'];
+            $initial_filters['shops'] = $applied_filters['shops'];
+
+            // Destroy secret_id and DB temporary data after it has been applied
+            ModelFilter::where('session_id', session('secret_id'))->delete();
+            $request->session()->forget('secret_id');
         }
         
         return view('model', [
