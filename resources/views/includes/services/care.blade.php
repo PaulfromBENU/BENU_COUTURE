@@ -4,6 +4,7 @@
 		Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu.
 	</p>
 
+	<h4 class="text-center care__grid__title">Lavage</h4>
 	<div class="care__grid flex justify-between flex-wrap">
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
@@ -31,7 +32,10 @@
 				Séchage en machine à proscrire
 			</p>
 		</div>
+	</div>
 
+	<h4 class="text-center care__grid__title">Séchage</h4>
+	<div class="care__grid flex justify-between flex-wrap">
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
 				@svg('services_care_1')
@@ -58,7 +62,10 @@
 				Séchage en machine à proscrire
 			</p>
 		</div>
+	</div>
 
+	<h4 class="text-center care__grid__title">Repassage</h4>
+	<div class="care__grid flex justify-between flex-wrap">
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
 				@svg('services_care_1')

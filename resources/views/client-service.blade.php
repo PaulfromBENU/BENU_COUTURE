@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	{{ __('service.seo-title') }}
+	{{ __('services.seo-title') }}
 @endsection
 
 @section('description')
-	{{ __('service.seo-description') }}
+	{{ __('services.seo-description') }}
 @endsection
 
 @section('breadcrumbs')
