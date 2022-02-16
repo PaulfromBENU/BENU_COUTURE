@@ -10,12 +10,38 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
-					<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
+					<a href="{{ route('model-'.app()->getLocale(), ['shops' => $shop->filter_key]) }}" class="btn-couture-plain">Voir tous les articles</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
 				{{ $shop->$desc_query }}
 			</p>
+			<div class="flex justify-start mb-5 shops__card__desc">
+				<p class="mr-4"><strong>Horaires&nbsp;:</strong></p>
+				<div class="text-left">
+					<p>
+						Lundi&nbsp;: @if($shop->opening_monday == 'closed') Fermé @else {{ $shop->opening_monday }} @endif
+					</p>
+					<p>
+						Mardi&nbsp;: @if($shop->opening_tuesday == 'closed') Fermé @else {{ $shop->opening_tuesday }} @endif
+					</p>
+					<p>
+						Mercredi&nbsp;: @if($shop->opening_wednesday == 'closed') Fermé @else {{ $shop->opening_wednesday }} @endif
+					</p>
+					<p>
+						Jeudi&nbsp;: @if($shop->opening_thursday == 'closed') Fermé @else {{ $shop->opening_thursday }} @endif
+					</p>
+					<p>
+						Vendredi&nbsp;: @if($shop->opening_friday == 'closed') Fermé @else {{ $shop->opening_friday }} @endif
+					</p>
+					<p>
+						Samedi&nbsp;: @if($shop->opening_saturday == 'closed') Fermé @else {{ $shop->opening_saturday }} @endif
+					</p>
+					<p>
+						Dimanche&nbsp;: @if($shop->opening_sunday == 'closed') Fermé @else {{ $shop->opening_sunday }} @endif
+					</p>
+				</div>
+			</div>
 			<div class="text-left shops__card__highlight">
 				<div class="flex justify-start flex-wrap">
 					<p class="mb-2 w-2/3">
@@ -47,12 +73,38 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
-					<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
+					<a href="{{ route('model-'.app()->getLocale(), ['shops' => $shop->filter_key]) }}" class="btn-couture-plain">Voir tous les articles</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
 				{{ $shop->$desc_query }}
 			</p>
+			<div class="flex justify-start mb-5 shops__card__desc">
+				<p class="mr-4"><strong>Horaires&nbsp;:</strong></p>
+				<div class="text-left">
+					<p>
+						Lundi&nbsp;: @if($shop->opening_monday == 'closed') Fermé @else {{ $shop->opening_monday }} @endif
+					</p>
+					<p>
+						Mardi&nbsp;: @if($shop->opening_tuesday == 'closed') Fermé @else {{ $shop->opening_tuesday }} @endif
+					</p>
+					<p>
+						Mercredi&nbsp;: @if($shop->opening_wednesday == 'closed') Fermé @else {{ $shop->opening_wednesday }} @endif
+					</p>
+					<p>
+						Jeudi&nbsp;: @if($shop->opening_thursday == 'closed') Fermé @else {{ $shop->opening_thursday }} @endif
+					</p>
+					<p>
+						Vendredi&nbsp;: @if($shop->opening_friday == 'closed') Fermé @else {{ $shop->opening_friday }} @endif
+					</p>
+					<p>
+						Samedi&nbsp;: @if($shop->opening_saturday == 'closed') Fermé @else {{ $shop->opening_saturday }} @endif
+					</p>
+					<p>
+						Dimanche&nbsp;: @if($shop->opening_sunday == 'closed') Fermé @else {{ $shop->opening_sunday }} @endif
+					</p>
+				</div>
+			</div>
 			<div class="text-left shops__card__highlight">
 				<div class="flex justify-start flex-wrap">
 					<p class="mb-2 w-2/3">

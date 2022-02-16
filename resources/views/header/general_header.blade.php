@@ -71,9 +71,9 @@
                     <a href="{{ route('full-story', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.story') }}</a>
                     @endif
                     @if(Route::has('client-service-'.app()->getLocale()))
-                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'shops']) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
                     @else
-                    <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'shops']) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
+                    <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => __('slugs.services-shops')]) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
                     @endif
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">

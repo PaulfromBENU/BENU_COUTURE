@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ModelFilter extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['session_id'];
 }

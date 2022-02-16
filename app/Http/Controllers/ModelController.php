@@ -28,7 +28,9 @@ class ModelController extends Controller
 
             // Persists initial filters in the database to be reused on specific model pages
             if (session('secret_id') != null) {
-                $stored_filters = ModelFilter::where('session_id', session('secret_id'))->first();
+                $stored_filters = ModelFilter::firstOrNew([
+                    'session_id' => session('secret_id')
+                ]);
             } else {
                 $secret_session_id = Str::random(40);
                 $stored_filters = new ModelFilter();
