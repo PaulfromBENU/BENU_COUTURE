@@ -781,6 +781,7 @@ input[type=checkbox]:focus {
   height: 100%;
   font-family: "Barlow Condensed";
   font-weight: 500;
+  min-width: 200px;
 }
 .creations-navbar__menu__lists h4 {
   color: #D41C1B;
@@ -794,7 +795,7 @@ input[type=checkbox]:focus {
   margin-right: 15px;
 }
 .creations-navbar__menu__lists ul li {
-  width: 12vw;
+  width: 14vw;
   min-width: 100px;
 }
 .creations-navbar__menu__lists ul a {

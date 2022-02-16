@@ -12,9 +12,9 @@ class Creation extends Model
     // Choice of the database
     protected $connection = 'mysql';
 
-    public function creation_group()
+    public function creation_groups()
     {
-        return $this->belongsTo('App\Models\CreationGroup');
+        return $this->belongsToMany('App\Models\CreationGroup');
     }
 
     public function creation_category()

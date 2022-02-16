@@ -24,6 +24,7 @@
 			height: 100%;
 			font-family: 'Barlow Condensed';
 			font-weight: 500;
+			min-width: 200px;
 			h4 {
 				color: $primary-color;
 				font-size: 1.1rem;
@@ -35,7 +36,7 @@
 				flex-wrap: wrap;
 				margin-right: 15px;
 				li {
-					width: 12vw;
+					width: 14vw;
 					min-width: 100px;
 				}
 				a {

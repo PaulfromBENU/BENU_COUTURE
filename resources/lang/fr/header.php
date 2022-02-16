@@ -36,6 +36,7 @@ return [
     "news" => "Actualités",
     "story" => "Histoire",
     "locations" => "Points de vente",
+    "unisex" => "Unisexe",
     "adults" => "Adultes",
     "women" => "Femmes",
     "men" => "Hommes",

@@ -17,7 +17,7 @@ class CreateArticlePhotoTable extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('article_id')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('photo_id')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('photo_id')->onUpdate('cascade');
         });
     }
 

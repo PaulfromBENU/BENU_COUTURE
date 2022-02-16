@@ -73,13 +73,20 @@ trait ArticleAnalyzer {
                 break;
 
             case 'creation_group':
-                if (Creation::where('creation_group_id', $filter_option->id)->count() > 0) {
-                    foreach (Creation::where('creation_group_id', $filter_option->id)->get() as $creation) {
+                foreach (Creation::all() as $creation) {
+                    if ($creation->creation_groups->contains($filter_option->id)) {
                         if ($this->getAvailableArticles($creation)->count() > 0) {
                             return true; // To return true, at least one creation of the group must have available articles
                         }
                     }
                 }
+                // if (Creation::where('creation_group_id', $filter_option->id)->count() > 0) {
+                //     foreach (Creation::where('creation_group_id', $filter_option->id)->get() as $creation) {
+                //         if ($this->getAvailableArticles($creation)->count() > 0) {
+                //             return true; // To return true, at least one creation of the group must have available articles
+                //         }
+                //     }
+                // }
                 return false;
                 break;
 

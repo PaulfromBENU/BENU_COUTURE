@@ -309,10 +309,21 @@ trait FiltersGenerator {
         foreach ($applied_filters['types'] as $type => $filter_value) {
             if ($filter_value == '1') {
                 $type_filters_applied ++;
-                if ($models_filtered_by_category->where('creation_group.filter_key', $type)->count() > 0) {
-                    $models_filtered_by_type = $models_filtered_by_type->merge($models_filtered_by_category->where('creation_group.filter_key', $type));
-                    $type_models_count ++;
+                //
+                foreach ($models_filtered_by_category as $creation_checked_for_type) {
+                    if ($creation_checked_for_type->creation_groups->contains(CreationGroup::where('filter_key', $type)->first()->id)) {
+                        // Many to many relationship with type => need to check if creation not already present
+                        if (!$models_filtered_by_type->contains('id', $creation_checked_for_type->id)) {
+                            $models_filtered_by_type = $models_filtered_by_type->push($creation_checked_for_type);
+                            $type_models_count ++;
+                        }
+                    }
                 }
+                //
+                // if ($models_filtered_by_category->where('creation_group.filter_key', $type)->count() > 0) {
+                //     $models_filtered_by_type = $models_filtered_by_type->merge($models_filtered_by_category->where('creation_group.filter_key', $type));
+                //     $type_models_count ++;
+                // }
             }
          } 
         if ($type_filters_applied == 0) {

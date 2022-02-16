@@ -9,5 +9,8 @@ class ModelFilter extends Model
 {
     use HasFactory;
 
+    // Choice of the database
+    protected $connection = 'mysql';
+
     protected $fillable = ['session_id'];
 }

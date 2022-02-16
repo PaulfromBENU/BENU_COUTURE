@@ -5741,6 +5741,10 @@ $(function () {
     $('.creations-navbar__menu').css('max-height', '0px');
     fullMenuStatus = 'off';
   });
+  $('#nav-toggle-unisex').on('mouseenter', function () {
+    $('.creations-navbar__menu__list').hide();
+    $('.navbar-list-unisex').show();
+  });
   $('#nav-toggle-adult').on('mouseenter', function () {
     $('.creations-navbar__menu__list').hide();
     $('.navbar-list-adult').show();

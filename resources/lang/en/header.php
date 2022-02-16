@@ -36,6 +36,7 @@ return [
     "news" => "News",
     "story" => "Our story",
     "locations" => "Shops",
+    "unisex" => "Unisex",
     "adults" => "Adults",
     "women" => "Women",
     "men" => "Men",

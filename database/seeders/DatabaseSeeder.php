@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             PartnerSeeder::class,
             KeywordSeeder::class,
             CreationSeeder::class,
+            CreationCreationGroupSeeder::class,
             CreationAccessorySeeder::class,
             CareRecommendationSeeder::class,
             CompositionSeeder::class,

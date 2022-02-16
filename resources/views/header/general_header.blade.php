@@ -134,14 +134,17 @@
     <div class="creations-navbar">
         <div class="creations-navbar__container">
             <nav class="creations-navbar__nav flex justify-start benu-container">
-                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-adult">
-                    {{ __('header.adults') }} @svg('chevron-down')
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-unisex">
+                    {{ __('header.unisex') }} @svg('chevron-down')
                 </div>
                 <div class="creations-navbar__nav__toggle flex" id="nav-toggle-woman">
                     {{ __('header.women') }} @svg('chevron-down')
                 </div>
                 <div class="creations-navbar__nav__toggle flex" id="nav-toggle-man">
                     {{ __('header.men') }} @svg('chevron-down')
+                </div>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-adult">
+                    {{ __('header.adults') }} @svg('chevron-down')
                 </div>
                 <div class="creations-navbar__nav__toggle flex" id="nav-toggle-child">
                     {{ __('header.children') }} @svg('chevron-down')
@@ -157,205 +160,6 @@
                 </a>
             </nav>
         </div>
-        <div class="creations-navbar__menu">
-            <div class="benu-container">
-                <div class="creations-navbar__menu__lists flex justify-start">
-                    <div class="creations-navbar__menu__list navbar-list-adult">
-                        <h4>{{ __('header.menu-title-1') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Adulte</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Adulte</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-woman">
-                        <h4>{{ __('header.menu-title-1') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Femme</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Femme</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-man">
-                        <h4>{{ __('header.menu-title-1') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Homme</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Homme</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-child">
-                        <h4>{{ __('header.menu-title-1') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Enfant</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Enfant</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-accessories">
-                        <h4>{{ __('header.menu-title-1') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Accessoire</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Accessoire</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-home">
-                        <h4>{{ __('header.menu-title-1') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Maison</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Maison</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    
-
-                    <div class="creations-navbar__menu__list navbar-list-adult">
-                        <h4>{{ __('header.menu-title-2') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Adulte</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Adulte</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-woman">
-                        <h4>{{ __('header.menu-title-2') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Femme</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Femme</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-man">
-                        <h4>{{ __('header.menu-title-2') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Homme</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Homme</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-child">
-                        <h4>{{ __('header.menu-title-2') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Enfant</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Enfant</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-accessories">
-                        <h4>{{ __('header.menu-title-2') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Accessoire</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Accessoire</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="creations-navbar__menu__list navbar-list-home">
-                        <h4>{{ __('header.menu-title-2') }}</h4>
-                        <div class="flex">
-                            <ul>
-                                <li><a href="#">Voir tout</a></li>
-                                @for($i = 0; $i < 6; $i++)
-                                    <li><a href="#">Item Maison</a></li>
-                                @endfor
-                            </ul>
-                            <ul>
-                                @for($i = 0; $i < 7; $i++)
-                                    <li><a href="#">Item Maison</a></li>
-                                @endfor
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @livewire('header.creations-menu')
     </div>
 </header>

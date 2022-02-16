@@ -14,6 +14,6 @@ class CreationGroup extends Model
 
     public function creations()
     {
-        return $this->hasMany('App\Models\Creation');
+        return $this->belongsToMany('App\Models\Creation');
     }
 }

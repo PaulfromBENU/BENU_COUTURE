@@ -18,14 +18,14 @@ class CreationSeeder extends Seeder
         DB::connection('mysql')->table('creations')->delete();
         
         $name_options = ['Caretta', 'Pangolin', 'Pinni', 'Chiru', 'Shrubby', 'Porites', 'Cervico', 'Sumatan', 'Narwal', 'Jentinki', 'Bilby'];
-        $gender_options = ['male', 'female', 'neutral'];
+        //$gender_options = ['male', 'female', 'neutral'];
 
         for ($i=0; $i < 6; $i++) { 
             DB::connection('mysql')->table('creations')->insert([
                 'name' => $name_options[$i],
-                'creation_group_id' => rand(1, 6),
+                //'creation_group_id' => rand(1, 6),
                 'creation_category_id' => rand(1, 15),
-                'gender' => $gender_options[array_rand($gender_options)],
+                //'gender' => $gender_options[array_rand($gender_options)],
                 'price' => 6 * rand(1, 35),
                 'description_lu' => 'Une description du modèle en langue luxembourgeoise. Très intéréssant !',
                 'description_en' => 'Une description du modèle en langue anglaise. Très intéréssant !',
@@ -40,9 +40,9 @@ class CreationSeeder extends Seeder
         for ($i=6; $i < 11; $i++) { 
             DB::connection('mysql')->table('creations')->insert([
                 'name' => $name_options[$i],
-                'creation_group_id' => rand(1, 6),
+                //'creation_group_id' => rand(1, 6),
                 'creation_category_id' => rand(1, 15),
-                'gender' => $gender_options[array_rand($gender_options)],
+                //'gender' => $gender_options[array_rand($gender_options)],
                 'price' => 6 * rand(1, 35),
                 'description_lu' => 'Une description du modèle partenaire en langue luxembourgeoise. Très intéréssant !',
                 'description_en' => 'Une description du modèle partenaire en langue anglaise. Très intéréssant !',

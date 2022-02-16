@@ -17,9 +17,9 @@ class CreateCreationsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name')->unique();
-            $table->foreignId('creation_group_id')->onUpdate('cascade')->nullOnDelete();
+            //$table->foreignId('creation_group_id')->onUpdate('cascade')->nullOnDelete();
             $table->foreignId('creation_category_id')->onUpdate('cascade')->nullOnDelete();
-            $table->string('gender')->nullable();
+            //$table->string('gender')->nullable();
             $table->decimal('price', $precision = 6, $scale = 2)->default('0');
             $table->text('description_lu');
             $table->text('description_fr');
