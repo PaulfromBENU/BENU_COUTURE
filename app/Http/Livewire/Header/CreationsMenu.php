@@ -6,9 +6,12 @@ use Livewire\Component;
 
 use App\Models\CreationGroup;
 use App\Models\Creation;
+use App\Traits\ArticleAnalyzer;
 
 class CreationsMenu extends Component
 {
+    use ArticleAnalyzer;
+
     public $unisex_clothes;
     public $unisex_accessories;
     public $adults_clothes;
@@ -45,7 +48,7 @@ class CreationsMenu extends Component
         $category_query = "name_".app()->getLocale();
 
         //each table as 'type in correct language' => link ?
-        foreach (Creation::all() as $creation) {
+        foreach ($this->getAvailableCreations() as $creation) {
             // Fill Unisex arrays
             if ($creation->creation_groups->contains(CreationGroup::where('filter_key', 'unisex')->first()->id) && !($creation->creation_groups->contains(CreationGroup::where('filter_key', 'accessories')->first()->id))) {
                 $this->unisex_clothes[$creation->creation_category->$category_query] = $creation->creation_category->filter_key;
