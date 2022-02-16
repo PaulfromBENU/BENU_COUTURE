@@ -57,8 +57,9 @@
 			font-family: 'Barlow Condensed';
 			cursor: pointer;
 			transition: $transition-base;
-			i {
-				padding-left: 8px;
+			svg {
+				height: 26px;
+				margin-left: 15px;
 			}
 			&:hover {
 				background-color: $text-bg-color;

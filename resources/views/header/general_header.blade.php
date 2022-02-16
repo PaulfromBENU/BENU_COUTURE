@@ -134,23 +134,23 @@
     <div class="creations-navbar">
         <div class="creations-navbar__container">
             <nav class="creations-navbar__nav flex justify-start benu-container">
-                <div class="creations-navbar__nav__toggle" id="nav-toggle-adult">
-                    {{ __('header.adults') }} <i class="fas fa-angle-down"></i>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-adult">
+                    {{ __('header.adults') }} @svg('chevron-down')
                 </div>
-                <div class="creations-navbar__nav__toggle" id="nav-toggle-woman">
-                    {{ __('header.women') }} <i class="fas fa-angle-down"></i>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-woman">
+                    {{ __('header.women') }} @svg('chevron-down')
                 </div>
-                <div class="creations-navbar__nav__toggle" id="nav-toggle-man">
-                    {{ __('header.men') }} <i class="fas fa-angle-down"></i>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-man">
+                    {{ __('header.men') }} @svg('chevron-down')
                 </div>
-                <div class="creations-navbar__nav__toggle" id="nav-toggle-child">
-                    {{ __('header.children') }} <i class="fas fa-angle-down"></i>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-child">
+                    {{ __('header.children') }} @svg('chevron-down')
                 </div>
-                <div class="creations-navbar__nav__toggle" id="nav-toggle-accessories">
-                    {{ __('header.accessories') }} <i class="fas fa-angle-down"></i>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-accessories">
+                    {{ __('header.accessories') }} @svg('chevron-down')
                 </div>
-                <div class="creations-navbar__nav__toggle" id="nav-toggle-home">
-                    {{ __('header.house') }} <i class="fas fa-angle-down"></i>
+                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-home">
+                    {{ __('header.house') }} @svg('chevron-down')
                 </div>
                 <a href="{{ route('vouchers-'.app()->getLocale()) }}" class="creations-navbar__nav__toggle-link">
                     {{ __('header.vouchers') }}

@@ -5734,6 +5734,13 @@ $(function () {
     $('.creations-navbar__menu').css('max-height', '280px');
     fullMenuStatus = 'on';
   });
+  $('.creations-navbar__nav__toggle-link').on('mouseenter', function () {
+    //Remove all menus to avoid multiple display
+    $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active'); //Add menu of hovered toggle
+
+    $('.creations-navbar__menu').css('max-height', '0px');
+    fullMenuStatus = 'off';
+  });
   $('#nav-toggle-adult').on('mouseenter', function () {
     $('.creations-navbar__menu__list').hide();
     $('.navbar-list-adult').show();

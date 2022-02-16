@@ -116,6 +116,9 @@
 		background: $primary-color;
 		color: $white;
 	}
+	&--transparent {
+		background: transparent;
+	}
 }
 
 .btn-couture-plain {
