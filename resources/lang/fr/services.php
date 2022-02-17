@@ -10,8 +10,21 @@
 */
 
 return [
+    // SEO
     "seo-title" => "Le service clients BENU COUTURE",
     "seo-description" => "Bienvenue sur le service clients de BENU COUTURE. Vous trouverez ici toutes les informations necessaires concernant nos services, vos commandes, vos moyens de paiement, les livraisons...",
+    //Title
+    "main-title" => "Service Client",
+    // Nav
+    "nav-faq" => "FAQ",
+    "nav-delivery" => "Livraison",
+    "nav-sizes" => "Guide des tailles",
+    "nav-return" => "Retour",
+    "nav-payment" => "Méthodes de paiement",
+    "nav-care" => "Entretien des vêtements",
+    "nav-shops" => "Points de vente",
+    "nav-contact" => "Contact",
+    // FAQ
     "faq-title" => "Toutes les réponses <br/>à mes questions",
     "faq-group-title-1" => "Environnement et développement durable",
     "faq-group-desc-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
@@ -90,4 +103,63 @@ return [
     "faq-group-6-question-content-4" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
     "faq-group-6-question-title-5" => "Wie kann ich etwas reklamieren?",
     "faq-group-6-question-content-5" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
+    // Care
+    "care-title" => "Entretien des vêtements",
+    "care-subtitle" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu.",
+    "care-category-1" => "Lavage",
+    "care-method-1-1" => "Nettoyage à sec",
+    "care-method-1-2" => "Repassage fer doux",
+    "care-method-1-3" => "Séchage en machine à proscrire",
+    "care-category-2" => "Séchage",
+    "care-method-2-1" => "Nettoyage à sec",
+    "care-method-2-2" => "Repassage fer doux",
+    "care-method-2-3" => "Séchage en machine à proscrire",
+    "care-category-3" => "Repassage",
+    "care-method-3-1" => "Nettoyage à sec",
+    "care-method-3-2" => "Repassage fer doux",
+    "care-method-3-3" => "Séchage en machine à proscrire",
+    // Contact
+    "contact-subtitle" => "Nous contacter",
+    "contact-title" => "Je contacte BENU COUTURE",
+    "contact-opening" => "Ouvert du lundi au samedi<br/>Le lundi de 10h à 17h30<br/>Du mardi au samedi de 9h à 18h",
+    "contact-extra-txt" => "Du texte en complement, a completer si besoin",
+    // Delivery
+    "delivery-title" => "Livraison",
+    "delivery-subtitle" => "Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula.",
+    "delivery-txt" => "Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula.",
+    // Payment
+    "payment-title" => "Méthodes de paiement",
+    "payment-subtitle" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue.",
+    "payment-option-1-title" => "Paiement par carte de crédit, de débit ou prépayée",
+    "payment-option-1-desc" => "Nous acceptons les cartes suivantes: Visa, Mastercard, American Express, Maestro, Carte Bancaire. Pour effectuer le paiement, vous devrez saisir votre numéro de carte de crédit ainsi que le cryptogramme visuel, une garantie supplémentaire lors de la transaction.",
+    "payment-option-2-title" => "Paiement par Paypal",
+    "payment-option-2-desc" => "Nous acceptons les cartes suivantes: Visa, Mastercard, American Express, Maestro, Carte Bancaire. Pour effectuer le paiement, vous devrez saisir votre numéro de carte de crédit ainsi que le cryptogramme visuel, une garantie supplémentaire lors de la transaction.",
+    "payment-option-3-title" => "Paiement par Digicash",
+    "payment-option-3-desc" => "Nous acceptons les cartes suivantes: Visa, Mastercard, American Express, Maestro, Carte Bancaire. Pour effectuer le paiement, vous devrez saisir votre numéro de carte de crédit ainsi que le cryptogramme visuel, une garantie supplémentaire lors de la transaction.",
+    "payment-option-4-title" => "Paiement par virement bancaire",
+    "payment-option-4-desc" => "Nous acceptons les cartes suivantes: Visa, Mastercard, American Express, Maestro, Carte Bancaire. Pour effectuer le paiement, vous devrez saisir votre numéro de carte de crédit ainsi que le cryptogramme visuel, une garantie supplémentaire lors de la transaction.",
+    // Return
+    "return-title" => "Retour",
+    "return-txt-1" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu. Vivamus placerat malesuada leo bibendum maximus. Sed faucibus neque vitae sem ornare, non auctor mi malesuada. Fusce nec dolor et mauris tempus mattis. Nunc cursus arcu sapien, non bibendum quam sollicitudin nec. Phasellus dolor magna, luctus vitae nisl ut, lobortis dictum orci. Donec at felis posuere, mattis odio ac, pretium tortor. Donec ut quam interdum, volutpat dolor sit amet, luctus elit. Phasellus non lacinia ex, id fermentum eros. Sed semper ultrices magna, nec varius nulla pretium quis.",
+    "return-txt-2" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu. Vivamus placerat malesuada leo bibendum maximus. Sed faucibus neque vitae sem ornare, non auctor mi malesuada. Fusce nec dolor et mauris tempus mattis. Nunc cursus arcu sapien, non bibendum quam sollicitudin nec. Phasellus dolor magna, luctus vitae nisl ut, lobortis dictum orci. Donec at felis posuere, mattis odio ac, pretium tortor. Donec ut quam interdum, volutpat dolor sit amet, luctus elit. Phasellus non lacinia ex, id fermentum eros. Sed semper ultrices magna, nec varius nulla pretium quis.",
+    "return-highlighted-1" => "Container pour mise en avant d’un contenu",
+    "return-contact" => "Nous contacter pour un retour",
+    // Shops
+    "shops-title" => "Points de vente",
+    "shops-articles-link" => "Voir tous les articles",
+    "shops-opening" => "Horaires&nbsp;",
+    "shops-monday" => "Lundi&nbsp;",
+    "shops-tuesday" => "Mardi&nbsp;",
+    "shops-wednesday" => "Mercredi&nbsp;",
+    "shops-thursday" => "Jeudi&nbsp;",
+    "shops-friday" => "Vendredi&nbsp;",
+    "shops-saturday" => "Samedi&nbsp;",
+    "shops-sunday" => "Dimanche&nbsp;",
+    "shops-closed" => "Fermé",
+    "shops-address" => "Adresse&nbsp;",
+    "shops-email" => "E-mail&nbsp;",
+    "shops-phone" => "Téléphone&nbsp;",
+    "shops-website" => "Site web&nbsp;",
+    // Sizes
+    "sizes-title" => "Guide des tailles",
 ];

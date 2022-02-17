@@ -1,17 +1,17 @@
 <section class="w-1/2 m-auto text-center care service-panel" id="services-care">
-	<h2 class="care__title">Entretien des vêtements</h2>
+	<h2 class="care__title">{{ __('services.care-title') }}</h2>
 	<p class="care__subtitle">
-		Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu.
+		{{ __('services.care-subtitle') }}
 	</p>
 
-	<h4 class="text-center care__grid__title">Lavage</h4>
+	<h4 class="text-center care__grid__title">{{ __('services.care-category-1') }}</h4>
 	<div class="care__grid flex justify-between flex-wrap">
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
 				@svg('services_care_1')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Nettoyage à sec
+				{{ __('services.care-method-1-1') }}
 			</p>
 		</div>
 
@@ -20,7 +20,7 @@
 				@svg('services_care_2')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Repassage fer doux
+				{{ __('services.care-method-1-2') }}
 			</p>
 		</div>
 
@@ -29,19 +29,19 @@
 				@svg('services_care_3')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Séchage en machine à proscrire
+				{{ __('services.care-method-1-3') }}
 			</p>
 		</div>
 	</div>
 
-	<h4 class="text-center care__grid__title">Séchage</h4>
+	<h4 class="text-center care__grid__title">{{ __('services.care-category-2') }}</h4>
 	<div class="care__grid flex justify-between flex-wrap">
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
 				@svg('services_care_1')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Nettoyage à sec
+				{{ __('services.care-method-2-1') }}
 			</p>
 		</div>
 
@@ -50,7 +50,7 @@
 				@svg('services_care_2')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Repassage fer doux
+				{{ __('services.care-method-2-2') }}
 			</p>
 		</div>
 
@@ -59,19 +59,19 @@
 				@svg('services_care_3')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Séchage en machine à proscrire
+				{{ __('services.care-method-2-3') }}
 			</p>
 		</div>
 	</div>
 
-	<h4 class="text-center care__grid__title">Repassage</h4>
+	<h4 class="text-center care__grid__title">{{ __('services.care-category-3') }}</h4>
 	<div class="care__grid flex justify-between flex-wrap">
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
 				@svg('services_care_1')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Nettoyage à sec
+				{{ __('services.care-method-3-1') }}
 			</p>
 		</div>
 
@@ -80,7 +80,7 @@
 				@svg('services_care_2')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Repassage fer doux
+				{{ __('services.care-method-3-2') }}
 			</p>
 		</div>
 
@@ -89,7 +89,7 @@
 				@svg('services_care_3')
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				Séchage en machine à proscrire
+				{{ __('services.care-method-3-3') }}
 			</p>
 		</div>
 	</div>

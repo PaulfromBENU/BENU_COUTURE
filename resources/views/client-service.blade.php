@@ -63,31 +63,31 @@
 @section('main-content')
 	<div class="benu-container text-center service">
 		<h4 class="service__subtitle">BENU COUTURE</h4>
-		<h2 class="service__title">Service Client</h2>
+		<h2 class="service__title">{{ __('services.main-title') }}</h2>
 		<div class="service__nav flex justify-center">
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="service__nav__link @if($page == '' || $page == __('slugs.services-faq')) service__nav__link--active @endif" id="service-nav-faq">
-				{{ __('breadcrumbs.faq') }}
+				{{ __('services.nav-faq') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="service__nav__link @if($page == __('slugs.services-delivery')) service__nav__link--active @endif" id="service-nav-delivery">
-				{{ __('breadcrumbs.delivery') }}
+				{{ __('services.nav-delivery') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-sizes')]) }}" class="service__nav__link @if($page == __('slugs.services-sizes')) service__nav__link--active @endif" id="service-nav-sizes">
-				{{ __('breadcrumbs.sizes') }}
+				{{ __('services.nav-sizes') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" class="service__nav__link @if($page == __('slugs.services-return')) service__nav__link--active @endif" id="service-nav-return">
-				{{ __('breadcrumbs.return') }}
+				{{ __('services.nav-return') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-payment')]) }}" class="service__nav__link @if($page == __('slugs.services-payment')) service__nav__link--active @endif" id="service-nav-payment">
-				{{ __('breadcrumbs.payment') }}
+				{{ __('services.nav-payment') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-care')]) }}" class="service__nav__link @if($page == __('slugs.services-care')) service__nav__link--active @endif" id="service-nav-care">
-				{{ __('breadcrumbs.care') }}
+				{{ __('services.nav-care') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="service__nav__link @if($page == __('slugs.services-shops')) service__nav__link--active @endif" id="service-nav-shops">
-				{{ __('breadcrumbs.shops') }}
+				{{ __('services.nav-shops') }}
 			</a>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="service__nav__link @if($page == __('slugs.services-contact')) service__nav__link--active @endif" id="service-nav-contact">
-				{{ __('breadcrumbs.contact') }}
+				{{ __('services.nav-contact') }}
 			</a>
 		</div>
 	</div>

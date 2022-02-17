@@ -10,8 +10,21 @@
 */
 
 return [
+    // SEO
     "seo-title" => " services.seo-title",
     "seo-description" => " services.seo-description",
+    //Title
+    "main-title" => "services.main-title",
+    // Nav
+    "nav-faq" => "services.nav-faq",
+    "nav-delivery" => "services.nav-delivery",
+    "nav-sizes" => "services.nav-sizes",
+    "nav-return" => "services.nav-return",
+    "nav-payment" => "services.nav-payment",
+    "nav-care" => "services.nav-care",
+    "nav-shops" => "services.nav-shops",
+    "nav-contact" => "services.nav-contact",
+    // FAQ
     "faq-title" => " services.faq-title",
     "faq-group-title-1" => " services.faq-group-title-1",
     "faq-group-desc-1" => " services.faq-group-desc-1",
@@ -90,4 +103,63 @@ return [
     "faq-group-6-question-content-4" => " services.faq-group-6-question-content-4",
     "faq-group-6-question-title-5" => " services.faq-group-6-question-title-5",
     "faq-group-6-question-content-5" => " services.faq-group-6-question-content-5",
+    // Care
+    "care-title" => "services.care-title",
+    "care-subtitle" => "services.care-subtitle",
+    "care-category-1" => "services.care-category-1",
+    "care-method-1-1" => "services.care-method-1-1",
+    "care-method-1-2" => "services.care-method-1-2",
+    "care-method-1-3" => "services.care-method-1-3",
+    "care-category-2" => "services.care-category-2",
+    "care-method-2-1" => "services.care-method-2-1",
+    "care-method-2-2" => "services.care-method-2-2",
+    "care-method-2-3" => "services.care-method-2-3",
+    "care-category-3" => "services.care-category-3",
+    "care-method-3-1" => "services.care-method-3-1",
+    "care-method-3-2" => "services.care-method-3-2",
+    "care-method-3-3" => "services.care-method-3-3",
+    // Contact
+    "contact-subtitle" => "services.contact-subtitle",
+    "contact-title" => "services.contact-title",
+    "contact-opening" => "services.contact-opening",
+    "contact-extra-txt" => "services.contact-extra-txt",
+    // Delivery
+    "delivery-title" => "services.delivery-title",
+    "delivery-subtitle" => "services.delivery-subtitle",
+    "delivery-txt" => "services.delivery-txt",
+    // Payment
+    "payment-title" => "services.payment-title",
+    "payment-subtitle" => "services.payment-subtitle",
+    "payment-option-1-title" => "services.payment-option-1-title",
+    "payment-option-1-desc" => "services.payment-option-1-desc",
+    "payment-option-2-title" => "services.payment-option-2-title",
+    "payment-option-2-desc" => "services.payment-option-2-desc",
+    "payment-option-3-title" => "services.payment-option-3-title",
+    "payment-option-3-desc" => "services.payment-option-3-desc",
+    "payment-option-4-title" => "services.payment-option-4-title",
+    "payment-option-4-desc" => "services.payment-option-4-desc",
+    // Return
+    "return-title" => "services.return-title",
+    "return-txt-1" => "services.return-txt-1",
+    "return-txt-2" => "services.return-txt-2",
+    "return-highlighted-1" => "services.return-highlighted-1",
+    "return-contact" => "services.return-contact",
+    // Shops
+    "shops-title" => "services.shops-title",
+    "shops-articles-link" => "services.shops-articles-link",
+    "shops-opening" => "services.shops-opening",
+    "shops-monday" => "services.shops-monday",
+    "shops-tuesday" => "services.shops-tuesday",
+    "shops-wednesday" => "services.shops-wednesday",
+    "shops-thursday" => "services.shops-thursday",
+    "shops-friday" => "services.shops-friday",
+    "shops-saturday" => "services.shops-saturday",
+    "shops-sunday" => "services.shops-sunday",
+    "shops-closed" => "services.shops-closed",
+    "shops-address" => "services.shops-address",
+    "shops-email" => "services.shops-email",
+    "shops-phone" => "services.shops-phone",
+    "shops-website" => "services.shops-website",
+    // Sizes
+    "sizes-title" => "services.sizes-title",
 ];

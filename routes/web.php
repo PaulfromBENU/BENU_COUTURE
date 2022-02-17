@@ -86,14 +86,5 @@ Route::group([
 
 Route::group([
 	'middleware' => 'setlocale'], function() {
-
 	Route::get('/{slug?}', 'ModelController@show')->where('slug', '[a-zA-Z0-9]{3, }');
-	// Route::get('/modeles/{name?}', 'ModelController@show')->name('model');
-	// Route::get('/modeles/{name?}/sold', 'ModelController@soldItems')->name('sold');
-	// Route::get('/benu-service-client/{page?}', 'ContactController@showAll')->name('client-service');
-	// Route::get('/benu-toute-l-histoire', 'GeneralController@showFullStory')->name('full-story');
-	// Route::get('/benu-apropos', 'GeneralController@showAbout')->name('about');
-	// Route::get('/partenaires-benu-couture', 'GeneralController@showPartners')->name('partners');
-	// Route::get('/bons-achat', 'GeneralController@showVouchers')->name('vouchers');
-	// Route::get('/actualites/{slug?}', 'GeneralController@showNews')->name('news');
 });
