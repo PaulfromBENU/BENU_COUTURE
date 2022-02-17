@@ -1,8 +1,8 @@
 <section class="model-articles benu-container" id="model-articles">
-	<h2>Les bons d'achat</h2>
+	<h2>{{ __('vouchers.options-title') }}</h2>
 	<div class="model-articles__filters flex">
 		<div class="model-articles__filters__filter">
-			<p>Pas de filtres disponibles</p>
+			<p>{{ __('vouchers.options-no-filter') }}</p>
 		</div>
 	</div>
 

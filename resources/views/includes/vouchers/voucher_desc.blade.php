@@ -3,20 +3,20 @@
 		<img src="{{ asset('images/pictures/vouchers_img.png') }}">
 	</div>
 	<div class="model-pres__desc">
-		<h1 class="model-pres__desc__title">Bon d’achat personnalisé</h1>
+		<h1 class="model-pres__desc__title">{{ __('vouchers.desc-title') }}</h1>
 		<p class="model-pres__desc__txt-vouchers">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum neque, mollis a mauris sit amet, condimentum ullamcorper tortor. Donec vel ligula imperdiet ex fermentum finibus ac in nunc.
+			{{ __('vouchers.desc-txt-1') }}
 		</p>
 		<p class="model-pres__desc__txt-vouchers">
-			 Ut quis commodo nec vel ligula imperdiet ex fermentum finib. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum neque, mollis a mauris sit amet, condimentum ullamcorper tortor. 
+			{{ __('vouchers.desc-txt-2') }}
 		</p>
 		<p class="model-pres__desc__txt-vouchers">
-			 Donec vel ligula imperdiet ex fermentum finibus ac in nunc. Ut quis commodo nec vel ligula imperdiet ex fermentum finib. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum neque, mollis a mauris sit amet, condimentum ullamcorper tortor. Donec vel ligula imperdiet ex fermentum finibus ac in nunc. Ut quis commodo nec vel ligula imperdiet ex fermentum finib.
+			{{ __('vouchers.desc-txt-3') }}
 		</p>
 		
 		<div class="flex model-pres__desc__seemore">
 			<a href="#model-articles" class="flex">
-				Découvre tous les bons d'achat @svg('model_arrow_down')
+				{{ __('vouchers.desc-link') }} @svg('model_arrow_down')
 			</a>
 		</div>
 	</div>

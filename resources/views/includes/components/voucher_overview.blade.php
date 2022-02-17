@@ -16,11 +16,11 @@
 		<div class="flex justify-start">
 			@if($voucher->voucher_type == 'pdf')
 			<p class="article-overview__footer__size">
-				FORMAT PDF
+				{{ __('vouchers.format-pdf') }}
 			</p>
 			@else
 			<p class="article-overview__footer__size">
-				FORMAT TISSU
+				{{ __('vouchers.format-clothe') }}
 			</p>
 			@endif
 		</div>
@@ -28,11 +28,11 @@
 			
 		</p>
 		<p class="article-overview__footer__name">
-			Bon d'achat
+			{{ __('vouchers.card-name') }}
 		</p>
 		<div class="flex justify-between">
 			<p class="article-overview__footer__price" style="font-size: 2rem;">
-				{{ $voucher->voucher_value }}&euro;
+				{{ __('vouchers.card-price') }}&euro;
 			</p>
 			<div class="article-overview__footer__heart">
 				<div class="article-overview__footer__heart__icon">

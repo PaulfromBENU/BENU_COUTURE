@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	{{ __('service.seo-title') }}
+	{{ __('partners.seo-title') }}
 @endsection
 
 @section('description')
-	{{ __('service.seo-description') }}
+	{{ __('partners.seo-description') }}
 @endsection
 
 @section('breadcrumbs')
@@ -23,9 +23,9 @@
 @section('main-content')
 	<section class="partners flex justify-between benu-container">
 		<div class="w-1/5">
-			<h2 class="partners__side-title">Nos partenaires</h2>
+			<h2 class="partners__side-title">{{ __('partners.title') }}</h2>
 			<p class="partners__side-txt">
-				Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.
+				{{ __('partners.side-txt') }}
 			</p>
 		</div>
 		<div class="w-9/12">
@@ -38,7 +38,7 @@
 					<div class="flex justify-between">
 						<h3 class="partners__box__title">{{ $partner->name }}</h3>
 						<p>
-							<a href="{{ route('model-'.app()->getLocale()) }}" class="btn-couture-plain">Voir tous les articles</a>
+							<a href="{{ route('model-'.app()->getLocale(), ['partners' => $partner->filter_key]) }}" class="btn-couture-plain">{{ __('partners.see-articles-link') }}</a>
 						</p>
 					</div>
 					<p class="partners__box__desc">
@@ -47,18 +47,18 @@
 					<div class="text-left partners__box__highlight">
 						<div class="flex justify-start">
 							<p class="w-7/12 mb-2">
-								<strong>Adresse&nbsp;:</strong> {{ $partner->address }}
+								<strong>{!! __('partners.address') !!}:</strong> {{ $partner->address }}
 							</p>
 							<p>
-								<strong>E-mail&nbsp;:</strong> <span class="primary-color"><a href="mailto:{{ $partner->email }}" class="partners__box__link" target="_blank">{{ $partner->email }}</a></span>
+								<strong>{!! __('partners.email') !!}:</strong> <span class="primary-color"><a href="mailto:{{ $partner->email }}" class="partners__box__link" target="_blank">{{ $partner->email }}</a></span>
 							</p>
 						</div>
 						<div class="flex justify-start">
 							<p class="w-7/12">
-								<strong>Téléphone&nbsp;:</strong> {{ $partner->email }}
+								<strong>{!! __('partners.phone') !!}:</strong> {{ $partner->email }}
 							</p>
 							<p>
-								<strong>Site&nbsp;:</strong> <span class="primary-color"><a href="https://{{ $partner->website }}" class="partners__box__link" target="_blank">{{ $partner->website }}</a></span>
+								<strong>{!! __('partners.website') !!}:</strong> <span class="primary-color"><a href="https://{{ $partner->website }}" class="partners__box__link" target="_blank">{{ $partner->website }}</a></span>
 							</p>
 						</div>
 					</div>

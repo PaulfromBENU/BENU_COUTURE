@@ -1,7 +1,7 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	{{ __('sold.seo-title', ['name' => 'Caretta']) }}
+	{{ __('sold.seo-title', ['name' => $model_name]) }}
 @endsection
 
 @section('description')
@@ -31,7 +31,7 @@
 @section('main-content')
 	<section class="sold">
 		<div>
-			<h1 class="sold__title">Découvrez les déclinaisons vendues du modèle {{ $model_name }}</h1>
+			<h1 class="sold__title">{{ __('models.sold-title') }} {{ ucfirst($model_name) }}</h1>
 		</div>
 		<div>
 			@livewire('filters.sold-articles-filter', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters])
@@ -40,7 +40,7 @@
 				@livewire('filters.filtered-sold-articles', ['creation' => $model, 'initial_filters' => $initial_filters])
 				<div class="sold__link text-center">
 					<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model_name)]) }}" class="btn-slider-left m-auto block">
-						Retour au modèle {{ strtoupper($model_name) }}
+						{{ __('models.sold-back-link') }} {{ strtoupper($model_name) }}
 					</a>
 				</div>
 			</div>

@@ -3,13 +3,13 @@
         <div class="all-models__filters flex justify-start benu-container">
             <div class="flex justify-start">
                 <div class="all-models__filters__filter flex" id="filter-size">
-                    <p>Taille</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-size') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-color">
-                    <p>Couleur</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-color') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-shops">
-                    <p>Points de vente</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-shop') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
             </div>
         </div>

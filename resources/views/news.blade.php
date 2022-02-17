@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	Toutes les actualités de BENU COUTURE
+	{{ __('news.all-seo-title') }}
 @endsection
 
 @section('description')
-	Restez au courant de toutes les actualités de BENU COUTURE en lisant nos articles, mis à jour régulièrement.
+	{{ __('news.all-seo-desc') }}
 @endsection
 
 @section('breadcrumbs')
@@ -22,8 +22,8 @@
 
 @section('main-content')
 	<div class="text-center all-news w-1/2 m-auto">
-		<h4 class="all-news__subtitle">Nos campagnes</h4>
-		<h2 class="all-news__title">Toutes les actualités</h2>
+		<h4 class="all-news__subtitle">{{ __('news.all-subtitle') }}</h4>
+		<h2 class="all-news__title">{{ __('news.all-title') }}</h2>
 
 		<div>
 			@for($i = 1; $i <= 5; $i++)

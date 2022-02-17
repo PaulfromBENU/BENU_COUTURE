@@ -26,7 +26,7 @@
         </p>
         <div class="flex justify-between">
             <p class="sold-overview__footer__price">
-                VENDU
+                {{ __('models.sold-sold') }}
             </p>
             @auth
             <div class="article-overview__footer__heart" wire:click="toggleWishlist">

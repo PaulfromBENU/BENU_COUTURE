@@ -13,7 +13,7 @@
         @endif
 	</div>
 	<div class="model-pres__desc">
-		<h1 class="model-pres__desc__title">Modèle {{ strtoupper($model->name) }}</h1>
+		<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
 		<p class="model-pres__desc__txt">
 			{{ $localized_description }}
 		</p>
@@ -37,15 +37,15 @@
 			@endif
 		</div>
 		<div class="model-pres__desc__link">
-			<a href="{{ $model->origin_link }}" target="_blank" class="btn-slider-left">Toutes les origines du mot {{ strtoupper($model->name) }}</a>
+			<a href="{{ $model->origin_link }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
 		</div>
 		<div class="flex model-pres__desc__seemore">
 			<a href="#model-articles" class="flex">
-				Découvre toutes les déclinaisons @svg('model_arrow_down')
+				{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 			</a>
 			
 				<a class="flex">
-					Découvre tous les accessoires @svg('model_arrow_down')
+					{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
 				</a>
 			
 		</div>
