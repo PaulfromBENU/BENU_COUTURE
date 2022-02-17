@@ -3,27 +3,27 @@
         <div class="all-models__filters flex justify-between benu-container">
             <div class="flex justify-start">
                 <div class="all-models__filters__filter flex" id="filter-category">
-                    <p>Catégorie</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-gender">
-                    <p>Type</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-type') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-color">
-                    <p>Couleur</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-color') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-price">
-                    <p>Prix</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-price') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-partners">
-                    <p>Partenaires</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-partner') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 <div class="all-models__filters__filter flex" id="filter-shops">
-                    <p>Points de vente</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    <p>{{ __('models.filter-shop') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
             </div>
 
             <div class="all-models__filters__filter flex" style="margin-right: 5px;" id="filter-order">
-                <p>Classer par</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                <p>{{ __('models.filter-order-by') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
             </div>
         </div>
 

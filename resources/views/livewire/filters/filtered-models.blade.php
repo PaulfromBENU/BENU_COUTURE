@@ -1,7 +1,7 @@
 <div class="benu-container flex flex-wrap justify-start all-models__list">
     @if($sections_number == 0 || $filtered_models->count() == 0)
         <div class="filter-no-result">
-            Malheureusement, il n'y a aucun modèle correspondant actuellement à votre recherche...
+            {{ __('models.filter-no-result') }}
         </div>
     @endif
     @for($j = 0; $j < $sections_number; $j++)
@@ -25,29 +25,29 @@
                 <p class="all-models__list__separator__title">
                     @switch($j)
                         @case(0)
-                        7000 à 10 000 litres d’eau
+                        {{ __('models.info-1-header') }}
                         @break
                         
                         @case(1)
-                        Pas la peine de les jeter
+                        {{ __('models.info-2-header') }}
                         @break
 
                         @default
-                        7000 à 10 000 litres d’eau
+                        {{ __('models.info-1-header') }}
                     @endswitch
                 </p>
                 <p class="all-models__list__separator__subtitle">
                     @switch($j)
                         @case(0)
-                        C’est le nombre de litres d’eau nécessaires pour fabriquer un jeans.
+                        {{ __('models.info-1-txt') }}
                         @break
                         
                         @case(1)
-                        Pas la peine de les jeter BENU COUTURE reprend tes vêtements pour des créations uniques.
+                        {{ __('models.info-2-txt') }}
                         @break
 
                         @default
-                        C’est le nombre de litres d’eau nécessaires pour fabriquer un jeans.
+                        {{ __('models.info-1-txt') }}
                     @endswitch
                 </p>
             </div>

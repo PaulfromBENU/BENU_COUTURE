@@ -45,5 +45,17 @@ return [
     "house" => "Maison",
     "menu-title-1" => "Vêtements",
     "menu-title-2" => "Accessoires",
-
+    "see-all-clothes-unisex" => "Voir tous les vêtements unisexes",
+    "see-all-accessories-unisex" => "Voir tous les accessoires unisexes",
+    "see-all-clothes-ladies" => "Voir tous les vêtements femmes",
+    "see-all-accessories-ladies" => "Voir tous les accessoires femmes",
+    "see-all-clothes-gentlemen" => "Voir tous les vêtements hommes",
+    "see-all-accessories-gentlemen" => "Voir tous les accessoires hommes",
+    "see-all-clothes-kids" => "Voir tous les vêtements enfants",
+    "see-all-accessories-kids" => "Voir tous les accessoires enfants",
+    "see-all-clothes-adults" => "Voir tous les vêtements adultes",
+    "see-all-accessories-adults" => "Voir tous les accessoires adultes",
+    "see-all-accessories" => "Voir tous les accessoires",
+    "see-all-home-creations" => "Voir tout pour la maison",
+    "search" => "Rechercher",
 ];

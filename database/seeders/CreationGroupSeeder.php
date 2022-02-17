@@ -20,7 +20,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => 'Unisex',
             'name_en' => 'Unisex',
             'name_lu' => 'Unisex Lu',
-            'name_de' => 'group.unisex',
+            'name_de' => 'type.unisex',
             'filter_key' => 'unisex',
         ]);
 
@@ -28,7 +28,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => 'Dames',
             'name_en' => 'Ladies',
             'name_lu' => 'Ladies Lu',
-            'name_de' => 'group.ladies',
+            'name_de' => 'type.ladies',
             'filter_key' => 'ladies',
         ]);
 
@@ -36,7 +36,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => 'Messieurs',
             'name_en' => 'Gentlemen',
             'name_lu' => 'Messieurs Lu',
-            'name_de' => 'group.gentlemen',
+            'name_de' => 'type.gentlemen',
             'filter_key' => 'gentlemen',
         ]);
 
@@ -44,7 +44,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => 'Enfants',
             'name_en' => 'Kids',
             'name_lu' => 'Kids Lu',
-            'name_de' => 'group.kids',
+            'name_de' => 'type.kids',
             'filter_key' => 'kids',
         ]);
 
@@ -52,7 +52,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => 'Accessoires',
             'name_en' => 'Accessories',
             'name_lu' => 'Accessories Lu',
-            'name_de' => 'group.accessories',
+            'name_de' => 'type.accessories',
             'filter_key' => 'accessories',
         ]);
 
@@ -60,7 +60,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => 'Maison',
             'name_en' => 'Home',
             'name_lu' => 'Home Lu',
-            'name_de' => 'group.home',
+            'name_de' => 'type.home',
             'filter_key' => 'home',
         ]);
 
@@ -68,7 +68,7 @@ class CreationGroupSeeder extends Seeder
             'name_fr' => "Bon d'achat",
             'name_en' => 'Voucher',
             'name_lu' => 'Voucher Lu',
-            'name_de' => 'group.voucher',
+            'name_de' => 'type.voucher',
             'filter_key' => 'voucher',
         ]);
     }

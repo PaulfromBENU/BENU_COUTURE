@@ -5,7 +5,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex']) }}">Voir tous les vêtements unisexe</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex']) }}">{{ __('header.see-all-clothes-unisex') }}</a></li>
                         @foreach($unisex_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -27,7 +27,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*gentlemen*unisex']) }}">Voir tous les vêtements adultes</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*gentlemen*unisex']) }}">{{ __('header.see-all-clothes-adults') }}</a></li>
                         @foreach($adults_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex*ladies*gentlemen', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -49,7 +49,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies']) }}">Voir tous les vêtements femmes</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies']) }}">{{ __('header.see-all-clothes-ladies') }}</a></li>
                         @foreach($ladies_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -71,7 +71,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'gentlemen']) }}">Voir tous les vêtements hommes</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'gentlemen']) }}">{{ __('header.see-all-clothes-gentlemen') }}</a></li>
                         @foreach($gentlemen_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'gentlemen', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -93,7 +93,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'kids']) }}">Voir tous les vêtements enfants</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'kids']) }}">{{ __('header.see-all-clothes-kids') }}</a></li>
                         @foreach($kids_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'kids', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -115,7 +115,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'accessories']) }}">Voir tous les accessoires</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'accessories']) }}">{{ __('header.see-all-accessories') }}</a></li>
                         @foreach($accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'accessories', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -137,7 +137,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home']) }}">Voir toutes les créations pour la maison</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home']) }}">{{ __('header.see-all-home-creations') }}</a></li>
                         @foreach($home_creations as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -161,7 +161,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex*accessories']) }}">Voir tous les accessoires unisexe</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex*accessories']) }}">{{ __('header.see-all-accessories-unisex') }}</a></li>
                         @foreach($unisex_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex*accessories', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -183,7 +183,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*gentlemen*unisex*accessories']) }}">Voir tous les accessoires adultes</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*gentlemen*unisex*accessories']) }}">{{ __('header.see-all-accessories-adults') }}</a></li>
                         @foreach($adults_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex*ladies*gentlemen', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -205,7 +205,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*accessories']) }}">Voir tous les accessoires femmes</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*accessories']) }}">{{ __('header.see-all-accessories-ladies') }}</a></li>
                         @foreach($ladies_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies*accessories', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -227,7 +227,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'gentlemen*accessories']) }}">Voir tous les accessoires hommes</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'gentlemen*accessories']) }}">{{ __('header.see-all-accessories-gentlemen') }}</a></li>
                         @foreach($gentlemen_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'gentlemen*accessories', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -249,7 +249,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'kids*accessories']) }}">Voir tous les accessoires enfants</a></li>
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'kids*accessories']) }}">{{ __('header.see-all-accessories-kids') }}</a></li>
                         @foreach($kids_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'kids*accessories', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -267,38 +267,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="creations-navbar__menu__list navbar-list-accessories">
-                <h4>{{ __('header.menu-title-2') }}</h4>
-                <div class="flex">
-                    <ul>
-                        <li><a href="#">Voir tout</a></li>
-                        @for($i = 0; $i < 6; $i++)
-                            <li><a href="#">Item Accessoire</a></li>
-                        @endfor
-                    </ul>
-                    <ul>
-                        @for($i = 0; $i < 7; $i++)
-                            <li><a href="#">Item Accessoire</a></li>
-                        @endfor
-                    </ul>
-                </div>
-            </div>
-            <div class="creations-navbar__menu__list navbar-list-home">
-                <h4>{{ __('header.menu-title-2') }}</h4>
-                <div class="flex">
-                    <ul>
-                        <li><a href="#">Voir tout</a></li>
-                        @for($i = 0; $i < 6; $i++)
-                            <li><a href="#">Item Maison</a></li>
-                        @endfor
-                    </ul>
-                    <ul>
-                        @for($i = 0; $i < 7; $i++)
-                            <li><a href="#">Item Maison</a></li>
-                        @endfor
-                    </ul>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
