@@ -108,6 +108,16 @@ input[type="checkbox"] {
 		z-index: -1;
 		display: block;
 	}
+	&__label-active {
+		position: absolute;
+		bottom: 35px !important;
+		left: 12px;
+		transform: scale(0.75) !important;
+		transform-origin: left top;
+		transition: $transition-base;
+		z-index: -1;
+		display: block;
+	}
 	input {
 		background: transparent;
 		position: absolute;

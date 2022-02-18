@@ -20,6 +20,10 @@
 		{{ __('services.contact-extra-txt') }}
 	</div>
 	<div class="contact__form">
-		<!-- To be completed with the contact form -->
+		<p class="contact__form__subtitle">
+			Je veux poser une question
+		</p>
+		<h3 class="contact__form__title">J'envoie un message</h3>
+		@livewire('services.contact-form')
 	</div>
 </section>

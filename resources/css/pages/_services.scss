@@ -384,5 +384,82 @@
 		font-family: 'Barlow';
 		font-weight: 500;
 		margin-bottom: 40px;
+		min-height: 150px;
+	}
+	&__form {
+		padding-top: 5px;
+		&__subtitle {
+			text-align: center;
+			font: normal normal 500 16px/28px 'Barlow Condensed';
+			letter-spacing: 0.16px;
+			color: #26254480;
+			margin-bottom: 35px;
+		}
+		&__title {
+			text-align: center;
+			font: normal normal 700 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			margin-bottom: 65px;
+		}
+		&__form {
+			label {
+				color: darken(darkgrey, 30);
+			}
+			&__mandatory {
+				font: normal normal normal 14px/28px Barlow;
+				letter-spacing: 0px;
+				color: #262544;
+				margin-bottom: 35px;
+				text-align: left;
+			}
+			&__select {
+				text-align: left;
+				font: normal normal 400 16px/36px Barlow;
+				letter-spacing: 0px;
+				color: darken(darkgrey, 30);
+			}
+			&__security {
+				p {
+					padding-top: 10px;
+					color: darken(darkgrey, 30);
+				}
+				input {
+					width: 50px;
+					text-align: center;
+				}
+				&__btn {
+					cursor: pointer;
+					padding-top: 10px;
+				}
+			}
+		}
+		input[type=text], input[type=email] {
+			bottom: 0px;
+			left: 0px;
+		}
+		textarea {
+			border-color: $main-grey;
+			padding: 50px;
+			margin-bottom: 30px;
+			&:focus {
+				box-shadow: none;
+				outline: none;
+				border-color: $main-grey;
+			}
+		}
+		&__valid {
+			border-radius: 10px;
+			padding: 40px;
+			background: lighten($benu_village, 50);
+			color: $benu_village;
+			margin-top: 20px;
+		}
+		&__invalid {
+			border-radius: 10px;
+			padding: 40px;
+			background: $primary-color-light;
+			color: $primary-color;
+			margin-top: 20px;
+		}
 	}
 }

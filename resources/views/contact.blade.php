@@ -1,4 +1,4 @@
-@extends('layouts.base_layout')
+<!-- @extends('layouts.base_layout')
 
 @section('title')
 	{{ __('contact.seo-title') }}
@@ -50,4 +50,4 @@
 
 @section('scripts')
 
-@endsection
+@endsection -->
