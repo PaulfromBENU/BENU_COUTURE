@@ -123,6 +123,8 @@ return [
     "contact-title" => "I contact BENU COUTURE",
     "contact-opening" => "Open from Monday to Saturday<br/>On Monday from 10:00am to 5:30pm<br/>From Tuesdy to Saturday from 9:00am to 6:00pm",
     "contact-extra-txt" => "More text, to be completed if needed",
+    "contact-form-subtitle" => "I need to ask a question",
+    "contact-form-title" => "I send a message",
     // Delivery
     "delivery-title" => "Delivery",
     "delivery-subtitle" => "Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula.",

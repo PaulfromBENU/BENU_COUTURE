@@ -71,16 +71,16 @@ class ContactForm extends Component
             $this->message_sent = 1;
             if ($new_message->save()) {
                 $this->message_valid = 1;
-                $this->submit_feedback = "Votre message a bien été envoyé, nous vous en remercions. L'équipe BENU vous répondra dans les plus brefs délais.";
+                $this->submit_feedback = __('forms.feedback-message-ok');
                 $this->clearContent();
             } else {
                 $this->message_valid = 0;
-                $this->submit_feedback = "Une erreur s'est produite. Veuillez vérifier le contenu de votre message et réessayer.";
+                $this->submit_feedback = __('forms.feedback-message-error');
             }
         } else {
             $this->message_sent = 1;
             $this->message_valid = 0;
-            $this->submit_feedback = "Pour envoyer votre message, il est nécessaire de confirmer que vous acceptez la sauvegarde et le traitement de vos données par ce site.";
+            $this->submit_feedback = __('forms.feedback-message-warning');
         }
     }
 
@@ -97,6 +97,7 @@ class ContactForm extends Component
         $this->contact_email = "";
         $this->phone = "";
         $this->message = "";
+        $this->company = "";
         $this->conditions_ok = "";
     }
 

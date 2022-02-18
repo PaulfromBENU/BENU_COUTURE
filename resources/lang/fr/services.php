@@ -123,6 +123,8 @@ return [
     "contact-title" => "Je contacte BENU COUTURE",
     "contact-opening" => "Ouvert du lundi au samedi<br/>Le lundi de 10h à 17h30<br/>Du mardi au samedi de 9h à 18h",
     "contact-extra-txt" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.",
+    "contact-form-subtitle" => "Je veux poser une question",
+    "contact-form-title" => "J'envoie un message",
     // Delivery
     "delivery-title" => "Livraison",
     "delivery-subtitle" => "Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula.",

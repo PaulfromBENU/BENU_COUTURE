@@ -21,9 +21,9 @@
 	</div>
 	<div class="contact__form">
 		<p class="contact__form__subtitle">
-			Je veux poser une question
+			{{ __('services.contact-form-subtitle') }}
 		</p>
-		<h3 class="contact__form__title">J'envoie un message</h3>
+		<h3 class="contact__form__title">{{ __('services.contact-form-title') }}</h3>
 		@livewire('services.contact-form')
 	</div>
 </section>

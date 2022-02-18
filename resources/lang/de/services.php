@@ -123,6 +123,8 @@ return [
     "contact-title" => "services.contact-title",
     "contact-opening" => "services.contact-opening",
     "contact-extra-txt" => "services.contact-extra-txt",
+    "contact-form-subtitle" => "services.contact-form-subtitle",
+    "contact-form-title" => "services.contact-form-title",
     // Delivery
     "delivery-title" => "services.delivery-title",
     "delivery-subtitle" => "services.delivery-subtitle",
