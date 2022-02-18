@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-    Rejoignez BENU COUTURE !
+    {{ __('auth.register-seo-title') }}
 @endsection
 
 @section('description')
-    Inscrivez-vous sur BENU COUTURE pour accéder à l'ensemble de nos services et acheter nos créations uniques entièrement à partir de tissus réutilisés, en ligne ou dans notre magasin à Esch-Sur-Alzette. 
+    {{ __('auth.register-seo-desc') }}
 @endsection
 
 @section('breadcrumbs')
@@ -23,12 +23,12 @@
 @section('main-content')
     <section class="register mt-10 pt-5 mb-10 pb-10">
         <h3 class="register__subtitle">BENU COUTURE</h3>
-        <h1 class="register__title">Je me crée <br/>mon compte BENU</h1>
+        <h1 class="register__title">{!! __('auth.register-title') !!}</h1>
 
         @if($errors->any())
             <div class="register__errors w-2/3 m-auto mt-5 mb-5">
-                Une erreur s'est produite. Merci de vérifier que tous les champs ci-dessous sont correctement remplis.
-                @if(App::environment('stage'))
+                {!! __('auth.register-error') !!}
+                @if(!App::environment('prod'))
                 <br/>
                     <p>
                         <strong>Infos supplémentaires. Les messages ci-dessous n'apparaitront pas en production&nbsp;: <br/>

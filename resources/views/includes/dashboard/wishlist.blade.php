@@ -1,10 +1,12 @@
 <div class="dashboard-wishlist">
 	<h2 class="dashboard-wishlist__title dashboard-wishlist__title--couture">BENU COUTURE</h2>
 	<div class="flex justify-start flex-wrap mb-10">
-		@for($i = 0; $i < 5; $i++)
-			@include('includes.components.article_overview')
-		@endfor
-		@include('includes.components.sold_article_overview')
+		@foreach($couture_wishlisted_articles as $article)
+			@livewire('components.article-overview', ['article' =>  $article], key($article->id))
+		@endforeach
+		@foreach($couture_wishlisted_sold_articles as $sold_article)
+			@livewire('components.sold-article-overview', ['article' =>  $sold_article], key($sold_article->id))
+		@endforeach
 	</div>
 
 	<h2 class="dashboard-wishlist__title dashboard-wishlist__title--design pt-5">BENU DESIGN</h2>

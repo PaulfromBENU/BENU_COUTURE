@@ -30,12 +30,18 @@
             </p>
             @auth
             <div class="article-overview__footer__heart" wire:click="toggleWishlist">
+                @if(!$is_wishlisted)
                 <div class="article-overview__footer__heart__icon">
                     <i class="far fa-heart"></i>
                 </div>
                 <div class="article-overview__footer__heart__icon article-overview__footer__heart__icon--hovered">
                     <i class="fas fa-heart"></i>
                 </div>
+                @else
+                <div class="article-overview__footer__heart__icon article-overview__footer__heart__icon--active">
+                    <i class="fas fa-heart"></i>
+                </div>
+                @endif
             </div>
             @else
             <div class="article-overview__footer__heart">

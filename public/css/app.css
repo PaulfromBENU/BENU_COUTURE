@@ -552,6 +552,7 @@ input[type=checkbox]:focus {
   position: relative;
   overflow: hidden;
   margin-right: 1.15%;
+  cursor: pointer;
 }
 .article-overview:hover .article-overview__cap {
   height: 15%;
@@ -638,6 +639,9 @@ input[type=checkbox]:focus {
 }
 .article-overview__footer__heart__icon--hovered.--active {
   transform: scale(1);
+}
+.article-overview__footer__heart__icon--active {
+  transform: scale(1.1);
 }
 .article-overview__footer__heart:hover .article-overview__footer__heart__icon--hovered {
   transform: scale(1);

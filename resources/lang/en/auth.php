@@ -16,5 +16,8 @@ return [
     'failed' => 'These credentials do not match our records.',
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    "register-seo-title" => "Join BENU COUTURE!",
+    "register-seo-desc" => "Register page description for SEO.",
+    "register-title" => "I create <br/>my BENU account",
+    "register-error" => "An error occured. Please check all fields below have been completed correctly.",
 ];

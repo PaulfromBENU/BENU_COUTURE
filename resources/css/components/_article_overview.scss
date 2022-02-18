@@ -9,6 +9,7 @@
 	position: relative;
 	overflow: hidden;
 	margin-right: 1.15%;
+	cursor: pointer;
 	&:hover {
 		.article-overview__cap {
 			height: 15%;
@@ -94,6 +95,9 @@
 					&.--active {
 						transform: scale(1);
 					}
+				}
+				&--active {
+					transform: scale(1.1);
 				}
 			}
 			&:hover {

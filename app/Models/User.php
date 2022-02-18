@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Kulturpass');
     }
+
+    public function wishlistArticles()
+    {
+        return $this->belongsToMany('App\Models\Article', 'benu_common.couture_article_user');
+    }
 }

@@ -37,4 +37,9 @@ class Article extends Model
     {
         return $this->belongsToMany(Photo::class)->withTimestamps();
     }
+
+    public function wishlistUsers()
+    {
+        return $this->belongsToMany(User::class, 'benu_common.couture_article_user');
+    }
 }
