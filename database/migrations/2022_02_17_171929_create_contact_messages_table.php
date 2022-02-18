@@ -33,6 +33,6 @@ class CreateContactMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_messages');
+        Schema::connection('mysql_common')->dropIfExists('contact_messages');
     }
 }
