@@ -25,7 +25,7 @@
         <h3 class="login__subtitle">BENU COUTURE</h3>
         <h1 class="login__title">Je me connecte <br/>à mon compte BENU</h1>
 
-        <form method="POST" action="{{ route('login.connect') }}" class="w-1/4 m-auto mb-10">
+        <form method="POST" action="{{ route('login.connect', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
             @csrf
             <div class="input-group reactive-label-input">
                 <label for="login_email">Adresse e-mail *</label>
