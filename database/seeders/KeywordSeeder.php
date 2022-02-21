@@ -34,5 +34,36 @@ class KeywordSeeder extends Seeder
                 'keyword_de' => 'keywords.keyword-name',
             ]);
         }
+
+        DB::connection('mysql')->table('keywords')->insert([
+            'keyword_fr' => 'a-keyword',
+            'keyword_en' => 'a-keyword',
+            'keyword_lu' => 'Aus geupcyclte Kotténgskleedungsstécker',
+            'keyword_de' => 'a-keyword',
+        ]);
+        DB::connection('mysql')->table('keywords')->insert([
+            'keyword_fr' => 'a-keyword',
+            'keyword_en' => 'a-keyword',
+            'keyword_lu' => 'Ronnen Halsauschnëtt',
+            'keyword_de' => 'a-keyword',
+        ]);
+        DB::connection('mysql')->table('keywords')->insert([
+            'keyword_fr' => 'a-keyword',
+            'keyword_en' => 'a-keyword',
+            'keyword_lu' => 'Hält op der Hëft op',
+            'keyword_de' => 'a-keyword',
+        ]);
+        DB::connection('mysql')->table('keywords')->insert([
+            'keyword_fr' => 'a-keyword',
+            'keyword_en' => 'a-keyword',
+            'keyword_lu' => 'Riichte Schnëtt',
+            'keyword_de' => 'a-keyword',
+        ]);
+        DB::connection('mysql')->table('keywords')->insert([
+            'keyword_fr' => 'a-keyword',
+            'keyword_en' => 'a-keyword',
+            'keyword_lu' => 'Patchwork vir an hannen',
+            'keyword_de' => 'a-keyword',
+        ]);
     }
 }

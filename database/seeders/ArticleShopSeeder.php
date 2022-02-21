@@ -17,7 +17,7 @@ class ArticleShopSeeder extends Seeder
     {
         DB::connection('mysql')->table('article_shop')->delete();
 
-        for ($i=1; $i <= 45; $i++) { 
+        for ($i=1; $i <= 42; $i++) { 
             DB::connection('mysql')->table('article_shop')->insert([
                 'article_id' => $i,
                 'shop_id' => rand(1, 3),
@@ -26,5 +26,45 @@ class ArticleShopSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);
         }
+
+        DB::connection('mysql')->table('article_shop')->insert([
+            'article_id' => 43,
+            'shop_id' => 1,
+            'stock' => rand(1, 10),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_shop')->insert([
+            'article_id' => 44,
+            'shop_id' => 2,
+            'stock' => rand(1, 10),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_shop')->insert([
+            'article_id' => 44,
+            'shop_id' => 3,
+            'stock' => rand(1, 10),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_shop')->insert([
+            'article_id' => 45,
+            'shop_id' => 3,
+            'stock' => 0,
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_shop')->insert([
+            'article_id' => 45,
+            'shop_id' => 1,
+            'stock' => 0,
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
     }
 }

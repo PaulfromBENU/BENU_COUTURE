@@ -18,9 +18,30 @@ class CreationKeywordSeeder extends Seeder
 
         for ($i=0; $i < 40; $i++) { 
             DB::connection('mysql')->table('creation_keyword')->insert([
-                'creation_id' => rand(1, 20),
+                'creation_id' => rand(1, 11),
                 'keyword_id' => rand(1, 19),
             ]);
         }
+
+        DB::connection('mysql')->table('creation_keyword')->insert([
+            'creation_id' => 12,
+            'keyword_id' => 20,
+        ]);
+        DB::connection('mysql')->table('creation_keyword')->insert([
+            'creation_id' => 12,
+            'keyword_id' => 21,
+        ]);
+        DB::connection('mysql')->table('creation_keyword')->insert([
+            'creation_id' => 12,
+            'keyword_id' => 22,
+        ]);
+        DB::connection('mysql')->table('creation_keyword')->insert([
+            'creation_id' => 12,
+            'keyword_id' => 23,
+        ]);
+        DB::connection('mysql')->table('creation_keyword')->insert([
+            'creation_id' => 12,
+            'keyword_id' => 24,
+        ]);
     }
 }

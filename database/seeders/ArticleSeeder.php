@@ -71,5 +71,53 @@ class ArticleSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);
         }
+
+        DB::connection('mysql')->table('articles')->insert([
+            'name' => 'malati-01',
+            'type' => 'article',
+            'creation_id' => 12,
+            'size_id' => rand(1, 10),
+            'color_id' => rand(1, 8),
+            'mask_stripes' => '',
+            'singularity_lu' => 'Une particularité de cet article, écrit en luxembourgeois',
+            'singularity_de' => 'article.singularity-modelname-articlename',
+            'singularity_en' => 'Une particularité de cet article, écrit en anglais',
+            'singularity_fr' => 'Une particularité de cet article, écrit en français',
+            'is_returned' => '0',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('articles')->insert([
+            'name' => 'malati-02',
+            'type' => 'article',
+            'creation_id' => 12,
+            'size_id' => rand(1, 10),
+            'color_id' => rand(1, 8),
+            'mask_stripes' => '',
+            'singularity_lu' => 'Une particularité de cet article, écrit en luxembourgeois',
+            'singularity_de' => 'article.singularity-modelname-articlename',
+            'singularity_en' => 'Une particularité de cet article, écrit en anglais',
+            'singularity_fr' => 'Une particularité de cet article, écrit en français',
+            'is_returned' => '0',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('articles')->insert([
+            'name' => 'malati-03',
+            'type' => 'article',
+            'creation_id' => 12,
+            'size_id' => rand(1, 10),
+            'color_id' => rand(1, 8),
+            'mask_stripes' => '',
+            'singularity_lu' => 'Une particularité de cet article, écrit en luxembourgeois',
+            'singularity_de' => 'article.singularity-modelname-articlename',
+            'singularity_en' => 'Une particularité de cet article, écrit en anglais',
+            'singularity_fr' => 'Une particularité de cet article, écrit en français',
+            'is_returned' => '0',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
     }
 }

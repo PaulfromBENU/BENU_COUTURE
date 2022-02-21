@@ -54,5 +54,18 @@ class CreationSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);
         }
+
+        DB::connection('mysql')->table('creations')->insert([
+            'name' => 'Malati',
+            'creation_category_id' => 14,
+            'price' => 5 * rand(1, 35),
+            'description_lu' => 'De Malati huet säin Numm vum malayseschen Tiger. En huet wuel keng Sträifen, mee dofir awer e wëlle Patchwork-Design op béide Säiten. Opgepasst, dass du den T-shirt also ëmmer ekologesch mat 30 Grad wäschs, soss kéint et geféierlech ginn ;-) ',
+            'description_en' => 'Une description du modèle en langue anglaise.',
+            'description_de' => 'creation.desc-creation_name',
+            'description_fr' => 'Une description du modèle en langue francaise.',
+            'origin_link' => 'https://fr.wikipedia.org/wiki/Malatya',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
     }
 }

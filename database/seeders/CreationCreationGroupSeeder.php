@@ -34,6 +34,11 @@ class CreationCreationGroupSeeder extends Seeder
                 'creation_group_id' => 5,
             ]);
         }
+
+        DB::connection('mysql')->table('creation_creation_group')->insert([
+            'creation_id' => 12,
+            'creation_group_id' => 3,
+        ]);
         
     }
 }

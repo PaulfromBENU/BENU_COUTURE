@@ -33,5 +33,47 @@ class ArticlePhotoSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);
         }
+
+        DB::connection('mysql')->table('article_photo')->insert([
+            'article_id' => 43,
+            'photo_id' => rand(1, 3),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_photo')->insert([
+            'article_id' => 43,
+            'photo_id' => rand(4, 5),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_photo')->insert([
+            'article_id' => 44,
+            'photo_id' => rand(1, 3),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_photo')->insert([
+            'article_id' => 44,
+            'photo_id' => rand(4, 5),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_photo')->insert([
+            'article_id' => 45,
+            'photo_id' => rand(1, 3),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::connection('mysql')->table('article_photo')->insert([
+            'article_id' => 45,
+            'photo_id' => rand(4, 5),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
     }
 }
