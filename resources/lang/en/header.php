@@ -30,6 +30,7 @@ return [
     "support" => "Client Support",
     "about" => "About us",
     "partners" => "Partners",
+    "participate"  =>  "Participate",
     "vouchers" => "Vouchers",
     "newsletter" => "Subscribe to the newsletter",
     "creations" => "Creations",

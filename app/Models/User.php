@@ -32,7 +32,8 @@ class User extends Authenticatable
         'is_over_18',
         'legal_ok',
         'newsletter',
-        'origin'
+        'origin',
+        'client_number',
     ];
 
     /**

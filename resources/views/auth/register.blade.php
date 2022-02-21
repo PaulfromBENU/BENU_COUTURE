@@ -193,7 +193,7 @@
 
             <div class="register__validate">
                 <input type="submit" name="register_submit" class="btn-couture-plain" value="{{ __('forms.register-btn') }}" tabindex="21" id="register-form-submit">
-                <a href="{{ route('login') }}" class="btn-slider-left mt-3">{!! __('forms.already-registered') !!}</a>
+                <a href="{{ route('login-'.app()->getLocale()) }}" class="btn-slider-left mt-3">{!! __('forms.already-registered') !!}</a>
             </div>
         </form>
     </section>

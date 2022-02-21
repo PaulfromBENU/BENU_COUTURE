@@ -15,7 +15,7 @@
             <div class="pl-5 pr-5">
                 >
             </div>
-            <a href="{{ route('login') }}" class="primary-color"><strong>{{ __('breadcrumbs.login') }}</strong></a>
+            <a href="{{ route('login-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.login') }}</strong></a>
         </div>
     </div>
 @endsection

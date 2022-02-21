@@ -68,7 +68,7 @@ class LangModal extends Component
         }
 
         // Add locale as parameter for all routes included in the non-localized route group
-        if (in_array(Route::currentRouteName(), ['home', 'dashboard', 'login', 'register-fr', 'register-lu', 'register-de', 'register-en', 'password.request', 'password.reset', 'verification.notice', 'verification.verify', 'password.confirm'])) {
+        if (in_array(Route::currentRouteName(), ['home', 'dashboard', 'login', 'login-en', 'login-de', 'login-fr', 'login-lu', 'register-fr', 'register-lu', 'register-de', 'register-en', 'password.request', 'password.reset', 'verification.notice', 'verification.verify', 'password.confirm'])) {
             $this->route_parameters_lu = array_merge($this->route_parameters_lu, ['locale' => "lu"]);
             $this->route_parameters_de = array_merge($this->route_parameters_de, ['locale' => "de"]);
             $this->route_parameters_en = array_merge($this->route_parameters_en, ['locale' => "en"]);

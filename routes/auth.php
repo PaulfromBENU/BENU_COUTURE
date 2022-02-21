@@ -37,6 +37,22 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login');
 
+Route::get('/log-in', [AuthenticatedSessionController::class, 'create'])
+                ->middleware('guest')
+                ->name('login-en');
+
+Route::get('/connexion', [AuthenticatedSessionController::class, 'create'])
+                ->middleware('guest')
+                ->name('login-fr');
+
+Route::get('/login-lu', [AuthenticatedSessionController::class, 'create'])
+                ->middleware('guest')
+                ->name('login-lu');
+
+Route::get('/login-de', [AuthenticatedSessionController::class, 'create'])
+                ->middleware('guest')
+                ->name('login-de');
+
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest')
                 ->name('login.connect');

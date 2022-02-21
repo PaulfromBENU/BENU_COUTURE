@@ -40,6 +40,12 @@ class RegisteredUserController extends Controller
             $request->register_newsletter = 0;
         }
 
+        //Client number created randomly  - C#####
+        $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+        while (User::where('client_number', $client_number)->count() > 0) {
+            $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+        }
+
         $address_entered = false;
         
         //Case any address field has been provided, address info then becomes required
@@ -137,6 +143,7 @@ class RegisteredUserController extends Controller
             'legal_ok' => $request->register_legal,
             'newsletter' => $request->register_newsletter,
             'origin' => 'couture',
+            'client_number' => $client_number,
         ]);
 
         //User creation was required to establish user_id

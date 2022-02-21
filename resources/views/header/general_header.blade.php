@@ -21,11 +21,7 @@
                         </li>
                         <li>|</li>
                         <li>
-                            @if(Route::has('about-'.app()->getLocale()))
-                            <a href="{{ route('about-'.app()->getLocale()) }}">{{ __('header.about') }}</a>
-                            @else
-                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('header.about') }}</a>
-                            @endif
+                            <a href="{{ route('full-story-'.app()->getLocale()) }}">{{ __('header.story') }}</a>
                         </li>
                         <li>|</li>
                         <li>
@@ -34,6 +30,10 @@
                             @else
                             <a href="{{ route('partners', ['locale' => app()->getLocale()]) }}">{{ __('header.partners') }}</a>
                             @endif
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <a href="#">{{ __('header.participate') }}</a>
                         </li>
                         <li>|</li>
                         <li>
@@ -65,11 +65,9 @@
                     @else 
                     <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.news') }}</a>
                     @endif
-                    @if(Route::has('full-story-'.app()->getLocale()))
-                    <a href="{{ route('full-story-'.app()->getLocale()) }}" class="header__main-nav__link">{{ __('header.story') }}</a>
-                    @else
-                    <a href="{{ route('full-story', ['locale' => app()->getLocale()]) }}" class="header__main-nav__link">{{ __('header.story') }}</a>
-                    @endif
+
+                    <a href="{{ route('about-'.app()->getLocale()) }}" class="header__main-nav__link">{{ __('header.about') }}</a>
+
                     @if(Route::has('client-service-'.app()->getLocale()))
                     <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="header__main-nav__link">{{ __('header.locations') }}</a>
                     @else
@@ -91,9 +89,9 @@
                     @endauth
                     @guest
                         <li>
-                            <button class="header__main-menu__icons__btn" id="connect-btn">
+                            <a href="{{ route('login-'.app()->getLocale()) }}" class="header__main-menu__icons__btn"> <!-- id="connect-btn" -->
                                 @svg('benu-icon-silhouette-connect')
-                            </button>
+                            </a>
                         </li>
                     @else
                         <li>

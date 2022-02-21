@@ -30,6 +30,7 @@ return [
     "support" => "header.support",
     "about" => "header.about",
     "partners" => "header.partners",
+    "participate"  =>  "header.participate",
     "vouchers" => "header.vouchers",
     "newsletter" => "header.newsletter",
     "creations" => "header.creations",

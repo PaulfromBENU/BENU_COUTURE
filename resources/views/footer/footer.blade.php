@@ -10,7 +10,7 @@
 					<li><a href="#">{{ __('footer.footer-list-1-4') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-list-1-5') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-list-1-6') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-list-1-7') }}</a></li>
+					<!-- <li><a href="#">{{ __('footer.footer-list-1-7') }}</a></li> -->
 				</ul>
 			</div>
 			<div class="footer__lists__col">
@@ -23,13 +23,20 @@
 					<li><a href="#">{{ __('footer.footer-list-2-5') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-list-2-6') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-list-2-7') }}</a></li>
+					<li><a href="#">{{ __('footer.footer-list-2-8') }}</a></li>
 				</ul>
 			</div>
 			<div class="footer__lists__col">
 				<h4>{{ __('footer.footer-title-3') }}</h4>
 				<ul>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}">{{ __('footer.footer-service-1') }}</a></li>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}">{{ __('footer.footer-service-2') }}</a></li>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-sizes')]) }}">{{ __('footer.footer-service-3') }}</a></li>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}">{{ __('footer.footer-service-4') }}</a></li>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-payment')]) }}">{{ __('footer.footer-service-5') }}</a></li>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-care')]) }}">{{ __('footer.footer-service-6') }}</a></li>
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}">{{ __('footer.footer-service-7') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-sitemap') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-contact') }}</a></li>
 				</ul>
 			</div>
 			<div class="footer__lists__col">
@@ -41,6 +48,9 @@
 					<br/>Luxembourg
 					<br/><span class="primary-color">+352 27 91 19 49</span>
 				</p>
+				<ul style="margin-bottom: 45px;">
+					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}">{{ __('footer.footer-contact') }}</a></li>
+				</ul>
 				<h4>{{ __('footer.footer-title-5') }}</h4>
 				<a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
 			</div>
