@@ -152,6 +152,89 @@
 	}
 }
 
+.side-modal {
+	width: 60vw;
+	top: 0;
+	right: -60vw;
+	height: 100vh;
+	border-radius: 0;
+	transition: right 0.8s;
+	padding: 0;
+}
+
+.article-sidebar {
+	&__img-container {
+		height: 100vh;
+		width: 55%;
+		overflow-x: hidden;
+		overflow-y: auto; 
+	}
+	&__content {
+		padding: 40px 80px;
+		position: relative;
+		width: 45%;
+		&__subtitle {
+			text-align: center;
+			font: normal normal 500 14px/28px 'Barlow';
+			letter-spacing: 0px;
+			color: #2E1414;
+			opacity: 0.5;
+		}
+		&__wishlist {
+			text-align: center;
+			font-size: 1.6rem;
+			color: $primary-color;
+			position: relative;
+			height: 60px;
+			&__icon {
+				position: absolute;
+				left: calc(50% - 13px);
+				top: 6px;
+				cursor: pointer;
+				&--hovered {
+					transform: scale(0);
+					transition: transform 0.2s;
+					&.--active {
+						transform: scale(1);
+					}
+				}
+				&--active {
+					transform: scale(1.1);
+				}
+			}
+			&:hover {
+				.article-sidebar__content__wishlist__icon--hovered {
+					transform: scale(1);
+				}
+			}
+		}
+		&__size {
+			background: $primary-color;
+			border-radius: 8px;
+			padding: 4px 30px;
+			text-transform: uppercase;
+			color: $white;
+			text-align: center;
+			font: normal normal 600 20px/28px 'Barlow Condensed';
+			letter-spacing: 0px;
+			margin: auto;
+			margin-bottom: 20px;
+		}
+		&__title {
+			text-align: center;
+			font: normal normal 600 26px/31px 'Barlow Condensed';
+			letter-spacing: 0px;
+			color: $primary-color;
+			margin-bottom: 10px;
+		}
+		&__price {
+			text-align: center;
+			font: normal normal 500 42px/50px 'Barlow Condensed';
+			letter-spacing: 0px;
+		}
+	}
+}
+
 .modal-opacifier {
 	position: fixed;
 	top: 0;

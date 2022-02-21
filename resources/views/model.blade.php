@@ -33,12 +33,39 @@
 	@include('includes.model.model_request')
 @endsection
 
+@section('side_modal')
+	@livewire('modals.article-sidebar', ['article_id' => '0'])
+@endsection
+
 @section('scripts')
 <script type="text/javascript">
 	$(function() {
 		$('.article-overview__footer__heart').on('click', function(e) {
 			e.preventDefault();
 		})
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		Livewire.on('displayArticle', article_id => {
+			$('.modal-opacifier').fadeIn();
+			$('#general-side-modal').fadeIn(500, function() {
+				Livewire.emit('ArticleModalReady', article_id);
+			});
+			$('#general-side-modal').css('right', '0');
+		});
+
+		Livewire.on('articleLoaded', function() {
+			$('.article-sidebar').fadeIn();
+		});
+
+		$('.modal-opacifier').on('click', function() {
+			$('#general-side-modal').css('right', '-60vw');
+			$('#general-side-modal').fadeOut(400, function() {
+				$('.article-sidebar').hide();
+			});
+			Livewire.emit('ArticleModalReady', 0);
+		});
 	});
 </script>
 @endsection

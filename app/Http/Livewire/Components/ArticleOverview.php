@@ -70,6 +70,11 @@ class ArticleOverview extends Component
         }
     }
 
+    public function triggerSideBar()
+    {
+        $this->emit('displayArticle', $this->article->id);
+    }
+
     public function render()
     {
         return view('livewire.components.article-overview');

@@ -1,12 +1,12 @@
-<div class="block article-overview">
+<div class="block article-overview" wire:click="triggerSideBar">
     <div class="article-overview__cap article-overview__cap--red"></div>
     <div class="article-overview__img-container">
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">
         @if($pictures->count() > 1)
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent="changePicture('left')">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent.stop="changePicture('left')">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right" wire:click.prevent="changePicture('right')">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right" wire:click.prevent.stop="changePicture('right')">
                 <i class="fas fa-chevron-right"></i>
             </div>
         @endif
