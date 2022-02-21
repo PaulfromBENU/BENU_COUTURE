@@ -36,6 +36,7 @@ return [
     "news" => "header.news",
     "story" => "header.story",
     "locations" => "header.locations",
+    "unisex" => "header.unisex",
     "adults" => "header.adults",
     "women" => "header.women",
     "men" => "header.men",
