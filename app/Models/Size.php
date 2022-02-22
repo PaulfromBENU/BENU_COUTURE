@@ -11,4 +11,14 @@ class Size extends Model
 
     // Choice of the database
     protected $connection = 'mysql';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'category',
+        'value',
+    ];
 }

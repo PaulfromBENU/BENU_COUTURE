@@ -1,0 +1,135 @@
+<?php
+
+namespace App\Filament\Resources;
+
+use App\Filament\Resources\ShopResource\Pages;
+use App\Filament\Resources\ShopResource\RelationManagers;
+use App\Models\Shop;
+use Filament\Forms;
+use Filament\Resources\Form;
+use Filament\Resources\Resource;
+use Filament\Resources\Table;
+use Filament\Tables;
+
+class ShopResource extends Resource
+{
+    protected static ?string $label = 'point de vente';
+    protected static ?string $pluralLabel = 'points de vente';
+
+    protected static ?string $model = Shop::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-collection';
+
+    public static function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('type')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\Textarea::make('description_de')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Textarea::make('description_en')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Textarea::make('description_fr')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Textarea::make('description_lu')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\TextInput::make('address')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('phone')
+                    ->tel()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('website')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('email')
+                    ->email()
+                    ->maxLength(255),
+                // Forms\Components\Textarea::make('opening_time')
+                //     ->maxLength(65535),
+                Forms\Components\TextInput::make('picture')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_monday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_tuesday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_wednesday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_thursday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_friday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_saturday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('opening_sunday')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('filter_key')
+                    ->required()
+                    ->maxLength(255),
+            ]);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                // Tables\Columns\TextColumn::make('created_at')
+                //     ->dateTime(),
+                // Tables\Columns\TextColumn::make('updated_at')
+                //     ->dateTime(),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('type'),
+                Tables\Columns\TextColumn::make('description_de'),
+                Tables\Columns\TextColumn::make('description_en'),
+                Tables\Columns\TextColumn::make('description_fr'),
+                Tables\Columns\TextColumn::make('description_lu'),
+                Tables\Columns\TextColumn::make('address'),
+                Tables\Columns\TextColumn::make('phone'),
+                Tables\Columns\TextColumn::make('website'),
+                Tables\Columns\TextColumn::make('email'),
+                // Tables\Columns\TextColumn::make('opening_time'),
+                Tables\Columns\TextColumn::make('picture'),
+                Tables\Columns\TextColumn::make('opening_monday'),
+                Tables\Columns\TextColumn::make('opening_tuesday'),
+                Tables\Columns\TextColumn::make('opening_wednesday'),
+                Tables\Columns\TextColumn::make('opening_thursday'),
+                Tables\Columns\TextColumn::make('opening_friday'),
+                Tables\Columns\TextColumn::make('opening_saturday'),
+                Tables\Columns\TextColumn::make('opening_sunday'),
+                Tables\Columns\TextColumn::make('filter_key'),
+            ])
+            ->filters([
+                //
+            ]);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListShops::route('/'),
+            'create' => Pages\CreateShop::route('/create'),
+            'edit' => Pages\EditShop::route('/{record}/edit'),
+        ];
+    }
+}

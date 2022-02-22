@@ -8,7 +8,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasName;
+
+class User extends Authenticatable implements HasName, FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -54,6 +57,27 @@ class User extends Authenticatable
     // protected $casts = [
     //     'email_verified_at' => 'datetime',
     // ];
+
+    // For Filament
+    public function getFilamentName(): string
+    {
+        return $this->first_name;
+    }
+
+    /**
+   * Get the user's full name.
+   *
+   * @return string
+   */ 
+    public function getFullNameAttribute()
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+
+    public function canAccessFilament(): bool
+    {
+        return $this->role == 'admin';
+    }
 
     public function addresses()
     {

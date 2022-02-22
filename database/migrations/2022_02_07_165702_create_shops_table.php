@@ -26,7 +26,7 @@ class CreateShopsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('website')->nullable();
             $table->string('email')->nullable();
-            $table->text('opening_time')->nullable();
+            //$table->text('opening_time')->nullable();
             $table->string('picture')->nullable();
             $table->string('opening_monday')->default('closed');
             $table->string('opening_tuesday')->default('closed');
