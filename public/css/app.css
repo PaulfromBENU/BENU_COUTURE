@@ -658,6 +658,7 @@ input[type=checkbox]:focus {
   position: relative;
   overflow: hidden;
   margin-right: 1.15%;
+  cursor: pointer;
 }
 .sold-overview:hover .sold-overview__cap {
   height: 15%;
@@ -1446,6 +1447,35 @@ input[type=checkbox]:focus {
   padding: 40px 80px;
   position: relative;
   width: 45%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.article-sidebar__content__close-container {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: #D9D9D9;
+}
+.article-sidebar__content__close-container:hover {
+  width: 85px;
+  background: #2E1414;
+}
+.article-sidebar__content__close {
+  text-align: right;
+  position: absolute;
+  right: 9px;
+  color: white;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  width: 85px;
+  height: 30px;
 }
 .article-sidebar__content__subtitle {
   text-align: center;
@@ -1492,6 +1522,9 @@ input[type=checkbox]:focus {
   margin: auto;
   margin-bottom: 20px;
 }
+.article-sidebar__content__size--sold {
+  background: #D9D9D9;
+}
 .article-sidebar__content__title {
   text-align: center;
   font: normal normal 600 26px/31px "Barlow Condensed";
@@ -1503,6 +1536,120 @@ input[type=checkbox]:focus {
   text-align: center;
   font: normal normal 500 42px/50px "Barlow Condensed";
   letter-spacing: 0px;
+  margin-bottom: 25px;
+}
+.article-sidebar__content__color {
+  margin: auto;
+  margin-bottom: 20px;
+}
+.article-sidebar__content__desc {
+  font: normal normal 500 16px/28px "Barlow";
+  text-align: center;
+  letter-spacing: 0px;
+  margin-bottom: 25px;
+}
+.article-sidebar__content__singularity {
+  background: #D0D0D033 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  text-align: center;
+  font: normal normal 500 14px/20px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.article-sidebar__content__cart-btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 25px;
+}
+.article-sidebar__content__size-check {
+  text-align: center;
+  font: normal normal 500 12px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 50px;
+}
+.article-sidebar__content__list {
+  border-top: solid 1px lightgrey;
+  margin-bottom: 30px;
+}
+.article-sidebar__content__list li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px lightgrey;
+  text-align: left;
+  font: normal normal 600 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+.article-sidebar__content__list svg {
+  transform: rotate(-90deg) scale(1.5);
+  margin-top: 10px;
+  cursor: pointer;
+  width: 30px;
+}
+.article-sidebar__content__list svg path {
+  fill: #D41C1B;
+}
+.article-sidebar__content__contact {
+  text-align: center;
+  font: normal normal 600 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.article-sidebar__content__compo__title {
+  text-align: left;
+  font: normal normal 700 26px/31px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+}
+.article-sidebar__content__compo__subtitle {
+  text-align: left;
+  font: normal normal 500 14px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  opacity: 0.5;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.article-sidebar__content__compo__title-expl {
+  text-align: left;
+  font: normal normal 600 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+}
+.article-sidebar__content__compo__list img {
+  width: 100%;
+  height: 77px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.article-sidebar__content__compo__list h5 {
+  text-align: left;
+  font: normal normal 500 16px/26px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 20px;
+}
+.article-sidebar__content__compo__list p {
+  text-align: left;
+  font: normal normal 500 16px/26px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+}
+.article-sidebar__content__care__list p {
+  padding-left: 12px;
+  padding-top: 11px;
+  font: normal normal 500 14px/26px "Barlow";
+}
+.article-sidebar__content__care__list svg {
+  height: 42px;
+}
+.article-sidebar__content__more__list {
+  font: normal normal 500 14px/26px "Barlow";
 }
 
 .modal-opacifier {

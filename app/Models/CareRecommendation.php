@@ -11,4 +11,9 @@ class CareRecommendation extends Model
 
     // Choice of the database
     protected $connection = 'mysql';
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class);
+    }
 }

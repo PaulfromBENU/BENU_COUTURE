@@ -49,5 +49,9 @@
 	</section>
 @endsection
 
+@section('side_modal')
+	@livewire('modals.article-sidebar', ['article_id' => '0'])
+@endsection
+
 @section('scripts')
 @endsection

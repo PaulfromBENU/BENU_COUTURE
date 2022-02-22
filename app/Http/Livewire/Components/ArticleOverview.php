@@ -15,6 +15,8 @@ class ArticleOverview extends Component
 
     public $is_wishlisted;
 
+    protected $listeners = ['wishlistUpdated' => 'updateWishlist'];
+
     public function mount()
     {
         $localized_query = 'name_'.app()->getLocale();
@@ -67,6 +69,13 @@ class ArticleOverview extends Component
                 auth::user()->wishlistArticles()->detach($this->article->id);
                 $this->is_wishlisted = 0;
             }
+        }
+    }
+
+    public function updateWishlist($article_id)
+    {
+        if ($this->article->id == $article_id) {
+            $this->toggleWishlist();
         }
     }
 

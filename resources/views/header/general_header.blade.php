@@ -105,11 +105,11 @@
                     @endguest
                     <li>
                         @if(Route::has('client-service-'.app()->getLocale()))
-                        <a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="header__main-menu__icons__btn">
+                        <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
                         </a>
                         @else
-                        <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => 'contact']) }}" class="header__main-menu__icons__btn">
+                        <a href="{{ route('client-service', ['locale' => app()->getLocale(), 'page' => __('slugs.services-contact')]) }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
                         </a>
                         @endif

@@ -1,12 +1,12 @@
-<a href="#" class="block sold-overview">
+<div class="sold-overview" wire:click="triggerSideBar">
     <div class="sold-overview__cap sold-overview__cap--grey"></div>
     <div class="sold-overview__img-container">
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">
         @if($pictures->count() > 1)
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent="changePicture('left')">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent.stop="changePicture('left')">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right" wire:click.prevent="changePicture('right')">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right" wire:click.prevent.stop="changePicture('right')">
                 <i class="fas fa-chevron-right"></i>
             </div>
         @endif
@@ -29,7 +29,7 @@
                 {{ __('models.sold-sold') }}
             </p>
             @auth
-            <div class="article-overview__footer__heart" wire:click="toggleWishlist">
+            <div class="article-overview__footer__heart" wire:click.prevent.stop="toggleWishlist">
                 @if(!$is_wishlisted)
                 <div class="article-overview__footer__heart__icon">
                     <i class="far fa-heart"></i>
@@ -52,4 +52,4 @@
             @endauth
         </div>
     </div>
-</a>
+</div>

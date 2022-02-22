@@ -1,4 +1,4 @@
-<div class="block article-overview" wire:click="triggerSideBar">
+<div class="article-overview" wire:click="triggerSideBar">
     <div class="article-overview__cap article-overview__cap--red"></div>
     <div class="article-overview__img-container">
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">
@@ -29,7 +29,7 @@
                 {{ $article->creation->price }}&euro;
             </p>
             @auth
-            <div class="article-overview__footer__heart" wire:click="toggleWishlist">
+            <div class="article-overview__footer__heart" wire:click.prevent.stop="toggleWishlist">
                 @if(!$is_wishlisted)
                 <div class="article-overview__footer__heart__icon">
                     <i class="far fa-heart"></i>

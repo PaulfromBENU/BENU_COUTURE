@@ -42,4 +42,14 @@ class Article extends Model
     {
         return $this->belongsToMany(User::class, 'benu_common.couture_article_user');
     }
+
+    public function compositions()
+    {
+        return $this->belongsToMany(Composition::class);
+    }
+
+    public function care_recommendations()
+    {
+        return $this->belongsToMany(CareRecommendation::class);
+    }
 }

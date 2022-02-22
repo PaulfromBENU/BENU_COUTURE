@@ -15,6 +15,8 @@ class SoldArticleOverview extends Component
 
     public $is_wishlisted;
 
+    protected $listeners = ['wishlistUpdated' => 'updateWishlist'];
+
     public function mount()
     {
         $localized_query = 'name_'.app()->getLocale();
@@ -68,6 +70,18 @@ class SoldArticleOverview extends Component
                 $this->is_wishlisted = 0;
             }
         }
+    }
+
+    public function updateWishlist($article_id)
+    {
+        if ($this->article->id == $article_id) {
+            $this->toggleWishlist();
+        }
+    }
+
+    public function triggerSideBar()
+    {
+        $this->emit('displayArticle', $this->article->id);
     }
     
     public function render()

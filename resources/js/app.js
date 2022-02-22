@@ -12,6 +12,7 @@ require('./model_article_sliders');
 require('./model_filters_handle');
 require('./faq_accordion_handle');
 require('./model_overview_animation');
+require('./sidebar_handler');
 
 import Alpine from 'alpinejs';
 

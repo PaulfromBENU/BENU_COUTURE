@@ -5,15 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Composition extends Model
+class ArticleCareRecommendation extends Model
 {
     use HasFactory;
 
     // Choice of the database
     protected $connection = 'mysql';
-
-    public function articles()
-    {
-        return $this->belongsToMany(Article::class);
-    }
 }

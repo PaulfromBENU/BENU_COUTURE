@@ -5503,6 +5503,8 @@ __webpack_require__(/*! ./faq_accordion_handle */ "./resources/js/faq_accordion_
 
 __webpack_require__(/*! ./model_overview_animation */ "./resources/js/model_overview_animation.js");
 
+__webpack_require__(/*! ./sidebar_handler */ "./resources/js/sidebar_handler.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -6193,6 +6195,44 @@ $(function () {
   $('.model-overview').on('mouseleave', function () {
     $(this).children('.model-overview__header').css('padding-left', '30px');
     $(this).children('.model-overview__footer').css('padding-left', '30px');
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/sidebar_handler.js":
+/*!*****************************************!*\
+  !*** ./resources/js/sidebar_handler.js ***!
+  \*****************************************/
+/***/ (() => {
+
+$(function () {
+  $('.article-sidebar').hide();
+  Livewire.on('displayArticle', function (article_id) {
+    $('.modal-opacifier').fadeIn();
+    $('#general-side-modal').fadeIn(500, function () {
+      Livewire.emit('ArticleModalReady', article_id);
+    });
+    $('#general-side-modal').css('right', '0');
+  });
+  Livewire.on('articleLoaded', function () {
+    $('.article-sidebar').hide();
+    $('.article-sidebar').fadeIn();
+  });
+  $('.modal-opacifier').on('click', function () {
+    $('#general-side-modal').css('right', '-60vw');
+    $('#general-side-modal').fadeOut(400, function () {
+      $('.article-sidebar').hide();
+    });
+    Livewire.emit('ArticleModalReady', 0);
+  });
+  Livewire.on('closeSideBar', function () {
+    $('.modal-opacifier').fadeOut();
+    $('#general-side-modal').css('right', '-60vw');
+    $('#general-side-modal').fadeOut(400, function () {
+      $('.article-sidebar').hide();
+    });
+    Livewire.emit('ArticleModalReady', 0);
   });
 });
 

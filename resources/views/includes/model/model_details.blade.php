@@ -40,7 +40,7 @@
 			<a href="{{ $model->origin_link }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
 		</div>
 		<div class="flex model-pres__desc__seemore">
-			<a href="#model-articles" class="flex">
+			<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
 				{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 			</a>
 			
