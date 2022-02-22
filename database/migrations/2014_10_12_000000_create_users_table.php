@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateUsersTable extends Migration
 {
@@ -16,6 +17,7 @@ class CreateUsersTable extends Migration
         Schema::connection('mysql_common')->create('users', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->dateTime('last_login')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('email')->unique();
             //$table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
@@ -32,6 +34,7 @@ class CreateUsersTable extends Migration
             $table->string('badge')->default('standard');
             $table->string('client_number')->unique();
             $table->string('rating')->default('10');
+            $table->text('general_comment');
             $table->rememberToken();
         });
     }
