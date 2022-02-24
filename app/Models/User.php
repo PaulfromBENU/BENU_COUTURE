@@ -37,6 +37,7 @@ class User extends Authenticatable implements HasName, FilamentUser
         'newsletter',
         'origin',
         'client_number',
+        'general_comment',
     ];
 
     /**

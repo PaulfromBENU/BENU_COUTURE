@@ -144,6 +144,7 @@ class RegisteredUserController extends Controller
             'newsletter' => $request->register_newsletter,
             'origin' => 'couture',
             'client_number' => $client_number,
+            'general_comment' => "No comment",
         ]);
 
         //User creation was required to establish user_id
