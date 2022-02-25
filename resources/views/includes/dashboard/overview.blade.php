@@ -1,64 +1,64 @@
 <div class="dashboard__content__box dashboard__content__box--large">
-    <h3 class="dashboard__content__box__title">Mes détails</h3>
+    <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-1') }}</h3>
     <div class="w-1/2">
         <h4 class="dashboard__content__box__subtitle">{{ Auth::user()->first_name.' '.Auth::user()->last_name }}</h4>
         <p>
-            Membre depuis le {{ Auth::user()->created_at->format('d'.'/'.'m'.'/'.'Y') }}
+            {{ __('dashboard.overview-member-since') }}{{ Auth::user()->created_at->format('d'.'/'.'m'.'/'.'Y') }}
         </p>
     </div>
     <div class="w-1/2 dashboard__content__box__low-links">
         <div class="flex flex-col justify-end">
             <p>
-                <a wire:click="changeSection('details')" class="btn-dashboard-plain">Détails du compte</a>
+                <a wire:click="changeSection('details')" class="btn-dashboard-plain">{{ __('dashboard.overview-account-details') }}</a>
             </p>
             <p>
-                <a wire:click="changeSection('delete')" class="btn-dashboard-plain">Supprimer mon compte</a>
+                <a wire:click="changeSection('delete')" class="btn-dashboard-plain">{{ __('dashboard.overview-delete-account') }}</a>
             </p>
         </div>
     </div>
 </div>
 <div class="dashboard__content__box dashboard__content__box--normal">
-    <h3 class="dashboard__content__box__title">Mes adresses</h3>
+    <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-2') }}</h3>
     <p>
-        Ajouter, modifier ou supprimer des adresses.
+        {{ __('dashboard.overview-update-address') }}
     </p>
     <p class="dashboard__content__box__bottom-link">
-        <a wire:click="changeSection('addresses')" class="btn-dashboard-plain">Voir toutes mes adresses</a>
+        <a wire:click="changeSection('addresses')" class="btn-dashboard-plain">{{ __('dashboard.overview-all-addresses') }}</a>
     </p>
 </div>
 <div class="dashboard__content__box dashboard__content__box--normal">
-    <h3 class="dashboard__content__box__title">Mes commandes</h3>
+    <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-3') }}</h3>
     <p>
-        Gérer, modifier, supprimer mes commandes
+        {{ __('dashboard.overview-update-orders') }}
     </p>
     <p class="dashboard__content__box__bottom-link">
-        <a wire:click="changeSection('orders')" class="btn-dashboard-plain">Voir toutes mes commandes</a>
+        <a wire:click="changeSection('orders')" class="btn-dashboard-plain">{{ __('dashboard.overview-all-orders') }}</a>
     </p>
 </div>
 <div class="dashboard__content__box dashboard__content__box--normal">
-    <h3 class="dashboard__content__box__title">Mes demandes</h3>
+    <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-4') }}</h3>
     <p>
-        Gérer, modifier, supprimer mes demandes
+        {{ __('dashboard.overview-update-demands') }}
     </p>
     <p class="dashboard__content__box__bottom-link">
-        <a wire:click="changeSection('demands')" class="btn-dashboard-plain">Voir toutes mes demandes</a>
+        <a wire:click="changeSection('demands')" class="btn-dashboard-plain">{{ __('dashboard.overview-all-demands') }}</a>
     </p>
 </div>
 <div class="dashboard__content__box dashboard__content__box--normal">
-    <h3 class="dashboard__content__box__title">Mes retours</h3>
+    <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-5') }}</h3>
     <p>
-        Vérifier mes retours
+        {{ __('dashboard.overview-update-returns') }}
     </p>
     <p class="dashboard__content__box__bottom-link">
-        <a wire:click="changeSection('returns')" class="btn-dashboard-plain">Voir tous mes retours</a>
+        <a wire:click="changeSection('returns')" class="btn-dashboard-plain">{{ __('dashboard.overview-all-returns') }}</a>
     </p>
 </div>
 <div class="dashboard__content__box dashboard__content__box--normal">
-    <h3 class="dashboard__content__box__title">Ma Wishlist</h3>
+    <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-6') }}</h3>
     <p>
-        Gérer et modifier ma wishlist
+        {{ __('dashboard.overview-update-wishlist') }}
     </p>
     <p class="dashboard__content__box__bottom-link">
-        <a wire:click="changeSection('wishlist')" class="btn-dashboard-plain">Voir ma wishlist</a>
+        <a wire:click="changeSection('wishlist')" class="btn-dashboard-plain">{{ __('dashboard.overview-see-wishlist') }}</a>
     </p>
 </div>
