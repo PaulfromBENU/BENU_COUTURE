@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-    Rejoignez BENU COUTURE !
+    {{ __('auth.login-seo-title') }}
 @endsection
 
 @section('description')
-    Inscrivez-vous sur BENU COUTURE pour accéder à l'ensemble de nos services et acheter nos créations uniques entièrement à partir de tissus réutilisés, en ligne ou dans notre magasin à Esch-Sur-Alzette. 
+    {{ __('auth.login-seo-desc') }}
 @endsection
 
 @section('breadcrumbs')
@@ -23,16 +23,16 @@
 @section('main-content')
     <section class="benu-container login">
         <h3 class="login__subtitle">BENU COUTURE</h3>
-        <h1 class="login__title">Je me connecte <br/>à mon compte BENU</h1>
+        <h1 class="login__title">{{ __('auth.login-title-1') }} <br/>{{ __('auth.login-title-2') }}</h1>
 
         <form method="POST" action="{{ route('login.connect', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
             @csrf
             <div class="input-group reactive-label-input">
-                <label for="login_email">Adresse e-mail *</label>
+                <label for="login_email">{{ __('auth.login-email') }} *</label>
                 <input type="email" id="login_email" name="email" class="input-underline w-full" required>
             </div>
             <div class="input-group reactive-label-input">
-                <label for="login_password">Mot de passe *</label>
+                <label for="login_password">{{ __('auth.login-password') }} *</label>
                 <input type="password" id="login_password" name="password" class="input-underline w-full" required>
             </div>
 
@@ -41,27 +41,27 @@
                 <div class="login__options">
                     <input id="remember" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="remember" value="1" checked>
                     <label for="remember" class="inline-flex items-center">
-                        <span class="ml-3">Se souvenir de moi</span>
+                        <span class="ml-3">{{ __('auth.login-remember-me') }}</span>
                     </label>
                 </div>
 
                 <div class="flex items-center justify-end login__options">
                     <a class="hover:underline" href="{{ route('password.request') }}">
-                        Mot de passe oublié&nbsp;?
+                        {{ __('auth.login-pwd-forgotten') }}&nbsp;?
                     </a>
                 </div>
             </div>
 
             <p class="login__info">
-                <em>* Champs obligatoires</em>
+                <em>* {{ __('auth.login-mandatory') }}</em>
             </p>
             
             <div class="m-auto login__validate">
-                <input type="submit" name="login_submit" class="btn-couture-plain" value="Je me connecte">
+                <input type="submit" name="login_submit" class="btn-couture-plain" value="{{ __('auth.login-connect') }}">
                 <div class="login__validate__question">
-                    Je n’ai pas encore de compte BENU COUTURE.
+                    {{ __('auth.login-no-account') }}
                 </div>
-                <a href="{{ route('register-'.app()->getLocale()) }}" class="btn-slider-left mt-3">Je crée mon compte ici</a>
+                <a href="{{ route('register-'.app()->getLocale()) }}" class="btn-slider-left mt-3">{{ __('auth.login-create-account') }}</a>
             </div>
             @if($errors->any())
                 {!! implode('', $errors->all('<div>:message</div>')) !!}
