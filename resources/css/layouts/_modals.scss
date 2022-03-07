@@ -292,6 +292,11 @@
 			margin-left: 0;
 			margin-right: 0;
 			margin-bottom: 25px;
+			&:hover {
+				color: $white;
+				background: $dark-bg;
+				border-color: $dark-bg;
+			}
 		}
 		&__size-check {
 			text-align: center;
@@ -310,6 +315,10 @@
 				font: normal normal 600 16px/28px 'Barlow Condensed';
 				letter-spacing: 0px;
 				cursor: pointer;
+				transition: color 0.3s;
+				&:hover {
+					color: $primary-color;
+				}
 			}
 			svg {
 				transform: rotate(-90deg) scale(1.5);

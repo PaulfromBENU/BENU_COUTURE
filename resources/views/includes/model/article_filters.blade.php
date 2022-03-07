@@ -1,5 +1,5 @@
-<div class="all-models__filters-container__options" style="display: none; z-index: 5;">
-	<div class="benu-container" id="filters-size" style="display: none;">
+<div class="all-models__filters-container__options benu-container" style="display: none; z-index: 5;">
+	<div id="filters-size" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['sizes'] as $size => $filter)
 			<div wire:click="toggleFilter('sizes', '{{ $size }}')"  wire:key="{{ $size }}">
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 
-	<div class="benu-container" id="filters-color" style="display: none;">
+	<div id="filters-color" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['colors'] as $color => $filter)
 			<div wire:click="toggleFilter('colors', '{{ $color }}')" wire:key="{{ $color }}">
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 
-	<div class="benu-container" id="filters-shops" style="display: none;">
+	<div id="filters-shops" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['shops'] as $shop => $filter)
 			<div wire:click="toggleFilter('shops', '{{ $shop }}')" wire:key="{{ $shop }}">

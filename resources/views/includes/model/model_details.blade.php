@@ -37,7 +37,8 @@
 			@endif
 		</div>
 		<div class="model-pres__desc__link">
-			<a href="{{ $model->origin_link }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
+			@php $link_query = "origin_link_".app()->getLocale(); @endphp
+			<a href="{{ $model->$link_query }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
 		</div>
 		<div class="flex model-pres__desc__seemore">
 			<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">

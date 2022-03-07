@@ -81,7 +81,7 @@
 		width: 50%;
 		margin-top: 50px;
 		&__img-container {
-			width: 29vw;
+			width: 65%;
 			max-height: 432px;
 			overflow: hidden;
 			border-radius: 25px;
@@ -109,13 +109,14 @@
 	&__right {
 		width: 50%;
 		border-radius: 25px;
-		max-height: 1072px;
+		//max-height: 1072px;
 		overflow: hidden;
 		//padding-top: 40px;
 		img {
 			width: 100%;
 			object-fit: cover;
 			object-position: center center;
+			height: 100%;
 		}
 	}
 }

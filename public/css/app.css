@@ -1566,6 +1566,11 @@ input[type=checkbox]:focus {
   margin-right: 0;
   margin-bottom: 25px;
 }
+.article-sidebar__content__cart-btn:hover {
+  color: #FFFFFF;
+  background: #2E1414;
+  border-color: #2E1414;
+}
 .article-sidebar__content__size-check {
   text-align: center;
   font: normal normal 500 12px/28px "Barlow";
@@ -1584,6 +1589,10 @@ input[type=checkbox]:focus {
   font: normal normal 600 16px/28px "Barlow Condensed";
   letter-spacing: 0px;
   cursor: pointer;
+  transition: color 0.3s;
+}
+.article-sidebar__content__list li:hover {
+  color: #D41C1B;
 }
 .article-sidebar__content__list svg {
   transform: rotate(-90deg) scale(1.5);
@@ -1962,7 +1971,7 @@ input[type=checkbox]:focus {
   margin-top: 50px;
 }
 .welcome-campaign__left__img-container {
-  width: 29vw;
+  width: 65%;
   max-height: 432px;
   overflow: hidden;
   border-radius: 25px;
@@ -1989,7 +1998,6 @@ input[type=checkbox]:focus {
 .welcome-campaign__right {
   width: 50%;
   border-radius: 25px;
-  max-height: 1072px;
   overflow: hidden;
 }
 .welcome-campaign__right img {
@@ -1998,6 +2006,7 @@ input[type=checkbox]:focus {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  height: 100%;
 }
 
 .welcome-creations {
@@ -2212,7 +2221,7 @@ input[type=checkbox]:focus {
   font-weight: 500;
 }
 .faq__accordion__answer__header__minus {
-  font-size: 2.2rem;
+  font-size: 3.1rem;
   font-weight: 500;
 }
 
