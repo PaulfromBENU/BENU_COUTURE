@@ -5607,6 +5607,8 @@ $(function () {
 
 $(function () {
   var harmonicaStatus = 'off';
+  var columnClicked = 'off';
+  var currentCol;
   $('.harmonica-bar').on('click', function () {
     if (harmonicaStatus == 'off') {
       //show full screen harmonica and use active class to keep top bar dark
@@ -5617,17 +5619,35 @@ $(function () {
       $('.harmonica-menu').fadeOut();
       $('.harmonica-bar').removeClass('harmonica-bar--active');
       harmonicaStatus = 'off';
+
+      if (columnClicked == 'on') {
+        $('.harmonica-menu__content__col__open').fadeOut();
+        $('.harmonica-menu__content__col__closed').fadeIn();
+        $('.harmonica-menu__content__col').css('width', '12.5%');
+      }
     }
   });
   $('.harmonica-bar__close').on('click', function () {
     $('.harmonica-menu').fadeOut();
     $('.harmonica-bar').removeClass('harmonica-bar--active');
     harmonicaStatus = 'off';
+
+    if (columnClicked == 'on') {
+      $('.harmonica-menu__content__col__open').fadeOut();
+      $('.harmonica-menu__content__col__closed').fadeIn();
+      $('.harmonica-menu__content__col').css('width', '12.5%');
+    }
   });
   $('.harmonica-bar__title--active').on('click', function () {
     $('.harmonica-menu').fadeOut();
     $('.harmonica-bar').removeClass('harmonica-bar--active');
     harmonicaStatus = 'off';
+
+    if (columnClicked == 'on') {
+      $('.harmonica-menu__content__col__open').fadeOut();
+      $('.harmonica-menu__content__col__closed').fadeIn();
+      $('.harmonica-menu__content__col').css('width', '12.5%');
+    }
   });
   $(document).on('keyup', function (e) {
     if (e.keyCode == 27) {
@@ -5635,6 +5655,12 @@ $(function () {
         $('.harmonica-menu').fadeOut();
         $('.harmonica-bar').removeClass('harmonica-bar--active');
         harmonicaStatus = 'off';
+
+        if (columnClicked == 'on') {
+          $('.harmonica-menu__content__col__open').fadeOut();
+          $('.harmonica-menu__content__col__closed').fadeIn();
+          $('.harmonica-menu__content__col').css('width', '12.5%');
+        }
       }
     }
   }); //Display on hover --------------
@@ -5652,8 +5678,6 @@ $(function () {
   // });
   //Display on click, column gets wider on hover if set in CSS -----------------
 
-  var columnClicked = 'off';
-  var currentCol;
   $('.harmonica-menu__content__col').on('click', function () {
     if (currentCol != this) {
       if (columnClicked == 'on') {

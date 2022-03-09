@@ -54,6 +54,8 @@ Route::group([
 	Route::get('/'.trans("slugs.partners", [], "fr"), 'GeneralController@showPartners')->name('partners-fr');
 	Route::get('/'.trans("slugs.vouchers", [], "fr"), 'GeneralController@showVouchers')->name('vouchers-fr');
 	Route::get('/'.trans("slugs.news", [], "fr").'/{slug?}', 'GeneralController@showNews')->name('news-fr');
+
+	Route::get('/import-creations', 'GeneralController@startImport');
 });
 
 Route::group([

@@ -33,6 +33,11 @@ class Article extends Model
         return $this->belongsToMany(Shop::class)->withPivot('stock')->withTimestamps();
     }
 
+    public function available_shops()
+    {
+        return $this->belongsToMany(Shop::class)->wherePivot('stock', '>', '0');
+    }
+
     public function photos()
     {
         return $this->belongsToMany(Photo::class)->withTimestamps();
@@ -52,4 +57,9 @@ class Article extends Model
     {
         return $this->belongsToMany(CareRecommendation::class);
     }
+
+    // public function creation_category()
+    // {
+    //     return $this->hasOneThrough(CreationCategory::class, Creation::class);
+    // }
 }

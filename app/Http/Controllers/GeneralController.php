@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Creation;
+use App\Models\CreationCategory;
 use App\Models\Partner;
 
 use App\Traits\ArticleAnalyzer;
-
+use App\Traits\DataImporter;
 
 class GeneralController extends Controller
 {
     use ArticleAnalyzer;
+    use DataImporter;
 
     public function home()
     {
@@ -52,5 +54,14 @@ class GeneralController extends Controller
             return view('news');
         }
         return view('news-single');
+    }
+
+    public function startImport()
+    {
+        set_time_limit(3600);
+        echo "*** Importation started...<br/>";
+        $this->importCreationsFromLou();
+        $this->importCreationsFromSabine();
+        $this->createArticlesFromPictures();
     }
 }

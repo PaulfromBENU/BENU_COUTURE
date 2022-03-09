@@ -16,7 +16,13 @@
             <p class="article-overview__footer__size">
                 {{ $article->size->value }}
             </p>
-            <div class="color-circle color-circle--{{ $article->color->name }}"></div>
+            @if($article->color->name == 'multicolor')
+                <div class="color-circle">
+                    <img src="{{ asset('images/pictures/multicolor.png') }}">
+                </div>
+            @else
+                <div class="color-circle color-circle--{{ $article->color->name }}"></div>
+            @endif
         </div>
         <p class="article-overview__footer__category">
             {{ $localized_creation_category }}

@@ -21,6 +21,7 @@ class CreateCareRecommendationsTable extends Migration
             $table->text('description_fr');
             $table->text('description_en');
             $table->text('description_lu');
+            $table->string('translation_key')->default('care.');
             $table->string('picture');
         });
     }

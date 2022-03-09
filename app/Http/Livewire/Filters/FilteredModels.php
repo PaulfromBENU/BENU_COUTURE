@@ -17,13 +17,20 @@ class FilteredModels extends Component
     public $filtered_models;
     public $displayed_models;
     public $sort_direction;
+    public $initial_load;
 
     protected $listeners = ['filtersUpdated' => 'applyFilters', 'sortUpdated' => 'changeSorting'];
 
     public function mount()
     {
         $this->sort_direction = 'asc';
+        $this->initial_load = 0;
+    }
+
+    public function loadInitialModels() //On init, with wire:init
+    {
         $this->applyFilters($this->initial_filters);
+        $this->initial_load = 1;
     }
 
     public function applyFilters($applied_filters)

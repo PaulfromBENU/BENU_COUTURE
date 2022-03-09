@@ -18,7 +18,107 @@ trait FiltersGenerator {
 
     use ArticleAnalyzer;
 
-	public function getFilterOptions()
+    public function getFilterOptions()
+    {
+        $filter_options = [
+            'categories' => [],
+            'colors' => [],
+            'types' => [],
+            'prices' => [],
+            'partners' => [],
+            'shops' => [],
+        ];
+
+        $filter_names = [
+            'categories' => [],
+            'colors' => [],
+            'types' => [],
+            'prices' => [],
+            'partners' => [],
+            'shops' => [],
+        ];
+
+        $name_query = "name_".app()->getLocale();
+
+        foreach ($this->getAllAvailableArticles() as $article) {
+            //Creation categories
+            $creation_category_key = $article->creation->creation_category->filter_key;
+            $creation_category_name = $article->creation->creation_category->$name_query;
+            if (!in_array($creation_category_key, $filter_options['categories'])) {
+                array_push($filter_options['categories'], $creation_category_key);
+                $filter_names['categories'][$creation_category_key] = $creation_category_name;
+            }
+
+            //Colors
+            $color_key = $article->color->name;
+            $color_name = __("colors.".$color_key);
+            if (!in_array($color_key, $filter_options['colors'])) {
+                array_push($filter_options['colors'], $color_key);
+                $filter_names['colors'][$color_key] = $color_name;
+            }
+
+            //Types
+            $type_options = $article->creation->creation_groups;
+            foreach ($type_options as $type) {
+                $type_key = $type->filter_key;
+                $type_name = $type->$name_query;
+                if (!in_array($type_key, $filter_options['types'])) {
+                    array_push($filter_options['types'], $type_key);
+                    $filter_names['types'][$type_key] = $type_name;
+                }
+            }
+
+            //Prices
+            $article_price = $article->creation->price;
+            if ($article_price >= 180) {
+                $price_key = 'more';
+                $price_name = "+180&euro;";
+            } elseif ($article_price >= 121) {
+                $price_key = '121-180';
+                $price_name = "121-180&euro;";
+            } elseif ($article_price >= 61) {
+                $price_key = '61-120';
+                $price_name = "61-120&euro;";
+            } elseif ($article_price >= 31) {
+                $price_key = '31-60';
+                $price_name = "31-60&euro;";
+            } else {
+                $price_key = '0-30';
+                $price_name = "0-30&euro;";
+            }
+            if (!in_array($price_key, $filter_options['prices'])) {
+                array_push($filter_options['prices'], $price_key);
+                $filter_names['prices'][$price_key] = $price_name;
+            }
+
+            //Partners
+            if ($article->creation->partner_id != null) {
+                $partner_key = $article->creation->partner->filter_key;
+                $partner_name = $article->creation->partner->name;
+                if (!in_array($partner_key, $filter_options['partners'])) {
+                    array_push($filter_options['partners'], $partner_key);
+                    $filter_names['partners'][$partner_key] = $partner_name;
+                }
+            }
+            
+            //Shops
+            $shop_options = $article->shops()->wherePivot('stock', '>', '0')->get();
+            foreach ($shop_options as $shop) {
+                $shop_key = $shop->filter_key;
+                $shop_name = $shop->name;
+                if (!in_array($shop_key, $filter_options['shops'])) {
+                    array_push($filter_options['shops'], $shop_key);
+                    $filter_names['shops'][$shop_key] = $shop_name;
+                }
+            }
+        }
+
+        //dd($filter_options, $filter_names);
+
+        return [$filter_options, $filter_names];
+    }
+
+	public function getFilterOptionsOld()//Not used anymore, replaced by function above which is much more efficient
 	{
 		$filter_options = [
 			'categories' => [],
@@ -115,6 +215,54 @@ trait FiltersGenerator {
 
         $name_query = "name_".app()->getLocale();
 
+        foreach ($this->getAvailableArticles($creation) as $article) {
+            //Sizes
+            $size_key = $article->size->value;
+            $size_name = $size_key;
+            if (!in_array($size_key, $filter_options['sizes'])) {
+                array_push($filter_options['sizes'], $size_key);
+                $filter_names['sizes'][$size_key] = $size_name;
+            }
+
+            //Colors
+            $color_key = $article->color->name;
+            $color_name = __("colors.".$color_key);
+            if (!in_array($color_key, $filter_options['colors'])) {
+                array_push($filter_options['colors'], $color_key);
+                $filter_names['colors'][$color_key] = $color_name;
+            }
+
+            //Shops
+            $shop_options = $article->shops()->wherePivot('stock', '>', '0')->get();
+            foreach ($shop_options as $shop) {
+                $shop_key = $shop->filter_key;
+                $shop_name = $shop->name;
+                if (!in_array($shop_key, $filter_options['shops'])) {
+                    array_push($filter_options['shops'], $shop_key);
+                    $filter_names['shops'][$shop_key] = $shop_name;
+                }
+            }
+        }
+
+        return [$filter_options, $filter_names];
+    }
+
+    public function getArticlesFilterOptionsOld($creation)
+    {
+        $filter_options = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $filter_names = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $name_query = "name_".app()->getLocale();
+
         $size_filter_options = Size::all();
         foreach ($size_filter_options as $filter_option) {
             if($this->checkIfArticleFilterHasArticles($creation, 'sizes', $filter_option)) {
@@ -143,6 +291,54 @@ trait FiltersGenerator {
     }
 
     public function getSoldFilterOptions($creation)
+    {
+        $filter_options = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $filter_names = [
+            'sizes' => [],
+            'colors' => [],
+            'shops' => [],
+        ];
+
+        $name_query = "name_".app()->getLocale();
+
+        foreach ($this->getSoldArticles($creation) as $article) {
+            //Sizes
+            $size_key = $article->size->value;
+            $size_name = $size_key;
+            if (!in_array($size_key, $filter_options['sizes'])) {
+                array_push($filter_options['sizes'], $size_key);
+                $filter_names['sizes'][$size_key] = $size_name;
+            }
+
+            //Colors
+            $color_key = $article->color->name;
+            $color_name = __("colors.".$color_key);
+            if (!in_array($color_key, $filter_options['colors'])) {
+                array_push($filter_options['colors'], $color_key);
+                $filter_names['colors'][$color_key] = $color_name;
+            }
+
+            //Shops
+            $shop_options = $article->shops()->wherePivot('stock', '>', '0')->get();
+            foreach ($shop_options as $shop) {
+                $shop_key = $shop->filter_key;
+                $shop_name = $shop->name;
+                if (!in_array($shop_key, $filter_options['shops'])) {
+                    array_push($filter_options['shops'], $shop_key);
+                    $filter_names['shops'][$shop_key] = $shop_name;
+                }
+            }
+        }
+
+        return [$filter_options, $filter_names];
+    }
+
+    public function getSoldFilterOptionsOld($creation)
     {
         $filter_options = [
             'sizes' => [],
@@ -189,7 +385,8 @@ trait FiltersGenerator {
 
 	public function getInitialFilters($request)
 	{
-		$filter_options = $this->getFilterOptions()[0]; // Get only filter keys
+        $all_options = $this->getFilterOptions();
+		$filter_options = $all_options[0]; // Get only filter keys
 
 		$initial_filters = [
 			'categories' => [],
@@ -215,7 +412,7 @@ trait FiltersGenerator {
 			}
 		}
 
-        return $initial_filters;
+        return [$initial_filters, $all_options[1]];
 	}
 
     public function getArticlesInitialFilters($request, $creation)

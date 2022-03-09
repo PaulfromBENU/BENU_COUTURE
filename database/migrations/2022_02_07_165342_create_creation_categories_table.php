@@ -20,6 +20,7 @@ class CreateCreationCategoriesTable extends Migration
             $table->string('name_lu');
             $table->string('name_de');
             $table->string('name_en');
+            $table->string('translation_key')->default('category.');
             $table->string('filter_key');
         });
     }

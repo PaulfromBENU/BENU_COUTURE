@@ -14,9 +14,11 @@
                 <div class="all-models__filters__filter flex" id="filter-price">
                     <p>{{ __('models.filter-price') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
+                @if(count($active_filters['partners']) > 0)
                 <div class="all-models__filters__filter flex" id="filter-partners">
                     <p>{{ __('models.filter-partner') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
+                @endif
                 <div class="all-models__filters__filter flex" id="filter-shops">
                     <p>{{ __('models.filter-shop') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>

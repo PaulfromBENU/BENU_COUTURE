@@ -24,6 +24,8 @@ class CreateCompositionsTable extends Migration
             $table->text('explanation_lu');
             $table->text('explanation_de');
             $table->text('explanation_en');
+            $table->string('translation_key_fabric')->default('fabric.fabric');
+            $table->string('translation_key_explanation')->default('fabric.explanation');
             $table->string('picture');
         });
     }

@@ -14,6 +14,7 @@ class ModelOverview extends Component
     public $model_category;
     public $available_colors;
     public $pictures;
+    public $current_picture_index;
     public $available_articles_count;
     public $filters_color_link;
     public $filters_shop_link;
@@ -22,6 +23,8 @@ class ModelOverview extends Component
 
     public function mount()
     {
+        $this->current_picture_index = 0;
+
         $this->initializeData();
     }
 
@@ -29,54 +32,43 @@ class ModelOverview extends Component
     {
         $this->available_colors = [];
         $this->pictures = collect([]);
-        foreach ($this->model->articles as $article) {
-            $this->pictures->push($article->photos()->first()->file_name);
-        }
 
         // Model category with localized translation
         $localized_category_query = 'name_'.app()->getLocale();
         $this->model_category = $this->model->creation_category->$localized_category_query;
 
+        $this->available_articles_count = 0;
+
         // Get all available colors from available articles
         foreach ($this->getAvailableArticles($this->model) as $article) {
-            if (!in_array($article->color, $this->available_colors)) {
-                array_push($this->available_colors, $article->color);
+            if (!isset($this->available_colors[$article->color->id])) {
+                $this->available_colors[$article->color->id] = $article->color->name;
             }
             // Add pictures selection logic here
-        }
+            $this->pictures->push($article->photos()->first()->file_name);
 
-        // Compute available articles count
-        $this->available_articles_count = $this->getAvailableArticles($this->model)->count();
+            // Compute available articles count
+            $this->available_articles_count ++;
+        }
     }
 
-    // public function addFiltersToLinks($applied_filters)
-    // {
-    //     $this->filters_color_link = "";
-    //     $this->filters_shop_link = "";
-
-    //     //Create strings to append to links, to preserve filter selection from one page to the other
-    //     foreach ($applied_filters['colors'] as $color => $filter) {
-    //         if ($filter == 1) {
-    //             $this->filters_color_link .= $color.'*';
-    //         }
-    //     }
-    //     //Clean string
-    //     if (substr($this->filters_color_link, -1) == '*') {
-    //         $this->filters_color_link = substr($this->filters_color_link, 0, -1);
-    //     }
-
-    //     foreach ($applied_filters['shops'] as $shop => $filter) {
-    //         if ($filter == 1) {
-    //             $this->filters_shop_link .= $shop.'*';
-    //         }
-    //     }
-    //     // Clean string
-    //     if (substr($this->filters_shop_link, -1) == '*') {
-    //         $this->filters_shop_link = substr($this->filters_shop_link, 0, -1);
-    //     }
-
-    //     $this->initializeData();//Required to keep all data as objects
-    // }
+    public function changePicture(string $side)
+    {
+        $pictures_number = $this->pictures->count();
+        if ($side == 'left') {
+            if ($this->current_picture_index == 0) {
+                $this->current_picture_index = $pictures_number - 1;
+            } else {
+                $this->current_picture_index --;
+            }
+        } else {
+            if ($this->current_picture_index == $pictures_number - 1) {
+                $this->current_picture_index = 0;
+            } else {
+                $this->current_picture_index ++;
+            }
+        }
+    }
 
     public function render()
     {

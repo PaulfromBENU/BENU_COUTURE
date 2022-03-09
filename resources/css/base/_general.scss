@@ -27,31 +27,46 @@ body {
 	border-radius: 50%;
 	margin-right: 5px;
 	&--green {
-		background: $benu_village;
+		background: #27955B;
 	}
 	&--blue {
-		background: $unnamed-color-00c3d5;
+		background: #0079A7;
 	}
 	&--yellow {
-		background: $benu_reuse;
+		background: #FFFB32;
 	}
 	&--purple {
-		background: $unnamed-color-58566a;
+		background: #793162;
 	}
 	&--red {
 		background: $primary-color;
 	}
 	&--orange {
-		background: orange;
+		background: #FF9300;
 	}
 	&--grey {
-		background: lightgrey;
+		background: #A1B2CF;
 	}
 	&--beige {
-		background: lightbrown;
+		background: #f0e4a6;
 	}
 	&--brown {
-		background: brown;
+		background: #64422C;
+	}
+	&--black {
+		background: #0a0a09;
+	}
+	&--pink {
+		background: #f27af0;
+	}
+	&--white {
+		background: #fbf8fb;
+	}
+	&--denim {
+		background: #3C41B9;
+	}
+	&--velvet {
+		background: #AA7FEB;
 	}
 }
 

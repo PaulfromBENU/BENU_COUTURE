@@ -23,8 +23,9 @@ class ModelController extends Controller
         // Case model name is not specified, all models are displayed ---------------------------------------
         if ($model_name == '' || $model_name == null) {
             // Compute all filter options, names and status from FiltersGenerator Trait
-            $filter_names = $this->getFilterOptions()[1];
-            $initial_filters = $this->getInitialFilters($request);
+            $filter_data = $this->getInitialFilters($request);
+            $initial_filters = $filter_data[0];
+            $filter_names = $filter_data[1];
 
             // Persists initial filters in the database to be reused on specific model pages
             if (session('secret_id') != null) {
@@ -87,7 +88,7 @@ class ModelController extends Controller
         $initial_filters = $this->getArticlesInitialFilters($request, $creation);
 
         // Handle persisted filters to keep consistency from one page to another
-        if (session('secret_id') != null) {
+        if (session('secret_id') != null && ModelFilter::where('session_id', session('secret_id'))->count() > 0) {
             $applied_filters = json_decode(ModelFilter::where('session_id', session('secret_id'))->first()->applied_filters, true);
             // Take only filter values that are avaiolable for this specific creation
             foreach ($initial_filters['colors'] as $color => $filter_value) {

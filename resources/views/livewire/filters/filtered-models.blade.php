@@ -1,9 +1,19 @@
-<div class="benu-container flex flex-wrap justify-start all-models__list">
-    @if($sections_number == 0 || $filtered_models->count() == 0)
+<div class="benu-container " wire:init="loadInitialModels">
+    @if($initial_load ==  0)
+        <div class="filter-no-result text-center">
+            <img src="{{ asset('images/loaders/load-animation-1.gif') }}" class="m-auto">
+        </div>
+    @elseif($sections_number == 0 || $filtered_models->count() == 0)
         <div class="filter-no-result">
             {{ __('models.filter-no-result') }}
         </div>
     @endif
+
+    <div class="filter-no-result text-center" id="filter-update-loader" style="display: none;">
+        Mise à jour en cours...
+    </div>
+
+    <div class="flex flex-wrap justify-start all-models__list" id="filtered-creations">
     @for($j = 0; $j < $sections_number; $j++)
         @foreach($displayed_models[$j] as $model)
             @livewire('components.model-overview', ['model' => $model], key($model->id))
@@ -53,4 +63,5 @@
             </div>
         @endif
     @endfor
+    </div>
 </div>

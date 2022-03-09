@@ -22,6 +22,8 @@ class CreateArticlesTable extends Migration
             $table->foreignId('size_id')->onUpdate('cascade')->onDelete('cascade')->nullable();
             $table->foreignId('color_id')->onUpdate('cascade')->onDelete('cascade')->nullable();
             //$table->integer('stock')->default('0');
+            $table->string('secondary_color')->nullable();
+            $table->string('third_color')->nullable();
             $table->string('mask_stripes')->nullable();
             $table->boolean('mask_filter')->default('0');
             $table->string('voucher_value')->default('Par tranches de 30');
@@ -30,6 +32,8 @@ class CreateArticlesTable extends Migration
             $table->text('singularity_fr');
             $table->text('singularity_en');
             $table->text('singularity_de');
+            $table->string('translation_key')->default("article.singularity-");
+            $table->string('creation_date')->default('unknown');
             $table->boolean('is_returned')->default('0');
             $table->date('return_date')->default('2022-01-01');
         });

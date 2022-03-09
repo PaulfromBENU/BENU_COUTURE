@@ -17,12 +17,12 @@ class SizeSeeder extends Seeder
         DB::connection('mysql')->table('sizes')->delete();
         
         $category_options = ['adult', 'kid', 'other'];
-        $value_options = ['XS', 'S', 'M', 'L', 'XL', 'XXL', '38', '40', '42', '44'];
+        $value_options = ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL', '5XL', '38', '40', '42', '44', '47,5', '48,5', 'All', '62', '85', '74', '86', '68', '82', '60', '55', '50'];
 
-        for ($i=0; $i < 10; $i++) { 
+        for ($i=0; $i < count($value_options); $i++) { 
             DB::connection('mysql')->table('sizes')->insert([
                 'category' => $category_options[array_rand($category_options)],
-                'value' => $value_options[array_rand($value_options)],
+                'value' => $value_options[$i],
             ]);
         }
     }

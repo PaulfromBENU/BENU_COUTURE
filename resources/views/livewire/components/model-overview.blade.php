@@ -5,8 +5,14 @@
                 {{ $model_category }}&nbsp;- {{ $available_articles_count }} {!! trans_choice('components.models-header', $available_articles_count) !!}
             </p>
             <div class="flex flex-start">
-                @foreach($available_colors as $color)
-                <div class="color-circle color-circle--{{ $color->name }}" wire:key="{{ $color->id }}"></div>
+                @foreach($available_colors as $id => $color)
+                    @if($color == 'multicolor')
+                        <div class="color-circle" wire:key="{{ $id }}">
+                            <img src="{{ asset('images/pictures/multicolor.png') }}">
+                        </div>
+                    @else
+                        <div class="color-circle color-circle--{{ $color }}" wire:key="{{ $id }}"></div>
+                    @endif
                 @endforeach
                 <div class="color-circle"></div>
             </div>
@@ -21,14 +27,12 @@
             @svg('icone_partenaire')
         </div>
         @endif
-        @foreach($pictures as $picture)
-            <img src="{{ asset('images/pictures/articles/'.$picture) }}" wire:key="{{ $picture }}" @if($loop->index > 0) style="display: none;" @endif>
-        @endforeach
+        <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Picture for creation {{ $model->name }}">
         @if($pictures->count() > 1)
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent.stop="changePicture('left')">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right article-arrow-right">
+            <div class="slider-arrow slider-arrow--color-2 slider-arrow--right" wire:click.prevent.stop="changePicture('right')">
                 <i class="fas fa-chevron-right"></i>
             </div>
         @endif

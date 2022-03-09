@@ -15,65 +15,65 @@ class ArticlePhotoSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('article_photo')->delete();
+        // DB::connection('mysql')->table('article_photo')->delete();
 
-        for ($i=1; $i <= 42; $i++) { 
-            DB::connection('mysql')->table('article_photo')->insert([
-                'article_id' => $i,
-                'photo_id' => rand(1, 3),
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            ]);
-        }
-        for ($i=1; $i <= 42; $i++) { 
-            DB::connection('mysql')->table('article_photo')->insert([
-                'article_id' => $i,
-                'photo_id' => rand(4, 5),
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            ]);
-        }
+        // for ($i=1; $i <= 42; $i++) { 
+        //     DB::connection('mysql')->table('article_photo')->insert([
+        //         'article_id' => $i,
+        //         'photo_id' => rand(1, 3),
+        //         'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //         'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     ]);
+        // }
+        // for ($i=1; $i <= 42; $i++) { 
+        //     DB::connection('mysql')->table('article_photo')->insert([
+        //         'article_id' => $i,
+        //         'photo_id' => rand(4, 5),
+        //         'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //         'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     ]);
+        // }
 
-        DB::connection('mysql')->table('article_photo')->insert([
-            'article_id' => 43,
-            'photo_id' => rand(1, 3),
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        // DB::connection('mysql')->table('article_photo')->insert([
+        //     'article_id' => 43,
+        //     'photo_id' => rand(1, 3),
+        //     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        // ]);
 
-        DB::connection('mysql')->table('article_photo')->insert([
-            'article_id' => 43,
-            'photo_id' => rand(4, 5),
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        // DB::connection('mysql')->table('article_photo')->insert([
+        //     'article_id' => 43,
+        //     'photo_id' => rand(4, 5),
+        //     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        // ]);
 
-        DB::connection('mysql')->table('article_photo')->insert([
-            'article_id' => 44,
-            'photo_id' => rand(1, 3),
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        // DB::connection('mysql')->table('article_photo')->insert([
+        //     'article_id' => 44,
+        //     'photo_id' => rand(1, 3),
+        //     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        // ]);
 
-        DB::connection('mysql')->table('article_photo')->insert([
-            'article_id' => 44,
-            'photo_id' => rand(4, 5),
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        // DB::connection('mysql')->table('article_photo')->insert([
+        //     'article_id' => 44,
+        //     'photo_id' => rand(4, 5),
+        //     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        // ]);
 
-        DB::connection('mysql')->table('article_photo')->insert([
-            'article_id' => 45,
-            'photo_id' => rand(1, 3),
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        // DB::connection('mysql')->table('article_photo')->insert([
+        //     'article_id' => 45,
+        //     'photo_id' => rand(1, 3),
+        //     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        // ]);
 
-        DB::connection('mysql')->table('article_photo')->insert([
-            'article_id' => 45,
-            'photo_id' => rand(4, 5),
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        // DB::connection('mysql')->table('article_photo')->insert([
+        //     'article_id' => 45,
+        //     'photo_id' => rand(4, 5),
+        //     'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        // ]);
     }
 }

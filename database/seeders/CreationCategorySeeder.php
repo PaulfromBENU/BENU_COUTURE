@@ -135,5 +135,21 @@ class CreationCategorySeeder extends Seeder
             'name_de' => 'category.tops',
             'filter_key' => 'tops',
         ]);
+
+        DB::connection('mysql')->table('creation_categories')->insert([
+            'name_fr' => 'Pour la maison',
+            'name_en' => 'Home',
+            'name_lu' => 'Maison Lu',
+            'name_de' => 'category.home',
+            'filter_key' => 'home',
+        ]);
+
+        DB::connection('mysql')->table('creation_categories')->insert([
+            'name_fr' => 'Autres',
+            'name_en' => 'Others',
+            'name_lu' => 'Autres Lu',
+            'name_de' => 'category.others',
+            'filter_key' => 'others',
+        ]);
     }
 }

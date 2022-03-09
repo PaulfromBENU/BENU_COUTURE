@@ -29,10 +29,11 @@
 
 @section('scripts')
 <script type="text/javascript">
-	// $(function() {
-	// 	$('.all-models__filter-tag').on('click', function() {
-	// 		$(this).toggleClass('all-models__filter-tag--active');
-	// 	});
-	// })
+	$(function() {
+		Livewire.on('filtersUpdated', function() {
+			$('#filtered-creations').hide();
+			$('#filter-update-loader').show();
+		});
+	})
 </script>
 @endsection
