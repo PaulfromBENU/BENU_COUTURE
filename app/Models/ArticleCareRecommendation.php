@@ -11,4 +11,6 @@ class ArticleCareRecommendation extends Model
 
     // Choice of the database
     protected $connection = 'mysql';
+
+    protected $guarded = ['id'];
 }

@@ -17,8 +17,9 @@ class Size extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'category',
-        'value',
-    ];
+    // protected $fillable = [
+    //     'category',
+    //     'value',
+    // ];
+    protected $guarded = ['id'];
 }

@@ -12,8 +12,5 @@ class CreationAccessory extends Model
     // Choice of the database
     protected $connection = 'mysql';
 
-    // public function creation()
-    // {
-    //     return $this->belongsTo('App\Models\Creation');
-    // }
+    protected $guarded = ['id'];
 }

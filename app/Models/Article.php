@@ -13,6 +13,8 @@ class Article extends Model
     // Choice of the database
     protected $connection = 'mysql';
 
+    protected $guarded = ['id'];
+
     public function creation()
     {
         return $this->belongsTo('App\Models\Creation');

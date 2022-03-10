@@ -12,6 +12,8 @@ class CreationGroup extends Model
     // Choice of the database
     protected $connection = 'mysql';
 
+    protected $guarded = ['id'];
+
     public function creations()
     {
         return $this->belongsToMany('App\Models\Creation');

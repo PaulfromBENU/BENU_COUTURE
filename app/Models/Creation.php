@@ -12,6 +12,8 @@ class Creation extends Model
     // Choice of the database
     protected $connection = 'mysql';
 
+    protected $guarded = ['id'];
+
     public function creation_groups()
     {
         return $this->belongsToMany('App\Models\CreationGroup');
@@ -41,14 +43,4 @@ class Creation extends Model
     {
         return $this->belongsToMany(Keyword::class);
     }
-
-    // public function available_articles()
-    // {
-    //     // Check if articles are present for this creation, and if stock remains in any of the shops
-    //     $available_articles = collect([]);
-    //     foreach($this->articles() as $article) {
-            
-    //     }
-    //     return $available_articles;
-    // }
 }

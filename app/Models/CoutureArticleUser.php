@@ -11,4 +11,6 @@ class CoutureArticleUser extends Model
 
     // Choice of the database
     protected $connection = 'mysql_common';
+
+    protected $guarded = ['id'];
 }

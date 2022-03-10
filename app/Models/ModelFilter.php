@@ -12,5 +12,7 @@ class ModelFilter extends Model
     // Choice of the database
     protected $connection = 'mysql';
 
+    protected $guarded = ['id'];
+
     protected $fillable = ['session_id'];
 }

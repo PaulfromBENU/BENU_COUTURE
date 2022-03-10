@@ -17,8 +17,5 @@ class Color extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'hex_code',
-    ];
+    protected $guarded = ['id'];
 }

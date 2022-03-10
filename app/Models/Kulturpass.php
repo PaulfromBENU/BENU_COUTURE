@@ -12,6 +12,8 @@ class Kulturpass extends Model
     // Choice of the database
     protected $connection = 'mysql_common';
 
+    protected $guarded = ['id'];
+
     public function user()
     {
         return $this->belongsTo('App\Models\User');
