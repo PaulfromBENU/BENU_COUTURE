@@ -8,6 +8,13 @@
                         {{ __('dashboard.nav-overview') }}
                     </a>
                 </li>
+                @if(auth::user()->role == 'admin')
+                <li>
+                    <a href="{{ route('filament.pages.dashboard') }}" class="btn-slider-left dashboard__nav__link @if($section == 'orders') dashboard__nav__link--active @endif">
+                        Admin Panel
+                    </a>
+                </li>
+                @endif
                 <li>
                     <a wire:click="changeSection('orders')" class="btn-slider-left dashboard__nav__link @if($section == 'orders') dashboard__nav__link--active @endif">
                         {{ __('dashboard.nav-orders') }}
