@@ -1488,7 +1488,7 @@ input[type=checkbox]:focus {
   width: 72%;
   min-width: 350px;
   left: 14%;
-  bottom: 12%;
+  bottom: 10%;
   position: -webkit-sticky;
   position: sticky;
   font: normal normal 500 20px/28px Barlow;
