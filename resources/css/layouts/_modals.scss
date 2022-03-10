@@ -177,6 +177,22 @@
 		width: 55%;
 		overflow-x: hidden;
 		overflow-y: auto; 
+		position: relative;
+		&__scroller {
+			border-radius: 11px;
+			background: $white;
+			color: $primary-color;
+			padding: 15px 40px;
+			height: 57px;
+			width: 72%;
+			min-width: 350px;
+			left: 14%;
+			bottom: 12%;
+			position: sticky;
+			font: normal normal 500 20px/28px Barlow;
+			letter-spacing: 0px;
+			opacity: 1;
+		}
 	}
 	&__content {
 		padding: 40px 80px;

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\Article;
 use App\Models\Creation;
 use App\Models\CreationCategory;
@@ -58,10 +60,14 @@ class GeneralController extends Controller
 
     public function startImport()
     {
-        set_time_limit(3600);
-        echo "*** Importation started...<br/>";
-        $this->importCreationsFromLou();
-        $this->importCreationsFromSabine();
-        $this->createArticlesFromPictures();
+        if(auth::check() && auth::user()->role == 'admin') {
+            set_time_limit(3600);
+            echo "*** Importation started...<br/>";
+            $this->importCreationsFromLou();
+            $this->importCreationsFromSabine();
+            $this->createArticlesFromPictures();
+        } else {
+            return redirect()->route('login-fr');
+        }
     }
 }

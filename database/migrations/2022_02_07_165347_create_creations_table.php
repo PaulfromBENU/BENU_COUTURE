@@ -23,6 +23,7 @@ class CreateCreationsTable extends Migration
             $table->boolean('is_accessory')->default('0');
             $table->decimal('price', $precision = 6, $scale = 2)->default('0');
             $table->integer('weight')->default('0');
+            $table->integer('requires_size')->default('1');
             $table->text('description_lu');
             $table->text('description_fr');
             $table->text('description_en');

@@ -1477,6 +1477,23 @@ input[type=checkbox]:focus {
   width: 55%;
   overflow-x: hidden;
   overflow-y: auto;
+  position: relative;
+}
+.article-sidebar__img-container__scroller {
+  border-radius: 11px;
+  background: #FFFFFF;
+  color: #D41C1B;
+  padding: 15px 40px;
+  height: 57px;
+  width: 72%;
+  min-width: 350px;
+  left: 14%;
+  bottom: 12%;
+  position: -webkit-sticky;
+  position: sticky;
+  font: normal normal 500 20px/28px Barlow;
+  letter-spacing: 0px;
+  opacity: 1;
 }
 .article-sidebar__content {
   padding: 40px 80px;
@@ -1856,9 +1873,6 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   line-height: 1.9rem;
   transition: all 0.2s ease-in-out;
-}
-.footer__contact:hover {
-  color: #D41C1B;
 }
 .footer__copyright {
   border-top: solid 1px #D9D9D9;

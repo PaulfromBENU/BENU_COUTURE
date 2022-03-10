@@ -147,9 +147,9 @@
 		letter-spacing: 0px;
 		line-height: 1.9rem;
 		transition: $transition-base;
-		&:hover {
-			color: $primary-color;
-		}
+		// &:hover {
+		// 	color: $primary-color;
+		// }
 	}
 	&__copyright {
 		border-top: solid 1px $light-grey;

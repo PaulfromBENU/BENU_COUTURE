@@ -15,7 +15,7 @@ $dashboard_translations = Translation::where('page', 'dashboard')->get();
 $translations_array = [];
 
 foreach ($dashboard_translations as $translation) {
-    $translations_array[$translation->key] = $translation->fr;
+    $translations_array[$translation->key] = $translation->lu;
 }
 
 return $translations_array;

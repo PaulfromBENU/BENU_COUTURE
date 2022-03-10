@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
             ArticlePhotoSeeder::class,
             ArticleCompositionSeeder::class,
             ArticleCareRecommendationSeeder::class,
+            TranslationSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

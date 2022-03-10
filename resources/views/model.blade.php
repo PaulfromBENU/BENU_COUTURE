@@ -38,5 +38,15 @@
 @endsection
 
 @section('scripts')
-
+<script type="text/javascript">
+	$(function() {
+		Livewire.on('articleLoaded', function() {
+			$('.article-sidebar__img-container').on('click', function() {
+			});
+			$('.article-sidebar__img-container').scroll(function() {
+				$('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
+			});
+		})
+	});
+</script>
 @endsection

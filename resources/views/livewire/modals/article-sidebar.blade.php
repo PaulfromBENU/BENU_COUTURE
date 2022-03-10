@@ -4,6 +4,14 @@
             @foreach($article_pictures as $picture)
                 <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $article->creation->name }}" class="w-full">
             @endforeach
+            @if(count($article_pictures) > 1)
+            <div class="article-sidebar__img-container__scroller flex justify-between">
+                <p>Découvre toutes les photos</p>
+                <p>
+                    @svg('model_arrow_down')
+                </p>
+            </div>
+            @endif
         </div>
         <div class="article-sidebar__content">
 
@@ -70,7 +78,10 @@
 
                 <p class="article-sidebar__content__desc">
                     @if($full_desc == 0)
-                    {{ $article_description_short }} <span class="primary-color" style="cursor: pointer;" wire:click="showFullDescription">+</span>
+                    {{ $article_description_short }} 
+                    @if(str_word_count($article_description) >= 20)
+                        <span class="primary-color" style="cursor: pointer;" wire:click="showFullDescription">+</span>
+                    @endif
                     @else
                     {{ $article_description }}
                     @endif

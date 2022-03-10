@@ -22,252 +22,242 @@ use Intervention\Image\Facades\Image;
 trait DataImporter {
     public function importCreationsFromLou()
     {
-        if(auth::check() && auth::user()->role == 'admin') {
+        echo "<br/><br/><strong>----------------  Importing data from Lou's file...</strong><br/>";
 
-            echo "<br/><br/><strong>----------------  Importing data from Lou's file...</strong><br/>";
+        if (env('APP_ENV') != 'production') {
+            // WARNING: will empty the table!! To be used with caution.
+            Creation::truncate();
+            echo "<strong>--- All data deleted from Creations table in database ---</strong><br/>";
+        }
 
-            if (env('APP_ENV') != 'production') {
-                // WARNING: will empty the table!! To be used with caution.
-                Creation::truncate();
-                echo "<strong>--- All data deleted from Creations table in database ---</strong><br/>";
+        $new_creations = json_decode(file_get_contents(asset('json_imports/creations_lou.json')), true);
+        $creations_success = [];
+        $creations_failed = [];
+        $creations_already_present = [];
+        $missing_categories = [];
+
+        foreach ($new_creations as $creation) {
+            echo "<br/>";
+            $new_creation = new Creation();
+            //$category_id = 0;
+            $error_detected = 0;
+
+            if (!isset($creation['rental_enabled'])) {
+                $creation['rental_enabled'] = 0;
             }
 
-            $new_creations = json_decode(file_get_contents(asset('json_imports/creations_lou.json')), true);
-            $creations_success = [];
-            $creations_failed = [];
-            $creations_already_present = [];
-            $missing_categories = [];
+            if (!isset($creation['partner_id'])) {
+                $creation['partner_id'] = "";
+            }
 
-            foreach ($new_creations as $creation) {
-                echo "<br/>";
-                $new_creation = new Creation();
-                //$category_id = 0;
-                $error_detected = 0;
-
-                if (!isset($creation['rental_enabled'])) {
-                    $creation['rental_enabled'] = 0;
-                }
-
-                if (!isset($creation['partner_id'])) {
-                    $creation['partner_id'] = "";
-                }
-
-                if (Creation::where('name', $creation['name'])->count() == 0) {
-                    $new_creation->creation_category_id = null;
-                    if(is_string($creation['name']) && strlen($creation['name']) > 1) {
-                        $creation['name'] = strtoupper($creation['name']);
-                        $new_creation->name = $creation['name'];
-                    } else {
-                        echo "<span style='color:red;'>!!! ".$creation['name'].": name is not correct...</span><br/>";
-                        $error_detected = 1;
-                    }
-
-                    if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
-                        $new_creation->is_accessory = '1';
-                    }
-
-                    if (floatval($creation['price']) != 0) {
-                        $new_creation->price = floatval($creation['price']);
-                    } else {
-                        $error_detected = 1;
-                        echo "<span style='color:red;'>!!! ".$creation['name'].": price". $creation['price'] ." is not correct... Creation not imported to database.</span><br/>";
-                        //echo "<span style='color:red;'>".$creation['name']."</span><br/>";
-                        array_push($creations_failed, $creation['name']);
-                    }
-                    if (intval($creation['Weight [g]']) != 0) {
-                        $new_creation->weight = floatval($creation['Weight [g]']);
-                    }
-                    $new_creation->description_lu = $creation['description_lu'];
-                    $new_creation->description_fr = $creation['description_fr'];
-                    $new_creation->description_de = $creation['description_de'];
-                    $new_creation->description_en = $creation['description_en'];
-                    if($creation['origin_link_en'] == "/") {
-                        $new_creation->origin_link_en = "";
-                    } else {
-                        $new_creation->origin_link_en = $creation['origin_link_en'];
-                    }
-                    if($creation['origin_link_fr'] == "/") {
-                        $new_creation->origin_link_fr = "";
-                    } else {
-                        $new_creation->origin_link_fr = $creation['origin_link_fr'];
-                    }
-                    if($creation['origin_link_de'] == "/") {
-                        $new_creation->origin_link_de = "";
-                    } else {
-                        $new_creation->origin_link_de = $creation['origin_link_de'];
-                    }
-                    if($creation['origin_link_lu'] == "/") {
-                        $new_creation->origin_link_lu = "";
-                    } else {
-                        $new_creation->origin_link_lu = $creation['origin_link_lu'];
-                    }
-                    $new_creation->rental_enabled = $creation['rental_enabled'];
-                    if ($creation['partner_id'] == "") {
-                        $new_creation->partner_id = null;
-                    } else if(is_int($creation['partner_id'])) {
-                        $new_creation->partner_id = $creation['partner_id'];
-                    }
-                    
-                    if ($error_detected == 0 && $new_creation->save()) {
-                        echo "<span style='color:green;'>".$creation['name']." successfully added to the database :)</span><br/>";
-                        array_push($creations_success, $creation['name']);
-                    } else {
-                        if (!in_array($creation['name'], $creations_failed)) {
-                            array_push($creations_failed, $creation['name']);
-                            echo "<span style='color:red;'>*** ".$creation['name']." could not added to the database :(</span><br/>";
-                        }
-                    }
+            if (Creation::where('name', $creation['name'])->count() == 0) {
+                $new_creation->creation_category_id = null;
+                if(is_string($creation['name']) && strlen($creation['name']) > 1) {
+                    $creation['name'] = strtoupper($creation['name']);
+                    $new_creation->name = $creation['name'];
                 } else {
-                    array_push($creations_already_present, $creation['name']);
-                    echo "<span style='color:orange;'>ooo ".$creation['name']." was already present in the database.</span><br/>";
+                    echo "<span style='color:red;'>!!! ".$creation['name'].": name is not correct...</span><br/>";
+                    $error_detected = 1;
                 }
-            }
 
-        } else {
-            return redirect()->route('login-'.app()->getLocale());
+                if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
+                    $new_creation->is_accessory = '1';
+                }
+
+                if (floatval($creation['price']) != 0) {
+                    $new_creation->price = floatval($creation['price']);
+                } else {
+                    $error_detected = 1;
+                    echo "<span style='color:red;'>!!! ".$creation['name'].": price". $creation['price'] ." is not correct... Creation not imported to database.</span><br/>";
+                    //echo "<span style='color:red;'>".$creation['name']."</span><br/>";
+                    array_push($creations_failed, $creation['name']);
+                }
+                if (intval($creation['Weight [g]']) != 0) {
+                    $new_creation->weight = floatval($creation['Weight [g]']);
+                }
+                $new_creation->description_lu = $creation['description_lu'];
+                $new_creation->description_fr = $creation['description_fr'];
+                $new_creation->description_de = $creation['description_de'];
+                $new_creation->description_en = $creation['description_en'];
+                if($creation['origin_link_en'] == "/") {
+                    $new_creation->origin_link_en = "";
+                } else {
+                    $new_creation->origin_link_en = $creation['origin_link_en'];
+                }
+                if($creation['origin_link_fr'] == "/") {
+                    $new_creation->origin_link_fr = "";
+                } else {
+                    $new_creation->origin_link_fr = $creation['origin_link_fr'];
+                }
+                if($creation['origin_link_de'] == "/") {
+                    $new_creation->origin_link_de = "";
+                } else {
+                    $new_creation->origin_link_de = $creation['origin_link_de'];
+                }
+                if($creation['origin_link_lu'] == "/") {
+                    $new_creation->origin_link_lu = "";
+                } else {
+                    $new_creation->origin_link_lu = $creation['origin_link_lu'];
+                }
+                $new_creation->rental_enabled = $creation['rental_enabled'];
+                if ($creation['partner_id'] == "") {
+                    $new_creation->partner_id = null;
+                } else if(is_int($creation['partner_id'])) {
+                    $new_creation->partner_id = $creation['partner_id'];
+                }
+                
+                if ($error_detected == 0 && $new_creation->save()) {
+                    echo "<span style='color:green;'>".$creation['name']." successfully added to the database :)</span><br/>";
+                    array_push($creations_success, $creation['name']);
+                } else {
+                    if (!in_array($creation['name'], $creations_failed)) {
+                        array_push($creations_failed, $creation['name']);
+                        echo "<span style='color:red;'>*** ".$creation['name']." could not added to the database :(</span><br/>";
+                    }
+                }
+            } else {
+                array_push($creations_already_present, $creation['name']);
+                echo "<span style='color:orange;'>ooo ".$creation['name']." was already present in the database.</span><br/>";
+            }
         }
     }
 
 
     public function importCreationsFromSabine()
     {
-        if(auth::check() && auth::user()->role == 'admin') {
-            $new_creations = json_decode(file_get_contents(asset('json_imports/creations_sabine.json')), true);
+        $new_creations = json_decode(file_get_contents(asset('json_imports/creations_sabine.json')), true);
 
-            echo "<br/><br/><strong>----------------  Importing data from Sabine's file...</strong><br/>";
+        echo "<br/><br/><strong>----------------  Importing data from Sabine's file...</strong><br/>";
 
-            foreach ($new_creations as $creation) {
-                echo "<br/>";
+        foreach ($new_creations as $creation) {
+            echo "<br/>";
 
-                $creation['New BENU Name'] = strtoupper($creation['New BENU Name']);
-                if (Creation::where('name', $creation['New BENU Name'])->count() > 0) {
-                    $creation_to_update = Creation::where('name', $creation['New BENU Name'])->first();
+            $creation['New BENU Name'] = strtoupper($creation['New BENU Name']);
+            if (Creation::where('name', $creation['New BENU Name'])->count() > 0) {
+                $creation_to_update = Creation::where('name', $creation['New BENU Name'])->first();
 
-                    // Assignment of categories - only if not already completed
-                    if ($creation_to_update->creation_category_id == null) {
-                        switch ($creation['Category']) {
-                            case 'Home':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'home')->first()->id;
-                                break;
+                // Assignment of categories - only if not already completed
+                if ($creation_to_update->creation_category_id == null) {
+                    switch ($creation['Category']) {
+                        case 'Home':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'home')->first()->id;
+                            break;
 
-                            case 'Blouse & Chemise':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'blouses-shirts')->first()->id;
-                                break;
+                        case 'Blouse & Chemise':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'blouses-shirts')->first()->id;
+                            break;
 
-                            case 'Blouson & Veste':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'jackets-vests')->first()->id;
-                                break;
+                        case 'Blouson & Veste':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'jackets-vests')->first()->id;
+                            break;
 
-                            case 'Bonnet':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'bonnets')->first()->id;
-                                break;
+                        case 'Bonnet':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'bonnets')->first()->id;
+                            break;
 
-                            case 'Accessoire':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'others')->first()->id;
-                                break;
+                        case 'Accessoire':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'others')->first()->id;
+                            break;
 
-                            case 'Pull':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'sweaters')->first()->id;
-                                break;
+                        case 'Pull':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'sweaters')->first()->id;
+                            break;
 
-                            case 'Top':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'tops')->first()->id;
-                                break;
+                        case 'Top':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'tops')->first()->id;
+                            break;
 
-                            case 'Echarpe & Gant':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'scarfs-gloves')->first()->id;
-                                break;
+                        case 'Echarpe & Gant':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'scarfs-gloves')->first()->id;
+                            break;
 
-                            case 'Sous-vêtement':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'underwear')->first()->id;
-                                break;
+                        case 'Sous-vêtement':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'underwear')->first()->id;
+                            break;
 
-                            case 'Robe':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'dresses')->first()->id;
-                                break;
+                        case 'Robe':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'dresses')->first()->id;
+                            break;
 
-                            case 'Gilet':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'cardigans')->first()->id;
-                                break;
+                        case 'Gilet':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'cardigans')->first()->id;
+                            break;
 
-                            case 'Pantalon':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'trousers')->first()->id;
-                                break;
+                        case 'Pantalon':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'trousers')->first()->id;
+                            break;
 
-                            case 'Jeu':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'games')->first()->id;
-                                break;
+                        case 'Jeu':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'games')->first()->id;
+                            break;
 
-                            case 'Jupe':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'skirts')->first()->id;
-                                break;
+                        case 'Jupe':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'skirts')->first()->id;
+                            break;
 
-                            case 'Sac & Trousse':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'bags-cases')->first()->id;
-                                break;
+                        case 'Sac & Trousse':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'bags-cases')->first()->id;
+                            break;
 
-                            case 'T-shirt':
-                                $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'tee-shirts')->first()->id;
-                                break;
-                            
-                            default:
-                                echo "<span style='color:red;'>!!! ".$creation['Category']." is missing. Creation ".$creation['New BENU Name']." was not updated.</span><br/>";
-                                break;
-                        }
+                        case 'T-shirt':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'tee-shirts')->first()->id;
+                            break;
+                        
+                        default:
+                            echo "<span style='color:red;'>!!! ".$creation['Category']." is missing. Creation ".$creation['New BENU Name']." was not updated.</span><br/>";
+                            break;
                     }
-
-                    //Assignment of types
-                    if ($creation['Unisex'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'unisex')->first()->id))) {
-                        $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'unisex')->first()->id);
-                    }
-
-                    if ($creation['Ladies'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'ladies')->first()->id))) {
-                        $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'ladies')->first()->id);
-                    }
-
-                    if ($creation['Men'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'gentlemen')->first()->id))) {
-                        $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'gentlemen')->first()->id);
-                    }
-
-                    if ($creation['Kids'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'kids')->first()->id))) {
-                        $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'kids')->first()->id);
-                    }
-
-                    if ($creation['Accessories'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'accessories')->first()->id))) {
-                        $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'accessories')->first()->id);
-                    }
-
-                    if ($creation['Home'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'home')->first()->id))) {
-                        $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'home')->first()->id);
-                    }
-
-
-                    if($creation_to_update->save()) {
-                        echo "<span style='color:green;'>".$creation['New BENU Name']." was updated in the database.</span><br/>";
-                    } else {
-                        echo "<span style='color:red;'>*** An error occured when updating ".$creation['New BENU Name']." in the database. Update aborted.</span><br/>";
-                    }
-                } else {
-                    echo "<span style='color:red;'>*** ".$creation['New BENU Name']." was not found in the database.</span><br/>";
                 }
-            }
 
-            // Display all creations with no category
-            foreach (Creation::where('creation_category_id', null)->get() as $creation_with_no_category) {
-                echo "<span style='color:orange;'>xxx ".$creation_with_no_category->name." does not have a category.</span><br/>";
-                //echo "<span style='color:orange;'>o ".$creation_with_no_category->name."</span><br/>";
-            }
+                //Assignment of types
+                if ($creation['Unisex'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'unisex')->first()->id))) {
+                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'unisex')->first()->id);
+                }
 
-            // For copy in Numbers
-            // $articles_array = [];
-            // foreach (Article::all() as $article) {
-            //     array_push($articles_array, ['name' => $article->name, 'creation' => $article->creation->name, 'color' => $article->color->name, 'size' => $article->size->value]);
-            // }
-            // $articles_json = json_encode($articles_array, true);
-            // echo $articles_json;
-        } else {
-            return redirect()->route('login-fr');
+                if ($creation['Ladies'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'ladies')->first()->id))) {
+                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'ladies')->first()->id);
+                }
+
+                if ($creation['Men'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'gentlemen')->first()->id))) {
+                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'gentlemen')->first()->id);
+                }
+
+                if ($creation['Kids'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'kids')->first()->id))) {
+                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'kids')->first()->id);
+                }
+
+                if ($creation['Accessories'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'accessories')->first()->id))) {
+                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'accessories')->first()->id);
+                }
+
+                if ($creation['Home'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'home')->first()->id))) {
+                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'home')->first()->id);
+                }
+
+
+                if($creation_to_update->save()) {
+                    echo "<span style='color:green;'>".$creation['New BENU Name']." was updated in the database.</span><br/>";
+                } else {
+                    echo "<span style='color:red;'>*** An error occured when updating ".$creation['New BENU Name']." in the database. Update aborted.</span><br/>";
+                }
+            } else {
+                echo "<span style='color:red;'>*** ".$creation['New BENU Name']." was not found in the database.</span><br/>";
+            }
         }
+
+        // Display all creations with no category
+        foreach (Creation::where('creation_category_id', null)->get() as $creation_with_no_category) {
+            echo "<span style='color:orange;'>xxx ".$creation_with_no_category->name." does not have a category.</span><br/>";
+            //echo "<span style='color:orange;'>o ".$creation_with_no_category->name."</span><br/>";
+        }
+
+        // For copy in Numbers
+        // $articles_array = [];
+        // foreach (Article::all() as $article) {
+        //     array_push($articles_array, ['name' => $article->name, 'creation' => $article->creation->name, 'color' => $article->color->name, 'size' => $article->size->value]);
+        // }
+        // $articles_json = json_encode($articles_array, true);
+        // echo $articles_json;
     }
 
 
@@ -276,7 +266,7 @@ trait DataImporter {
         $folders_created = [];
         $folders_not_created = [];
 
-        if(auth::check() && auth::user()->role == 'admin') {
+        
             $new_creations = json_decode(file_get_contents(asset('json_imports/creations_2.json')), true);
 
             foreach ($new_creations as $creation) {
@@ -293,9 +283,6 @@ trait DataImporter {
             }
 
             dd('Dossiers créés :', $folders_created, "Dossiers non créés :", $folders_not_created);
-        } else {
-            return redirect()->route('login-fr');
-        }
     }
 
     public function createArticlesFromPictures()
@@ -490,11 +477,11 @@ trait DataImporter {
                                     $success_number ++;
                                     echo "<span style='color: green; padding-left: 10px;'>New picture added for article ".$new_article->name." of model ".strtoupper($creation->name).", from file ".$picture->getFilename()."</span><br/>";
 
-                                    $new_article->photos()->detach();
+                                    //$new_article->photos()->detach();
                                     $new_article->photos()->attach($new_photo->id);
 
                                     // Determine if article is sold or in stock
-                                    $new_article->shops()->detach();
+                                    //$new_article->shops()->detach();
                                     if (strpos(strtolower($picture->getPath()), 'sold') !== false) {
                                         $new_article->shops()->attach(1, ['stock' => '0']);
                                     } else {
