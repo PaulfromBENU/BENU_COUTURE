@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Sold items Language Lines
@@ -9,7 +11,11 @@
 |
 */
 
-return [
-    'seo-title' => "Sold models :name by BENU COUTURE",
-    'seo-description' => "BENU COUTURE has created for you a whole set of models, designed from recycled and upcycled clothes. All creations are unique, find the perfect fit for your style. Discover our sold items, which could be created again just for you.",
-];
+$sold_translations = Translation::where('page', 'sold')->get();
+$translations_array = [];
+
+foreach ($sold_translations as $translation) {
+    $translations_array[$translation->key] = $translation->en;
+}
+
+return $translations_array;

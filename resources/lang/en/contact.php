@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Contact Language Lines
@@ -9,11 +11,11 @@
 |
 */
 
-return [
-    "seo-title" => "Contact BENU COUTURE",
-    "seo-description" => "A question, a missing information, a remark? Contact BENU COUTURE by phone, e-mail or directly using our contact form.",
-    "subtitle" => "Contact us",
-    "title" => "I contact BENU COUTURE",
-    "opening" => "Open from Monday to Saturday, 9:00am to 6:00pm",
-    "extra-txt" => "More text if needed",
-];
+$contact_translations = Translation::where('page', 'contact')->get();
+$translations_array = [];
+
+foreach ($contact_translations as $translation) {
+    $translations_array[$translation->key] = $translation->en;
+}
+
+return $translations_array;

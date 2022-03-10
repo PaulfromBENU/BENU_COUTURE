@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Breadcrumbs Language Lines
@@ -9,28 +11,11 @@
 |
 */
 
-return [
-    "home" => "Accueil",
-    "contact" => "Contact",
-    "model" => "Modèle",
-    "models" => "Créations",
-    "sold" => "Modèles vendus",
-    "client-service" => "Service Client",
-    "faq" => "FAQ",
-    "delivery" => "Livraison",
-    "sizes" => "Guide des tailles",
-    "return" => "Retour",
-    "payment" => "Méthodes de paiement",
-    "care" => "Entretien des vêtements",
-    "shops" => "Points de vente",
-    "full-story" => "Toute l'histoire de BENU",
-    "about" => "À propos de BENU COUTURE",
-    "partners" => "Les partenaires de BENU COUTURE",
-    "vouchers" => "Bons d'achat",
-    "news" => "Toutes les actualités",
-    "news-example" => "Le titre de l'article",
-    "register" => "Création de compte",
-    "login" => "Connexion",
-    "forgotten-pwd" => "Mot de passe oublié",
-    "my-account" => "Mon compte BENU",
-];
+$breadcrumbs_translations = Translation::where('page', 'breadcrumbs')->get();
+$translations_array = [];
+
+foreach ($breadcrumbs_translations as $translation) {
+    $translations_array[$translation->key] = $translation->fr;
+}
+
+return $translations_array;

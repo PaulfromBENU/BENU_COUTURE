@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Shop;
+use App\Models\Translation;
 
 class ContactController extends Controller
 {
@@ -37,8 +38,18 @@ class ContactController extends Controller
             $shops_benu = Shop::where('type', 'BENU owned')->orderBy('created_at', 'desc')->get();
             $shops_other = Shop::where('type', '<>', 'BENU owned')->orderBy('created_at', 'desc')->get();
         }
+
+        $faq_titles_count = 0;
+        $faq_subtitles_count = [];
+        if ($page == __('slugs.services-faq') || $page == '') {
+            $faq_titles_count = Translation::where('page', 'services')->where('key', 'LIKE', 'faq-group-title-'.'%')->count();
+            for ($i=1; $i <= $faq_titles_count; $i++) { 
+                $faq_subtitles_count[$i] = Translation::where('page', 'services')->where('key', 'LIKE', 'faq-group-'.$i.'-question-title-%')->count();
+            }
+        }
+
         $localized_desc_query = "description_".app()->getLocale();
 
-        return view('client-service', ['page' => $page, 'shops_benu' => $shops_benu, 'shops_other' => $shops_other, 'desc_query' => $localized_desc_query]);
+        return view('client-service', ['page' => $page, 'shops_benu' => $shops_benu, 'shops_other' => $shops_other, 'desc_query' => $localized_desc_query, 'faq_titles_count' => $faq_titles_count, 'faq_subtitles_count' => $faq_subtitles_count]);
     }
 }

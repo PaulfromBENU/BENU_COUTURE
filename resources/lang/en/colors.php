@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Colors Language Lines
@@ -9,14 +11,11 @@
 |
 */
 
-return [
-    "green" => "Green",
-    "orange" => "Orange",
-    "red" => "Red",
-    "grey" => "Grey",
-    "purple" => "Purple",
-    "brown" => "Brown",
-    "blue" => "Blue",
-    "yellow" => "Yellow",
-    
-];
+$colors_translations = Translation::where('page', 'colors')->get();
+$translations_array = [];
+
+foreach ($colors_translations as $translation) {
+    $translations_array[$translation->key] = $translation->en;
+}
+
+return $translations_array;

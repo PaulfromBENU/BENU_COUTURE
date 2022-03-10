@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Partners Language Lines
@@ -9,14 +11,11 @@
 |
 */
 
-return [
-    "seo-title" => "Partners of BENU COUTURE",
-    "seo-description" => "All partners of BENU COUTURE here.",
-    "title" => "Our partners",
-    "side-txt" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "see-articles-link" => "See all articles",
-    "address" => "Address",
-    "email" => "E-mail",
-    "phone" => "Phone",
-    "website" => "Website",
-];
+$partners_translations = Translation::where('page', 'partners')->get();
+$translations_array = [];
+
+foreach ($partners_translations as $translation) {
+    $translations_array[$translation->key] = $translation->en;
+}
+
+return $translations_array;

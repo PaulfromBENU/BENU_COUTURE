@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Password Reset Language Lines
@@ -11,10 +13,20 @@
 |
 */
 
-return [
-    'reset'     => 'Das Passwort wurde zurückgesetzt!',
-    'sent'      => 'Passworterinnerung wurde gesendet!',
-    'throttled' => 'Bitte warten Sie, bevor Sie es erneut versuchen.',
-    'token'     => 'Der Passwort-Wiederherstellungs-Schlüssel ist ungültig oder abgelaufen.',
-    'user'      => 'Es konnte leider kein Nutzer mit dieser E-Mail-Adresse gefunden werden.',
-];
+$passwords_translations = Translation::where('page', 'passwords')->get();
+$translations_array = [];
+
+foreach ($passwords_translations as $translation) {
+    $translations_array[$translation->key] = $translation->de;
+}
+
+return $translations_array;
+
+
+// return [
+//     'reset'     => 'Das Passwort wurde zurückgesetzt!',
+//     'sent'      => 'Passworterinnerung wurde gesendet!',
+//     'throttled' => 'Bitte warten Sie, bevor Sie es erneut versuchen.',
+//     'token'     => 'Der Passwort-Wiederherstellungs-Schlüssel ist ungültig oder abgelaufen.',
+//     'user'      => 'Es konnte leider kein Nutzer mit dieser E-Mail-Adresse gefunden werden.',
+// ];

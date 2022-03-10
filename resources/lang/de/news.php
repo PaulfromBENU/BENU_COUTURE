@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | News Language Lines
@@ -9,10 +11,11 @@
 |
 */
 
-return [
-    "all-seo-title" => "news.all-seo-title",
-    "all-seo-desc" => "news.all-seo-desc",
-    "all-title" => "news.all-title",
-    "all-subtitle" => "news.all-subtitle",
+$news_translations = Translation::where('page', 'news')->get();
+$translations_array = [];
 
-];
+foreach ($news_translations as $translation) {
+    $translations_array[$translation->key] = $translation->de;
+}
+
+return $translations_array;

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Slugs Language Lines
@@ -9,22 +11,11 @@
 |
 */
 
-return [
-    'contact' => 'contact-us-de',
-    'models' => 'models-de',
-    'sold' => 'sold-de',
-    'client-support' => "client-support-de",
-    "full-story" => "benu-the-full-story-de",
-    "about" => "benu-about-de",
-    "partners" => "partners-benu-couture-de",
-    "vouchers" => "vouchers-de",
-    "news" => "news-de",
-    "services-faq" => "faq-de",
-    "services-delivery" => "livraison-de",
-    "services-sizes" => "guide-des-tailles-de",
-    "services-return" => "retours-de",
-    "services-payment" => "moyens-de-paiement-de",
-    "services-care" => "entretien-des-vetements-de",
-    "services-shops" => "points-de-vente-de",
-    "services-contact" => "contact-de",
-];
+$slugs_translations = Translation::where('page', 'slugs')->get();
+$translations_array = [];
+
+foreach ($slugs_translations as $translation) {
+    $translations_array[$translation->key] = $translation->de;
+}
+
+return $translations_array;

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Partners Language Lines
@@ -9,14 +11,11 @@
 |
 */
 
-return [
-    "seo-title" => "partners.seo-title",
-    "seo-description" => "partners.seo-description",
-    "title" => "partners.title",
-    "side-txt" => "partners.side-txt",
-    "see-articles-link" => "partners.see-articles-link",
-    "address" => "partners.address",
-    "email" => "partners.email",
-    "phone" => "partners.phone",
-    "website" => "partners.website",
-];
+$partners_translations = Translation::where('page', 'partners')->get();
+$translations_array = [];
+
+foreach ($partners_translations as $translation) {
+    $translations_array[$translation->key] = $translation->de;
+}
+
+return $translations_array;

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Sidebar for articles Language Lines
@@ -9,23 +11,11 @@
 |
 */
 
-return [
-    "close" => "sidebar.close",
-    "back" => "sidebar.back",
-    "size" => "sidebar.size",
-    "singularity" => "sidebar.singularity",
-    "add-to-cart" => "sidebar.add-to-cart",
-    "order-other" => "sidebar.order-other",
-    "size-not-sure" => "sidebar.size-not-sure",
-    "size-guide" => "sidebar.size-guide",
-    "composition" => "sidebar.composition",
-    "care" => "sidebar.care",
-    "delivery" => "sidebar.delivery",
-    "more-details" => "sidebar.more-details",
-    "questions" => "sidebar.questions",
-    "contact-us" => "sidebar.contact-us",
-    "composition-title" => "sidebar.composition-title",
-    "care-title" => "sidebar.care-title",
-    "more-details-title" => "sidebar.more-details-title",
-    
-];
+$sidebar_translations = Translation::where('page', 'sidebar')->get();
+$translations_array = [];
+
+foreach ($sidebar_translations as $translation) {
+    $translations_array[$translation->key] = $translation->de;
+}
+
+return $translations_array;

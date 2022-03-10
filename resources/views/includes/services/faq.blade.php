@@ -1,8 +1,7 @@
 <section class="w-1/2 m-auto text-center faq service-panel" id="services-faq">
 	<h2 class="faq__title">{!! __('services.faq-title') !!}</h2>
 	<ul class="faq__accordion">
-		@php $index = 1; @endphp
-		@while(Lang::has('services.faq-group-title-'.$index))
+		@for($index = 1; $index <= $faq_titles_count; $index ++)
 			<li>
 				<div class="faq__accordion__header flex justify-between">
 					<p>{!! __('services.faq-group-title-'.$index) !!}</p>
@@ -14,8 +13,7 @@
 						{!! __('services.faq-group-desc-'.$index) !!}
 					</p>
 					<ul class="mb-10">
-						@php $sub_index = 1; @endphp
-						@while(Lang::has('services.faq-group-'.$index.'-question-title-'.$sub_index))
+						@for($sub_index = 1; $sub_index <= $faq_subtitles_count[$index]; $sub_index ++)
 							<li>
 								<div class="flex justify-between faq__accordion__answer__header">
 									<p>{!! __('services.faq-group-'.$index.'-question-title-'.$sub_index) !!}</p>
@@ -28,12 +26,10 @@
 									{!! __('services.faq-group-'.$index.'-question-content-'.$sub_index) !!}
 								</p>
 							</li>
-							@php $sub_index ++; @endphp
-						@endwhile
+						@endfor
 					</ul>
 				</div>
 			</li>
-			@php $index ++; @endphp
-		@endwhile
+		@endfor
 	</ul>
 </section>

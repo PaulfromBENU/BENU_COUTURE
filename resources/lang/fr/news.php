@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | News Language Lines
@@ -9,10 +11,11 @@
 |
 */
 
-return [
-    "all-seo-title" => "Toutes les actualités de BENU COUTURE",
-    "all-seo-desc" => "Restez au courant de toutes les actualités de BENU COUTURE en lisant nos articles, mis à jour régulièrement.",
-    "all-title" => "Nos campagnes",
-    "all-subtitle" => "Toutes les actualités",
+$news_translations = Translation::where('page', 'news')->get();
+$translations_array = [];
 
-];
+foreach ($news_translations as $translation) {
+    $translations_array[$translation->key] = $translation->fr;
+}
+
+return $translations_array;

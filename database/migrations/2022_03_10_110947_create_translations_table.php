@@ -18,10 +18,10 @@ class CreateTranslationsTable extends Migration
             $table->timestamps();
             $table->string('page');
             $table->string('key');
-            $table->string('fr')->nullable();
-            $table->string('en')->nullable();
-            $table->string('de')->nullable();
-            $table->string('lu')->nullable();
+            $table->text('fr');
+            $table->text('en');
+            $table->text('de');
+            $table->text('lu');
             $table->string('translation_key')->nullable();
         });
     }

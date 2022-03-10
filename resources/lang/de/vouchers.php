@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Vouchers Language Lines
@@ -9,18 +11,11 @@
 |
 */
 
-return [
-    'seo-title' => "vouchers.seo-title",
-    'seo-description' => "vouchers.seo-description",
-    "desc-title" => "vouchers.desc-title",
-    "desc-txt-1" => "vouchers.desc-txt-1",
-    "desc-txt-2" => "vouchers.desc-txt-2",
-    "desc-txt-3" => "vouchers.desc-txt-3",
-    "desc-link" => "vouchers.desc-link",
-    "options-title" => "vouchers.options-title",
-    "options-no-filter" => "vouchers.options-no-filter",
-    "format-pdf" => "vouchers.format-pdf",
-    "format-clothe" => "vouchers.format-clothe",
-    "card-name" => "vouchers.card-name",
-    "card-price" => "vouchers.card-price",
-];
+$vouchers_translations = Translation::where('page', 'vouchers')->get();
+$translations_array = [];
+
+foreach ($vouchers_translations as $translation) {
+    $translations_array[$translation->key] = $translation->de;
+}
+
+return $translations_array;

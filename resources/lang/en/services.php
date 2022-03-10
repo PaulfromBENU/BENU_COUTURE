@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Client service Language Lines
@@ -9,159 +11,11 @@
 |
 */
 
-return [
-    //SEO
-    "seo-title" => "Client service from BENU COUTURE",
-    "seo-description" => "Welcome on the client support of BENU COUTURE. Here you will find all the useful information regarding our services, your orders, delivery options, ...",
-    //Title
-    "main-title" => "Client Support",
-    // Nav
-    "nav-faq" => "FAQ",
-    "nav-delivery" => "Delivery",
-    "nav-sizes" => "Sizes Guide",
-    "nav-return" => "Return",
-    "nav-payment" => "Payment Methods",
-    "nav-care" => "Clothes care",
-    "nav-shops" => "Shops",
-    "nav-contact" => "Contact",
-    // FAQ
-    "faq-title" => "All the answers <br/>to my questions",
-    "faq-group-title-1" => "Environment and sustainability",
-    "faq-group-desc-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-1-question-title-1" => "Wo produziert BENU COUTURE?",
-    "faq-group-1-question-content-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-1-question-title-2" => "Welche Materialien werden für die BENU-Kreationen verwendet?",
-    "faq-group-1-question-content-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-1-question-title-3" => "Kann ich BENU COUTURE gebrauchte Kleidung spenden?",
-    "faq-group-1-question-content-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-1-question-title-4" => "Kann ein Versandhandel nachhaltig sein?",
-    "faq-group-1-question-content-4" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-1-question-title-5" => "Was bedeutet das Logo?",
-    "faq-group-1-question-content-5" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-1-question-title-6" => "Was bedeuten die Namen der BENU-Modelle?",
-    "faq-group-1-question-content-6" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    //
-    "faq-group-title-2" => "The creations",
-    "faq-group-desc-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-1" => "Sind BENU-Kreationen in unterschiedlichen Größen vorrätig?",
-    "faq-group-2-question-content-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-2" => "Was bedeutet die Farbangabe bei den BENU-Kreationen?",
-    "faq-group-2-question-content-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-3" => "Kann mein altes Lieblingsstück für eine BENU-Kreation verarbeitet werden?",
-    "faq-group-2-question-content-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-4" => "Kann ich eine BENU-Kreation abändern lassen?",
-    "faq-group-2-question-content-4" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-5" => "Macht BENU COUTURE individuelle Maßanfertigungen?",
-    "faq-group-2-question-content-5" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-6" => "Gibt es eine Garantie?",
-    "faq-group-2-question-content-6" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-2-question-title-7" => "Wie pflege ich die Kreationen von BENU COUTURE?",
-    "faq-group-2-question-content-7" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    //
-    "faq-group-title-3" => "Order and payment",
-    "faq-group-desc-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-3-question-title-1" => "Wie kommen die Preise bei BENU zustande?",
-    "faq-group-3-question-content-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-3-question-title-2" => "Wie kann ich bei BENU bestellen?",
-    "faq-group-3-question-content-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-3-question-title-3" => "Welche Zahlungsarten gibt es?",
-    "faq-group-3-question-content-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    //
-    "faq-group-title-4" => "Vouchers",
-    "faq-group-desc-4" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-4-question-title-1" => "Welche Gutscheine gibt es?",
-    "faq-group-4-question-content-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-4-question-title-2" => "Wie löse ich einen Gutschein ein?",
-    "faq-group-4-question-content-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-4-question-title-3" => "Was passiert mit meinem Gutschein bei einer Rückerstattung?",
-    "faq-group-4-question-content-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    //
-    "faq-group-title-5" => "Delivery",
-    "faq-group-desc-5" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-5-question-title-1" => "Wohin wird geliefert?",
-    "faq-group-5-question-content-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-5-question-title-2" => "Mit welchem Liefer-Service arbeitet BENU?",
-    "faq-group-5-question-content-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-5-question-title-3" => "Wie hoch sind die Versandkosten?",
-    "faq-group-5-question-content-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-5-question-title-4" => "Warum liefert BENU nicht kostenlos?",
-    "faq-group-5-question-content-4" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-5-question-title-5" => "Wie lange dauert die Lieferung?",
-    "faq-group-5-question-content-5" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-5-question-title-6" => "Kann ich meine Bestellung auch im BENU-Shop abholen?",
-    "faq-group-5-question-content-6" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    //
-    "faq-group-title-6" => "Returns, refunds and reclamations",
-    "faq-group-desc-6" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-6-question-title-1" => "Kann ich einen Artikel umtauschen?",
-    "faq-group-6-question-content-1" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-6-question-title-2" => "Wie sende ich einen Artikel zurück, der mir nicht gefällt oder passt?",
-    "faq-group-6-question-content-2" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-6-question-title-3" => "Was kostet eine Rücksendung?",
-    "faq-group-6-question-content-3" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-6-question-title-4" => "Wie erfolgt die Rückerstattung?",
-    "faq-group-6-question-content-4" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    "faq-group-6-question-title-5" => "Wie kann ich etwas reklamieren?",
-    "faq-group-6-question-content-5" => "Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget. Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem, elementum auctor arcu egestas eget.Suspendisse nec imperdiet turpis, nec dictum dui. Duis maximus enim lorem.",
-    // Care
-    "care-title" => "Take care of your clothes",
-    "care-subtitle" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu.",
-    "care-category-1" => "Cleaning",
-    "care-method-1-1" => "Dry cleaning",
-    "care-method-1-2" => "Soft iron",
-    "care-method-1-3" => "Machine drying to be avoided",
-    "care-category-2" => "Drying",
-    "care-method-2-1" => "Dry cleaning",
-    "care-method-2-2" => "Soft iron",
-    "care-method-2-3" => "Machine drying to be avoided",
-    "care-category-3" => "Ironing",
-    "care-method-3-1" => "Dry cleaning",
-    "care-method-3-2" => "Soft iron",
-    "care-method-3-3" => "Machine drying to be avoided",
-    // Contact
-    "contact-subtitle" => "Contact us",
-    "contact-title" => "I contact BENU COUTURE",
-    "contact-opening" => "Open from Monday to Saturday<br/>On Monday from 10:00am to 5:30pm<br/>From Tuesdy to Saturday from 9:00am to 6:00pm",
-    "contact-extra-txt" => "More text, to be completed if needed",
-    "contact-form-subtitle" => "I need to ask a question",
-    "contact-form-title" => "I send a message",
-    // Delivery
-    "delivery-title" => "Delivery",
-    "delivery-subtitle" => "Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula.",
-    "delivery-txt" => "Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula.",
-    // Payment
-    "payment-title" => "Payment Methods",
-    "payment-subtitle" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue.",
-    "payment-option-1-title" => "Payment by credit/debit/prepaid card",
-    "payment-option-1-desc" => "We accept the following cards: Visa, Mastercard, American Express, Maestro, Bank Card. To proceed with the payment, you will need to enter your card number and the CVC number, which is an additional security for your transaction.",
-    "payment-option-2-title" => "Payment with Paypal",
-    "payment-option-2-desc" => "We accept the following cards: Visa, Mastercard, American Express, Maestro, Bank Card. To proceed with the payment, you will need to enter your card number and the CVC number, which is an additional security for your transaction.",
-    "payment-option-3-title" => "Payment with Digicash",
-    "payment-option-3-desc" => "We accept the following cards: Visa, Mastercard, American Express, Maestro, Bank Card. To proceed with the payment, you will need to enter your card number and the CVC number, which is an additional security for your transaction.",
-    "payment-option-4-title" => "Payment via bank transfer",
-    "payment-option-4-desc" => "We accept the following cards: Visa, Mastercard, American Express, Maestro, Bank Card. To proceed with the payment, you will need to enter your card number and the CVC number, which is an additional security for your transaction.",
-    // Return
-    "return-title" => "Return",
-    "return-txt-1" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu. Vivamus placerat malesuada leo bibendum maximus. Sed faucibus neque vitae sem ornare, non auctor mi malesuada. Fusce nec dolor et mauris tempus mattis. Nunc cursus arcu sapien, non bibendum quam sollicitudin nec. Phasellus dolor magna, luctus vitae nisl ut, lobortis dictum orci. Donec at felis posuere, mattis odio ac, pretium tortor. Donec ut quam interdum, volutpat dolor sit amet, luctus elit. Phasellus non lacinia ex, id fermentum eros. Sed semper ultrices magna, nec varius nulla pretium quis.",
-    "return-txt-2" => "Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu. Vivamus placerat malesuada leo bibendum maximus. Sed faucibus neque vitae sem ornare, non auctor mi malesuada. Fusce nec dolor et mauris tempus mattis. Nunc cursus arcu sapien, non bibendum quam sollicitudin nec. Phasellus dolor magna, luctus vitae nisl ut, lobortis dictum orci. Donec at felis posuere, mattis odio ac, pretium tortor. Donec ut quam interdum, volutpat dolor sit amet, luctus elit. Phasellus non lacinia ex, id fermentum eros. Sed semper ultrices magna, nec varius nulla pretium quis.",
-    "return-highlighted-1" => "Container to highlight content",
-    "return-contact" => "Contact us for a return",
-    // Shops
-    "shops-title" => "Shops",
-    "shops-articles-link" => "See all articles",
-    "shops-opening" => "Opening hours",
-    "shops-monday" => "Monday",
-    "shops-tuesday" => "Tuesday",
-    "shops-wednesday" => "Wednesday",
-    "shops-thursday" => "Thursday",
-    "shops-friday" => "Friday",
-    "shops-saturday" => "Saturday",
-    "shops-sunday" => "Sunday",
-    "shops-closed" => "Closed",
-    "shops-address" => "Address",
-    "shops-email" => "E-mail",
-    "shops-phone" => "Phone",
-    "shops-website" => "Website",
-    // Sizes
-    "sizes-title" => "Sizes Guide",
-];
+$services_translations = Translation::where('page', 'services')->get();
+$translations_array = [];
+
+foreach ($services_translations as $translation) {
+    $translations_array[$translation->key] = $translation->en;
+}
+
+return $translations_array;

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Translation;
+
 /*
 |--------------------------------------------------------------------------
 | Components Language Lines
@@ -9,7 +11,11 @@
 |
 */
 
-return [
-    "models-header" => "déclinaison disponible|déclinaisons disponibles",
-    "models-model" => "Modèle",
-];
+$components_translations = Translation::where('page', 'components')->get();
+$translations_array = [];
+
+foreach ($components_translations as $translation) {
+    $translations_array[$translation->key] = $translation->fr;
+}
+
+return $translations_array;

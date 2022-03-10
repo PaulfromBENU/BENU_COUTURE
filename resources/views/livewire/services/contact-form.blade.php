@@ -77,10 +77,10 @@
 
     @if(!$message_sent)
         @if(!$safety_check)
-        <div class="contact__form__form__security flex w-2/3 m-auto">
+        <div class="contact__form__form__security flex w-2/3 m-auto justify-between">
             <p>{!! __('forms.security-question') !!} {{ $checksum_number_1 }} + {{ $checksum_number_2 }}&nbsp;?</p>
-            <input type="text" minlength="1" maxlength="2" class="ml-8 input-underline" required wire:model.defer="user_sum">
-            <div wire:click="checkSum" class="ml-8 contact__form__form__security__btn hover:underline">{{ __('forms.check') }}</div>
+            <input type="text" minlength="1" maxlength="2" class="ml-8 input-underline" required wire:model.defer="user_sum" style="height: 40px;">
+            <div wire:click="checkSum" class="contact__form__form__security__btn btn-couture-plain" style="height: 50px; margin-left: 30px;">{{ __('forms.check') }}</div>
         </div>
         @elseif($safety_check == 1)
         <input type="submit" name="contact_submit" value="{{ __('forms.send-message') }}" class="btn-couture-plain" style="height: 50px;">
