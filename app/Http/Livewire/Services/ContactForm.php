@@ -67,6 +67,7 @@ class ContactForm extends Component
             $new_message->email = $this->contact_email;
             $new_message->phone = $this->phone;
             $new_message->message = $this->message;
+            $new_message->conditions_ok = '1';
 
             $this->message_sent = 1;
             if ($new_message->save()) {
