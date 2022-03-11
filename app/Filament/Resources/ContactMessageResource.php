@@ -24,26 +24,28 @@ class ContactMessageResource extends Resource
     {
         return $form
             ->schema([
-                // Forms\Components\TextInput::make('gender')
-                //     ->maxLength(255),
-                // Forms\Components\TextInput::make('first_name')
-                //     ->required()
-                //     ->maxLength(255),
-                // Forms\Components\TextInput::make('last_name')
-                //     ->required()
-                //     ->maxLength(255),
-                // Forms\Components\TextInput::make('email')
-                //     ->email()
-                //     ->required()
-                //     ->maxLength(255),
-                // Forms\Components\TextInput::make('phone')
-                //     ->tel()
-                //     ->maxLength(255),
-                // Forms\Components\Textarea::make('message')
-                //     ->required()
-                //     ->maxLength(65535),
-                // Forms\Components\Toggle::make('conditions_ok')
-                //     ->required(),
+                Forms\Components\TextInput::make('gender')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('first_name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('last_name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('email')
+                    ->email()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('phone')
+                    ->tel()
+                    ->maxLength(255),
+                Forms\Components\Textarea::make('message')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Toggle::make('is_read')
+                    ->required(),
+                Forms\Components\Toggle::make('is_answered')
+                    ->required(),
             ]);
     }
 
@@ -51,17 +53,18 @@ class ContactMessageResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\BooleanColumn::make('is_read'),
+                Tables\Columns\BooleanColumn::make('is_answered'),
+                Tables\Columns\TextColumn::make('message'),
+                Tables\Columns\TextColumn::make('first_name'),
+                Tables\Columns\TextColumn::make('last_name'),
+                Tables\Columns\TextColumn::make('gender'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('gender'),
-                Tables\Columns\TextColumn::make('first_name'),
-                Tables\Columns\TextColumn::make('last_name'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('phone'),
-                Tables\Columns\TextColumn::make('message'),
-                Tables\Columns\BooleanColumn::make('conditions_ok'),
             ])
             ->filters([
                 //
@@ -80,7 +83,7 @@ class ContactMessageResource extends Resource
         return [
             'index' => Pages\ListContactMessages::route('/'),
             // 'create' => Pages\CreateContactMessage::route('/create'),
-            // 'edit' => Pages\EditContactMessage::route('/{record}/edit'),
+            'edit' => Pages\EditContactMessage::route('/{record}/edit'),
         ];
     }
 }

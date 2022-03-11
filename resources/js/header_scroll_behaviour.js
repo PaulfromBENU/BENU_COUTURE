@@ -24,5 +24,12 @@ $(function() {
                 $('.header__logo--mobile').show();
             }
         }
+
+        // Handle animate.css animation on footer
+        if (scrollTop > $('.footer-all').position().top - 550) {
+            
+            $('#footer-all-left').css('visibility', 'visible').addClass('animate__animated animate__fadeInLeft');
+            $('#footer-all-right').css('visibility', 'visible').addClass('animate__animated animate__fadeInRight');
+        }
     });
 });

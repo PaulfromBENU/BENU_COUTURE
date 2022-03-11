@@ -34,27 +34,27 @@
 
         <div class="">
             <p class="welcome-illustration-1 welcome-presentation__desc__text">
-                {{ __('welcome.pres-txt-1') }}
+                {!! __('welcome.pres-txt-1') !!}
             </p>
             <p class="welcome-illustration-2 welcome-presentation__desc__text">
-                {{ __('welcome.pres-txt-2') }}
+                {!! __('welcome.pres-txt-2') !!}
             </p>
             <p class="welcome-illustration-3 welcome-presentation__desc__text">
-                {{ __('welcome.pres-txt-3') }}
+                {!! __('welcome.pres-txt-3') !!}
             </p>
             <p class="welcome-illustration-4 welcome-presentation__desc__text">
-                {{ __('welcome.pres-txt-4') }}
+                {!! __('welcome.pres-txt-4') !!}
             </p>
             <p class="welcome-illustration-5 welcome-presentation__desc__text">
-                {{ __('welcome.pres-txt-5') }}
+                {!! __('welcome.pres-txt-5') !!}
             </p>
         </div>
         <div class="">
-            <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-1 welcome-presentation__desc__link">{{ __('welcome.pres-link-1') }}</a>
-            <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-2 welcome-presentation__desc__link">{{ __('welcome.pres-link-2') }}</a>
-            <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-3 welcome-presentation__desc__link">{{ __('welcome.pres-link-3') }}</a>
-            <a href="#" class="welcome-illustration-4 welcome-presentation__desc__link">{{ __('welcome.pres-link-4') }}</a>
-            <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="welcome-illustration-5 welcome-presentation__desc__link">{{ __('welcome.pres-link-5') }}</a>
+            <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-1 welcome-presentation__desc__link">{!! __('welcome.pres-link-1') !!}</a>
+            <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-2 welcome-presentation__desc__link">{!! __('welcome.pres-link-2') !!}</a>
+            <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-3 welcome-presentation__desc__link">{!! __('welcome.pres-link-3') !!}</a>
+            <a href="#" class="welcome-illustration-4 welcome-presentation__desc__link">{!! __('welcome.pres-link-4') !!}</a>
+            <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="welcome-illustration-5 welcome-presentation__desc__link">{!! __('welcome.pres-link-5') !!}</a>
         </div>
     </div>
 </section>

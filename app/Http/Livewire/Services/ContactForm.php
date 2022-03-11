@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Services;
 
+use Illuminate\Support\Facades\Auth;
+
 use Livewire\Component;
 
 use App\Models\ContactMessage;
@@ -46,6 +48,14 @@ class ContactForm extends Component
         $this->message_sent = 0;
         $this->message_valid = 0;
         $this->submit_feedback = "";
+        if (Auth::check()) {
+            $this->gender = Auth::user()->gender;
+            $this->first_name = Auth::user()->first_name;
+            $this->last_name = Auth::user()->last_name;
+            $this->company = Auth::user()->company;
+            $this->phone = Auth::user()->phone;
+            $this->contact_email = Auth::user()->email;
+        }
     }
 
     public function checkSum()
