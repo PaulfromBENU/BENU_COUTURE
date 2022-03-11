@@ -2765,7 +2765,7 @@ input[type=checkbox]:focus {
 .model-pres__desc__txt {
   margin-bottom: 55px;
   text-align: left;
-  font: normal normal 600 16px/28px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   letter-spacing: 0px;
 }
 .model-pres__desc__txt-vouchers {
@@ -2786,7 +2786,7 @@ input[type=checkbox]:focus {
   justify-content: flex-start;
   width: 80%;
   text-align: left;
-  font: normal normal 600 16px/26px "Barlow";
+  font: normal normal 500 16px/26px "Barlow";
   letter-spacing: 0px;
 }
 .model-pres__desc__keywords li svg {
