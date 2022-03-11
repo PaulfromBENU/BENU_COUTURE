@@ -16,29 +16,29 @@ class CreationCreationGroupSeeder extends Seeder
     {
         DB::connection('mysql')->table('creation_creation_group')->delete();
 
-        for ($i=1; $i <= 8; $i++) { 
-            DB::connection('mysql')->table('creation_creation_group')->insert([
-                'creation_id' => $i,
-                'creation_group_id' => rand(1, 4),
-            ]);
-        }
-        for ($i=9; $i <= 11; $i++) { 
-            DB::connection('mysql')->table('creation_creation_group')->insert([
-                'creation_id' => $i,
-                'creation_group_id' => 6,
-            ]);
-        }
-        for ($i=1; $i <= 5; $i++) { 
-            DB::connection('mysql')->table('creation_creation_group')->insert([
-                'creation_id' => rand(1, 11),
-                'creation_group_id' => 5,
-            ]);
-        }
+        // for ($i=1; $i <= 8; $i++) { 
+        //     DB::connection('mysql')->table('creation_creation_group')->insert([
+        //         'creation_id' => $i,
+        //         'creation_group_id' => rand(1, 4),
+        //     ]);
+        // }
+        // for ($i=9; $i <= 11; $i++) { 
+        //     DB::connection('mysql')->table('creation_creation_group')->insert([
+        //         'creation_id' => $i,
+        //         'creation_group_id' => 6,
+        //     ]);
+        // }
+        // for ($i=1; $i <= 5; $i++) { 
+        //     DB::connection('mysql')->table('creation_creation_group')->insert([
+        //         'creation_id' => rand(1, 11),
+        //         'creation_group_id' => 5,
+        //     ]);
+        // }
 
-        DB::connection('mysql')->table('creation_creation_group')->insert([
-            'creation_id' => 12,
-            'creation_group_id' => 3,
-        ]);
+        // DB::connection('mysql')->table('creation_creation_group')->insert([
+        //     'creation_id' => 12,
+        //     'creation_group_id' => 3,
+        // ]);
         
     }
 }

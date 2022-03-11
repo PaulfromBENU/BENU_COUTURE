@@ -12,7 +12,9 @@ use App\Models\Creation;
 use App\Models\CreationCategory;
 use App\Models\CreationGroup;
 use App\Models\Photo;
+use App\Models\Shop;
 use App\Models\Size;
+use App\Models\Translation;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -524,5 +526,115 @@ trait DataImporter {
         $success_rate = round(($success_number / $pic_count) * 100);
         echo "Nombre de photos non vendues avec la taille 0 : ".$missing_sizes_number."<br/>";
         echo "Taux de réussite : ".$success_rate."%";
+    }
+
+    public function importTranslations()
+    {
+        $raw_translations = json_decode(file_get_contents(asset('json_imports/translations.json')), true);
+
+        echo "<br/><br/><strong>----------------  Importing translations from Sophie's file...</strong><br/>";
+
+        foreach ($raw_translations as $translation) {
+            $page = strtolower(explode(".", $translation['key'])[0]);
+            $key = strtolower(explode(".", $translation['key'])[1]);
+
+            if (Translation::where('page', $page)->where('key', $key)->count() > 0) {
+                // Case translation key is found in the database
+                $updated_translation = Translation::where('page', $page)->where('key', $key)->first();
+                if (strpos($translation['fr'], '> lien') !== false || strpos($translation['fr'], '> link') !== false) {
+                    echo "Lien à mettre à jour dans le code pour ".$translation['key'].'<br/>';
+                } 
+
+                // Import only if translation exists
+                if ($translation['fr'] != "") {
+                    $updated_translation->fr = $translation['fr'];
+                } else {
+                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language FR</span><br/>";
+                }
+                if ($translation['en'] != "") {
+                    $updated_translation->en = $translation['en'];
+                } else {
+                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language EN</span><br/>";
+                }
+                if ($translation['de'] != "") {
+                    $updated_translation->de = $translation['de'];
+                } else {
+                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language DE</span><br/>";
+                }
+                if ($translation['lu'] != "") {
+                    $updated_translation->lu = $translation['lu'];
+                } else {
+                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language LU</span><br/>";
+                }
+                
+                $updated_translation->translation_key = $translation['key'];
+                if ($updated_translation->save()) {
+                    echo "<span style='color: green; padding-left: 10px;'>Translation key found in database for ".$page.'.'.$key."</span><br/>";
+                }
+            } else {
+                // Handle translations persisted in database
+                // Includes colors, types, categories, shops description
+                if ($page == 'colors') {
+                    $new_color = Color::firstOrNew(['name' => $key]);
+                    $new_color->name = $key;
+
+                    $new_color_translation = Translation::firstOrNew(['page' => 'colors', 'key' => $key]);
+                    $new_color_translation->fr = $translation['fr'];
+                    $new_color_translation->en = $translation['en'];
+                    $new_color_translation->de = $translation['de'];
+                    $new_color_translation->lu = $translation['lu'];
+                    $new_color_translation->translation_key = $page.'.'.$key;
+
+                    if($new_color->save()  && $new_color_translation->save()) {
+                        echo "<span style='color: green; padding-left: 10px;'>Color ".$key." added and translated in the database</span><br/>";
+                    }
+                } elseif ($page == 'type') {
+                    $new_type = CreationGroup::firstOrNew(['filter_key' => $key]);
+                    $new_type->name_fr = $translation['fr'];
+                    $new_type->name_en = $translation['en'];
+                    $new_type->name_de = $translation['de'];
+                    $new_type->name_lu = $translation['lu'];
+                    $new_type->translation_key = $page.'.'.$key;
+                    if ($new_type->save()) {
+                        echo "<span style='color: green; padding-left: 10px;'>Type ".$key." translated in the database</span><br/>";
+                    }
+                } elseif ($page == 'category') {
+                    $new_category = CreationCategory::firstOrNew(['filter_key' => $key]);
+                    $new_category->name_fr = $translation['fr'];
+                    $new_category->name_en = $translation['en'];
+                    $new_category->name_de = $translation['de'];
+                    $new_category->name_lu = $translation['lu'];
+                    $new_category->translation_key = $page.'.'.$key;
+                    if ($new_category->save()) {
+                        echo "<span style='color: green; padding-left: 10px;'>Category ".$key." translated in the database</span><br/>";
+                    }
+                } elseif ($page == 'shops' && $key == 'description-benu-village') {
+                    $new_shop = Shop::where('filter_key', 'benu-esch')->first();
+                    $new_shop->description_de = $translation['de'];
+                    $new_shop->description_fr = $translation['fr'];
+                    $new_shop->description_lu = $translation['lu'];
+                    $new_shop->description_en = $translation['en'];
+                    if ($new_shop->save()) {
+                        echo "<span style='color: green; padding-left: 10px;'>Shop description for BENU Village translated in the database</span><br/>";
+                    }
+                } elseif ($page == 'services' && strpos($key, 'faq-group') !== false) {
+                    $new_faq_info = new Translation();
+                    $new_faq_info->page = $page;
+                    $new_faq_info->key = $key;
+                    $new_faq_info->fr = $translation['fr'];
+                    $new_faq_info->en = $translation['en'];
+                    $new_faq_info->lu = $translation['lu'];
+                    $new_faq_info->de = $translation['de'];
+                    $new_faq_info->translation_key = $page.'.'.$key;
+                    if ($new_faq_info->save()) {
+                        echo "<span style='color: green; padding-left: 10px;'>New element ".$key." added in FAQ</span><br/>";
+                    }
+                } else {
+                    // Case not found at all
+                    echo "<span style='color: red;'>*** Not found in Translation database: ".$page.'.'.$key."</span><br/>";
+                }
+            }
+        }
+
     }
 }

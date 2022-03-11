@@ -63,9 +63,10 @@ class GeneralController extends Controller
         if(auth::check() && auth::user()->role == 'admin') {
             set_time_limit(3600);
             echo "*** Importation started...<br/>";
-            $this->importCreationsFromLou();
-            $this->importCreationsFromSabine();
-            $this->createArticlesFromPictures();
+            // $this->importCreationsFromLou();
+            // $this->importCreationsFromSabine();
+            // $this->createArticlesFromPictures();
+            $this->importTranslations();
         } else {
             return redirect()->route('login-fr');
         }
