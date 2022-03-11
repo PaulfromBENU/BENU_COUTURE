@@ -184,10 +184,9 @@
 			color: $primary-color;
 			padding: 15px 40px;
 			height: 57px;
-			width: 72%;
-			min-width: 350px;
-			left: 14%;
-			bottom: 10%;
+			width: 376px;
+			left: calc(50% - 188px);
+			bottom: 8%;
 			position: sticky;
 			font: normal normal 500 20px/28px Barlow;
 			letter-spacing: 0px;
