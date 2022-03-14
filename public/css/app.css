@@ -548,11 +548,10 @@ input[type=checkbox]:focus {
   position: absolute;
   top: 30px;
   right: 30px;
-  background: white;
   z-index: 1;
   border-radius: 10px;
   padding-top: 6px;
-  height: 50px;
+  min-height: 50px;
   width: 50px;
 }
 .model-overview__img-container__partner-icon svg {
