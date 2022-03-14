@@ -141,6 +141,13 @@
 		color: $primary-color;
 		background: $white;
 	}
+	&--dark-hover {
+		&:hover {
+			background: $dark-bg;
+			color: $white;
+			border-color: $dark-bg;
+		}
+	}
 }
 
 .btn-dashboard-plain {

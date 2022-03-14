@@ -6,7 +6,7 @@
             @endforeach
             @if(count($article_pictures) > 1)
             <div class="article-sidebar__img-container__scroller flex justify-between">
-                <p>Découvre toutes les photos</p>
+                <p>{{ __('sidebar.see-pictures') }}</p>
                 <p>
                     @svg('model_arrow_down')
                 </p>
@@ -129,13 +129,13 @@
                     {{ __('sidebar.composition') }}
                 </h3>
 
-                <h5 class="article-sidebar__content__compo__title-expl"><!-- {!! __('sidebar.composition-title') !!} -->Pour nos créations BENU, nous utilisons exclusivement des vêtements et des tissus usagés donnés par des particuliers. Par conséquent, nous ne connaissons pas toujours la composition exacte des textiles utilisés. Ta création BENU se compose des matériaux suivants&nbsp;:</h5>
+                <h5 class="article-sidebar__content__compo__title-expl">{!! __('sidebar.composition-title') !!}</h5>
 
                 <ul class="article-sidebar__content__compo__list">
                     @foreach($article->compositions as $composition)
                     <li>
                         <img src="{{ asset('images/pictures/composition/'.$composition->picture) }}">
-                        <h5>{{ ucfirst($composition->$fabric_query) }} - fibre naturelle</h5>
+                        <h5>{{ ucfirst($composition->$fabric_query) }} - {{ $composition->$explanation_query }}</h5>
                         <p>
                             <!-- {{ $composition->$explanation_query }} -->
                         </p>
@@ -144,9 +144,6 @@
                     <li>
                         <img src="{{ asset('images/pictures/composition/cotton.jpg') }}">
                         <h5>Viscose - fibre synthétique</h5>
-                        <p>
-                            <!-- {{ $composition->$explanation_query }} -->
-                        </p>
                     </li>
                 </ul>
             @elseif($content == 'care')

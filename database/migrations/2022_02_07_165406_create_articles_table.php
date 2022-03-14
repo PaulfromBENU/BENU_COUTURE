@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('type')->default('article');
+            //$table->string('type')->default('article');
             $table->foreignId('creation_id')->onUpdate('cascade')->onDelete('cascade')->nullable();
             $table->foreignId('size_id')->onUpdate('cascade')->onDelete('cascade')->nullable();
             $table->foreignId('color_id')->onUpdate('cascade')->onDelete('cascade')->nullable();
