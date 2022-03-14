@@ -490,7 +490,7 @@ trait FiltersGenerator {
                     $category_models_count ++;
                 }
             }
-         } 
+        } 
         if ($category_filters_applied == 0) {
             $category_models_count ++;
             $models_filtered_by_category = $available_creations;
@@ -643,7 +643,7 @@ trait FiltersGenerator {
                     }
                 }
             }
-         } 
+        } 
         if ($shop_filters_applied == 0) {
             $shop_models_count ++;
             $models_filtered_by_shop = $models_filtered_by_partner;

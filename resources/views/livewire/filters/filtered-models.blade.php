@@ -19,13 +19,13 @@
             @livewire('components.model-overview', ['model' => $model], key($model->id))
         @endforeach
         
-        @if($j < $sections_number - 1)
-            @switch($j)
-                @case(0)
+        @if($j == 0 && $sections_number == 2)
+            @switch($paginate_page)
+                @case(1)
                 <div class="all-models__list__separator all-models__list__separator--1">
                 @break
                 
-                @case(1)
+                @case(2)
                 <div class="all-models__list__separator all-models__list__separator--2">
                 @break
 
@@ -33,12 +33,12 @@
                 <div class="all-models__list__separator all-models__list__separator--1">
             @endswitch
                 <p class="all-models__list__separator__title">
-                    @switch($j)
-                        @case(0)
+                    @switch($paginate_page)
+                        @case(1)
                         {{ __('models.info-1-header') }}
                         @break
                         
-                        @case(1)
+                        @case(2)
                         {{ __('models.info-2-header') }}
                         @break
 
@@ -47,12 +47,12 @@
                     @endswitch
                 </p>
                 <p class="all-models__list__separator__subtitle">
-                    @switch($j)
-                        @case(0)
+                    @switch($paginate_page)
+                        @case(1)
                         {{ __('models.info-1-txt') }}
                         @break
                         
-                        @case(1)
+                        @case(2)
                         {{ __('models.info-2-txt') }}
                         @break
 
@@ -63,5 +63,23 @@
             </div>
         @endif
     @endfor
+
+    @if($paginate_pages_count > 1)
+    <div class="pagination-index flex justify-between">
+        <div class="pagination-index__chevron pagination-index__chevron--left" wire:click="changePage('previous')">
+            @svg('chevron-down')
+        </div>
+        @for($index = 1; $index <= $paginate_pages_count; $index ++)
+            @if($index == $paginate_page)
+                <div class="pagination-index__index pagination-index__index--active" wire:click="changePage({{ $index }})">{{ $index }}</div>
+            @else
+                <div class="pagination-index__index" wire:click="changePage({{ $index }})">{{ $index }}</div>
+            @endif
+        @endfor
+        <div class="pagination-index__chevron pagination-index__chevron--right" wire:click="changePage('next')">
+            @svg('chevron-down')
+        </div>
+    </div>
+    @endif
     </div>
 </div>

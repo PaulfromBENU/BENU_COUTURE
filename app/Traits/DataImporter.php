@@ -482,12 +482,14 @@ trait DataImporter {
                                     //$new_article->photos()->detach();
                                     $new_article->photos()->attach($new_photo->id);
 
-                                    // Determine if article is sold or in stock
+                                    // Determine if article is sold or in stock. Only handles Benu Esch shop.
                                     //$new_article->shops()->detach();
-                                    if (strpos(strtolower($picture->getPath()), 'sold') !== false) {
-                                        $new_article->shops()->attach(1, ['stock' => '0']);
-                                    } else {
-                                        $new_article->shops()->attach(1, ['stock' => '1']);
+                                    if (!($new_article->shops()->contains(Shop::where('filter_key', 'benu-esch')->first()->id))) {
+                                        if (strpos(strtolower($picture->getPath()), 'sold') !== false) {
+                                            $new_article->shops()->attach(1, ['stock' => '0']);
+                                        } else {
+                                            $new_article->shops()->attach(1, ['stock' => '1']);
+                                        }
                                     }
                                 }
                             }
