@@ -129,18 +129,25 @@
                     {{ __('sidebar.composition') }}
                 </h3>
 
-                <h5 class="article-sidebar__content__compo__title-expl">{!! __('sidebar.composition-title') !!}</h5>
+                <h5 class="article-sidebar__content__compo__title-expl"><!-- {!! __('sidebar.composition-title') !!} -->Pour nos créations BENU, nous utilisons exclusivement des vêtements et des tissus usagés donnés par des particuliers. Par conséquent, nous ne connaissons pas toujours la composition exacte des textiles utilisés. Ta création BENU se compose des matériaux suivants&nbsp;:</h5>
 
                 <ul class="article-sidebar__content__compo__list">
                     @foreach($article->compositions as $composition)
                     <li>
                         <img src="{{ asset('images/pictures/composition/'.$composition->picture) }}">
-                        <h5>{{ $composition->$fabric_query }}</h5>
+                        <h5>{{ ucfirst($composition->$fabric_query) }} - fibre naturelle</h5>
                         <p>
-                            {{ $composition->$explanation_query }}
+                            <!-- {{ $composition->$explanation_query }} -->
                         </p>
                     </li>
                     @endforeach
+                    <li>
+                        <img src="{{ asset('images/pictures/composition/cotton.jpg') }}">
+                        <h5>Viscose - fibre synthétique</h5>
+                        <p>
+                            <!-- {{ $composition->$explanation_query }} -->
+                        </p>
+                    </li>
                 </ul>
             @elseif($content == 'care')
                 <!-- <p class="article-sidebar__content__compo__subtitle" wire:click="switchDisplay('overview')">
