@@ -24,7 +24,7 @@
     <div class="model-overview__img-container">
         @if($model->partner != null)
         <div class="model-overview__img-container__partner-icon">
-            @svg('icone_partenaire')
+            @svg('icon_partenaire')
         </div>
         @endif
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Picture for creation {{ $model->name }}">

@@ -47,13 +47,13 @@
 					<p class="mb-2 w-7/12">
 						<strong>{!! __('services.shops-address') !!}:</strong> {{ $shop->address }}
 					</p>
-					<p class="mb-2 w-5/12">
-						<strong>{!! __('services.shops-email') !!}:</strong> <a href="mailto:{{ $shop->email }}">{{ $shop->email }}</a>
+					<p class="w-5/12">
+						<strong>{!! __('services.shops-phone') !!}:</strong> {{ $shop->phone }}
 					</p>
 				</div>
 				<div class="flex justify-start">
-					<p class="w-7/12">
-						<strong>{!! __('services.shops-phone') !!}:</strong> {{ $shop->phone }}
+					<p class="mb-2 w-7/12">
+						<strong>{!! __('services.shops-email') !!}:</strong> <a href="mailto:{{ $shop->email }}">{{ $shop->email }}</a>
 					</p>
 					<p class="w-5/12">
 						<strong>{!! __('services.shops-website') !!}:</strong> <span class="primary-color"><a href="https://{{ $shop->website }}" class="shops__card__link" target="_blank">{{ $shop->website }}</a></span>

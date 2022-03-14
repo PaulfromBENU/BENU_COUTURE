@@ -1,6 +1,11 @@
 <div class="article-overview" wire:click="triggerSideBar">
     <div class="article-overview__cap article-overview__cap--red"></div>
     <div class="article-overview__img-container">
+        @if($is_pop_up == 1)
+        <div class="model-overview__img-container__partner-icon">
+            @svg('icon_pop_up_store')
+        </div>
+        @endif
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">
         @if($pictures->count() > 1)
             <div class="slider-arrow slider-arrow--color-2 slider-arrow--left" wire:click.prevent.stop="changePicture('left')">

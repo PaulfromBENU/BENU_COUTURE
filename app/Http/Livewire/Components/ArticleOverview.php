@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Components;
 
 use Livewire\Component;
+use App\Models\Article;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -12,6 +13,7 @@ class ArticleOverview extends Component
     public $localized_creation_category;
     public $pictures;
     public $current_picture_index;
+    public $is_pop_up;
 
     public $is_wishlisted;
 
@@ -38,6 +40,11 @@ class ArticleOverview extends Component
             } else {
                 $this->is_wishlisted = 0;
             }
+        }
+
+        $this->is_pop_up = 0;
+        if ($this->article->shops()->where('filter_key', '<>', 'benu-esch')->wherePivot('stock', '>', '0')->count() > 0) {
+            $this->is_pop_up = 1;
         }
     }
 
