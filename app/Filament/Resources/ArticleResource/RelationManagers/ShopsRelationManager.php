@@ -43,6 +43,9 @@ class ShopsRelationManager extends BelongsToManyRelationManager
     return $form
         ->schema([
             static::getAttachFormRecordSelect(),
+            Forms\Components\TextInput::make('name')
+                ->required()
+                ->maxLength(255),
             Forms\Components\TextInput::make('stock')->required(),
             // ...
         ]);
