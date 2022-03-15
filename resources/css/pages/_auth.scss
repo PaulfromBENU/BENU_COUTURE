@@ -41,6 +41,9 @@
 			margin-top: 5px;
 			margin-bottom: 5px;
 			padding-top: 27px;
+			input[type='radio'] {
+				margin-top: -2px;
+			}
 		}
 	}
 	&__address {

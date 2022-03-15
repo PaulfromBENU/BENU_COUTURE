@@ -18,6 +18,7 @@ class CreatePhotosTable extends Migration
             $table->timestamps();
             $table->string('file_name');
             $table->string('use_for_model');
+            $table->boolean('is_front')->default('0');
             $table->string('title')->nullable();
             $table->string('author')->nullable();
         });

@@ -2,13 +2,19 @@
     @csrf
     <div class="flex justify-between">
         <div class="w-5/12">
-            <div class="flex justify-between input-group register__form__radio-group">
-                <input type="radio" id="contact_gender_male" name="gender" value="male" wire:model="gender">
-                <label for="contact_gender_male">{{ __('forms.sir') }}</label><br>
-                <input type="radio" id="contact_gender_female" name="gender" value="female" wire:model="gender">
-                <label for="contact_gender_female">{{ __('forms.madam') }}</label><br>
-                <input type="radio" id="contact_gender_neutral" name="gender" value="neutral" wire:model="gender">
-                <label for="contact_gender_neutral">{{ __('forms.neutral') }}</label> 
+            <div class="flex justify-between input-group contact__form__radio-group">
+                <div>
+                    <input type="radio" id="contact_gender_male" name="gender" value="male" wire:model="gender">
+                    <label for="contact_gender_male" class="ml-4">{{ __('forms.sir') }}</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="contact_gender_female" name="gender" value="female" wire:model="gender">
+                    <label for="contact_gender_female" class="ml-4">{{ __('forms.madam') }}</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="contact_gender_neutral" name="gender" value="neutral" wire:model="gender">
+                    <label for="contact_gender_neutral" class="ml-4">{{ __('forms.neutral') }}</label> 
+                </div>
             </div>
             <div class="input-group reactive-label-input">
                 @if($first_name != "")

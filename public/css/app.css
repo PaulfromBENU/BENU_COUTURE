@@ -2691,7 +2691,9 @@ input[type=checkbox]:focus {
   margin-bottom: 65px;
 }
 .contact__form__form label {
-  color: #5d5d5d;
+  font: normal normal 500 16px/28px Barlow;
+  letter-spacing: 0px;
+  color: #2E1414;
 }
 .contact__form__form__mandatory {
   font: normal normal normal 14px/28px Barlow;
@@ -2745,6 +2747,15 @@ input[type=checkbox]:focus {
   background: #F9E2E2;
   color: #D41C1B;
   margin-top: 20px;
+}
+.contact__form__radio-group {
+  height: 65px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 27px;
+}
+.contact__form__radio-group input[type=radio] {
+  margin-top: -2px;
 }
 
 .all-models {
@@ -3386,6 +3397,9 @@ input[type=checkbox]:focus {
   margin-top: 5px;
   margin-bottom: 5px;
   padding-top: 27px;
+}
+.register__form__radio-group input[type=radio] {
+  margin-top: -2px;
 }
 .register__address {
   margin-top: 95px;
