@@ -20,6 +20,8 @@ class SizeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
+    protected static ?string $navigationGroup = 'Données générales';
+
     public static function form(Form $form): Form
     {
         return $form

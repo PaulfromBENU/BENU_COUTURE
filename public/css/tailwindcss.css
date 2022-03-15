@@ -1450,6 +1450,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
 .bg-cover {
   background-size: cover;
 }
@@ -1520,6 +1524,10 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pl-5 {
   padding-left: 1.25rem;
@@ -2277,6 +2285,11 @@ select {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
+  .dark\:hover\:text-gray-300:hover {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+  }
+
   .dark\:focus\:bg-gray-600\/20:focus {
     background-color: rgb(75 85 99 / 0.2);
   }
@@ -2575,6 +2588,10 @@ select {
     margin-bottom: auto;
   }
 
+  .md\:-mr-2 {
+    margin-right: -0.5rem;
+  }
+
   .md\:table-cell {
     display: table-cell;
   }
@@ -2633,6 +2650,18 @@ select {
 
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:border-t-0 {

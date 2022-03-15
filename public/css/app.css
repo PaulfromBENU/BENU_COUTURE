@@ -1657,13 +1657,13 @@ input[type=checkbox]:focus {
 }
 .article-sidebar__content__mask-email {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   background: #ededed;
   color: #D41C1B;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   border: none;
-  height: 22px;
+  height: 26px;
 }
 .article-sidebar__content__mask-email:focus {
   border: none;
