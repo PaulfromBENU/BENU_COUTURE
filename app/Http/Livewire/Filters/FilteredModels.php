@@ -103,6 +103,7 @@ class FilteredModels extends Component
         }
 
         $this->applyFilters($this->applied_filters); //Necessary to avoid models conversion to array
+        $this->emit('pageChanged');
     }
 
     public function render()

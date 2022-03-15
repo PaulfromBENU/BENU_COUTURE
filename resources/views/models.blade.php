@@ -21,7 +21,7 @@
 @endsection
 
 @section('main-content')
-<section class="all-models">
+<section class="all-models" id="all-models">
 	@livewire('filters.all-models-filter', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters])
 	@livewire('filters.filtered-models', ['initial_filters' => $initial_filters])
 </section>
@@ -33,6 +33,10 @@
 		Livewire.on('filtersUpdated', function() {
 			$('#filtered-creations').hide();
 			$('#filter-update-loader').show();
+		});
+
+		Livewire.on('pageChanged', function() {
+			document.getElementById("all-models").scrollIntoView({ behavior: "smooth", block: "start" });
 		});
 	})
 </script>

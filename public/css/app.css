@@ -816,7 +816,7 @@ input[type=checkbox]:focus {
   transition: all 0.3s;
   display: flex;
   justify-content: center;
-  margin-top: 11px;
+  margin-top: 13px;
 }
 .pagination-index__chevron:hover {
   color: #D41C1B;
