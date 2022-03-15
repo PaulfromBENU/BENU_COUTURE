@@ -553,6 +553,7 @@ input[type=checkbox]:focus {
   position: absolute;
   top: 30px;
   right: 30px;
+  background: white;
   z-index: 1;
   border-radius: 10px;
   padding-top: 6px;
@@ -561,6 +562,7 @@ input[type=checkbox]:focus {
 }
 .model-overview__img-container__partner-icon svg {
   margin: auto;
+  transform: scale(0.8);
 }
 
 .article-overview {
@@ -1814,9 +1816,16 @@ input[type=checkbox]:focus {
   cursor: pointer;
   margin-bottom: 20px;
 }
+.article-sidebar__content__compo__detail {
+  text-align: left;
+  font: normal normal 500 14px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  opacity: 0.5;
+}
 .article-sidebar__content__compo__title-expl {
   text-align: left;
-  font: normal normal 600 22px/28px "Barlow Condensed";
+  font: normal normal 500 16px/26px "Barlow";
   letter-spacing: 0px;
   margin-bottom: 40px;
 }

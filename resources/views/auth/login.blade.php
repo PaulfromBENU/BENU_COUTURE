@@ -47,7 +47,7 @@
 
                 <div class="flex items-center justify-end login__options">
                     <a class="hover:underline" href="{{ route('password.request') }}">
-                        {{ __('auth.login-pwd-forgotten') }}&nbsp;?
+                        {{ __('auth.login-pwd-forgotten') }}
                     </a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
             <div class="m-auto login__validate">
                 <input type="submit" name="login_submit" class="btn-couture-plain" value="{{ __('auth.login-connect') }}">
                 <div class="login__validate__question">
-                    {{ __('auth.login-no-account') }}
+                    {!! __('auth.login-no-account') !!}
                 </div>
                 <a href="{{ route('register-'.app()->getLocale()) }}" class="btn-slider-left mt-3">{{ __('auth.login-create-account') }}</a>
             </div>

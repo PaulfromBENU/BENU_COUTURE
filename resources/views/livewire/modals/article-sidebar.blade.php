@@ -1,9 +1,11 @@
 <div class="article-sidebar flex justify-right">
     @if($article_id != '0')
         <div class="article-sidebar__img-container">
+            <div style="height: 100%;">
             @foreach($article_pictures as $picture)
                 <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $article->creation->name }}" class="w-full">
             @endforeach
+            </div>
             @if(count($article_pictures) > 1)
             <div class="article-sidebar__img-container__scroller flex justify-between">
                 <p>{{ __('sidebar.see-pictures') }}</p>
@@ -135,7 +137,9 @@
                     @foreach($article->compositions as $composition)
                     <li>
                         <img src="{{ asset('images/pictures/composition/'.$composition->picture) }}">
-                        <h5>{{ ucfirst($composition->$fabric_query) }} - {{ $composition->$explanation_query }}</h5>
+                        <h5>
+                            {{ ucfirst($composition->$fabric_query) }} <span class="article-sidebar__content__compo__detail">- {{ $composition->$explanation_query }}</span>
+                        </h5>
                         <p>
                             <!-- {{ $composition->$explanation_query }} -->
                         </p>
@@ -143,14 +147,10 @@
                     @endforeach
                     <li>
                         <img src="{{ asset('images/pictures/composition/cotton.jpg') }}">
-                        <h5>Viscose - fibre synthétique</h5>
+                        <h5>Viscose <span class="article-sidebar__content__compo__detail">- fibre synthétique</span></h5>
                     </li>
                 </ul>
             @elseif($content == 'care')
-                <!-- <p class="article-sidebar__content__compo__subtitle" wire:click="switchDisplay('overview')">
-                    < Retour à la description de l'objet
-                </p> -->
-
                 <h3 class="article-sidebar__content__compo__title">
                     {{ __('sidebar.care') }}
                 </h3>

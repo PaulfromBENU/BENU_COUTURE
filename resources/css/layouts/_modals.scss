@@ -455,9 +455,16 @@
 				cursor: pointer;
 				margin-bottom: 20px;
 			}
+			&__detail {
+				text-align: left;
+				font: normal normal 500 14px/28px 'Barlow';
+				letter-spacing: 0px;
+				color: #2E1414;
+				opacity: 0.5;
+			}
 			&__title-expl {
 				text-align: left;
-				font: normal normal 600 22px/28px 'Barlow Condensed';
+				font: normal normal 500 16px/26px 'Barlow';
 				letter-spacing: 0px;
 				margin-bottom: 40px;
 			}

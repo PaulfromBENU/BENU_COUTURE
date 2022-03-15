@@ -121,6 +121,7 @@ class ArticleSidebar extends Component
                 $this->content = 'overview';
                 break;
         }
+        $this->emit('sidebarChange');
     }
 
     public function closeSideBar()
