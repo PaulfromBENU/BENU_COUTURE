@@ -1,4 +1,21 @@
 <div class="benu-container">
+    @if(app('env') == 'local')
+        <!-- <div class="p-3 bg-red-100 text-center w-full">
+            <p>
+                Nombre de creations affichees : {{ $filtered_models->count() }}
+            </p>
+            <p>
+                Nombre de pages : {{ $paginate_pages_count }}
+            </p>
+            <p>
+                Calcul du modulo : {{ fmod($filtered_models->count(), 12) }}
+            </p>
+            <p>
+                Nombre de sections : {{ $sections_number }}
+            </p>
+        </div> -->
+    @endif
+
     @if($initial_load ==  0)
         <div class="filter-no-result text-center">
             <img src="{{ asset('images/loaders/load-animation-1.gif') }}" class="m-auto">

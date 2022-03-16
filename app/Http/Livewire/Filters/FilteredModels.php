@@ -61,6 +61,8 @@ class FilteredModels extends Component
 
     public function changeSorting(string $sort_dir, $applied_filters)
     {
+        $this->paginate_page = 1;
+
         if ($sort_dir == 'desc') {
             $this->sort_direction = 'desc';
         } else {
@@ -77,7 +79,7 @@ class FilteredModels extends Component
         //$this->sections_number = floor($this->filtered_models->count() / 6) + 1;
 
         $this->sections_number = 1;
-        if (fmod($this->filtered_models->count(), 12) > 6) {
+        if ($this->paginate_page < $this->paginate_pages_count || fmod($this->filtered_models->count(), 12) > 6) {
             $this->sections_number = 2;
         }
 
