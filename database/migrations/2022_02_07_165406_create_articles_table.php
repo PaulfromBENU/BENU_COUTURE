@@ -28,10 +28,10 @@ class CreateArticlesTable extends Migration
             $table->boolean('mask_filter')->default('0');
             //$table->string('voucher_value')->default('Par tranches de 30');
             $table->string('voucher_type')->default('pdf');
-            $table->text('singularity_lu');
-            $table->text('singularity_fr');
-            $table->text('singularity_en');
-            $table->text('singularity_de');
+            $table->text('singularity_lu')->nullable();
+            $table->text('singularity_fr')->nullable();
+            $table->text('singularity_en')->nullable();
+            $table->text('singularity_de')->nullable();
             $table->string('translation_key')->default("article.singularity-");
             $table->string('creation_date')->default('unknown');
             $table->boolean('is_returned')->default('0');

@@ -1,4 +1,4 @@
-<div class="benu-container " wire:init="loadInitialModels">
+<div class="benu-container">
     @if($initial_load ==  0)
         <div class="filter-no-result text-center">
             <img src="{{ asset('images/loaders/load-animation-1.gif') }}" class="m-auto">
@@ -63,6 +63,7 @@
             </div>
         @endif
     @endfor
+    </div>
 
     @if($paginate_pages_count > 1)
     <div class="pagination-index flex justify-between">
@@ -81,5 +82,4 @@
         </div>
     </div>
     @endif
-    </div>
 </div>

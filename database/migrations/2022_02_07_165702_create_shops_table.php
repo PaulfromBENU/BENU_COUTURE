@@ -22,6 +22,7 @@ class CreateShopsTable extends Migration
             $table->text('description_en');
             $table->text('description_fr');
             $table->text('description_lu');
+            $table->string('translation_key')->default('shops.description-')->nullable();
             $table->string('address')->nullable();
             $table->string('phone')->nullable();
             $table->string('website')->nullable();

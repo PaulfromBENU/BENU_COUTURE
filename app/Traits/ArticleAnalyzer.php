@@ -20,43 +20,46 @@ trait ArticleAnalyzer {
 
     public function getAvailableCreations()
     {
-        $all_creations = Creation::all();
-        $available_creations = collect([]);
+        // has query will check for the existence of an article with an  available shop
+        $available_creations = Creation::has('articles.available_shops')->get();
+
+        // $all_creations = Creation::all();
+        // $available_creations = collect([]);
 
         // foreach ($all_creations as $creation) {
-        //     if ($this->getAvailableArticles($creation)->count() > 0) {
+        //     if($this->checkIfHasArticlesInStock($creation)) {
         //         $available_creations->push($creation);
         //     }
         // }
-
-        foreach ($all_creations as $creation) {
-            if($this->checkIfHasArticlesInStock($creation)) {
-                $available_creations->push($creation);
-            }
-        }
 
         return $available_creations;
     }
 
     public function checkIfHasArticlesInStock(Creation $creation)
     {
-        foreach ($creation->articles as $article) {
-            if ($article->available_shops()->count() > 0) {
-                return true;
-            }
+        if ($creation->articles()->has('available_shops')->count() > 0) {
+            return true;
         }
+
         return false;
+        // foreach ($creation->articles as $article) {
+        //     if ($article->available_shops()->count() > 0) {
+        //         return true;
+        //     }
+        // }
+        // return false;
     }
 
     public function getAvailableArticles(Creation $creation)
     {
-        $available_articles = collect([]);
-        //$creation_full = Creation::find($creation->id);
-        foreach ($creation->articles as $article) {
-            if ($article->shops()->wherePivot('stock', '>', '0')->count() > 0) {
-                $available_articles->push($article);
-            }
-        }
+        $available_articles = $creation->articles()->has('available_shops')->get();
+        // $available_articles = collect([]);
+        // $creation_full = Creation::find($creation->id);
+        // foreach ($creation->articles as $article) {
+        //     if ($article->shops()->wherePivot('stock', '>', '0')->count() > 0) {
+        //         $available_articles->push($article);
+        //     }
+        // }
         
         // foreach ($creation->articles as $article) {
         //     if ($this->stock($article) > 0) {
@@ -69,25 +72,27 @@ trait ArticleAnalyzer {
 
     public function getAllAvailableArticles()
     {
-        $available_articles = collect([]);
+        $available_articles = Article::has('available_shops')->get();
+        // $available_articles = collect([]);
 
-        foreach (Article::all() as $article) {
-            if ($article->shops()->wherePivot('stock', '>', '0')->count() > 0) {
-                $available_articles->push($article);
-            }
-        }
+        // foreach (Article::all() as $article) {
+        //     if ($article->shops()->wherePivot('stock', '>', '0')->count() > 0) {
+        //         $available_articles->push($article);
+        //     }
+        // }
 
          return $available_articles;
     }
 
     public function getSoldArticles(Creation $creation)
     {
-        $sold_articles = collect([]);
-        foreach ($creation->articles as $article) {
-            if ($article->shops()->wherePivot('stock', '>', '0')->count() == 0) {
-                $sold_articles->push($article);
-            }
-        }
+        $sold_articles = $creation->articles()->doesntHave('available_shops')->get();
+        // $sold_articles = collect([]);
+        // foreach ($creation->articles as $article) {
+        //     if ($article->available_shops()->count() == 0) {
+        //         $sold_articles->push($article);
+        //     }
+        // }
         // foreach ($creation->articles as $article) {
         //      if ($this->stock($article) == 0) {
         //          $sold_articles->push($article);

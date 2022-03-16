@@ -94,11 +94,10 @@ class ShopResource extends Resource
                 // Tables\Columns\TextColumn::make('updated_at')
                 //     ->dateTime(),
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('type'),
-                Tables\Columns\TextColumn::make('description_de'),
-                Tables\Columns\TextColumn::make('description_en'),
-                Tables\Columns\TextColumn::make('description_fr'),
-                Tables\Columns\TextColumn::make('description_lu'),
+                Tables\Columns\TextColumn::make('description_de')->limit('50'),
+                Tables\Columns\TextColumn::make('description_en')->limit('50'),
+                Tables\Columns\TextColumn::make('description_fr')->limit('50'),
+                Tables\Columns\TextColumn::make('description_lu')->limit('50'),
                 Tables\Columns\TextColumn::make('address'),
                 Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('website'),
@@ -112,7 +111,6 @@ class ShopResource extends Resource
                 Tables\Columns\TextColumn::make('opening_friday'),
                 Tables\Columns\TextColumn::make('opening_saturday'),
                 Tables\Columns\TextColumn::make('opening_sunday'),
-                Tables\Columns\TextColumn::make('filter_key'),
             ])
             ->filters([
                 //

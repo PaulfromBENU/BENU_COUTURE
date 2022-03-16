@@ -23,20 +23,21 @@ class FilteredModels extends Component
     public $paginate_pages_count;
     public $paginate_page;
 
-    protected $listeners = ['filtersUpdated' => 'applyFilters', 'sortUpdated' => 'changeSorting'];
+    protected $listeners = ['filtersUpdated' => 'resetPagination', 'sortUpdated' => 'changeSorting'];
 
     public function mount()
     {
         $this->sort_direction = 'asc';
-        $this->initial_load = 0;
+        $this->applyFilters($this->initial_filters);
+        $this->initial_load = 1;
         $this->paginate_page = 1;
     }
 
-    public function loadInitialModels() //On init, with wire:init
-    {
-        $this->applyFilters($this->initial_filters);
-        $this->initial_load = 1;
-    }
+    // public function loadInitialModels() //On init, with wire:init
+    // {
+    //     $this->applyFilters($this->initial_filters);
+    //     $this->initial_load = 1;
+    // }
 
     public function applyFilters($applied_filters)
     {
@@ -50,6 +51,12 @@ class FilteredModels extends Component
         $this->paginate_pages_count = intval(floor($this->filtered_models->count() / 12) + 1);
         
         $this->sortAndDivide();
+    }
+
+    public function resetPagination($applied_filters)
+    {
+        $this->paginate_page = 1;
+        $this->applyFilters($applied_filters);
     }
 
     public function changeSorting(string $sort_dir, $applied_filters)
@@ -78,12 +85,12 @@ class FilteredModels extends Component
             if ($this->sort_direction == 'desc') {
                 $this->displayed_models[$i] = $this->filtered_models->sortByDesc(function($creation){
                     return $creation->price;
-                })->slice(($this->paginate_page - 1 + $i) * 6, 6)->values();
+                })->slice(($this->paginate_page - 1) * 12 + $i * 6, 6)->values();
                 // $this->filtered_models = $this->filtered_models->slice(($this->paginate_page - 1) * 12, 12);
             } else {
                 $this->displayed_models[$i] = $this->filtered_models->sortBy(function($creation){
                     return $creation->price;
-                })->slice(($this->paginate_page - 1 + $i) * 6, 6)->values();
+                })->slice(($this->paginate_page - 1) * 12 + $i * 6, 6)->values();
             }
         }
     }

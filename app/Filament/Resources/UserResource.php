@@ -65,10 +65,10 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('first_name'),
-                Tables\Columns\TextColumn::make('last_name'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('client_number'),
+                Tables\Columns\TextColumn::make('first_name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('last_name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('email')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('client_number')->searchable(),
                 Tables\Columns\TextColumn::make('last_login')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('gender'),

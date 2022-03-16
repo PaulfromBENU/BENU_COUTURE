@@ -4,7 +4,10 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CreationResource\Pages;
 use App\Filament\Resources\CreationResource\RelationManagers;
+use Filament\Forms\Components\Select;
 use App\Models\Creation;
+use App\Models\CreationCategory;
+use App\Models\Partner;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -28,14 +31,24 @@ class CreationResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('product_type')
                     ->required(),
-                Forms\Components\TextInput::make('creation_category_id'),
-                Forms\Components\Toggle::make('is_accessory')
-                    ->required(),
+                Select::make('creation_category_id')
+                        ->label('Category')
+                        ->options(CreationCategory::all()->pluck('name_fr', 'id'))
+                        ->searchable(),
+                Select::make('partner_id')
+                        ->label('Partner')
+                        ->options(Partner::all()->pluck('name', 'id'))
+                        ->searchable(),
                 Forms\Components\TextInput::make('price')
                     ->required(),
                 Forms\Components\TextInput::make('weight')
+                    ->label('Weight [g]')
                     ->required(),
-                Forms\Components\TextInput::make('requires_size')
+                Forms\Components\Toggle::make('is_accessory')
+                    ->label('Is an accessory?')
+                    ->required(),
+                Forms\Components\Toggle::make('requires_size')
+                    ->label('Requires size filter?')
                     ->required(),
                 Forms\Components\Textarea::make('description_lu')
                     ->required()
@@ -59,7 +72,6 @@ class CreationResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Toggle::make('rental_enabled')
                     ->required(),
-                Forms\Components\TextInput::make('partner_id'),
             ]);
     }
 
@@ -67,27 +79,26 @@ class CreationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('product_type')->label('Product type'),
+                Tables\Columns\TextColumn::make('articles_count')->counts('articles')->label('Number of articles'),
+                Tables\Columns\TextColumn::make('creation_category.name_fr')->label('Category'),
+                Tables\Columns\BooleanColumn::make('is_accessory'),
+                Tables\Columns\TextColumn::make('price')->money('eur'),
+                Tables\Columns\TextColumn::make('weight')->label('Weight [g]'),
+                Tables\Columns\BooleanColumn::make('requires_size')->label('Requires Size filter?'),
+                Tables\Columns\TextColumn::make('description_lu')->limit('50'),
+                Tables\Columns\TextColumn::make('description_fr')->limit('50'),
+                Tables\Columns\TextColumn::make('description_en')->limit('50'),
+                Tables\Columns\TextColumn::make('description_de')->limit('50'),
+                Tables\Columns\TextColumn::make('origin_link_fr')->limit('50'),
+                Tables\Columns\TextColumn::make('origin_link_lu')->limit('50'),
+                Tables\Columns\TextColumn::make('origin_link_de')->limit('50'),
+                Tables\Columns\TextColumn::make('origin_link_en')->limit('50'),
+                Tables\Columns\BooleanColumn::make('rental_enabled'),
+                Tables\Columns\TextColumn::make('partner.name')->label('Partner'),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('product_type'),
-                Tables\Columns\TextColumn::make('creation_category_id'),
-                Tables\Columns\BooleanColumn::make('is_accessory'),
-                Tables\Columns\TextColumn::make('price'),
-                Tables\Columns\TextColumn::make('weight'),
-                Tables\Columns\TextColumn::make('requires_size'),
-                Tables\Columns\TextColumn::make('description_lu'),
-                Tables\Columns\TextColumn::make('description_fr'),
-                Tables\Columns\TextColumn::make('description_en'),
-                Tables\Columns\TextColumn::make('description_de'),
-                Tables\Columns\TextColumn::make('origin_link_fr'),
-                Tables\Columns\TextColumn::make('origin_link_lu'),
-                Tables\Columns\TextColumn::make('origin_link_de'),
-                Tables\Columns\TextColumn::make('origin_link_en'),
-                Tables\Columns\BooleanColumn::make('rental_enabled'),
-                Tables\Columns\TextColumn::make('partner_id'),
             ])
             ->filters([
                 //

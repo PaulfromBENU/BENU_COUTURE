@@ -7,9 +7,15 @@ use Filament\Resources\Form;
 use Filament\Resources\RelationManagers\BelongsToManyRelationManager;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Actions\LinkAction;
+
+use App\Models\Shop;
 
 class ShopsRelationManager extends BelongsToManyRelationManager
 {
+    protected static ?string $label = 'point de vente';
+    protected static ?string $pluralLabel = 'points de vente';
+    
     protected static string $relationship = 'shops';
 
     protected static ?string $recordTitleAttribute = 'name';
@@ -18,9 +24,6 @@ class ShopsRelationManager extends BelongsToManyRelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
                 Forms\Components\TextInput::make('stock')
                     ->required(),
             ]);
@@ -36,18 +39,19 @@ class ShopsRelationManager extends BelongsToManyRelationManager
             ->filters([
                 //
             ]);
+            // ->actions([
+            //     LinkAction::make('edit'),
+            //     LinkAction::make('detach')
+            // ]);
     }
 
     public static function attachForm(Form $form): Form
-{
-    return $form
-        ->schema([
-            static::getAttachFormRecordSelect(),
-            Forms\Components\TextInput::make('name')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\TextInput::make('stock')->required(),
-            // ...
-        ]);
-}
+    {
+        return $form
+            ->schema([
+                static::getAttachFormRecordSelect()->options(Shop::all()->pluck('name', 'id'))->searchable(),
+                Forms\Components\TextInput::make('stock')->required(),
+                // ...
+            ]);
+    }
 }

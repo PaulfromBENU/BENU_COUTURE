@@ -39,7 +39,8 @@ class ArticlesRelationManager extends HasManyRelationManager
                     ->maxLength(255),
                 Forms\Components\TextInput::make('voucher_type')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->default('pdf'),
                 Forms\Components\Textarea::make('singularity_lu')
                     ->required()
                     ->maxLength(65535),
@@ -54,14 +55,17 @@ class ArticlesRelationManager extends HasManyRelationManager
                     ->maxLength(65535),
                 Forms\Components\TextInput::make('translation_key')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->default('article.singularity-'),
                 Forms\Components\TextInput::make('creation_date')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->default('01.01.2021'),
                 Forms\Components\Toggle::make('is_returned')
                     ->required(),
                 Forms\Components\DatePicker::make('return_date')
-                    ->required(),
+                    ->required()
+                    ->default(now()),
             ]);
     }
 
