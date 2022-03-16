@@ -40,25 +40,17 @@ trait FiltersGenerator {
 
         $name_query = "name_".app()->getLocale();
 
-        foreach ($this->getAllAvailableArticles() as $article) {
+        foreach ($this->getAvailableCreations() as $creation) {
             //Creation categories
-            $creation_category_key = $article->creation->creation_category->filter_key;
-            $creation_category_name = $article->creation->creation_category->$name_query;
+            $creation_category_key = $creation->creation_category->filter_key;
+            $creation_category_name = $creation->creation_category->$name_query;
             if (!in_array($creation_category_key, $filter_options['categories'])) {
                 array_push($filter_options['categories'], $creation_category_key);
                 $filter_names['categories'][$creation_category_key] = $creation_category_name;
             }
 
-            //Colors
-            $color_key = $article->color->name;
-            $color_name = __("colors.".$color_key);
-            if (!in_array($color_key, $filter_options['colors'])) {
-                array_push($filter_options['colors'], $color_key);
-                $filter_names['colors'][$color_key] = $color_name;
-            }
-
             //Types
-            $type_options = $article->creation->creation_groups;
+            $type_options = $creation->creation_groups;
             foreach ($type_options as $type) {
                 $type_key = $type->filter_key;
                 $type_name = $type->$name_query;
@@ -69,7 +61,7 @@ trait FiltersGenerator {
             }
 
             //Prices
-            $article_price = $article->creation->price;
+            $article_price = $creation->price;
             if ($article_price >= 180) {
                 $price_key = 'more';
                 $price_name = "+180&euro;";
@@ -92,26 +84,79 @@ trait FiltersGenerator {
             }
 
             //Partners
-            if ($article->creation->partner_id != null) {
-                $partner_key = $article->creation->partner->filter_key;
-                $partner_name = $article->creation->partner->name;
+            if ($creation->partner_id != null) {
+                $partner_key = $creation->partner->filter_key;
+                $partner_name = $creation->partner->name;
                 if (!in_array($partner_key, $filter_options['partners'])) {
                     array_push($filter_options['partners'], $partner_key);
                     $filter_names['partners'][$partner_key] = $partner_name;
                 }
             }
-            
-            //Shops
-            $shop_options = $article->shops()->wherePivot('stock', '>', '0')->get();
-            foreach ($shop_options as $shop) {
-                $shop_key = $shop->filter_key;
-                $shop_name = $shop->name;
-                if (!in_array($shop_key, $filter_options['shops'])) {
-                    array_push($filter_options['shops'], $shop_key);
-                    $filter_names['shops'][$shop_key] = $shop_name;
-                }
+
+            // $creation_id = $creation->id;
+            //Colors
+            // $creation_colors = Color::whereHas('articles', function($query) use ($creation_id) {
+            //     $query->where('creation_id', $creation_id)->has('available_shops');
+            // })->get();
+
+            // if ($creation_colors->count() > 0) {
+            //     foreach ($creation_colors as $color) {
+            //         $color_key = $color->name;
+            //         if (!in_array($color_key, $filter_options['colors'])) {
+            //             $color_name = __("colors.".$color_key);
+            //             array_push($filter_options['colors'], $color_key);
+            //             $filter_names['colors'][$color_key] = $color_name;
+            //         }
+            //     }
+            // }
+        }
+
+        // Colors
+        $available_colors = Color::whereHas('articles', function($query) {
+            $query->has('available_shops');
+        })->get();
+
+        foreach ($available_colors as $color) {
+            $color_key = $color->name;
+            if (!in_array($color_key, $filter_options['colors'])) {
+                $color_name = __("colors.".$color_key);
+                array_push($filter_options['colors'], $color_key);
+                $filter_names['colors'][$color_key] = $color_name;
             }
         }
+
+        // Shops
+        $available_shops = Shop::has('articles_in_stock')->get();
+
+        foreach ($available_shops as $shop) {
+            $shop_key = $shop->filter_key;
+            $shop_name = $shop->name;
+            if (!in_array($shop_key, $filter_options['shops'])) {
+                array_push($filter_options['shops'], $shop_key);
+                $filter_names['shops'][$shop_key] = $shop_name;
+            }
+        }
+
+        // foreach ($this->getAllAvailableArticles() as $article) {
+        //     //Colors
+        //     $color_key = $article->color->name;
+        //     if (!in_array($color_key, $filter_options['colors'])) {
+        //         $color_name = __("colors.".$color_key);
+        //         array_push($filter_options['colors'], $color_key);
+        //         $filter_names['colors'][$color_key] = $color_name;
+        //     }
+            
+        //     //Shops
+        //     $shop_options = $article->available_shops()->get();
+        //     foreach ($shop_options as $shop) {
+        //         $shop_key = $shop->filter_key;
+        //         $shop_name = $shop->name;
+        //         if (!in_array($shop_key, $filter_options['shops'])) {
+        //             array_push($filter_options['shops'], $shop_key);
+        //             $filter_names['shops'][$shop_key] = $shop_name;
+        //         }
+        //     }
+        // }
 
         //dd($filter_options, $filter_names);
 

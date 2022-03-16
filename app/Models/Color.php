@@ -18,4 +18,9 @@ class Color extends Model
      * @var array<int, string>
      */
     protected $guarded = ['id'];
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }
