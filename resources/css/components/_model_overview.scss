@@ -72,12 +72,25 @@
 			background: white;
 			z-index: 1;
 			border-radius: 10px;
-			padding-top: 6px;
-			min-height: 50px;
-			width: 50px;
+			height: 50px;
+			width: 45px;
+			transition: width 0.3s;
+			overflow: hidden;
+			font: normal normal 500 14px/20px 'Barlow Condensed';
+			&__content {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 160px;
+				padding: 5px 6px;
+			}
+			&:hover {
+				width: 160px;
+			}
 			svg {
 				margin: auto;
-				transform: scale(0.8);
+				width: 35px;
+				transform: scale(0.78);
 			}
 		}
 	}

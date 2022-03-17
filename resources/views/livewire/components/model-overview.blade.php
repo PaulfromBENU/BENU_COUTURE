@@ -24,7 +24,19 @@
     <div class="model-overview__img-container">
         @if($model->partner != null)
         <div class="model-overview__img-container__partner-icon">
-            @svg('icon_partenaire')
+            <div class="model-overview__img-container__partner-icon__content flex justify-between">
+                <div>
+                    <p class="primary-color pl-2 pr-2 text-sm">
+                        <strong>{{ $model->partner->name }}</strong>
+                    </p>
+                    <p class="pl-2 pr-2 text-sm">
+                        <em>{{ __('components.partner') }}</em>
+                    </p>
+                </div>
+                <div>
+                    @svg('icon_partenaire')
+                </div>
+            </div>
         </div>
         @endif
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Picture for creation {{ $model->name }}">

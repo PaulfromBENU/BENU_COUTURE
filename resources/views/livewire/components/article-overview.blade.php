@@ -2,8 +2,17 @@
     <div class="article-overview__cap article-overview__cap--red"></div>
     <div class="article-overview__img-container">
         @if($is_pop_up == 1)
-        <div class="model-overview__img-container__partner-icon">
-            @svg('icon_pop_up_store')
+        <div class="article-overview__img-container__partner-icon">
+            <div class="article-overview__img-container__partner-icon__content flex justify-between">
+                <div class="flex flex-col justify-center">
+                    <p class="pl-2 pr-2 text-sm">
+                        <em>{{ __('components.other-shop') }}</em>
+                    </p>
+                </div>
+                <div>
+                    @svg('icon_pop_up_store')
+                </div>
+            </div>
         </div>
         @endif
         <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">

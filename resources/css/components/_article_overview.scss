@@ -46,6 +46,34 @@
 			min-height: 100%;
 			object-fit: cover;
 		}
+		&__partner-icon {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			background: white;
+			z-index: 1;
+			border-radius: 10px;
+			height: 51px;
+			width: 45px;
+			transition: width 0.3s;
+			overflow: hidden;
+			font: normal normal 500 14px/20px 'Barlow Condensed';
+			&__content {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 150px;
+				padding: 5px;
+			}
+			&:hover {
+				width: 150px;
+			}
+			svg {
+				margin: auto;
+				width: 35px;
+				transform: scale(0.95);
+			}
+		}
 	}
 	&__footer {
 		.color-circle {
