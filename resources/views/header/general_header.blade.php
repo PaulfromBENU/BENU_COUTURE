@@ -46,9 +46,15 @@
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
+                    @auth
+                    <a href="{{ route('dashboard') }}" class="header__newsletter-btn__link">
+                        {{ __('header.dashboard') }}
+                    </a>
+                    @else
                     <a href="https://benu.lu/" class="header__newsletter-btn__link" target="_blank">
                         {{ __('header.newsletter') }}
                     </a>
+                    @endauth
                 </div>
             </div>
             <div class="flex justify-between header__main-menu">
