@@ -56,7 +56,7 @@
                 </h2>
 
                 <p class="article-sidebar__content__desc">
-                    Je souhaite offrir un bon d'achat d'une valeur de&nbsp;:
+                    {!! __('vouchers.offer-wish') !!}
                 </p>
 
                 <div class="flex justify-between">
