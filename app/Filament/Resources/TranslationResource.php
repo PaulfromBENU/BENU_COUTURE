@@ -53,15 +53,15 @@ class TranslationResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('page')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('key')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('translation_key')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('fr')->limit(50),
+                Tables\Columns\TextColumn::make('en')->limit(50),
+                Tables\Columns\TextColumn::make('de')->limit(50),
+                Tables\Columns\TextColumn::make('lu')->limit(50),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('page'),
-                Tables\Columns\TextColumn::make('key'),
-                Tables\Columns\TextColumn::make('fr'),
-                Tables\Columns\TextColumn::make('en'),
-                Tables\Columns\TextColumn::make('de'),
-                Tables\Columns\TextColumn::make('lu'),
-                Tables\Columns\TextColumn::make('translation_key'),
             ])
             ->filters([
                 //

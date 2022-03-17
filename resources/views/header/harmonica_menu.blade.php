@@ -29,12 +29,12 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU VILLAGE ESCH ASBL</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.village-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.village-desc') !!}
+						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-village">
-							{{ __('header.discover-village') }}</a>
+							{!! __('header.discover-village') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -55,11 +55,11 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU VILLAGE SIS</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.sis-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.sis-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{{ __('header.discover-sis') }}</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{!! __('header.discover-sis') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -80,11 +80,11 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU SLOOW</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.sloow-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.sloow-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{{ __('header.discover-sloow') }}</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{!! __('header.discover-sloow') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -105,11 +105,11 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU COUTURE</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.couture-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.couture-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="{{ route('home', [app()->getLocale()]) }}" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">{{ __('header.discover-couture') }}</a>
+							<a href="{{ route('home', [app()->getLocale()]) }}" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">{!! __('header.discover-couture') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -130,11 +130,11 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU REUSE</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.reuse-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.reuse-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="https://www.benureuse.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-reuse">{{ __('header.discover-reuse') }}</a>
+							<a href="https://www.benureuse.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-reuse">{!! __('header.discover-reuse') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -155,11 +155,11 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU LaSA</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.lasa-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.lasa-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{{ __('header.discover-lasa') }}</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{!! __('header.discover-lasa') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@
 						@svg('logo_benu_design', 'm-auto')
 					</div>
 					<div class="flex flex-col justify-center harmonica-menu__content__col__title">
-						<h3 class="harmonica-menu__content__col__title--design">BENU DESIGN</h3>
+						<h3 class="harmonica-menu__content__col__title--design">BENU LIVING</h3>
 					</div>
 				</div>
 				<div class="harmonica-menu__content__col__open harmonica-menu__content__col__open--design">
@@ -179,12 +179,12 @@
 						@svg('logo_benu_design_blanc', 'm-auto')
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
-						<h4>BENU DESIGN</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.design-desc') }}
-						</p>
+						<h4>BENU LIVING</h4>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.design-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{{ __('header.discover-design') }}</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{!! __('header.discover-design') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -205,11 +205,11 @@
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU BREAK</h4>
-						<p class="text-center harmonica-menu__content__col__open__desc__text">
-							{{ __('header.break-desc') }}
-						</p>
+						<div class="text-center harmonica-menu__content__col__open__desc__text">
+							{!! __('header.break-desc') !!}
+						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{{ __('header.discover-break') }}</a>
+							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{!! __('header.discover-break') !!}</a>
 						</div>
 					</div>
 				</div>
