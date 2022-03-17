@@ -52,7 +52,7 @@
                 </div>
 
                 <h2 class="article-sidebar__content__title">
-                    {{ __('voucher.voucher') }}
+                    {{ __('vouchers.voucher') }}
                 </h2>
 
                 <p class="article-sidebar__content__desc">
@@ -85,7 +85,7 @@
                     <input type="hidden" name="voucher_type" wire:model="voucher_type">
 
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" type="submit">
-                        {{ __('voucher.add-to-cart') }}
+                        {{ __('vouchers.add-to-cart') }}
                     </button>
                 </form>
 
