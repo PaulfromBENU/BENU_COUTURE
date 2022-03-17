@@ -5506,6 +5506,8 @@ __webpack_require__(/*! ./model_overview_animation */ "./resources/js/model_over
 
 __webpack_require__(/*! ./sidebar_handler */ "./resources/js/sidebar_handler.js");
 
+__webpack_require__(/*! ./sidebar_picture_scroll */ "./resources/js/sidebar_picture_scroll.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -6241,6 +6243,7 @@ $(function () {
 $(function () {
   $('.article-sidebar').hide();
   $('.mask-sidebar').hide();
+  $('.voucher-sidebar').hide();
   Livewire.on('displayArticle', function (article_id) {
     $('.modal-opacifier').fadeIn();
     $('#general-side-modal').fadeIn(500, function () {
@@ -6257,6 +6260,7 @@ $(function () {
     $('#general-side-modal').fadeOut(400, function () {
       $('.article-sidebar').hide();
       $('.mask-sidebar').hide();
+      $('.voucher-sidebar').hide();
     });
     Livewire.emit('ArticleModalReady', 0);
   });
@@ -6285,6 +6289,48 @@ $(function () {
     $('#general-side-modal').fadeOut(400, function () {
       $('.mask-sidebar').hide();
     });
+  }); // Voucher sidebar handler
+
+  Livewire.on('displayVoucher', function (voucher_id) {
+    $('.modal-opacifier').fadeIn();
+    $('#general-side-modal').fadeIn(500, function () {
+      Livewire.emit('VoucherModalReady', voucher_id);
+    });
+    $('#general-side-modal').css('right', '0');
+    $('.article-sidebar__img-container').scroll(function () {
+      $('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
+    });
+  });
+  Livewire.on('voucherLoaded', function () {
+    $('.voucher-sidebar').hide();
+    $('.voucher-sidebar').fadeIn();
+  });
+  Livewire.on('closeVoucherSideBar', function () {
+    $('.modal-opacifier').fadeOut();
+    $('#general-side-modal').css('right', '-60vw');
+    $('#general-side-modal').fadeOut(400, function () {
+      $('.voucher-sidebar').hide();
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/sidebar_picture_scroll.js":
+/*!************************************************!*\
+  !*** ./resources/js/sidebar_picture_scroll.js ***!
+  \************************************************/
+/***/ (() => {
+
+$(function () {
+  Livewire.on('articleLoaded', function () {
+    $('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $('.article-sidebar__img-container').scrollTop() / 100));
+    $('.article-sidebar__img-container').scroll(function () {
+      $('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
+    });
+  });
+  Livewire.on('sidebarChange', function () {
+    $('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $('.article-sidebar__img-container').scrollTop() / 100));
   });
 });
 

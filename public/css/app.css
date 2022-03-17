@@ -1718,6 +1718,23 @@ input[type=checkbox]:focus {
 .article-sidebar__content__mask-photos input {
   margin-top: 4px;
 }
+.article-sidebar__content__voucher-value {
+  margin: 13px 5px;
+  border-radius: 12px;
+  text-align: center;
+  font: normal normal 500 42px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+  height: 54px;
+  width: 44%;
+  border: #D41C1B solid 2px;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.article-sidebar__content__voucher-value:hover, .article-sidebar__content__voucher-value--active {
+  background: #D41C1B;
+  color: #FFFFFF;
+}
 .article-sidebar__content__wishlist {
   text-align: center;
   font-size: 1.6rem;

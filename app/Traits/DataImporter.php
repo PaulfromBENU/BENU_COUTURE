@@ -421,7 +421,7 @@ trait DataImporter {
                                 $new_article->singularity_fr = "";
                                 $new_article->singularity_en = "";
                                 $new_article->singularity_de = "article.singularity-".strtolower($creation->name)."-".$new_article->name;
-                                $new_article->translation_key = "article.singularity-".strtolower($creation->name)."-".$new_article->name;
+                                $new_article->translation_key = "article.singularity-".strtolower($new_article->name);
                                 $new_article->creation_date = $picture_info[6];
                                 if ($new_article->save()) {
                                     $article_counter ++;

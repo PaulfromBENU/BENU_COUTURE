@@ -14,6 +14,7 @@ class DashboardNavigation extends Component
 
     public $section;
     public $couture_wishlisted_articles;
+    public $couture_wishlisted_vouchers;
     public $couture_wishlisted_sold_articles;
 
     public function mount()
@@ -25,12 +26,17 @@ class DashboardNavigation extends Component
     {
         $wishlisted_articles = auth::user()->wishlistArticles;
         $this->couture_wishlisted_articles = collect([]);
+        $this->couture_wishlisted_vouchers = collect([]);
         $this->couture_wishlisted_sold_articles = collect([]);
         foreach ($wishlisted_articles as $wishlisted_article) {
-            if ($this->stock($wishlisted_article) > 0) {
-                $this->couture_wishlisted_articles->push($wishlisted_article);
+            if ($wishlisted_article->name == 'voucher') {
+                $this->couture_wishlisted_vouchers->push($wishlisted_article);
             } else {
-                $this->couture_wishlisted_sold_articles->push($wishlisted_article);
+                if ($this->stock($wishlisted_article) > 0) {
+                    $this->couture_wishlisted_articles->push($wishlisted_article);
+                } else {
+                    $this->couture_wishlisted_sold_articles->push($wishlisted_article);
+                }
             }
         }
     }

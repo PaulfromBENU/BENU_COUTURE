@@ -45,7 +45,7 @@ class GeneralController extends Controller
 
     public function showVouchers()
     {
-        $vouchers = Article::where('type', 'voucher')->orderBy('voucher_value', 'asc')->get();
+        $vouchers = Article::where('name', 'voucher')->orderBy('voucher_type', 'asc')->get();
 
         return view('vouchers', ['vouchers' => $vouchers]);
     }

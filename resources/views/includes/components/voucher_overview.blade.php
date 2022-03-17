@@ -2,9 +2,6 @@
 	<div class="article-overview__cap article-overview__cap--red"></div>
 	<div class="article-overview__img-container">
 		<img src="{{ asset('images/pictures/vouchers_img.png') }}">
-		<img src="{{ asset('images/pictures/vouchers_img.png') }}" style="display: none;">
-		<img src="{{ asset('images/pictures/vouchers_img.png') }}" style="display: none;">
-		<img src="{{ asset('images/pictures/vouchers_img.png') }}" style="display: none;">
 		<div class="slider-arrow slider-arrow--color-2 slider-arrow--left article-arrow-left">
 			<i class="fas fa-chevron-left"></i>
 		</div>
@@ -32,7 +29,7 @@
 		</p>
 		<div class="flex justify-between">
 			<p class="article-overview__footer__price" style="font-size: 2rem;">
-				{{ __('vouchers.card-price') }}&euro;
+				{{ __('vouchers.card-price') }} 30&euro;
 			</p>
 			<div class="article-overview__footer__heart">
 				<div class="article-overview__footer__heart__icon">

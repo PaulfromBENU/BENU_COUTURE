@@ -33,9 +33,9 @@ class CreateArticlesTable extends Migration
             $table->text('singularity_en')->nullable();
             $table->text('singularity_de')->nullable();
             $table->string('translation_key')->default("article.singularity-");
-            $table->string('creation_date')->default('unknown');
+            $table->string('creation_date')->default('unknown')->nullable();
             $table->boolean('is_returned')->default('0');
-            $table->date('return_date')->default('2022-01-01');
+            $table->date('return_date')->default('2022-01-01')->nullable();
         });
     }
 

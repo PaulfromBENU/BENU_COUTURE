@@ -1,11 +1,31 @@
 <div class="article-sidebar flex justify-right">
     @if($article_id != '0')
         <div class="article-sidebar__img-container">
+
+            @if($article->creation->partner != null)
+            <div class="model-overview__img-container__partner-icon">
+                <div class="model-overview__img-container__partner-icon__content flex justify-between">
+                    <div>
+                        <p class="primary-color pl-2 pr-2 text-sm">
+                            <strong>{{ $article->creation->partner->name }}</strong>
+                        </p>
+                        <p class="pl-2 pr-2 text-sm">
+                            <em>{{ __('components.partner') }}</em>
+                        </p>
+                    </div>
+                    <div>
+                        @svg('icon_partenaire')
+                    </div>
+                </div>
+            </div>
+            @endif
+
             <div style="height: 100%;">
             @foreach($article_pictures as $picture)
                 <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $article->creation->name }}" class="w-full">
             @endforeach
             </div>
+
             @if(count($article_pictures) > 1)
             <div class="article-sidebar__img-container__scroller flex justify-between">
                 <p>{{ __('sidebar.see-pictures') }}</p>
@@ -66,6 +86,9 @@
 
                 <h2 class="article-sidebar__content__title">
                     {{ $article->name }}
+                    @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
+                        &nbsp;- {{ $article->available_shops()->where('filter_key', '<>', "benu-esch")->first()->name }}
+                    @endif
                 </h2>
 
                 <p class="article-sidebar__content__price">

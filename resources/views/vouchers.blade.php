@@ -25,5 +25,9 @@
 	@include('includes.vouchers.voucher_options')
 @endsection
 
+@section('side_modal')
+	@livewire('modals.voucher-sidebar', ['voucher_id' => '0'])
+@endsection
+
 @section('scripts')
 @endsection

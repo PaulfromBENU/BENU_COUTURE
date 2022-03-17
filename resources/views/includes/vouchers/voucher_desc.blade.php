@@ -15,7 +15,7 @@
 		</p>
 		
 		<div class="flex model-pres__desc__seemore">
-			<a href="#model-articles" class="flex">
+			<a onclick='document.getElementById("voucher-options").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
 				{{ __('vouchers.desc-link') }} @svg('model_arrow_down')
 			</a>
 		</div>

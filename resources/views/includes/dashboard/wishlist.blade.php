@@ -1,6 +1,9 @@
 <div class="dashboard-wishlist">
 	<h2 class="dashboard-wishlist__title dashboard-wishlist__title--couture">BENU COUTURE</h2>
 	<div class="flex justify-start flex-wrap mb-10">
+		@foreach($couture_wishlisted_vouchers as $voucher)
+			@livewire('components.voucher-overview', ['voucher' =>  $voucher], key($voucher->id))
+		@endforeach
 		@foreach($couture_wishlisted_articles as $article)
 			@livewire('components.article-overview', ['article' =>  $article], key($article->id))
 		@endforeach

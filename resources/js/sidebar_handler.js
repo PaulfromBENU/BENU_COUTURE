@@ -1,6 +1,7 @@
 $(function() {
 	$('.article-sidebar').hide();
 	$('.mask-sidebar').hide();
+	$('.voucher-sidebar').hide();
 	Livewire.on('displayArticle', article_id => {
 		$('.modal-opacifier').fadeIn();
 		$('#general-side-modal').fadeIn(500, function() {
@@ -19,6 +20,7 @@ $(function() {
 		$('#general-side-modal').fadeOut(400, function() {
 			$('.article-sidebar').hide();
 			$('.mask-sidebar').hide();
+			$('.voucher-sidebar').hide();
 		});
 		Livewire.emit('ArticleModalReady', 0);
 	});
@@ -50,6 +52,32 @@ $(function() {
 		$('#general-side-modal').css('right', '-60vw');
 		$('#general-side-modal').fadeOut(400, function() {
 			$('.mask-sidebar').hide();
+		});
+	});
+
+
+	// Voucher sidebar handler
+	Livewire.on('displayVoucher', voucher_id => {
+		$('.modal-opacifier').fadeIn();
+		$('#general-side-modal').fadeIn(500, function() {
+			Livewire.emit('VoucherModalReady', voucher_id);
+		});
+		$('#general-side-modal').css('right', '0');
+		$('.article-sidebar__img-container').scroll(function() {
+			$('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
+		});
+	});
+
+	Livewire.on('voucherLoaded', function() {
+		$('.voucher-sidebar').hide();
+		$('.voucher-sidebar').fadeIn();
+	});
+
+	Livewire.on('closeVoucherSideBar', function() {
+		$('.modal-opacifier').fadeOut();
+		$('#general-side-modal').css('right', '-60vw');
+		$('#general-side-modal').fadeOut(400, function() {
+			$('.voucher-sidebar').hide();
 		});
 	});
 });
