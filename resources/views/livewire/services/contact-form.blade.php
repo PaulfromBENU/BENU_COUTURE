@@ -2,12 +2,12 @@
     @csrf
     <div class="flex justify-between">
         <div class="w-5/12">
-            <div class="flex justify-between input-group contact__form__radio-group">
-                <div>
+            <div class="flex justify-start input-group contact__form__radio-group">
+                <div class="mr-5 ml-1">
                     <input type="radio" id="contact_gender_male" name="gender" value="male" wire:model="gender">
                     <label for="contact_gender_male" class="ml-4">{{ __('forms.sir') }}</label><br>
                 </div>
-                <div>
+                <div class="mr-5">
                     <input type="radio" id="contact_gender_female" name="gender" value="female" wire:model="gender">
                     <label for="contact_gender_female" class="ml-4">{{ __('forms.madam') }}</label><br>
                 </div>

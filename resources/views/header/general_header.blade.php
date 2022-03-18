@@ -95,7 +95,7 @@
                     @endauth
                     @guest
                         <li>
-                            <a class="header__main-menu__icons__btn" id="connect-btn"> <!-- href="{{ route('login-'.app()->getLocale()) }}" -->
+                            <a class="header__main-menu__icons__btn" id="connect-btn">
                                 @svg('benu-icon-silhouette-connect')
                             </a>
                         </li>

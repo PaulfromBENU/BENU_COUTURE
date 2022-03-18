@@ -5909,7 +5909,7 @@ $(function () {
   $('.search-modal input[type=text]').val(''); // Handle search label behaviour depending on input status
 
   $('.search-modal input[type=text]').on('focus', function () {
-    $('.search-modal label').css('top', '30px').css('transform', 'scale(0.75)').css('color', 'grey');
+    $('.search-modal label').css('top', '30px').css('transform', 'scale(0.75)').css('color', 'darkgray');
   });
   $('.search-modal input[type=text]').on('blur', function () {
     if ($(this).val() == '') {
@@ -5935,26 +5935,27 @@ $(function () {
   // 		$(".connect-modal label[for='" + $(this).attr('id') + "']").css('top', '3px').css('transform', 'scale(1)').css('color', labelColorSearch);
   // 	}
   // });
-  //Generic dynamic label handle using the reactive-label-input class
+
+  var labelColorSearchReactive = $('.reactive-label-input label').css('color'); //Generic dynamic label handle using the reactive-label-input class
 
   $('.reactive-label-input label').each(function () {
     if ($(this).parent().children('input').val().length == 0) {
-      $(this).css('transform', 'scale(1)').css('bottom', '9px');
+      $(this).css('transform', 'scale(1)').css('bottom', '9px').css('color', labelColorSearchReactive);
     } else {
-      $(this).css('transform', 'scale(0.75)').css('bottom', '35px');
+      $(this).css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
     }
   });
   $('.reactive-label-input input').on('focus', function () {
-    $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px');
+    $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
   });
   $('.reactive-label-input input').on('blur', function () {
     if ($(this).val().length == 0) {
-      $(this).parent().children('label').css('transform', 'scale(1)').css('bottom', '9px');
+      $(this).parent().children('label').css('transform', 'scale(1)').css('bottom', '9px').css('color', labelColorSearchReactive);
     }
   });
   $('.reactive-label-input input').on('change', function () {
     if ($(this).val().length > 0) {
-      $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px');
+      $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
     }
   });
   $('.reactive-label-input input').eq(0).focus(); //Show or hide password on icon click
