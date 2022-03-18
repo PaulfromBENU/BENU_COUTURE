@@ -409,7 +409,7 @@
 				color: #2E1414;
 			}
 			&__mandatory {
-				font: normal normal normal 14px/28px Barlow;
+				font: normal normal normal 14px/28px 'Barlow';
 				letter-spacing: 0px;
 				color: #262544;
 				margin-bottom: 35px;
@@ -417,14 +417,14 @@
 			}
 			&__select {
 				text-align: left;
-				font: normal normal 400 16px/36px Barlow;
+				font: normal normal 400 16px/36px 'Barlow';
 				letter-spacing: 0px;
 				color: darken(darkgrey, 30);
 			}
 			&__security {
 				p {
 					padding-top: 10px;
-					color: darken(darkgrey, 30);
+					font: normal normal 500 16px/28px 'Barlow';
 				}
 				input {
 					width: 50px;
