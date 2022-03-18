@@ -17,6 +17,7 @@ class CreateCareRecommendationsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name')->nullable();
+            $table->string('family')->default('wash')->nullable();
             $table->text('description_de');
             $table->text('description_fr');
             $table->text('description_en');

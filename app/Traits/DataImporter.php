@@ -5,12 +5,18 @@ namespace App\Traits;
 //use Illuminate\Support\Facades\Storage;
 
 use App\Models\Article;
+use App\Models\ArticleCareRecommendation;
+use App\Models\ArticleComposition;
 use App\Models\ArticlePhoto;
 use App\Models\ArticleShop;
+use App\Models\CareRecommendation;
 use App\Models\Color;
+use App\Models\Composition;
 use App\Models\Creation;
 use App\Models\CreationCategory;
 use App\Models\CreationGroup;
+use App\Models\CreationKeyword;
+use App\Models\Keyword;
 use App\Models\Photo;
 use App\Models\Shop;
 use App\Models\Size;
@@ -18,10 +24,139 @@ use App\Models\Translation;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 use Intervention\Image\Facades\Image;
 
 trait DataImporter {
+    public function importDataFromSophie()
+    {
+        // Importation of non creation-specific data
+        $cares_created = [];
+        $categories_created = [];
+        $colors_created = [];
+        $compositions_created = [];
+        $sizes_created = [];
+        $types_created = [];
+
+        $care_recommendations = json_decode(file_get_contents(asset('json_imports/care.json')), true);
+        $categories = json_decode(file_get_contents(asset('json_imports/categories.json')), true);
+        $colors = json_decode(file_get_contents(asset('json_imports/colors.json')), true);
+        $compositions = json_decode(file_get_contents(asset('json_imports/compositions.json')), true);
+        $sizes = json_decode(file_get_contents(asset('json_imports/sizes.json')), true);
+        $types = json_decode(file_get_contents(asset('json_imports/types.json')), true);
+
+        echo "<br/><br/><strong>----------------  Importing data from Sophie's file...</strong><br/>";
+
+        if (env('APP_ENV') != 'production') {
+            // WARNING: will empty the table!! To be used with caution.
+            //ArticleCareRecommendation::truncate();
+            CareRecommendation::truncate();
+            //ArticleComposition::truncate();
+            Composition::truncate();
+            Color::truncate();
+            Size::truncate();
+            CreationGroup::truncate();
+            echo "<strong>--- All data deleted from CareRecommendation, Composition, Color, Size, CreationGroup tables in database ---</strong><br/>";
+        }
+
+        foreach ($care_recommendations as $care) {
+            if (!in_array($care['name'], $cares_created)) {
+                $new_care = new CareRecommendation();
+                $new_care->name = $care['name'];
+                $new_care->description_de = $care['description_de'];
+                $new_care->description_lu = $care['description_lu'];
+                $new_care->description_fr = $care['description_fr'];
+                $new_care->description_en = $care['description_en'];
+                $new_care->translation_key = $care['translation_key'];
+                $new_care->picture = "services_care_1";
+                if ($new_care->save()) {
+                    array_push($cares_created, $care['name']);
+                    echo "<span style='color:green;'>New care recommendation ".$care['name']." successfully added to the database :)</span><br/>";
+                }
+            }
+        }
+
+        foreach ($categories as $category) {
+            if (!in_array($category['filter_key'], $categories_created) && CreationCategory::where('filter_key', $category['filter_key'])->count() == 0) {
+                $new_category = new CreationCategory();
+                $new_category->name_fr = $category['name_fr'];
+                $new_category->name_lu = $category['name_lu'];
+                $new_category->name_en = $category['name_en'];
+                $new_category->name_de = $category['name_de'];
+                $new_category->translation_key = $category['translation_key'];
+                $new_category->filter_key = $category['filter_key'];
+                if ($new_category->save()) {
+                    array_push($categories_created, $category['filter_key']);
+                    echo "<span style='color:green;'>New creation category ".$category['name_fr']." successfully added to the database :)</span><br/>";
+                }
+            }
+        }
+
+        foreach ($colors as $color) {
+            if (!in_array($color['name_en'], $colors_created)) {
+                $new_color = new Color();
+                $new_color->name = strtolower($color['name_en']);
+                $new_color->hex_code = $color['hex_code'];
+                if ($new_color->save()) {
+                    array_push($colors_created, $color['name_en']);
+                    echo "<span style='color:green;'>New color ".$color['name_en']." successfully added to the database :)</span><br/>";
+                }
+            }
+        }
+
+        foreach ($compositions as $composition) {
+            if (!in_array($composition['fabric_fr'], $compositions_created)) {
+                $new_composition = new Composition();
+                $new_composition->fabric_fr = $composition['fabric_fr'];
+                $new_composition->fabric_lu = $composition['fabric_lu'];
+                $new_composition->fabric_de = $composition['fabric_de'];
+                $new_composition->fabric_en = $composition['fabric_en'];
+                $new_composition->translation_key_fabric = $composition['translation_key_fabric'];
+                $new_composition->explanation_lu = $composition['explanation_lu'];
+                $new_composition->explanation_en = $composition['explanation_en'];
+                $new_composition->explanation_de = $composition['explanation_de'];
+                $new_composition->explanation_fr = $composition['explanation_fr'];
+                $new_composition->translation_key_explanation = $composition['translation_key_explanation'];
+                $new_composition->picture = "cotton.jpg";
+                if ($new_composition->save()) {
+                    array_push($compositions_created, $composition['fabric_fr']);
+                    echo "<span style='color:green;'>New composition ".$composition['fabric_fr']." successfully added to the database :)</span><br/>";
+                }
+            }
+        }
+
+        foreach ($sizes as $size) {
+            if (!in_array($size['value'], $sizes_created)) {
+                $new_size = new Size();
+                $new_size->value = $size['value'];
+                $new_size->category = $size['category'];
+                if ($new_size->save()) {
+                    array_push($sizes_created, $size['value']);
+                    echo "<span style='color:green;'>New size ".$size['value']." successfully added to the database :)</span><br/>";
+                }
+            }
+        }
+
+        foreach ($types as $type) {
+            if (!in_array($type['filter_key'], $types_created)) {
+                $new_type = new CreationGroup();
+                $new_type->name_fr = $type['name_fr'];
+                $new_type->name_lu = $type['name_lu'];
+                $new_type->name_de = $type['name_de'];
+                $new_type->name_en = $type['name_en'];
+                $new_type->filter_key = $type['filter_key'];
+                $new_type->translation_key = $type['translation_key'];
+                if ($new_type->save()) {
+                    array_push($types_created, $type['name_fr']);
+                    echo "<span style='color:green;'>New type ".$type['name_fr']." successfully added to the database :)</span><br/>";
+                }
+            }
+        }
+
+    }
+
+
     public function importCreationsFromLou()
     {
         echo "<br/><br/><strong>----------------  Importing data from Lou's file...</strong><br/>";
@@ -409,7 +544,7 @@ trait DataImporter {
 
                                 $new_article = new Article();
                                 $new_article->name = ucfirst(strtolower($creation->name)).'-'.str_pad($article_counter, 3, '0', STR_PAD_LEFT);
-                                $new_article->type  = "article";
+                                //$new_article->type  = "article";
                                 $new_article->creation_id = $creation->id;
                                 // if ($creation->is_accessory == '0') {
                                     $new_article->size_id = $size_id;
@@ -423,6 +558,7 @@ trait DataImporter {
                                 $new_article->singularity_de = "article.singularity-".strtolower($creation->name)."-".$new_article->name;
                                 $new_article->translation_key = "article.singularity-".strtolower($new_article->name);
                                 $new_article->creation_date = $picture_info[6];
+                                //$new_article->picture_name = $picture->getFilename();
                                 if ($new_article->save()) {
                                     $article_counter ++;
                                     echo "<span style='color: green; padding-top: 5px;'>New article ".$new_article->name." created for model ".strtoupper($creation->name).", with color ".$picture_main_color.", secondary color ". $picture_secondary_color ." and size ".$picture_size.", from file ".$picture->getFilename()."</span><br/>";
@@ -448,6 +584,9 @@ trait DataImporter {
                                 $new_photo = new Photo();
                                 $new_photo->file_name = 'processed/'.$creation->name.'/'.$new_article->name.'-'.rand(100, 999).''.$article_pic_count.'.png';
                                 $new_photo->use_for_model = 1;
+                                if (strpos($picture->getFilename(), "front") !== false) {
+                                    $new_photo->is_front = '1';
+                                }
                                 $new_photo->title = $creation->name." by BENU COUTURE - Article ".$article_counter;
                                 $new_photo->author = "BENU Village Esch Asbl";
 
@@ -484,7 +623,7 @@ trait DataImporter {
 
                                     // Determine if article is sold or in stock. Only handles Benu Esch shop.
                                     //$new_article->shops()->detach();
-                                    if (!($new_article->shops()->contains(Shop::where('filter_key', 'benu-esch')->first()->id))) {
+                                    if (!($new_article->shops->contains(Shop::where('filter_key', 'benu-esch')->first()->id))) {
                                         if (strpos(strtolower($picture->getPath()), 'sold') !== false) {
                                             $new_article->shops()->attach(1, ['stock' => '0']);
                                         } else {
@@ -637,6 +776,352 @@ trait DataImporter {
                 }
             }
         }
+    }
 
+
+    public function updateArticlesFromLouAndSophie()
+    {
+        echo "<br/><br/><strong>----------------  Updating Creations and articles data from Lou's and Sophie's file...</strong><br/>";
+        // Import of article and creation details from Lou's and Sophie's files
+        $articles_updated_from_lou = [];
+        $articles_updated_from_sophie = [];
+        $keywords_created = [];
+
+        $creations_lou = json_decode(file_get_contents(asset('json_imports/creations_lou.json')), true);
+        $articles_sophie = json_decode(file_get_contents(asset('json_imports/articles.json')), true);
+
+        if (env('APP_ENV') != 'production') {
+            // WARNING: will empty the table!! To be used with caution.
+            DB::table('article_care_recommendation')->truncate();
+            DB::table('article_composition')->truncate();
+            DB::table('creation_keyword')->truncate();
+            Keyword::truncate();
+            echo "<strong>--- All data deleted from ArticleCareRecommendation, ArticleComposition, CreationKeyword, Keyword tables in database ---</strong><br/>";
+        }
+
+        echo "<br/><br/><strong>----------------  Updating Creations and articles data from Lou's file...</strong><br/>";
+
+        // Determination of composition ids for attaching
+        $compo_silk_id = Composition::where('fabric_fr', 'Soie')->first()->id;
+        $compo_silk_crepe_id = Composition::where('fabric_fr', 'Crêpe de soie')->first()->id;
+        $compo_cotton_id = Composition::where('fabric_fr', 'Coton')->first()->id;
+        $compo_cotton_crepe_id = Composition::where('fabric_fr', 'Crêpe de coton')->first()->id;
+        $compo_jersey_id = Composition::where('fabric_fr', 'Jersey (de coton)')->first()->id;
+        $compo_wool_id = Composition::where('fabric_fr', 'Laine')->first()->id;
+        $compo_tissed_wool_id = Composition::where('fabric_fr', 'Laine tissée')->first()->id;
+        $compo_viscose_id = Composition::where('fabric_fr', 'Viscose')->first()->id;
+        $compo_synthetic_id = Composition::where('fabric_fr', 'Fibres synthétiques')->first()->id;
+        $compo_poly_crepe_id = Composition::where('fabric_fr', 'Crêpe de Polyester')->first()->id;
+        $compo_elasthane_id = Composition::where('fabric_fr', 'Élasthanne')->first()->id;
+        $compo_linen_id = Composition::where('fabric_fr', 'Lin')->first()->id;
+        $compo_nylon_id = Composition::where('fabric_fr', 'Nylon')->first()->id;
+        $compo_velvet_id = Composition::where('fabric_fr', 'Velours côtelé (de coton)')->first()->id;
+        $compo_smooth_velvet_id = Composition::where('fabric_fr', 'Velours lisse (de coton)')->first()->id;
+        $compo_denim_id = Composition::where('fabric_fr', 'Denim')->first()->id;
+        $compo_acrylic_id = Composition::where('fabric_fr', 'Acrylique')->first()->id;
+
+        // Determination of care recommendation ids for attaching
+        $care_no_washing_id = CareRecommendation::where('name', 'no_washing')->first()->id;
+        $care_wool_id = CareRecommendation::where('name', 'cold_wash')->first()->id;
+        $care_30deg_id = CareRecommendation::where('name', 'wash_30C')->first()->id;
+        $care_40deg_id = CareRecommendation::where('name', 'wash_40C')->first()->id;
+        $care_60deg_id = CareRecommendation::where('name', 'wash_60C')->first()->id;
+        $care_delicate_id = CareRecommendation::where('name', 'delicate_wash')->first()->id;
+        $care_no_spinning_id = CareRecommendation::where('name', 'avoid_spinning')->first()->id;
+        $care_no_drying_id = CareRecommendation::where('name', 'not_tumble_dry')->first()->id;
+        $care_low_drying_id = CareRecommendation::where('name', 'dry_low_temp')->first()->id;
+        $care_medium_drying_id = CareRecommendation::where('name', 'dry_medium_temp')->first()->id;
+        $care_flat_drying_id = CareRecommendation::where('name', 'dry_flat')->first()->id;
+        $care_no_iron_id = CareRecommendation::where('name', 'not_iron')->first()->id;
+        $care_low_iron_id = CareRecommendation::where('name', 'iron_low_temp')->first()->id;
+        $care_medium_iron_id = CareRecommendation::where('name', 'iron_medium_temp')->first()->id;
+        $care_high_iron_id = CareRecommendation::where('name', 'iron_high_temp')->first()->id;
+
+
+        foreach ($creations_lou as $creation_lou) {
+            if (Creation::where('name', $creation_lou['name'])->count() > 0) {
+                $creation = Creation::where('name', $creation_lou['name'])->first();
+
+                foreach ($creation->articles as $article) {
+                    if ($creation_lou['Soie'] == "x") {
+                        $article->compositions()->attach($compo_silk_id);
+                    }
+                    if ($creation_lou['Crêpe de soie'] == "x") {
+                        $article->compositions()->attach($compo_silk_crepe_id);
+                    }
+                    if ($creation_lou['Coton'] == "x") {
+                        $article->compositions()->attach($compo_cotton_id);
+                    }
+                    if ($creation_lou['Crêpe de coton'] == "x") {
+                        $article->compositions()->attach($compo_cotton_crepe_id);
+                    }
+                    if ($creation_lou['Jersey'] == "x") {
+                        $article->compositions()->attach($compo_jersey_id);
+                    }
+                    if ($creation_lou['Laine'] == "x") {
+                        $article->compositions()->attach($compo_wool_id);
+                    }
+                    if ($creation_lou['Laine tissée'] == "x") {
+                        $article->compositions()->attach($compo_tissed_wool_id);
+                    }
+                    if ($creation_lou['Viscose'] == "x") {
+                        $article->compositions()->attach($compo_viscose_id);
+                    }
+                    if ($creation_lou['Fibres synthétiques'] == "x") {
+                        $article->compositions()->attach($compo_synthetic_id);
+                    }
+                    if ($creation_lou['Crêpe de Polyester'] == "x") {
+                        $article->compositions()->attach($compo_poly_crepe_id);
+                    }
+                    if ($creation_lou['Élasthanne'] == "x") {
+                        $article->compositions()->attach($compo_elasthane_id);
+                    }
+                    if ($creation_lou['Lin'] == "x") {
+                        $article->compositions()->attach($compo_linen_id);
+                    }
+                    if ($creation_lou['Nylon'] == "x") {
+                        $article->compositions()->attach($compo_nylon_id);
+                    }
+                    if ($creation_lou['Velours côtelé'] == "x") {
+                        $article->compositions()->attach($compo_velvet_id);
+                    }
+                    if ($creation_lou['Velours lisse'] == "x") {
+                        $article->compositions()->attach($compo_smooth_velvet_id);
+                    }
+                    if ($creation_lou['Denim'] == "x") {
+                        $article->compositions()->attach($compo_denim_id);
+                    }
+                    if ($creation_lou['Acrylic'] == "x") {
+                        $article->compositions()->attach($compo_acrylic_id);
+                    }
+
+                    echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
+
+                    if ($creation_lou['Pas de lavage recommandé'] == "x") {
+                        $article->care_recommendations()->attach($care_no_washing_id);
+                    }
+                    if ($creation_lou['Programme laine'] == "x") {
+                        $article->care_recommendations()->attach($care_wool_id);
+                    }
+                    if ($creation_lou['30°C max'] == "x") {
+                        $article->care_recommendations()->attach($care_30deg_id);
+                    }
+                    if ($creation_lou['40°C max'] == "x") {
+                        $article->care_recommendations()->attach($care_40deg_id);
+                    }
+                    if ($creation_lou['60°C max'] == "x") {
+                        $article->care_recommendations()->attach($care_60deg_id);
+                    }
+                    if ($creation_lou['Lavage délicat (option supplémentaire)'] == "x") {
+                        $article->care_recommendations()->attach($care_delicate_id);
+                    }
+                    if ($creation_lou['Eviter essorage (option supplémentaire)'] == "x") {
+                        $article->care_recommendations()->attach($care_no_spinning_id);
+                    }
+                    if ($creation_lou['Pas de séchoir'] == "x") {
+                        $article->care_recommendations()->attach($care_no_drying_id);
+                    }
+                    if ($creation_lou['Séchage modéré'] == "x") {
+                        $article->care_recommendations()->attach($care_low_drying_id);
+                    }
+                    if ($creation_lou['Séchage normal'] == "x") {
+                        $article->care_recommendations()->attach($care_medium_drying_id);
+                    }
+                    if ($creation_lou['Séchage manuel à l\'horizontale (ex. pullover)'] == "x") {
+                        $article->care_recommendations()->attach($care_flat_drying_id);
+                    }
+                    if ($creation_lou['Ne pas repasser'] == "x") {
+                        $article->care_recommendations()->attach($care_no_iron_id);
+                    }
+                    if ($creation_lou['Repassage à basse température'] == "x") {
+                        $article->care_recommendations()->attach($care_low_iron_id);
+                    }
+                    if ($creation_lou['Repassage à température moyenne'] == "x") {
+                        $article->care_recommendations()->attach($care_medium_iron_id);
+                    }
+                    if ($creation_lou['Repassage à haute température'] == "x") {
+                        $article->care_recommendations()->attach($care_high_iron_id);
+                    }
+
+                    echo "<span style='color: green;'>Care Recommendations updated for article ".$article->name."</span><br/>";
+                }
+
+                // Keywords handling
+                if ($creation_lou['Détails (Mots clés) FR'] != "") {
+                    $keywords_fr = explode(";", $creation_lou['Détails (Mots clés) FR']);
+                    $keywords_lu = explode(";", $creation_lou['Détails (Mots clés) LU']);
+                    $keywords_de = explode(";", $creation_lou['Détails (Mots clés) DE']);
+                    $keywords_en = explode(";", $creation_lou['Détails (Mots clés) EN']);
+
+                    foreach ($keywords_fr as $index => $keyword_fr) {
+                        if (Keyword::where('keyword_fr', $keyword_fr)->count() == 0) {
+                            $new_keyword = new Keyword();
+                            $new_keyword->keyword_fr = $keyword_fr;
+                            if (isset($keywords_lu[$index])) {
+                                $new_keyword->keyword_lu = $keywords_lu[$index];
+                            } else {
+                                $new_keyword->keyword_lu = "";
+                            }
+                            if (isset($keywords_de[$index])) {
+                                $new_keyword->keyword_de = $keywords_de[$index];
+                            } else {
+                                $new_keyword->keyword_de = "";
+                            }
+                            if (isset($keywords_en[$index])) {
+                                $new_keyword->keyword_en = $keywords_en[$index];
+                            } else {
+                                $new_keyword->keyword_en = "";
+                            }
+                            $new_keyword->save();
+                            echo "<span style='color: green;'>New keyword ".$keyword_fr." has been created</span><br/>";
+                        } else {
+                            $new_keyword = Keyword::where('keyword_fr', $keywords_fr)->first();
+                        }
+                        if (!($creation->keywords->contains($new_keyword->id))) {
+                            $creation->keywords()->attach($new_keyword->id);
+                            echo "<span style='color: green; padding-left: 10px;'>Keyword ".$keyword_fr." has been attached to creation ".$creation->name."</span><br/>";
+                        }
+                    }
+                }
+            }
+        }
+
+        echo "<br/><br/><strong>----------------  Updating Creations and articles data from Sophie's file...</strong><br/>";
+
+        foreach ($articles_sophie as $article_sophie) {
+            if ($article_sophie['name'] != "" && Article::where('name', $article_sophie['name'])->count() > 0) {
+                $article = Article::where('name', $article_sophie['name'])->first();
+
+                $article->care_recommendations()->detach();
+                $article->compositions()->detach();
+
+                // Singularities update
+                if ($article_sophie['singularity_fr'] != "") {
+                    $article->singularity_fr = $article_sophie['singularity_fr'];
+                } else {
+                    $article->singularity_fr = "";
+                }
+                if ($article_sophie['singularity_lu'] != "") {
+                    $article->singularity_lu = $article_sophie['singularity_lu'];
+                } else {
+                    $article->singularity_lu = "";
+                }
+                if ($article_sophie['singularity_en'] != "") {
+                    $article->singularity_en = $article_sophie['singularity_en'];
+                } else {
+                    $article->singularity_en = "";
+                }
+                if ($article_sophie['singularity_de'] != "") {
+                    $article->singularity_de = $article_sophie['singularity_de'];
+                } else {
+                    $article->singularity_fr = $article->translation_key;
+                }
+                if ($article->save()) {
+                    echo "<span style='color: green; padding-left: 10px;'>Singularities updated for article ".$article->name."</span><br/>";
+                }
+
+                // Care recommendations update
+                if ($article_sophie['no_washing'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_no_washing_id);
+                }
+                if ($article_sophie['cold_wash'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_wool_id);
+                }
+                if ($article_sophie['wash_30C'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_30deg_id);
+                }
+                if ($article_sophie['wash_40C'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_40deg_id);
+                }
+                if ($article_sophie['wash_60C'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_60deg_id);
+                }
+                if ($article_sophie['delicate_wash'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_delicate_id);
+                }
+                if ($article_sophie['avoid_spinning'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_no_spinning_id);
+                }
+                if ($article_sophie['not_tumble_dry'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_no_drying_id);
+                }
+                if ($article_sophie['dry_low_temp'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_low_drying_id);
+                }
+                if ($article_sophie['dry_medium_temp'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_medium_drying_id);
+                }
+                if ($article_sophie['dry_flat'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_flat_drying_id);
+                }
+                if ($article_sophie['not_iron'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_no_iron_id);
+                }
+                if ($article_sophie['iron_low_temp'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_low_iron_id);
+                }
+                if ($article_sophie['iron_medium_temp'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_medium_iron_id);
+                }
+                if ($article_sophie['iron_high_temp'] == "VRAI") {
+                    $article->care_recommendations()->attach($care_high_iron_id);
+                }
+                echo "<span style='color: green; padding-left: 10px;'>Care recommendations updated for article ".$article->name."</span><br/>";
+
+                // Composition update
+                if ($article_sophie['silk'] == "VRAI") {
+                    $article->compositions()->attach($compo_silk_id);
+                }
+                if ($article_sophie['silk_crepe'] == "VRAI") {
+                    $article->compositions()->attach($compo_silk_crepe_id);
+                }
+                if ($article_sophie['cotton'] == "VRAI") {
+                    $article->compositions()->attach($compo_cotton_id);
+                }
+                if ($article_sophie['cotton_crepe'] == "VRAI") {
+                    $article->compositions()->attach($compo_cotton_crepe_id);
+                }
+                if ($article_sophie['jersey'] == "VRAI") {
+                    $article->compositions()->attach($compo_jersey_id);
+                }
+                if ($article_sophie['wool'] == "VRAI") {
+                    $article->compositions()->attach($compo_wool_id);
+                }
+                if ($article_sophie['woven_wool'] == "VRAI") {
+                    $article->compositions()->attach($compo_tissed_wool_id);
+                }
+                if ($article_sophie['viscose'] == "VRAI") {
+                    $article->compositions()->attach($compo_viscose_id);
+                }
+                if ($article_sophie['synt_fibers'] == "VRAI") {
+                    $article->compositions()->attach($compo_synthetic_id);
+                }
+                if ($article_sophie['poly_crepe'] == "VRAI") {
+                    $article->compositions()->attach($compo_poly_crepe_id);
+                }
+                if ($article_sophie['elastane'] == "VRAI") {
+                    $article->compositions()->attach($compo_elasthane_id);
+                }
+                if ($article_sophie['linen'] == "VRAI") {
+                    $article->compositions()->attach($compo_linen_id);
+                }
+                if ($article_sophie['nylon'] == "VRAI") {
+                    $article->compositions()->attach($compo_nylon_id);
+                }
+                if ($article_sophie['corduroy'] == "VRAI") {
+                    $article->compositions()->attach($compo_velvet_id);
+                }
+                if ($article_sophie['velvet'] == "VRAI") {
+                    $article->compositions()->attach($compo_smooth_velvet_id);
+                }
+                if ($article_sophie['denim'] == "VRAI") {
+                    $article->compositions()->attach($compo_denim_id);
+                }
+                if ($article_sophie['acrylic'] == "VRAI") {
+                    $article->compositions()->attach($compo_acrylic_id);
+                }
+                echo "<span style='color: green; padding-left: 10px;'>Compositions updated for article ".$article->name."</span><br/>";
+            }
+        }
     }
 }
