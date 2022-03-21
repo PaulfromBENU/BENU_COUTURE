@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\CareRecommendation;
 use App\Models\Shop;
 use App\Models\Translation;
 
@@ -39,6 +40,15 @@ class ContactController extends Controller
             $shops_other = Shop::where('type', '<>', 'BENU owned')->orderBy('created_at', 'desc')->get();
         }
 
+        $wash_recommendations = collect([]);
+        $dry_recommendations = collect([]);
+        $iron_recommendations = collect([]);
+        if ($page == __('slugs.services-care')) {
+            $wash_recommendations = CareRecommendation::where('family', 'wash')->get();
+            $dry_recommendations = CareRecommendation::where('family', 'dry')->get();
+            $iron_recommendations = CareRecommendation::where('family', 'iron')->get();
+        }
+
         $faq_titles_count = 0;
         $faq_subtitles_count = [];
         if ($page == __('slugs.services-faq') || $page == '') {
@@ -50,6 +60,6 @@ class ContactController extends Controller
 
         $localized_desc_query = "description_".app()->getLocale();
 
-        return view('client-service', ['page' => $page, 'shops_benu' => $shops_benu, 'shops_other' => $shops_other, 'desc_query' => $localized_desc_query, 'faq_titles_count' => $faq_titles_count, 'faq_subtitles_count' => $faq_subtitles_count]);
+        return view('client-service', ['page' => $page, 'shops_benu' => $shops_benu, 'shops_other' => $shops_other, 'desc_query' => $localized_desc_query, 'faq_titles_count' => $faq_titles_count, 'faq_subtitles_count' => $faq_subtitles_count, 'wash_recommendations' => $wash_recommendations, 'dry_recommendations' => $dry_recommendations, 'iron_recommendations' => $iron_recommendations]);
     }
 }

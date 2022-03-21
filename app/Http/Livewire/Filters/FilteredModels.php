@@ -142,6 +142,7 @@ class FilteredModels extends Component
 
     public function adaptQueryFilters($filters)
     {
+        // Updates the URL according to the applied filters, so the same filters and pagination will remain available when coming back to the page
         $this->family = '';
         $this->categories = '';
         $this->types = '';

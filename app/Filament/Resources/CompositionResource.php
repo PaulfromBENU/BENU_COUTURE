@@ -27,15 +27,14 @@ class CompositionResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('fabric_lu')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('fabric_en')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('fabric_de')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('fabric_fr')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('translation_key_fabric')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('explanation_fr')
@@ -50,6 +49,9 @@ class CompositionResource extends Resource
                 Forms\Components\Textarea::make('explanation_en')
                     ->required()
                     ->maxLength(65535),
+                Forms\Components\TextInput::make('translation_key_explanation')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('picture')
                     ->required()
                     ->maxLength(255),
@@ -68,10 +70,12 @@ class CompositionResource extends Resource
                 Tables\Columns\TextColumn::make('fabric_en'),
                 Tables\Columns\TextColumn::make('fabric_de'),
                 Tables\Columns\TextColumn::make('fabric_fr'),
+                Tables\Columns\TextColumn::make('translation_key_fabric'),
                 Tables\Columns\TextColumn::make('explanation_fr'),
                 Tables\Columns\TextColumn::make('explanation_lu'),
                 Tables\Columns\TextColumn::make('explanation_de'),
                 Tables\Columns\TextColumn::make('explanation_en'),
+                Tables\Columns\TextColumn::make('translation_key_explanation'),
                 Tables\Columns\TextColumn::make('picture'),
             ])
             ->filters([

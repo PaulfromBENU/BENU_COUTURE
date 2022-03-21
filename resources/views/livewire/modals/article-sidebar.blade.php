@@ -168,10 +168,6 @@
                         </p>
                     </li>
                     @endforeach
-                    <li>
-                        <img src="{{ asset('images/pictures/composition/cotton.jpg') }}">
-                        <h5>Viscose <span class="article-sidebar__content__compo__detail">- fibre synthétique</span></h5>
-                    </li>
                 </ul>
             @elseif($content == 'care')
                 <h3 class="article-sidebar__content__compo__title">
