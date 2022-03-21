@@ -7,6 +7,10 @@ function filtersHandle(filter) {
 }
 
 $(function() {
+	$('#filter-family').on('mouseover', function() {
+		filtersHandle('family');
+	});
+
 	$('#filter-category').on('mouseover', function() {
 		filtersHandle('category');
 	});
@@ -62,12 +66,3 @@ $(function() {
 		}
 	});
 });
-
-$(function() {
-	// $('.all-models__active-filters__filter').on('click', function() {
-	// 	$(this).hide();
-	// });
-	// $('.model-articles__active-filters__filter').on('click', function() {
-	// 	$(this).hide();
-	// });
-})

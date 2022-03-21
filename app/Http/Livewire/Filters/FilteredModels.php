@@ -20,9 +20,9 @@ class FilteredModels extends Component
     public $sort_direction;
     public $initial_load;
     public $applied_filters;
+    public $family;
 
     // Required to persist filters in the URL dynamically
-    public $family;
     public $types;
     public $categories;
     public $colors;
@@ -34,7 +34,6 @@ class FilteredModels extends Component
 
     protected $queryString = [
         'paginate_page'  => ['except' => 1, 'as' => 'page'],
-        'family'  => ['except' => ''],
         'types'  => ['except' => ''],
         'categories'  => ['except' => ''],
         'colors'  => ['except' => ''],
@@ -67,7 +66,7 @@ class FilteredModels extends Component
         $this->filtered_models = collect([]);
         
         // Compute collection of filtered models in FiltersGenerator Trait (required to keep full object relationships)
-        $this->filtered_models = $this->getFilteredCreations($applied_filters);
+        $this->filtered_models = $this->getFilteredCreations($applied_filters, $this->family);
 
         $this->paginate_pages_count = intval(floor($this->filtered_models->count() / 12) + 1);
         // Check paginate_page value in case request has wrong data
@@ -143,18 +142,13 @@ class FilteredModels extends Component
     public function adaptQueryFilters($filters)
     {
         // Updates the URL according to the applied filters, so the same filters and pagination will remain available when coming back to the page
-        $this->family = '';
         $this->categories = '';
         $this->types = '';
         $this->colors = '';
         $this->sizes = '';
         $this->prices = '';
         $this->shops = '';
-        // foreach ($filters['family'] as $family => $value) {
-        //     if ($value == 1) {
-        //         $this->family .= $family;
-        //     }
-        // }
+
         foreach ($filters['categories'] as $category => $value) {
             if ($value == 1) {
                 $this->categories .= $category.'*';

@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Filters;
 
 use Livewire\Component;
+use Illuminate\Http\Request;
 
 use App\Models\ModelFilter;
 
@@ -10,22 +11,39 @@ class AllModelsFilter extends Component
 {
     public $initial_filters;
     public $filter_names;
+    public $family;
 
     public $active_filters;
     public $sorting_order;
 
-    public function mount()
+    protected $queryString = ['family' => ['except' => '']];
+
+    public function mount(Request $request)
     {
         $this->sorting_order = 'asc';
+
+        // Adapt family of products acccording to request
+        // if (!isset($request->family) || $request->family == 'clothes') {
+        //     $this->family = 'clothes';
+        // } elseif (in_array($request->family, ['accessories', 'home'])) {
+        //     $this->family = $request->family;
+        // }
+
         $this->active_filters = $this->initial_filters;
     }
 
     public function toggleFilter($filter, $value)
     {
-        if ($this->active_filters[$filter][$value] == '0') {
-            $this->active_filters[$filter][$value] = 1;
+        if ($filter == 'families') {
+            if (in_array($value, ['clothes', 'accessories', 'home'])) {
+                $this->family = $value;
+            }
         } else {
-            $this->active_filters[$filter][$value] = 0;
+            if ($this->active_filters[$filter][$value] == '0') {
+                $this->active_filters[$filter][$value] = 1;
+            } else {
+                $this->active_filters[$filter][$value] = 0;
+            }
         }
 
         $this->sendFilters();

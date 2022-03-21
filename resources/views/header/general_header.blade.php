@@ -156,9 +156,12 @@
                 <div class="creations-navbar__nav__toggle flex" id="nav-toggle-accessories">
                     {{ __('header.accessories') }} @svg('chevron-down')
                 </div>
-                <div class="creations-navbar__nav__toggle flex" id="nav-toggle-home">
+                <!-- <div class="creations-navbar__nav__toggle flex" id="nav-toggle-home">
                     {{ __('header.house') }} @svg('chevron-down')
-                </div>
+                </div> -->
+                <a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}" class="creations-navbar__nav__toggle-link">
+                    {{ __('header.house') }}
+                </a>
                 <a href="{{ route('vouchers-'.app()->getLocale()) }}" class="creations-navbar__nav__toggle-link">
                     {{ __('header.vouchers') }}
                 </a>

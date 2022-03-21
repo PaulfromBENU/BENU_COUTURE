@@ -21,6 +21,7 @@ trait FiltersGenerator {
     public function getFilterOptions()
     {
         $filter_options = [
+            'families' => ['clothes', 'accessories', 'home'],
             'categories' => [],
             'colors' => [],
             'types' => [],
@@ -30,6 +31,11 @@ trait FiltersGenerator {
         ];
 
         $filter_names = [
+            'families' => [
+                'clothes' => __('models.filter-clothes'),
+                'accessories' => __('models.filter-accessories'),
+                'home' => __('models.filter-home'),
+            ],
             'categories' => [],
             'colors' => [],
             'types' => [],
@@ -508,10 +514,10 @@ trait FiltersGenerator {
 
 
 
-    public function getFilteredCreations($applied_filters)
+    public function getFilteredCreations($applied_filters, $family = '')
     {
-        $available_creations = $this->getAvailableCreations();
-
+        $available_creations = $this->getAvailableCreations($family);
+        
         // Apply filters on all creations available
         // Get filtered category creations. If no filter selected, keep all creations
         $models_filtered_by_category = collect([]);

@@ -15,7 +15,13 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('model-'.app()->getLocale()) }}">{{ __('breadcrumbs.models') }}</a>
+			@if($model->is_accessory == 1)
+				<a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories']) }}">{{ __('breadcrumbs.models') }}</a>
+			@elseif($model->creation_groups()->where('filter_key', 'home')->count() > 0)
+				<a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('breadcrumbs.models') }}</a>
+			@else
+				<a href="{{ route('model-'.app()->getLocale()) }}">{{ __('breadcrumbs.models') }}</a>
+			@endif
 			<div class="pl-5 pr-5">
 				>
 			</div>

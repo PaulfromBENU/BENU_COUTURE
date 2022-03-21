@@ -2684,7 +2684,7 @@ input[type=checkbox]:focus {
 }
 .shops__card__link {
   text-align: left;
-  font: normal normal 700 16px/28px "Barlow Condensed";
+  font: normal normal 700 16px/28px "Barlow";
   letter-spacing: 0.16px;
 }
 .shops__card__link:hover {

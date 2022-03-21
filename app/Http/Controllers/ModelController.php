@@ -22,6 +22,13 @@ class ModelController extends Controller
 
         // Case model name is not specified, all models are displayed ---------------------------------------
         if ($model_name == '' || $model_name == null) {
+            // Ensure family is set and belongs to the possible options
+            if (!isset($request->family)) {
+                return redirect()->route('model-'.app()->getLocale(), ['family' => 'clothes']);
+            } elseif (!in_array($request->family, ['clothes', 'accessories', 'home'])) {
+                return redirect()->route('model-'.app()->getLocale(), ['family' => 'clothes']);
+            }
+
             // Compute all filter options, names and status from FiltersGenerator Trait
             $filter_data = $this->getInitialFilters($request);
             $initial_filters = $filter_data[0];
@@ -42,7 +49,7 @@ class ModelController extends Controller
             $stored_filters->applied_filters = json_encode($initial_filters);
             $stored_filters->save();
 
-            return view('models', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters]);
+            return view('models', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters, 'family' => $request->family]);
         }
 
 

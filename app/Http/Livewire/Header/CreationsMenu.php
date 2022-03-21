@@ -54,7 +54,7 @@ class CreationsMenu extends Component
         $ladies_id = CreationGroup::where('filter_key', 'ladies')->first()->id;
         $gentlemen_id = CreationGroup::where('filter_key', 'gentlemen')->first()->id;
         $kids_id = CreationGroup::where('filter_key', 'kids')->first()->id;
-        $home_id = CreationGroup::where('filter_key', 'home')->first()->id;
+        //$home_id = CreationGroup::where('filter_key', 'home')->first()->id;
         $accessories_id = CreationGroup::where('filter_key', 'accessories')->first()->id;
 
         foreach ($this->getAvailableCreations() as $creation) {
@@ -63,65 +63,65 @@ class CreationsMenu extends Component
             
             // Fill Unisex arrays
             if (!isset($this->unisex_clothes[$query])) {
-                if ($creation->creation_groups->contains($unisex_id) && !($creation->creation_groups->contains($accessories_id))) {
+                if ($creation->creation_groups->contains($unisex_id) && $creation->is_accessory == '0') {
                     $this->unisex_clothes[$query] = $filter_key;
                 }
             }
             if (!isset($this->unisex_accessories[$query])) {
-                if ($creation->creation_groups->contains($unisex_id) && $creation->creation_groups->contains($accessories_id)) {
+                if ($creation->creation_groups->contains($unisex_id) && $creation->is_accessory == '1') {
                     $this->unisex_accessories[$query] = $filter_key;
                 }
             }
 
             // Fill Ladies arrays
             if (!isset($this->ladies_clothes[$query])) {
-                if ($creation->creation_groups->contains($ladies_id) && !($creation->creation_groups->contains($accessories_id))) {
+                if ($creation->creation_groups->contains($ladies_id) && $creation->is_accessory == '0') {
                     $this->ladies_clothes[$query] = $filter_key;
                 }
             }
             if (!isset($this->ladies_accessories[$query])) {
-                if ($creation->creation_groups->contains($ladies_id) && $creation->creation_groups->contains($accessories_id)) {
+                if ($creation->creation_groups->contains($ladies_id) && $creation->is_accessory == '1') {
                     $this->ladies_accessories[$query] = $filter_key;
                 }
             }
 
             // Fill Gentlemen arrays
             if (!isset($this->gentlemen_clothes[$query])) {
-                if ($creation->creation_groups->contains($gentlemen_id) && !($creation->creation_groups->contains($accessories_id))) {
+                if ($creation->creation_groups->contains($gentlemen_id) && $creation->is_accessory == '0') {
                     $this->gentlemen_clothes[$query] = $filter_key;
                 }
             }
             if (!isset($this->gentlemen_accessories[$query])) {
-                if ($creation->creation_groups->contains($gentlemen_id) && $creation->creation_groups->contains($accessories_id)) {
+                if ($creation->creation_groups->contains($gentlemen_id) && $creation->is_accessory == '1') {
                     $this->gentlemen_accessories[$query] = $filter_key;
                 }
             }
 
             // Fill Kids arrays
             if (!isset($this->kids_clothes[$query])) {
-                if ($creation->creation_groups->contains($kids_id) && !($creation->creation_groups->contains($accessories_id))) {
+                if ($creation->creation_groups->contains($kids_id) && $creation->is_accessory == '0') {
                     $this->kids_clothes[$query] = $filter_key;
                 }
             }
             if (!isset($this->kids_accessories[$query])) {
-                if ($creation->creation_groups->contains($kids_id) && $creation->creation_groups->contains($accessories_id)) {
+                if ($creation->creation_groups->contains($kids_id) && $creation->is_accessory == '1') {
                     $this->kids_accessories[$query] = $filter_key;
                 }
             }
 
             // Fill Accessories arrays
             if (!isset($this->accessories[$query])) {
-                if ($creation->creation_groups->contains($accessories_id)) {
+                if ($creation->is_accessory == '1') {
                     $this->accessories[$query] = $filter_key;
                 }
             }
 
             // Fill Home creations arrays
-            if (!isset($this->home_creations[$query])) {
-                if ($creation->creation_groups->contains($home_id)) {
-                    $this->home_creations[$query] = $filter_key;
-                }
-            }
+            // if (!isset($this->home_creations[$query])) {
+            //     if ($creation->creation_groups->contains($home_id)) {
+            //         $this->home_creations[$query] = $filter_key;
+            //     }
+            // }
         }
 
         $this->adults_clothes = array_merge($this->unisex_clothes, $this->ladies_clothes, $this->gentlemen_clothes);

@@ -133,7 +133,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="creations-navbar__menu__list navbar-list-home">
+            <!-- <div class="creations-navbar__menu__list navbar-list-home">
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
@@ -154,7 +154,7 @@
                         @endif
                     </ul>
                 </div>
-            </div>
+            </div> -->
             
 
             <div class="creations-navbar__menu__list navbar-list-unisex">

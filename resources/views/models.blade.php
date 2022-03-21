@@ -15,15 +15,25 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('model-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.models') }}</strong></a>
+			<a href="{{ route('model-'.app()->getLocale()) }}">{{ __('breadcrumbs.models') }}</a>
+			<div class="pl-5 pr-5">
+				>
+			</div>
+			@if($family == 'clothes')
+				<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes']) }}" class="primary-color"><strong>{{ __('breadcrumbs.models-clothes') }}</strong></a>
+			@elseif($family == 'accessories')
+				<a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories']) }}" class="primary-color"><strong>{{ __('breadcrumbs.models-accessories') }}</strong></a>
+			@else
+				<a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}" class="primary-color"><strong>{{ __('breadcrumbs.models-home') }}</strong></a>
+			@endif
 		</div>
 	</div>
 @endsection
 
 @section('main-content')
 <section class="all-models" id="all-models">
-	@livewire('filters.all-models-filter', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters])
-	@livewire('filters.filtered-models', ['initial_filters' => $initial_filters])
+	@livewire('filters.all-models-filter', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters, 'family' => $family])
+	@livewire('filters.filtered-models', ['initial_filters' => $initial_filters, 'family' => $family])
 </section>
 @endsection
 

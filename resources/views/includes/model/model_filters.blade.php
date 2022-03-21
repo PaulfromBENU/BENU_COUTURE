@@ -1,4 +1,21 @@
 <div class="all-models__filters-container__options" style="display: none;">
+	<div class="benu-container" id="filters-family" style="display: none;">
+		<div class="flex justify-start flex-wrap pt-4 pb-4">
+			@foreach($filter_names['families'] as $key => $family_name)
+			<a href="{{ route('model-'.app()->getLocale(), ['family' => $key]) }}" wire:key="{{ $family }}">
+				@if($key == $family)
+					<div class="all-models__filter-tag all-models__filter-tag--active">
+				@else
+					<div class="all-models__filter-tag">
+				@endif
+					{{ $family_name }}
+				</div>
+			</a>
+			@endforeach
+		</div>
+	</div>
+
+	@if($family !== 'home')
 	<div class="benu-container" id="filters-category" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['categories'] as $category => $filter)
@@ -15,6 +32,23 @@
 		</div>
 	</div>
 
+	<div class="benu-container" id="filters-gender" style="display: none;">
+		<div class="flex justify-start flex-wrap pt-4 pb-4">
+			@foreach($active_filters['types'] as $type => $filter)
+			<div wire:click="toggleFilter('types', '{{ $type }}')" wire:key="{{ $type }}">
+				@if($filter == 1)
+					<div class="all-models__filter-tag all-models__filter-tag--active">
+				@else
+					<div class="all-models__filter-tag">
+				@endif
+					{{ $filter_names['types'][$type] }}
+				</div>
+			</div>
+			@endforeach
+		</div>
+	</div>
+	@endif
+
 	<div class="benu-container" id="filters-color" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['colors'] as $color => $filter)
@@ -26,22 +60,6 @@
 				@endif
 					<div class="color-circle color-circle--{{ $color }} w-1/5 mt-1 mr-2"></div>
 					<p>{{ $filter_names['colors'][$color] }}</p>
-				</div>
-			</div>
-			@endforeach
-		</div>
-	</div>
-
-	<div class="benu-container" id="filters-gender" style="display: none;">
-		<div class="flex justify-start flex-wrap pt-4 pb-4">
-			@foreach($active_filters['types'] as $type => $filter)
-			<div wire:click="toggleFilter('types', '{{ $type }}')" wire:key="{{ $type }}">
-				@if($filter == 1)
-					<div class="all-models__filter-tag all-models__filter-tag--active">
-				@else
-					<div class="all-models__filter-tag">
-				@endif
-					{{ $filter_names['types'][$type] }}
 				</div>
 			</div>
 			@endforeach

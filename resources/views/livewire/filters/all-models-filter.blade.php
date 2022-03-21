@@ -2,12 +2,17 @@
     <div class="all-models__filters-container">
         <div class="all-models__filters flex justify-between benu-container">
             <div class="flex justify-start">
-                <div class="all-models__filters__filter flex" id="filter-category">
-                    <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                <div class="all-models__filters__filter flex" id="filter-family">
+                    <p>{{ __('models.filter-family') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
-                <div class="all-models__filters__filter flex" id="filter-gender">
-                    <p>{{ __('models.filter-type') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
-                </div>
+                @if($family !== 'home')
+                    <div class="all-models__filters__filter flex" id="filter-category">
+                        <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    </div>
+                    <div class="all-models__filters__filter flex" id="filter-gender">
+                        <p>{{ __('models.filter-type') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    </div>
+                @endif
                 <div class="all-models__filters__filter flex" id="filter-color">
                     <p>{{ __('models.filter-color') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
@@ -33,6 +38,13 @@
     </div>
 
     <div class="all-models__active-filters flex justify-start flex-wrap benu-container" wire:key="active-filters">
+        <!-- <div>
+            <div class="all-models__active-filters__filter flex justify-between">
+                <p class="w-4/5 pr-1" style="min-width: fit-content;">{{ $filter_names['families'][$family] }}</p>
+                <div class="w-1/5">&#x2715;</div>
+            </div>
+        </div> -->
+
         @foreach($active_filters['categories'] as $category => $category_filter)
             <div wire:click="toggleFilter('categories', '{{ $category }}')" wire:key="{{ $category }}">
             @if($category_filter == '1')

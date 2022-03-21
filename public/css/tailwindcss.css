@@ -784,6 +784,9 @@ select {
 .mr-5 {
   margin-right: 1.25rem;
 }
+.ml-1 {
+  margin-left: 0.25rem;
+}
 .ml-4 {
   margin-left: 1rem;
 }
@@ -804,9 +807,6 @@ select {
 }
 .-ml-1\.5 {
   margin-left: -0.375rem;
-}
-.ml-1 {
-  margin-left: 0.25rem;
 }
 .-mr-2 {
   margin-right: -0.5rem;
@@ -1490,10 +1490,6 @@ select {
 }
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
-}
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 .bg-green-100 {
   --tw-bg-opacity: 1;

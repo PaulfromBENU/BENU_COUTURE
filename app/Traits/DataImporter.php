@@ -199,6 +199,8 @@ trait DataImporter {
 
                 if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
                     $new_creation->is_accessory = '1';
+                } else {
+                    $new_creation->is_accessory = '0';
                 }
 
                 if (floatval($creation['price']) != 0) {

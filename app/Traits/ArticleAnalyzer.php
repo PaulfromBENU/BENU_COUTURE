@@ -18,10 +18,38 @@ trait ArticleAnalyzer {
         return $stock;
     }
 
-    public function getAvailableCreations()
+    public function getAvailableCreations($family = '')
     {
-        // has query will check for the existence of an article with an  available shop
-        $available_creations = Creation::has('articles.available_shops')->get();
+        switch ($family) {
+            case 'clothes':
+                $available_creations = Creation::where('is_accessory', '0')
+                ->whereHas('creation_groups', function($query) {
+                    $query->where('filter_key', '<>', 'home');
+                })
+                ->has('articles.available_shops')->get();
+                break;
+
+            case 'accessories':
+                $available_creations = Creation::where('is_accessory', '1')
+                ->whereHas('creation_groups', function($query) {
+                    $query->where('filter_key', '<>', 'home');
+                })
+                ->has('articles.available_shops')->get();
+                break;
+
+            case 'home':
+                $available_creations = Creation::where('is_accessory', '0')
+                ->whereHas('creation_groups', function($query) {
+                    $query->where('filter_key', 'home');
+                })
+                ->has('articles.available_shops')->get();
+                break;
+            
+            default:
+                // has query will check for the existence of an article with an  available shop
+                $available_creations = Creation::has('articles.available_shops')->get();
+                break;
+        }
 
         // $all_creations = Creation::all();
         // $available_creations = collect([]);
