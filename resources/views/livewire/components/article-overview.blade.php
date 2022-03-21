@@ -42,7 +42,7 @@
             {{ $localized_creation_category }}
         </p>
         <p class="article-overview__footer__name">
-            {{ $article->name }}
+            {{ strtoupper($article->name) }}
         </p>
         <div class="flex justify-between">
             <p class="article-overview__footer__price">

@@ -40,6 +40,8 @@ trait FiltersGenerator {
 
         $name_query = "name_".app()->getLocale();
 
+        $unsorted_prices = [];
+
         foreach ($this->getAvailableCreations() as $creation) {
             //Creation categories
             $creation_category_key = $creation->creation_category->filter_key;
@@ -79,7 +81,7 @@ trait FiltersGenerator {
                 $price_name = "0-30&euro;";
             }
             if (!in_array($price_key, $filter_options['prices'])) {
-                array_push($filter_options['prices'], $price_key);
+                array_push($unsorted_prices, $price_key);
                 $filter_names['prices'][$price_key] = $price_name;
             }
 
@@ -111,6 +113,17 @@ trait FiltersGenerator {
             // }
         }
 
+        // Sorting the prices
+        $sorted_prices = [
+            '0-30', '31-60', '61-120', '121-180', 'more'
+        ];
+
+        for ($i=0; $i < count($sorted_prices); $i++) { 
+            if (($key = array_search($sorted_prices[$i], $unsorted_prices)) !== false) {
+                array_push($filter_options['prices'], $unsorted_prices[$key]);
+            }
+        }
+
         // Colors
         $available_colors = Color::whereHas('articles', function($query) {
             $query->has('available_shops');
@@ -136,29 +149,6 @@ trait FiltersGenerator {
                 $filter_names['shops'][$shop_key] = $shop_name;
             }
         }
-
-        // foreach ($this->getAllAvailableArticles() as $article) {
-        //     //Colors
-        //     $color_key = $article->color->name;
-        //     if (!in_array($color_key, $filter_options['colors'])) {
-        //         $color_name = __("colors.".$color_key);
-        //         array_push($filter_options['colors'], $color_key);
-        //         $filter_names['colors'][$color_key] = $color_name;
-        //     }
-            
-        //     //Shops
-        //     $shop_options = $article->available_shops()->get();
-        //     foreach ($shop_options as $shop) {
-        //         $shop_key = $shop->filter_key;
-        //         $shop_name = $shop->name;
-        //         if (!in_array($shop_key, $filter_options['shops'])) {
-        //             array_push($filter_options['shops'], $shop_key);
-        //             $filter_names['shops'][$shop_key] = $shop_name;
-        //         }
-        //     }
-        // }
-
-        //dd($filter_options, $filter_names);
 
         return [$filter_options, $filter_names];
     }

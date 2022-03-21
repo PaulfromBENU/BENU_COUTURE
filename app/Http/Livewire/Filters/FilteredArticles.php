@@ -29,7 +29,7 @@ class FilteredArticles extends Component
         $this->articles = collect([]);
         
         // Compute collection of filtered models in FiltersGenerator Trait (required to keep full object relationships)
-        $this->articles = $this->getFilteredArticles($this->creation, $applied_filters, 'available');
+        $this->articles = $this->getFilteredArticles($this->creation, $applied_filters, 'available')->sortBy('name');
 
         $this->emit('articlesUpdated');
     }
