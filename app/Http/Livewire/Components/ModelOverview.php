@@ -44,8 +44,14 @@ class ModelOverview extends Component
             if (!isset($this->available_colors[$article->color->id])) {
                 $this->available_colors[$article->color->id] = $article->color->name;
             }
-            // Add pictures selection logic here
-            $this->pictures->push($article->photos()->first()->file_name);
+            // Front pictures used when available, otherwise other pictures
+            if ($article->photos()->where('is_front', '1')->count() > 0) {
+                $this->pictures->push($article->photos()->where('is_front', '1')->first()->file_name);
+            } elseif ($article->photos()->count() > 0) {
+                $this->pictures->push($article->photos()->first()->file_name);
+            } else {
+                // Use default picture?
+            }
 
             // Compute available articles count
             $this->available_articles_count ++;

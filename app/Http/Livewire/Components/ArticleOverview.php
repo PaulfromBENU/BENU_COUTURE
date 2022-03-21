@@ -25,10 +25,14 @@ class ArticleOverview extends Component
         $this->localized_creation_category = $this->article->creation->creation_category->$localized_query;
         
         if ($this->article->photos->count() == 0) {
+            // Use default illustration?
             $this->pictures = collect(['modele_caretta_1.png']);
         } else {
             $this->pictures = collect([]);
-            foreach ($this->article->photos as $photo) {
+            foreach ($this->article->photos()->where('is_front', '1')->get() as $photo) {
+                $this->pictures = $this->pictures->push($photo->file_name);
+            }
+            foreach ($this->article->photos()->where('is_front', '<>', '1')->get() as $photo) {
                 $this->pictures = $this->pictures->push($photo->file_name);
             }
         }
