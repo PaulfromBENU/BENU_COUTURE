@@ -6144,5 +6144,89 @@
     "Qui? Correction": "",
     "": "",
     "__1": ""
+  },
+  {
+    "id" : 1752,
+    "created_at" : "2022-03-21 16:33:05",
+    "updated_at" : "2022-03-21 16:33:05",
+    "page" : "models",
+    "key" : "models.filter-family",
+    "fr" : "Famille",
+    "en" : "Family",
+    "de" : "models.filter-family",
+    "lu" : "models.filter-family",
+    "translation_key" : "models.filter-family"
+  },
+  {
+    "id" : 1753,
+    "created_at" : "2022-03-21 16:33:35",
+    "updated_at" : "2022-03-21 16:33:35",
+    "page" : "models",
+    "key" : "models.filter-clothes",
+    "fr" : "Vêtements",
+    "en" : "Clothes",
+    "de" : "models.filter-clothes",
+    "lu" : "models.filter-clothes",
+    "translation_key" : "models.filter-clothes"
+  },
+  {
+    "id" : 1754,
+    "created_at" : "2022-03-21 16:34:02",
+    "updated_at" : "2022-03-21 16:34:02",
+    "page" : "models",
+    "key" : "models.filter-accessories",
+    "fr" : "Accessoires",
+    "en" : "Accessories",
+    "de" : "models.filter-accessories",
+    "lu" : "models.filter-accessories",
+    "translation_key" : "models.filter-accessories"
+  },
+  {
+    "id" : 1755,
+    "created_at" : "2022-03-21 16:34:37",
+    "updated_at" : "2022-03-21 16:34:37",
+    "page" : "models",
+    "key" : "models.filter-home",
+    "fr" : "Pour la maison",
+    "en" : "Home",
+    "de" : "models.filter-home",
+    "lu" : "models.filter-home",
+    "translation_key" : "models.filter-home"
+  },
+  {
+    "id" : 1756,
+    "created_at" : "2022-03-21 16:35:12",
+    "updated_at" : "2022-03-21 16:35:12",
+    "page" : "breadcrumbs",
+    "key" : "breadcrumbs.models-clothes",
+    "fr" : "Vêtements",
+    "en" : "Clothes",
+    "de" : "breadcrumbs.models-clothes",
+    "lu" : "breadcrumbs.models-clothes",
+    "translation_key" : "breadcrumbs.models-clothes"
+  },
+  {
+    "id" : 1757,
+    "created_at" : "2022-03-21 16:35:43",
+    "updated_at" : "2022-03-21 16:35:43",
+    "page" : "breadcrumbs",
+    "key" : "breadcrumbs.models-accessories",
+    "fr" : "Accessoires",
+    "en" : "Accessories",
+    "de" : "breadcrumbs.models-accessories",
+    "lu" : "breadcrumbs.models-accessories",
+    "translation_key" : "breadcrumbs.models-accessories"
+  },
+  {
+    "id" : 1758,
+    "created_at" : "2022-03-21 16:36:01",
+    "updated_at" : "2022-03-21 16:36:28",
+    "page" : "breadcrumbs",
+    "key" : "breadcrumbs.models-home",
+    "fr" : "Pour la maison",
+    "en" : "Home",
+    "de" : "breadcrumbs.models-accessories",
+    "lu" : "breadcrumbs.models-accessories",
+    "translation_key" : "breadcrumbs.models-home"
   }
 ]

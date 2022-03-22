@@ -141,5 +141,16 @@
     "": "",
     "__1": "",
     "__2": ""
+  },
+  {
+    "name_fr": "Denim",
+    "name_lu": "Denim",
+    "name_de": "Denim",
+    "name_en": "Denim",
+    "hex_code": "#fbf8fb",
+    "translation_key": "colors.denim",
+    "": "",
+    "__1": "",
+    "__2": ""
   }
 ]

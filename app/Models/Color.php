@@ -23,4 +23,29 @@ class Color extends Model
     {
         return $this->hasMany(Article::class);
     }
+
+    public function clothes()
+    {
+        return $this->hasMany(Article::class)->has('available_shops')->whereHas('creation', function($query) {
+            $query->where('is_accessory', '0')->whereHas('creation_groups', function($q) {
+                $q->where('filter_key', '<>', 'home');
+            });
+        });
+    }
+
+    public function accessories()
+    {
+        return $this->hasMany(Article::class)->has('available_shops')->whereHas('creation', function($query) {
+            $query->where('is_accessory', '1');
+        });
+    }
+
+    public function home()
+    {
+        return $this->hasMany(Article::class)->has('available_shops')->whereHas('creation', function($query) {
+            $query->whereHas('creation_groups', function($q) {
+                $q->where('filter_key', 'home');
+            });
+        });
+    }
 }

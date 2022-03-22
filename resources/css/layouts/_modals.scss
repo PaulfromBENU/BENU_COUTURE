@@ -232,6 +232,7 @@
 			letter-spacing: 0px;
 			color: #2E1414;
 			opacity: 0.5;
+			transition: color 0.3s;
 		}
 		&__mask-subtitle {
 			text-align: left;
@@ -468,10 +469,13 @@
 				text-align: left;
 				font: normal normal 500 14px/28px 'Barlow';
 				letter-spacing: 0px;
-				color: #2E1414;
-				opacity: 0.5;
+				color: darken(lightgrey, 15);
 				cursor: pointer;
 				margin-bottom: 20px;
+				transition: color 0.2s;
+				&:hover {
+					color: $primary-color;
+				}
 			}
 			&__detail {
 				text-align: left;

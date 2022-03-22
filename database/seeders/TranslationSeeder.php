@@ -14,7 +14,7 @@ class TranslationSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('translations')->delete();
+        DB::connection('mysql')->table('translations')->truncate();
 
         $key_options['auth'] = [
             'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements.',

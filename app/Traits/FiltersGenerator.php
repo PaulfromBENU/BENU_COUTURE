@@ -18,7 +18,7 @@ trait FiltersGenerator {
 
     use ArticleAnalyzer;
 
-    public function getFilterOptions()
+    public function getFilterOptions($family = '')
     {
         $filter_options = [
             'families' => ['clothes', 'accessories', 'home'],
@@ -48,7 +48,7 @@ trait FiltersGenerator {
 
         $unsorted_prices = [];
 
-        foreach ($this->getAvailableCreations() as $creation) {
+        foreach ($this->getAvailableCreations($family) as $creation) {
             //Creation categories
             $creation_category_key = $creation->creation_category->filter_key;
             $creation_category_name = $creation->creation_category->$name_query;
@@ -131,9 +131,25 @@ trait FiltersGenerator {
         }
 
         // Colors
-        $available_colors = Color::whereHas('articles', function($query) {
-            $query->has('available_shops');
-        })->get();
+        switch ($family) {
+            case 'clothes':
+                $available_colors = Color::has('clothes')->get();
+                break;
+
+            case 'accessories':
+                $available_colors = Color::has('accessories')->get();
+                break;
+            
+            case 'home':
+                $available_colors = Color::has('home')->get();
+                break;
+
+            default:
+                $available_colors = Color::whereHas('articles', function($query) {
+                    $query->has('available_shops');
+                })->get();
+                break;
+        }
 
         foreach ($available_colors as $color) {
             $color_key = $color->name;
@@ -426,7 +442,7 @@ trait FiltersGenerator {
 
 	public function getInitialFilters($request)
 	{
-        $all_options = $this->getFilterOptions();
+        $all_options = $this->getFilterOptions($request->family);
 		$filter_options = $all_options[0]; // Get only filter keys
 
 		$initial_filters = [

@@ -272,7 +272,7 @@ trait DataImporter {
             echo "<br/>";
 
             $creation['New BENU Name'] = strtoupper($creation['New BENU Name']);
-            if (Creation::where('name', $creation['New BENU Name'])->count() > 0) {
+            if ($creation['New BENU Name'] !== "" && Creation::where('name', $creation['New BENU Name'])->count() > 0) {
                 $creation_to_update = Creation::where('name', $creation['New BENU Name'])->first();
 
                 // Assignment of categories - only if not already completed
@@ -365,9 +365,14 @@ trait DataImporter {
                     $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'kids')->first()->id);
                 }
 
-                if ($creation['Accessories'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'accessories')->first()->id))) {
-                    $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'accessories')->first()->id);
+                // Accessory not attached as a creation group (type) anymore, boolean 'is_accessory' used instead
+                if ($creation['Accessories'] == 'VRAI') {
+                    $creation_to_update->is_accessory = '1';
                 }
+
+                // if ($creation['Accessories'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'accessories')->first()->id))) {
+                //     $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'accessories')->first()->id);
+                // }
 
                 if ($creation['Home'] == 'VRAI' && !($creation_to_update->creation_groups->contains(CreationGroup::where('filter_key', 'home')->first()->id))) {
                     $creation_to_update->creation_groups()->attach(CreationGroup::where('filter_key', 'home')->first()->id);
@@ -466,11 +471,12 @@ trait DataImporter {
                             $size_index = 8;
                         } else {
                             $color_index = 2;
-                            $size_index = 100;
+                            $size_index = 100; //Not used
                         }
                     }
 
                     if(count($picture_info) >= 8 && count($picture_info) <= 10) {
+                        // Get first three colors from picture file name
                         $picture_colors = $picture_info[$color_index];
                         $picture_main_color = explode("_", $picture_colors)[0];
                         if (isset(explode("_", $picture_colors)[1])) {
@@ -483,12 +489,13 @@ trait DataImporter {
                         } else {
                             $picture_third_color = null;
                         }
+
                         // Convert color to one of the existing colors based on Excel file equivalence
                         if (in_array($picture_main_color, ['beige', 'wool', 'caramel'])) {
                             $picture_main_color  = 'beige';
                         } elseif (in_array($picture_main_color, ['black', 'back', 'dark'])) {
                             $picture_main_color  = 'black';
-                        } elseif (in_array($picture_main_color, ['babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'marineblue', 'navy', 'skyblue', 'stoneblue', 'turquoise', 'blueish'])) {
+                        } elseif (in_array($picture_main_color, ['babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo'])) {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut'])) {
                             $picture_main_color  = 'brown';
@@ -496,11 +503,11 @@ trait DataImporter {
                             $picture_main_color  = 'denim';
                         } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki'])) {
                             $picture_main_color  = 'green';
-                        } elseif (in_array($picture_main_color, ['darkgrey', 'grey', 'greyish', 'jeangrey', 'lightgrey'])) {
+                        } elseif (in_array($picture_main_color, ['darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey'])) {
                             $picture_main_color  = 'grey';
-                        } elseif (in_array($picture_main_color, ['floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor'])) {
-                            $picture_main_color  = 'multicolor';
-                        } elseif (in_array($picture_main_color, ['pink', 'rose', 'baby_rose', 'salmon', 'lightrose'])) {
+                        } elseif (in_array($picture_main_color, ['floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive'])) {
+                            $picture_main_color  = 'multicolored';
+                        } elseif (in_array($picture_main_color, ['pink', 'rose', 'baby', 'salmon', 'lightrose'])) {
                             $picture_main_color  = 'pink';
                         } elseif (in_array($picture_main_color, ['deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender'])) {
                             $picture_main_color  = 'purple';
@@ -513,9 +520,13 @@ trait DataImporter {
                         }
 
                         if (count($picture_info) >= 9 && isset($picture_info[$size_index])) {
-                            $picture_size = explode(".", $picture_info[$size_index])[0];
+                            if (explode(".", $picture_info[$size_index])[0] == 'All') {
+                                $picture_size = "unique";
+                            } else {
+                                $picture_size = explode(".", $picture_info[$size_index])[0];
+                            }
                         } elseif(count($picture_info) == 8 && $creation->is_accessory == '1') {
-                            $picture_size = "All";
+                            $picture_size = "unique";
                         } else {
                             $picture_size = 'invalid';
                         }
@@ -527,6 +538,7 @@ trait DataImporter {
                             $picture_size = 'XL';
                         }
 
+                        // Default value to M for sold articles of unknown size
                         if (strpos(strtolower($picture->getPath()), 'sold') !== false && $picture_size == '0') {
                             $picture_size = 'M';
                         }
@@ -635,6 +647,7 @@ trait DataImporter {
                                 }
                             }
                         } else {
+                            echo "<span style='color: red;'>*** Wrong size or color for ".$picture->getFilename()." of creation ".strtoupper($creation->name).", could not be imported</span><br/>";
                             $failure_number ++;
                         }
 
@@ -673,6 +686,7 @@ trait DataImporter {
 
     public function importTranslations()
     {
+        // !! THIS FUNCTION SHOULD ONLY BE RUN AFTER SEEDING THE TRANSLATIONS TABLE WITH THE SEEDER (OTHERWISE SLUGS NOT INCLUDED)
         $raw_translations = json_decode(file_get_contents(asset('json_imports/translations.json')), true);
 
         echo "<br/><br/><strong>----------------  Importing translations from Sophie's file...</strong><br/>";
@@ -692,30 +706,30 @@ trait DataImporter {
                 if ($translation['fr'] != "") {
                     $updated_translation->fr = $translation['fr'];
                 } else {
-                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language FR</span><br/>";
+                    echo "<span style='color: red;'> >>> Translation missing in JSON for ".$page.'.'.$key." in language FR</span><br/>";
                 }
                 if ($translation['en'] != "") {
                     $updated_translation->en = $translation['en'];
                 } else {
-                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language EN</span><br/>";
+                    echo "<span style='color: red;'> >>> Translation missing in JSON for ".$page.'.'.$key." in language EN</span><br/>";
                 }
                 if ($translation['de'] != "") {
                     $updated_translation->de = $translation['de'];
                 } else {
-                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language DE</span><br/>";
+                    echo "<span style='color: red;'> >>> Translation missing in JSON for ".$page.'.'.$key." in language DE</span><br/>";
                 }
                 if ($translation['lu'] != "") {
                     $updated_translation->lu = $translation['lu'];
                 } else {
-                    echo "<span style='color: red;'> >>> Translation missing for ".$page.'.'.$key." in language LU</span><br/>";
+                    echo "<span style='color: red;'> >>> Translation missing in JSON for ".$page.'.'.$key." in language LU</span><br/>";
                 }
                 
                 $updated_translation->translation_key = $translation['key'];
                 if ($updated_translation->save()) {
-                    echo "<span style='color: green; padding-left: 10px;'>Translation key found in database for ".$page.'.'.$key."</span><br/>";
+                    echo "<span style='color: green; padding-left: 10px;'>Translation updated in database for ".$page.'.'.$key.", value in French is </span>".$translation['fr']."<br/>";
                 }
             } else {
-                // Handle translations persisted in database
+                // Handle translations persisted in database outside of the Translation table
                 // Includes colors, types, categories, shops description
                 if ($page == 'colors') {
                     $new_color = Color::firstOrNew(['name' => $key]);
@@ -773,8 +787,20 @@ trait DataImporter {
                         echo "<span style='color: green; padding-left: 10px;'>New element ".$key." added in FAQ</span><br/>";
                     }
                 } else {
-                    // Case not found at all
-                    echo "<span style='color: red;'>*** Not found in Translation database: ".$page.'.'.$key."</span><br/>";
+                    // Case not found at all, create new translation
+                    $new_translation = new Translation();
+                    $new_translation->page = $page;
+                    $new_translation->key = $key;
+                    $new_translation->fr = $translation['fr'];
+                    $new_translation->lu = $translation['lu'];
+                    $new_translation->de = $translation['de'];
+                    $new_translation->en = $translation['en'];
+                    $new_translation->translation_key = $page.'.'.$key;
+                    if ($new_translation->save()) {
+                        echo "<span style='color: green; padding-left: 10px;'>New element ".$page.'.'.$key." added in the database</span><br/>";
+                    } else {
+                        echo "<span style='color: red;'>*** Not found in Translation database: ".$page.'.'.$key."</span><br/>";
+                    }
                 }
             }
         }

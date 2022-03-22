@@ -31,14 +31,14 @@ trait ArticleAnalyzer {
 
             case 'accessories':
                 $available_creations = Creation::where('is_accessory', '1')
-                ->whereHas('creation_groups', function($query) {
-                    $query->where('filter_key', '<>', 'home');
-                })
+                // ->whereHas('creation_groups', function($query) {
+                //     $query->where('filter_key', '<>', 'home');
+                // })
                 ->has('articles.available_shops')->get();
                 break;
 
             case 'home':
-                $available_creations = Creation::where('is_accessory', '0')
+                $available_creations = Creation::query()
                 ->whereHas('creation_groups', function($query) {
                     $query->where('filter_key', 'home');
                 })

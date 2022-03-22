@@ -18,19 +18,23 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            // Not imported, or simply updated with the importation
             // UserSeeder::class,
+            // PartnerSeeder::class,
+            // ShopSeeder::class,
+            // TranslationSeeder::class,
+
+            // Imported - Use data importation route
             // ColorSeeder::class,
             // SizeSeeder::class,
             // CreationGroupSeeder::class,
             // CreationCategorySeeder::class,
-            // PartnerSeeder::class,
             // KeywordSeeder::class,
             // CreationSeeder::class,
             // CreationCreationGroupSeeder::class,
             // CreationAccessorySeeder::class,
             // CareRecommendationSeeder::class,
             // CompositionSeeder::class,
-            // ShopSeeder::class,
             // ArticleSeeder::class,
             // PhotoSeeder::class,
             // CreationKeywordSeeder::class,
@@ -38,7 +42,6 @@ class DatabaseSeeder extends Seeder
             // ArticlePhotoSeeder::class,
             // ArticleCompositionSeeder::class,
             // ArticleCareRecommendationSeeder::class,
-            TranslationSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }
