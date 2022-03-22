@@ -29,8 +29,15 @@ class CreationResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('product_type')
-                    ->required(),
+                Select::make('product_type')
+                        ->label('Creation Type')
+                        ->options([
+                            '0' => "Vêtement ou accessoire",
+                            '1' => "Masque enfant",
+                            '2' => "Masque adulte",
+                            '3' => "Petit article (type bracelet)"
+                        ])
+                        ->searchable(),
                 Select::make('creation_category_id')
                         ->label('Category')
                         ->options(CreationCategory::all()->pluck('name_fr', 'id'))
@@ -51,16 +58,12 @@ class CreationResource extends Resource
                     ->label('Requires size filter?')
                     ->required(),
                 Forms\Components\Textarea::make('description_lu')
-                    ->required()
                     ->maxLength(65535),
                 Forms\Components\Textarea::make('description_fr')
-                    ->required()
                     ->maxLength(65535),
                 Forms\Components\Textarea::make('description_en')
-                    ->required()
                     ->maxLength(65535),
                 Forms\Components\Textarea::make('description_de')
-                    ->required()
                     ->maxLength(65535),
                 Forms\Components\TextInput::make('origin_link_fr')
                     ->maxLength(255),
@@ -79,7 +82,7 @@ class CreationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('product_type')->label('Product type'),
                 Tables\Columns\TextColumn::make('articles_count')->counts('articles')->label('Number of articles'),
                 Tables\Columns\TextColumn::make('creation_category.name_fr')->label('Category'),

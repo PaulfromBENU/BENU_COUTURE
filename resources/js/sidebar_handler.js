@@ -1,6 +1,7 @@
 $(function() {
 	$('.article-sidebar').hide();
 	$('.mask-sidebar').hide();
+	$('.items-sidebar').hide();
 	$('.voucher-sidebar').hide();
 	Livewire.on('displayArticle', article_id => {
 		$('.modal-opacifier').fadeIn();
@@ -20,6 +21,7 @@ $(function() {
 		$('#general-side-modal').fadeOut(400, function() {
 			$('.article-sidebar').hide();
 			$('.mask-sidebar').hide();
+			$('.items-sidebar').hide();
 			$('.voucher-sidebar').hide();
 		});
 		Livewire.emit('ArticleModalReady', 0);
@@ -52,6 +54,27 @@ $(function() {
 		$('#general-side-modal').css('right', '-60vw');
 		$('#general-side-modal').fadeOut(400, function() {
 			$('.mask-sidebar').hide();
+		});
+	});
+
+
+	// Small Items sidebar handler
+	$('#items-specific-order-btn').on('click', function() {
+		$('.modal-opacifier').fadeIn();
+		$('#general-side-modal').fadeIn(500, function() {
+			$('.items-sidebar').fadeIn();
+		});
+		$('#general-side-modal').css('right', '0');
+		$('.article-sidebar__img-container').scroll(function() {
+			$('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
+		});
+	});
+
+	Livewire.on('closeItemsSideBar', function() {
+		$('.modal-opacifier').fadeOut();
+		$('#general-side-modal').css('right', '-60vw');
+		$('#general-side-modal').fadeOut(400, function() {
+			$('.items-sidebar').hide();
 		});
 	});
 

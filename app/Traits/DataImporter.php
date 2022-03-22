@@ -517,6 +517,8 @@ trait DataImporter {
                             $picture_main_color  = 'white';
                         } elseif (in_array($picture_main_color, ['golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow'])) {
                             $picture_main_color  = 'yellow';
+                        } elseif (in_array($picture_main_color, ['orange'])) {
+                            $picture_main_color  = 'orange';
                         }
 
                         if (count($picture_info) >= 9 && isset($picture_info[$size_index])) {

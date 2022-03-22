@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaskOrdersTable extends Migration
+class CreateItemOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateMaskOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::connection('mysql')->create('mask_orders', function (Blueprint $table) {
+        Schema::connection('mysql')->create('item_orders', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('creation_id')->onUpdate('cascade');
-            $table->boolean('with_filter')->default('0');
-            $table->boolean('with_cotton')->default('0');
-            $table->string('size')->default('small');
             $table->integer('requested_number')->default('1');
             $table->text('text_demand');
             $table->string('email');
@@ -35,6 +32,6 @@ class CreateMaskOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::connection('mysql')->dropIfExists('mask_orders');
+        Schema::connection('mysql')->dropIfExists('item_orders');
     }
 }

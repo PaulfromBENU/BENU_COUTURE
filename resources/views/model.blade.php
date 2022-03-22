@@ -48,6 +48,9 @@
 	@elseif($model->product_type == 2)
 		@livewire('modals.article-sidebar', ['article_id' => '0'])
 		@livewire('modals.mask-sidebar', ['creation_id' => $model->id, 'pictures' => $model_pictures, 'age' => 'adult'])
+	@elseif($model->product_type == 3)
+		@livewire('modals.article-sidebar', ['article_id' => '0'])
+		@livewire('modals.small-items-sidebar', ['creation_id' => $model->id, 'pictures' => $model_pictures])
 	@else
 		@livewire('modals.small-items-sidebar', ['article_id' => '0'])
 	@endif

@@ -16,6 +16,7 @@
 		@if($model->product_type == 0)
 			<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
 		@elseif($model->product_type == 1)
+		<!-- Case mask for kids -->
 			<div class="flex justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
 				<div class="model-pres__desc__age ml-5">
@@ -23,13 +24,23 @@
 				</div>
 			</div>
 		@elseif($model->product_type == 2)
+		<!-- Case mask for adults -->
 			<div class="flex justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
 				<div class="model-pres__desc__age ml-5">
 					{{ strtoupper(__('models.masks-adult')) }}
 				</div>
 			</div>
+		@elseif($model->product_type == 3)
+		<!-- Case small item -->
+			<div class="flex justify-start">
+				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age ml-5">
+					{{ strtoupper(__('models.is-small-item')) }}
+				</div>
+			</div>
 		@else
+		<!-- All other cases -->
 			<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
 		@endif
 		
@@ -60,6 +71,12 @@
 		<div class="model-pres__desc__link">
 			<button id="mask-specific-order-btn" class="btn-couture-plain btn-couture-plain--dark-hover mb-5" style="height: 45px; margin-left: 0;">
 				{{ __('models.model-specific-order-btn') }}
+			</button>
+		</div>
+		@elseif($model->product_type == 3)
+		<div class="model-pres__desc__link">
+			<button id="items-specific-order-btn" class="btn-couture-plain btn-couture-plain--dark-hover mb-5" style="height: 45px; margin-left: 0;">
+				{{ __('models.items-specific-order-btn') }}
 			</button>
 		</div>
 		@endif

@@ -24,10 +24,11 @@ class CreateCreationsTable extends Migration
             $table->decimal('price', $precision = 6, $scale = 2)->default('0');
             $table->integer('weight')->default('0');
             $table->boolean('requires_size')->default('1');
-            $table->text('description_lu');
-            $table->text('description_fr');
-            $table->text('description_en');
-            $table->text('description_de');
+            $table->text('description_lu')->nullable();
+            $table->text('description_fr')->nullable();
+            $table->text('description_en')->nullable();
+            $table->text('description_de')->nullable();
+            $table->string('translation_key')->default('models.description-creationname')->nullable();
             $table->string('origin_link_fr')->nullable();
             $table->string('origin_link_lu')->nullable();
             $table->string('origin_link_de')->nullable();

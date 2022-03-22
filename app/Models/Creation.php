@@ -43,4 +43,14 @@ class Creation extends Model
     {
         return $this->belongsToMany(Keyword::class);
     }
+
+    public function item_orders()
+    {
+        return $this->hasMany(ItemOrder::class);
+    }
+
+    public function mask_orders()
+    {
+        return $this->hasMany(MaskOrder::class);
+    }
 }

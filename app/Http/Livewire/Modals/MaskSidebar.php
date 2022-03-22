@@ -48,6 +48,9 @@ class MaskSidebar extends Component
         $this->masks_number = 1;
         $this->status = 'pending';
         $this->getCreationData();
+        if (Auth::check()) {
+            $this->email = Auth::user()->email;
+        }
     }
 
     public function getCreationData()
