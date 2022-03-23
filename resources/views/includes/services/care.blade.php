@@ -9,7 +9,7 @@
 		@foreach($wash_recommendations as $wash_recommendation)
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
-				@svg($wash_recommendation->picture)
+				@svg('care/'.$wash_recommendation->picture)
 			</div>
 			<p class="care__grid__box__txt m-auto">
 				{{ $wash_recommendation->description_fr }}
@@ -23,7 +23,7 @@
 		@foreach($dry_recommendations as $dry_recommendation)
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
-				@svg($dry_recommendation->picture)
+				@svg('care/'.$dry_recommendation->picture)
 			</div>
 			<p class="care__grid__box__txt m-auto">
 				{{ $dry_recommendation->description_fr }}
@@ -34,13 +34,13 @@
 
 	<h4 class="text-center care__grid__title">{{ __('services.care-category-3') }}</h4>
 	<div class="care__grid flex justify-between flex-wrap">
-		@foreach($iron_recommendations as $iron_recommendations)
+		@foreach($iron_recommendations as $iron_recommendation)
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
-				@svg($iron_recommendations->picture)
+				@svg('care/'.$iron_recommendation->picture)
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				{{ $iron_recommendations->description_fr }}
+				{{ $iron_recommendation->description_fr }}
 			</p>
 		</div>
 		@endforeach

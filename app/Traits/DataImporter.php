@@ -64,12 +64,19 @@ trait DataImporter {
             if (!in_array($care['name'], $cares_created)) {
                 $new_care = new CareRecommendation();
                 $new_care->name = $care['name'];
+                if (isset($care['family'])) {
+                    $new_care->family = $care['family'];
+                }
                 $new_care->description_de = $care['description_de'];
                 $new_care->description_lu = $care['description_lu'];
                 $new_care->description_fr = $care['description_fr'];
                 $new_care->description_en = $care['description_en'];
                 $new_care->translation_key = $care['translation_key'];
-                $new_care->picture = "services_care_1";
+                if ($care['picture'] !== "") {
+                    $new_care->picture = $care['picture'];
+                } else {
+                    $new_care->picture = "services_care_1";
+                }
                 if ($new_care->save()) {
                     array_push($cares_created, $care['name']);
                     echo "<span style='color:green;'>New care recommendation ".$care['name']." successfully added to the database :)</span><br/>";

@@ -179,7 +179,7 @@
                 <ul class="article-sidebar__content__care__list">
                     @foreach($article->care_recommendations as $recommendation)
                     <li class="flex mb-3">
-                        @svg($recommendation->picture)
+                        @svg('care/'.$recommendation->picture)
                         <p>
                             {{ $recommendation->$desc_query }}
                         </p>
