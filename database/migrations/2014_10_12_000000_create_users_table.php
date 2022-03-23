@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             //$table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->string('role')->default('newsletter');//4 levels: newsletter (not registered, just newsletter), user, editor, admin
+            $table->string('role')->default('newsletter');//5 levels: newsletter (not registered, just newsletter), user, editor, vendor, admin
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('gender')->nullable();

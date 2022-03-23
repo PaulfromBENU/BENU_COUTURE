@@ -22,6 +22,16 @@ class TranslationResource extends Resource
 
     protected static ?string $navigationGroup = 'Données générales';
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+    }
+
+    public function mount(): void
+    {
+        abort_unless((auth()->user()->role == 'admin' || auth()->user()->role == 'editor'), 403);
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -53,12 +63,12 @@ class TranslationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('page')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('key')->sortable()->searchable(),
+                // Tables\Columns\TextColumn::make('page')->sortable()->searchable(),
+                // Tables\Columns\TextColumn::make('key')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('translation_key')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('de')->limit(50),
                 Tables\Columns\TextColumn::make('fr')->limit(50),
                 Tables\Columns\TextColumn::make('en')->limit(50),
-                Tables\Columns\TextColumn::make('de')->limit(50),
                 Tables\Columns\TextColumn::make('lu')->limit(50),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),

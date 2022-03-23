@@ -213,8 +213,12 @@
 				width: 45%;
 				cursor: pointer;
 				margin-right: 10px;
+				transition: all 0.2s;
 				&:hover {
-					text-decoration: underline;
+					color: $dark-text;
+					path {
+						fill: $dark-text;
+					}
 				}
 				svg {
 					margin-left: 10px;

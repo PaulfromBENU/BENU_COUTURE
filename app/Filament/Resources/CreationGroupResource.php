@@ -22,6 +22,16 @@ class CreationGroupResource extends Resource
 
     protected static ?string $navigationGroup = 'Données générales';
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+    }
+
+    public function mount(): void
+    {
+        abort_unless((auth()->user()->role == 'admin' || auth()->user()->role == 'editor'), 403);
+    }
+
     public static function form(Form $form): Form
     {
         return $form

@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
+use Filament\Facades\Filament;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -33,5 +35,9 @@ class AppServiceProvider extends ServiceProvider
                         ? $rule->mixedCase()->uncompromised()
                         : $rule;
         });
+
+        Filament::registerStyles([
+            asset('css/app.css'),
+        ]);
     }
 }

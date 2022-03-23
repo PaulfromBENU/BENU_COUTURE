@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CareRecommendationResource\Pages;
 use App\Filament\Resources\CareRecommendationResource\RelationManagers;
+use Filament\Forms\Components\Select;
 use App\Models\CareRecommendation;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -22,14 +23,30 @@ class CareRecommendationResource extends Resource
 
     protected static ?string $navigationGroup = 'Données générales';
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+    }
+
+    public function mount(): void
+    {
+        abort_unless((auth()->user()->role == 'admin' || auth()->user()->role == 'editor'), 403);
+    }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('family')
-                    ->maxLength(255),
+                Select::make('family')
+                    ->label('Catégorie')
+                    ->options([
+                        'wash' => "Lavage",
+                        'dry' => "Séchage",
+                        'iron' => "Repassage"
+                    ])
+                    ->default('wash'),
                 Forms\Components\Textarea::make('description_de')
                     ->required()
                     ->maxLength(65535),

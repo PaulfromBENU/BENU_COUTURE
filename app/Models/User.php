@@ -77,7 +77,7 @@ class User extends Authenticatable implements HasName, FilamentUser
 
     public function canAccessFilament(): bool
     {
-        return $this->role == 'admin';
+        return ($this->role == 'admin' || $this->role == 'vendor' || $this->role == 'editor');
     }
 
     public function addresses()

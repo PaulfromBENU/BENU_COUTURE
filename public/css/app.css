@@ -3047,9 +3047,13 @@ input[type=checkbox]:focus {
   width: 45%;
   cursor: pointer;
   margin-right: 10px;
+  transition: all 0.2s;
 }
 .model-pres__desc__seemore a:hover {
-  text-decoration: underline;
+  color: #2E1414;
+}
+.model-pres__desc__seemore a:hover path {
+  fill: #2E1414;
 }
 .model-pres__desc__seemore a svg {
   margin-left: 10px;
@@ -3682,4 +3686,38 @@ input[type=checkbox]:focus {
 .dashboard-wishlist .article-overview, .dashboard-wishlist .sold-overview {
   width: 30%;
   margin-right: 2%;
+}
+
+.sell-form__input-group {
+  border-bottom: solid 1px grey;
+}
+.sell-form__select {
+  background: transparent;
+  color: lightgrey;
+  min-width: 15vw;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+.sell-form__select option {
+  background: #111827;
+}
+.sell-form__add-btn {
+  margin-top: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.sell-form__add-btn:hover {
+  color: grey;
+}
+.sell-form__line-price {
+  font-size: 1.2rem;
+  padding-bottom: 15px;
+  align-self: center;
+}
+.sell-form__total-price {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
