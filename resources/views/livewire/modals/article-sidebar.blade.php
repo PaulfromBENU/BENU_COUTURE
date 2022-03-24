@@ -85,7 +85,7 @@
                 @endif
 
                 <h2 class="article-sidebar__content__title">
-                    {{ $article->name }}
+                    {{ strtoupper($article->name) }}
                     @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
                         &nbsp;- {{ $article->available_shops()->where('filter_key', '<>', "benu-esch")->first()->name }}
                     @endif
@@ -174,7 +174,9 @@
                     {{ __('sidebar.care') }}
                 </h3>
 
-                <h5 class="article-sidebar__content__compo__title-expl">{!! __('sidebar.care-title') !!}</h5>
+                <h5 class="article-sidebar__content__compo__title-expl">
+                    {!! __('sidebar.care-title') !!} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-care')]) }}">{!! __('sidebar.care-title-link') !!}</a>
+                </h5>
 
                 <ul class="article-sidebar__content__care__list">
                     @foreach($article->care_recommendations as $recommendation)
