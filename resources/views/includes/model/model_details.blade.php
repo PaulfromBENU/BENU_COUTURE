@@ -85,15 +85,18 @@
 			@php $link_query = "origin_link_".app()->getLocale(); @endphp
 			<a href="{{ $model->$link_query }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
 		</div>
-		<div class="flex model-pres__desc__seemore">
-			<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
-				{{ __('models.model-link-articles') }} @svg('model_arrow_down')
-			</a>
-			
-				<a class="flex">
-					{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+
+		@if($model->product_type != 3)
+			<div class="flex model-pres__desc__seemore">
+				<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
+					{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 				</a>
-			
-		</div>
+				
+					<a class="flex">
+						{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+					</a>
+				
+			</div>
+		@endif
 	</div>
 </section>

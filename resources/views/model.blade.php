@@ -32,9 +32,11 @@
 
 @section('main-content')
 	@include('includes.model.model_details')
-	@include('includes.model.model_articles')
-	@if($sold_articles->count() > 0)
-		@include('includes.model.model_sold')
+	@if($model->product_type != "3")
+		@include('includes.model.model_articles')
+		@if($sold_articles->count() > 0)
+			@include('includes.model.model_sold')
+		@endif
 	@endif
 	@include('includes.model.model_request')
 @endsection
