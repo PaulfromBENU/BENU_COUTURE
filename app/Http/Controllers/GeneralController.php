@@ -26,6 +26,11 @@ class GeneralController extends Controller
         return view('welcome', ['latest_models' => $latest_models]);
     }
 
+    public function landing()
+    {
+        return view('landing');
+    }
+
     public function showFullStory()
     {
         return view('full-story');

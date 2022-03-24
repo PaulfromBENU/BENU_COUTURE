@@ -8,11 +8,62 @@
 --benu_couture_couleur_principale: #D41C1B;
 }
 
+@font-face {
+	font-family: "Barlow Condensed";
+	src:  url(../landing/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Barlow";
+	src:  url(../landing.fonts/Barlow/Barlow-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Barlow Semi Condensed";
+	src:  url(../landing/fonts/Barlow_Condensed/BarlowCondensed-SemiBold.ttf);
+}
+
 body {
 	margin: 0px;
 	box-sizing: border-box;
+	/*font-family: "Barlow Condensed", Sans-serif;*/
 	color: rgb(60, 60, 60);
-	font-family: 'Barlow', sans-serif;
+}
+
+.btn-large {
+	text-transform: uppercase;
+	width: 333px;
+	padding: 10px 25px 10px 25px;
+	color: var(--benu_reuse);
+	text-align: center;
+	font: normal normal 600 42px/50px "Barlow Condensed";
+	letter-spacing: 0px;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 3px;
+	text-decoration: none;
+	margin: 10px;
+	display: inline-block;
+}
+
+.btn-yellow {
+	color: var(--benu_reuse);
+	border-color: var(--benu_reuse);
+}
+
+.btn-yellow:hover {
+	background: var(--benu_reuse);
+	color:  white;
+}
+
+.btn-green {
+	color: var(--benu_village);
+	border-color: var(--benu_village);
+}
+
+.btn-green:hover {
+	background: var(--benu_village);
+	color: white;
 }
 
 input[type=email] {
@@ -79,7 +130,7 @@ input[type=submit]:hover {
 	margin-bottom: 5px;
 	color: var(--benu_couture_couleur_principale);
 	text-align: center;
-	font: normal normal 600 72px/86px "Barlow Condensed";
+	font: normal normal 400 72px/86px "Barlow Semi Condensed";
 	letter-spacing: 0px;
 }
 
@@ -106,8 +157,6 @@ input[type=submit]:hover {
 	letter-spacing: 0.16px;
 	color: #2E141480;
 	text-align: center;
-	margin-top: 16px;
-	margin-bottom: 16px;
 }
 
 .central_textbox__teaser {
@@ -147,7 +196,7 @@ input[type=submit]:hover {
 .contact_form_container h2 {
 	color: var(--benu_couture_couleur_texte);
 	text-align: center;
-	font: normal normal 800 44px/53px "Barlow Condensed";
+	font: normal normal 800 44px/53px "Barlow Semi Condensed";
 	letter-spacing: 0px;
 	margin: 0;
 	margin-bottom: 30px;
@@ -169,7 +218,8 @@ input[type=submit]:hover {
 	border-radius: 5px;
 	cursor: pointer;
 	text-decoration: none;
-	font: normal normal 500 22px/23px "Barlow Condensed";
+	font: normal normal 400 22px/23px "Barlow Condensed";
+	transition:  all 0.2s;
 }
 
 .contact-link a:hover {
@@ -185,7 +235,7 @@ footer {
 
 .footer__copyright {
 	text-align: center;
-	font: normal normal 500 18px/33px "Barlow";
+	font: normal normal 400 18px/33px "Barlow";
 	letter-spacing: 0px;
 	color: #FFFFFF;
 	position: absolute;
@@ -211,7 +261,7 @@ footer {
 	color:  white;
 	padding: 5px 25px 5px 25px;
 	text-align: center;
-	font: normal normal 600 44px/53px "Barlow Condensed";
+	font: normal normal 600 44px/53px "Barlow Semi Condensed";
 	letter-spacing: 0px;
 	border-radius: 10px;
 }
@@ -227,7 +277,7 @@ footer {
 .footer__links__icon {
 	background: rgb(246, 246, 246);
 	width: 95px;
-	padding: 12px 0px 12px 0px;
+	padding: 18px 0px 18px 0px;
 	margin: 10px;
 	margin-top:  85px;
 	font-size: 2.8rem;
@@ -313,7 +363,7 @@ header {
 
 .header_socialmedia {
 	position: absolute;
-	top: 75px;
+	top: 82px;
 	left: 80vw;
 	height: 25px;
 	color: white;
@@ -337,8 +387,12 @@ header {
 
 .pattern_bg {
 	height: 638px;
-	background: transparent url(../images/pattern_solo_benu_couture_OK.svg) 0% 0% repeat padding-box;
+	background: transparent url(../assets/pictures/pattern_solo_benu_couture_OK.svg) 0% 0% repeat padding-box;
 	background-size: 15%;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .universe {
@@ -349,9 +403,8 @@ header {
 .universe h2 {
 	color: var(--benu_couture_couleur_texte);
 	text-align: center;
-	font: normal normal 500 44px/53px "Barlow Condensed";
+	font: normal normal bold 44px/53px "Barlow Condensed";
 	letter-spacing: 0px;
-	margin-top: 36px;
 }
 
 .universe__links {

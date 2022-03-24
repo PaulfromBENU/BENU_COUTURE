@@ -290,9 +290,21 @@ input[type=checkbox]:focus {
   margin: 10px;
   display: inline-block;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn-large {
+    width: 180px;
+    font: normal normal 500 21px/25px "Barlow Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .btn-large {
+    width: 180px;
+    font: normal normal 500 21px/25px "Barlow Condensed";
+  }
+}
 
 .btn-yellow {
-  color: var #F9941D;
+  color: #F9941D;
   border-color: #F9941D;
 }
 .btn-yellow:hover {
@@ -3720,4 +3732,674 @@ input[type=checkbox]:focus {
   margin-top: 15px;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+:root {
+  /* Colors: */
+  --unnamed-color-d0d0d0: #D0D0D0;
+  --benu_reuse: #F9941D;
+  --benu_village: #27955B;
+  --benu_couture_couleur_texte: #2E1414;
+  --benu_couture_couleur_principale: #D41C1B;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("/landing/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("/landing/fonts/Barlow/Barlow-Regular.ttf");
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("/landing/fonts/Barlow_Condensed/BarlowCondensed-SemiBold.ttf");
+}
+.landing-body {
+  margin: 0px;
+  box-sizing: border-box;
+  /*font-family: "Barlow Condensed", Sans-serif;*/
+  color: #3c3c3c;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 767px) {
+  .landing-body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+input[type=email] {
+  width: 300px;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+input[type=submit] {
+  border: none;
+  height: 40px;
+  background: white;
+  color: #D41C1B;
+  padding: 5px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+input[type=submit]:hover {
+  background: #D41C1B;
+  color: white;
+}
+
+::-moz-placeholder {
+  color: var(--unnamed-color-d0d0d0);
+}
+
+:-ms-input-placeholder {
+  color: var(--unnamed-color-d0d0d0);
+}
+
+::placeholder {
+  color: var(--unnamed-color-d0d0d0);
+}
+
+.central_col {
+  width: 56vw;
+  margin-left: 22vw;
+  position: relative;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .central_col {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}
+@media (max-width: 767px) {
+  .central_col {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}
+
+.central_textbox {
+  background: white;
+  padding: 20px 0px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 66px #00000029;
+  text-align: justify;
+  position: relative;
+  top: -140px;
+}
+.central_textbox h1 {
+  text-transform: uppercase;
+  color: #D41C1B;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  color: #D41C1B;
+  text-align: center;
+  font: normal normal 400 72px/86px "Barlow Semi Condensed";
+  letter-spacing: 0px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .central_textbox h1 {
+    font: normal normal 400 36px/43px "Barlow Semi Condensed";
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .central_textbox h1 {
+    font: normal normal 400 36px/43px "Barlow Semi Condensed";
+    margin-top: 20px;
+  }
+}
+.central_textbox__desc {
+  font: normal normal 400 18px/33px "Barlow";
+  letter-spacing: 0px;
+  /*padding: 20px 70px;*/
+  width: 75%;
+  margin: auto;
+  margin-bottom: 65px;
+  color: var(--benu_couture_couleur_texte);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .central_textbox__desc {
+    font: normal normal 400 12px/24px "Barlow";
+    width: 80%;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .central_textbox__desc {
+    font: normal normal 400 12px/24px "Barlow";
+    width: 80%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+.central_textbox__sub {
+  font: normal normal 400 16px/28px "Barlow Condensed";
+  letter-spacing: 0.16px;
+  color: #2E141480;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .central_textbox__sub {
+    font: normal normal 400 12px/22px "Barlow Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .central_textbox__sub {
+    font: normal normal 400 12px/22px "Barlow Condensed";
+  }
+}
+
+.central_textbox__teaser {
+  position: absolute;
+  top: -22px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .central_textbox__teaser {
+    top: -18px;
+  }
+}
+@media (max-width: 767px) {
+  .central_textbox__teaser {
+    top: -18px;
+  }
+}
+
+.central_textbox__teaser p {
+  background: #323232;
+  color: white;
+  text-align: center;
+  padding: 5px 40px 5px 40px;
+  font: normal normal 300 28px/34px "Barlow Condensed";
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin: 0;
+  border-radius: 10px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .central_textbox__teaser p {
+    font: normal normal 200 20px/26px "Barlow Condensed";
+    border-radius: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .central_textbox__teaser p {
+    font: normal normal 200 20px/26px "Barlow Condensed";
+    border-radius: 20px;
+  }
+}
+
+.contact_form {
+  padding: 10px;
+  background: #D41C1B;
+  border-radius: 10px;
+}
+
+.contact_form_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+  position: relative;
+  top: -30px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact_form_container {
+    top: -70px;
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .contact_form_container {
+    top: -70px;
+    padding-bottom: 0px;
+  }
+}
+
+.contact_form_container h2 {
+  color: var(--benu_couture_couleur_texte);
+  text-align: center;
+  font: normal normal 800 44px/53px "Barlow Semi Condensed";
+  letter-spacing: 0px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact_form_container h2 {
+    font: normal normal 800 22px/26px "Barlow Semi Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .contact_form_container h2 {
+    font: normal normal 800 22px/26px "Barlow Semi Condensed";
+  }
+}
+
+/*.contact-link {
+	padding: 10px;
+	background: $primary-color;
+	border-radius: 10px;
+}*/
+.contact-link a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.landing-footer {
+  background: #D41C1B;
+  height: 233px;
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer {
+    height: 150px;
+  }
+}
+.landing-footer__copyright {
+  text-align: center;
+  font: normal normal 400 18px/33px "Barlow";
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer__copyright {
+    font: normal normal 400 12px/24px "Barlow";
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer__copyright {
+    font: normal normal 400 12px/24px "Barlow";
+  }
+}
+.landing-footer__links {
+  position: absolute;
+  width: 600px;
+  margin-left: calc(50vw - 300px);
+  margin-top: -125px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 66px #00000029;
+  min-height: 240px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer__links {
+    width: 100vw;
+    margin-left: 0;
+    min-height: 170px;
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer__links {
+    width: 100vw;
+    margin-left: 0;
+    min-height: 170px;
+  }
+}
+.landing-footer__links__header {
+  width: 350px;
+  background: #D41C1B;
+  color: white;
+  padding: 5px 25px 5px 25px;
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Semi Condensed";
+  letter-spacing: 0px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer__links__header {
+    font: normal normal 600 22px/25px "Barlow Semi Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer__links__header {
+    font: normal normal 600 22px/25px "Barlow Semi Condensed";
+  }
+}
+.landing-footer__links__header-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer__links__header-container {
+    left: 25%;
+    width: 50%;
+    top: -17px;
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer__links__header-container {
+    left: 25%;
+    width: 50%;
+    top: -17px;
+  }
+}
+.landing-footer__links__icon {
+  background: #f6f6f6;
+  width: 95px;
+  padding: 18px 0px 18px 0px;
+  margin: 10px;
+  margin-top: 85px;
+  font-size: 2.8rem;
+  font-family: "Barlow Condensed";
+  text-align: center;
+  border-radius: 10px;
+  color: #D41C1B;
+  transition: all 0.2s;
+}
+.landing-footer__links__icon:hover {
+  color: #FFFFFF;
+  background: #D41C1B;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer__links__icon {
+    margin-top: 55px;
+    height: 70px;
+    padding-top: 13px;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer__links__icon {
+    margin-top: 55px;
+    height: 70px;
+    padding-top: 13px;
+    font-size: 1.8rem;
+  }
+}
+.landing-footer__links__icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 78px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-footer__links__icons {
+    padding: 0px 40px;
+  }
+}
+@media (max-width: 767px) {
+  .landing-footer__links__icons {
+    padding: 0px 40px;
+  }
+}
+
+.landing-header {
+  width: 100%;
+  height: 704px;
+  background: #D41C1B 0% 0% no-repeat padding-box;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-header {
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .landing-header {
+    height: 450px;
+  }
+}
+
+.header-bckgnd__bird {
+  position: absolute;
+  top: 100px;
+  left: calc(50vw - 220px);
+  transition: top 2.5s ease-in-out;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-bckgnd__bird {
+    top: 80px;
+    left: calc(50vw - 110px);
+  }
+}
+@media (max-width: 767px) {
+  .header-bckgnd__bird {
+    top: 80px;
+    left: calc(50vw - 110px);
+  }
+}
+.header-bckgnd__bird__img {
+  height: 280px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-bckgnd__bird__img {
+    width: 220px;
+  }
+}
+@media (max-width: 767px) {
+  .header-bckgnd__bird__img {
+    width: 220px;
+  }
+}
+
+.header-bckgnd {
+  height: 100%;
+}
+
+.header-bckgnd__font {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header-bckgnd__moving {
+  width: 100vw;
+  position: absolute;
+  height: 100%;
+  color: white;
+}
+
+.header-bckgnd__moving--1 {
+  left: 0px;
+  -webkit-animation: clouds1 15s linear infinite;
+          animation: clouds1 15s linear infinite;
+}
+
+@-webkit-keyframes clouds1 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes clouds1 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+.header-bckgnd__moving--2 {
+  left: 100vw;
+  -webkit-animation: clouds2 15s linear infinite;
+          animation: clouds2 15s linear infinite;
+}
+
+@-webkit-keyframes clouds2 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes clouds2 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.header_logo {
+  position: absolute;
+  top: 0px;
+  left: 10vw;
+  color: white;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header_logo {
+    position: absolute;
+    top: 0px;
+    left: calc(50vw - 17px);
+    color: white;
+  }
+}
+@media (max-width: 767px) {
+  .header_logo {
+    position: absolute;
+    top: 0px;
+    left: calc(50vw - 17px);
+    color: white;
+  }
+}
+.header_logo__img {
+  width: 54px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header_logo__img {
+    width: 34px;
+  }
+}
+@media (max-width: 767px) {
+  .header_logo__img {
+    width: 34px;
+  }
+}
+
+.header_socialmedia {
+  position: absolute;
+  top: 82px;
+  left: 80vw;
+  height: 25px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header_socialmedia {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header_socialmedia {
+    display: none;
+  }
+}
+
+.header_socialmedia p {
+  margin: 5px 12px;
+}
+
+.header_socialmedia a {
+  color: white;
+}
+
+.header_socialmedia a:hover {
+  color: white;
+}
+
+.pattern_bg {
+  background: transparent url("/landing/pictures/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
+  background-size: 150px;
+  z-index: -1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.universe {
+  margin-top: 60px;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .universe {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .universe {
+    margin-top: 0px;
+  }
+}
+.universe h2 {
+  color: var(--benu_couture_couleur_texte);
+  text-align: center;
+  font: normal normal bold 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .universe h2 {
+    font: normal normal 800 22px/26px "Barlow Semi Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .universe h2 {
+    font: normal normal 800 22px/26px "Barlow Semi Condensed";
+  }
+}
+.universe__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .universe__links {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .universe__links {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+.universe__links a {
+  transition: all 0.2s;
 }
