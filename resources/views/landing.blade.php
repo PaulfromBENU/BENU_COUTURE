@@ -41,7 +41,7 @@
                 <a href="https://www.instagram.com/benu_village/" target="_blank"><i class="fab fa-instagram"></i></a>
             </p>
             <p>
-                <a href="https://benu.lu/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </p>
         </div>
     </header>
