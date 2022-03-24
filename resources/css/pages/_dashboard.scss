@@ -92,18 +92,31 @@
 
 .dashboard-wishlist {
 	&__title {
-		text-align: left;
+		width: 80%;
+		margin: auto;
+		border-radius: 10px;
+		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
+		color: $white;
+		padding-top: 9px;
+		padding-bottom: 9px;
 		margin-bottom: 50px;
+		// text-align: left;
+		// font: normal normal 700 44px/53px 'Barlow Condensed';
+		// letter-spacing: 0px;
+		// margin-bottom: 50px;
 		&--couture {
-			color: $benu_couture;
+			background: $benu_couture;
+			// color: $benu_couture;
 		}
 		&--design {
-			color: $benu_design;
+			// color: $benu_design;
+			background: $benu_design;
 		}
 		&--lasa {
-			color: $benu_lasa;
+			background: $benu_lasa;
+			// color: $benu_lasa;
 		}
 	}
 	.article-overview, .sold-overview {

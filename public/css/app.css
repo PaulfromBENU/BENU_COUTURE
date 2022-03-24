@@ -726,6 +726,154 @@ input[type=checkbox]:focus {
   transform: scale(1);
 }
 
+.article-overview-wishlist {
+  width: 49%;
+  min-width: 350px;
+  height: 270px;
+  background: white;
+  box-shadow: 0px 6px 15px #00000029;
+  border-radius: 9px;
+  padding: 16px 18px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 0;
+  cursor: pointer;
+}
+.article-overview-wishlist:hover .article-overview-wishlist__cap {
+  width: 15%;
+}
+.article-overview-wishlist__cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 9%;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+}
+.article-overview-wishlist__cap--red {
+  background: #D41C1B;
+}
+.article-overview-wishlist__cap--grey {
+  background: #D0D0D0;
+}
+.article-overview-wishlist__img-container {
+  width: 38%;
+  height: 238px;
+  background: white;
+  overflow: hidden;
+  border-radius: 9px;
+  position: relative;
+  z-index: 1;
+  margin-right: 22px;
+}
+.article-overview-wishlist__img-container img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article-overview-wishlist__img-container__partner-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: white;
+  z-index: 1;
+  border-radius: 10px;
+  height: 51px;
+  width: 45px;
+  transition: width 0.3s;
+  overflow: hidden;
+  font: normal normal 500 14px/20px "Barlow Condensed";
+}
+.article-overview-wishlist__img-container__partner-icon__content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  padding: 5px;
+}
+.article-overview-wishlist__img-container__partner-icon:hover {
+  width: 150px;
+}
+.article-overview-wishlist__img-container__partner-icon svg {
+  margin: auto;
+  width: 35px;
+  transform: scale(0.95);
+}
+.article-overview-wishlist__footer {
+  width: 62%;
+}
+.article-overview-wishlist__footer .color-circle {
+  margin-top: 12px;
+}
+.article-overview-wishlist__footer__size {
+  height: 20px;
+  background: #D41C1B;
+  border-radius: 12px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  font: normal normal 600 16px/19px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.article-overview-wishlist__footer__category {
+  margin-top: 20px;
+  text-align: left;
+  font: normal normal 500 14px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  opacity: 0.5;
+}
+.article-overview-wishlist__footer__name {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 600 26px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #D41C1B;
+}
+.article-overview-wishlist__footer__price {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 500 42px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.article-overview-wishlist__footer__heart {
+  position: relative;
+  color: #D41C1B;
+}
+.article-overview-wishlist__footer__heart__icon {
+  position: absolute;
+  right: 0px;
+  top: -2px;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+.article-overview-wishlist__footer__heart__icon--hovered {
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+.article-overview-wishlist__footer__heart__icon--hovered.--active {
+  transform: scale(1.4);
+}
+.article-overview-wishlist__footer__heart__icon--active {
+  transform: scale(1.6);
+}
+.article-overview-wishlist__footer__heart:hover .article-overview-wishlist__footer__heart__icon--hovered {
+  transform: scale(1.4);
+}
+.article-overview-wishlist__footer__btn {
+  margin: 0;
+  margin-top: 30px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 11px 0px;
+}
+
 .sold-overview {
   width: 23.8%;
   min-width: 280px;
@@ -828,6 +976,154 @@ input[type=checkbox]:focus {
 }
 .sold-overview__footer__heart:hover .sold-overview__footer__heart__icon--hovered {
   transform: scale(1);
+}
+
+.sold-overview-wishlist {
+  width: 49%;
+  min-width: 350px;
+  height: 270px;
+  background: white;
+  box-shadow: 0px 6px 15px #00000029;
+  border-radius: 9px;
+  padding: 16px 18px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 0;
+  cursor: pointer;
+}
+.sold-overview-wishlist:hover .sold-overview-wishlist__cap {
+  width: 15%;
+}
+.sold-overview-wishlist__cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 9%;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+}
+.sold-overview-wishlist__cap--red {
+  background: #D41C1B;
+}
+.sold-overview-wishlist__cap--grey {
+  background: #867576;
+}
+.sold-overview-wishlist__img-container {
+  width: 38%;
+  height: 238px;
+  background: white;
+  overflow: hidden;
+  border-radius: 9px;
+  position: relative;
+  z-index: 1;
+  margin-right: 22px;
+}
+.sold-overview-wishlist__img-container img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sold-overview-wishlist__img-container__partner-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: white;
+  z-index: 1;
+  border-radius: 10px;
+  height: 51px;
+  width: 45px;
+  transition: width 0.3s;
+  overflow: hidden;
+  font: normal normal 500 14px/20px "Barlow Condensed";
+}
+.sold-overview-wishlist__img-container__partner-icon__content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  padding: 5px;
+}
+.sold-overview-wishlist__img-container__partner-icon:hover {
+  width: 150px;
+}
+.sold-overview-wishlist__img-container__partner-icon svg {
+  margin: auto;
+  width: 35px;
+  transform: scale(0.95);
+}
+.sold-overview-wishlist__footer {
+  width: 62%;
+}
+.sold-overview-wishlist__footer .color-circle {
+  margin-top: 12px;
+}
+.sold-overview-wishlist__footer__size {
+  height: 20px;
+  background: #867576;
+  border-radius: 12px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  font: normal normal 600 16px/19px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.sold-overview-wishlist__footer__category {
+  margin-top: 20px;
+  text-align: left;
+  font: normal normal 500 14px/28px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  opacity: 0.5;
+}
+.sold-overview-wishlist__footer__name {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 600 26px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+}
+.sold-overview-wishlist__footer__price {
+  margin-top: 4px;
+  text-align: left;
+  font: normal normal 500 42px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.sold-overview-wishlist__footer__heart {
+  position: relative;
+  color: #D41C1B;
+}
+.sold-overview-wishlist__footer__heart__icon {
+  position: absolute;
+  right: 0px;
+  top: -2px;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+.sold-overview-wishlist__footer__heart__icon--hovered {
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+.sold-overview-wishlist__footer__heart__icon--hovered.--active {
+  transform: scale(1.4);
+}
+.sold-overview-wishlist__footer__heart__icon--active {
+  transform: scale(1.6);
+}
+.sold-overview-wishlist__footer__heart:hover .sold-overview-wishlist__footer__heart__icon--hovered {
+  transform: scale(1.4);
+}
+.sold-overview-wishlist__footer__btn {
+  margin: 0;
+  margin-top: 30px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 11px 0px;
 }
 
 .breadcrumbs {
@@ -3687,19 +3983,25 @@ input[type=checkbox]:focus {
 }
 
 .dashboard-wishlist__title {
-  text-align: left;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
+  color: #FFFFFF;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-bottom: 50px;
 }
 .dashboard-wishlist__title--couture {
-  color: #D41C1B;
+  background: #D41C1B;
 }
 .dashboard-wishlist__title--design {
-  color: #64422C;
+  background: #64422C;
 }
 .dashboard-wishlist__title--lasa {
-  color: #0079A7;
+  background: #0079A7;
 }
 .dashboard-wishlist .article-overview, .dashboard-wishlist .sold-overview {
   width: 30%;
