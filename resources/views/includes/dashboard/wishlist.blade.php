@@ -1,4 +1,4 @@
-<div class="dashboard-wishlist">
+<div class="dashboard-wishlist w-full">
 	<h2 class="dashboard-wishlist__title dashboard-wishlist__title--couture">BENU COUTURE</h2>
 	<div class="flex justify-between flex-wrap mb-10 w-4/5 m-auto">
 		@foreach($couture_wishlisted_vouchers as $voucher)
