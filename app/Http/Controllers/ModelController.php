@@ -72,7 +72,7 @@ class ModelController extends Controller
         //Select pictures to display next to the creation description
         $model_pictures = collect([]);
         foreach ($creation_articles as $article) {
-            $model_pictures->push($article->photos()->first()->file_name);
+            $model_pictures->push($article->photos()->where('is_front', '1')->first()->file_name);
         }
 
         // If no article available, display sold article pictures
