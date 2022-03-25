@@ -14,6 +14,10 @@ class Photo extends Model
 
     protected $guarded = ['id'];
 
+    // protected $casts = [
+    //     'photos' => 'array',
+    // ];
+
     public function articles()
     {
         return $this->belongsToMany(Article::class)->withTimestamps();

@@ -15,7 +15,7 @@ class Selling extends Page
 {
     use ArticleAnalyzer;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
     protected static string $view = 'filament.pages.selling';
 
@@ -39,12 +39,6 @@ class Selling extends Page
     public $item_price;
     public $show_modal;
 
-    // protected $rules = [
-    //     'creation-0' => 'string|required',
-    //     'variation-0' => 'required|string',
-    //     'shop-0' => 'required|string',
-    //     'number-0' => 'required|integer',
-    // ];
 
     public function mount()
     {

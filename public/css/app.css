@@ -4042,6 +4042,75 @@ input[type=checkbox]:focus {
   font-weight: 600;
 }
 
+.new-photo-form h3 {
+  margin-top: 15px;
+  padding-bottom: 7px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.new-photo-form__img-gallery {
+  height: 30vh;
+  min-height: 200px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.new-photo-form__img-gallery__img-container {
+  height: 100%;
+  margin: 5px;
+}
+.new-photo-form__img-gallery__img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.new-photo-form__variations-gallery {
+  height: 30vh;
+  min-height: 200px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.new-photo-form__variations-gallery__img-container {
+  height: 100%;
+  margin: 5px;
+}
+.new-photo-form__variations-gallery__img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 76%;
+  border-radius: 5px;
+}
+.new-photo-form__variations-gallery__img-container figcaption {
+  height: 24%;
+  min-height: 42px;
+  text-align: center;
+}
+.new-photo-form__file-input {
+  margin-bottom: 20px;
+}
+.new-photo-form__btn-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.new-photo-form__btn-container button {
+  background: transparent;
+  padding: 5px 15px;
+  border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+  transition: all 0.2s;
+  color: lightgrey;
+  border-radius: 5px;
+}
+.new-photo-form__btn-container button:hover {
+  background: rgb(234 179 8/var(--tw-bg-opacity));
+  color: #FFFFFF;
+}
+
 :root {
   /* Colors: */
   --unnamed-color-d0d0d0: #D0D0D0;

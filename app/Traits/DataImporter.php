@@ -28,7 +28,12 @@ use Illuminate\Support\Facades\DB;
 
 use Intervention\Image\Facades\Image;
 
+use App\Traits\VariationPhotoHandler;
+
 trait DataImporter {
+
+    use VariationPhotoHandler;
+
     public function importDataFromSophie()
     {
         // Importation of non creation-specific data
@@ -605,7 +610,8 @@ trait DataImporter {
                                 $article_pic_count ++;
 
                                 $new_photo = new Photo();
-                                $new_photo->file_name = 'processed/'.$creation->name.'/'.$new_article->name.'-'.rand(100, 999).''.$article_pic_count.'.png';
+                                $new_photo_rand_id = rand(100, 999);
+                                $new_photo->file_name = 'processed/'.$creation->name.'/'.$new_article->name.'-'.$new_photo_rand_id.''.$article_pic_count.'.png';
                                 $new_photo->use_for_model = 1;
                                 if (strpos($picture->getFilename(), "front") !== false) {
                                     $new_photo->is_front = '1';
@@ -614,29 +620,30 @@ trait DataImporter {
                                 $new_photo->author = "BENU Village Esch Asbl";
 
                                 $img = Image::make($picture);
-                                if ($img->width() > $img->height()) {
-                                    $img->rotate(-90);
-                                }
-                                $img->resize(560, 747, function ($constraint) {
-                                    $constraint->aspectRatio();
-                                    $constraint->upsize();
-                                });
+                                $img_saved = $this->savePhotoWithWatermark($img, $creation->name, $new_article->name, $article_pic_count, $new_photo_rand_id);
+                                // if ($img->width() > $img->height()) {
+                                //     $img->rotate(-90);
+                                // }
+                                // $img->resize(560, 747, function ($constraint) {
+                                //     $constraint->aspectRatio();
+                                //     $constraint->upsize();
+                                // });
 
-                                // create a new Image instance for inserting a watermark
-                                $watermark = Image::make(public_path('images/pictures/logo_benu_couture_watermark.png'));
-                                $watermark->resize(56, 75, function ($constraint) {
-                                    $constraint->aspectRatio();
-                                    $constraint->upsize();
-                                });
-                                $img->insert($watermark, 'bottom-right', 20, 20);
+                                // // create a new Image instance for inserting a watermark
+                                // $watermark = Image::make(public_path('images/pictures/logo_benu_couture_watermark.png'));
+                                // $watermark->resize(56, 75, function ($constraint) {
+                                //     $constraint->aspectRatio();
+                                //     $constraint->upsize();
+                                // });
+                                // $img->insert($watermark, 'bottom-right', 20, 20);
 
-                                $save_path = public_path('images/pictures/articles/processed/'.$creation->name);
+                                // $save_path = public_path('images/pictures/articles/processed/'.$creation->name);
 
-                                if(!File::isDirectory($save_path)){
-                                    File::makeDirectory($save_path);//, 0755, true, true
-                                }
+                                // if(!File::isDirectory($save_path)){
+                                //     File::makeDirectory($save_path);//, 0755, true, true
+                                // }
 
-                                if ($new_photo->save() && $img->save(public_path('images/pictures/articles/'.$new_photo->file_name))) {
+                                if ($new_photo->save() && $img_saved) {
 
                                     $success_number ++;
                                     echo "<span style='color: green; padding-left: 10px;'>New picture added for article ".$new_article->name." of model ".strtoupper($creation->name).", from file ".$picture->getFilename()."</span><br/>";
