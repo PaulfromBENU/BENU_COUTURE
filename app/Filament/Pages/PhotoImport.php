@@ -208,7 +208,7 @@ class PhotoImport extends Page
                     $img = Image::make($photo);
                     if($this->savePhotoWithWatermark($img, $creation_name, $article_name, $photo_counter, $random_counter)) {
                         $new_photo = new Photo();
-                        $new_photo->file_name = 'processed/'.$creation_name.'/'.$article_name.'-'.$random_counter.'-'.$photo_counter.'.png';
+                        $new_photo->file_name = 'processed/'.$creation_name.'/'.$article_name.'-'.$random_counter.''.$photo_counter.'.png';
                         $new_photo->use_for_model = 1;
                         if (strpos($photo->getClientOriginalName(), 'front') !== false) {
                             $new_photo->is_front = 1;

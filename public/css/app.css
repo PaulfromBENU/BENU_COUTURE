@@ -4111,6 +4111,69 @@ input[type=checkbox]:focus {
   color: #FFFFFF;
 }
 
+.article-check h3 {
+  font-size: 1.4rem;
+  padding-bottom: 4px;
+  border-bottom: lightgrey solid 1px;
+  margin-bottom: 5px;
+}
+.article-check h4 {
+  font-size: 1.2rem;
+  padding-bottom: 4px;
+  padding-top: 25px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  color: grey;
+}
+.article-check__img-container {
+  height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+.article-check__img-container img {
+  -o-object-fit: center;
+     object-fit: center;
+  height: 260px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.article-check__img-container button {
+  transition: color 0.2s;
+}
+.article-check__img-container button:hover {
+  color: #D41C1B;
+}
+.article-check__form {
+  padding-bottom: 30px;
+  padding-left: 15px;
+  width: 100%;
+}
+.article-check__form__select-group {
+  margin: 5px 0px;
+  width: 32%;
+}
+.article-check__form__singularity {
+  width: 48.8%;
+  margin-right: 1%;
+}
+.article-check__form__singularity textarea {
+  width: 100%;
+  margin-top: 3px;
+  border-radius: 5px;
+  background: transparent;
+}
+.article-check input[type=text] {
+  border-radius: 3px;
+  background: transparent;
+  margin-bottom: 10px;
+}
+.article-check input[type=checkbox] {
+  color: #f49600;
+}
+
 :root {
   /* Colors: */
   --unnamed-color-d0d0d0: #D0D0D0;

@@ -13,8 +13,8 @@ use Filament\Tables;
 
 class ContactMessageResource extends Resource
 {
-    protected static ?string $label = 'message utilisateur';
-    protected static ?string $pluralLabel = 'messages utilisateurs';
+    protected static ?string $label = 'user message';
+    protected static ?string $pluralLabel = 'user messages';
 
     protected static ?string $model = ContactMessage::class;
 
@@ -53,6 +53,7 @@ class ContactMessageResource extends Resource
 
     public static function table(Table $table): Table
     {
+        self::$pluralLabel = "User messages (".ContactMessage::where('is_read', '0')->count().")";
         return $table
             ->columns([
                 Tables\Columns\BooleanColumn::make('is_read'),

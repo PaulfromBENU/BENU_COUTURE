@@ -34,9 +34,14 @@ class Creation extends Model
     //     return $this->hasMany('App\Models\CreationAccessory');
     // }
 
-    public function articles()
+    public function all_articles()
     {
         return $this->hasMany('App\Models\Article');
+    }
+
+    public function articles()
+    {
+        return $this->hasMany('App\Models\Article')->where('checked', '1');
     }
 
     public function keywords()

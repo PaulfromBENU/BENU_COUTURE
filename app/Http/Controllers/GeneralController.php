@@ -67,7 +67,8 @@ class GeneralController extends Controller
     {
         if(auth::check() && auth::user()->role == 'admin') {
             set_time_limit(3600);
-            echo "*** Importation started...<br/>";
+            // Article::query()->update(['checked' => '1']);
+            // echo "*** Importation started...<br/>";
             // $this->importDataFromSophie();
             // $this->importCreationsFromLou();
             // $this->importCreationsFromSabine();

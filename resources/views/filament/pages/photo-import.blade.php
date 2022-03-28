@@ -52,7 +52,7 @@
 					@foreach($all_sizes as $id => $size_value)
 						<option value="{{ $id }}" wire:key="{{ $id }}">{{ $size_value }}</option>
 					@endforeach
-				</select> 
+				</select>
 			</div>
 			<div>
 				<label for="color-0">Select main color</label><br/>

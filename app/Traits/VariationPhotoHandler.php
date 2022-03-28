@@ -25,13 +25,13 @@ trait VariationPhotoHandler {
             $constraint->upsize();
         });
 
-        // create a new Image instance for inserting a watermark
-        $watermark = Image::make(public_path('images/pictures/logo_benu_couture_watermark.png'));
-        $watermark->resize(56, 75, function ($constraint) {
-            $constraint->aspectRatio();
-            $constraint->upsize();
-        });
-        $img->insert($watermark, 'bottom-right', 20, 20);
+        // create a new Image instance for inserting a watermark - !! WATERMARK REMOVED FOR THE MOMENT
+        // $watermark = Image::make(public_path('images/pictures/logo_benu_couture_watermark.png'));
+        // $watermark->resize(56, 75, function ($constraint) {
+        //     $constraint->aspectRatio();
+        //     $constraint->upsize();
+        // });
+        // $img->insert($watermark, 'bottom-right', 20, 20);
 
         $save_path = public_path('images/pictures/articles/processed/'.$creation_name);
 

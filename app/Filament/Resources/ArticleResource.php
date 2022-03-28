@@ -44,9 +44,9 @@ class ArticleResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('type')
+                Forms\Components\Toggle::make('checked')
                     ->required()
-                    ->maxLength(255),
+                    ->default('0'),
                 Select::make('creation_id')
                         ->label('Creation')
                         ->options(Creation::all()->pluck('name', 'id'))
@@ -97,6 +97,7 @@ class ArticleResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
+                Tables\Columns\BooleanColumn::make('checked')->sortable()->label('Visible'),
                 Tables\Columns\TextColumn::make('type'),
                 Tables\Columns\TextColumn::make('creation.name')->label('Creation')->sortable(),
                 Tables\Columns\TextColumn::make('size.value')->label('Size')->sortable(),
@@ -124,9 +125,9 @@ class ArticleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\ShopsRelationManager::class,
-            RelationManagers\CompositionsRelationManager::class,
-            RelationManagers\CareRecommendationsRelationManager::class,
+            // RelationManagers\ShopsRelationManager::class,
+            // RelationManagers\CompositionsRelationManager::class,
+            // RelationManagers\CareRecommendationsRelationManager::class,
         ];
     }
 
