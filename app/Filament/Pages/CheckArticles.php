@@ -75,39 +75,42 @@ class CheckArticles extends Page
     {
         $this->unchecked_articles = Article::where('checked', '0')->orderBy('created_at', 'desc')->get();
         self::$navigationLabel = "Vérification Articles (".$this->unchecked_articles->count().")";
-        foreach ($this->unchecked_articles as $article) {
-            $this->size_ids[$article->id] = $article->size->id;
-            $this->color_ids[$article->id] = $article->color->id;
-            $this->stocks[$article->id] = [];
 
-            foreach ($this->all_shops as $shop_id => $shop_name) {
-                if ($article->shops->contains($shop_id)) {
-                    $this->stocks[$article->id][$shop_id] = $article->shops()->where('shops.id', $shop_id)->first()->pivot->stock;
-                } else {
-                    $this->stocks[$article->id][$shop_id] = 0;
+        if ($this->unchecked_articles->count() > 0) {
+            foreach ($this->unchecked_articles as $article) {
+                $this->size_ids[$article->id] = $article->size->id;
+                $this->color_ids[$article->id] = $article->color->id;
+                $this->stocks[$article->id] = [];
+
+                foreach ($this->all_shops as $shop_id => $shop_name) {
+                    if ($article->shops->contains($shop_id)) {
+                        $this->stocks[$article->id][$shop_id] = $article->shops()->where('shops.id', $shop_id)->first()->pivot->stock;
+                    } else {
+                        $this->stocks[$article->id][$shop_id] = 0;
+                    }
                 }
-            }
 
-            foreach ($this->all_compos as $compo_id => $fabric) {
-                if ($article->compositions->contains($compo_id)) {
-                    $this->compo_ids[$article->id][$compo_id] = true; // $article->compositions()->where('compositions.id', $compo_id)->first()->id;
-                } else {
-                    $this->compo_ids[$article->id][$compo_id] = false;
+                foreach ($this->all_compos as $compo_id => $fabric) {
+                    if ($article->compositions->contains($compo_id)) {
+                        $this->compo_ids[$article->id][$compo_id] = true; // $article->compositions()->where('compositions.id', $compo_id)->first()->id;
+                    } else {
+                        $this->compo_ids[$article->id][$compo_id] = false;
+                    }
                 }
-            }
 
-            foreach ($this->all_cares as $care_id => $desc) {
-                if ($article->care_recommendations->contains($care_id)) {
-                    $this->care_ids[$article->id][$care_id] = true; // $article->care_recommendations()->where('care_recommendations.id', $care_id)->first()->id;
-                } else {
-                    $this->care_ids[$article->id][$care_id] = false;
+                foreach ($this->all_cares as $care_id => $desc) {
+                    if ($article->care_recommendations->contains($care_id)) {
+                        $this->care_ids[$article->id][$care_id] = true; // $article->care_recommendations()->where('care_recommendations.id', $care_id)->first()->id;
+                    } else {
+                        $this->care_ids[$article->id][$care_id] = false;
+                    }
                 }
-            }
 
-            $this->singularities_de[$article->id] = $article->singularity_de;
-            $this->singularities_lu[$article->id] = $article->singularity_lu;
-            $this->singularities_en[$article->id] = $article->singularity_en;
-            $this->singularities_fr[$article->id] = $article->singularity_fr;
+                $this->singularities_de[$article->id] = $article->singularity_de;
+                $this->singularities_lu[$article->id] = $article->singularity_lu;
+                $this->singularities_en[$article->id] = $article->singularity_en;
+                $this->singularities_fr[$article->id] = $article->singularity_fr;
+            }
         }
     }
 
