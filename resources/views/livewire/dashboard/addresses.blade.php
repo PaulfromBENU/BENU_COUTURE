@@ -17,7 +17,7 @@
                         </p>
                         @if($address->floor !== null && $address->floor !== "")
                         <p>
-                            {{ __('forms.register-address-floor') }} : {{ $address->floor }}
+                            {{ __('dashboard.address-complement') }} : {{ $address->floor }}
                         </p>
                         @endif
                         <p>
