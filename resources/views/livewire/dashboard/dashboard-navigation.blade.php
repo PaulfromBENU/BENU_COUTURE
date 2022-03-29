@@ -10,7 +10,7 @@
                 </li>
                 @if(auth::user()->role == 'admin')
                 <li>
-                    <a href="{{ route('filament.pages.dashboard') }}" class="btn-slider-left dashboard__nav__link @if($section == 'orders') dashboard__nav__link--active @endif">
+                    <a href="{{ route('filament.pages.dashboard') }}" class="btn-slider-left dashboard__nav__link" target="_blank">
                         Admin Panel
                     </a>
                 </li>
@@ -83,7 +83,7 @@
                 @break
 
             @case('addresses')
-                @include('includes.dashboard.addresses')
+                @livewire('dashboard.addresses')
                 @break
 
             @case('details')

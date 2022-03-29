@@ -124,3 +124,46 @@
 		margin-right: 2%;
 	}
 }
+
+
+.dashboard-addresses {
+	padding-left: 5vw;
+	padding-right: 5vw;
+	position: relative;
+	h2 {
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		padding-bottom: 20px;
+		border-bottom: solid 1px lightgrey;
+	}
+	&__new-address-btn {
+		position: absolute;
+		top: 7px;
+		right: 5vw;
+		color: $primary-color;
+		width: fit-content;
+		font-size: 1.2rem;
+	}
+	&__address {
+		margin-top: 30px;
+		width: 46%;
+		min-width: 320px;
+		margin-right: 3%;
+		padding: 20px 0px;
+		border-bottom: solid 1px lightgrey;
+		.btn-slider-left {
+			width: fit-content;
+		}
+		&__name {
+			text-transform: uppercase;
+			color: $white;
+			background: $primary-color;
+			padding: 5px 10px;
+			width: fit-content;
+			font: normal normal 500 18px/20px 'Barlow Condensed';
+			border-radius: 5px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}

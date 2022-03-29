@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-    {{ __('models.seo-title', ['name' => 'Caretta']) }}
+    {{ __('dashboard.seo-title') }}
 @endsection
 
 @section('description')
-    {{ __('models.seo-description') }}
+    {{ __('dashboard.seo-description') }}
 @endsection
 
 @section('robots-behaviour')
@@ -30,6 +30,27 @@
 
 @section('scripts')
 <script type="text/javascript">
-    
+    function hideAddressModal()
+    {
+        $('.add-address-modal-container').fadeOut('fast');
+        $('#modal-opacifier').fadeOut('fast');
+    }
+
+    $(function() {
+        Livewire.on('showAddressModal', function() {
+            $('.add-address-modal-container').fadeIn();
+            $('#modal-opacifier').fadeIn('fast');
+
+            $('.add-address-modal__close-btn').on('click', function() {
+                hideAddressModal()
+            })
+
+            $(document).on('keyup',function(e) {
+                if (e.keyCode == 27) {
+                   hideAddressModal();
+                }
+            });
+        });
+    })
 </script>
 @endsection

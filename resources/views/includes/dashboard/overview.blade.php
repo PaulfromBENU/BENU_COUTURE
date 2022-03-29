@@ -1,9 +1,11 @@
 <div class="dashboard__content__box dashboard__content__box--large">
     <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-1') }}</h3>
     <div class="w-1/2">
-        <h4 class="dashboard__content__box__subtitle">{{ Auth::user()->first_name.' '.Auth::user()->last_name }}</h4>
+        <h4 class="dashboard__content__box__subtitle">
+            {{ Auth::user()->first_name.' '.Auth::user()->last_name }} <br/>({!! __('dashboard.client-number') !!}: {{ Auth::user()->client_number }})
+        </h4>
         <p>
-            {{ __('dashboard.overview-member-since') }}{{ Auth::user()->created_at->format('d'.'/'.'m'.'/'.'Y') }}
+            {{ __('dashboard.overview-member-since') }} {{ Auth::user()->created_at->format('d'.'/'.'m'.'/'.'Y') }}
         </p>
     </div>
     <div class="w-1/2 dashboard__content__box__low-links">

@@ -17,6 +17,8 @@ class DashboardNavigation extends Component
     public $couture_wishlisted_vouchers;
     public $couture_wishlisted_sold_articles;
 
+    protected $queryString = ['section' => ['except' => '', 'except' => 'overview']];
+
     public function mount()
     {
         $this->getWishlistArticles();

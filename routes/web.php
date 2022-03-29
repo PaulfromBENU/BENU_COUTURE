@@ -26,7 +26,11 @@ if (app('env') == 'landing') {
 		'prefix' => '{locale?}',
 		'middleware' => 'setlocale'], function() {
 			Route::get('/', 'GeneralController@home')->name('home');
-			Route::get('/dashboard/{section?}', 'UserController@show')->name('dashboard');
+			Route::get('/dashboard', 'UserController@show')->name('dashboard');
+			Route::get('/dashboard/{any}', function() {
+				return redirect()->route('dashboard');
+			});
+			Route::post('/dashboard/addresses', 'UserController@addAddress')->name('dashboard.add-address');
 			//Auth routes
 			require __DIR__.'/auth.php';
 	});

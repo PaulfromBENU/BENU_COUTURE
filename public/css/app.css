@@ -2268,6 +2268,17 @@ input[type=checkbox]:focus {
   color: #D41C1B;
 }
 
+.add-address-modal {
+  width: 60vw;
+  left: 20vw;
+  top: 70px;
+  overflow: hidden;
+  height: calc(100vh - 140px);
+}
+.add-address-modal .reactive-label-input {
+  height: 52px;
+}
+
 .footer-connect {
   text-align: center;
   font: normal normal 300 44px/53px "Barlow Condensed";
@@ -4025,6 +4036,54 @@ input[type=checkbox]:focus {
 .dashboard-wishlist .article-overview, .dashboard-wishlist .sold-overview {
   width: 30%;
   margin-right: 2%;
+}
+
+.dashboard-addresses {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  position: relative;
+}
+.dashboard-addresses h2 {
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+}
+.dashboard-addresses__new-address-btn {
+  position: absolute;
+  top: 7px;
+  right: 5vw;
+  color: #D41C1B;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+.dashboard-addresses__address {
+  margin-top: 30px;
+  width: 46%;
+  min-width: 320px;
+  margin-right: 3%;
+  padding: 20px 0px;
+  border-bottom: solid 1px lightgrey;
+}
+.dashboard-addresses__address .btn-slider-left {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.dashboard-addresses__address__name {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #D41C1B;
+  padding: 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font: normal normal 500 18px/20px "Barlow Condensed";
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .sell-form__input-group {

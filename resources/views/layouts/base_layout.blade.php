@@ -76,6 +76,14 @@
 	    @endforeach
     </div>
    	@endif
+
+   	<!-- Dashboard add address modal -->
+   	@if(Route::currentRouteName() == 'dashboard')
+   	<div class="add-address-modal-container" style="display: none;">
+   		@livewire('dashboard.addresses-modal')
+   	</div>
+    @endif
+
 @endsection
 
 @section('main-content-top')
