@@ -18,9 +18,9 @@ function showModal(modal) {
         case 'connect':
             $('#connect-modal').fadeIn();
             break;
-        case 'side':
-            $('#side-modal').fadeIn();
-            break;
+        // case 'side':
+        //     $('#side-modal').fadeIn();
+        //     break;
         default:
             $('#general-modal').fadeIn();
     }

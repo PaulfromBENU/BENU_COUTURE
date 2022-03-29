@@ -2249,6 +2249,25 @@ input[type=checkbox]:focus {
   opacity: 0.7;
 }
 
+.error-modal {
+  border: solid 2px #D41C1B;
+  width: 50vw;
+  left: 25vw;
+  top: 100px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.error-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.error-modal__close:hover {
+  color: #D41C1B;
+}
+
 .footer-connect {
   text-align: center;
   font: normal normal 300 44px/53px "Barlow Condensed";

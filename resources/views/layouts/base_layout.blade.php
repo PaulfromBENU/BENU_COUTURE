@@ -66,6 +66,16 @@
     <div class="modal side-modal" id="general-side-modal" style="display: none;">
         @yield('side_modal')
     </div>
+
+    <!-- Error messages -->
+    @if ($errors->any())
+    <div class="modal error-modal" id="error-modal" style="display: none;">
+    	<div class="error-modal__close">&#10005;</div>
+	    @foreach ($errors->all() as $error)
+	    {{ $error }}
+	    @endforeach
+    </div>
+   	@endif
 @endsection
 
 @section('main-content-top')
@@ -83,6 +93,18 @@
 
 @section('scripts-top')
 	<script type="text/javascript" src="{{ asset('js/services/slick-1.8.1/slick/slick.min.js') }}"></script>
+	@if($errors->any())
+	<script type="text/javascript">
+		$(function() {
+			$('#modal-opacifier').fadeIn('fast');
+			$('#error-modal').fadeIn();
+			$('.error-modal__close').on('click', function() {
+				$('#modal-opacifier').fadeOut('fast');
+				$('#error-modal').fadeOut('fast');
+			});
+		});
+	</script>
+	@endif
 	@yield('scripts')
 @endsection
 
