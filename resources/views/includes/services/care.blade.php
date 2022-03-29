@@ -4,6 +4,8 @@
 		{{ __('services.care-subtitle') }}
 	</p>
 
+	@php $desc_query = "description_".app()->getLocale(); @endphp
+
 	<h4 class="text-center care__grid__title">{{ __('services.care-category-1') }}</h4>
 	<div class="care__grid flex justify-between flex-wrap">
 		@foreach($wash_recommendations as $wash_recommendation)
@@ -12,7 +14,7 @@
 				@svg('care/'.$wash_recommendation->picture)
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				{{ $wash_recommendation->description_fr }}
+				{{ $wash_recommendation->$desc_query }}
 			</p>
 		</div>
 		@endforeach
@@ -26,7 +28,7 @@
 				@svg('care/'.$dry_recommendation->picture)
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				{{ $dry_recommendation->description_fr }}
+				{{ $dry_recommendation->$desc_query }}
 			</p>
 		</div>
 		@endforeach
@@ -40,7 +42,7 @@
 				@svg('care/'.$iron_recommendation->picture)
 			</div>
 			<p class="care__grid__box__txt m-auto">
-				{{ $iron_recommendation->description_fr }}
+				{{ $iron_recommendation->$desc_query }}
 			</p>
 		</div>
 		@endforeach
