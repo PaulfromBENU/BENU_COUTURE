@@ -137,10 +137,10 @@ class ArticleSidebar extends Component
     {
         if(auth::check()) {
             if ($this->is_wishlisted == 0) {
-                auth::user()->wishlistArticles()->attach($this->article->id);
+                // auth::user()->wishlistArticles()->attach($this->article->id);
                 $this->is_wishlisted = 1;
             } else {
-                auth::user()->wishlistArticles()->detach($this->article->id);
+                // auth::user()->wishlistArticles()->detach($this->article->id);
                 $this->is_wishlisted = 0;
             }
         }
