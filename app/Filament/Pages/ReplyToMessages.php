@@ -69,6 +69,7 @@ class ReplyToMessages extends Page
             if ($benu_answer->save()) {
                 $this->benu_answer[$thread] = "";
                 ContactMessage::where('thread', $thread)->update([
+                    'is_read' => '1',
                     'is_answered' => '1',
                 ]);
                 $this->loadMessages();

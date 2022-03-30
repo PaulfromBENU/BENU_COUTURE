@@ -3,7 +3,7 @@
 		@foreach($unchecked_articles as $article)
 			@if($article->checked == '0')
 			<div class="article-check" wire:key="{{ $article->id }}">
-				<h3>{{ $article->creation->name }} - {{ $article->name }} - Added on {{ Carbon\Carbon::parse($article->created_at)->format('d M Y'); }} - {{ $article->checked }}</h3>
+				<h3>{{ $article->creation->name }} - {{ $article->name }} - Added on {{ Carbon\Carbon::parse($article->created_at)->format('d M Y'); }}</h3>
 				<div>
 					<div class=" flex flex-start article-check__img-container">
 						@foreach($article->photos as $photo)

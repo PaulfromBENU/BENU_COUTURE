@@ -24,6 +24,8 @@ class Communications extends Component
         if (auth()->user()->openContactMessages()->where('thread', $thread)->count() > 0) {
             auth()->user()->openContactMessages()->where('thread', $thread)->update([
                 'closed' => '1',
+                'is_read' => '1',
+                'is_answered' => '1',
             ]);
         }
     }
