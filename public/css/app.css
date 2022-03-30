@@ -4086,6 +4086,18 @@ input[type=checkbox]:focus {
   top: 0;
 }
 
+.dashboard-communications {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  position: relative;
+}
+.dashboard-communications h2 {
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 20px;
+}
+
 .sell-form__input-group {
   border-bottom: solid 1px grey;
 }
@@ -4250,6 +4262,60 @@ input[type=checkbox]:focus {
 }
 .article-check input[type=checkbox] {
   color: #f49600;
+}
+
+.message-reply {
+  position: relative;
+}
+.message-reply h3 {
+  font-size: 1.4rem;
+  padding-bottom: 4px;
+  border-bottom: lightgrey solid 1px;
+  margin-bottom: 5px;
+}
+.message-reply h4 {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.message-reply h5 {
+  color: #f49600;
+  font-weight: 500;
+}
+.message-reply__close {
+  position: absolute;
+  top: -4px;
+  right: 0px;
+}
+.message-reply__benu-reply {
+  padding-left: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-left: solid 2px #f49600;
+}
+.message-reply textarea {
+  background: transparent;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.message-reply textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #f49600;
+}
+.message-reply button {
+  background: transparent;
+  padding: 5px 15px;
+  border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+  transition: all 0.2s;
+  color: lightgrey;
+  border-radius: 5px;
+}
+.message-reply button:hover {
+  background: rgb(234 179 8/var(--tw-bg-opacity));
+  color: #FFFFFF;
 }
 
 :root {

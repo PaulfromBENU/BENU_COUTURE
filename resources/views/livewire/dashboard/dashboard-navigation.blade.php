@@ -21,7 +21,7 @@
                     </a>
                 </li>
                 <li>
-                    <a wire:click="changeSection('demands')" class="btn-slider-left dashboard__nav__link @if($section == 'demands') dashboard__nav__link--active @endif">
+                    <a wire:click="changeSection('communications')" class="btn-slider-left dashboard__nav__link @if($section == 'communications') dashboard__nav__link--active @endif">
                         {{ __('dashboard.nav-demands') }}
                     </a>
                 </li>
@@ -38,6 +38,11 @@
                 <li>
                     <a wire:click="changeSection('addresses')" class="btn-slider-left dashboard__nav__link @if($section == 'addresses') dashboard__nav__link--active @endif">
                         {{ __('dashboard.nav-addresses') }}
+                    </a>
+                </li>
+                <li>
+                    <a wire:click="changeSection('conditions')" class="btn-slider-left dashboard__nav__link @if($section == 'conditions') dashboard__nav__link--active @endif">
+                        {{ __('dashboard.nav-conditions') }}
                     </a>
                 </li>
                 <li>
@@ -70,8 +75,8 @@
                 @include('includes.dashboard.orders')
                 @break
 
-            @case('demands')
-                @include('includes.dashboard.demands')
+            @case('communications')
+                @livewire('dashboard.communications')
                 @break
 
             @case('returns')
@@ -84,6 +89,10 @@
 
             @case('addresses')
                 @livewire('dashboard.addresses')
+                @break
+
+            @case('conditions')
+                @include('includes.dashboard.conditions')
                 @break
 
             @case('details')

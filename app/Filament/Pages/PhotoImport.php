@@ -43,6 +43,8 @@ class PhotoImport extends Page
      
     protected static ?string $slug = 'importation-photo';
 
+    protected static ?int $navigationSort = 2;
+
     public $all_creations;
     public $existing_variations;
     public $photos = [];

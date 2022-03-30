@@ -78,6 +78,10 @@ class ContactForm extends Component
             $new_message->phone = $this->phone;
             $new_message->message = $this->message;
             $new_message->conditions_ok = '1';
+            $new_message->thread = rand(1, 100000);
+            while (ContactMessage::where('thread', $new_message->thread)->count() > 0) {
+                $new_message->thread = rand(1, 100000);
+            }
 
             $this->message_sent = 1;
             if ($new_message->save()) {

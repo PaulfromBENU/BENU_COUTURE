@@ -13,14 +13,16 @@ use Filament\Tables;
 
 class ContactMessageResource extends Resource
 {
-    protected static ?string $label = 'user message';
-    protected static ?string $pluralLabel = 'user messages';
+    protected static ?string $label = 'all user messages';
+    protected static ?string $pluralLabel = 'all user messages';
 
     protected static ?string $model = ContactMessage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-alt-2';
 
     protected static ?string $navigationGroup = 'Utilisateurs';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

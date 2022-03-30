@@ -19,9 +19,11 @@ class ItemOrderResource extends Resource
 
     protected static ?string $model = ItemOrder::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-color-swatch';
 
     protected static ?string $navigationGroup = 'Utilisateurs';
+
+    protected static ?int $navigationSort = 4;
 
     // protected static function getNavigationBadge(): ?string
     // {

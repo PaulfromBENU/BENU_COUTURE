@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Address;
+use App\Models\ContactMessage;
 use App\Models\User;
 
 use App\Http\Requests\AddressRequest;
@@ -19,11 +20,12 @@ class UserController extends Controller
 
     public function show(string $locale, Request $request)
     {
-        if (!isset($request->section) || !in_array($request->section, ['overview', 'addresses', 'orders', 'demands', 'returns', 'wishlist', 'details', 'delete'])) {
+        if (!isset($request->section) || !in_array($request->section, ['overview', 'addresses', 'orders', 'communications', 'returns', 'wishlist', 'conditions', 'details', 'delete'])) {
             $section = 'overview';
         } else {
             $section = $request->section;
         }
+
         return view('dashboard', ['section' => $section]);
     }
 

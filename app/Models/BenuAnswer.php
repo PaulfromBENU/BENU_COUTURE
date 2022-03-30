@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactMessage extends Model
+class BenuAnswer extends Model
 {
     use HasFactory;
 
     // Choice of the database
     protected $connection = 'mysql_common';
 
-    protected $guarded = ['id'];
+    protected $guarded = [];
 
-    public function benuAnswers()
+    public function contactMessage()
     {
-        return $this->hasMany(BenuAnswer::class);
+        return $this->belongsTo(ContactMessage::class);
     }
 }

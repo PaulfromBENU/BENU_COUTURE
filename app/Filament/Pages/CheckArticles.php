@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\File;
 
 class CheckArticles extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-check-circle';
 
     protected static string $view = 'filament.pages.check-articles';
 
@@ -28,6 +28,8 @@ class CheckArticles extends Page
     protected static ?string $navigationLabel = 'Vérification Articles';
      
     protected static ?string $slug = 'check-articles';
+
+    protected static ?int $navigationSort = 3;
 
     public $unchecked_articles;
     public $size_ids = [];

@@ -11,6 +11,8 @@ use Laravel\Sanctum\HasApiTokens;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasName;
 
+use App\Models\ContactMessage;
+
 class User extends Authenticatable implements HasName, FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -93,5 +95,15 @@ class User extends Authenticatable implements HasName, FilamentUser
     public function wishlistArticles()
     {
         return $this->belongsToMany('App\Models\Article', 'benu_common.couture_article_user');
+    }
+
+    public function contactMessages()
+    {
+        return ContactMessage::where('email', $this->email);
+    }
+
+    public function openContactMessages()
+    {
+        return ContactMessage::where('email', $this->email)->where('closed', '0');
     }
 }

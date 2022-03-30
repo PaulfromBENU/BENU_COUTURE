@@ -5552,7 +5552,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   \**********************************************/
 /***/ (() => {
 
-$(function () {
+function activateAccordeon() {
   $('.faq__accordion__header').on('click', function () {
     $('.faq__accordion__header__chevron').removeClass('.faq__accordion__header__chevron--active');
     $('.faq__accordion__header__chevron', this).addClass('.faq__accordion__header__chevron--active');
@@ -5580,6 +5580,13 @@ $(function () {
       $('.faq__accordion__answer__header__plus').show();
       $('.faq__accordion__answer__header__minus').hide();
     }
+  });
+}
+
+$(function () {
+  activateAccordeon();
+  Livewire.on('communicationsLoaded', function () {
+    activateAccordeon();
   });
 });
 

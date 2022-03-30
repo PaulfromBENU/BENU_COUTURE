@@ -169,3 +169,58 @@
 		color: rgb(244 150 0);
 	}
 }
+
+
+.message-reply {
+	position: relative;
+	h3 {
+		font-size: 1.4rem;
+		padding-bottom: 4px;
+		border-bottom: lightgrey solid 1px;
+		margin-bottom: 5px;
+	}
+	h4 {
+		font-size: 1.1rem;
+		font-style: italic;
+		margin-bottom: 15px;
+	}
+	h5 {
+		color: rgb(244 150 0);
+		font-weight: 500;
+	}
+	&__close {
+		position: absolute;
+		top: -4px;
+		right: 0px;
+	}
+	&__benu-reply {
+		padding-left: 5px;
+		margin-left: 5px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		border-left: solid 2px rgb(244 150 0);
+	}
+	textarea {
+		background: transparent;
+		border-radius: 5px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		&:focus {
+			outline: none;
+			box-shadow: none;
+			border-color: rgb(244 150 0);
+		}
+	}
+	button {
+		background: transparent;
+		padding: 5px 15px;
+		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		transition: all 0.2s;
+		color: lightgrey;
+		border-radius: 5px;
+		&:hover {
+			background: rgb(234 179 8/var(--tw-bg-opacity));
+			color: $white;
+		}
+	}
+}
