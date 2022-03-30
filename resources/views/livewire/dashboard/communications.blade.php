@@ -148,7 +148,7 @@
             <div class="faq__accordion__answer pb-10" style="display: none;">
                 @foreach($item_requests as $item_request)
                     <h3 class="text-lg mb-2 font-bold">{!! __('dashboard.com-mask-demand-sent-on') !!} {{ $item_request->created_at->format('d\/m\/Y') }}</h3>
-                    <div wire:key="{{ $mask_request->id }}" class="flex justify-start pl-3">
+                    <div wire:key="{{ $item_request->id }}" class="flex justify-start pl-3">
                         <div class="w-1/3">
                             <p class="faq__accordion__answer__txt">
                                 <strong>{!! __('dashboard.com-creation') !!} : {{ $item_request->creation->name }}</strong>
