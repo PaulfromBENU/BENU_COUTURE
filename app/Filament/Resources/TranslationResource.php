@@ -13,12 +13,12 @@ use Filament\Tables;
 
 class TranslationResource extends Resource
 {
-    protected static ?string $label = 'traduction';
-    protected static ?string $pluralLabel = 'traductions';
+    protected static ?string $label = 'translation';
+    protected static ?string $pluralLabel = 'translations';
 
     protected static ?string $model = Translation::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-translate';
 
     protected static ?string $navigationGroup = 'Données générales';
 

@@ -7,6 +7,7 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
 use App\Traits\ArticleAnalyzer;
+use App\Models\GeneralCondition;
 
 class DashboardNavigation extends Component
 {
@@ -16,12 +17,15 @@ class DashboardNavigation extends Component
     public $couture_wishlisted_articles;
     public $couture_wishlisted_vouchers;
     public $couture_wishlisted_sold_articles;
+    public $general_conditions_date;
+    public $general_conditions_content;
 
     protected $queryString = ['section' => ['except' => '', 'except' => 'overview']];
 
     public function mount()
     {
         $this->getWishlistArticles();
+        $this->getLastGeneralConditions();
     }
 
     public function getWishlistArticles()
@@ -41,6 +45,23 @@ class DashboardNavigation extends Component
                 }
             }
         }
+    }
+
+    public function getLastGeneralConditions()
+    {
+        $this->general_conditions_date = "";
+        $this->general_conditions_content = "";
+        if (GeneralCondition::count() > 0) {
+            $this->general_conditions_date = GeneralCondition::orderBy('created_at', 'desc')->first()->created_at->format('d\/m\/Y');
+            $this->general_conditions_content = GeneralCondition::orderBy('created_at', 'desc')->first()->content;
+        }
+    }
+
+    public function acceptNewConditions()
+    {
+        auth()->user()->last_conditions_agreed = '1';
+        auth()->user()->save();
+        $this->render();
     }
 
     public function changeSection(string $section)

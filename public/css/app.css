@@ -4098,6 +4098,42 @@ input[type=checkbox]:focus {
   margin-bottom: 20px;
 }
 
+.dashboard-conditions {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 100%;
+  position: relative;
+}
+.dashboard-conditions h2 {
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.dashboard-conditions h3 {
+  font: normal normal 600 20px/22px "Barlow Condensed";
+  margin-bottom: 40px;
+}
+
+.dashboard-details {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 100%;
+  position: relative;
+}
+.dashboard-details h2 {
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.dashboard-details h3 {
+  font: normal normal 600 20px/22px "Barlow Condensed";
+  margin-bottom: 40px;
+}
+
 .sell-form__input-group {
   border-bottom: solid 1px grey;
 }
