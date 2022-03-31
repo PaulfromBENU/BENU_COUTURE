@@ -58,6 +58,9 @@ class CreationResource extends Resource
                         ->searchable(),
                 Forms\Components\TextInput::make('price')
                     ->required(),
+                Forms\Components\TextInput::make('tva_value')
+                    ->label('TVA (%)')
+                    ->required(),
                 Forms\Components\TextInput::make('weight')
                     ->label('Weight [g]')
                     ->required(),
@@ -98,6 +101,7 @@ class CreationResource extends Resource
                 Tables\Columns\TextColumn::make('creation_category.name_fr')->label('Category'),
                 Tables\Columns\BooleanColumn::make('is_accessory'),
                 Tables\Columns\TextColumn::make('price')->money('eur'),
+                Tables\Columns\TextColumn::make('tva_value')->label('TVA [%]'),
                 Tables\Columns\TextColumn::make('weight')->label('Weight [g]'),
                 Tables\Columns\BooleanColumn::make('requires_size')->label('Requires Size filter?'),
                 Tables\Columns\TextColumn::make('description_lu')->limit('50'),
