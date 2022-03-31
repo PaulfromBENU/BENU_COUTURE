@@ -3014,6 +3014,10 @@ select {
     padding-left: 20rem;
   }
 
+  .lg\:pt-3 {
+    padding-top: 0.75rem;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
