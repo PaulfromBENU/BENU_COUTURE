@@ -46,15 +46,12 @@
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
-                    @auth
-                    <a href="{{ route('dashboard') }}" class="header__newsletter-btn__link">
-                        {{ __('header.dashboard') }}
-                    </a>
-                    @else
                     <a href="https://benu.lu/" class="header__newsletter-btn__link" target="_blank">
                         {{ __('header.newsletter') }}
                     </a>
-                    @endauth
+                    <!-- <a href="{{ route('dashboard') }}" class="header__newsletter-btn__link">
+                        {{ __('header.dashboard') }}
+                    </a> -->
                 </div>
             </div>
             <div class="flex justify-between header__main-menu">
@@ -101,12 +98,9 @@
                         </li>
                     @else
                         <li>
-                            <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="header__main-menu__icons__btn">
+                            <a href="{{ route('dashboard', ['section' => 'overview']) }}" class="header__main-menu__icons__btn" id="dashboard-btn">
                                 @svg('benu-icon-silhouette-disconnect')
-                            </button>
-                            <form id="logout-form" action="{{ route('logout', ['locale' => app()->getLocale()]) }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
+                            </a>
                         </li>
                     @endguest
                     <li>
