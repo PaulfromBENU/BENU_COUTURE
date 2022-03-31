@@ -68,12 +68,11 @@ class ArticleSidebar extends Component
             }
 
             // Load pictures
-            foreach ($this->article->photos as $photo) {
-                if ($photo->is_front == '1') {
-                    array_unshift($this->article_pictures, $photo->file_name);
-                } else {
-                    array_push($this->article_pictures, $photo->file_name);
-                }
+            foreach ($this->article->photos()->where('is_front', '1')->get() as $front_photo) {
+                array_push($this->article_pictures, $front_photo->file_name);
+            }
+            foreach ($this->article->photos()->where('is_front', '<>', '1')->get() as $other_photo) {
+                array_push($this->article_pictures, $other_photo->file_name);
             }
 
             // Send loading confirmation to JS
