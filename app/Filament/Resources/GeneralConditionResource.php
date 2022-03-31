@@ -26,7 +26,16 @@ class GeneralConditionResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('content')
+                Forms\Components\Textarea::make('content_lu')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Textarea::make('content_fr')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Textarea::make('content_de')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\Textarea::make('content_en')
                     ->required()
                     ->maxLength(65535),
             ]);
@@ -36,7 +45,10 @@ class GeneralConditionResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('content')->label('General Conditions'),
+                Tables\Columns\TextColumn::make('content_lu')->label('General Conditions LU')->limit(50),
+                Tables\Columns\TextColumn::make('content_en')->label('General Conditions EN')->limit(50),
+                Tables\Columns\TextColumn::make('content_de')->label('General Conditions DE')->limit(50),
+                Tables\Columns\TextColumn::make('content_fr')->label('General Conditions FR')->limit(50),
                 Tables\Columns\TextColumn::make('created_at')->label('Publication Date')
                     ->dateTime(),
             ])

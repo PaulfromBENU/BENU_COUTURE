@@ -51,9 +51,10 @@ class DashboardNavigation extends Component
     {
         $this->general_conditions_date = "";
         $this->general_conditions_content = "";
+        $query_string = "content_".app()->getLocale();
         if (GeneralCondition::count() > 0) {
             $this->general_conditions_date = GeneralCondition::orderBy('created_at', 'desc')->first()->created_at->format('d\/m\/Y');
-            $this->general_conditions_content = GeneralCondition::orderBy('created_at', 'desc')->first()->content;
+            $this->general_conditions_content = GeneralCondition::orderBy('created_at', 'desc')->first()->$query_string;
         }
     }
 

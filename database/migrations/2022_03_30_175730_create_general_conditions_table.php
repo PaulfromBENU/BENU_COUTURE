@@ -16,7 +16,10 @@ class CreateGeneralConditionsTable extends Migration
         Schema::connection('mysql')->create('general_conditions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('content');
+            $table->text('content_fr');
+            $table->text('content_de');
+            $table->text('content_lu');
+            $table->text('content_en');
         });
     }
 
