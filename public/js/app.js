@@ -5904,7 +5904,7 @@ $(function () {
   \***************************************/
 /***/ (() => {
 
-$(function () {
+function activateInputsDynamicBehaviour() {
   var labelColorSearch = $('.search-modal label').css('color'); // On page load, reduce labels size if input is not empty
   // if ($('.connect-modal input[type=password]').val() != '') {
   // 	$(".connect-modal label[for='" + $('.connect-modal input[type=password]').attr('id') + "']").css('top', '-10px').css('transform', 'scale(0.75)').css('color', 'grey');
@@ -5976,6 +5976,13 @@ $(function () {
     $(this).hide();
     $(this).parent().children('.reactive-label-input__show-btn--show').show();
     $(this).parent().children('input[type="text"]').attr('type', 'password');
+  });
+}
+
+$(function () {
+  activateInputsDynamicBehaviour();
+  Livewire.on('activateInputs', function () {
+    activateInputsDynamicBehaviour();
   });
 });
 

@@ -1,4 +1,5 @@
-$(function() {
+function activateInputsDynamicBehaviour()
+{
 	let labelColorSearch = $('.search-modal label').css('color');
 
 	// On page load, reduce labels size if input is not empty
@@ -80,5 +81,13 @@ $(function() {
 		$(this).hide();
 		$(this).parent().children('.reactive-label-input__show-btn--show').show();
 		$(this).parent().children('input[type="text"]').attr('type', 'password');
+	});
+}
+
+$(function() {
+	activateInputsDynamicBehaviour();
+
+	Livewire.on('activateInputs', function() {
+		activateInputsDynamicBehaviour();
 	});
 });

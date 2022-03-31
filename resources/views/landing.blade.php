@@ -77,7 +77,7 @@
                         2022).
                     </p>
                 </div>
-                <div class="contact_form_container">
+                <div class="contact-form-container">
                     <div>
                         <h2 class="text-center">
                             Restons en contact

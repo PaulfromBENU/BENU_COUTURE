@@ -41,36 +41,6 @@
 	}
 }
 
-input[type=email] {
-	width: 300px;
-	height: 30px;
-	padding: 5px 10px;
-	border-radius: 5px;
-	font-size: 1rem;
-	border:  none;
-}
-
-input[type=submit] {
-	border: none;
-	height: 40px;
-	background: white;
-	color: $primary-color;
-	padding: 5px 30px;
-	font-size: 1rem;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-left: 10px;
-}
-
-input[type=submit]:hover {
-	background: $primary-color;
-	color: white;
-}
-
-::placeholder {
-	color: var(--unnamed-color-d0d0d0);
-}
-
 .central_col {
 	width: 56vw;
 	margin-left: 22vw;
@@ -202,7 +172,7 @@ input[type=submit]:hover {
 	border-radius: 10px;
 }
 
-.contact_form_container {
+.contact-form-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -216,6 +186,34 @@ input[type=submit]:hover {
 	@include mobile {
 		top: -70px;
 		padding-bottom: 0px;
+	}
+	input[type=email] {
+		width: 300px;
+		height: 30px;
+		padding: 5px 10px;
+		border-radius: 5px;
+		font-size: 1rem;
+		border: none;
+	}
+
+	input[type=submit] {
+		border: none;
+		height: 40px;
+		background: white;
+		color: $primary-color;
+		padding: 5px 30px;
+		font-size: 1rem;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-left: 10px;
+	}
+
+	input[type=submit]:hover {
+		background: $primary-color;
+		color: white;
+	}
+	::placeholder {
+		color: var(--unnamed-color-d0d0d0);
 	}
 }
 

@@ -5,9 +5,13 @@ namespace App\Http\Livewire\Dashboard;
 use Livewire\Component;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 use App\Traits\ArticleAnalyzer;
 use App\Models\GeneralCondition;
+
+use Illuminate\Validation\Rules;
+use Illuminate\Validation\Rule;
 
 class DashboardNavigation extends Component
 {
@@ -20,12 +24,43 @@ class DashboardNavigation extends Component
     public $general_conditions_date;
     public $general_conditions_content;
 
+    // Update user details form
+    public $gender;
+    public $first_name;
+    public $email;
+    public $company;
+    public $last_name;
+    public $phone;
+    public $old_password;
+    public $new_password;
+    public $new_password_confirmation;
+    public $show_confirmation;
+
     protected $queryString = ['section' => ['except' => '', 'except' => 'overview']];
+
+    protected function rules()
+    {
+        return [
+            "gender" => ['nullable', 'string', 'max:7', Rule::in(['male', 'female', 'neutral'])],
+            "first_name" => "nullable|string|max:255",
+            "last_name" => "nullable|string|max:255",
+            'email' => ['nullable', 'string', 'email', 'max:255'],
+            'company' => ['nullable', 'string', 'max:255'],
+            'phone' => ['nullable', 'string', 'max:30'],
+            'old_password' => ['nullable', Rules\Password::defaults()],
+            'new_password' => ['nullable', Rules\Password::defaults()],
+            'new_password_confirmation' => ['nullable', Rules\Password::defaults()],
+        ];
+    }
 
     public function mount()
     {
         $this->getWishlistArticles();
         $this->getLastGeneralConditions();
+        if ($this->section == 'details') {
+            $this->fillUserInfo();
+        }
+        $this->show_confirmation = 0;
     }
 
     public function getWishlistArticles()
@@ -70,6 +105,84 @@ class DashboardNavigation extends Component
         $this->section = $section;
         if ($section == 'communications') {
             $this->emit('communicationsLoaded'); // Used to reload JS for accordeon behaviour
+        }
+        if ($section == 'details') {
+            $this->fillUserInfo();
+        }
+    }
+
+    public function fillUserInfo()
+    {
+        $this->show_confirmation = 0;
+        $this->emit('activateInputs'); // Used to reload JS for accordeon behaviour
+        // Prefill user info in form
+        if (strtolower(auth()->user()->gender) == 'male') {
+            $this->gender = "male";
+        } elseif (strtolower(auth()->user()->gender) == 'female') {
+            $this->gender = "female";
+        } elseif (strtolower(auth()->user()->gender) == 'neutral') {
+            $this->gender = "neutral";
+        } else {
+            $this->gender = "";
+        }
+        $this->first_name = auth()->user()->first_name;
+        $this->last_name = auth()->user()->last_name;
+        $this->email = auth()->user()->email;
+        if (isset(auth()->user()->company)) {
+            $this->company = auth()->user()->company;
+        } else {
+            $this->company = "";
+        }
+        if (isset(auth()->user()->phone)) {
+            $this->phone = auth()->user()->phone;
+        } else {
+            $this->phone = "";
+        }
+        $this->old_password = "";
+        $this->new_password = "";
+        $this->new_password_confirmation = "";
+    }
+
+    public function updatePersonalData() {
+        $this->validate();
+        if ($this->first_name !== null && $this->first_name !== "") {
+            auth()->user()->first_name = ucfirst(strtolower($this->first_name));
+        }
+        if ($this->last_name !== null && $this->last_name !== "") {
+            auth()->user()->last_name = ucfirst(strtolower($this->last_name));
+        }
+        if ($this->company !== null && $this->company !== "") {
+            auth()->user()->company = ucfirst(strtolower($this->company));
+        }
+        if ($this->email !== null && $this->email !== "") {
+            // Check that user email has been updated and does not already exists
+            if ($this->email !== auth()->user()->email && User::where('email', $this->email)->count() == 0) {
+                auth()->user()->email = ucfirst(strtolower($this->email));
+            }
+        }
+        if ($this->gender !== null && $this->gender !== "") {
+            auth()->user()->gender = ucfirst(strtolower($this->gender));
+        }
+        if ($this->phone !== null && $this->phone !== "") {
+            auth()->user()->phone = ucfirst(strtolower($this->phone));
+        }
+
+        if ($this->old_password !== "" && $this->old_password !== null) {
+            if (Hash::check($this->old_password, auth()->user()->password)) {
+                if ($this->new_password !== "" 
+                    && $this->new_password !== null 
+                    && $this->new_password == $this->new_password_confirmation) {
+                    
+                    auth()->user()->forceFill([
+                        'password' => Hash::make($this->new_password),
+                    ]);
+                }
+            }
+        }
+        
+        if (auth()->user()->save()) {
+            $this->fillUserInfo();
+            $this->show_confirmation = 1;
         }
     }
 
