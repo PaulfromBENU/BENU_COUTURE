@@ -67,10 +67,26 @@
                     </p>
                     <ul class="central_textbox__desc">
                         <li>BENU COUTURE</li>
-                        <li>... conçoit et produit localement une mode UpCycling unique,</li>
-                        <li>... offre des solutions allant des tailles XS jusqu'à 5XL ainsi que des merveilles pour nos plus jeunes, </li>
-                        <li>... répare et transforme selon tes idées individuelles (tant qu'à faire!) : changement de couleurs, design, taille ...,</li>
-                        <li>... sensibilise sur les problématiques du marché de textile ordinaire, prend position et discute les sujets liés à la mode durable.</li>
+                        <li class="text-left flex">
+                            <p class="pr-2 pt-2">@svg('list_cintre')</p>
+                            <p> conçoit et produit localement une mode UpCycling unique,
+                            </p>
+                        </li>
+                        <li class="text-left flex">
+                            <p class="pr-2 pt-2">@svg('list_cintre')</p>
+                            <p> offre des solutions allant des tailles XS jusqu'à 5XL ainsi que des merveilles pour nos plus jeunes,
+                            </p>
+                        </li>
+                        <li class="text-left flex">
+                            <p class="pr-2 pt-2">@svg('list_cintre')</p>
+                            <p> répare et transforme selon tes idées individuelles (tant qu'à faire!) : changement de couleurs, design, taille ...,
+                            </p>
+                        </li>
+                        <li class="text-left flex">
+                            <p class="pr-2 pt-2">@svg('list_cintre')</p>
+                            <p> sensibilise sur les problématiques du marché de textile ordinaire, prend position et discute les sujets liés à la mode durable.
+                            </p>
+                        </li>
                     </ul>
                     <p class="central_textbox__desc">
                         BENU COUTURE attend son propre site couture.benu.lu (perspective : avant la fin mai
@@ -79,7 +95,7 @@
                 </div>
                 <div class="contact-form-container">
                     <div>
-                        <h2 class="text-center">
+                        <h2 class="text-center mb-6">
                             Restons en contact
                         </h2>
                         <!-- <div>

@@ -4607,6 +4607,22 @@ input[type=checkbox]:focus {
     padding-bottom: 0px;
   }
 }
+.contact-form-container h2 {
+  color: var(--benu_couture_couleur_texte);
+  text-align: center;
+  font: normal normal 800 44px/53px "Barlow Semi Condensed";
+  letter-spacing: 0px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-form-container h2 {
+    font: normal normal 800 22px/26px "Barlow Semi Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .contact-form-container h2 {
+    font: normal normal 800 22px/26px "Barlow Semi Condensed";
+  }
+}
 .contact-form-container input[type=email] {
   width: 300px;
   height: 30px;
@@ -4853,7 +4869,7 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .header-bckgnd__bird {
     top: 80px;
-    left: calc(50vw - 110px);
+    left: calc(50vw - 125px);
   }
 }
 .header-bckgnd__bird__img {
@@ -4861,12 +4877,12 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-bckgnd__bird__img {
-    width: 220px;
+    width: 250px;
   }
 }
 @media (max-width: 767px) {
   .header-bckgnd__bird__img {
-    width: 220px;
+    width: 250px;
   }
 }
 
