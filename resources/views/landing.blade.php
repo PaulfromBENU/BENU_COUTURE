@@ -141,11 +141,12 @@
                 </div>
             </div>
             <div class="text-center landing-footer__copyright">
-                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> Développement&nbsp;: BENU Village ASBL
+                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> & Développement&nbsp;: BENU Village ASBL
             </div>
         </footer>
     </main>
 
+    <!-- No layout to reduce weight, cannot use js from app  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $(function() {
@@ -154,9 +155,14 @@
                 let newTop = '130px';
                 $('#header-bird-pic').css('top', newTop);
                 setInterval(function() {
-                    newTop = 60 + 150*Math.random();
-                    newTop += 'px';
-                    $('#header-bird-pic').css('top', newTop);
+                    if(window.innerWidth >= 1024) {
+                        newTop = 60 + 150*Math.random();
+                        newTop += 'px';
+                        $('#header-bird-pic').css('top', newTop);
+                    } else {
+                        newTop = '80px';
+                        $('#header-bird-pic').css('top', newTop);
+                    }
                 }, 2500);
             }
         });

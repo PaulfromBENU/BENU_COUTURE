@@ -7,7 +7,7 @@
 	@php $desc_query = "description_".app()->getLocale(); @endphp
 
 	<h4 class="text-center care__grid__title">{{ __('services.care-category-1') }}</h4>
-	<div class="care__grid flex justify-between flex-wrap">
+	<div class="care__grid flex justify-between flex-wrap mb-10">
 		@foreach($wash_recommendations as $wash_recommendation)
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
@@ -21,7 +21,7 @@
 	</div>
 
 	<h4 class="text-center care__grid__title">{{ __('services.care-category-2') }}</h4>
-	<div class="care__grid flex justify-between flex-wrap">
+	<div class="care__grid flex justify-between flex-wrap mb-10">
 		@foreach($dry_recommendations as $dry_recommendation)
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">
@@ -35,7 +35,7 @@
 	</div>
 
 	<h4 class="text-center care__grid__title">{{ __('services.care-category-3') }}</h4>
-	<div class="care__grid flex justify-between flex-wrap">
+	<div class="care__grid flex justify-between flex-wrap mb-10">
 		@foreach($iron_recommendations as $iron_recommendation)
 		<div class="care__grid__box">
 			<div class="care__grid__box__img-container text-center flex flex-col justify-center">

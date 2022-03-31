@@ -5478,8 +5478,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./landing_bird_animation */ "./resources/js/landing_bird_animation.js");
-
 __webpack_require__(/*! ./header_creations_menu */ "./resources/js/header_creations_menu.js");
 
 __webpack_require__(/*! ./header_scroll_behaviour */ "./resources/js/header_scroll_behaviour.js");
@@ -5984,24 +5982,6 @@ $(function () {
   Livewire.on('activateInputs', function () {
     activateInputsDynamicBehaviour();
   });
-});
-
-/***/ }),
-
-/***/ "./resources/js/landing_bird_animation.js":
-/*!************************************************!*\
-  !*** ./resources/js/landing_bird_animation.js ***!
-  \************************************************/
-/***/ (() => {
-
-$(function () {
-  var newTop = '130px';
-  $('#header-bird-pic').css('top', newTop);
-  setInterval(function () {
-    newTop = 60 + 150 * Math.random();
-    newTop += 'px';
-    $('#header-bird-pic').css('top', newTop);
-  }, 2500);
 });
 
 /***/ }),

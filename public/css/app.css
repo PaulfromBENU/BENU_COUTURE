@@ -2985,13 +2985,13 @@ input[type=checkbox]:focus {
 .care__grid__box__txt {
   width: 100%;
   text-align: center;
-  font: normal normal 600 22px/28px "Barlow Condensed";
+  font: normal normal 600 16px/18px "Barlow Condensed";
   letter-spacing: 0px;
 }
 .care__grid__title {
   color: #D41C1B;
-  font: normal normal 700 22px/28px "Barlow Condensed";
-  margin-bottom: 40px;
+  font: normal normal 700 30px/40px "Barlow Condensed";
+  margin-bottom: 30px;
   padding-top: 20px;
 }
 
