@@ -36,6 +36,11 @@ class DashboardNavigation extends Component
     public $new_password_confirmation;
     public $show_confirmation;
 
+    // Delete User
+    public $delete_confirm;
+    public $delete_feedback;
+    public $confirm_delete;
+
     protected $queryString = ['section' => ['except' => '', 'except' => 'overview']];
 
     protected function rules()
@@ -50,6 +55,8 @@ class DashboardNavigation extends Component
             'old_password' => ['nullable', Rules\Password::defaults()],
             'new_password' => ['nullable', Rules\Password::defaults()],
             'new_password_confirmation' => ['nullable', Rules\Password::defaults()],
+            "delete_confirm" => "nullable|boolean",
+            "delete_feedback" => "nullable|string|max:1000",
         ];
     }
 
@@ -61,6 +68,7 @@ class DashboardNavigation extends Component
             $this->fillUserInfo();
         }
         $this->show_confirmation = 0;
+        $this->confirm_delete = 0;
     }
 
     public function getWishlistArticles()
@@ -184,6 +192,34 @@ class DashboardNavigation extends Component
             $this->fillUserInfo();
             $this->show_confirmation = 1;
         }
+    }
+
+    public function confirmDelete($status)
+    {
+        if ($status == 1) {
+            $this->confirm_delete = 1;
+        } else {
+            $this->confirm_delete = 0;
+        }
+    }
+
+    public function deleteUser()
+    {
+        $this->validate();
+        if ($this->delete_confirm == true) {
+            auth()->user()->delete_confirmation = 1;
+        }
+        if ($this->delete_feedback !== null) {
+            auth()->user()->delete_feedback = $this->delete_feedback;
+        }
+        auth()->user()->save();
+
+        // auth()->user()->addresses()->delete();
+        // auth()->user()->kulturpasses()->delete();
+        auth()->user()->wishlistArticles()->detach();
+        auth()->user()->delete();
+
+        return redirect()->route('home')->with('error', "__('dashboard.delete-confirmation')");
     }
 
     public function render()

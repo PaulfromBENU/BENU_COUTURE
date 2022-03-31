@@ -145,6 +145,7 @@ class RegisteredUserController extends Controller
             'origin' => 'couture',
             'client_number' => $client_number,
             'general_comment' => "No comment",
+            'delete_feedback' => "",
         ]);
 
         //User creation was required to establish user_id

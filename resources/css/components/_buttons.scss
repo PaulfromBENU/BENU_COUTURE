@@ -156,6 +156,19 @@
 			border-color: $dark-bg;
 		}
 	}
+	&--fit {
+		height: fit-content;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	&--grey {
+		background: grey;
+		color: white;
+		border-color: grey;
+		&:hover {
+			color: grey;
+		}
+	}
 }
 
 .btn-dashboard-plain {

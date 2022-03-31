@@ -439,6 +439,21 @@ input[type=checkbox]:focus {
   color: #FFFFFF;
   border-color: #2E1414;
 }
+.btn-couture-plain--fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.btn-couture-plain--grey {
+  background: grey;
+  color: white;
+  border-color: grey;
+}
+.btn-couture-plain--grey:hover {
+  color: grey;
+}
 
 .btn-dashboard-plain {
   display: inline-block;
@@ -4156,6 +4171,18 @@ input[type=checkbox]:focus {
   font: normal normal 700 22px/26px "Barlow Condensed";
   margin-bottom: 15px;
   margin-top: 20px;
+}
+.dashboard-delete input[type=checkbox] {
+  border-radius: 4px;
+}
+.dashboard-delete textarea {
+  border-color: lightgrey;
+  border-radius: 4px;
+}
+.dashboard-delete textarea:focus {
+  border-color: #D41C1B;
+  outline: none;
+  box-shadow: none;
 }
 
 .sell-form__input-group {

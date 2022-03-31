@@ -241,4 +241,16 @@
 		margin-bottom: 15px;
 		margin-top: 20px;
 	}
+	input[type="checkbox"] {
+		border-radius: 4px;
+	}
+	textarea {
+		border-color: lightgrey;
+		border-radius: 4px;
+		&:focus {
+			border-color: $primary-color;
+			outline: none;
+			box-shadow: none;
+		}
+	}
 }
