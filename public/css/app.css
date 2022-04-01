@@ -275,6 +275,56 @@ input[type=checkbox]:focus {
   fill: #FFFFFF;
 }
 
+.tooltip {
+  position: relative;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background: #D41C1B;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Barlow Condensed";
+}
+.tooltip .tooltiptext--left {
+  top: 10px;
+  left: -215px;
+}
+.tooltip .tooltiptext--left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border: 5px solid transparent;
+  border-left-color: #D41C1B;
+}
+.tooltip .tooltiptext--top {
+  top: -27px;
+  left: calc(50% - 90px);
+}
+.tooltip .tooltiptext--top::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: #D41C1B;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 .btn-large {
   text-transform: uppercase;
   width: 333px;

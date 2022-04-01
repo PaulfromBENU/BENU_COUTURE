@@ -63,6 +63,9 @@
             </ul>
             <div class="dashboard__nav__logout">
                 <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn-couture-plain">{{ __('dashboard.nav-logout') }}</button>
+                <form id="logout-form" action="{{ route('logout', ['locale' => app()->getLocale()]) }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </div>
     </div>

@@ -64,10 +64,16 @@
                 @endif
             </div>
             @else
-            <div class="article-overview__footer__heart">
-                <div class="article-overview__footer__heart__icon" style="color: grey;">
+            <div class="article-overview__footer__heart tooltip" wire:click.prevent.stop="toggleWishlist">
+                <div class="article-overview__footer__heart__icon">
                     <i class="far fa-heart"></i>
                 </div>
+                <div class="article-overview__footer__heart__icon article-overview__footer__heart__icon--hovered">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <span class="tooltiptext tooltiptext--left">
+                    {!! __('models.please-login') !!}
+                </span>
             </div>
             @endauth
         </div>

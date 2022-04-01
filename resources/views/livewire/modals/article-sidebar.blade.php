@@ -67,10 +67,16 @@
                     @endif
                 </div>
                 @else
-                <div class="article-sidebar__content__wishlist">
-                    <div class="article-sidebar__content__wishlist__icon" style="color: grey;">
+                <div class="article-sidebar__content__wishlist tooltip" wire:click.prevent.stop="toggleWishlist">
+                    <div class="article-sidebar__content__wishlist__icon">
                         <i class="far fa-heart"></i>
                     </div>
+                    <div class="article-sidebar__content__wishlist__icon article-sidebar__content__wishlist__icon--hovered">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="tooltiptext tooltiptext--top">
+                        {!! __('models.please-login') !!}
+                    </span>
                 </div>
                 @endauth
 
