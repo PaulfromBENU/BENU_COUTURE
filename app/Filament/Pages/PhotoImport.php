@@ -39,11 +39,13 @@ class PhotoImport extends Page
 
     protected static ?string $title = 'Import pictures';
  
-    protected static ?string $navigationLabel = 'Importation photo';
+    protected static ?string $navigationLabel = 'New photo importation';
      
     protected static ?string $slug = 'importation-photo';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?string $navigationGroup = 'Data Importation';
+
+    protected static ?int $navigationSort = 1;
 
     public $all_creations;
     public $existing_variations;

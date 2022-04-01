@@ -20,7 +20,7 @@ class GeneralConditionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     public static function form(Form $form): Form
     {

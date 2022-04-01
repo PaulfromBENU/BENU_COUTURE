@@ -19,11 +19,15 @@ class Selling extends Page
 
     protected static string $view = 'filament.pages.selling';
 
-    protected static ?string $title = 'Vendre une variation';
+    protected static ?string $title = 'Sell a variation';
  
-    protected static ?string $navigationLabel = 'Interface de vente';
+    protected static ?string $navigationLabel = 'Sale interface';
      
-    protected static ?string $slug = 'interface-vente';
+    protected static ?string $slug = 'sale-interface';
+
+    protected static ?string $navigationGroup = 'Seller & Sales';
+
+    protected static ?int $navigationSort = 1;
 
     public $lines_number;
     public $articles_sold;

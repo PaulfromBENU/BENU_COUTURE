@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class CompositionResource extends Resource
 {
-    protected static ?string $label = 'matériau pour les articles';
-    protected static ?string $pluralLabel = 'matériaux pour les articles';
+    protected static ?string $label = 'variation composition';
+    protected static ?string $pluralLabel = 'variation composition';
 
     protected static ?string $model = Composition::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-beaker';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     protected static function shouldRegisterNavigation(): bool
     {

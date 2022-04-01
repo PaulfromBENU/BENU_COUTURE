@@ -23,9 +23,9 @@ class ArticleResource extends Resource
 
     protected static ?string $model = Article::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
 
-    protected static ?string $navigationGroup = 'Créations et Variations';
+    protected static ?string $navigationGroup = 'Creations & Variations';
 
     protected static function shouldRegisterNavigation(): bool
     {

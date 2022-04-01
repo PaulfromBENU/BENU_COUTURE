@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class SizeResource extends Resource
 {
-    protected static ?string $label = 'taille pour les articles';
-    protected static ?string $pluralLabel = 'tailles pour les articles';
+    protected static ?string $label = 'variation size';
+    protected static ?string $pluralLabel = 'variation sizes';
 
     protected static ?string $model = Size::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-arrows-expand';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     protected static function shouldRegisterNavigation(): bool
     {

@@ -36,6 +36,11 @@
                     </a>
                 </li>
                 <li>
+                    <a wire:click="changeSection('vouchers')" class="btn-slider-left dashboard__nav__link @if($section == 'vouchers') dashboard__nav__link--active @endif">
+                        {{ __('dashboard.nav-vouchers') }}
+                    </a>
+                </li>
+                <li>
                     <a wire:click="changeSection('addresses')" class="btn-slider-left dashboard__nav__link @if($section == 'addresses') dashboard__nav__link--active @endif">
                         {{ __('dashboard.nav-addresses') }}
                     </a>
@@ -85,6 +90,10 @@
 
             @case('wishlist')
                 @include('includes.dashboard.wishlist')
+                @break
+
+            @case('vouchers')
+                @include('includes.dashboard.vouchers')
                 @break
 
             @case('addresses')

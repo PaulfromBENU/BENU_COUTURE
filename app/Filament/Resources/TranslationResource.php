@@ -20,7 +20,7 @@ class TranslationResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-translate';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     protected static function shouldRegisterNavigation(): bool
     {

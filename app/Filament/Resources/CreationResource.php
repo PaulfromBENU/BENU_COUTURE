@@ -18,9 +18,9 @@ class CreationResource extends Resource
 {
     protected static ?string $model = Creation::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
 
-    protected static ?string $navigationGroup = 'Créations et Variations';
+    protected static ?string $navigationGroup = 'Creations & Variations';
 
     protected static function shouldRegisterNavigation(): bool
     {

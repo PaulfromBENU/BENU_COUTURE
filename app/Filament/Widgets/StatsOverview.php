@@ -61,27 +61,27 @@ class StatsOverview extends BaseWidget
         }
 
         return [
-            Card::make('Nombre d\'utilisateurs inscrits', User::count())
-            ->description('Sur 8 jours')
+            Card::make('Number of users registered', User::count())
+            ->description('Over 8 days')
             ->descriptionIcon($users_icon)
             ->chart($last_users_count)
             ->color($user_color),
-            Card::make('Nombre total de variations', Article::count())
-            ->description('Sur 8 jours')
+            Card::make('Total number of variations', Article::count())
+            ->description('Over 8 days')
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($variations_count)
             ->color('success'),
-            Card::make('Variations vendues (total)', $sold_articles_total)
-            ->description('Sur 8 jours')
+            Card::make('Variations sold (total)', $sold_articles_total)
+            ->description('Over 8 days')
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($sold_articles_count)
             ->color('success'),
-            Card::make('Variations en stock', $articles_in_stock)
-            ->description('Sur 8 jours')
+            Card::make('Variations in stock', $articles_in_stock)
+            ->description('Over 8 days')
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($articles_in_stock_count)
             ->color('success'),
-            Card::make('Traductions manquantes', Translation::whereColumn('translation_key', 'de')->count()),
+            Card::make('Missing translations', Translation::whereColumn('translation_key', 'de')->count()),
         ];
     }
 }

@@ -14,14 +14,14 @@ use Filament\Tables;
 
 class ItemOrderResource extends Resource
 {
-    protected static ?string $label = 'demande de petits objets';
-    protected static ?string $pluralLabel = 'demandes de petits objets';
+    protected static ?string $label = 'small items order';
+    protected static ?string $pluralLabel = 'small items orders';
 
     protected static ?string $model = ItemOrder::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-color-swatch';
 
-    protected static ?string $navigationGroup = 'Utilisateurs';
+    protected static ?string $navigationGroup = 'Users';
 
     protected static ?int $navigationSort = 4;
 

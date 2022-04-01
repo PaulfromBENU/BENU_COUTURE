@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class MaskOrderResource extends Resource
 {
-    protected static ?string $label = 'demande de masques';
-    protected static ?string $pluralLabel = 'demandes de masques';
+    protected static ?string $label = 'mask order';
+    protected static ?string $pluralLabel = 'mask orders';
 
     protected static ?string $model = MaskOrder::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-shield-check';
 
-    protected static ?string $navigationGroup = 'Utilisateurs';
+    protected static ?string $navigationGroup = 'Users';
 
     protected static ?int $navigationSort = 3;
 

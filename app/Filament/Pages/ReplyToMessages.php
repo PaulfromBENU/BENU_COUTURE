@@ -19,7 +19,7 @@ class ReplyToMessages extends Page
      
     protected static ?string $slug = 'reply-to-messages';
 
-    protected static ?string $navigationGroup = 'Utilisateurs';
+    protected static ?string $navigationGroup = 'Users';
 
     protected static ?int $navigationSort = 1;
 

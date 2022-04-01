@@ -23,11 +23,11 @@ class MessagesOverview extends BaseWidget
     protected function getCards(): array
     {
         return [
-            Card::make('Messages utilisateurs', ContactMessage::where('is_answered', '0')->count())
+            Card::make('Unanswered user messages', ContactMessage::where('is_answered', '0')->where('closed', '0')->count())
             ->color('success'),
-            Card::make('Demandes de masques', MaskOrder::where('is_read', '0')->count())
+            Card::make('Mask orders', MaskOrder::where('is_read', '0')->count())
             ->color('success'),
-            Card::make("Demandes de petits articles", ItemOrder::where('is_read', '0')->count())
+            Card::make("Small articles orders", ItemOrder::where('is_read', '0')->count())
             ->color('success'),
         ];
     }

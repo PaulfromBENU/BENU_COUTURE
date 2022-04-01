@@ -14,14 +14,14 @@ use Filament\Tables;
 
 class CareRecommendationResource extends Resource
 {
-    protected static ?string $label = "conseil d'entretien";
-    protected static ?string $pluralLabel = "conseils d'entretien";
+    protected static ?string $label = "care recommendation";
+    protected static ?string $pluralLabel = "care recommendations";
 
     protected static ?string $model = CareRecommendation::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-adjustments';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     protected static function shouldRegisterNavigation(): bool
     {

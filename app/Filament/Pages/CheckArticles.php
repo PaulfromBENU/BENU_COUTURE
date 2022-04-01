@@ -25,11 +25,13 @@ class CheckArticles extends Page
 
     protected static ?string $title = 'Check and update articles';
  
-    protected static ?string $navigationLabel = 'Vérification Articles';
+    protected static ?string $navigationLabel = 'New Variations Check';
      
     protected static ?string $slug = 'check-articles';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationGroup = 'Data Importation';
+
+    protected static ?int $navigationSort = 2;
 
     public $unchecked_articles;
     public $size_ids = [];

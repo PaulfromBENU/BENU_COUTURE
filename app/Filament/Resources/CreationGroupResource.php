@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class CreationGroupResource extends Resource
 {
-    protected static ?string $label = 'type pour les créations';
-    protected static ?string $pluralLabel = 'types pour les créations';
+    protected static ?string $label = 'creation type';
+    protected static ?string $pluralLabel = 'creation types';
 
     protected static ?string $model = CreationGroup::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-home';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     protected static function shouldRegisterNavigation(): bool
     {

@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class ShopResource extends Resource
 {
-    protected static ?string $label = 'point de vente';
-    protected static ?string $pluralLabel = 'points de vente';
+    protected static ?string $label = 'shop';
+    protected static ?string $pluralLabel = 'shops';
 
     protected static ?string $model = Shop::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-office-building';
 
-    protected static ?string $navigationGroup = 'Shops & Partenaires';
+    protected static ?string $navigationGroup = 'Shops & Partners';
 
     protected static function shouldRegisterNavigation(): bool
     {

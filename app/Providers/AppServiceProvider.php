@@ -39,5 +39,16 @@ class AppServiceProvider extends ServiceProvider
         Filament::registerStyles([
             asset('css/app.css'),
         ]);
+
+        Filament::serving(function () {
+            Filament::registerNavigationGroups([
+                'Seller & Sales',
+                'Users',
+                'Creations & Variations',
+                'Data Importation',
+                'Site Data',
+                'Shops & Partners',
+            ]);
+        });
     }
 }

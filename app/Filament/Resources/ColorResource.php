@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class ColorResource extends Resource
 {
-    protected static ?string $label = 'couleur pour les articles';
-    protected static ?string $pluralLabel = 'couleurs pour les articles';
+    protected static ?string $label = 'variation color';
+    protected static ?string $pluralLabel = 'variation colors';
 
     protected static ?string $model = Color::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-color-swatch';
 
-    protected static ?string $navigationGroup = 'Données générales';
+    protected static ?string $navigationGroup = 'Site Data';
 
     protected static function shouldRegisterNavigation(): bool
     {

@@ -4185,6 +4185,20 @@ input[type=checkbox]:focus {
   box-shadow: none;
 }
 
+.dashboard-vouchers {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 100%;
+  position: relative;
+}
+.dashboard-vouchers h2 {
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
 .sell-form__input-group {
   border-bottom: solid 1px grey;
 }

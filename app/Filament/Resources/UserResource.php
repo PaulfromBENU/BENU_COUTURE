@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class UserResource extends Resource
 {
-    protected static ?string $label = 'liste des utilisateurs';
-    protected static ?string $pluralLabel = 'liste des utilisateurs';
+    protected static ?string $label = 'users list';
+    protected static ?string $pluralLabel = 'users list';
 
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
-    protected static ?string $navigationGroup = 'Utilisateurs';
+    protected static ?string $navigationGroup = 'Users';
 
     protected static ?int $navigationSort = 5;
 

@@ -20,7 +20,7 @@ class UserController extends Controller
 
     public function show(string $locale, Request $request)
     {
-        if (!isset($request->section) || !in_array($request->section, ['overview', 'addresses', 'orders', 'communications', 'returns', 'wishlist', 'conditions', 'details', 'delete'])) {
+        if (!isset($request->section) || !in_array($request->section, ['overview', 'addresses', 'orders', 'communications', 'returns', 'wishlist', 'vouchers', 'conditions', 'details', 'delete'])) {
             $section = 'overview';
         } else {
             $section = $request->section;

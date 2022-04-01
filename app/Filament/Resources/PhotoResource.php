@@ -13,14 +13,14 @@ use Filament\Tables;
 
 class PhotoResource extends Resource
 {
-    protected static ?string $label = 'photo pour les variations';
-    protected static ?string $pluralLabel = 'photos pour les variations';
+    protected static ?string $label = 'all variation pictures';
+    protected static ?string $pluralLabel = 'all variation pictures';
 
     protected static ?string $model = Photo::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-photograph';
 
-    protected static ?string $navigationGroup = 'Créations et Variations';
+    protected static ?string $navigationGroup = 'Creations & Variations';
 
     protected static function shouldRegisterNavigation(): bool
     {

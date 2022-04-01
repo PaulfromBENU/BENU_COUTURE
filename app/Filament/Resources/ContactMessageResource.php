@@ -20,7 +20,7 @@ class ContactMessageResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-alt-2';
 
-    protected static ?string $navigationGroup = 'Utilisateurs';
+    protected static ?string $navigationGroup = 'Users';
 
     protected static ?int $navigationSort = 2;
 
