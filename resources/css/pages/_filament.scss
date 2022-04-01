@@ -224,3 +224,89 @@
 		}
 	}
 }
+
+
+.use-voucher {
+	&__code-selection {
+		padding-bottom: 10px;
+		border-bottom: 1px solid lightgrey;
+		select {
+			background: transparent;
+			color: lightgrey;
+			min-width: 15vw;
+			border-radius: 3px;
+			margin-top: 5px;
+			margin-bottom: 15px;
+			margin-right: 15px;
+			option {
+				background: #111827;
+			}
+		}
+	}
+	&__info {
+		font-size: 1.2rem;
+		margin-right: 30px;
+	}
+	&__info-status {
+		font-size: 1.4rem;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+	&__euro-symbol {
+		font-size: 1.3rem;
+		top: 7px;
+		left: 5px;
+	}
+	&__status {
+		border: solid 2px lightgrey;
+		padding: 20px;
+	}
+	&__validate-price {
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+		color: lightgrey;
+		border: solid 1px lightgrey;
+		padding: 0px 10px;
+		font-size: 1.5rem;
+		transition: all 0.2s;
+		&:hover {
+			background: lightgrey;
+			color: black;
+		}
+	}
+	h4 {
+		margin-top: 40px;
+		font-size: 1.4rem;
+		margin-bottom: 5px;
+		color: rgb(234 179 8/var(--tw-bg-opacity));
+	}
+	input[type="text"] {
+		border-radius: 3px;
+		background: transparent;
+		margin-bottom: 10px;
+		font-weight: 500;
+		padding-left: 25px;
+		font-size: 1.3rem;
+		&:focus {
+			outline: none;
+			box-shadow: none;
+			border-color: rgb(234 179 8/var(--tw-bg-opacity));
+		}
+	}
+	button {
+		background: transparent;
+		padding: 5px 15px;
+		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		transition: all 0.2s;
+		color: lightgrey;
+		border-radius: 5px;
+		font-size: 1.3rem;
+		&:hover {
+			background: rgb(234 179 8/var(--tw-bg-opacity));
+			color: $white;
+		}
+	}
+}

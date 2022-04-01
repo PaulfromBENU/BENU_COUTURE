@@ -67,7 +67,9 @@ class ModelController extends Controller
         $creation_articles = $this->getAvailableArticles($creation);
 
         // To be updated when relationship with shops including stock has been established
-        $sold_articles = $this->getSoldArticles($creation)->slice(0, 4);
+        $all_sold_articles = $this->getSoldArticles($creation);
+        $sold_articles = $all_sold_articles->slice(0, 4);
+        $sold_articles_total = $all_sold_articles->count();
 
         //Select pictures to display next to the creation description
         $model_pictures = collect([]);
@@ -119,6 +121,7 @@ class ModelController extends Controller
             'localized_description' => $localized_desc, 
             'articles' => $creation_articles, 
             'sold_articles' => $sold_articles, 
+            'sold_articles_total' => $sold_articles_total,
             'keywords' => $keywords,
             'model_pictures' => $model_pictures,
             'filter_names' => $filter_names,
