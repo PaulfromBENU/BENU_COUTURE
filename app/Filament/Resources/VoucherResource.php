@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\VoucherResource\Pages;
 use App\Filament\Resources\VoucherResource\RelationManagers;
+use App\Models\Voucher;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +14,6 @@ use Filament\Forms\Components\Select;
 use Illuminate\Support\Str;
 
 use App\Models\User;
-use App\Models\Voucher;
 
 class VoucherResource extends Resource
 {
@@ -29,7 +29,7 @@ class VoucherResource extends Resource
     {
         $new_code = substr(str_shuffle(Str::random(30)."0123456789"), 0, 8);
 
-        while (Voucher::where('code', $new_code)->count() > 0) {
+        while (Voucher::where('unique_code', $new_code)->count() > 0) {
             $new_code = substr(str_shuffle(Str::random(30)."0123456789"), 0, 8);
         }
 
@@ -40,12 +40,14 @@ class VoucherResource extends Resource
                 Forms\Components\TextInput::make('remaining_value')
                     ->required(),
                 Select::make('user_id')
-                    ->label('User email')
-                    ->options(User::all()->pluck('email', 'id')),
-                Forms\Components\DateTimePicker::make('expires_on'),
-                Forms\Components\TextInput::make('code')
-                    ->default($new_code)
-                    ->required(),
+                    ->label('User e-mail (optionnal)')
+                    ->options(User::all()->pluck('email', 'id'))
+                    ->searchable(),
+                Forms\Components\DateTimePicker::make('expires_on')->hidden(),
+                Forms\Components\TextInput::make('unique_code')
+                    ->required()
+                    ->maxLength(10)
+                    ->default($new_code),
             ]);
     }
 
@@ -53,13 +55,13 @@ class VoucherResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('code'),
+                Tables\Columns\TextColumn::make('unique_code'),
+                Tables\Columns\TextColumn::make('initial_value')->money('eur'),
+                Tables\Columns\TextColumn::make('remaining_value')->money('eur'),
+                Tables\Columns\TextColumn::make('user.email')->label('User email'),
+                Tables\Columns\TextColumn::make('user.last_name')->label('User name'),
                 Tables\Columns\TextColumn::make('expires_on')
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('initial_value'),
-                Tables\Columns\TextColumn::make('remaining_value'),
-                Tables\Columns\TextColumn::make('user.email')->label('E-mail utilisateur'),
-                Tables\Columns\TextColumn::make('user.last_name')->label('Nom utilisateur'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
             ])

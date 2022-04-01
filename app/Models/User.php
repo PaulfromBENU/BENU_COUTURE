@@ -107,4 +107,9 @@ class User extends Authenticatable implements HasName, FilamentUser
     {
         return ContactMessage::where('email', $this->email)->where('closed', '0');
     }
+
+    public function vouchers()
+    {
+        return $this->hasMany(Voucher::class);
+    }
 }

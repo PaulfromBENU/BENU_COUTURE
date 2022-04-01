@@ -12,6 +12,10 @@ class Voucher extends Model
     // Choice of the database
     protected $connection = 'mysql_common';
 
-    protected $guarded = ['code'];
+    protected $guarded = [];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

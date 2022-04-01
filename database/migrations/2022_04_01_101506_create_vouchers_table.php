@@ -16,7 +16,7 @@ class CreateVouchersTable extends Migration
         Schema::connection('mysql_common')->create('vouchers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('code')->unique();
+            $table->string('unique_code')->unique();
             $table->foreignId('user_id')->onUpdate('cascade')->nullable();
             $table->decimal('initial_value', $precision = 6, $scale = 2)->default('0');
             $table->decimal('remaining_value', $precision = 6, $scale = 2)->default('0');
