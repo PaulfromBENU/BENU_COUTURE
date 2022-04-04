@@ -1,6 +1,6 @@
 <div>
     <div class="all-models__filters-container">
-        <div class="all-models__filters flex justify-start benu-container">
+        <div class="all-models__filters flex justify-between benu-container">
             <div class="flex justify-start">
                 <div class="all-models__filters__filter flex" id="filter-size">
                     <p>{{ __('models.filter-size') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
@@ -8,9 +8,13 @@
                 <div class="all-models__filters__filter flex" id="filter-color">
                     <p>{{ __('models.filter-color') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
-                <div class="all-models__filters__filter flex" id="filter-shops">
+                <!-- <div class="all-models__filters__filter flex" id="filter-shops">
                     <p>{{ __('models.filter-shop') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
-                </div>
+                </div> -->
+            </div>
+
+            <div class="all-models__filters__filter flex" style="margin-right: 5px;" id="filter-order">
+                <p>{{ __('models.filter-order-by') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
             </div>
         </div>
 
