@@ -31,6 +31,21 @@ class GeneralController extends Controller
         return view('landing');
     }
 
+    public function landingEn()
+    {
+        return view('landing-en');
+    }
+
+    public function landingDe()
+    {
+        return view('landing-de');
+    }
+
+    public function landingLu()
+    {
+        return view('landing-lu');
+    }
+
     public function showFullStory()
     {
         return view('full-story');

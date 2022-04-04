@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\App;
 
 if (app('env') == 'landing') {
 	Route::get('/', 'GeneralController@landing')->name('landing');
+	Route::get('/en', 'GeneralController@landingEn')->name('landing-en');
+	Route::get('/de', 'GeneralController@landingDe')->name('landing-de');
+	Route::get('/lu', 'GeneralController@landingLu')->name('landing-lu');
 } else {
 	// Home does not need URI translation. Any locale may land on this page, middleware will ensure locale is prepended to the URI.
 	// Same for auth requests, no translation needed.
@@ -67,6 +70,9 @@ if (app('env') == 'landing') {
 
 		// Test of the landing page
 		Route::get('/test-landing', 'GeneralController@landing')->name('landing');
+		Route::get('/test-landing-en', 'GeneralController@landingEn')->name('landing-en');
+		Route::get('/test-landing-de', 'GeneralController@landingDe')->name('landing-de');
+		Route::get('/test-landing-lu', 'GeneralController@landingLu')->name('landing-lu');
 	});
 
 	Route::group([
