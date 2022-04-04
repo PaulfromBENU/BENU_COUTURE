@@ -13,9 +13,9 @@
                 </div> -->
             </div>
 
-            <div class="all-models__filters__filter flex" style="margin-right: 5px;" id="filter-order">
+            <!-- <div class="all-models__filters__filter flex" style="margin-right: 5px;" id="filter-order">
                 <p>{{ __('models.filter-order-by') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
-            </div>
+            </div> -->
         </div>
 
         @include('includes.model.article_filters')
