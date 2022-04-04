@@ -43,7 +43,7 @@
         {{ __('dashboard.overview-update-demands') }}
     </p>
     <p class="dashboard__content__box__bottom-link">
-        <a wire:click="changeSection('demands')" class="btn-dashboard-plain">{{ __('dashboard.overview-all-demands') }}</a>
+        <a wire:click="changeSection('communications')" class="btn-dashboard-plain">{{ __('dashboard.overview-all-demands') }}</a>
     </p>
 </div>
 <div class="dashboard__content__box dashboard__content__box--normal">
