@@ -6,6 +6,7 @@ use Livewire\Component;
 use Illuminate\Support\Str;
 
 use App\Models\Article;
+use App\Models\Cart;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -29,6 +30,7 @@ class ArticleSidebar extends Component
     public $is_wishlisted;
     public $article_description;
     public $full_desc;
+    public $sent_to_cart;
 
     protected $listeners = ['ArticleModalReady' => "loadArticleDetails"];
 
@@ -52,6 +54,13 @@ class ArticleSidebar extends Component
     public function loadArticleDetails(int $article_id)
     {
         $this->article_id = $article_id;
+
+        if (Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->article_id)) {
+            $this->sent_to_cart = 1;
+        } else {
+            $this->sent_to_cart = 0;
+        }
+
         $this->full_desc = 0;
         $this->content = 'overview';
         if(Article::where('id', $article_id)->count() > 0) {
@@ -144,6 +153,23 @@ class ArticleSidebar extends Component
             }
         }
         $this->emit('wishlistUpdated', $this->article->id);
+    }
+
+    public function addToCart()
+    {
+        $cart = Cart::firstOrNew([
+            'cart_id' => session('cart_id')
+        ]);
+        $cart->is_active = 1;
+        if (auth()->check()) {
+            $cart->user_id = auth()->user()->id;
+        }
+        $cart->status = 1;// 0 = created, 1 = currently updated, 2 = paying, 3 = paid, 4 = abandoned
+        if ($cart->save()) {
+            $cart->couture_variations()->attach($this->article_id);
+            $this->sent_to_cart = 1;
+            $this->emit('cartUpdated');
+        }
     }
 
     public function render()

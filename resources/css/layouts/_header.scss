@@ -163,6 +163,19 @@
 				&:hover {
 					fill: $primary-color;
 				}
+				&__cart-counter {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 22px;
+					height: 22px;
+					border-radius: 50%;
+					background-color: $primary-color;
+					color: $white;
+					font-size: 0.85rem;
+					text-align: center;
+					font-weight: 500;
+				}
 			}
 			&__lang-btn {
 				background-color: $primary-color-light;// lighten($primary-color, 50);

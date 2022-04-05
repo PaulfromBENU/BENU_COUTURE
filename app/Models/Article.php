@@ -60,6 +60,11 @@ class Article extends Model
         return $this->belongsToMany(CareRecommendation::class);
     }
 
+    public function carts()
+    {
+        return $this->belongsToMany(Cart::class, 'benu_common.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');
+    }
+
     // public function creation_category()
     // {
     //     return $this->hasOneThrough(CreationCategory::class, Creation::class);

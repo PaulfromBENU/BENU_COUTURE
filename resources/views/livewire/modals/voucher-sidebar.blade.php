@@ -90,9 +90,15 @@
                     <input type="hidden" name="voucher_value" wire:model="voucher_value">
                     <input type="hidden" name="voucher_type" wire:model="voucher_type">
 
+                    @if($sent_to_cart == 0)
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" type="submit">
                         {{ __('vouchers.add-to-cart') }}
                     </button>
+                    @else
+                    <div class="text-green-700 p-3 bg-green-200 mb-5 text-center">
+                        {{ __('vouchers.sent-to-cart') }}
+                    </div>
+                    @endif
                 </form>
 
                 <ul class="article-sidebar__content__list">

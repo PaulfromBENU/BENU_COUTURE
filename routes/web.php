@@ -29,7 +29,7 @@ if (app('env') == 'landing') {
 		'prefix' => '{locale?}',
 		'middleware' => 'setlocale'], function() {
 			Route::get('/', 'GeneralController@home')->name('home');
-			Route::get('/dashboard', 'UserController@show')->name('dashboard');
+			Route::get('/dashboard', 'UserController@show')->name('dashboard')->middleware('createcart');
 			Route::get('/dashboard/{any}', function() {
 				return redirect()->route('dashboard');
 			});
@@ -43,64 +43,75 @@ if (app('env') == 'landing') {
 		'prefix' => 'lu',
 		'middleware' => 'setlocale'], function() {
 
-		Route::get('/'.trans("slugs.models", [], "lu").'/{name?}', 'ModelController@show')->name('model-lu');
+		Route::get('/'.trans("slugs.models", [], "lu").'/{name?}', 'ModelController@show')->name('model-lu')->middleware('createcart');
 		Route::get('/'.trans("slugs.models", [], "lu").'/{name}/'.trans("slugs.sold", [], "lu"), 'ModelController@soldItems')->name('sold-lu');
 		Route::get('/'.trans("slugs.client-support", [], "lu").'/{page?}', 'ContactController@showAll')->name('client-service-lu');
 		Route::get('/'.trans("slugs.full-story", [], "lu"), 'GeneralController@showFullStory')->name('full-story-lu');
 		Route::get('/'.trans("slugs.about", [], "lu"), 'GeneralController@showAbout')->name('about-lu');
 		Route::get('/'.trans("slugs.partners", [], "lu"), 'GeneralController@showPartners')->name('partners-lu');
-		Route::get('/'.trans("slugs.vouchers", [], "lu"), 'GeneralController@showVouchers')->name('vouchers-lu');
+		Route::get('/'.trans("slugs.vouchers", [], "lu"), 'GeneralController@showVouchers')->name('vouchers-lu')->middleware('createcart');
 		Route::get('/'.trans("slugs.news", [], "lu").'/{slug?}', 'GeneralController@showNews')->name('news-lu');
+
+		Route::get('/test-landing-lu', 'GeneralController@landingLu')->name('landing-lu');
+
+		Route::get('/'.trans("slugs.cart", [], "lu"), 'SaleController@showCart')->name('cart-lu')->middleware('createcart');
 	});
 
 	Route::group([
 		'prefix' => 'fr',
 		'middleware' => 'setlocale'], function() {
 
-		Route::get('/'.trans("slugs.models", [], "fr").'/{name?}', 'ModelController@show')->name('model-fr');
+		Route::get('/'.trans("slugs.models", [], "fr").'/{name?}', 'ModelController@show')->name('model-fr')->middleware('createcart');
 		Route::get('/'.trans("slugs.models", [], "fr").'/{name}/'.trans("slugs.sold", [], "fr"), 'ModelController@soldItems')->name('sold-fr');
 		Route::get('/'.trans("slugs.client-support", [], "fr").'/{page?}', 'ContactController@showAll')->name('client-service-fr');
 		Route::get('/'.trans("slugs.full-story", [], "fr"), 'GeneralController@showFullStory')->name('full-story-fr');
 		Route::get('/'.trans("slugs.about", [], "fr"), 'GeneralController@showAbout')->name('about-fr');
 		Route::get('/'.trans("slugs.partners", [], "fr"), 'GeneralController@showPartners')->name('partners-fr');
-		Route::get('/'.trans("slugs.vouchers", [], "fr"), 'GeneralController@showVouchers')->name('vouchers-fr');
+		Route::get('/'.trans("slugs.vouchers", [], "fr"), 'GeneralController@showVouchers')->name('vouchers-fr')->middleware('createcart');
 		Route::get('/'.trans("slugs.news", [], "fr").'/{slug?}', 'GeneralController@showNews')->name('news-fr');
 
 		Route::get('/import-creations', 'GeneralController@startImport');
 
 		// Test of the landing page
 		Route::get('/test-landing', 'GeneralController@landing')->name('landing');
-		Route::get('/test-landing-en', 'GeneralController@landingEn')->name('landing-en');
-		Route::get('/test-landing-de', 'GeneralController@landingDe')->name('landing-de');
-		Route::get('/test-landing-lu', 'GeneralController@landingLu')->name('landing-lu');
+
+		Route::get('/'.trans("slugs.cart", [], "fr"), 'SaleController@showCart')->name('cart-fr')->middleware('createcart');
 	});
 
 	Route::group([
 		'prefix' => 'en',
 		'middleware' => 'setlocale'], function() {
 
-		Route::get('/'.trans("slugs.models", [], "en").'/{name?}', 'ModelController@show')->name('model-en');
+		Route::get('/'.trans("slugs.models", [], "en").'/{name?}', 'ModelController@show')->name('model-en')->middleware('createcart');
 		Route::get('/'.trans("slugs.models", [], "en").'/{name}/'.trans("slugs.sold", [], "en"), 'ModelController@soldItems')->name('sold-en');
 		Route::get('/'.trans("slugs.client-support", [], "en").'/{page?}', 'ContactController@showAll')->name('client-service-en');
 		Route::get('/'.trans("slugs.full-story", [], "en"), 'GeneralController@showFullStory')->name('full-story-en');
 		Route::get('/'.trans("slugs.about", [], "en"), 'GeneralController@showAbout')->name('about-en');
 		Route::get('/'.trans("slugs.partners", [], "en"), 'GeneralController@showPartners')->name('partners-en');
-		Route::get('/'.trans("slugs.vouchers", [], "en"), 'GeneralController@showVouchers')->name('vouchers-en');
+		Route::get('/'.trans("slugs.vouchers", [], "en"), 'GeneralController@showVouchers')->name('vouchers-en')->middleware('createcart');
 		Route::get('/'.trans("slugs.news", [], "en").'/{slug?}', 'GeneralController@showNews')->name('news-en');
+
+		Route::get('/test-landing-en', 'GeneralController@landingEn')->name('landing-en');
+
+		Route::get('/'.trans("slugs.cart", [], "en"), 'SaleController@showCart')->name('cart-en')->middleware('createcart');
 	});
 
 	Route::group([
 		'prefix' => 'de',
 		'middleware' => 'setlocale'], function() {
 
-		Route::get('/'.trans("slugs.models", [], "de").'/{name?}', 'ModelController@show')->name('model-de');
+		Route::get('/'.trans("slugs.models", [], "de").'/{name?}', 'ModelController@show')->name('model-de')->middleware('createcart');
 		Route::get('/'.trans("slugs.models", [], "de").'/{name}/'.trans("slugs.sold", [], "de"), 'ModelController@soldItems')->name('sold-de');
 		Route::get('/'.trans("slugs.client-support", [], "de").'/{page?}', 'ContactController@showAll')->name('client-service-de');
 		Route::get('/'.trans("slugs.full-story", [], "de"), 'GeneralController@showFullStory')->name('full-story-de');
 		Route::get('/'.trans("slugs.about", [], "de"), 'GeneralController@showAbout')->name('about-de');
 		Route::get('/'.trans("slugs.partners", [], "de"), 'GeneralController@showPartners')->name('partners-de');
-		Route::get('/'.trans("slugs.vouchers", [], "de"), 'GeneralController@showVouchers')->name('vouchers-de');
+		Route::get('/'.trans("slugs.vouchers", [], "de"), 'GeneralController@showVouchers')->name('vouchers-de')->middleware('createcart');
 		Route::get('/'.trans("slugs.news", [], "de").'/{slug?}', 'GeneralController@showNews')->name('news-de');
+
+		Route::get('/test-landing-de', 'GeneralController@landingDe')->name('landing-de');
+
+		Route::get('/'.trans("slugs.cart", [], "de"), 'SaleController@showCart')->name('cart-de')->middleware('createcart');
 	});
 
 	Route::group([

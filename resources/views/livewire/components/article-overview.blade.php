@@ -30,7 +30,7 @@
             <p class="article-overview__footer__size">
                 {{ $article->size->value }}
             </p>
-            @if($article->color->name == 'multicolor')
+            @if($article->color->name == 'multicolored')
                 <div class="color-circle">
                     <img src="{{ asset('images/pictures/multicolor.png') }}">
                 </div>

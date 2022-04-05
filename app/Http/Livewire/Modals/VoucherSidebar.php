@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
 use App\Models\Article;
+use App\Models\Cart;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -24,6 +25,7 @@ class VoucherSidebar extends Component
 
     public $voucher_value;
     public $voucher_type;
+    public $sent_to_cart;
 
     protected $listeners = ['VoucherModalReady' => "loadVoucherDetails"];
 
@@ -45,6 +47,12 @@ class VoucherSidebar extends Component
     public function loadVoucherDetails(int $voucher_id)
     {
         $this->voucher_id = $voucher_id;
+
+        if (Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->voucher_id)) {
+            $this->sent_to_cart = 1;
+        } else {
+            $this->sent_to_cart = 0;
+        }
 
         if(Article::where('id', $voucher_id)->count() > 0) {
             $this->voucher = Article::find($voucher_id);
@@ -103,7 +111,22 @@ class VoucherSidebar extends Component
     public function addToCart()
     {
         $this->validate();
-        dd("Voucher with value ".$this->voucher_value."eur and format ".$this->voucher_type." ordered. Cart and order logic to be developped from here.");
+
+        $cart = Cart::firstOrNew([
+            'cart_id' => session('cart_id')
+        ]);
+        $cart->is_active = 1;
+        if (auth()->check()) {
+            $cart->user_id = auth()->user()->id;
+        }
+        $cart->status = 1;// 0 = created, 1 = currently updated, 2 = paying, 3 = paid, 4 = abandoned
+        if ($cart->save()) {
+            $cart->couture_variations()->attach($this->voucher_id, [
+                'value' => $this->voucher_value
+            ]);
+            $this->sent_to_cart = 1;
+            $this->emit('cartUpdated');
+        }
     }
 
     // public function updateMasksNumber($direction = "up")

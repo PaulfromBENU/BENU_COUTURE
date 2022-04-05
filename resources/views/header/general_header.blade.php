@@ -115,9 +115,7 @@
                         @endif
                     </li>
                     <li>
-                        <button class="header__main-menu__icons__btn">
-                            @svg('benu-icon-bag-cart')
-                        </button>
+                        @livewire('components.cart-header-icon')
                     </li>
                     <li>
                         <button class="header__main-menu__icons__lang-btn" id="lang-selector">
