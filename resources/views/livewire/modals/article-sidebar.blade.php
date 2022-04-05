@@ -128,9 +128,12 @@
                     @if($sent_to_cart == 0)
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" wire:click="addToCart">{{ __('sidebar.add-to-cart') }}</button>
                     @else
-                    <div class="text-green-700 p-3 bg-green-200 mb-5 text-center">
-                        {{ __('vouchers.sent-to-cart') }}
-                    </div>
+                    <p class="text-center mb-2 text-green-300">
+                        {{ __('vouchers.added-to-cart') }}
+                    </p>
+                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="btn-couture-plain article-sidebar__content__cart-btn">
+                        {{ __('vouchers.go-to-cart') }}
+                    </a>
                     @endif
                 @else
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" style="height: auto;">

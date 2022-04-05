@@ -95,9 +95,12 @@
                         {{ __('vouchers.add-to-cart') }}
                     </button>
                     @else
-                    <div class="text-green-700 p-3 bg-green-200 mb-5 text-center">
-                        {{ __('vouchers.sent-to-cart') }}
-                    </div>
+                    <p class="text-center mb-2">
+                        {{ __('vouchers.added-to-cart') }}&nbsp;!
+                    </p>
+                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn">
+                        {{ __('vouchers.go-to-cart') }}
+                    </a>
                     @endif
                 </form>
 
