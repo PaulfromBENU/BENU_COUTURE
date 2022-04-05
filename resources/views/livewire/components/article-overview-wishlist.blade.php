@@ -1,4 +1,4 @@
-<div class="article-overview-wishlist" wire:click="triggerSideBar">
+<div class="article-overview-wishlist">
     <div class="article-overview-wishlist__cap article-overview-wishlist__cap--red"></div>
     <div class="flex justify-start">
         <div class="article-overview-wishlist__img-container">
@@ -61,13 +61,20 @@
             <p class="article-overview-wishlist__footer__name">
                 {{ strtoupper($article->name) }}
             </p>
-            <div class="flex justify-between">
+            <div>
                 <p class="article-overview-wishlist__footer__price">
                     {{ $article->creation->price }}&euro;
                 </p>
             </div>
             <div>
-                <button class="btn-couture-plain btn-couture-plain--dark-hover article-overview-wishlist__footer__btn">{{ __('sidebar.add-to-cart') }}</button>
+                @if($sent_to_cart == 0)
+                <button class="btn-couture-plain btn-couture-plain--dark-hover article-overview-wishlist__footer__btn" wire:click.prevent.stop="addToCart">{{ __('sidebar.add-to-cart') }}</button>
+                @else
+                <!-- <p class="text-left mt-5">
+                    {{ __('vouchers.added-to-cart') }}
+                </p> -->
+                <a class="block btn-couture-plain btn-couture-plain--dark-hover btn-couture-plain--fit article-overview-wishlist__footer__btn" href="{{ route('cart-'.app()->getLocale()) }}">{{ __('sidebar.go-to-cart') }}</a>
+                @endif
             </div>
         </div>
     </div>
