@@ -85,6 +85,29 @@
 			<div>
 				@livewire('cart.cart-summary', ['cart_id' => $cart_id])
 			</div>
+
+			<div class="cart-client-service flex justify-center flex-wrap mb-10">
+				<div>
+					@svg('svg_conseil_tel')
+					<p>{{ __('cart.service-tel') }}</p>
+				</div>
+				<div>
+					@svg('svg_garantie_vie')
+					<p>{{ __('cart.service-warranty') }}</p>
+				</div>
+				<div>
+					@svg('svg_pickup_store')
+					<p>{{ __('cart.service-pickup') }}</p>
+				</div>
+				<div>
+					@svg('svg_voucher')
+					<p>{{ __('cart.service-voucher') }}</p>
+				</div>
+				<div>
+					@svg('svg_kulturpass')
+					<p>{{ __('cart.service-kulturpass') }}</p>
+				</div>
+			</div>
 		</section>
 	</div>
 @endsection
