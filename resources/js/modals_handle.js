@@ -57,4 +57,13 @@ $(function() {
             }
         }
     });
+
+    Livewire.on('activateGiftModal', article_id => {
+        showModal('general');
+        modalStatus = 'on';
+    });
+
+    Livewire.on('closeModal', function() {
+        clearAllModals();
+    })
 });

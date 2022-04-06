@@ -6051,6 +6051,13 @@ $(function () {
       }
     }
   });
+  Livewire.on('activateGiftModal', function (article_id) {
+    showModal('general');
+    modalStatus = 'on';
+  });
+  Livewire.on('closeModal', function () {
+    clearAllModals();
+  });
 });
 
 /***/ }),

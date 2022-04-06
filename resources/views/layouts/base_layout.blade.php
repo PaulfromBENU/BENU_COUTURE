@@ -58,7 +58,7 @@
 	@include('modals.connect_modal')
 
 	<!-- Central Modal -->
-    <div class="modal general-modal" id="general_modal" style="display: none;">
+    <div class="modal general-modal" id="general-modal" style="display: none;">
         @yield('modal')
     </div>
 

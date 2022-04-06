@@ -20,6 +20,10 @@
 	</div>
 @endsection
 
+@section('modal')
+	@livewire('cart.gift-modal', ['cart_id' => $cart_id])
+@endsection
+
 @section('main-content')
 <div class="flex justify-between benu-container mb-10 pb-10">
 	<section class="cart-content">

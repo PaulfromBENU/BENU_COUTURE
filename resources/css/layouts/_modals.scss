@@ -584,3 +584,11 @@
 	// 	color: $dark-text !important;
 	// }
 }
+
+
+.general-modal {
+	width: 60vw;
+	left: 20vw;
+	top: calc(50vh - 310px);
+	min-height: 20vh;
+}

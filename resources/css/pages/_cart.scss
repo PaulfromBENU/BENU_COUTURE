@@ -275,3 +275,147 @@
 		}
 	}
 }
+
+
+.cart-gift-modal {
+	position: relative;
+	padding: 40px;
+	h4 {
+		text-align: left;
+		font: normal normal 700 38px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 10px;
+	}
+	&__section-btn {
+		text-transform: uppercase;
+		padding: 4px 12px;
+		border-radius: 8px;
+		color: $primary-color;
+		background: $primary-color-light;
+		text-align: center;
+		font: normal normal 600 20px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		transition: all 0.2s;
+		margin: 5px 20px;
+		margin-bottom: 25px;
+		&:hover, &--active {
+			color: $white;
+			background: $primary-color;
+		}
+	}
+	&__wrapping {
+		min-height: 270px;
+		padding-bottom: 20px;
+		text-align: center;
+		&__input {
+			margin-bottom: 25px;
+			input[type="checkbox"] {
+				border-radius: 4px;
+				margin-top: -4px;
+				margin-right: 10px;
+			}
+			label {
+				color: $primary-color;
+				text-align: left;
+				font: normal normal 500 16px/28px 'Barlow';
+				letter-spacing: 0px;
+			}
+		}
+		p {
+			font: normal normal 500 16px/28px 'Barlow';
+		}
+	}
+	&__card {
+		min-height: 270px;
+		padding-bottom: 20px;
+		h5 {
+			color: $primary-color;
+			text-align: center;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+			margin-bottom: 10px;
+		}
+		&__type {
+			border: 1px solid #D0D0D0;
+			border-radius: 10px;
+			margin: 5px 20px;
+			padding: 20px;
+			margin-bottom: 20px;
+			cursor: pointer;
+			&__svg-container {
+				// box-shadow: 0px 3px 6px #00000029;
+				// border-radius: 10px;
+				margin-bottom: 20px;
+			}
+			input[type="radio"] {
+				margin-top: -3px;
+				margin-right: 10px;
+				border-radius: 4px;
+			}
+			label {
+				font: normal normal 500 16px/28px 'Barlow';
+			}
+			&--active {
+				border-color: $primary-color;
+				box-shadow: lightgrey 4px 4px 10px;
+				border-width: 2px;
+			}
+		}
+	}
+	&__message {
+		min-height: 270px;
+		padding-bottom: 20px;
+		h5 {
+			color: $primary-color;
+			text-align: center;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+			margin-bottom: 10px;
+		}
+		&__placeholder {
+			top: 10px;
+			left: 10px;
+			font: normal normal 500 16px/28px 'Barlow';
+		}
+		textarea {
+			padding: 40px 20px;
+			border-color: lightgrey;
+			border-radius: 8px;
+			&:focus {
+				outline: none;
+				border-color: gray;
+				box-shadow: none;
+			}
+		}
+	}
+	&__confirm-btn {
+		padding-top: 30px;
+		border-top: solid 1px lightgrey;
+	}
+	&__close-container {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		overflow: hidden;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		cursor: pointer;
+		transition: all 0.5s;
+		background: $light-grey;
+		&:hover {
+			width: 85px;
+			background: $dark-bg;
+		}
+	}
+	&__close {
+		text-align: right;
+		position: absolute;
+		right: 9px;
+		color: white;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		width: 85px;
+		height: 30px;
+	}
+}

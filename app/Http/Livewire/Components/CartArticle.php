@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Components;
 use Livewire\Component;
 
 use App\Models\Article;
+use App\Models\Cart;
 
 class CartArticle extends Component
 {
@@ -15,6 +16,10 @@ class CartArticle extends Component
     public $max_number;
     public $number;
 
+    public $gift_price;
+
+    protected $listeners = ['giftUpdated' => 'calculateGiftPrice'];
+
     public function mount() {
         if (auth()->check()) {
             if (auth()->user()->wishlistArticles->contains($this->article_id)) {
@@ -23,7 +28,8 @@ class CartArticle extends Component
                 $this->is_wishlisted = 0;
             }
         }
-        $this->is_gift = false;
+
+        $this->calculateGiftPrice();
 
         if (Article::find($this->article_id) && Article::find($this->article_id)->name == 'voucher') {
             $this->max_number = 100;
@@ -37,6 +43,22 @@ class CartArticle extends Component
 
             $cart = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first();
             $this->number = $cart->pivot->articles_number;
+        }
+    }
+
+    public function calculateGiftPrice()
+    {
+        $pivot = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot;
+        $this->is_gift = $pivot->is_gift;
+
+        $this->gift_price = 0;
+        if ($this->is_gift == 1) {
+            if ($pivot->with_wrapping == 1) {
+                $this->gift_price += 5;
+            }
+            if ($pivot->with_card == 1) {
+                $this->gift_price += 3;
+            }
         }
     }
 
@@ -77,6 +99,23 @@ class CartArticle extends Component
     public function removeItem()
     {
         $this->emit('articleRemoved', $this->article_id);
+    }
+
+    public function updatedIsGift()
+    {
+        if ($this->is_gift == true) {
+            $this->emit('activateGiftModal', $this->article_id);
+            Cart::where('carts.cart_id', session('cart_id'))->first()->couture_variations()->updateExistingPivot($this->article_id, [
+                'is_gift' => 1,
+            ]);
+        } else {
+            $cart = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first();
+            $cart->pivot->is_gift = 0;
+
+            Cart::where('carts.cart_id', session('cart_id'))->first()->couture_variations()->updateExistingPivot($this->article_id, [
+                'is_gift' => 0,
+            ]);
+        }
     }
 
     public function render()

@@ -68,6 +68,12 @@
             @else
                 {{ $article->creation->price }}&euro;
             @endif
+
+            @if($gift_price > 0)
+            <p class="primary-color text-right pr-5" style="margin-top: 50px;">
+                + {{ $gift_price }}&euro;
+            </p>
+            @endif
         </div>
     </div>
     <div>

@@ -2483,6 +2483,13 @@ input[type=checkbox]:focus {
   height: 52px;
 }
 
+.general-modal {
+  width: 60vw;
+  left: 20vw;
+  top: calc(50vh - 310px);
+  min-height: 20vh;
+}
+
 .footer-connect {
   text-align: center;
   font: normal normal 300 44px/53px "Barlow Condensed";
@@ -5645,6 +5652,147 @@ input[type=checkbox]:focus {
   color: #D41C1B;
   font: normal normal 700 16px/20px "Barlow";
   letter-spacing: 0px;
+}
+
+.cart-gift-modal {
+  position: relative;
+  padding: 40px;
+}
+.cart-gift-modal h4 {
+  text-align: left;
+  font: normal normal 700 38px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.cart-gift-modal__section-btn {
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 8px;
+  color: #D41C1B;
+  background: #F9E2E2;
+  text-align: center;
+  font: normal normal 600 20px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  transition: all 0.2s;
+  margin: 5px 20px;
+  margin-bottom: 25px;
+}
+.cart-gift-modal__section-btn:hover, .cart-gift-modal__section-btn--active {
+  color: #FFFFFF;
+  background: #D41C1B;
+}
+.cart-gift-modal__wrapping {
+  min-height: 270px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.cart-gift-modal__wrapping__input {
+  margin-bottom: 25px;
+}
+.cart-gift-modal__wrapping__input input[type=checkbox] {
+  border-radius: 4px;
+  margin-top: -4px;
+  margin-right: 10px;
+}
+.cart-gift-modal__wrapping__input label {
+  color: #D41C1B;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.cart-gift-modal__wrapping p {
+  font: normal normal 500 16px/28px "Barlow";
+}
+.cart-gift-modal__card {
+  min-height: 270px;
+  padding-bottom: 20px;
+}
+.cart-gift-modal__card h5 {
+  color: #D41C1B;
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.cart-gift-modal__card__type {
+  border: 1px solid #D0D0D0;
+  border-radius: 10px;
+  margin: 5px 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.cart-gift-modal__card__type__svg-container {
+  margin-bottom: 20px;
+}
+.cart-gift-modal__card__type input[type=radio] {
+  margin-top: -3px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.cart-gift-modal__card__type label {
+  font: normal normal 500 16px/28px "Barlow";
+}
+.cart-gift-modal__card__type--active {
+  border-color: #D41C1B;
+  box-shadow: lightgrey 4px 4px 10px;
+  border-width: 2px;
+}
+.cart-gift-modal__message {
+  min-height: 270px;
+  padding-bottom: 20px;
+}
+.cart-gift-modal__message h5 {
+  color: #D41C1B;
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.cart-gift-modal__message__placeholder {
+  top: 10px;
+  left: 10px;
+  font: normal normal 500 16px/28px "Barlow";
+}
+.cart-gift-modal__message textarea {
+  padding: 40px 20px;
+  border-color: lightgrey;
+  border-radius: 8px;
+}
+.cart-gift-modal__message textarea:focus {
+  outline: none;
+  border-color: gray;
+  box-shadow: none;
+}
+.cart-gift-modal__confirm-btn {
+  padding-top: 30px;
+  border-top: solid 1px lightgrey;
+}
+.cart-gift-modal__close-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: #D9D9D9;
+}
+.cart-gift-modal__close-container:hover {
+  width: 85px;
+  background: #2E1414;
+}
+.cart-gift-modal__close {
+  text-align: right;
+  position: absolute;
+  right: 9px;
+  color: white;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  width: 85px;
+  height: 30px;
 }
 
 .payment-tunnel {
