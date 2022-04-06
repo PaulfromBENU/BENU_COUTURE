@@ -84,6 +84,16 @@
 	max-height: 150px;
 }
 
+.header-group-simplified {
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+	width: 100vw;
+	border-bottom: solid 1px $light-grey;
+	background-color: white;
+	height: 150px;
+}
+
 .header {
 	z-index: 10;
 	background-color: white;
@@ -356,5 +366,110 @@
 				padding-right: 0;
 			}
 		}
+	}
+}
+
+
+.header-simplified {
+	z-index: 10;
+	background-color: white;
+	height: 100%;
+	&__backlink {
+		a {
+			text-align: left;
+			font: normal normal 600 26px/31px 'Barlow Condensed';
+			letter-spacing: 0px;
+		}
+	}
+	&__arrow-left {
+		padding-top: 4px;
+		margin-top: 4px;
+		margin-right: 10px;
+	}
+	&__logo-container {
+		position: relative;
+		display: block;
+		min-width: 55px;
+		background-color: transparent;
+	}
+	&__logo {
+		position: absolute;
+		z-index: 10;
+		height: 175px;
+		left: 0;
+		top: 0;
+		&--desktop {
+			@include desktop {
+				display: block;
+			}
+			@include tablet {
+				display: block;
+			}
+			@include mobile {
+				display: none;
+			}
+		}
+		&--scroll {
+			height: 60%;
+			top: 20%;
+			left: 5px;
+			@include desktop {
+				display: none;
+			}
+			@include tablet {
+				display: none;
+			}
+			@include mobile {
+				display: none;
+			}
+		}
+		&--mobile {
+			@include desktop {
+				display: none;
+			}
+			@include tablet {
+				display: none;
+			}
+			@include mobile {
+				display: block;
+			}
+		}
+	}
+	&__main-menu {
+		padding-top: 0px;
+		&__icons {
+			padding-top: 2px;
+			button {
+				height: 50px;
+				width: 50px;
+				cursor: pointer;
+			}
+			&__lang-btn {
+				background-color: $primary-color-light;// lighten($primary-color, 50);
+				color: $dark-text;
+				text-transform: uppercase;
+				border-radius: 5px;
+				text-align: center;
+				font: normal normal 500 20px/24px 'Barlow Condensed';
+				letter-spacing: 0px;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					background-color: $primary-color;
+					color: white;
+				}
+			}
+			&__info {
+				text-align: left;
+				font: normal normal 700 20px/24px 'Barlow';
+				letter-spacing: 0px;
+			}
+			li {
+				padding-left: 1.1rem;
+			}
+		}
+	}
+	&__menus-container {
+		padding-left: 4vw;
+		width: 100%;
 	}
 }

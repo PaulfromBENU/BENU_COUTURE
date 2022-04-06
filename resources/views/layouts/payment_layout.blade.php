@@ -20,6 +20,9 @@
 	@yield('description')
 @endsection
 
+@section('more-styles')
+@endsection
+
 @section('robots-behaviour-top')
 	noindex, nofollow
 @endsection
@@ -29,10 +32,34 @@
 @endsection
 
 @section('header')
-	@include('header.payment_header')
+	<!-- Menu and Nav header -->
+	@include('header.simplified_header')
 @endsection
 
 @section('modals')
+	<!-- Opaque background -->
+	<div id="modal-opacifier" class="modal-opacifier" style="display: none;"></div>
+
+	<!-- Language selection -->
+	@livewire('modals.lang-modal')
+
+    <!-- Error messages -->
+    @if ($errors->any())
+    <div class="modal error-modal" id="error-modal" style="display: none;">
+    	<div class="error-modal__close">&#10005;</div>
+	    @foreach ($errors->all() as $error)
+	    {{ $error }}
+	    @endforeach
+    </div>
+   	@endif
+
+   	<!-- Dashboard add address modal -->
+   	@if(Route::currentRouteName() == 'dashboard')
+   	<div class="add-address-modal-container" style="display: none;">
+   		@livewire('dashboard.addresses-modal')
+   	</div>
+    @endif
+
 @endsection
 
 @section('main-content-top')
@@ -40,10 +67,21 @@
 @endsection
 
 @section('footer')
-	@include('footer.payment_footer')
+	@include('footer.footer')
 @endsection
 
 @section('scripts-top')
+	@if($errors->any())
+	<script type="text/javascript">
+		$(function() {
+			$('#modal-opacifier').fadeIn('fast');
+			$('#error-modal').fadeIn();
+			$('.error-modal__close').on('click', function() {
+				$('#modal-opacifier').fadeOut('fast');
+				$('#error-modal').fadeOut('fast');
+			});
+		});
+	</script>
+	@endif
 	@yield('scripts')
 @endsection
-

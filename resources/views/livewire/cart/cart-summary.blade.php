@@ -33,11 +33,13 @@
         <label for="cart-use-voucher">{{ __('cart.use-voucher') }}</label>
     </div>
 
+    @if(Route::currentRouteName() !== 'payment-'.app()->getLocale() && $total > 0)
     <div>
-        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
+        <a href="{{ route('payment-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
             {{ __('cart.make-order') }}
-        </button>
+        </a>
     </div>
+    @endif
 
     <div class="cart-summary__payment-options">
         <h4 class="text-center">{{ __('cart.payment-options') }}</h4>

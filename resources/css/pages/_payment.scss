@@ -1,0 +1,107 @@
+.payment-tunnel {
+	width: 75%;
+	&__block {
+		margin-bottom: 30px;
+		background: #D0D0D040;
+		border-radius: 8px;
+		&__title {
+			text-align: left;
+			font: normal normal 700 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			border-radius: 10px;
+			width: 100%;
+			padding: 10px 40px;
+			cursor: pointer;
+			height: 75px;
+			&--waiting {
+				color: #2E1414;
+				opacity: 0.5;
+				background: #D0D0D0;
+			}
+			&--current {
+				color: $white;
+				background: $primary-color;
+			}
+			&--finished {
+				background: #2E1414;
+				color: $white;
+			}
+		}
+		&__content {
+			padding: 40px;
+
+		}
+	}
+	&__identification {
+		&__logged {
+			font: normal normal 500 16px/36px 'Barlow';
+		}
+		&__field {
+			font: normal normal 500 16px/36px 'Barlow';
+			background: $white;
+			border-radius: 10px;
+			padding: 20px 30px;
+		}
+	}
+	&__delivery {
+		&__logged {
+			font: normal normal 500 16px/36px 'Barlow';
+		}
+		&__field {
+			font: normal normal 500 16px/36px 'Barlow';
+			background: $white;
+			border-radius: 10px;
+			padding: 20px 30px;
+		}
+	}
+	&__payment {
+		&__logged {
+			font: normal normal 500 16px/36px 'Barlow';
+		}
+		&__field {
+			font: normal normal 500 16px/36px 'Barlow';
+			background: $white;
+			border-radius: 10px;
+			padding: 20px 30px;
+		}
+	}
+}
+
+.payment-summary {
+	width: 22%;
+	position: relative;
+	&__title {
+		background: #2E1414;
+		color: $white;
+		height: 75px;
+		padding: 8px 20px 8px 30px;
+		font: normal normal 500 24px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		cursor: pointer;
+		border-radius: 10px;
+		position: relative;
+		z-index: 2;
+		h3 {
+			padding-right: 3px;
+		}
+		&__plus {
+			font-size: 5rem;
+			font-weight: 100;
+			padding-top: 8px;
+		}
+	}
+	&__cart-content {
+		padding: 30px;
+		background: $white;
+		box-shadow: lightgrey 0 0 12px;
+		position: relative;
+		z-index: 1;
+		top: -10px;
+		padding-top: 40px;
+		overflow: hidden;
+		transition: height 0.3s;
+		p {
+			font: normal normal 500 16px/32px 'Barlow';
+		}
+	}
+}

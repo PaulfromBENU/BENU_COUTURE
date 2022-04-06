@@ -21,7 +21,19 @@ class SaleController extends Controller
             $cart_count = 0;
         }
 
-        // Create logic to get articles in cart based on session id
         return view('cart', ['cart_id' => $cart_id, 'cart_count' => $cart_count]);
+    }
+
+    public function showPayment()
+    {
+        if (session('cart_id') !== null 
+            && Cart::where('cart_id', session('cart_id'))->count() > 0 
+            && Cart::where('cart_id', session('cart_id'))->first()->couture_variations()->count() > 0) {
+            $cart_id = session('cart_id');
+            $cart = Cart::where('cart_id', $cart_id)->first();
+            return view('payment', ['cart_id' => $cart_id, 'cart' => $cart]);
+        } else {
+            return redirect()->route('cart-'.app()->getLocale());
+        }
     }
 }

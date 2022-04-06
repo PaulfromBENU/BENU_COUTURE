@@ -55,6 +55,8 @@ if (app('env') == 'landing') {
 		Route::get('/test-landing-lu', 'GeneralController@landingLu')->name('landing-lu');
 
 		Route::get('/'.trans("slugs.cart", [], "lu"), 'SaleController@showCart')->name('cart-lu')->middleware('createcart');
+
+		Route::get('/'.trans("slugs.payment", [], "lu"), 'SaleController@showPayment')->name('payment-lu');
 	});
 
 	Route::group([
@@ -76,6 +78,8 @@ if (app('env') == 'landing') {
 		Route::get('/test-landing', 'GeneralController@landing')->name('landing');
 
 		Route::get('/'.trans("slugs.cart", [], "fr"), 'SaleController@showCart')->name('cart-fr')->middleware('createcart');
+
+		Route::get('/'.trans("slugs.payment", [], "fr"), 'SaleController@showPayment')->name('payment-fr');
 	});
 
 	Route::group([
@@ -94,6 +98,8 @@ if (app('env') == 'landing') {
 		Route::get('/test-landing-en', 'GeneralController@landingEn')->name('landing-en');
 
 		Route::get('/'.trans("slugs.cart", [], "en"), 'SaleController@showCart')->name('cart-en')->middleware('createcart');
+
+		Route::get('/'.trans("slugs.payment", [], "en"), 'SaleController@showPayment')->name('payment-en');
 	});
 
 	Route::group([
@@ -112,6 +118,8 @@ if (app('env') == 'landing') {
 		Route::get('/test-landing-de', 'GeneralController@landingDe')->name('landing-de');
 
 		Route::get('/'.trans("slugs.cart", [], "de"), 'SaleController@showCart')->name('cart-de')->middleware('createcart');
+
+		Route::get('/'.trans("slugs.payment", [], "de"), 'SaleController@showPayment')->name('payment-de');
 	});
 
 	Route::group([
