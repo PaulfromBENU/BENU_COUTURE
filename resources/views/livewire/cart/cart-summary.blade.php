@@ -19,6 +19,18 @@
             @endif
         </p>
     </div>
+
+    @if($gift_sum > 0)
+    <div class="flex justify-between cart-summary__price">
+        <p>
+            {{ __('cart.gift-estimate') }}
+        </p>
+        <p>
+            {{ $gift_sum }}&euro;
+        </p>
+    </div>
+    @endif
+
     <div class="flex justify-between cart-summary__price">
         <p>
             <strong>{{ __('cart.total-estimate') }}</strong>

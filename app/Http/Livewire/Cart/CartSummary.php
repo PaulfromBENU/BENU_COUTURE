@@ -11,9 +11,13 @@ class CartSummary extends Component
     public $cart_id;
     public $articles_sum;
     public $delivery_sum;
+    public $gift_sum;
     public $total;
 
-    protected $listeners = ['cartSumUpdated' => 'computeAll'];
+    const GIFT_WRAP_PRICE = 5;
+    const GIFT_CARD_PRICE = 3;
+
+    protected $listeners = ['cartSumUpdated' => 'computeAll', 'giftUpdated' => 'computeAll'];
 
     public function mount()
     {
@@ -24,6 +28,7 @@ class CartSummary extends Component
     {
         $this->computeArticlesSum();
         $this->computeDeliverySum();
+        $this->computeGiftSum();
         $this->computeTotal();
     }
 
@@ -49,9 +54,25 @@ class CartSummary extends Component
         $this->delivery_sum = 0;
     }
 
+    public function computeGiftSum()
+    {
+        $this->gift_sum = 0;
+        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+            $cart = Cart::where('cart_id', $this->cart_id)->first();
+            foreach ($cart->couture_variations as $variation) {
+                if ($variation->pivot->is_gift && $variation->pivot->with_wrapping) {
+                    $this->gift_sum += self::GIFT_WRAP_PRICE;
+                }
+                if ($variation->pivot->is_gift && $variation->pivot->with_card) {
+                    $this->gift_sum += self::GIFT_CARD_PRICE;
+                }
+            }
+        }
+    }
+
     public function computeTotal()
     {
-        $this->total = $this->articles_sum + $this->delivery_sum;
+        $this->total = $this->articles_sum + $this->delivery_sum + $this->gift_sum;
     }
 
     public function render()

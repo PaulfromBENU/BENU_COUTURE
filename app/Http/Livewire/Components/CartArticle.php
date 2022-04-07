@@ -115,6 +115,7 @@ class CartArticle extends Component
             Cart::where('carts.cart_id', session('cart_id'))->first()->couture_variations()->updateExistingPivot($this->article_id, [
                 'is_gift' => 0,
             ]);
+            $this->emit('giftUpdated');
         }
     }
 
