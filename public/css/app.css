@@ -5576,11 +5576,21 @@ input[type=checkbox]:focus {
   border-top: solid 1px #CFCFCF;
   border-bottom: solid 1px #CFCFCF;
 }
-.cart-summary__use-voucher input {
+.cart-summary__use-voucher input[type=checkbox] {
   margin-top: 5px;
   margin-right: 10px;
   border-color: #D41C1B;
   border-radius: 4px;
+}
+.cart-summary__use-voucher input[type=text] {
+  margin-top: 15px;
+  border-radius: 4px;
+  border-color: lightgrey;
+}
+.cart-summary__use-voucher input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #D41C1B;
 }
 .cart-summary__payment-options {
   margin-top: 25px;
