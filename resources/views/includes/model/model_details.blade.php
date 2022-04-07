@@ -81,9 +81,14 @@
 		</div>
 		@endif
 
-		<div class="model-pres__desc__link">
-			@php $link_query = "origin_link_".app()->getLocale(); @endphp
-			<a href="{{ $model->$link_query }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
+		<div>
+			<p class="model-pres__desc__txt" style="margin-bottom: 10px;">
+				{!! __('models.link-explanation') !!}
+			</p>
+			<p class="model-pres__desc__link">
+				@php $link_query = "origin_link_".app()->getLocale(); @endphp
+				<a href="{{ $model->$link_query }}" target="_blank" class="btn-slider-left">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
+			</p>
 		</div>
 
 		@if($model->product_type != 3)

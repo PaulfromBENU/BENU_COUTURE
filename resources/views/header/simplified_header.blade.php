@@ -14,6 +14,13 @@
                     <li class="header-simplified__main-menu__icons__info">
                         Paiement sécurisé
                     </li>
+                    @auth
+                    <li style="margin-top: -12px;">
+                        <a href="{{ route('dashboard', ['section' => 'overview']) }}" class="header__main-menu__icons__btn" id="dashboard-btn">
+                            @svg('benu-icon-silhouette-disconnect')
+                        </a>
+                    </li>
+                    @endauth
                     <li style="margin-top: -12px;">
                         <button class="header-simplified__main-menu__icons__lang-btn" id="lang-selector">
                             {{ strtoupper(app()->getLocale()) }}

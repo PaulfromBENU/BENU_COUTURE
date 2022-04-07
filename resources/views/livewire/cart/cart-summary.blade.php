@@ -71,7 +71,7 @@
             <strong>{{ __('cart.total-estimate') }}</strong>
         </p>
         <p>
-            <strong>{{ $total }}&euro;</strong>
+            <strong>{{ number_format((float)$total, 2, '.', '') }}&euro;</strong>
         </p>
     </div>
 
