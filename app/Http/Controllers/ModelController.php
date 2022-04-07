@@ -16,6 +16,11 @@ class ModelController extends Controller
     use ArticleAnalyzer;
     use FiltersGenerator;
 
+    public function __construct()
+    {
+        session()->forget('payment-ongoing');
+    }
+
     public function show(Request $request)
     {
         $model_name = $request->name;

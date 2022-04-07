@@ -4,6 +4,8 @@ namespace App\Http\Livewire\Cart;
 
 use Livewire\Component;
 
+use Illuminate\Support\Facades\Route;
+
 use App\Models\Cart;
 use App\Models\Voucher;
 
@@ -22,6 +24,7 @@ class CartSummary extends Component
     public $voucher_remaining_value;
     public $voucher_status;
 
+    public $show_payment_btn;
 
     const GIFT_WRAP_PRICE = 5;
     const GIFT_CARD_PRICE = 3;
@@ -30,6 +33,12 @@ class CartSummary extends Component
 
     public function mount()
     {
+        if (Route::currentRouteName() == 'payment-'.app()->getLocale()) {
+            $this->show_payment_btn = 0;
+        } else {
+            $this->show_payment_btn = 1;
+        }
+
         $this->use_voucher = 0;
         $this->voucher_code = "";
         $this->voucher_verified = 0;

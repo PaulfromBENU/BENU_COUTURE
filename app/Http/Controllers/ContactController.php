@@ -10,6 +10,11 @@ use App\Models\Translation;
 
 class ContactController extends Controller
 {
+    public function __construct()
+    {
+        session()->forget('payment-ongoing');
+    }
+
     //Request mandatory in all functions to allow for parameters conservation in locale selector
     public function show()
     {

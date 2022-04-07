@@ -97,9 +97,11 @@
 					{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 				</a>
 				
-					<a class="flex">
-						{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
-					</a>
+				@if($model->creation_accessories()->count() > 0)
+				<a class="flex">
+					{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+				</a>
+				@endif
 				
 			</div>
 		@endif

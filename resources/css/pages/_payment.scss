@@ -36,11 +36,42 @@
 		&__logged {
 			font: normal normal 500 16px/36px 'Barlow';
 		}
+		&__modify {
+			position: absolute;
+			top: 0;
+			right: 20px;
+		}
 		&__field {
 			font: normal normal 500 16px/36px 'Barlow';
 			background: $white;
 			border-radius: 10px;
 			padding: 20px 30px;
+			position: relative;
+			h4 {
+				text-align: left;
+				font: normal normal 700 44px/53px 'Barlow Condensed';
+				letter-spacing: 0px;
+				margin-bottom: 10px;
+			}
+			p {
+				text-align: left;
+				font: normal normal 500 16px/26px 'Barlow';
+				letter-spacing: 0px;
+				width: 50%;
+			}
+			&__btn-container {
+				position: absolute;
+				top: 0;
+				right: 20px;
+				height: 100%;
+			}
+			label {
+				z-index: 1;
+				color: grey;
+				bottom: 26px;
+				left: 0;
+				transform: scale(0.8);
+			}
 		}
 	}
 	&__delivery {
@@ -52,6 +83,42 @@
 			background: $white;
 			border-radius: 10px;
 			padding: 20px 30px;
+			h4 {
+				text-align: left;
+				font: normal normal 700 44px/53px 'Barlow Condensed';
+				letter-spacing: 0px;
+				margin-bottom: 30px;
+			}
+			p {
+				text-align: left;
+				font: normal normal 500 16px/26px 'Barlow';
+				letter-spacing: 0px;
+				width: 50%;
+			}
+		}
+		&__address-container {
+			padding-bottom: 30px;
+			border-bottom: solid 1px lightgrey;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		&__address {
+			&__name {
+				text-align: center;
+				font: normal normal 600 20px/28px 'Barlow Condensed';
+				letter-spacing: 0px;
+				color: $white;
+				background: $primary-color;
+				border-radius: 8px;
+				padding: 4px 10px;
+				width: fit-content;
+				margin-bottom: 15px;
+			}
+			h5 {
+				text-align: left;
+				font: normal normal 700 20px/28px 'Barlow';
+				letter-spacing: 0px;
+			}
 		}
 	}
 	&__payment {

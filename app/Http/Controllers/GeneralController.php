@@ -20,6 +20,9 @@ class GeneralController extends Controller
 
     public function home()
     {
+        // Reset payment on-going status to reach dashboard after connect
+        session(['payment-ongoing' => 'inactive']);
+
         // Include last 6 creations where at least 1 article is present and in stock
         $latest_models = $this->getAvailableCreations()->slice(0, 6);
 

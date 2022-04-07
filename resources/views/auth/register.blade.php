@@ -42,18 +42,18 @@
             @csrf
             <div class="flex justify-between">
                 <div class="w-5/12">
-                    <div class="flex justify-between input-group register__form__radio-group">
-                        <div>
+                    <div class="flex justify-start input-group register__form__radio-group">
+                        <div class="mr-4">
                             <input type="radio" id="register_gender_male" name="register_gender" value="male">
-                            <label for="register_gender_male" class="ml-4">{{ __('forms.sir') }}</label><br>
+                            <label for="register_gender_male" class="ml-3">{{ __('forms.sir') }}</label><br>
                         </div>
-                        <div>
+                        <div class="mr-4">
                             <input type="radio" id="register_gender_female" name="register_gender" value="female">
-                            <label for="register_gender_female" class="ml-4">{{ __('forms.madam') }}</label><br>
+                            <label for="register_gender_female" class="ml-3">{{ __('forms.madam') }}</label><br>
                         </div>
                         <div>
                             <input type="radio" id="register_gender_neutral" name="register_gender" value="neutral">
-                            <label for="register_gender_neutral" class="ml-4">{{ __('forms.neutral') }}</label> 
+                            <label for="register_gender_neutral" class="ml-3">{{ __('forms.neutral') }}</label> 
                         </div>
                     </div>
                     <div class="input-group reactive-label-input">

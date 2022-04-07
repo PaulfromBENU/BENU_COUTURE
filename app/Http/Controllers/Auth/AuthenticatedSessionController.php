@@ -35,6 +35,11 @@ class AuthenticatedSessionController extends Controller
 
         auth::user()->last_login = DB::raw('CURRENT_TIMESTAMP');
         auth::user()->save();
+
+        if (session('payment-ongoing') == 'active') {
+            session()->forget('payment-ongoing');
+            return redirect()->route('payment-'.session('locale'));
+        }
         return redirect()->intended(RouteServiceProvider::DASHBOARD);
     }
 

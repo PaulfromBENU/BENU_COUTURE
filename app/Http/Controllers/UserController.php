@@ -16,6 +16,7 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        session()->forget('payment-ongoing');
     }
 
     public function show(string $locale, Request $request)

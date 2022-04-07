@@ -75,7 +75,7 @@
         </p>
     </div>
 
-    @if(Route::currentRouteName() !== 'payment-'.app()->getLocale() && $total > 0)
+    @if($show_payment_btn && $total > 0)
     <div>
         <a href="{{ route('payment-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
             {{ __('cart.make-order') }}

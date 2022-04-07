@@ -31,6 +31,7 @@ class SaleController extends Controller
             && Cart::where('cart_id', session('cart_id'))->first()->couture_variations()->count() > 0) {
             $cart_id = session('cart_id');
             $cart = Cart::where('cart_id', $cart_id)->first();
+            session(['payment-ongoing' => 'active']);
             return view('payment', ['cart_id' => $cart_id, 'cart' => $cart]);
         } else {
             return redirect()->route('cart-'.app()->getLocale());

@@ -13,4 +13,9 @@ class CreationAccessory extends Model
     protected $connection = 'mysql';
 
     protected $guarded = ['id'];
+
+    public function creation()
+    {
+        return $this->belongsTo(Creation::class);
+    }
 }

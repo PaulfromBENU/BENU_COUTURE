@@ -29,10 +29,10 @@ class Creation extends Model
         return $this->belongsTo('App\Models\Partner');
     }
 
-    // public function creation_accessories()
-    // {
-    //     return $this->hasMany('App\Models\CreationAccessory');
-    // }
+    public function creation_accessories()
+    {
+        return $this->hasMany('App\Models\CreationAccessory');
+    }
 
     public function all_articles()
     {

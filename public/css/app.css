@@ -5842,11 +5842,42 @@ input[type=checkbox]:focus {
 .payment-tunnel__identification__logged {
   font: normal normal 500 16px/36px "Barlow";
 }
+.payment-tunnel__identification__modify {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
 .payment-tunnel__identification__field {
   font: normal normal 500 16px/36px "Barlow";
   background: #FFFFFF;
   border-radius: 10px;
   padding: 20px 30px;
+  position: relative;
+}
+.payment-tunnel__identification__field h4 {
+  text-align: left;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.payment-tunnel__identification__field p {
+  text-align: left;
+  font: normal normal 500 16px/26px "Barlow";
+  letter-spacing: 0px;
+  width: 50%;
+}
+.payment-tunnel__identification__field__btn-container {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 100%;
+}
+.payment-tunnel__identification__field label {
+  z-index: 1;
+  color: grey;
+  bottom: 26px;
+  left: 0;
+  transform: scale(0.8);
 }
 .payment-tunnel__delivery__logged {
   font: normal normal 500 16px/36px "Barlow";
@@ -5856,6 +5887,42 @@ input[type=checkbox]:focus {
   background: #FFFFFF;
   border-radius: 10px;
   padding: 20px 30px;
+}
+.payment-tunnel__delivery__field h4 {
+  text-align: left;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+}
+.payment-tunnel__delivery__field p {
+  text-align: left;
+  font: normal normal 500 16px/26px "Barlow";
+  letter-spacing: 0px;
+  width: 50%;
+}
+.payment-tunnel__delivery__address-container {
+  padding-bottom: 30px;
+  border-bottom: solid 1px lightgrey;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.payment-tunnel__delivery__address__name {
+  text-align: center;
+  font: normal normal 600 20px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  background: #D41C1B;
+  border-radius: 8px;
+  padding: 4px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+.payment-tunnel__delivery__address h5 {
+  text-align: left;
+  font: normal normal 700 20px/28px "Barlow";
+  letter-spacing: 0px;
 }
 .payment-tunnel__payment__logged {
   font: normal normal 500 16px/36px "Barlow";
