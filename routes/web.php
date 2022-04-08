@@ -21,6 +21,10 @@ if (app('env') == 'landing') {
 		return redirect()->route('landing');
 	})->where('slug', '^([a-zA-Z0-9-]{3,})$');
 
+	Route::get('/', function() {
+		return redirect()->route('landing');
+	});
+
 	Route::get('/fr', 'GeneralController@landing')->name('landing');
 	Route::get('/en', 'GeneralController@landingEn')->name('landing-en');
 	Route::get('/de', 'GeneralController@landingDe')->name('landing-de');
