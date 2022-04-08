@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Cart;
 use Livewire\Component;
 
 use App\Models\Address;
+use App\Models\Cart;
 
 class PaymentTunnel extends Component
 {
@@ -25,18 +26,9 @@ class PaymentTunnel extends Component
     // Address data
     public $order_address_id;
     public $address_chosen;
-    // public $delivery_address;
-    // public $delivery_address_name;
-    // public $delivery_address_first_name;
-    // public $delivery_address_last_name;
-    // public $delivery_address_street;
-    // public $delivery_address_street_number;
-    // public $delivery_address_floor;
-    // public $delivery_address_zip_code;
-    // public $delivery_address_city;
-    // public $delivery_address_phone;
+    public $address_name;
 
-    protected $listeners = ['infoValidated' => 'validateInfoStep', 'addressValidated' => 'validateDeliveryStep'];
+    protected $listeners = ['infoValidated' => 'validateInfoStep', 'newAddressCreated' => 'selectAddress', 'newAddressCancelled' => 'unselectAddress'];
 
     public function mount()
     {
@@ -56,6 +48,8 @@ class PaymentTunnel extends Component
 
         $this->fill_info = 0;
         $this->fill_address = 0;
+
+        $this->address_name = "";
     }
 
     public function changeStep(int $step)
@@ -71,7 +65,7 @@ class PaymentTunnel extends Component
         if ($step == 2) {
             if ($this->info_valid == 1) {
                 $this->step = $step;
-                // $this->resetOptions();
+                $this->address_valid = 0;
             }
         }
 
@@ -107,19 +101,44 @@ class PaymentTunnel extends Component
     public function changeAddress()
     {
         $this->address_chosen = 0;
+        $this->fill_address = 0;
     }
 
-    public function validateDeliveryStep($address_id)
+    public function selectAddress($address_id)
     {
-        $this->order_address_id = $address_id;
+        if (Address::find($address_id)) {
+            $this->order_address_id = $address_id;
+            $this->address_chosen = 1;
+            $this->fill_address = 0;
+        }
+    }
 
-        $this->address_valid = 1;
-        $this->step = 3;
+    public function unselectAddress()
+    {
+        $this->address_chosen = 0;
+        $this->fill_address = 0;
+    }
+
+    public function validateDeliveryStep()
+    {
+        if (Address::find($this->order_address_id)) {
+            $this->address_valid = 1;
+            $this->step = 3;
+            $this->address_name = Address::find($this->order_address_id)->address_name;
+        }
     }
 
     public function resetOptions()
     {
         // $this->fill_info = 0;
+    }
+
+    public function validateOrder($payment_type)
+    {
+        if (Cart::find($this->cart_id)) {
+            // Validate order, create and redirect to correct page
+            dd('OK, order creation under development!');
+        }
     }
 
     public function render()
