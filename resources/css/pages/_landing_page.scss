@@ -516,7 +516,7 @@
 .header_socialmedia {
 	position: absolute;
 	top: 82px;
-	left: 80vw;
+	right: 4vw;
 	height: 25px;
 	color: white;
 	font-size: 1.5rem;
@@ -524,10 +524,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	@include tablet {
-		display: none;
+		// display: none;
 	}
 	@include mobile {
-		display: none;
+		// display: none;
+		// flex-direction: column;
+		right: 3vw;
+		top: 10px;
+		height: fit-content;
+		max-width: 35vw;
 	}
 }
 

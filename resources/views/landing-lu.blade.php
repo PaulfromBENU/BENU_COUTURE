@@ -12,7 +12,7 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/983b1bd0fa.js" crossorigin="anonymous"></script>
 
-    <title>Bienvenue sur BENU COUTURE</title>
+    <title>Wëllkomm op BENU COUTURE</title>
 </head>
 <body class="landing-body">
     <header class="landing-header">
@@ -59,50 +59,50 @@
                 <div class="central_textbox">
                     <div class="central_textbox__teaser">
                         <p>
-                            Soon....
+                            GESCHWËNN....
                         </p>
                     </div>
                     <h1>BENU COUTURE</h1>
                     <p class="central_textbox__sub">
-                        Lancement du site&nbsp;: 2ème trimestre 2022
+                        Lancement vun der Websäit: 2. Quartal 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses
-                        créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée
-                        de tailleurs et stylistes professionnels, s’engage chaque jour à choisir les meilleures qualités de tissus, à trouver les meilleurs assemblages afin de créer des produits uniques pour toi : de haute qualité et composés surtout de matières naturelles pour assurer leur durabilité. Notre production est artisanale et locale et les vêtements produits ne subissent aucun traitement chimique. <strong>BENU COUTURE</strong> te permet également de réparer tes pièces préférées ou bien de les intégrer dans une nouvelle création, personnelle et rien que pour toi.
+                        Zwou Jeansboxen, déi s Du net méi wëlls? E Pullover, deen Dir um Häerz läit, awer net méi passt? <strong>BENU COUTURE</strong> ass deen éischten UpCycling-Schneideratelier zu Lëtzebuerg, deen seng originell an eenzegaarteg Kreatiounen aus lokale Kleederspenden hierstellt. Eist Team, aus professionelle Schneider:innen an Designer:innen, setz sech all Dag dofir an, mat beschte Stoffqualitéiten déi schéinste Kombinatiounen ze fannen an eenzegaarteg Produite fir Dech hierzestellen: zesummegesat aus virun allem natierleche Materialie bidden si déi héchste Qualitéit a Laangliewegkeet.
+                    </p>
+                    <p class="central_textbox__desc">
+                        Eis Kreatioune sinn handgemaach a gi kengem cheemeschen Traitement ënnerzunn. <strong>BENU COUTURE</strong> bitt Dir och un, Deng Liblingsstécker ze flécken oder si an enger neier, perséinlecher a just fir Dech bestëmmter Kreatioun z’integréieren.
                     </p>
                     <ul class="central_textbox__desc">
                         <li><strong>BENU COUTURE</strong></li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> conçoit et produit localement une mode UpCycling unique,
+                            <p> entwërft a produzéiert lokal eng eenzegaarteg UpCyling-Moud,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> offre des solutions allant des tailles XS jusqu'à 5XL ainsi que des merveilles pour nos plus jeunes,
+                            <p> bitt eng grouss Bandbreet vu Gréisste vun XS bis 5XL, esouwéi kleng Wonnerwierker fir déi Jéngsten,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> répare et transforme selon tes idées individuelles (tant qu'à faire!) : changement de couleurs, design, taille ...,
+                            <p> reparéiert a verwandelt no Dengen individuelle Virstellungen: Faarfwiessel, Design, Gréisst, ...,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> sensibilise sur les problématiques du marché de textile ordinaire, prend position et discute les sujets liés à la mode durable.
+                            <p> sensibiliséiert fir d’Problematik vun der haiteger Moude-Branche, bezitt Stellung an diskutéiert iwwer Theeme ronderëm nohalteg Kleedung.
                             </p>
                         </li>
                     </ul>
                     <p class="central_textbox__desc">
-                        <strong>BENU COUTURE</strong> attend son propre site couture.benu.lu (perspective : avant la fin mai
-                        2022).
+                        <strong>BENU COUTURE</strong> waart op seng eegen Internetsäit couture.benu.lu (viraussiichtlech bis Enn Mee 2022).
                     </p>
                 </div>
                 <div class="contact-form-container">
                     <div>
                         <h2 class="text-center mb-6">
-                            Restons en contact
+                            Bléif mat eis a Kontakt
                         </h2>
                         <!-- <div>
                             <form method="POST" class="contact_form">
@@ -111,7 +111,7 @@
                             </form>
                         </div> -->
                         <div class="contact-link text-center">
-                            <a href="https://benu.lu/fr/contactez-nous/" class="btn-couture-plain btn-couture-plain--dark-hover" target="_blank">Je m'inscris à la newsletter</a>
+                            <a href="https://benu.lu/fr/contactez-nous/" class="btn-couture-plain btn-couture-plain--dark-hover" target="_blank">Ech abonéieren d'Newsletter</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
         <section class="universe">
             <div class="text-center">
                 <h2>
-                    L'univers BENU
+                    D’BENU-Welt
                 </h2>
                 <div class="universe__links">
                     <div>
@@ -138,7 +138,7 @@
             <div class="landing-footer__links">
                 <div class="landing-footer__links__header-container">
                     <div class="landing-footer__links__header">
-                        Suis-nous sur
+                        Verfolleg eis op
                     </div>
                 </div>
                 <div class="landing-footer__links__icons">
@@ -163,7 +163,7 @@
                 </div>
             </div>
             <div class="text-center landing-footer__copyright">
-                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> & Développement&nbsp;: BENU Village ASBL
+                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> & Entwécklung&nbsp;: BENU Village ASBL
             </div>
         </footer>
     </main>

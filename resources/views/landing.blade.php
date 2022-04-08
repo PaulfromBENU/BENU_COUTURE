@@ -59,7 +59,7 @@
                 <div class="central_textbox">
                     <div class="central_textbox__teaser">
                         <p>
-                            Soon....
+                            Bientôt....
                         </p>
                     </div>
                     <h1>BENU COUTURE</h1>
@@ -67,9 +67,10 @@
                         Lancement du site&nbsp;: 2ème trimestre 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses
-                        créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée
-                        de tailleurs et stylistes professionnels, s’engage chaque jour à choisir les meilleures qualités de tissus, à trouver les meilleurs assemblages afin de créer des produits uniques pour toi : de haute qualité et composés surtout de matières naturelles pour assurer leur durabilité. Notre production est artisanale et locale et les vêtements produits ne subissent aucun traitement chimique. <strong>BENU COUTURE</strong> te permet également de réparer tes pièces préférées ou bien de les intégrer dans une nouvelle création, personnelle et rien que pour toi.
+                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée de tailleurs et stylistes professionnels, s’engage chaque jour à choisir les meilleures qualités de tissus, à trouver les meilleurs assemblages afin de créer des produits uniques pour toi : de haute qualité et composés surtout de matières naturelles pour assurer leur durabilité. 
+                    </p>
+                    <p class="central_textbox__desc">
+                        Notre production est artisanale et locale et les vêtements produits ne subissent aucun traitement chimique. <strong>BENU COUTURE</strong> te permet également de réparer tes pièces préférées ou bien de les intégrer dans une nouvelle création, personnelle et rien que pour toi.
                     </p>
                     <ul class="central_textbox__desc">
                         <li><strong>BENU COUTURE</strong></li>
@@ -95,8 +96,7 @@
                         </li>
                     </ul>
                     <p class="central_textbox__desc">
-                        <strong>BENU COUTURE</strong> attend son propre site couture.benu.lu (perspective : avant la fin mai
-                        2022).
+                        <strong>BENU COUTURE</strong> attend son propre site&nbsp;: couture.benu.lu (perspective : fin mai 2022).
                     </p>
                 </div>
                 <div class="contact-form-container">

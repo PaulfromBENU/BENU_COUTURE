@@ -12,7 +12,7 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/983b1bd0fa.js" crossorigin="anonymous"></script>
 
-    <title>Bienvenue sur BENU COUTURE</title>
+    <title>Willkommen auf BENU COUTURE</title>
 </head>
 <body class="landing-body">
     <header class="landing-header">
@@ -59,50 +59,51 @@
                 <div class="central_textbox">
                     <div class="central_textbox__teaser">
                         <p>
-                            Soon....
+                            BALD....
                         </p>
                     </div>
                     <h1>BENU COUTURE</h1>
                     <p class="central_textbox__sub">
-                        Lancement du site&nbsp;: 2ème trimestre 2022
+                        Start der Website: 2. Quartal 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses
-                        créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée
-                        de tailleurs et stylistes professionnels, s’engage chaque jour à choisir les meilleures qualités de tissus, à trouver les meilleurs assemblages afin de créer des produits uniques pour toi : de haute qualité et composés surtout de matières naturelles pour assurer leur durabilité. Notre production est artisanale et locale et les vêtements produits ne subissent aucun traitement chimique. <strong>BENU COUTURE</strong> te permet également de réparer tes pièces préférées ou bien de les intégrer dans une nouvelle création, personnelle et rien que pour toi.
+                        Zwei Jeans, die Du nicht mehr willst? Ein Pullover, der Dir lieb und teuer ist, aber nicht mehr passt? <strong>BENU COUTURE</strong> ist die erste UpCycling-Schneiderei in Luxemburg, die ihre einfallsreichen und einzigartigen Kreationen aus lokalen Kleiderspenden vor Ort anfertigt. Unser Team, aus professionellen Schneider:innen und Designer:innen, setzt sich jeden Tag dafür ein, mit hervorragenden Stoffqualitäten die schönsten Kombinationen zu entwickeln und einzigartige Produkte für Dich herzustellen: Überwiegend aus natürlichen Materialien zusammengesetzt bieten sie höchste Qualität und Langlebigkeit.
+                    </p>
+                    <p class="central_textbox__desc">
+                        Unsere Kreationen sind handgefertigt und werden keiner chemischen Behandlung unterzogen. <strong>BENU COUTURE</strong> bietet Dir auch an, Deine Lieblingsstücke zu flicken oder sie in eine neue, persönliche und nur für Dich bestimmte Kreation zu integrieren.
+
                     </p>
                     <ul class="central_textbox__desc">
                         <li><strong>BENU COUTURE</strong></li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> conçoit et produit localement une mode UpCycling unique,
+                            <p> entwirft und produziert lokal eine einzigartige UpCycling-Mode,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> offre des solutions allant des tailles XS jusqu'à 5XL ainsi que des merveilles pour nos plus jeunes,
+                            <p> bietet eine große Bandbreite an Größen von XS bis 5XL sowie Wunder für unsere Jüngsten,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> répare et transforme selon tes idées individuelles (tant qu'à faire!) : changement de couleurs, design, taille ...,
+                            <p> repariert und verwandelt nach Deinen individuellen Vorstellungen: Farbwechsel, Design, Größe ...,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> sensibilise sur les problématiques du marché de textile ordinaire, prend position et discute les sujets liés à la mode durable.
+                            <p> sensibilisiert für die Problematik der heutigen Mode-Branche, bezieht Stellung und diskutiert über Themen rund um nachhaltige Kleidung.
                             </p>
                         </li>
                     </ul>
                     <p class="central_textbox__desc">
-                        <strong>BENU COUTURE</strong> attend son propre site couture.benu.lu (perspective : avant la fin mai
-                        2022).
+                        <strong>BENU COUTURE</strong> wartet auf seine eigene Website couture.benu.lu (voraussichtlich bis Ende Mai 2022).
                     </p>
                 </div>
                 <div class="contact-form-container">
                     <div>
                         <h2 class="text-center mb-6">
-                            Restons en contact
+                            Bleib mit uns in Verbindung
                         </h2>
                         <!-- <div>
                             <form method="POST" class="contact_form">
@@ -111,7 +112,7 @@
                             </form>
                         </div> -->
                         <div class="contact-link text-center">
-                            <a href="https://benu.lu/fr/contactez-nous/" class="btn-couture-plain btn-couture-plain--dark-hover" target="_blank">Je m'inscris à la newsletter</a>
+                            <a href="https://benu.lu/fr/contactez-nous/" class="btn-couture-plain btn-couture-plain--dark-hover" target="_blank">Ich abonniere den Newsletter</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +122,7 @@
         <section class="universe">
             <div class="text-center">
                 <h2>
-                    L'univers BENU
+                    Die BENU-Welt
                 </h2>
                 <div class="universe__links">
                     <div>
@@ -138,7 +139,7 @@
             <div class="landing-footer__links">
                 <div class="landing-footer__links__header-container">
                     <div class="landing-footer__links__header">
-                        Suis-nous sur
+                        Folge uns auf
                     </div>
                 </div>
                 <div class="landing-footer__links__icons">
@@ -163,7 +164,7 @@
                 </div>
             </div>
             <div class="text-center landing-footer__copyright">
-                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> & Développement&nbsp;: BENU Village ASBL
+                &#169; 2022 - Design: Kamoo Studio <br/> & Entwicklung: BENU Village ASBL
             </div>
         </footer>
     </main>
