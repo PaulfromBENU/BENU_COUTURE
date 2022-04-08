@@ -125,7 +125,7 @@
                 </h2>
                 <div class="universe__links">
                     <div>
-                        <a href="https://www.benureuse.lu/fr/" class="btn-large btn-yellow" target="_blank">BENU REUSE</a>
+                        <a href="https://www.benureuse.lu/lu/" class="btn-large btn-yellow" target="_blank">BENU REUSE</a>
                     </div>
                     <div>
                         <a href="https://benu.lu/" class="btn-large btn-green" target="_blank">BENU VILLAGE</a>
