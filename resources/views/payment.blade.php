@@ -27,21 +27,59 @@
 				</div>
 				<div class="payment-summary__cart-content" id="payment-cart-content" style="display: none; height: 0px;">
 					@foreach($cart->couture_variations as $variation)
-					<p>
+					<div class="payment-summary__cart-content__article mb-7 flex justify-start">
 						@if($variation->name == 'voucher')
-						{{ $variation->pivot->articles_number }}x {{ __('vouchers.card-name') }} {{ $variation->pivot->value }}&euro; @if($variation->voucher_value == 'pdf') PDF @else {{ __('vouchers.format-clothe') }} @endif
+							<img src="{{ asset('images/pictures/vouchers_img.png') }}" />
+							<div>
+								<p class="payment-summary__cart-content__article__name">
+									BON D'ACHAT
+								</p>
+								<div class="payment-summary__cart-content__article__size">
+									@if($variation->voucher_value == 'pdf') PDF @else {{ __('vouchers.format-clothe') }} @endif
+								</div>
+								<div class="flex">
+									<p class="payment-summary__cart-content__article__info">
+										Valeur unitaire : {{ $variation->pivot->value }}&euro;
+									</p>
+								</div>
+								<p class="payment-summary__cart-content__article__info">
+									Exemplaires : x{{ $variation->pivot->articles_number }}
+								</p>
+								<p class="payment-summary__cart-content__article__info">
+									<strong>Prix total : {{ $variation->pivot->articles_number *$variation->pivot->value }}&euro;</strong>
+								</p>
+							</div>
 						@else
-						{{ $variation->pivot->articles_number }}x {{ strtoupper($variation->name) }} Taille {{ $variation->size->value }}
+							@if($variation->photos()->where('is_front', '1')->count() > 0)
+								<img src="{{ asset('images/pictures/articles/'.$variation->photos()->where('is_front', '1')->first()->file_name) }}" />
+							@else
+								<img src="{{ asset('images/pictures/articles/'.$variation->photos()->first()->file_name) }}" />
+							@endif
+							<div>
+								<p class="payment-summary__cart-content__article__name">
+									{{ strtoupper($variation->name) }}
+								</p>
+								<div class="payment-summary__cart-content__article__size">
+									TAILLE {{ $variation->size->value }}
+								</div>
+								<div class="flex">
+									<p class="payment-summary__cart-content__article__info">Couleur : </p>
+									<div class="color-circle ml-1 mt-2" style="background: {{ $variation->color->hex_code }};"></div>
+									<p class="payment-summary__cart-content__article__info">
+										{{ __('colors.'.$variation->color->name) }}
+									</p>
+								</div>
+								<p class="payment-summary__cart-content__article__info">
+									Exemplaires : x{{ $variation->pivot->articles_number }}
+								</p>
+								<p class="payment-summary__cart-content__article__info">
+									<strong>Prix total : {{ $variation->pivot->articles_number * $variation->creation->price }}&euro;</strong>
+								</p>
+							</div>
 						@endif
-					</p>
-					<p class="text-right text-gray-400 mb-3" style="border-bottom: solid 1px lightgrey;">
-						@if($variation->name == 'voucher')
-						<em>{{ $variation->pivot->articles_number *$variation->pivot->value }}&euro;</em>
-						@else
-						<em>{{ $variation->pivot->articles_number * $variation->creation->price }}&euro;</em>
-						@endif
-					</p>
+					</div>
 					@endforeach
+					<p class="text-right text-gray-400 mb-3" style="border-bottom: solid 1px lightgrey;"></p>
 				</div>
 			</div>
 

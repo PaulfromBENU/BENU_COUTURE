@@ -5806,7 +5806,7 @@ input[type=checkbox]:focus {
 }
 
 .payment-tunnel {
-  width: 75%;
+  width: 72%;
 }
 .payment-tunnel__block {
   margin-bottom: 30px;
@@ -5946,9 +5946,12 @@ input[type=checkbox]:focus {
   border-radius: 10px;
   padding: 20px 30px;
 }
+.payment-tunnel__payment img {
+  max-height: 55px;
+}
 
 .payment-summary {
-  width: 22%;
+  width: 25%;
   position: relative;
 }
 .payment-summary__title {
@@ -5972,8 +5975,8 @@ input[type=checkbox]:focus {
   padding-top: 8px;
 }
 .payment-summary__cart-content {
-  padding: 30px;
-  background: #FFFFFF;
+  padding: 20px;
+  background: #D0D0D040;
   box-shadow: lightgrey 0 0 12px;
   position: relative;
   z-index: 1;
@@ -5982,6 +5985,33 @@ input[type=checkbox]:focus {
   overflow: hidden;
   transition: height 0.3s;
 }
-.payment-summary__cart-content p {
+.payment-summary__cart-content__article {
+  padding: 10px 10px;
+  background: #FFFFFF;
+  border-radius: 8px;
   font: normal normal 500 16px/32px "Barlow";
+}
+.payment-summary__cart-content__article__name {
+  color: #D41C1B;
+  font: normal normal 600 26px/28px "Barlow Condensed";
+  margin-bottom: 7px;
+}
+.payment-summary__cart-content__article__size {
+  background: #D41C1B;
+  padding: 1px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font: normal normal 600 14px/28px "Barlow Condensed";
+}
+.payment-summary__cart-content__article__info {
+  font: normal normal 500 14px/28px "Barlow";
+}
+.payment-summary__cart-content__article img {
+  max-height: 150px;
+  border-radius: 8px;
+  margin-right: 15px;
 }
