@@ -159,6 +159,12 @@
 		font-size: 1.1rem;
 		margin-bottom: -5px;
 	}
+	&__forgotten-pwd {
+		transition: all 0.2s;
+		&:hover {
+			color: $primary-color;
+		}
+	}
 }
 
 .side-modal {

@@ -2077,6 +2077,12 @@ input[type=checkbox]:focus {
   font-size: 1.1rem;
   margin-bottom: -5px;
 }
+.connect-modal__forgotten-pwd {
+  transition: all 0.2s;
+}
+.connect-modal__forgotten-pwd:hover {
+  color: #D41C1B;
+}
 
 .side-modal {
   width: 60vw;
