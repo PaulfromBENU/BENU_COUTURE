@@ -37,11 +37,19 @@
         </div>
         <div class="article-sidebar__content">
 
+            @if(in_array(app()->getLocale(), ['lu', 'de']))
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large" wire:click="closeSideBar">
+                <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                    {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+                </div>
+            </div>
+            @else
             <div class="article-sidebar__content__close-container" wire:click="closeSideBar">
                 <div class="article-sidebar__content__close">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
             </div>
+            @endif
             <p class="article-sidebar__content__compo__subtitle" wire:click="switchDisplay('overview')" @if($content == 'overview') style="display: none;" @endif>
                 < {{ __('sidebar.back') }}
             </p>
@@ -122,6 +130,12 @@
                 <p class="article-sidebar__content__singularity">
                     <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ $article->$singularity_query }}
                 </p>
+                @endif
+
+                @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
+                    <div class="article-sidebar__content__delayed-stock">
+                        <span class="font-bold primary-color">{!! __('sidebar.special-pop-up-store') !!}</span>: {{ __('sidebar.special-pop-up-content') }}
+                    </div>
                 @endif
 
                 @if($sold == 0)

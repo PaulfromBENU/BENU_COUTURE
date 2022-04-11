@@ -2124,6 +2124,8 @@ input[type=checkbox]:focus {
   right: 40px;
   overflow: hidden;
   width: 30px;
+  min-width: 30px;
+  max-width: 30px;
   height: 30px;
   border-radius: 30px;
   cursor: pointer;
@@ -2132,7 +2134,11 @@ input[type=checkbox]:focus {
 }
 .article-sidebar__content__close-container:hover {
   width: 85px;
+  max-width: 120px;
   background: #2E1414;
+}
+.article-sidebar__content__close-container--large:hover {
+  width: 120px;
 }
 .article-sidebar__content__close {
   text-align: right;
@@ -2143,6 +2149,9 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   width: 85px;
   height: 30px;
+}
+.article-sidebar__content__close--large {
+  width: 120px;
 }
 .article-sidebar__content__subtitle {
   text-align: center;
@@ -2316,6 +2325,17 @@ input[type=checkbox]:focus {
 .article-sidebar__content__singularity {
   background: #D0D0D033 0% 0% no-repeat padding-box;
   border-radius: 8px;
+  text-align: center;
+  font: normal normal 500 14px/20px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.article-sidebar__content__delayed-stock {
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: solid 2px #D41C1B;
   text-align: center;
   font: normal normal 500 14px/20px "Barlow";
   letter-spacing: 0px;

@@ -206,6 +206,8 @@
 			right: 40px;
 			overflow: hidden;
 			width: 30px;
+			min-width: 30px;
+			max-width: 30px;
 			height: 30px;
 			border-radius: 30px;
 			cursor: pointer;
@@ -213,7 +215,13 @@
 			background: $light-grey;
 			&:hover {
 				width: 85px;
+				max-width: 120px;
 				background: $dark-bg;
+			}
+			&--large {
+				&:hover {
+					width: 120px;
+				}
 			}
 		}
 		&__close {
@@ -225,6 +233,9 @@
 			letter-spacing: 0px;
 			width: 85px;
 			height: 30px;
+			&--large {
+				width: 120px;
+			}
 		}
 		&__subtitle {
 			text-align: center;
@@ -401,6 +412,17 @@
 		&__singularity {
 			background: $light-grey-transparent 0% 0% no-repeat padding-box;
 			border-radius: 8px;
+			text-align: center;
+			font: normal normal 500 14px/20px 'Barlow';
+			letter-spacing: 0px;
+			color: $dark-text;
+			padding: 10px;
+			margin-bottom: 25px;
+		}
+		&__delayed-stock {
+			background: $white;
+			border-radius: 8px;
+			border: solid 2px $primary-color;
 			text-align: center;
 			font: normal normal 500 14px/20px 'Barlow';
 			letter-spacing: 0px;
