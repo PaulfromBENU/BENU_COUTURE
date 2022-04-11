@@ -133,9 +133,11 @@
                 @endif
 
                 @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
+                    @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->first()->delayed_stock == '1')
                     <div class="article-sidebar__content__delayed-stock">
                         <span class="font-bold primary-color">{!! __('sidebar.special-pop-up-store') !!}</span>: {{ __('sidebar.special-pop-up-content') }}
                     </div>
+                    @endif
                 @endif
 
                 @if($sold == 0)

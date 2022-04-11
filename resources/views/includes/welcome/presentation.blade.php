@@ -16,19 +16,19 @@
         </div>
         <div>
             <h3 class="welcome-presentation__desc__title welcome-illustration-1">
-                <span class="primary-color">{{ __('welcome.pres-title-1-1') }}</span> {{ __('welcome.pres-title-1-2') }}
+                <!-- <span class="primary-color">{{ __('welcome.pres-title-1-1') }}</span> -->{{ __('welcome.pres-title-1-1') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-2">
-                <span class="primary-color">{{ __('welcome.pres-title-2-1') }}</span> {{ __('welcome.pres-title-2-2') }}
+                <!-- <span class="primary-color">{{ __('welcome.pres-title-2-1') }}</span>  -->{{ __('welcome.pres-title-2-1') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-3">
-                <span class="primary-color">{{ __('welcome.pres-title-3-1') }}</span> {{ __('welcome.pres-title-3-2') }}
+                <!-- <span class="primary-color">{{ __('welcome.pres-title-3-1') }}</span>  -->{{ __('welcome.pres-title-3-1') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-4">
-                <span class="primary-color">{{ __('welcome.pres-title-4-1') }}</span> {{ __('welcome.pres-title-4-2') }}
+                <!-- <span class="primary-color">{{ __('welcome.pres-title-4-1') }}</span>  -->{{ __('welcome.pres-title-4-1') }}
             </h3>
             <h3 class="welcome-presentation__desc__title welcome-illustration-5">
-                <span class="primary-color">{{ __('welcome.pres-title-5-1') }}</span> {{ __('welcome.pres-title-5-2') }}
+                <!-- <span class="primary-color">{{ __('welcome.pres-title-5-1') }}</span>  -->{{ __('welcome.pres-title-5-1') }}
             </h3>
         </div>
 

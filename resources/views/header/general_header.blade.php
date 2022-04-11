@@ -78,11 +78,13 @@
                     @endif
                 </nav>
                 <ul class="header__main-menu__icons flex justify-end">
+                    @if(1 == 0)
                     <li>
                         <button class="header__main-menu__icons__btn" id="general-search-btn">
                             @svg('benu-icon-magnifying-glass-search')
                         </button>
                     </li>
+                    @endif
                     @auth
                         <li>
                             <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'wishlist']) }}" class="header__main-menu__icons__btn">

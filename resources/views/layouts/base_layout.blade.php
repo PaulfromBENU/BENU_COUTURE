@@ -52,7 +52,9 @@
 	@livewire('modals.lang-modal')
 
 	<!-- Search bar -->
+	@if(1 == 0)
 	@include('modals.search_modal')
+	@endif
 
 	<!-- Connection form -->
 	@include('modals.connect_modal')
