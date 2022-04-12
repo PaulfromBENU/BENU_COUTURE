@@ -213,3 +213,29 @@
 		}
 	}
 }
+
+.payment-process {
+	&__form {
+		border: solid 2px #D41C1B; 
+		border-radius: 8px;
+		width: 70%;
+		margin: auto;
+		margin-bottom: 40px;
+		label {
+			text-align: left;
+			color: grey;
+			display: block;
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+			border: none;
+			border-bottom: solid 1px lightgrey;
+			&:focus {
+				outline: none;
+				box-shadow: none;
+				border-color: $primary-color;
+			}
+		}
+	}
+}

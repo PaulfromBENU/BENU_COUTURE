@@ -65,6 +65,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.cart", [], "lu"), 'SaleController@showCart')->name('cart-lu')->middleware('createcart');
 
 		Route::get('/'.trans("slugs.payment", [], "lu"), 'SaleController@showPayment')->name('payment-lu');
+
+		Route::get('/'.trans("slugs.process-payment", [], "lu").'/{order}', 'SaleController@cardPayment')->name('payment-request-lu');
+		Route::get('/'.trans("slugs.processed-payment", [], "lu").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-lu');
 	});
 
 	Route::group([
@@ -88,6 +91,11 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.cart", [], "fr"), 'SaleController@showCart')->name('cart-fr')->middleware('createcart');
 
 		Route::get('/'.trans("slugs.payment", [], "fr"), 'SaleController@showPayment')->name('payment-fr');
+
+		Route::get('/paiement-par-carte/{order}', 'SaleController@cardPayment')->name('payment-request-fr');
+		Route::post('/paiement-par-carte', 'SaleController@payByCard')->name('payment-process-fr');
+		Route::get('/validation-paiement/{order}', 'SaleController@validatePayByCard')->name('payment-validate-fr');
+		Route::get('/paiement-valide/{order}', 'SaleController@showValidPayment')->name('payment-processed-fr');
 	});
 
 	Route::group([
@@ -108,6 +116,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.cart", [], "en"), 'SaleController@showCart')->name('cart-en')->middleware('createcart');
 
 		Route::get('/'.trans("slugs.payment", [], "en"), 'SaleController@showPayment')->name('payment-en');
+
+		Route::get('/'.trans("slugs.process-payment", [], "en").'/{order}', 'SaleController@cardPayment')->name('payment-request-en');
+		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
 	});
 
 	Route::group([
@@ -128,6 +139,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.cart", [], "de"), 'SaleController@showCart')->name('cart-de')->middleware('createcart');
 
 		Route::get('/'.trans("slugs.payment", [], "de"), 'SaleController@showPayment')->name('payment-de');
+
+		Route::get('/'.trans("slugs.process-payment", [], "de").'/{order}', 'SaleController@cardPayment')->name('payment-request-de');
+		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
 	});
 
 	Route::group([

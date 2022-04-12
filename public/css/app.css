@@ -5760,6 +5760,14 @@ input[type=checkbox]:focus {
 }
 .cart-gift-modal__card__type__svg-container {
   margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 7px;
+  box-shadow: lightgray 1px 1px 8px;
+}
+.cart-gift-modal__card__type__svg-container img {
+  max-height: 120px;
+  border-radius: 8px;
 }
 .cart-gift-modal__card__type input[type=radio] {
   margin-top: -3px;
@@ -6040,4 +6048,28 @@ input[type=checkbox]:focus {
   max-height: 150px;
   border-radius: 8px;
   margin-right: 15px;
+}
+
+.payment-process__form {
+  border: solid 2px #D41C1B;
+  border-radius: 8px;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.payment-process__form label {
+  text-align: left;
+  color: grey;
+  display: block;
+  width: 100%;
+}
+.payment-process__form input[type=text] {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px lightgrey;
+}
+.payment-process__form input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #D41C1B;
 }

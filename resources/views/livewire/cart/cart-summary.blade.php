@@ -40,13 +40,13 @@
             <input type="text" name="voucher_code" wire:model="voucher_code" class="w-full mt-5">
             @if($voucher_status == 1)
             <p class="primary-color">
-                <em>Code incorrect ou plus disponible</em>
+                <em>{{ __('cart.voucher-incorrect') }}</em>
             </p>
             @endif
             @if($voucher_verified)
             <div class="flex justify-between cart-summary__price">
                 <p>
-                    <strong>Valeur restante avant utilisation&nbsp;:</strong>
+                    <strong>{{ __('cart.voucher-remaining-value') }}&nbsp;:</strong>
                 </p>
                 <p>
                     <strong>{{ $voucher_current_value }}&euro;</strong>
@@ -54,14 +54,14 @@
             </div>
             <div class="flex justify-between cart-summary__price">
                 <p>
-                    <strong>Valeur restante après utilisation&nbsp;:</strong>
+                    <strong>{{ __('cart.voucher-remaining-value-after') }}&nbsp;:</strong>
                 </p>
                 <p>
                     <strong>{{ $voucher_remaining_value }}&euro;</strong>
                 </p>
             </div>
             @else
-                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mt-5 w-full" wire:click="checkVoucher" style="margin-left: 0;">Vérifier</button>
+                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mt-5 w-full" wire:click="checkVoucher" style="margin-left: 0;">{{ __('cart.voucher-check') }}</button>
             @endif
         @endif
     </div>

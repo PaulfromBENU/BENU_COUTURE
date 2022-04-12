@@ -16,7 +16,7 @@
 			<div class="mb-5">
 				<div class="payment-summary__title flex justify-between" id="payment-cart-content-btn">
 					<h3>
-						Votre commande contient<br/><strong>{{ $cart->couture_variations->count() }} PRODUITS</strong>
+						{{ __('cart.payment-your-order-contains') }}<br/><strong>{{ $cart->couture_variations->count() }} <span class="uppercase">{{ trans_choice('cart.payment-products', $cart->couture_variations->count()) }}</span></strong>
 					</h3>
 					<div class="payment-summary__title__plus" id="payment-cart-plus">
 						+
@@ -31,22 +31,22 @@
 						@if($variation->name == 'voucher')
 							<img src="{{ asset('images/pictures/vouchers_img.png') }}" />
 							<div>
-								<p class="payment-summary__cart-content__article__name">
-									BON D'ACHAT
+								<p class="payment-summary__cart-content__article__name uppercase">
+									{{ __('cart.payment-voucher') }}
 								</p>
 								<div class="payment-summary__cart-content__article__size">
 									@if($variation->voucher_value == 'pdf') PDF @else {{ __('vouchers.format-clothe') }} @endif
 								</div>
 								<div class="flex">
 									<p class="payment-summary__cart-content__article__info">
-										Valeur unitaire : {{ $variation->pivot->value }}&euro;
+										{{ __('cart.payment-unit-value') }} : {{ $variation->pivot->value }}&euro;
 									</p>
 								</div>
 								<p class="payment-summary__cart-content__article__info">
-									Exemplaires : x{{ $variation->pivot->articles_number }}
+									{{ __('cart.payment-number-items') }} : x{{ $variation->pivot->articles_number }}
 								</p>
 								<p class="payment-summary__cart-content__article__info">
-									<strong>Prix total : {{ $variation->pivot->articles_number *$variation->pivot->value }}&euro;</strong>
+									<strong>{{ __('cart.payment-total-price') }} : {{ $variation->pivot->articles_number *$variation->pivot->value }}&euro;</strong>
 								</p>
 							</div>
 						@else
@@ -59,8 +59,8 @@
 								<p class="payment-summary__cart-content__article__name">
 									{{ strtoupper($variation->name) }}
 								</p>
-								<div class="payment-summary__cart-content__article__size">
-									TAILLE {{ $variation->size->value }}
+								<div class="payment-summary__cart-content__article__size uppercase">
+									{{ __('cart.payment-size') }} {{ $variation->size->value }}
 								</div>
 								<div class="flex">
 									<p class="payment-summary__cart-content__article__info">Couleur : </p>
@@ -70,10 +70,10 @@
 									</p>
 								</div>
 								<p class="payment-summary__cart-content__article__info">
-									Exemplaires : x{{ $variation->pivot->articles_number }}
+									{{ __('cart.payment-number-items') }} : x{{ $variation->pivot->articles_number }}
 								</p>
 								<p class="payment-summary__cart-content__article__info">
-									<strong>Prix total : {{ $variation->pivot->articles_number * $variation->creation->price }}&euro;</strong>
+									<strong>{{ __('cart.payment-total-price') }} : {{ $variation->pivot->articles_number * $variation->creation->price }}&euro;</strong>
 								</p>
 							</div>
 						@endif
@@ -105,7 +105,7 @@
 					<p>{{ __('cart.service-voucher') }}</p>
 				</div>
 				<div>
-					@svg('svg_kulturpass')
+					@svg('svg_kulturpass_2')
 					<p>{{ __('cart.service-kulturpass') }}</p>
 				</div>
 			</div>

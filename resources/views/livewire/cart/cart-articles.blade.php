@@ -40,23 +40,23 @@
     <div class="w-full cart-info-box flex justify-between">
         <div class="cart-info-box__block">
             <h5>
-                Méthode de livraison
+                {{ __('cart.delivery-method') }}
             </h5>
             <div>
                 <button class="btn-couture" style="margin: 0;">
-                    Estimer tes frais de livraison
+                    {{ __('cart.delivery-estimate-cost') }}
                 </button>
             </div>
         </div>
         <div class="cart-info-box__block">
             <h5>
-                Besoin d'aide ?
+                {!! __('cart.delivery-need-help') !!}
             </h5>
             <p>
-                Toutes les réponses à tes questions dans notre&nbsp;<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}">FAQ</a>
+                {{ __('cart.delivery-all-answers') }}&nbsp;<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}">{{ __('cart.faq') }}</a>
             </p>
             <p>
-                Tu peux également <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}">nous contacter</a>
+                {{ __('cart.delivery-can-contact-us') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}">{{ __('cart.delivery-contact-us') }}</a>
             </p>
         </div>
     </div>

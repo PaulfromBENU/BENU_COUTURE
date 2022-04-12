@@ -59,7 +59,7 @@
 							{!! __('header.sis-desc') !!}
 						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{!! __('header.discover-sis') !!}</a>
+							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{!! __('header.discover-sis') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 							{!! __('header.sloow-desc') !!}
 						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{!! __('header.discover-sloow') !!}</a>
+							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{!! __('header.discover-sloow') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -159,7 +159,7 @@
 							{!! __('header.lasa-desc') !!}
 						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{!! __('header.discover-lasa') !!}</a>
+							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{!! __('header.discover-lasa') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -184,7 +184,7 @@
 							{!! __('header.design-desc') !!}
 						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{!! __('header.discover-design') !!}</a>
+							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{!! __('header.discover-design') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -209,7 +209,7 @@
 							{!! __('header.break-desc') !!}
 						</div>
 						<div class="text-center">
-							<a href="#" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{!! __('header.discover-break') !!}</a>
+							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{!! __('header.discover-break') !!}</a>
 						</div>
 					</div>
 				</div>

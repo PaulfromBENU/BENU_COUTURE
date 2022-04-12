@@ -1,7 +1,7 @@
 <section class="payment-tunnel">
     <div class="payment-tunnel__identification payment-tunnel__block">
         <h2 class="payment-tunnel__block__title @if($step == 1) payment-tunnel__block__title--current @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(1)">
-            1. Identification
+            1. {{ __('cart.payment-id') }}
         </h2>
         <div class="payment-tunnel__block__content" @if($step > 1) style="display: none;" @endif>
             @guest
@@ -9,24 +9,24 @@
                     @livewire('cart.payment-tunnel-info-form')
                 @else
                     <div class="payment-tunnel__identification__field mb-7">
-                        <h4>Commande avec un compte BENU</h4>
+                        <h4>{{ __('cart.payment-order-with-benu') }}</h4>
                         <p>
-                            Connecte-toi ou crée un compte pour centraliser tous tes achats BENU, et pour rester au courant de toutes nos nouveautés et offres.
+                            {{ __('cart.payment-connect-txt') }}
                         </p>
                         <div class="payment-tunnel__identification__field__btn-container flex flex-col justify-center">
                             <a href="{{ route('login-'.app()->getLocale()) }}" class="btn-couture">
-                                Se connecter
+                                {{ __('cart.payment-login') }}
                             </a>
                         </div>
                     </div>
                     <div class="payment-tunnel__identification__field">
-                        <h4>Commande en tant qu'invité</h4>
+                        <h4>{{ __('cart.payment-order-as-guest') }}</h4>
                         <p>
-                            Tu ne possèdes pas de compte ? Tu peux commander en tant qu’invité ou en créer un pendant ta commande.
+                            {{ __('cart.payment-order-as-guest-txt') }}
                         </p>
                         <div class="payment-tunnel__identification__field__btn-container flex flex-col justify-center">
                             <button class="btn-couture" wire:click="addInfo">
-                                Choisir
+                                {{ __('cart.payment-info-choose') }}
                             </button>
                         </div>
                     </div>
@@ -36,13 +36,13 @@
         <div class="payment-tunnel__block__content" @if($step == 1) style="display:none;" @endif>
             @auth
                 <div class="payment-tunnel__identification__logged">
-                    Tu commandes en tant que {{ ucfirst(auth()->user()->first_name) }} {{ ucfirst(auth()->user()->last_name) }} ({{ auth()->user()->email }})
+                    {{ __('cart.payment-ordering-as') }} {{ ucfirst(auth()->user()->first_name) }} {{ ucfirst(auth()->user()->last_name) }} ({{ auth()->user()->email }})
                 </div>
             @else
                 <div class="payment-tunnel__identification__logged relative">
-                    Tu commandes en tant que {{ ucfirst($order_first_name) }} {{ ucfirst($order_last_name) }} ({{ $order_email }})
+                    {{ __('cart.payment-ordering-as') }} {{ ucfirst($order_first_name) }} {{ ucfirst($order_last_name) }} ({{ $order_email }})
                     <div class="payment-tunnel__identification__modify flex flex-col justify-center">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="changeStep(1)">Modifier</button>
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="changeStep(1)">{{ __('cart.payment-ordering-as-modify') }}</button>
                     </div>
                 </div>
             @endauth
@@ -52,11 +52,11 @@
 
     <div class="payment-tunnel__delivery payment-tunnel__block">
         <h2 class="payment-tunnel__block__title  @if($step == 2) payment-tunnel__block__title--current @elseif($step == 1) payment-tunnel__block__title--waiting @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(2)">
-            2. Livraison
+            2. {{ __('cart.payment-delivery') }}
         </h2>
         <div class="payment-tunnel__block__content" @if($step !== 2) style="display: none;" @endif>
             <div class="payment-tunnel__delivery__field">
-                <h4>Informations de livraison</h4>
+                <h4>{{ __('cart.payment-delivery-info') }}</h4>
                 @if($fill_address)
                     @livewire('cart.payment-tunnel-address-form')
                 @else
@@ -64,7 +64,7 @@
                         @if(auth()->user()->addresses()->count() >= 1)
                             @if($address_chosen)
                             <p>
-                                Je souhaite faire livrer cette commande à l'adresse suivante&nbsp;:
+                                {!! __('cart.payment-delivery-wish') !!}:
                             </p>
                             <div class="flex justify-between payment-tunnel__delivery__address-container">
                                 <div class="payment-tunnel__delivery__address w-2/3">
@@ -90,7 +90,7 @@
                                     </p>
                                     @if(isset($delivery_address->other_infos))
                                         <p>
-                                            Instructions supplémentaires&nbsp;: {{ $delivery_address->other_infos }}
+                                            {{ __('cart.payment-delivery-more-info') }}&nbsp;: {{ $delivery_address->other_infos }}
                                         </p>
                                     @endif
                                 </div>
@@ -98,12 +98,12 @@
                                 <div class="w-1/3">
                                     <div>
                                         <button class="btn-couture mb-5" wire:click="changeAddress">
-                                            Choisir une autre adresse
+                                            {{ __('cart.payment-delivery-choose-other') }}
                                         </button>
                                     </div>
                                     <div>
                                         <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">
-                                            Modifier cette adresse
+                                            {{ __('cart.payment-delivery-modify') }}
                                         </a>
                                     </div>
                                 </div>
@@ -120,14 +120,14 @@
                             </div>
                             <div class="text-center mt-5">
                                 <button class="btn-couture" wire:click="addAddress">
-                                    + Ajouter une adresse
+                                    + {{ __('cart.payment-delivery-add-new') }}
                                 </button>
                             </div>
                             @endif
                         @else
                         <div class="text-center mt-10">
                             <button class="btn-couture" wire:click="addAddress">
-                                + Ajouter une adresse
+                                + {{ __('cart.payment-delivery-add-new') }}
                             </button>
                         </div>
                         @endif
@@ -135,12 +135,12 @@
                         @if($address_chosen == 0)
                         <div class="text-center mt-10">
                             <button class="btn-couture" wire:click="addAddress">
-                                + Ajouter une adresse
+                                + {{ __('cart.payment-delivery-add-new') }}
                             </button>
                         </div>
                         @else
                         <p>
-                            Je souhaite faire livrer cette commande à l'adresse suivante&nbsp;:
+                            {!! __('cart.payment-delivery-wish') !!}:
                         </p>
                         <div class="flex justify-between payment-tunnel__delivery__address-container">
                             <div class="payment-tunnel__delivery__address w-2/3">
@@ -166,7 +166,7 @@
                                 </p>
                                 @if(isset($delivery_address->other_infos))
                                     <p>
-                                        Instructions supplémentaires&nbsp;: {{ $delivery_address->other_infos }}
+                                        {{ __('cart.payment-delivery-more-info') }}&nbsp;: {{ $delivery_address->other_infos }}
                                     </p>
                                 @endif
                             </div>
@@ -174,7 +174,7 @@
                             <div class="w-1/3">
                                 <div>
                                     <button class="btn-couture mb-5" wire:click="changeAddress">
-                                        Choisir une autre adresse
+                                        {{ __('cart.payment-delivery-choose-other') }}
                                     </button>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@
                     <div class="flex justify-between">
                         <div>
                             <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateDeliveryStep">
-                                Valider l'adresse de livraison
+                                {{ __('cart.payment-delivery-validate') }}
                             </button>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
         @if($address_valid)
         <div class="payment-tunnel__block__content" @if($step == 2 || !$address_valid) style="display:none;" @endif>
             <div class="payment-tunnel__delivery__summary">
-                Adresse de livraison&nbsp;: {{ $address_name }}
+                {{ __('cart.payment-delivery-address-summary') }}&nbsp;: {{ $address_name }}
             </div>
         </div>
         @endif
@@ -205,14 +205,14 @@
 
     <div class="payment-tunnel__payment payment-tunnel__block">
         <h2 class="payment-tunnel__block__title @if($step == 3) payment-tunnel__block__title--current @else payment-tunnel__block__title--waiting @endif" wire:click="changeStep(3)">
-            3. Paiement
+            3. {{ __('cart.payment-pay') }}
         </h2>
         <div class="payment-tunnel__block__content" @if($step !== 3 || !$info_valid || !$address_valid) style="display:none;" @endif>
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
                 <div class="grid grid-cols-8">
                     <div class="col-span-2">
                         <p style="padding-top: 7px;">
-                            Paiement par carte bancaire
+                            {{ __('cart.payment-pay-with-card') }}
                         </p>
                     </div>
                     <div class="col-span-1"></div>
@@ -221,8 +221,21 @@
                     </div>
                     <div class="col-span-1"></div>
                     <div class="col-span-2 text-right pt-1">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('card')">Je confirme</button>
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('card')">{{ __('cart.payment-confirm') }}</button>
                     </div>
+                </div>
+
+                <div>
+                    <!-- <form method="POST" wire:submit.prevent="validateOrder('card')">
+                        <input id="card-holder-name" type="text"> -->
+     
+                        <!-- Stripe Elements Placeholder -->
+                        <!-- <div id="card-element"></div> -->
+                         
+                        <!-- <button type="submit" id="card-button">
+                            {{ __('cart.payment-process-payment') }}
+                        </button> -->
+                    </form>
                 </div>
             </div>
 
@@ -230,7 +243,7 @@
                 <div class="grid grid-cols-8">
                     <div class="col-span-2">
                         <p style="padding-top: 7px;">
-                            Paiement par PayPal
+                            {{ __('cart.payment-pay-with-paypal') }}
                         </p>
                     </div>
                     <div class="col-span-1"></div>
@@ -239,7 +252,7 @@
                     </div>
                     <div class="col-span-1"></div>
                     <div class="col-span-2 text-right pt-1">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('paypal')">Je confirme</button>
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('paypal')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
             </div>
@@ -248,7 +261,7 @@
                 <div class="grid grid-cols-8">
                     <div class="col-span-2">
                         <p style="padding-top: 7px;">
-                            Paiement par Digicash
+                            {{ __('cart.payment-pay-with-digicash') }}
                         </p>
                     </div>
                     <div class="col-span-1"></div>
@@ -257,7 +270,7 @@
                     </div>
                     <div class="col-span-1"></div>
                     <div class="col-span-2 text-right pt-1">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('digicash')">Je confirme</button>
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('digicash')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
             </div>
@@ -266,7 +279,7 @@
                 <div class="grid grid-cols-8">
                     <div class="col-span-2">
                         <p style="padding-top: 7px;">
-                            Paiement par virement bancaire
+                            {{ __('cart.payment-pay-with-transfer') }}
                         </p>
                     </div>
                     <div class="col-span-1"></div>
@@ -275,7 +288,7 @@
                     </div>
                     <div class="col-span-1"></div>
                     <div class="col-span-2 text-right pt-1">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('transfer')">Je confirme</button>
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('transfer')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
             </div>

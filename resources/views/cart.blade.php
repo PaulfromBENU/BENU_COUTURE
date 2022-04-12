@@ -64,7 +64,7 @@
 					<p>{{ __('cart.service-voucher') }}</p>
 				</div>
 				<div>
-					@svg('svg_kulturpass')
+					@svg('svg_kulturpass_2')
 					<p>{{ __('cart.service-kulturpass') }}</p>
 				</div>
 			</div>

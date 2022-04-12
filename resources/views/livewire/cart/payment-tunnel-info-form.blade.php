@@ -1,6 +1,6 @@
 <form method="POST" wire:submit.prevent="validateInfo" class="payment-tunnel__identification__field">
     @csrf
-    <h4>Informations requises</h4>
+    <h4>{{ __('cart.info-required') }}</h4>
     <div class="mb-5">
         <div class="flex justify-between">
             <div class="w-5/12">
@@ -47,12 +47,21 @@
             </div>
         </div>
     </div>
+    <p class="mb-3" style="width: 100%;">
+        <strong>{{ __('forms.personnal-data-info') }}En poursuivant mon achat, j'accepte que les données personnelles fournies soient utilisées et conservées pour permettre le suivi de la commande.</strong>
+    </p>
+    @if($duplicate_email_info == 1)
+    <p class="primary-color">
+        <strong>{{ __('forms.e-mail-already-exists-please-confirm') }}</strong>
+        <strong>Cette adresse e-mail a déjà été utilisée avec BENU. Les informations ci-dessus mettront à jour vos données personnelles. Confirmer ?</strong>
+    </p>
+    @endif
     <div class="flex justify-between mt-5">
         <button type="submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mr-5">
-            Valider les informations
+            {{ __('cart.info-validate') }}
         </button>
         <a href="{{ route('login-'.app()->getLocale()) }}" class="btn-slider-left mr-3">
-            Se connecter ou créer un compte
+            {{ __('cart.info-connect') }}
         </a>
     </div>
 </form>

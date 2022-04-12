@@ -6,77 +6,77 @@
         </div>
     </div>
 
-    <h4>Cet article est un cadeau</h4>
+    <h4>{{ __('cart.article-is-gift') }}</h4>
     
     @if($article_id > 0)
     <div class="flex justify-center">
         <button class="cart-gift-modal__section-btn @if($section == 'wrapping') cart-gift-modal__section-btn--active @endif" wire:click.prevent.stop="changeSection('wrapping')">
-            Emballage cadeau
+            {{ __('cart.gift-wrapping') }}
         </button>
         <button class="cart-gift-modal__section-btn @if($section == 'card') cart-gift-modal__section-btn--active @endif" wire:click.prevent.stop="changeSection('card')">
-            Carte personnalisée
+            {{ __('cart.unique-card') }}
         </button>
         <button class="cart-gift-modal__section-btn @if($section == 'message') cart-gift-modal__section-btn--active @endif" wire:click.prevent.stop="changeSection('message')">
-            Message personnalisé
+            {{ __('cart.unique-message') }}
         </button>
     </div>
 
     <div class="cart-gift-modal__wrapping" @if($section !== 'wrapping') style="display: none;" @endif>
         <div class="cart-gift-modal__wrapping__input">
             <input type="checkbox" name="cart_add_wrapping" wire:model="with_wrapping" id="cart-add-wrapping">
-            <label for="cart-add-wrapping">Ajouter un emballage cadeau <span class="pl-3 font-bold">+ 5&euro;</span></label>
+            <label for="cart-add-wrapping">{{ __('cart.add-wrapping') }} <span class="pl-3 font-bold">+ 5&euro;</span></label>
         </div>
         <p>
-            Lorem ipsum etc...
+            {{ __('cart.add-wrapping-txt') }}
         </p>
     </div>
 
     <div class="cart-gift-modal__card" @if($section !== 'card') style="display: none;" @endif>
-        <h5>Ajouter une carte personnalisée <span class="pl-3 font-bold">+ 3&euro;</span></h5>
+        <h5>{{ __('cart.add-card') }} <span class="pl-3 font-bold">+ 3&euro;</span></h5>
         <div class="flex justify-center">
             <div class="cart-gift-modal__card__type @if($card_type == 1) cart-gift-modal__card__type--active @endif" wire:click="updateCard(1)">
                 <div class="cart-gift-modal__card__type__svg-container">
-                    @svg('carte-message-cadeau-1')
+                    <img src="{{ asset('images/pictures/gift_card_1.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="1" wire:model="card_type" id="cart-add-card-1">
-                    <label for="cart-add-card-1">Ajouter la carte #1</label>
+                    <label for="cart-add-card-1">{{ __('cart.add-specific-card') }} #1</label>
                 </div>
             </div>
             <div class="cart-gift-modal__card__type @if($card_type == 2) cart-gift-modal__card__type--active @endif" wire:click="updateCard(2)">
                 <div class="cart-gift-modal__card__type__svg-container">
-                    @svg('carte-message-cadeau-2')
+                    <img src="{{ asset('images/pictures/gift_card_2.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="2" wire:model="card_type" id="cart-add-card-2">
-                    <label for="cart-add-card-2">Ajouter la carte #2</label>
+                    <label for="cart-add-card-2">{{ __('cart.add-specific-card') }} #2</label>
                 </div>
             </div>
             <div class="cart-gift-modal__card__type @if($card_type == 3) cart-gift-modal__card__type--active @endif" wire:click="updateCard(3)">
                 <div class="cart-gift-modal__card__type__svg-container">
-                    @svg('carte-message-cadeau-3')
+                    <img src="{{ asset('images/pictures/gift_card_3.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="3" wire:model="card_type" id="cart-add-card-3">
-                    <label for="cart-add-card-3">Ajouter la carte #3</label>
+                    <label for="cart-add-card-3">{{ __('cart.add-specific-card') }} #3</label>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="cart-gift-modal__message" @if($section !== 'message') style="display: none;" @endif>
-        <h5>Ajouter un message personnalisé <span class="pl-3 font-bold uppercase">GRATUIT</span></h5>
+        <h5>{{ __('cart.add-message') }}<span class="pl-3 font-bold uppercase">{{ __('cart.add-message-free') }}</span></h5>
         <div class="relative">
             <div class="absolute cart-gift-modal__message__placeholder">
-                Mon message
+                {{ __('cart.my-message') }}
             </div>
-            <textarea wire:model="message" class="w-full" rows="5" maxlength="1000" placeholder="Max 1000 caractères"></textarea>
+            <textarea wire:model="message" class="w-full" rows="5" maxlength="1000" placeholder="{{ __('cart.add-message-max-length') }}"></textarea>
         </div>
     </div>
 
     <div class="text-center cart-gift-modal__confirm-btn">
         <button type="submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover m-auto">
-            Confirmer les options
+            {{ __('cart.gift-confirm-options') }}
         </button>
     </div>
 

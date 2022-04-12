@@ -87,9 +87,9 @@
         <button class="btn-couture-plain mb-5" style="height: fit-content;">{{ __('forms.address-add-new') }}</button>
 
         @auth
-        <button class="btn-slider-left m-auto mt-5" wire:click.prevent="cancelForm">Choisir une adresse existante</button>
+        <button class="btn-slider-left m-auto mt-5" wire:click.prevent="cancelForm">{{ __('cart.address-choose-existing') }}</button>
         @else
-        <button class="btn-slider-left m-auto mt-5" wire:click.prevent="cancelForm">Retour</button>
+        <button class="btn-slider-left m-auto mt-5" wire:click.prevent="cancelForm">{{ __('cart.address-back') }}</button>
         @endauth
     </div>
 </form>

@@ -14,9 +14,11 @@ use Filament\Models\Contracts\HasName;
 
 use App\Models\ContactMessage;
 
+use Laravel\Cashier\Billable;
+
 class User extends Authenticatable implements HasName, FilamentUser
 {
-    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes, Billable;
 
     // Choice of the database
     protected $connection = 'mysql_common';
@@ -111,5 +113,10 @@ class User extends Authenticatable implements HasName, FilamentUser
     public function vouchers()
     {
         return $this->hasMany(Voucher::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }

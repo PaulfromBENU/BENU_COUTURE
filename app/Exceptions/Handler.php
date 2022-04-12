@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+// use Stripe\Error as Stripe;
 
 class Handler extends ExceptionHandler
 {
@@ -34,8 +35,16 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
+        // $this->reportable(function (Throwable $e) {
+        //     if ($e instanceof \Stripe\Exception\CardException || 
+        //         get_class($e) == "Laravel\Cashier\Exceptions\IncompletePayment") {
+                
+        //         return redirect()->route('payment-request-'.session('locale'), ['order' => $request->order_id])->with('error', $e->getMessage());
+        //     }
+
+        //     // if (isset($body['error']['type']) && $body['error']['type'] == 'card_error') {
+                
+        //     // }
+        // });
     }
 }
