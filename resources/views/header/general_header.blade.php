@@ -46,9 +46,21 @@
                     </ul>
                 </nav>
                 <div class="header__newsletter-btn">
-                    <a href="https://benu.lu/" class="header__newsletter-btn__link" target="_blank">
+                    @guest
+                    <a href="{{ route('newsletter-'.app()->getLocale()) }}" class="header__newsletter-btn__link">
                         {{ __('header.newsletter') }}
                     </a>
+                    @else
+                        @if(auth()->user()->newsletter == '0')
+                        <a href="{{ route('newsletter-'.app()->getLocale()) }}" class="header__newsletter-btn__link">
+                            {{ __('header.newsletter') }}
+                        </a>
+                        @else
+                        <a href="{{ route('newsletter-'.app()->getLocale()) }}" class="header__newsletter-btn__link">
+                            {{ __('header.newsletter-unsubscribe') }}
+                        </a>
+                        @endif
+                    @endguest
                     <!-- <a href="{{ route('dashboard') }}" class="header__newsletter-btn__link">
                         {{ __('header.dashboard') }}
                     </a> -->

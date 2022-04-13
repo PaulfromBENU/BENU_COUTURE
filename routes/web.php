@@ -42,6 +42,8 @@ if (app('env') == 'landing') {
 				return redirect()->route('dashboard');
 			});
 			Route::post('/dashboard/addresses', 'UserController@addAddress')->name('dashboard.add-address');
+			Route::post('/store-newsletter', 'GeneralController@storeNewsletter')->name('newsletter-subscribe');
+			
 			//Auth routes
 			require __DIR__.'/auth.php';
 	});
@@ -69,6 +71,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.process-payment", [], "lu").'/{order}', 'SaleController@cardPayment')->name('payment-request-lu');
 		Route::get('/'.trans("slugs.payment-validation", [], "lu").'/{order}', 'SaleController@validatePayment')->name('payment-validate-lu');
 		Route::get('/'.trans("slugs.processed-payment", [], "lu").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-lu');
+
+		Route::get('/'.trans("slugs.newsletter-subscribe", [], "lu"), 'GeneralController@showNewsletter')->name('newsletter-lu');
 	});
 
 	Route::group([
@@ -97,6 +101,8 @@ if (app('env') == 'landing') {
 		Route::post('/paiement-par-carte', 'SaleController@payByCard')->name('payment-process-fr');
 		Route::get('/validation-paiement/{order}', 'SaleController@validatePayment')->name('payment-validate-fr');
 		Route::get('/paiement-valide/{order}', 'SaleController@showValidPayment')->name('payment-processed-fr');
+
+		Route::get('/'.trans("slugs.newsletter-subscribe", [], "fr"), 'GeneralController@showNewsletter')->name('newsletter-fr');
 	});
 
 	Route::group([
@@ -121,6 +127,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.process-payment", [], "en").'/{order}', 'SaleController@cardPayment')->name('payment-request-en');
 		Route::get('/'.trans("slugs.payment-validation", [], "en").'/{order}', 'SaleController@validatePayment')->name('payment-validate-en');
 		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
+
+		Route::get('/'.trans("slugs.newsletter-subscribe", [], "en"), 'GeneralController@showNewsletter')->name('newsletter-en');
 	});
 
 	Route::group([
@@ -144,7 +152,9 @@ if (app('env') == 'landing') {
 
 		Route::get('/'.trans("slugs.process-payment", [], "de").'/{order}', 'SaleController@cardPayment')->name('payment-request-de');
 		Route::get('/'.trans("slugs.payment-validation", [], "de").'/{order}', 'SaleController@validatePayment')->name('payment-validate-de');
-		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
+		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-de');
+
+		Route::get('/'.trans("slugs.newsletter-subscribe", [], "de"), 'GeneralController@showNewsletter')->name('newsletter-de');
 	});
 
 	Route::group([

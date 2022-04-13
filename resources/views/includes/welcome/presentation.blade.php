@@ -45,9 +45,9 @@
             <p class="welcome-illustration-4 welcome-presentation__desc__text">
                 {!! __('welcome.pres-txt-4') !!}
             </p>
-            <p class="welcome-illustration-5 welcome-presentation__desc__text">
-                {!! __('welcome.pres-txt-5') !!}
-            </p>
+            <ul class="welcome-illustration-5 welcome-presentation__desc__text" id="welcome-bullet-presentation">
+                <li>{!! __('welcome.pres-txt-5') !!}</li>
+            </ul>
         </div>
         <div class="">
             <a href="{{ route('about-'.app()->getLocale()) }}" class="welcome-illustration-1 welcome-presentation__desc__link">{!! __('welcome.pres-link-1') !!}</a>

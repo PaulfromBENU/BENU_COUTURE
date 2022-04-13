@@ -9,9 +9,12 @@ use App\Models\Article;
 use App\Models\Creation;
 use App\Models\CreationCategory;
 use App\Models\Partner;
+use App\Models\User;
 
 use App\Traits\ArticleAnalyzer;
 use App\Traits\DataImporter;
+
+use App\Http\Requests\NewsletterRequest;
 
 class GeneralController extends Controller
 {
@@ -96,5 +99,52 @@ class GeneralController extends Controller
         } else {
             return redirect()->route('login-fr');
         }
+    }
+
+    public function showNewsletter()
+    {
+        return view('newsletter');
+    }
+
+    public function storeNewsletter(NewsletterRequest $request)
+    {
+        $message = "";
+        if (auth()->check()) {
+            if (auth()->user()->newsletter == '1') {
+                auth()->user()->newsletter = 0;
+                auth()->user()->save();
+                $message = __('auth.newsletter-unsubscribe-confirm');
+            } else {
+                auth()->user()->newsletter = 1;
+                auth()->user()->save();
+                $message = __('auth.newsletter-subscribe-confirm');
+            }
+        } else {
+            if (User::where('email', $request->newsletter_email)->count() > 0) {
+                $user = User::where('email', $request->newsletter_email)->first();
+                $user->newsletter = 1;
+                $user->save();
+                $message = __('auth.newsletter-subscribe-confirm');
+            } else {
+                $user = new User();
+                $user->email = $request->newsletter_email;
+                $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                while (User::where('client_number', $client_number)->count() > 0) {
+                    $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                }
+
+                $user->client_number = $client_number;
+                $user->first_name = $request->newsletter_first_name;
+                $user->last_name = $request->newsletter_last_name;
+                $user->newsletter = 1;
+                $user->general_comment = "";
+                if($user->save()) {
+                    $message = __('auth.newsletter-subscribe-confirm');
+                }
+            }
+        }
+
+        return redirect()->route('newsletter-'.session('locale'))->with('success', $message);
+
     }
 }
