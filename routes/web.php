@@ -94,7 +94,7 @@ if (app('env') == 'landing') {
 
 		Route::get('/paiement-par-carte/{order}', 'SaleController@cardPayment')->name('payment-request-fr');
 		Route::post('/paiement-par-carte', 'SaleController@payByCard')->name('payment-process-fr');
-		Route::get('/validation-paiement/{order}', 'SaleController@validatePayByCard')->name('payment-validate-fr');
+		Route::get('/validation-paiement/{order}', 'SaleController@validatePayment')->name('payment-validate-fr');
 		Route::get('/paiement-valide/{order}', 'SaleController@showValidPayment')->name('payment-processed-fr');
 	});
 

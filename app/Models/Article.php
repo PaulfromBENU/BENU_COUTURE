@@ -37,7 +37,12 @@ class Article extends Model
 
     public function available_shops()
     {
-        return $this->belongsToMany(Shop::class)->wherePivot('stock', '>', '0');
+        return $this->belongsToMany(Shop::class)->wherePivot('stock', '>', '0')->withTimestamps();
+    }
+
+    public function pending_shops()
+    {
+        return $this->belongsToMany(Shop::class)->wherePivot('stock_in_cart', '>', '0')->withTimestamps();
     }
 
     public function photos()

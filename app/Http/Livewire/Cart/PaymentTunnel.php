@@ -222,6 +222,10 @@ class PaymentTunnel extends Component
                     case 'card':
                         return redirect()->route('payment-request-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
+
+                    case 'transfer':
+                        return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
+                        break;
                     
                     default:
                         dd('Logic not developed yet for this payment method.');

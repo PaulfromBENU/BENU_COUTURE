@@ -48,6 +48,6 @@ class Shop extends Model
 
     public function articles_in_stock()
     {
-        return $this->belongsToMany(Article::class)->wherePivot('stock', '>', '0');
+        return $this->belongsToMany(Article::class)->wherePivot('stock', '>', '0')->withTimestamps();
     }
 }

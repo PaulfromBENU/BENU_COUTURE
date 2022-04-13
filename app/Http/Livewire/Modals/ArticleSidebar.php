@@ -167,6 +167,9 @@ class ArticleSidebar extends Component
         $cart->status = 1;// 0 = created, 1 = currently updated, 2 = paying, 3 = paid, 4 = abandoned
         if ($cart->save()) {
             $cart->couture_variations()->attach($this->article_id);
+            $pivot = $this->article->available_shops()->first()->pivot;
+            $pivot->decrement('stock');
+            $pivot->increment('stock_in_cart');
             $this->sent_to_cart = 1;
             $this->emit('cartUpdated');
         }

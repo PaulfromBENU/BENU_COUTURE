@@ -27,7 +27,7 @@ class SaleController extends Controller
             $cart_count = 0;
         }
 
-        return view('cart', ['cart_id' => $cart_id, 'cart_count' => $cart_count]);
+        return view('checkout.cart', ['cart_id' => $cart_id, 'cart_count' => $cart_count]);
     }
 
     public function showPayment()
@@ -38,7 +38,7 @@ class SaleController extends Controller
             $cart_id = session('cart_id');
             $cart = Cart::where('cart_id', $cart_id)->first();
             session(['payment-ongoing' => 'active']);
-            return view('payment', ['cart_id' => $cart_id, 'cart' => $cart]);
+            return view('checkout.payment', ['cart_id' => $cart_id, 'cart' => $cart]);
         } else {
             return redirect()->route('cart-'.app()->getLocale());
         }
@@ -73,11 +73,11 @@ class SaleController extends Controller
                 'clientSecret' => $paymentIntent->client_secret,
             ];
 
-            return view('process-payment', ['order' => $order, 'order_id' => $request->order, 'client_secret' => json_encode($output)]);
+            return view('checkout.process-card-payment', ['order' => $order, 'order_id' => $request->order, 'client_secret' => json_encode($output)]);
         }
     }
 
-    public function validatePayByCard($order, Request $request)
+    public function validatePayment($order, Request $request)
     {
         if (is_string($order) && Order::where('unique_id', substr($order, 0, 6))->count() > 0) {
             $current_order = Order::where('unique_id', substr($order, 0, 6))->first();
@@ -91,8 +91,8 @@ class SaleController extends Controller
                 foreach ($current_order->cart->couture_variations as $variation) {
                     if ($variation->name !== 'voucher') {
                         // What if variation is available in several shops??
-                        $pivot = $variation->available_shops()->first()->pivot;
-                        $pivot->decrement('stock', $variation->pivot->articles_number);
+                        $pivot = $variation->pending_shops()->first()->pivot;
+                        $pivot->decrement('stock_in_cart', $variation->pivot->articles_number);
                     } else {
                         for ($i=1; $i <= $variation->pivot->articles_number; $i++) { 
                             $increment = rand(0, 9).rand(0, 9);
@@ -113,40 +113,27 @@ class SaleController extends Controller
                     }
                 }
 
-                // Send e-mail with purchase confirmation
+                // Send e-mail with purchase confirmation, with pdf invoice
 
-                // Send e-mails with vouchers (1 e-mail/voucher)
+                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
+
                 $current_order->status = '2';
                 if($current_order->save()) {
+                    // Update cart status
+                    $cart = $current_order->cart;
+                    $cart->is_active = 0;
+                    $cart->status = 2;
+                    $cart->save();
+
                     return redirect()->route('payment-processed-'.session('locale'), ['order' => $order]);
                 }
             }
         }
     }
 
-    // public function payByCard(Request $request) 
-    // {
-    //     if (is_string($request->order_id) && Order::where('unique_id', substr($request->order_id, 0, 6))->count() > 0) {
-    //         $order = Order::where('unique_id', substr($request->order_id, 0, 6))->first();
-    //         $amount = intval($order->total_price * 100);
-
-    //         try {
-    //             $order->user->charge(
-    //                 $amount, $request->payment_method
-    //             );
-    //         } catch (\Exception $e) {//\Stripe\Exception\CardException
-    //             return redirect()->route('payment-request-'.session('locale'), ['order' => $request->order_id])->with('error', $e->getMessage());
-    //         }
-
-    //         $order->status = 2;
-    //         if($order->save()) {
-    //             return redirect()->route('payment-processed-'.session('locale'), ['order' => $request->order_id]);
-    //         }
-    //     }
-    // }
 
     public function showValidPayment($order)
     {
-        return view('payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first()]);
+        return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first()]);
     }
 }

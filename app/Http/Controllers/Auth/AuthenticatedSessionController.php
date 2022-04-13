@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Cart;
+
 class AuthenticatedSessionController extends Controller
 {
     /**
@@ -52,6 +54,15 @@ class AuthenticatedSessionController extends Controller
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
+
+        if (session('cart_id') !== null && Cart::where('cart_id', session('cart_id'))->count() > 0) {
+            $cart = Cart::where('cart_id', session('cart_id'))->first();
+            foreach ($cart->couture_variations()->where('name', '<>', 'voucher')->get() as $variation) {
+                $pivot = $variation->pending_shops()->first()->pivot;
+                $pivot->decrement('stock_in_cart');
+                $pivot->increment('stock');
+            }
+        }
 
         $request->session()->invalidate();
 
