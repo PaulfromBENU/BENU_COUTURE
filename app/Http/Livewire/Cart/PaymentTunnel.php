@@ -23,6 +23,7 @@ class PaymentTunnel extends Component
     public $info_valid;
     public $fill_address;
     public $address_valid;
+    public $country_code;
 
     // Info data
     public $order_gender;
@@ -43,6 +44,7 @@ class PaymentTunnel extends Component
         $this->info_valid = 0;
         $this->address_valid = 0;
         $this->address_chosen = 0;
+        $this->country_code = "LU";
 
         if (auth()->check()) {
             $this->step = 2;
@@ -130,6 +132,15 @@ class PaymentTunnel extends Component
     public function validateDeliveryStep()
     {
         if (Address::find($this->order_address_id)) {
+            $country = Address::find($this->order_address_id)->country;
+            if ($country == 'France') {
+                $this->country_code = "FR";
+            } elseif ($country == "Luxembourg") {
+                $this->country_code = "LU";
+            } else {
+                $this->country_code = $country;
+            }
+            $this->emit('addressUpdated', $this->country_code);
             $this->address_valid = 1;
             $this->step = 3;
             $this->address_name = Address::find($this->order_address_id)->address_name;
@@ -192,7 +203,7 @@ class PaymentTunnel extends Component
             $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
             $new_order->user_id = $user_id;
             $new_order->address_id = $this->order_address_id;
-            $new_order->total_price = $this->computeTotal($this->cart_id);
+            $new_order->total_price = $this->computeTotal($this->cart_id, $this->country_code);
             $new_order->status = '0';
 
             switch ($payment_type) {

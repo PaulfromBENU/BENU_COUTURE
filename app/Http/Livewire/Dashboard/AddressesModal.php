@@ -5,9 +5,12 @@ namespace App\Http\Livewire\Dashboard;
 use Livewire\Component;
 
 use App\Models\Address;
+use App\Models\DeliveryCountry;
 
 class AddressesModal extends Component
 {
+    public $country_options;
+    public $localized_country;
     public $address_id;
     public $address_name;
     public $address_first_name;
@@ -28,6 +31,8 @@ class AddressesModal extends Component
     public function mount()
     {
         $this->resetAddress();
+        $this->country_options = DeliveryCountry::all();
+        $this->localized_country = "country_".app()->getLocale();
     }
 
     public function resetAddress()

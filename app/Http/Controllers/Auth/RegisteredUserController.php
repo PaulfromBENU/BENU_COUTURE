@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\Rule;
 
+use App\Models\DeliveryCountry;
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -22,7 +24,10 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $country_options = DeliveryCountry::all();
+        $localized_country = "country_".app()->getLocale();
+
+        return view('auth.register', ['country_options' => $country_options, 'localized_country' => $localized_country]);
     }
 
     /**

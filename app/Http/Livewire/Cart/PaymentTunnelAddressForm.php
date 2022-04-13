@@ -5,9 +5,12 @@ namespace App\Http\Livewire\Cart;
 use Livewire\Component;
 
 use App\Models\Address;
+use App\Models\DeliveryCountry;
 
 class PaymentTunnelAddressForm extends Component
 {
+    public $country_options;
+    public $localized_country;
     public $address_id;
     public $address_name;
     public $address_first_name;
@@ -33,9 +36,15 @@ class PaymentTunnelAddressForm extends Component
             'address_city' => ['required', 'string', 'max:150'],
             'address_zip' => ['required', 'string', 'max:10'],
             'address_phone' => ['required', 'string', 'max:30'],
-            'address_country' => ['required', 'string', 'max:50'],
+            'address_country' => ['required', 'string', 'max:2'],
             'address_other' => ['nullable', 'string', 'max:255'],
         ];
+    }
+
+    public function mount()
+    {
+        $this->country_options = DeliveryCountry::all();
+        $this->localized_country = "country_".app()->getLocale();
     }
 
     public function createNewAddress()

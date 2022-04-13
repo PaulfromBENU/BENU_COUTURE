@@ -67,6 +67,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.payment", [], "lu"), 'SaleController@showPayment')->name('payment-lu');
 
 		Route::get('/'.trans("slugs.process-payment", [], "lu").'/{order}', 'SaleController@cardPayment')->name('payment-request-lu');
+		Route::get('/'.trans("slugs.payment-validation", [], "lu").'/{order}', 'SaleController@validatePayment')->name('payment-validate-lu');
 		Route::get('/'.trans("slugs.processed-payment", [], "lu").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-lu');
 	});
 
@@ -118,6 +119,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.payment", [], "en"), 'SaleController@showPayment')->name('payment-en');
 
 		Route::get('/'.trans("slugs.process-payment", [], "en").'/{order}', 'SaleController@cardPayment')->name('payment-request-en');
+		Route::get('/'.trans("slugs.payment-validation", [], "en").'/{order}', 'SaleController@validatePayment')->name('payment-validate-en');
 		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
 	});
 
@@ -141,6 +143,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.payment", [], "de"), 'SaleController@showPayment')->name('payment-de');
 
 		Route::get('/'.trans("slugs.process-payment", [], "de").'/{order}', 'SaleController@cardPayment')->name('payment-request-de');
+		Route::get('/'.trans("slugs.payment-validation", [], "de").'/{order}', 'SaleController@validatePayment')->name('payment-validate-de');
 		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
 	});
 

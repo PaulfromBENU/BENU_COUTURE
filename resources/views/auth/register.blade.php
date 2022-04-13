@@ -162,9 +162,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full reactive-label-input">
-                    <label>{{ __('forms.register-address-country') }} <span class="register_optionnal_star">*</span></label>
-                    <input type="text" name="register_address_country" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="16" maxlength="50">
+                <div class="w-full">
+                    <label class="text-sm">{{ __('forms.register-address-country') }} <span class="register_optionnal_star">*</span></label>
+                    <select name="register_address_country" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="16" maxlength="50" required style="margin-top: 4px; background: transparent;">
+                        @foreach($country_options as $country)
+                        <option value="{{ $country->country_code }}">
+                            {{ $country->$localized_country }}
+                        </option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="w-full reactive-label-input">

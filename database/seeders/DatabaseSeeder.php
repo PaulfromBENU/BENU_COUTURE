@@ -42,6 +42,8 @@ class DatabaseSeeder extends Seeder
             // ArticlePhotoSeeder::class,
             // ArticleCompositionSeeder::class,
             // ArticleCareRecommendationSeeder::class,
+
+            DeliveryCountrySeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

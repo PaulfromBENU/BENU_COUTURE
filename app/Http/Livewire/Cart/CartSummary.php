@@ -7,14 +7,20 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Cart;
+use App\Models\DeliveryCountry;
 use App\Models\Voucher;
+
+use App\Traits\DeliveryCalculator;
 
 class CartSummary extends Component
 {
+    use DeliveryCalculator;
+
     public $cart_id;
     public $articles_sum;
     public $delivery_sum;
     public $gift_sum;
+    public $country_code;
     public $total;
 
     public $use_voucher;
@@ -29,7 +35,7 @@ class CartSummary extends Component
     const GIFT_WRAP_PRICE = 5;
     const GIFT_CARD_PRICE = 3;
 
-    protected $listeners = ['cartSumUpdated' => 'computeAll', 'giftUpdated' => 'computeAll'];
+    protected $listeners = ['cartSumUpdated' => 'computeAll', 'giftUpdated' => 'computeAll', 'addressUpdated' => 'updateDeliveryCode'];
 
     public function mount()
     {
@@ -38,6 +44,8 @@ class CartSummary extends Component
         } else {
             $this->show_payment_btn = 1;
         }
+
+        $this->country_code = "LU";
 
         $this->use_voucher = 0;
         $this->voucher_code = "";
@@ -113,6 +121,14 @@ class CartSummary extends Component
         $this->computeAll();
     }
 
+    public function updateDeliveryCode($country_code)
+    {
+        if (DeliveryCountry::where('country_code', $country_code)->count() > 0) {
+            $this->country_code = $country_code;
+            $this->computeAll();
+        }
+    }
+
     public function computeAll()
     {
         $this->computeArticlesSum();
@@ -141,6 +157,20 @@ class CartSummary extends Component
     public function computeDeliverySum()
     {
         $this->delivery_sum = 0;
+
+        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+            $cart = Cart::where('cart_id', $this->cart_id)->first();
+            $total_weight = 0;
+
+            foreach ($cart->couture_variations as $variation) {
+                if ($variation->name !== 'voucher') {
+                    $variation_weight = $variation->creation->weight / 1000;
+                }
+                $total_weight += $variation_weight;
+            }
+
+            $this->delivery_sum = $this->calculateDeliveryTotal($total_weight, $this->country_code);
+        }
     }
 
     public function computeGiftSum()
