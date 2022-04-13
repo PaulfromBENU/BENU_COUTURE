@@ -80,8 +80,8 @@
                         <input type="text" name="register_last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" required>
                     </div>
                     <div class="input-group reactive-label-input">
-                        <label>{{ __('forms.phone') }}</label>
-                        <input type="text" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4">
+                        <label>{{ __('forms.phone') }} *</label>
+                        <input type="tel" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" required>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                         <label>{{ __('forms.register-address-name') }} <span class="register_optionnal_star">*</span></label>
                         <input type="text" name="register_address_name" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="7" maxlength="150">
                     </div>
-                    <p class="text-sm text-white"><em>({{ __('forms.register-address-required') }})</em></p>
+                    <p class="text-sm text-white"><em>{{ __('forms.register-address-required') }}</em></p>
                 </div>
                 <div class="flex justify-between">
                     <div class="w-5/12">
