@@ -58,7 +58,7 @@
 
 @section('scripts')
 <script type="text/javascript">
-	const stripe = Stripe("{{ env('STRIPE_KEY') }}", {
+	const stripe = Stripe("pk_test_51KnNZGADiHn0YYXdEITP4uYJxOmbRKtbTYcITC0XGXuVKigIixg4HWs61N2VPzNgceMhfJb1Ryej5renNTu5Igge00gC9qjUlY", {
 		locale: '{{ app()->getLocale() }}'
 	});
 
