@@ -10,6 +10,11 @@
     </div>
     <div class="col-span-2 cart-content__article__name">
         <h4>{{ strtoupper($article->name) }}</h4>
+        @if($has_extra_option)
+        <div class="mt-2 text-lg font-bold">
+            {{ __('cart.with-extra-pillow') }} +&nbsp;10&euro;
+        </div>
+        @endif
         <div class="flex cart-content__article__name__checkbox">
             <input type="checkbox" name="article_cart_gift" id="article-cart-{{ $article->id }}" wire:model="is_gift">
             <label for="article-cart-{{ $article->id }}" class="pl-2 @if($is_gift) primary-color @endif">{{ __('cart.article-is-gift') }}</label>

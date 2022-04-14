@@ -13,6 +13,7 @@ trait CartAnalyzer {
 
     public $gift_wrap_price = 5;
     public $gift_card_price = 3;
+    public $extra_pillow_price = 10;
 
     public function computeArticlesSum($cart_id)
     {
@@ -24,8 +25,28 @@ trait CartAnalyzer {
                     $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
                 } else {
                     $article_amount = $variation->pivot->articles_number * $variation->creation->price;
+                    // if ($variation->pivot->with_extra_article == '1') {
+                    //     $article_amount += $variation->pivot->articles_number * $this->extra_pillow_price;
+                    // }
                 }
                 $sum += $article_amount;
+            }
+            return $sum;
+        }
+        return 0;
+    }
+
+    public function computeExtraSum($cart_id)
+    {
+        if (Cart::where('cart_id', $cart_id)->count() > 0) {
+            $cart = Cart::where('cart_id', $cart_id)->first();
+            $sum = 0;
+            foreach ($cart->couture_variations as $variation) {
+                if ($variation->name !== 'voucher') {
+                    if ($variation->pivot->with_extra_article == '1') {
+                        $sum += $variation->pivot->articles_number * $this->extra_pillow_price;
+                    }
+                }
             }
             return $sum;
         }
@@ -74,7 +95,7 @@ trait CartAnalyzer {
     public function computeTotal($cart_id, $country_code)
     {
     	$cart = Cart::where('cart_id', $cart_id)->first();
-        $total = $this->computeArticlesSum($cart_id) + $this->computeDeliverySum($cart_id, $country_code) + $this->computeGiftSum($cart_id);
+        $total = $this->computeArticlesSum($cart_id) + $this->computeExtraSum($cart_id) + $this->computeDeliverySum($cart_id, $country_code) + $this->computeGiftSum($cart_id);
 
         if ($cart->use_voucher == 1 && Voucher::where('unique_code', $cart->voucher_code)->count() > 0) {
         	$voucher = Voucher::where('unique_code', $cart->voucher_code)->first();

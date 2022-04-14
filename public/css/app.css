@@ -5498,9 +5498,9 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   color: #D41C1B;
   padding-top: 30px;
-  margin-bottom: 65px;
 }
 .cart-content__article__name__checkbox {
+  margin-top: 65px;
   text-align: left;
   font: normal normal 500 16px/36px "Barlow";
   letter-spacing: 0px;

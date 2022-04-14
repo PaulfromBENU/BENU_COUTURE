@@ -7,6 +7,18 @@
             {{ $articles_sum }}&euro;
         </p>
     </div>
+
+    @if($with_extra > 0)
+    <div class="flex justify-between cart-summary__price">
+        <p>
+            {{ __('cart.extra-pillow-estimate') }}
+        </p>
+        <p>
+            {{ $with_extra }}&euro;
+        </p>
+    </div>
+    @endif
+
     <div class="flex justify-between cart-summary__price">
         <p>
             {{ __('cart.delivery-estimate') }}

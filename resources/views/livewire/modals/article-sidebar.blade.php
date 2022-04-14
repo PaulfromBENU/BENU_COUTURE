@@ -140,6 +140,13 @@
                     @endif
                 @endif
 
+                @if($article->creation->pillow_option == 1)
+                <div class="text-center m-auto mb-5">
+                    <input type="checkbox" name="with_extra" wire:model="with_extra" class="mr-2 rounded" id="with_extra">
+                    <label for="with_extra">{{ __('sidebar.add-extra-pillow-for') }} 10&euro;</label>
+                </div>
+                @endif
+
                 @if($sold == 0)
                     @if($sent_to_cart == 0)
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" wire:click="addToCart">{{ __('sidebar.add-to-cart') }}</button>

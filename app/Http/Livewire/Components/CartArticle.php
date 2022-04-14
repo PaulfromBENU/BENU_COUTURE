@@ -14,6 +14,7 @@ class CartArticle extends Component
     public $is_wishlisted;
     public $is_gift;
     public $max_number;
+    public $has_extra_option;
     public $number;
 
     public $gift_price;
@@ -43,6 +44,7 @@ class CartArticle extends Component
 
             $cart = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first();
             $this->number = $cart->pivot->articles_number;
+            $this->has_extra_option = $cart->pivot->with_extra_article;
         }
     }
 

@@ -10,16 +10,19 @@ use App\Models\Cart;
 use App\Models\DeliveryCountry;
 use App\Models\Voucher;
 
+use App\Traits\CartAnalyzer;
 use App\Traits\DeliveryCalculator;
 
 class CartSummary extends Component
 {
+    use CartAnalyzer;
     use DeliveryCalculator;
 
     public $cart_id;
     public $articles_sum;
     public $delivery_sum;
     public $gift_sum;
+    public $with_extra;
     public $country_code;
     public $total;
 
@@ -34,6 +37,7 @@ class CartSummary extends Component
 
     const GIFT_WRAP_PRICE = 5;
     const GIFT_CARD_PRICE = 3;
+    const EXTRA_PILLOW_PRICE = 10;
 
     protected $listeners = ['cartSumUpdated' => 'computeAll', 'giftUpdated' => 'computeAll', 'addressUpdated' => 'updateDeliveryCode'];
 
@@ -44,6 +48,8 @@ class CartSummary extends Component
         } else {
             $this->show_payment_btn = 1;
         }
+
+        $this->with_extra = 0;
 
         $this->country_code = "LU";
 
@@ -131,67 +137,71 @@ class CartSummary extends Component
 
     public function computeAll()
     {
-        $this->computeArticlesSum();
-        $this->computeDeliverySum();
-        $this->computeGiftSum();
-        $this->computeTotal();
+        $this->articles_sum = $this->computeArticlesSum($this->cart_id);
+        $this->with_extra = $this->computeExtraSum($this->cart_id);
+        $this->delivery_sum = $this->computeDeliverySum($this->cart_id, $this->country_code);
+        $this->gift_sum = $this->computeGiftSum($this->cart_id);
+        $this->computeTotalWithVoucher();
     }
 
-    public function computeArticlesSum()
+    // public function computeArticlesSum()
+    // {
+    //     if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+    //         $cart = Cart::where('cart_id', $this->cart_id)->first();
+    //         $sum = 0;
+    //         foreach ($cart->couture_variations as $variation) {
+    //             if ($variation->name == 'voucher') {
+    //                 $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
+    //             } else {
+    //                 $article_amount = $variation->pivot->articles_number * $variation->creation->price;
+    //                 if ($variation->pivot->with_extra_article == '1') {
+    //                     $article_amount += $variation->pivot->articles_number * self::EXTRA_PILLOW_PRICE;
+    //                 }
+    //             }
+    //             $sum += $article_amount;
+    //         }
+    //         $this->articles_sum = $sum;
+    //     }
+    // }
+
+    // public function computeDeliverySum()
+    // {
+    //     $this->delivery_sum = 0;
+
+    //     if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+    //         $cart = Cart::where('cart_id', $this->cart_id)->first();
+    //         $total_weight = 0;
+
+    //         foreach ($cart->couture_variations as $variation) {
+    //             if ($variation->name !== 'voucher') {
+    //                 $variation_weight = $variation->creation->weight / 1000;
+    //             }
+    //             $total_weight += $variation_weight;
+    //         }
+
+    //         $this->delivery_sum = $this->calculateDeliveryTotal($total_weight, $this->country_code);
+    //     }
+    // }
+
+    // public function computeGiftSum()
+    // {
+    //     $this->gift_sum = 0;
+    //     if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+    //         $cart = Cart::where('cart_id', $this->cart_id)->first();
+    //         foreach ($cart->couture_variations as $variation) {
+    //             if ($variation->pivot->is_gift && $variation->pivot->with_wrapping) {
+    //                 $this->gift_sum += self::GIFT_WRAP_PRICE;
+    //             }
+    //             if ($variation->pivot->is_gift && $variation->pivot->with_card) {
+    //                 $this->gift_sum += self::GIFT_CARD_PRICE;
+    //             }
+    //         }
+    //     }
+    // }
+
+    public function computeTotalWithVoucher()
     {
-        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-            $cart = Cart::where('cart_id', $this->cart_id)->first();
-            $sum = 0;
-            foreach ($cart->couture_variations as $variation) {
-                if ($variation->name == 'voucher') {
-                    $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
-                } else {
-                    $article_amount = $variation->pivot->articles_number * $variation->creation->price;
-                }
-                $sum += $article_amount;
-            }
-            $this->articles_sum = $sum;
-        }
-    }
-
-    public function computeDeliverySum()
-    {
-        $this->delivery_sum = 0;
-
-        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-            $cart = Cart::where('cart_id', $this->cart_id)->first();
-            $total_weight = 0;
-
-            foreach ($cart->couture_variations as $variation) {
-                if ($variation->name !== 'voucher') {
-                    $variation_weight = $variation->creation->weight / 1000;
-                }
-                $total_weight += $variation_weight;
-            }
-
-            $this->delivery_sum = $this->calculateDeliveryTotal($total_weight, $this->country_code);
-        }
-    }
-
-    public function computeGiftSum()
-    {
-        $this->gift_sum = 0;
-        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-            $cart = Cart::where('cart_id', $this->cart_id)->first();
-            foreach ($cart->couture_variations as $variation) {
-                if ($variation->pivot->is_gift && $variation->pivot->with_wrapping) {
-                    $this->gift_sum += self::GIFT_WRAP_PRICE;
-                }
-                if ($variation->pivot->is_gift && $variation->pivot->with_card) {
-                    $this->gift_sum += self::GIFT_CARD_PRICE;
-                }
-            }
-        }
-    }
-
-    public function computeTotal()
-    {
-        $this->total = $this->articles_sum + $this->delivery_sum + $this->gift_sum;
+        $this->total = $this->articles_sum + $this->with_extra + $this->delivery_sum + $this->gift_sum;
 
         if ($this->total > $this->voucher_current_value) {
             $this->total -= $this->voucher_current_value;

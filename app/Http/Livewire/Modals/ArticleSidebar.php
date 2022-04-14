@@ -28,6 +28,7 @@ class ArticleSidebar extends Component
     public $explanation_query;
     public $keyword_query;
     public $is_wishlisted;
+    public $with_extra;
     public $article_description;
     public $full_desc;
     public $sent_to_cart;
@@ -49,6 +50,7 @@ class ArticleSidebar extends Component
         $this->article_description = "";
         $this->full_desc = 0;
         $this->sold = 0;
+        $this->with_extra = 0;
     }
 
     public function loadArticleDetails(int $article_id)
@@ -166,7 +168,11 @@ class ArticleSidebar extends Component
         }
         $cart->status = 1;// 0 = created, 1 = currently updated, 2 = paying, 3 = paid, 4 = abandoned
         if ($cart->save()) {
-            $cart->couture_variations()->attach($this->article_id);
+            if ($this->with_extra == 1) {
+                $cart->couture_variations()->attach($this->article_id, ['with_extra_article' => '1']);
+            } else {
+                $cart->couture_variations()->attach($this->article_id);
+            }
             $pivot = $this->article->available_shops()->first()->pivot;
             $pivot->decrement('stock');
             $pivot->increment('stock_in_cart');
