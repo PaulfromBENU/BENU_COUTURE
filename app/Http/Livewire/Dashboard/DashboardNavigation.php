@@ -228,6 +228,6 @@ class DashboardNavigation extends Component
         if ($this->section == 'wishlist') {
             $this->getWishlistArticles();
         }
-        return view('livewire.dashboard.dashboard-navigation');
+        return view('livewire.dashboard.dashboard-navigation', ['user_badges' =>  auth()->user()->badges]);
     }
 }

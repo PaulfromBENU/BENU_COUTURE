@@ -43,7 +43,8 @@ class DatabaseSeeder extends Seeder
             // ArticleCompositionSeeder::class,
             // ArticleCareRecommendationSeeder::class,
 
-            DeliveryCountrySeeder::class,
+            // DeliveryCountrySeeder::class,
+            BadgeSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

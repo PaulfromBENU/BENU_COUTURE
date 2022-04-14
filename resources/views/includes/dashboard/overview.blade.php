@@ -1,14 +1,19 @@
 <div class="dashboard__content__box dashboard__content__box--large">
     <h3 class="dashboard__content__box__title">{{ __('dashboard.overview-title-1') }}</h3>
-    <div class="w-1/2">
+    <div class="w-2/3">
         <h4 class="dashboard__content__box__subtitle">
             {{ Auth::user()->first_name.' '.Auth::user()->last_name }} <br/>({!! __('dashboard.client-number') !!}: {{ Auth::user()->client_number }})
         </h4>
         <p>
             {{ __('dashboard.overview-member-since') }} {{ Auth::user()->created_at->format('d'.'/'.'m'.'/'.'Y') }}
         </p>
+        <div class="flex justify-start mt-5 dashboard__content__box__svg-container">
+            @foreach($user_badges as $badge)
+            @svg($badge->svg_file)
+            @endforeach
+        </div>
     </div>
-    <div class="w-1/2 dashboard__content__box__low-links">
+    <div class="w-1/3 dashboard__content__box__low-links">
         <div class="flex flex-col justify-end">
             <p>
                 <a wire:click="changeSection('details')" class="btn-dashboard-plain">{{ __('dashboard.overview-account-details') }}</a>

@@ -4243,7 +4243,7 @@ input[type=checkbox]:focus {
   padding: 18px 40px;
   background: #D0D0D033 0% 0% no-repeat padding-box;
   border-radius: 8px;
-  height: 215px;
+  min-height: 215px;
   margin-bottom: 60px;
   position: relative;
 }
@@ -4278,6 +4278,10 @@ input[type=checkbox]:focus {
   bottom: 18px;
   right: 40px;
   width: calc(100% - 80px);
+}
+.dashboard__content__box__svg-container svg {
+  height: 50px;
+  margin-right: 15px;
 }
 
 .dashboard-wishlist__title {

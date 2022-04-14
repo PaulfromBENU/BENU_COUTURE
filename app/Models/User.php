@@ -119,4 +119,9 @@ class User extends Authenticatable implements HasName, FilamentUser
     {
         return $this->hasMany(Order::class);
     }
+
+    public function badges() 
+    {
+        return $this->belongsToMany(Badge::class)->withTimestamps();
+    }
 }
