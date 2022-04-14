@@ -89,7 +89,7 @@
 	        </div>
 	        @endforeach
 	    </div>
-	    <input type="file" wire:model="photos" class="new-photo-form__file-input">
+	    <input type="file" wire:model="photos" class="new-photo-form__file-input" multiple>
 	    <div wire:loading wire:target="photos">Uploading...</div>
 
 	    @error('photo') <span class="error">{{ $message }}</span> @enderror

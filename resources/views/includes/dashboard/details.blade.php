@@ -1,7 +1,7 @@
 <div class="dashboard-details">
 	<h2>{{ __('dashboard.account-details') }}</h2>
 	<div>
-		<form method="POST" wire:submit.prevent="updatePersonalData">
+		<form method="POST" wire:submit.prevent="updatePersonalData" enctype="multipart/form-data">
 			@csrf
 			<div class="flex justify-between">
                 <div class="w-5/12">
@@ -86,8 +86,23 @@
 
                 <div class="w-5/12">
                 	<h4>{{ __('dashboard.has-kulturpass') }}</h4>
+                    <p class="font-bold mb-3">
+                        <em>
+                        @if($kulturpass_status == 0)
+                            {{ __('dashboard.kulturpass-none') }}
+                        @elseif($kulturpass_status ==  1)
+                            {{ __('dashboard.kulturpass-validation_pending') }}
+                        @else
+                            {{ __('dashboard.kulturpass-valid') }}
+                        @endif
+                        </em>
+                    </p>
                 	<div>
-                		A completer... Logique Kulturpass pas encore implementée
+                		<p class="mb-2">{{ __('dashboard.kulturpass-request-new') }}</p>
+                        <input type="file" name="new_kulturpass" wire:model="new_kulturpass">
+                        <p class="mb-10">
+                            <em>{{ __('forms.kulturpass-accepted-formats') }}: .pdf, .jpg, .jpeg, .png, .bmp, .doc, .docx - {{ __('forms.kulturpass-max-size') }}: 6Mo</em>
+                        </p>
                 	</div>
                 </div>
             </div>

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
-use App\Models\Address;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -12,8 +10,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\Rule;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 
+use App\Models\Address;
 use App\Models\DeliveryCountry;
+use App\Models\Kulturpass;
+use App\Models\User;
 
 class RegisteredUserController extends Controller
 {
@@ -63,7 +66,6 @@ class RegisteredUserController extends Controller
             || isset($request->register_address_city) && strlen($request->register_address_city) > 0
             || isset($request->register_address_zip) && strlen($request->register_address_zip) > 0
             || isset($request->register_address_phone) && strlen($request->register_address_phone) > 0
-            || isset($request->register_address_country) && strlen($request->register_address_country) > 0
             || isset($request->register_address_other) && strlen($request->register_address_other) > 0) {
 
             $address_entered = true;
@@ -89,6 +91,7 @@ class RegisteredUserController extends Controller
                 'register_address_phone' => ['required', 'string', 'max:30'],
                 'register_address_country' => ['required', 'string', 'max:50'],
                 'register_address_other' => ['nullable', 'string', 'max:255'],
+                'register_kulturpass' => ['nullable', 'mimes:pdf,jpg,jpeg,png,bmp,doc,docx', 'max:6144'],
             ]);
 
             $new_address = new Address();
@@ -131,6 +134,7 @@ class RegisteredUserController extends Controller
                 'register_address_phone' => ['nullable', 'string', 'max:30'],
                 'register_address_country' => ['nullable', 'string', 'max:50'],
                 'register_address_other' => ['nullable', 'string', 'max:255'],
+                'register_kulturpass' => ['nullable', 'mimes:pdf,jpg,jpeg,png,bmp,doc,docx', 'max:6144'],
             ]);
         }
 
@@ -157,6 +161,20 @@ class RegisteredUserController extends Controller
         if ($address_entered) {
             $new_address->user_id = $user->id;
             $new_address->save();
+        }
+
+        if ($request->file('register_kulturpass') !== null) {
+            $filename = 'kulturpass-'.$user->id.date('dmYHis').'-'.$user->first_name.'-'.$user->last_name.'.'.$request->file('register_kulturpass')->extension();
+            $path = $request->file('register_kulturpass')->storeAs(
+                'kulturpasses', $filename, 'local'
+            );
+
+            // Storage::disk('local')->putFile('kulturpasses', new File($request->register_kulturpass), 'kulturpass-'.$user->id.'-'.$user->first_name.'-'.$user->last_name.'.'.$request->file('register_kulturpass')->);
+
+            $new_kulturpass = new Kulturpass();
+            $new_kulturpass->user_id = $user->id;
+            $new_kulturpass->file_name = $filename;
+            $new_kulturpass->save();
         }
 
         event(new Registered($user));

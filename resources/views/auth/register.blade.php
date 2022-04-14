@@ -38,7 +38,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('register', [app()->getLocale()]) }}" class="w-1/2 m-auto mb-10" id="register-form">
+        <form method="POST" action="{{ route('register', [app()->getLocale()]) }}" class="w-1/2 m-auto mb-10" id="register-form" enctype="multipart/form-data">
             @csrf
             <div class="flex justify-between">
                 <div class="w-5/12">
@@ -164,7 +164,7 @@
                 </div>
                 <div class="w-full">
                     <label class="text-sm">{{ __('forms.register-address-country') }} <span class="register_optionnal_star">*</span></label>
-                    <select name="register_address_country" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="16" maxlength="50" required style="margin-top: 4px; background: transparent;">
+                    <select name="register_address_country" class="input-underline w-full register_address_field_mandatory" tabindex="16" maxlength="50" required style="margin-top: 4px; background: transparent;">
                         @foreach($country_options as $country)
                         <option value="{{ $country->country_code }}">
                             {{ $country->$localized_country }}
@@ -178,6 +178,19 @@
                     <input type="text" name="register_address_other" class="input-underline w-full register_address_field" tabindex="17" maxlength="255">
                 </div>
             </div>
+
+
+            <h3 class="register__lowtitle">{{ __('forms.kulturpass') }}</h3>
+
+            <p class="mb-10 mt-5">
+                {!! __('forms.kulturpass-explanation') !!}
+            </p>
+
+            <input type="file" name="register_kulturpass">
+            <p class="mb-10">
+                <em>{{ __('forms.kulturpass-accepted-formats') }}: .pdf, .jpg, .jpeg, .png, .bmp, .doc, .docx - {{ __('forms.kulturpass-max-size') }}: 6Mo</em>
+            </p>
+
 
             <p class="register__info">
                 <em>* {{ __('forms.mandatory-fields-long') }}</em>
@@ -262,7 +275,6 @@
                 }
             });
             if (firstElWithIssue != '') {
-                console.log(firstElWithIssue);
                 $('html, body').animate({
                    scrollTop: (firstElWithIssue.offset().top - 220)
                  }, 800);

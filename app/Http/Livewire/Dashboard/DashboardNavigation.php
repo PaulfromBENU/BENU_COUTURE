@@ -7,8 +7,10 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+use Livewire\WithFileUploads;
 use App\Traits\ArticleAnalyzer;
 use App\Models\GeneralCondition;
+use App\Models\Kulturpass;
 
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\Rule;
@@ -16,6 +18,7 @@ use Illuminate\Validation\Rule;
 class DashboardNavigation extends Component
 {
     use ArticleAnalyzer;
+    use WithFileUploads;
 
     public $section;
     public $couture_wishlisted_articles;
@@ -35,6 +38,8 @@ class DashboardNavigation extends Component
     public $new_password;
     public $new_password_confirmation;
     public $show_confirmation;
+    public $kulturpass_status;
+    public $new_kulturpass;
 
     // Delete User
     public $delete_confirm;
@@ -57,6 +62,7 @@ class DashboardNavigation extends Component
             'new_password_confirmation' => ['nullable', Rules\Password::defaults()],
             "delete_confirm" => "nullable|boolean",
             "delete_feedback" => "nullable|string|max:1000",
+            "new_kulturpass" => ['nullable', 'mimes:pdf,jpg,jpeg,png,bmp,doc,docx', 'max:6144'],
         ];
     }
 
@@ -69,6 +75,14 @@ class DashboardNavigation extends Component
         }
         $this->show_confirmation = 0;
         $this->confirm_delete = 0;
+
+        if (auth()->user()->kulturpasses()->count() == 0) {
+            $this->kulturpass_status = 0;
+        } elseif (auth()->user()->kulturpasses()->orderBy('created_at', 'desc')->first()->approved == '1') {
+            $this->kulturpass_status = 2;
+        } else {
+            $this->kulturpass_status = 1;
+        }
     }
 
     public function getWishlistArticles()
@@ -117,6 +131,11 @@ class DashboardNavigation extends Component
         if ($section == 'details') {
             $this->fillUserInfo();
         }
+    }
+
+    public function updatedNewKulturpass()
+    {
+        $this->emit('activateInputs'); // Used to reload JS inputs behaviour
     }
 
     public function fillUserInfo()
@@ -184,6 +203,28 @@ class DashboardNavigation extends Component
                     auth()->user()->forceFill([
                         'password' => Hash::make($this->new_password),
                     ]);
+                }
+            }
+        }
+
+        if ($this->new_kulturpass !== null) {
+            $user = auth()->user();
+            $filename = 'kulturpass-'.$user->id.date('dmYHis').'-'.$user->first_name.'-'.$user->last_name.'.'.$this->new_kulturpass->extension();
+            $this->new_kulturpass->storeAs(
+                'kulturpasses', $filename, 'local'
+            );
+
+            $new_kulturpass = new Kulturpass();
+            $new_kulturpass->user_id = $user->id;
+            $new_kulturpass->file_name = $filename;
+            if($new_kulturpass->save()) {
+                $this->new_kulturpass = null;
+                if (auth()->user()->kulturpasses()->count() == 0) {
+                    $this->kulturpass_status = 0;
+                } elseif (auth()->user()->kulturpasses()->orderBy('created_at', 'desc')->first()->approved == '1') {
+                    $this->kulturpass_status = 2;
+                } else {
+                    $this->kulturpass_status = 1;
                 }
             }
         }
