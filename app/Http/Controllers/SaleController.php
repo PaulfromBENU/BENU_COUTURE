@@ -118,6 +118,12 @@ class SaleController extends Controller
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
 
                 $current_order->status = '2';
+                if ($current_order->payment_type ==  '0') {
+                    $current_order->payment_status = 2;
+                } elseif ($current_order->payment_type == '3') {
+                    $current_order->payment_status = 1;
+                }
+                $current_order->delivery_status = 1;
                 if($current_order->save()) {
                     // Update cart status
                     $cart = $current_order->cart;

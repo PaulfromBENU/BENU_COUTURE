@@ -4456,6 +4456,30 @@ input[type=checkbox]:focus {
   width: 100%;
 }
 
+.dashboard-orders {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  position: relative;
+}
+.dashboard-orders h2 {
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 20px;
+}
+.dashboard-orders__order {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: lightgrey 0 5px 10px;
+}
+.dashboard-orders__order__details {
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 15px;
+}
+
 .sell-form__input-group {
   border-bottom: solid 1px grey;
 }

@@ -80,7 +80,7 @@
                 @break
 
             @case('orders')
-                @include('includes.dashboard.orders')
+                @livewire('dashboard.orders')
                 @break
 
             @case('communications')
