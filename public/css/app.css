@@ -3958,21 +3958,54 @@ input[type=checkbox]:focus {
   margin-bottom: 35px;
 }
 .all-news__link {
-  border: 3px solid #D41C1B;
+  width: 30%;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 15px;
   border-radius: 8px;
-  background: #FFFFFF;
-  color: #D41C1B;
-  text-align: left;
-  font: normal normal 700 28px/28px "Barlow Condensed";
-  letter-spacing: 0px;
-  display: block;
-  padding: 34px 50px;
-  transition: all 0.2s ease-in-out;
+  margin-bottom: 30px;
+  box-shadow: lightgrey 0 2px 10px;
+}
+.all-news__link__img-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.all-news__link__img-container img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.all-news__link__tags {
   margin-bottom: 30px;
 }
-.all-news__link:hover {
-  background: #D41C1B;
-  color: #FFFFFF;
+.all-news__link__tags__tag {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  border-radius: 15px;
+  background: #F9E2E2;
+  color: #D41C1B;
+  font: normal normal 500 14px/24px "Barlow Condensed";
+  text-align: center;
+}
+.all-news__link__title {
+  font: normal normal 600 24px/34px "Barlow Condensed";
+  color: #D41C1B;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.all-news__link__date {
+  font: normal normal 500 14px/24px "Barlow";
+  text-align: left;
+  margin-bottom: 20px;
+}
+.all-news__link__summary {
+  font: normal normal 400 15px/28px "Barlow";
+  text-align: left;
+  padding-bottom: 20px;
 }
 
 .single-news {
