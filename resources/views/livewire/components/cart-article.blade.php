@@ -10,9 +10,15 @@
     </div>
     <div class="col-span-2 cart-content__article__name">
         <h4>{{ strtoupper($article->name) }}</h4>
+        @if($article->pending_shops()->where('filter_key', '<>', 'benu-esch')->count() > 0)
+        <button class=" mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3" wire:click="showInfoModal">
+            Article en pop-up store  +
+        </button>
+        @endif
         @if($has_extra_option)
-        <div class="mt-2 text-lg font-bold">
-            {{ __('cart.with-extra-pillow') }} +&nbsp;10&euro;
+        <div class="mt-2 text-md font-normal flex">
+            <input type="checkbox" class="rounded mr-2" name="with_extra_option" wire:model="with_extra_option" style="margin-top: 5px;" id="with_extra_option_{{ $article->id }}">
+            <label for="with_extra_option_{{ $article->id }}">{{ __('cart.with-extra-pillow') }} : <span class="primary-color font-bold">+&nbsp;10&euro;</span></label>
         </div>
         @endif
         <div class="flex cart-content__article__name__checkbox">

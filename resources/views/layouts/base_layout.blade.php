@@ -64,6 +64,11 @@
         @yield('modal')
     </div>
 
+    <!-- Central Info Modal -->
+    <div class="modal general-modal" id="info-modal" style="display: none;">
+        @yield('info-modal')
+    </div>
+
     <!-- Side modal -->
     <div class="modal side-modal" id="general-side-modal" style="display: none;">
         @yield('side_modal')

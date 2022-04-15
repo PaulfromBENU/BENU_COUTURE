@@ -15,6 +15,7 @@ class CartArticle extends Component
     public $is_gift;
     public $max_number;
     public $has_extra_option;
+    public $with_extra_option;
     public $number;
 
     public $gift_price;
@@ -42,9 +43,23 @@ class CartArticle extends Component
 
         if (Article::find($this->article_id) && Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->count() > 0) {
 
+            $this->has_extra_option = Article::find($this->article_id)->creation->pillow_option;
+
             $cart = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first();
             $this->number = $cart->pivot->articles_number;
-            $this->has_extra_option = $cart->pivot->with_extra_article;
+            $this->with_extra_option = $cart->pivot->with_extra_article;
+        }
+    }
+
+    public function updatedWithExtraOption()
+    {
+        if (Article::find($this->article_id) && Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->count() > 0) {
+
+            $pivot = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot;
+            $pivot->with_extra_article = $this->with_extra_option;
+            if ($pivot->save()) {
+                $this->emit('cartSumUpdated');
+            }
         }
     }
 
@@ -62,6 +77,11 @@ class CartArticle extends Component
                 $this->gift_price += 3;
             }
         }
+    }
+
+    public function showInfoModal()
+    {
+        $this->emit('activateInfoModal');
     }
 
     public function toggleWishlist()

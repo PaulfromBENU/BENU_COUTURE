@@ -9,6 +9,9 @@ function showModal(modal) {
         case 'general':
             $('#general-modal').fadeIn();
             break;
+        case 'info':
+            $('#info-modal').fadeIn();
+            break;
         case 'lang':
             $('#lang-modal').fadeIn();
             break;
@@ -61,6 +64,15 @@ $(function() {
     Livewire.on('activateGiftModal', article_id => {
         showModal('general');
         modalStatus = 'on';
+    });
+
+    Livewire.on('activateInfoModal', function() {
+        showModal('info');
+        modalStatus = 'on';
+    });
+
+    $('#info-modal-close').on('click', function() {
+        clearAllModals();
     });
 
     Livewire.on('closeModal', function() {

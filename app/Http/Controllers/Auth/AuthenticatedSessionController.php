@@ -58,9 +58,11 @@ class AuthenticatedSessionController extends Controller
         if (session('cart_id') !== null && Cart::where('cart_id', session('cart_id'))->count() > 0) {
             $cart = Cart::where('cart_id', session('cart_id'))->first();
             foreach ($cart->couture_variations()->where('name', '<>', 'voucher')->get() as $variation) {
-                $pivot = $variation->pending_shops()->first()->pivot;
-                $pivot->decrement('stock_in_cart');
-                $pivot->increment('stock');
+                if ($variation->pending_shops()->count() > 0) {
+                    $pivot = $variation->pending_shops()->first()->pivot;
+                    $pivot->decrement('stock_in_cart');
+                    $pivot->increment('stock');
+                }
             }
         }
 

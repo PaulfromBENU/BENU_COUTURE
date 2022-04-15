@@ -2512,7 +2512,7 @@ input[type=checkbox]:focus {
 .general-modal {
   width: 60vw;
   left: 20vw;
-  top: calc(50vh - 310px);
+  top: max(50px, 50vh - 310px);
   min-height: 20vh;
 }
 

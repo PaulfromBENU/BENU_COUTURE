@@ -24,6 +24,27 @@
 	@livewire('cart.gift-modal', ['cart_id' => $cart_id])
 @endsection
 
+@section('info-modal')
+	<div class="relative">
+		@if(in_array(app()->getLocale(), ['lu', 'de']))
+        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large" id="info-modal-close" style="top: 0; right: 10px;">
+            <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @else
+        <div class="article-sidebar__content__close-container" id="info-modal-close" style="top: 0; right: 10px;">
+            <div class="article-sidebar__content__close">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @endif
+        <p class="pt-4">
+			{{ __('cart.pop-up-store-info') }}
+		</p>
+	</div>
+@endsection
+
 @section('main-content')
 <div class="flex justify-between benu-container mb-10 pb-10">
 	<section class="cart-content" @if($cart_id == 0 || $cart_count == 0) style="width: 100%;" @endif>
