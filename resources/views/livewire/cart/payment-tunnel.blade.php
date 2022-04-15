@@ -1,6 +1,6 @@
 <section class="payment-tunnel">
     <div class="payment-tunnel__identification payment-tunnel__block">
-        <h2 class="payment-tunnel__block__title @if($step == 1) payment-tunnel__block__title--current @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(1)">
+        <h2 class="payment-tunnel__block__title @if($step == 1) payment-tunnel__block__title--current @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(1)" id="payment-tunnel-block-1">
             1. {{ __('cart.payment-id') }}
         </h2>
         <div class="payment-tunnel__block__content" @if($step > 1) style="display: none;" @endif>
@@ -51,48 +51,110 @@
 
 
     <div class="payment-tunnel__delivery payment-tunnel__block">
-        <h2 class="payment-tunnel__block__title  @if($step == 2) payment-tunnel__block__title--current @elseif($step == 1) payment-tunnel__block__title--waiting @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(2)">
+        <h2 class="payment-tunnel__block__title  @if($step == 2) payment-tunnel__block__title--current @elseif($step == 1) payment-tunnel__block__title--waiting @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(2)" id="payment-tunnel-block-2">
             2. {{ __('cart.payment-delivery') }}
         </h2>
         <div class="payment-tunnel__block__content" @if($step !== 2) style="display: none;" @endif>
             <div class="payment-tunnel__delivery__field">
                 <h4>{{ __('cart.payment-delivery-info') }}</h4>
-                @if($fill_address)
-                    @livewire('cart.payment-tunnel-address-form')
-                @else
-                    @auth
-                        @if(auth()->user()->addresses()->count() >= 1)
-                            @if($address_chosen)
+                @if(!$delivery_chosen)
+                    <div>
+                        <h5 class="mb-5"><strong>Choisir une méthode de livraison</strong></h5>
+                        <div>
+                            <input type="radio" name="delivery_method" value="0" wire:model="delivery_method" style="margin-top: -2px; margin-right: 5px;" id="delivery_method_collect">
+                            <label for="delivery_method_collect">Retrait en magasin - GRATUIT</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="delivery_method" value="1" wire:model="delivery_method" style="margin-top: -2px; margin-right: 5px;" id="delivery_method_delivery">
+                            <label for="delivery_method_delivery">Livraison à domicile - Frais applicables</label>
+                        </div>
+                        <button class="mt-5 btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectDeliveryMethod">
+                            Choisir
+                        </button>
+                    </div>
+                @elseif(!$delivery_address_chosen)
+                    <div class="mb-5 rounded-xl p-4" style="border: #D41C1B solid 2px">
+                        <h5 class="mb-2"><strong>Méthode de livraison choisie</strong></h5>
+                        <div class="flex justify-between">
+                            <p class="mb-1">
+                                @if($delivery_method == '0')
+                                Retrait en magasin - GRATUIT
+                                @else
+                                Livraison à domicile
+                                @endif
+                            </p>
+                            <div class="text-right">
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod">Modifier</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-10 mt-10 text-center">Choisir une adresse de livraison</h3>
+
+                    @if($fill_address)
+                        @livewire('cart.payment-tunnel-address-form')
+                    @else
+                        @auth
+                            @if(auth()->user()->addresses()->count() >= 1)
+                                @if($address_chosen)
+                                <p>
+                                    {!! __('cart.payment-delivery-wish') !!}:
+                                </p>
+                                <div class="flex justify-between payment-tunnel__delivery__address-container">
+                                    <div class="payment-tunnel__delivery__address w-2/3">
+                                        @include('includes.cart.cart_address_details')
+                                    </div>
+
+                                    <div class="w-1/3">
+                                        <div>
+                                            <button class="btn-couture mb-5" wire:click="changeAddress">
+                                                {{ __('cart.payment-delivery-choose-other') }}
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">
+                                                {{ __('cart.payment-delivery-modify') }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @else
+                                <div class="flex justify-around flex-wrap mt-5 mb-10">
+                                    @foreach(auth()->user()->addresses as $address)
+                                        <div class="text-center w-2/5 mt-2 mb-2" wire:key="{{ $address->id }}">
+                                            <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectAddress({{ $address->id }})">
+                                                {{ $address->address_name }}
+                                            </button>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <div class="text-center mt-5">
+                                    <button class="btn-couture" wire:click="addAddress">
+                                        + {{ __('cart.payment-delivery-add-new') }}
+                                    </button>
+                                </div>
+                                @endif
+                            @else
+                            <div class="text-center mt-10">
+                                <button class="btn-couture" wire:click="addAddress">
+                                    + {{ __('cart.payment-delivery-add-new') }}
+                                </button>
+                            </div>
+                            @endif
+                        @else
+                            @if($address_chosen == 0)
+                            <div class="text-center mt-10">
+                                <button class="btn-couture" wire:click="addAddress">
+                                    + {{ __('cart.payment-delivery-add-new') }}
+                                </button>
+                            </div>
+                            @else
                             <p>
                                 {!! __('cart.payment-delivery-wish') !!}:
                             </p>
                             <div class="flex justify-between payment-tunnel__delivery__address-container">
                                 <div class="payment-tunnel__delivery__address w-2/3">
-                                    <div class="payment-tunnel__delivery__address__name">
-                                        {{ $delivery_address->address_name }}
-                                    </div>
-                                    <h5>
-                                        {{ $delivery_address->first_name }} {{ $delivery_address->last_name }}
-                                    </h5>
-                                    <p>
-                                        {{ $delivery_address->street_number }}, {{ $delivery_address->street }}
-                                    </p>
-                                    @if(isset($delivery_address->floor))
-                                        <p>
-                                            {{ $delivery_address->floor }}
-                                        </p>
-                                    @endif
-                                    <p>
-                                        {{ $delivery_address->zip_code }} {{ $delivery_address->city }}
-                                    </p>
-                                    <p>
-                                        {{ $delivery_address->phone }}
-                                    </p>
-                                    @if(isset($delivery_address->other_infos))
-                                        <p>
-                                            {{ __('cart.payment-delivery-more-info') }}&nbsp;: {{ $delivery_address->other_infos }}
-                                        </p>
-                                    @endif
+                                    @include('includes.cart.cart_address_details')
                                 </div>
 
                                 <div class="w-1/3">
@@ -101,88 +163,154 @@
                                             {{ __('cart.payment-delivery-choose-other') }}
                                         </button>
                                     </div>
-                                    <div>
-                                        <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">
-                                            {{ __('cart.payment-delivery-modify') }}
-                                        </a>
-                                    </div>
                                 </div>
-                            </div>
-                            @else
-                            <div class="flex justify-around flex-wrap mt-5 mb-10">
-                                @foreach(auth()->user()->addresses as $address)
-                                    <div class="text-center" wire:key="{{ $address->id }}">
-                                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectAddress({{ $address->id }})">
-                                            {{ $address->address_name }}
-                                        </button>
-                                    </div>
-                                @endforeach
-                            </div>
-                            <div class="text-center mt-5">
-                                <button class="btn-couture" wire:click="addAddress">
-                                    + {{ __('cart.payment-delivery-add-new') }}
-                                </button>
                             </div>
                             @endif
-                        @else
-                        <div class="text-center mt-10">
-                            <button class="btn-couture" wire:click="addAddress">
-                                + {{ __('cart.payment-delivery-add-new') }}
-                            </button>
+                        @endauth
+                    @endif
+                @else
+                    <div class="mb-5 rounded-xl p-4" style="border: #D41C1B solid 2px">
+                        <h5 class="mb-2"><strong>Méthode de livraison choisie</strong></h5>
+                        <div class="flex justify-between">
+                            <p class="mb-1">
+                                @if($delivery_method == '0')
+                                Retrait en magasin - GRATUIT
+                                @else
+                                Livraison à domicile
+                                @endif
+                            </p>
+                            <div class="text-right">
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod">Modifier</button>
+                            </div>
                         </div>
+                    </div>
+                    @if($delivery_method == 1)
+                    <div class="mb-5 rounded-xl p-4" style="border: #D41C1B solid 2px">
+                        <h5 class="mb-2"><strong>Adresse de livraison choisie</strong></h5>
+                        <div class="flex justify-between">
+                            <div class="mb-1 w-2/3">
+                                @include('includes.cart.cart_address_details')
+                            </div>
+                            <div class="text-right">
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryAddress">Modifier</button>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+
+                    @if(!$address_chosen)
+                        <h3 class="font-bold text-xl mb-10 mt-10 text-center">Choisir une adresse de facturation</h3>
+
+                        @if(!$require_invoice_address)
+                        <div class="flex justify-center">
+                            <div class="m-5">
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="useDeliveryAddressForInvoice">
+                                    Utiliser l'adresse de livraison
+                                </button>
+                            </div>
+                            <div class="m-5">
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectNewAddressForInvoice">
+                                    Utiliser une autre adresse
+                                </button>
+                            </div>
+                        </div>
+                        @else
+                            
+                            @if($fill_invoice_address)
+                                @livewire('cart.payment-tunnel-invoice-address-form')
+                            @else
+                                @auth
+                                    @if(auth()->user()->addresses()->count() >= 1)
+                                        @if($invoice_address_chosen)
+                                        <p>
+                                            {!! __('cart.payment-delivery-wish') !!}:
+                                        </p>
+                                        <div class="flex justify-between payment-tunnel__delivery__address-container">
+                                            <div class="payment-tunnel__delivery__address w-2/3">
+                                                @include('includes.cart.cart_invoice_address_details')
+                                            </div>
+
+                                            <div class="w-1/3">
+                                                <div>
+                                                    <button class="btn-couture mb-5" wire:click="changeInvoiceAddress">
+                                                        {{ __('cart.payment-delivery-choose-other') }}
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">
+                                                        {{ __('cart.payment-delivery-modify') }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @else
+                                        <div class="flex justify-around flex-wrap mt-5 mb-10">
+                                            @foreach(auth()->user()->addresses as $invoice_address)
+                                                <div class="text-center w-2/5 mt-2 mb-2" wire:key="invoice-{{ $invoice_address->id }}">
+                                                    <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectInvoiceAddress({{ $invoice_address->id }})">
+                                                        {{ $invoice_address->address_name }}
+                                                    </button>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <div class="text-center mt-5">
+                                            <button class="btn-couture" wire:click="addInvoiceAddress">
+                                                + {{ __('cart.payment-delivery-add-new') }}
+                                            </button>
+                                        </div>
+                                        @endif
+                                    @else
+                                    <div class="text-center mt-10">
+                                        <button class="btn-couture" wire:click="addInvoiceAddress">
+                                            + {{ __('cart.payment-delivery-add-new') }}
+                                        </button>
+                                    </div>
+                                    @endif
+                                @else
+                                    @if($invoice_address_chosen == 0)
+                                    <div class="text-center mt-10">
+                                        <button class="btn-couture" wire:click="addInvoiceAddress">
+                                            + {{ __('cart.payment-delivery-add-new') }}
+                                        </button>
+                                    </div>
+                                    @else
+                                    <p>
+                                        {!! __('cart.payment-delivery-wish') !!}:
+                                    </p>
+                                    <div class="flex justify-between payment-tunnel__delivery__address-container">
+                                        <div class="payment-tunnel__delivery__address w-2/3">
+                                            @include('includes.cart.cart_invoice_address_details')
+                                        </div>
+
+                                        <div class="w-1/3">
+                                            <div>
+                                                <button class="btn-couture mb-5" wire:click="changeInvoiceAddress">
+                                                    {{ __('cart.payment-delivery-choose-other') }}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                @endauth
+                            @endif
                         @endif
                     @else
-                        @if($address_chosen == 0)
-                        <div class="text-center mt-10">
-                            <button class="btn-couture" wire:click="addAddress">
-                                + {{ __('cart.payment-delivery-add-new') }}
-                            </button>
-                        </div>
-                        @else
-                        <p>
-                            {!! __('cart.payment-delivery-wish') !!}:
-                        </p>
-                        <div class="flex justify-between payment-tunnel__delivery__address-container">
-                            <div class="payment-tunnel__delivery__address w-2/3">
-                                <div class="payment-tunnel__delivery__address__name">
-                                    {{ $delivery_address->address_name }}
-                                </div>
-                                <h5>
-                                    {{ $delivery_address->first_name }} {{ $delivery_address->last_name }}
-                                </h5>
-                                <p>
-                                    {{ $delivery_address->street_number }}, {{ $delivery_address->street }}
-                                </p>
-                                @if(isset($delivery_address->floor))
-                                    <p>
-                                        {{ $delivery_address->floor }}
-                                    </p>
-                                @endif
-                                <p>
-                                    {{ $delivery_address->zip_code }} {{ $delivery_address->city }}
-                                </p>
-                                <p>
-                                    {{ $delivery_address->phone }}
-                                </p>
-                                @if(isset($delivery_address->other_infos))
-                                    <p>
-                                        {{ __('cart.payment-delivery-more-info') }}&nbsp;: {{ $delivery_address->other_infos }}
-                                    </p>
+                    <div class="mb-5 rounded-xl p-4" style="border: #D41C1B solid 2px">
+                        <h5 class="mb-2"><strong>Adresse de facturation choisie</strong></h5>
+                        <div class="flex justify-between">
+                            <div class="mb-1 w-2/3">
+                                @if($order_address_id == $order_invoice_address_id)
+                                    Identique à l'adresse de livraison
+                                @else
+                                    @include('includes.cart.cart_invoice_address_details', ['invoice_address' => $invoice_address])
                                 @endif
                             </div>
-
-                            <div class="w-1/3">
-                                <div>
-                                    <button class="btn-couture mb-5" wire:click="changeAddress">
-                                        {{ __('cart.payment-delivery-choose-other') }}
-                                    </button>
-                                </div>
+                            <div class="text-right">
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateInvoiceAddress">Modifier</button>
                             </div>
                         </div>
-                        @endif
-                    @endauth
-                    @if($address_chosen)
-                    <div class="flex justify-between">
+                    </div>
+                    <div class="flex justify-between mt-5 pt-5" style="border-top: lightgrey 1px solid;">
                         <div>
                             <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateDeliveryStep">
                                 {{ __('cart.payment-delivery-validate') }}
@@ -195,16 +323,22 @@
         </div>
         @if($address_valid)
         <div class="payment-tunnel__block__content" @if($step == 2 || !$address_valid) style="display:none;" @endif>
+            @if($delivery_method == 0)
+            <div class="payment-tunnel__delivery__summary">
+                {{ __('cart.payment-delivery-address-summary') }}&nbsp;: {{ __('cart.payment-delivery-in-shop') }}
+            </div>
+            @else
             <div class="payment-tunnel__delivery__summary">
                 {{ __('cart.payment-delivery-address-summary') }}&nbsp;: {{ $address_name }}
             </div>
+            @endif
         </div>
         @endif
     </div>
 
 
     <div class="payment-tunnel__payment payment-tunnel__block">
-        <h2 class="payment-tunnel__block__title @if($step == 3) payment-tunnel__block__title--current @else payment-tunnel__block__title--waiting @endif" wire:click="changeStep(3)">
+        <h2 class="payment-tunnel__block__title @if($step == 3) payment-tunnel__block__title--current @else payment-tunnel__block__title--waiting @endif" wire:click="changeStep(3)" id="payment-tunnel-block-3">
             3. {{ __('cart.payment-pay') }}
         </h2>
         <div class="payment-tunnel__block__content" @if($step !== 3 || !$info_valid || !$address_valid) style="display:none;" @endif>
@@ -225,7 +359,7 @@
                     </div>
                 </div>
 
-                <div>
+                <!-- <div> -->
                     <!-- <form method="POST" wire:submit.prevent="validateOrder('card')">
                         <input id="card-holder-name" type="text"> -->
      
@@ -235,8 +369,8 @@
                         <!-- <button type="submit" id="card-button">
                             {{ __('cart.payment-process-payment') }}
                         </button> -->
-                    </form>
-                </div>
+<!--                     </form>
+                </div> -->
             </div>
 
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">

@@ -738,6 +738,9 @@ select {
 .m-auto {
   margin: auto;
 }
+.m-5 {
+  margin: 1.25rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -886,6 +889,9 @@ select {
 }
 .mb-4 {
   margin-bottom: 1rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -1066,6 +1072,9 @@ select {
 }
 .w-48 {
   width: 12rem;
+}
+.w-2\/5 {
+  width: 40%;
 }
 .min-w-\[2rem\] {
   min-width: 2rem;

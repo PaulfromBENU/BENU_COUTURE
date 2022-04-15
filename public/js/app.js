@@ -5506,6 +5506,8 @@ __webpack_require__(/*! ./sidebar_handler */ "./resources/js/sidebar_handler.js"
 
 __webpack_require__(/*! ./sidebar_picture_scroll */ "./resources/js/sidebar_picture_scroll.js");
 
+__webpack_require__(/*! ./payment_tunnel_behaviour */ "./resources/js/payment_tunnel_behaviour.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -6241,6 +6243,41 @@ $(function () {
   $('.model-overview').on('mouseleave', function () {
     $(this).children('.model-overview__header').css('padding-left', '30px');
     $(this).children('.model-overview__footer').css('padding-left', '30px');
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/payment_tunnel_behaviour.js":
+/*!**************************************************!*\
+  !*** ./resources/js/payment_tunnel_behaviour.js ***!
+  \**************************************************/
+/***/ (() => {
+
+$(function () {
+  Livewire.on('goToPaymentStep1', function () {
+    var element = document.getElementById("payment-tunnel-block-1");
+    var y = element.getBoundingClientRect().top + window.pageYOffset - 160;
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    }); // document.getElementById("payment-tunnel-block-1").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  Livewire.on('goToPaymentStep2', function () {
+    var element = document.getElementById("payment-tunnel-block-2");
+    var y = element.getBoundingClientRect().top + window.pageYOffset - 160;
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    }); // document.getElementById("payment-tunnel-block-2").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  Livewire.on('goToPaymentStep3', function () {
+    var element = document.getElementById("payment-tunnel-block-3");
+    var y = element.getBoundingClientRect().top + window.pageYOffset - 160;
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    }); // document.getElementById("payment-tunnel-block-3").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 

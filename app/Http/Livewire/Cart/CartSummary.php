@@ -129,7 +129,7 @@ class CartSummary extends Component
 
     public function updateDeliveryCode($country_code)
     {
-        if (DeliveryCountry::where('country_code', $country_code)->count() > 0) {
+        if ($country_code == 'collect' || DeliveryCountry::where('country_code', $country_code)->count() > 0) {
             $this->country_code = $country_code;
             $this->computeAll();
         }

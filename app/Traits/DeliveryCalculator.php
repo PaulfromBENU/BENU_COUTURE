@@ -74,6 +74,10 @@ trait DeliveryCalculator {
 
 	public function calculateDeliveryTotal($weight, $country_code)
 	{
+		if ($country_code == 'collect') {
+			return 0;
+		}
+		
 		if (DeliveryCountry::where('country_code', $country_code)->count() == 0) {
 			$code = 4;
 		} else {

@@ -23,7 +23,11 @@ class PaymentTunnel extends Component
     public $info_valid;
     public $fill_address;
     public $address_valid;
+    public $fill_invoice_address;
+    public $invoice_address_valid;
     public $country_code;
+    public $delivery_chosen;
+    public $delivery_method;// 0: collect at shop, 1: home delivery
 
     // Info data
     public $order_gender;
@@ -35,9 +39,16 @@ class PaymentTunnel extends Component
     // Address data
     public $order_address_id;
     public $address_chosen;
+    public $delivery_address_chosen;
     public $address_name;
 
-    protected $listeners = ['infoValidated' => 'validateInfoStep', 'newAddressCreated' => 'selectAddress', 'newAddressCancelled' => 'unselectAddress'];
+    // Invoice address data
+    public $require_invoice_address;
+    public $order_invoice_address_id;
+    public $invoice_address_chosen;
+    public $invoice_address_name;
+
+    protected $listeners = ['infoValidated' => 'validateInfoStep', 'newAddressCreated' => 'selectAddress', 'newAddressCancelled' => 'unselectAddress', 'newInvoiceAddressCreated' => 'selectInvoiceAddress', 'newInvoiceAddressCancelled' => 'unselectInvoiceAddress'];
 
     public function mount()
     {
@@ -45,21 +56,31 @@ class PaymentTunnel extends Component
         $this->address_valid = 0;
         $this->address_chosen = 0;
         $this->country_code = "LU";
+        $this->delivery_chosen = 0;
+        $this->delivery_method = 0;
+        $this->delivery_address_chosen = 0;
+        $this->invoice_address_chosen = 0;
+
+        $this->order_address_id = 0;
+        $this->order_invoice_address_id = 0;
 
         if (auth()->check()) {
             $this->step = 2;
             $this->info_valid = 1;
-            if (auth()->user()->addresses()->count() == 1) {
-                $this->order_address_id = auth()->user()->addresses()->first()->id;
-            }
+            // if (auth()->user()->addresses()->count() == 1) {
+            //     $this->order_address_id = auth()->user()->addresses()->first()->id;
+            // }
         } else {
             $this->step = 1;
         }
 
         $this->fill_info = 0;
         $this->fill_address = 0;
+        $this->fill_invoice_address = 0;
+        $this->require_invoice_address = 0;
 
         $this->address_name = "";
+        $this->invoice_address_name = "";
     }
 
     public function changeStep(int $step)
@@ -68,6 +89,7 @@ class PaymentTunnel extends Component
             if (!auth()->check()) {
                 $this->step = $step;
                 $this->info_valid = 0;
+                $this->emit('goToPaymentStep1');
                 // $this->resetOptions();
             }
         }
@@ -76,12 +98,14 @@ class PaymentTunnel extends Component
             if ($this->info_valid == 1) {
                 $this->step = $step;
                 $this->address_valid = 0;
+                $this->emit('goToPaymentStep2');
             }
         }
 
         if ($step == 3) {
             if ($this->info_valid == 1 && $this->address_valid == 1) {
                 $this->step = $step;
+                $this->emit('goToPaymentStep3');
             }
         }
     }
@@ -101,6 +125,45 @@ class PaymentTunnel extends Component
 
         $this->info_valid = 1;
         $this->step = 2;
+        $this->emit('goToPaymentStep2');
+    }
+
+    public function selectDeliveryMethod()
+    {
+        if (in_array($this->delivery_method, ['0', '1'])) {
+            $this->delivery_chosen = 1;
+            if ($this->delivery_method == '0') {
+                $this->order_address_id = 0;
+                $this->delivery_address_chosen = 1;
+                $this->emit('addressUpdated', "collect");
+                $this->require_invoice_address = 1;
+            } else {
+                $this->delivery_address_chosen = 0;
+                $this->require_invoice_address = 0;
+                $this->emit('addressUpdated', "LU");
+            }
+        }
+    }
+
+    public function updateDeliveryMethod()
+    {
+        $this->delivery_chosen = 0;
+        $this->delivery_address_chosen = 0;
+        $this->invoice_address_chosen = 0;
+        $this->address_chosen = 0;
+    }
+
+    public function updateDeliveryAddress()
+    {
+        $this->delivery_address_chosen = 0;
+        $this->invoice_address_chosen = 0;
+        $this->address_chosen = 0;
+    }
+
+    public function updateInvoiceAddress()
+    {
+        $this->invoice_address_chosen = 0;
+        $this->address_chosen = 0;
     }
 
     public function addAddress()
@@ -108,9 +171,15 @@ class PaymentTunnel extends Component
         $this->fill_address = 1;
     }
 
+    public function addInvoiceAddress()
+    {
+        $this->fill_invoice_address = 1;
+    }
+
     public function changeAddress()
     {
-        $this->address_chosen = 0;
+        $this->delivery_address_chosen = 0;
+        $this->invoice_address_chosen = 0;
         $this->fill_address = 0;
     }
 
@@ -118,8 +187,40 @@ class PaymentTunnel extends Component
     {
         if (Address::find($address_id)) {
             $this->order_address_id = $address_id;
-            $this->address_chosen = 1;
+            $this->delivery_address_chosen = 1;
             $this->fill_address = 0;
+            $this->country_code = Address::find($address_id)->country;
+            $this->emit('addressUpdated', $this->country_code);
+        }
+    }
+
+    public function useDeliveryAddressForInvoice()
+    {
+        $this->order_invoice_address_id = $this->order_address_id;
+        $this->delivery_address_chosen = 1;
+        $this->invoice_address_chosen = 1;
+        $this->fill_address = 0;
+        $this->address_chosen = 1;
+    }
+
+    public function selectNewAddressForInvoice()
+    {
+        $this->require_invoice_address = 1;
+    }
+
+    public function changeInvoiceAddress()
+    {
+        $this->invoice_address_chosen = 0;
+        $this->fill_invoice_address = 0;
+    }
+
+    public function selectInvoiceAddress($address_id)
+    {
+        if (Address::find($address_id)) {
+            $this->order_invoice_address_id = $address_id;
+            $this->invoice_address_chosen = 1;
+            $this->fill_invoice_address = 0;
+            $this->address_chosen = 1;
         }
     }
 
@@ -129,19 +230,33 @@ class PaymentTunnel extends Component
         $this->fill_address = 0;
     }
 
+    public function unselectInvoiceAddress()
+    {
+        $this->address_chosen = 0;
+        $this->fill_invoice_address = 0;
+        $this->fill_address = 0;
+    }
+
     public function validateDeliveryStep()
     {
-        if (Address::find($this->order_address_id)) {
+        if ($this->order_address_id == 0 && Address::find($this->order_invoice_address_id)) {
+            $this->country_code = 'collect';
+            $this->emit('addressUpdated', $this->country_code);
+            $this->address_valid = 1;
+            $this->step = 3;
+            $this->emit('goToPaymentStep3');
+        } elseif (Address::find($this->order_address_id) && Address::find($this->order_invoice_address_id)) {
             $country = Address::find($this->order_address_id)->country;
-            if ($country == 'France') {
+            if (strtolower($country) == 'france') {
                 $this->country_code = "FR";
-            } elseif ($country == "Luxembourg") {
+            } elseif (strtolower($country) == "luxembourg") {
                 $this->country_code = "LU";
             } else {
                 $this->country_code = $country;
             }
             $this->emit('addressUpdated', $this->country_code);
             $this->address_valid = 1;
+            $this->emit('goToPaymentStep3');
             $this->step = 3;
             $this->address_name = Address::find($this->order_address_id)->address_name;
         }
@@ -203,6 +318,7 @@ class PaymentTunnel extends Component
             $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
             $new_order->user_id = $user_id;
             $new_order->address_id = $this->order_address_id;
+            $new_order->invoice_address_id = $this->order_invoice_address_id;
             $new_order->total_price = $this->computeTotal($this->cart_id, $this->country_code);
             $new_order->status = '0';
 
@@ -249,12 +365,27 @@ class PaymentTunnel extends Component
     public function render()
     {
         if (Address::find($this->order_address_id)) {
+            if (Address::find($this->order_invoice_address_id)) {
+                return view('livewire.cart.payment-tunnel', [
+                    'delivery_address' => Address::find($this->order_address_id),
+                    'invoice_address' => Address::find($this->order_invoice_address_id),
+                ]);
+            } else {
+                return view('livewire.cart.payment-tunnel', [
+                    'delivery_address' => Address::find($this->order_address_id),
+                    'invoice_address' => collect([]),
+                ]);
+            }
+        } elseif ($this->order_address_id == 0 && Address::find($this->order_invoice_address_id)) {
             return view('livewire.cart.payment-tunnel', [
-                'delivery_address' => Address::find($this->order_address_id),
+                'delivery_address' => collect([]),
+                'invoice_address' => Address::find($this->order_invoice_address_id),
             ]);
         }
+
         return view('livewire.cart.payment-tunnel', [
             'delivery_address' => collect([]),
+            'invoice_address' => collect([]),
         ]);
     }
 }

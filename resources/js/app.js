@@ -13,6 +13,7 @@ require('./faq_accordion_handle');
 require('./model_overview_animation');
 require('./sidebar_handler');
 require('./sidebar_picture_scroll');
+require('./payment_tunnel_behaviour');
 
 import Alpine from 'alpinejs';
 
