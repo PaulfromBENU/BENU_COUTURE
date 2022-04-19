@@ -1,9 +1,9 @@
 <div class="dashboard-orders w-full">
-    <h2>
-        {!! __('dashboard.my-orders') !!}
-    </h2>
 
     @if($show_details == '0')
+        <h2>
+            {!! __('dashboard.my-orders') !!}
+        </h2>
         @foreach($orders as $order)
             <div class="dashboard-orders__order flex justify-between" wire:key="{{ $order->id }}">
                 <div class="w-2/3 pr-5">
@@ -62,11 +62,202 @@
             </div>
         @endforeach
     @else
-    <p>Ici les détails de la commande No {{ $order->unique_id }}</p>
-    <div class="text-center mt-10">
-        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="hideDetails">
-            Revenir à toutes les commandes
-        </button>
-    </div>
+
+        <h2>
+            {!! __('dashboard.order-details') !!} #{{ $order->unique_id }}
+        </h2>
+
+        <div class="dashboard-orders__details__summary">
+            <div class="flex justify-between mb-7">
+                <div>
+                    <button class="primary-color underline font-bold dashboard-orders__details__summary__backlink" wire:click="hideDetails">
+                        < Retour à mes commandes
+                    </button>
+                </div>
+                <div class="flex justify-end">
+                    <div class="mb-5 text-right">
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
+                            Facture
+                        </button>
+                    </div>
+                    <div class="text-right">
+                        <a href="{{ route('client-service-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px; width: fit-content;">
+                            Service client
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>
+                    No de commande : <strong>{{ $order->unique_id }}</strong>
+                </p>
+                <p>
+                    Montant : <strong>{{ $order->total_price }}&euro;</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-orders__details__addresses flex justify-between">
+            <div class="dashboard-orders__details__addresses__address">
+                <h3>Adresse de facturation</h3>
+                <div class="flex justify-between">
+                    <div class="w-7/12">
+                        <h4>{{ $order->invoice_address->first_name.' '.$order->invoice_address->last_name }}</h4>
+                        <p>
+                            {{ $order->invoice_address->street_number }} {{ $order->invoice_address->street }}
+                        </p>
+                        @if($order->invoice_address->floor !== null && $order->invoice_address->floor !== "")
+                        <p>
+                            {{ __('dashboard.address-complement') }} : {{ $order->invoice_address->floor }}
+                        </p>
+                        @endif
+                        <p>
+                            {{ $order->invoice_address->zip_code }} {{ $order->invoice_address->city }}
+                        </p>
+                        <p>
+                            {{ $order->invoice_address->phone }}
+                        </p>
+                    </div>
+                    <div class="w-5/12 relative">
+                        <div class="dashboard-addresses__address__name text-center">
+                            {{ $order->invoice_address->address_name }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-orders__details__addresses__address">
+                <h3>Adresse de livraison</h3>
+                @if($order->address_id == 0)
+                <h4>Retrait en magasin</h4>
+                <p>
+                    {{ $benu_address->address }}
+                </p>
+                <p>
+                    {{ $benu_address->email }}
+                </p>
+                <p>
+                    {{ $benu_address->phone }}
+                </p>
+                <a href="{{ $benu_address->website }}" target="_blank" class="primary-color hover:underline font-bold">
+                    {{ $benu_address->website }}
+                </a>
+                @else
+                <div class="flex justify-between">
+                    <div class="w-7/12">
+                        <h4>{{ $order->address->first_name.' '.$order->address->last_name }}</h4>
+                        <p>
+                            {{ $order->address->street_number }} {{ $order->address->street }}
+                        </p>
+                        @if($order->address->floor !== null && $order->address->floor !== "")
+                        <p>
+                            {{ __('dashboard.address-complement') }} : {{ $order->address->floor }}
+                        </p>
+                        @endif
+                        <p>
+                            {{ $order->address->zip_code }} {{ $order->address->city }}
+                        </p>
+                        <p>
+                            {{ $order->address->phone }}
+                        </p>
+                    </div>
+                    <div class="w-5/12 relative">
+                        <div class="dashboard-addresses__address__name text-center">
+                            {{ $order->address->address_name }}
+                        </div>
+                    </div>
+                </div>
+                @endif
+            </div>
+        </div>
+
+        @if($order->address_id !== 0)
+        <p>
+            Statut de la livraison : 
+            @if($order->status == '2')
+                @if($order->payment_status <= '1')
+                En attente de paiement
+                @else
+                Payée - 
+                    @if($order->delivery_status <= '1')
+                    Livraison en cours de préparation
+                    @else
+                    Expédiée le {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">Suivre ma commande</a>@endif
+                    @endif
+                @endif
+            @else
+                Commande non finalisée et non payée
+            @endif
+        </p>
+        @endif
+
+        <h3 class="dashboard-wishlist__title dashboard-wishlist__title--couture" style="width: 100%; margin-top: 30px;">BENU COUTURE</h3>
+
+        <div class="dashboard-orders__details__articles">
+            @foreach($articles as $article)
+                <div wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="dashboard-orders__details__articles__article flex justify-start">
+                    <div class="dashboard-orders__details__articles__article__img-container mr-4">
+                        @if($article->name ==  'voucher')
+                            <img src="{{ asset('images/pictures/vouchers_img.png') }}" />
+                        @elseif($article->photos()->where('is_front', '1')->count() > 0)
+                            <img src="{{ asset('images/pictures/articles/'.$article->photos()->where('is_front', '1')->first()->file_name) }}" />
+                        @else
+                            <img src="{{ asset('images/pictures/articles/'.$article->photos()->first()->file_name) }}" />
+                        @endif
+                    </div>
+                    <div class="dashboard-orders__details__articles__article__desc relative">
+                        @if($article->name == 'voucher')
+                        <h5>
+                            {{ __('cart.payment-voucher') }}
+                        </h5>
+                        <div class="dashboard-orders__details__articles__article__desc__size">
+                            {{ strtoupper($article->pivot->value) }}&euro;
+                        </div>
+                        <p class="dashboard-orders__details__articles__article__desc__number">
+                            Exemplaires : x{{ $article->pivot->articles_number }}
+                        </p>
+
+                        <p class="dashboard-orders__details__articles__article__desc__price">
+                            {{ $article->pivot->articles_number * $article->pivot->value }}&euro;
+                        </p>
+                        @else
+                        <h5>
+                            {{ strtoupper($article->name) }}
+                        </h5>
+                        <div class="dashboard-orders__details__articles__article__desc__size">
+                            {{ strtoupper($article->size->value) }}
+                        </div>
+                        <div class="dashboard-orders__details__articles__article__desc__color flex">
+                            <p class="pr-1" style="margin-top: -5px;">
+                                Couleur : 
+                            </p>
+                            @if($article->color->name == 'multicolored')
+                                <div class="color-circle">
+                                    <img src="{{ asset('images/pictures/multicolor.png') }}">
+                                </div>
+                            @else
+                                <div class="color-circle color-circle--{{ $article->color->name }}"></div>
+                            @endif
+                            <p class="pl-1" style="margin-top: -5px;">
+                                {{ __('colors.'.$article->color->name) }}
+                            </p>
+                        </div>
+                        <p class="dashboard-orders__details__articles__article__desc__number">
+                            Exemplaires : x{{ $article->pivot->articles_number }}
+                        </p>
+                        <!-- @if($article->pivot->with_extra_article)
+                        + coussin
+                        @endif -->
+
+                        <p class="dashboard-orders__details__articles__article__desc__price">
+                            {{ $article->pivot->articles_number * $article->creation->price }}&euro;
+                        </p>
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
     @endif
 </div>

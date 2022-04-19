@@ -299,4 +299,83 @@
 			padding: 15px;
 		}
 	}
+	&__details {
+		&__summary {
+			border-bottom: solid 1px lightgrey;
+			padding-bottom: 30px;
+			&__backlink {
+				transition: color 0.2s;
+				&:hover {
+					color: $dark-text;
+				}
+			}
+		}
+		&__addresses {
+			padding-top: 20px;
+			padding-bottom: 40px;
+			&__address {
+				width: 45%;
+				padding-bottom: 20px;
+				border-bottom: solid 1px lightgrey;
+				h3 {
+					font: normal normal 700 26px/30px 'Barlow Condensed';
+					margin-bottom: 18px;
+				}
+				h4 {
+					font: normal normal 700 18px/22px 'Barlow';
+				}
+			}
+		}
+		&__articles {
+			&__article {
+				padding: 15px;
+				border-radius: 8px;
+				box-shadow: lightgrey 0 0 10px;
+				height: 200px;
+				width: 45%;
+				&__img-container {
+					height: 100%;
+					border-radius: 8px;
+					overflow: hidden;
+					img {
+						object-fit: cover;
+						// min-width: 100%;
+						height: 100%;
+					}
+				}
+				&__desc {
+					width: 75%;
+					h5 {
+						color: $primary-color;
+						font: normal normal 700 26px/30px 'Barlow Condensed';
+						margin-bottom: 15px;
+					}
+					&__size {
+						width: fit-content;
+						text-transform: uppercase;
+						color: $white;
+						background: $primary-color;
+						padding: 4px 22px;
+						border-radius: 30px;
+						text-align: center;
+						font: normal normal 600 21px/20px 'Barlow Condensed';
+						margin-bottom: 25px;
+						font-weight: 500;
+					}
+					&__color {
+						font-weight: 500;
+					}
+					&__number {
+						font-weight: 500;
+					}
+					&__price {
+						position: absolute;
+						bottom: 5px;
+						right: 5px;
+						font: normal normal 600 30px/30px 'Barlow Condensed';
+					}
+				}
+			}
+		}
+	}
 }

@@ -32,7 +32,9 @@ class Addresses extends Component
     public function deleteAddress(int $address_id)
     {
         if (auth()->user()->addresses->contains($address_id)) {
-            Address::where('id', $address_id)->delete();
+            $deleted_address = Address::where('id', $address_id)->first();
+            $deleted_address->is_active = 0;
+            $deleted_address->save();
             $this->delete_check[$address_id] = 0;
             $this->emit('addressDeleted');
         }
@@ -41,7 +43,7 @@ class Addresses extends Component
     public function render()
     {
         return view('livewire.dashboard.addresses', [
-            'user_addresses' => auth()->user()->addresses,
+            'user_addresses' => auth()->user()->addresses()->where('is_active', '1')->get(),
         ]);
     }
 }

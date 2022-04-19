@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Dashboard;
 use Livewire\Component;
 
 use App\Models\Order;
+use App\Models\Shop;
 
 class Orders extends Component
 {
@@ -36,7 +37,11 @@ class Orders extends Component
         if ($this->detailed_order_id == 0) {
             return view('livewire.dashboard.orders', ['orders' => auth()->user()->orders()->where('status', '>', '0')->orderBy('created_at', 'desc')->get()]);
         } else {
-            return view('livewire.dashboard.orders', ['order' => auth()->user()->orders()->find($this->detailed_order_id)]);
+            return view('livewire.dashboard.orders', [
+                'order' => auth()->user()->orders()->find($this->detailed_order_id),
+                'benu_address' => Shop::where('filter_key', 'benu-esch')->first(),
+                'articles' => auth()->user()->orders()->find($this->detailed_order_id)->cart->couture_variations,
+            ]);
         }
     }
 }

@@ -14,12 +14,12 @@ class Order extends Model
 
     public function address()
     {
-        return $this->hasOne(Address::class, 'address_id');
+        return $this->belongsTo(Address::class, 'address_id');
     }
 
     public function invoice_address()
     {
-        return $this->hasOne(Address::class, 'invoice_address_id');
+        return $this->belongsTo(Address::class, 'invoice_address_id');
     }
 
     public function user()
