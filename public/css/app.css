@@ -118,6 +118,15 @@ input[type=checkbox]:focus {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.reactive-label-input--white {
+  color: #FFFFFF;
+}
+.reactive-label-input--white label {
+  color: #FFFFFF;
+}
+.reactive-label-input--white__label-active {
+  color: #FFFFFF !important;
+}
 .reactive-label-input label {
   position: absolute;
   bottom: 9px;

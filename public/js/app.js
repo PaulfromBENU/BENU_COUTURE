@@ -5951,22 +5951,42 @@ function activateInputsDynamicBehaviour() {
 
   $('.reactive-label-input label').each(function () {
     if ($(this).parent().children('input').val().length == 0) {
-      $(this).css('transform', 'scale(1)').css('bottom', '9px').css('color', labelColorSearchReactive);
+      if ($(this).parent().hasClass('reactive-label-input--white')) {
+        $(this).css('transform', 'scale(1)').css('bottom', '9px').css('color', 'white');
+      } else {
+        $(this).css('transform', 'scale(1)').css('bottom', '9px').css('color', labelColorSearchReactive);
+      }
     } else {
-      $(this).css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
+      if ($(this).parent().hasClass('reactive-label-input--white')) {
+        $(this).css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'white');
+      } else {
+        $(this).css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
+      }
     }
   });
   $('.reactive-label-input input').on('focus', function () {
-    $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
+    if ($(this).parent().hasClass('reactive-label-input--white')) {
+      $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'white');
+    } else {
+      $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
+    }
   });
   $('.reactive-label-input input').on('blur', function () {
     if ($(this).val().length == 0) {
-      $(this).parent().children('label').css('transform', 'scale(1)').css('bottom', '9px').css('color', labelColorSearchReactive);
+      if ($(this).parent().hasClass('reactive-label-input--white')) {
+        $(this).parent().children('label').css('transform', 'scale(1)').css('bottom', '9px').css('color', 'white');
+      } else {
+        $(this).parent().children('label').css('transform', 'scale(1)').css('bottom', '9px').css('color', labelColorSearchReactive);
+      }
     }
   });
   $('.reactive-label-input input').on('change', function () {
     if ($(this).val().length > 0) {
-      $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
+      if ($(this).parent().hasClass('reactive-label-input--white')) {
+        $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'white');
+      } else {
+        $(this).parent().children('label').css('transform', 'scale(0.75)').css('bottom', '35px').css('color', 'darkgray');
+      }
     }
   });
   $('.reactive-label-input input').eq(0).focus(); //Show or hide password on icon click

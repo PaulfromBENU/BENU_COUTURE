@@ -117,7 +117,7 @@
             <div class="register__address" style="display: none;">
                 <h4 class="register__address__title">{{ __('forms.register-add-address') }}</h4>
                 <div class="register__address__address-name">
-                    <div class="reactive-label-input">
+                    <div class="reactive-label-input reactive-label-input--white">
                         <label>{{ __('forms.register-address-name') }} <span class="register_optionnal_star">*</span></label>
                         <input type="text" name="register_address_name" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="7" maxlength="150">
                     </div>
@@ -206,7 +206,7 @@
             <div class="register__options">
                 <label for="register_legal" class="inline-flex items-center">
                     <input id="register_legal" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_legal" value="1" tabindex="19">
-                    <span class="ml-10">{{ __('forms.register-conditions-conf') }} *</span>
+                    <span class="ml-10">{!! __('forms.register-conditions-conf') !!} *</span>
                 </label>
             </div>  
             <div class="register__options">
