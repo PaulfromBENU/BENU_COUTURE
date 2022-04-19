@@ -3142,6 +3142,82 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 60px;
 }
+.sizes__index {
+  width: 20%;
+}
+.sizes__index__menu {
+  font-size: 1.3rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  font-family: "Barlow Condensed";
+}
+.sizes__index__menu li {
+  margin-bottom: 10px;
+}
+.sizes__chapters {
+  width: 75%;
+}
+.sizes__chapter h3 {
+  font: normal normal 700 28px/36px "Barlow Condensed";
+  color: #D41C1B;
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.sizes__chapter__img-container {
+  width: 45%;
+}
+.sizes__chapter__legend {
+  width: 55%;
+  text-align: left;
+}
+.sizes__chapter__legend__list {
+  width: 50%;
+  margin-left: 25%;
+}
+.sizes__chapter__legend__list h4 {
+  color: #D41C1B;
+  font: normal normal 600 16px/20px "Barlow";
+}
+.sizes__chapter__legend__list p {
+  font: normal normal 500 14px/18px "Barlow";
+}
+.sizes__chapter__legend__list li {
+  margin-bottom: 15px;
+}
+.sizes__chapter__table {
+  margin-top: 50px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.sizes__chapter__table th:nth-child(odd) {
+  color: grey;
+}
+.sizes__chapter__table th:nth-child(even) {
+  color: #2E1414;
+}
+.sizes__chapter__table th:nth-child(1) {
+  color: #D41C1B;
+}
+.sizes__chapter__table__data-rows:nth-child(odd) {
+  background: #ededed;
+}
+.sizes__chapter__table__data-rows td:nth-child(odd) {
+  color: grey;
+}
+.sizes__chapter__table__data-rows td:nth-child(even) {
+  color: #2E1414;
+}
+.sizes__chapter__table__data-rows td:nth-child(1) {
+  color: #2E1414;
+}
+.sizes__chapter__table__data-rows td {
+  padding: 4px 10px;
+  font-weight: 500;
+}
 
 .return {
   padding-top: 60px;
