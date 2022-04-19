@@ -3974,6 +3974,10 @@ input[type=checkbox]:focus {
   border-radius: 8px;
   margin-bottom: 30px;
   box-shadow: lightgrey 0 2px 10px;
+  transition: all 0.3s;
+}
+.all-news__link:hover {
+  box-shadow: #c6c6c6 2px 4px 20px;
 }
 .all-news__link__img-container {
   width: 100%;
@@ -3999,12 +4003,21 @@ input[type=checkbox]:focus {
   color: #D41C1B;
   font: normal normal 500 14px/24px "Barlow Condensed";
   text-align: center;
+  transition: all 0.2s;
+}
+.all-news__link__tags__tag:hover {
+  background: #D41C1B;
+  color: #FFFFFF;
 }
 .all-news__link__title {
   font: normal normal 600 24px/34px "Barlow Condensed";
   color: #D41C1B;
   text-align: left;
   margin-bottom: 5px;
+  transition: color 0.2s;
+}
+.all-news__link__title:hover {
+  color: #2E1414;
 }
 .all-news__link__date {
   font: normal normal 500 14px/24px "Barlow";
