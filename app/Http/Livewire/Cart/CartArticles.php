@@ -30,9 +30,11 @@ class CartArticles extends Component
         if (Article::find($article_id)) {
             Article::find($article_id)->carts()->detach(Cart::where('cart_id', $this->cart_id)->first()->id);
 
-            $pivot = Article::find($article_id)->pending_shops()->first()->pivot;
-            $pivot->increment('stock');
-            $pivot->decrement('stock_in_cart');
+            if (Article::find($article_id)->name !== 'voucher') {
+                $pivot = Article::find($article_id)->pending_shops()->first()->pivot;
+                $pivot->increment('stock');
+                $pivot->decrement('stock_in_cart');
+            }
 
             $this->loadArticles();
             $this->emit('cartUpdated');

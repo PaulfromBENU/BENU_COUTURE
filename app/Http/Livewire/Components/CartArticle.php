@@ -43,7 +43,11 @@ class CartArticle extends Component
 
         if (Article::find($this->article_id) && Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->count() > 0) {
 
-            $this->has_extra_option = Article::find($this->article_id)->creation->pillow_option;
+            if (Article::find($this->article_id)->name == 'voucher') {
+                $this->has_extra_option = 0;
+            } else {
+                $this->has_extra_option = Article::find($this->article_id)->creation->pillow_option;
+            }
 
             $cart = Article::find($this->article_id)->carts()->where('carts.cart_id', session('cart_id'))->first();
             $this->number = $cart->pivot->articles_number;

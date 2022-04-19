@@ -62,6 +62,7 @@ trait CartAnalyzer {
             $total_weight = 0;
 
             foreach ($cart->couture_variations as $variation) {
+                $variation_weight = 0;
                 if ($variation->name !== 'voucher') {
                     $variation_weight = $variation->creation->weight / 1000;
                 }
