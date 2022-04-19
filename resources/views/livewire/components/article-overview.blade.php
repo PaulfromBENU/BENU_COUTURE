@@ -28,7 +28,11 @@
     <div class="article-overview__footer">
         <div class="flex justify-between">
             <p class="article-overview__footer__size">
+                @if($article->size->value == 'unique')
+                {{ __('components.unique-size') }}
+                @else
                 {{ $article->size->value }}
+                @endif
             </p>
             @if($article->color->name == 'multicolored')
                 <div class="color-circle">
