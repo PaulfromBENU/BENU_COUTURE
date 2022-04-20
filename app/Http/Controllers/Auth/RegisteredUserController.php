@@ -12,11 +12,13 @@ use Illuminate\Validation\Rules;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
 
 use App\Models\Address;
 use App\Models\DeliveryCountry;
 use App\Models\Kulturpass;
 use App\Models\User;
+use App\Mail\UserRegistered;
 
 class RegisteredUserController extends Controller
 {
@@ -176,6 +178,8 @@ class RegisteredUserController extends Controller
             $new_kulturpass->file_name = $filename;
             $new_kulturpass->save();
         }
+
+        Mail::to($user->email)->send(new UserRegistered($user));
 
         event(new Registered($user));
 

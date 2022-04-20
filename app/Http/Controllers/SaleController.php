@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 use App\Models\Article;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Voucher;
+use App\Mail\NewOrder;
 
 use Illuminate\Support\Str;
 
@@ -119,6 +121,9 @@ class SaleController extends Controller
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
 
                 $current_order->status = '2';
+
+                Mail::to($current_order->user->email)->send(new NewOrder($current_order));
+
                 if ($current_order->payment_type ==  '0') {
                     $current_order->payment_status = 2;
                 } elseif ($current_order->payment_type == '3') {

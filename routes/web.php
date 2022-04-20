@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 
+use App\Models\User;
+use App\Mail\UserRegistered;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -103,6 +106,12 @@ if (app('env') == 'landing') {
 		Route::get('/paiement-valide/{order}', 'SaleController@showValidPayment')->name('payment-processed-fr');
 
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "fr"), 'GeneralController@showNewsletter')->name('newsletter-fr');
+
+		Route::get('/test-mail', function() {
+			$user = User::find(2);
+
+			return new UserRegistered($user);
+		});
 	});
 
 	Route::group([
