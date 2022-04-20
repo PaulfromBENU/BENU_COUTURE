@@ -28,14 +28,14 @@
 		</div>
 
 		<div class="sizes__chapters">
-			<div class="sizes__chapter" id="sizes-chapter-unisex">
+			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-unisex') }}</h3>
 				<div class="flex justify-between">
 					<div class="sizes__chapter__img-container">
 						<img src="{{ asset('images/pictures/sizes/taille_femme.png') }}" alt="Unisex sizes" title="Unisex sizes" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
-						<ul class="sizes__chapter__legend__list">
+						<ul class="sizes__chapter__legend__list" id="sizes-chapter-unisex">
 							<li>
 								<h4>A. {{ __('services.sizes-unisex-legend-a') }}</h4>
 								<p>
@@ -135,14 +135,14 @@
 				</table>
 			</div>
 
-			<div class="sizes__chapter" id="sizes-chapter-ladies">
+			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-ladies') }}</h3>
 				<div class="flex justify-between">
 					<div class="sizes__chapter__img-container">
 						<img src="{{ asset('images/pictures/sizes/taille_femme.png') }}" alt="Ladies sizes" title="Ladies sizes" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
-						<ul class="sizes__chapter__legend__list">
+						<ul class="sizes__chapter__legend__list" id="sizes-chapter-ladies">
 							<li>
 								<h4>A. {{ __('services.sizes-ladies-legend-a') }}</h4>
 								<p>
@@ -242,14 +242,14 @@
 				</table>
 			</div>
 
-			<div class="sizes__chapter" id="sizes-chapter-gentlemen">
+			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-gentlemen') }}</h3>
 				<div class="flex justify-between">
 					<div class="sizes__chapter__img-container">
 						<img src="{{ asset('images/pictures/sizes/taille_homme.png') }}" alt="Gentlemen sizes" title="Gentlemen sizes" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
-						<ul class="sizes__chapter__legend__list">
+						<ul class="sizes__chapter__legend__list" id="sizes-chapter-gentlemen">
 							<li>
 								<h4>A. {{ __('services.sizes-gentlemen-legend-a') }}</h4>
 								<p>
@@ -349,13 +349,13 @@
 				</table>
 			</div>
 
-			<div class="sizes__chapter" id="sizes-chapter-kids">
+			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-kids') }}</h3>
 				<div class="flex justify-between">
 					<div class="sizes__chapter__img-container">
 						<img src="{{ asset('images/pictures/sizes/taille_enfant.png') }}" alt="Kids sizes" title="Kids sizes" />
 					</div>
-					<div class="sizes__chapter__legend flex flex-col justify-center">
+					<div class="sizes__chapter__legend flex flex-col justify-center" id="sizes-chapter-kids">
 						<ul class="sizes__chapter__legend__list">
 							<li>
 								<h4>A. {{ __('services.sizes-kids-legend-a') }}</h4>

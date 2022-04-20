@@ -316,6 +316,8 @@
 
 .return {
 	padding-top: 60px;
+	text-align: left;
+	margin-bottom: 40px;
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
@@ -341,6 +343,54 @@
 	&__link {
 		margin-top: 60px;
 		margin-bottom: 150px;
+	}
+	&__index {
+		width: 20%;
+		text-align: left;
+		&__menu {
+			font-size: 1.3rem;
+			position: sticky;
+			top: 200px;
+			font-family: 'Barlow Condensed';
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__chapters {
+		width: 75%;
+	}
+	&__chapter {
+		margin-bottom: 40px;
+		h3 {
+			font: normal normal 700 28px/36px 'Barlow Condensed';
+			color: $primary-color;
+			padding-bottom: 20px;
+			border-bottom: solid 1px lightgrey;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		&__img-container {
+			width: 45%;
+		}
+		&__legend {
+			width: 55%;
+			text-align: left;
+			&__list {
+				width: 50%;
+				margin-left: 25%;
+				h4 {
+					color: $primary-color;
+					font: normal normal 600 16px/20px 'Barlow';
+				}
+				p {
+					font: normal normal 500 14px/18px 'Barlow';
+				}
+				li {
+					margin-bottom: 15px;
+				}
+			}
+		}
 	}
 }
 

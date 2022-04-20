@@ -3293,6 +3293,8 @@ input[type=checkbox]:focus {
 
 .return {
   padding-top: 60px;
+  text-align: left;
+  margin-bottom: 40px;
 }
 .return__title {
   text-align: center;
@@ -3319,6 +3321,55 @@ input[type=checkbox]:focus {
 .return__link {
   margin-top: 60px;
   margin-bottom: 150px;
+}
+.return__index {
+  width: 20%;
+  text-align: left;
+}
+.return__index__menu {
+  font-size: 1.3rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  font-family: "Barlow Condensed";
+}
+.return__index__menu li {
+  margin-bottom: 10px;
+}
+.return__chapters {
+  width: 75%;
+}
+.return__chapter {
+  margin-bottom: 40px;
+}
+.return__chapter h3 {
+  font: normal normal 700 28px/36px "Barlow Condensed";
+  color: #D41C1B;
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.return__chapter__img-container {
+  width: 45%;
+}
+.return__chapter__legend {
+  width: 55%;
+  text-align: left;
+}
+.return__chapter__legend__list {
+  width: 50%;
+  margin-left: 25%;
+}
+.return__chapter__legend__list h4 {
+  color: #D41C1B;
+  font: normal normal 600 16px/20px "Barlow";
+}
+.return__chapter__legend__list p {
+  font: normal normal 500 14px/18px "Barlow";
+}
+.return__chapter__legend__list li {
+  margin-bottom: 15px;
 }
 
 .payment {
