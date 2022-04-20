@@ -105,7 +105,8 @@ class SaleController extends Controller
                             }
                             $new_voucher = new Voucher();
                             $new_voucher->unique_code = $unique_code;
-                            $new_voucher->user_id = $current_order->user->id;
+                            $new_voucher->user_id = null;
+                            $new_voucher->type = $variation->voucher_type;
                             $new_voucher->initial_value = $variation->pivot->value;
                             $new_voucher->remaining_value = $variation->pivot->value;
                             $new_voucher->save();

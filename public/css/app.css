@@ -4709,6 +4709,62 @@ input[type=checkbox]:focus {
   margin-bottom: 40px;
   width: 100%;
 }
+.dashboard-vouchers h3 {
+  text-align: left;
+  font: normal normal 700 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+}
+.dashboard-vouchers__form {
+  margin-bottom: 35px;
+}
+.dashboard-vouchers__form__input {
+  margin-bottom: 30px;
+}
+.dashboard-vouchers__form__input label {
+  text-align: left;
+  font: normal normal 500 12px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.dashboard-vouchers__form__input input[type=text] {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  border: none;
+  border-bottom: solid 1px lightgrey;
+}
+.dashboard-vouchers__form__input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: solid 1px #D41C1B;
+}
+.dashboard-vouchers__form__input input[type=text]::-moz-placeholder {
+  color: lightgrey;
+}
+.dashboard-vouchers__form__input input[type=text]:-ms-input-placeholder {
+  color: lightgrey;
+}
+.dashboard-vouchers__form__input input[type=text]::placeholder {
+  color: lightgrey;
+}
+.dashboard-vouchers__voucher {
+  width: 45%;
+  padding: 10px 0px;
+  border-bottom: solid 1px lightgrey;
+}
+.dashboard-vouchers__voucher__code {
+  text-align: left;
+  font: normal normal 500 16px/36px "Barlow";
+  letter-spacing: 0px;
+}
+.dashboard-vouchers__voucher__remaining {
+  text-align: left;
+  font: normal normal 700 16px/36px "Barlow";
+  letter-spacing: 0px;
+  color: #D41C1B;
+}
 
 .dashboard-orders {
   padding-left: 5vw;

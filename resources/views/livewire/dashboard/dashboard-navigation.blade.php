@@ -96,7 +96,7 @@
                 @break
 
             @case('vouchers')
-                @include('includes.dashboard.vouchers')
+                @livewire('dashboard.vouchers')
                 @break
 
             @case('addresses')
