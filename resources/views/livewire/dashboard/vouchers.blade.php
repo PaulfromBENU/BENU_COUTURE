@@ -29,13 +29,16 @@
 
     <div class="flex justify-between flex-wrap">
     @foreach($vouchers as $voucher)
-        <div class="dashboard-vouchers__voucher">
+        <div class="dashboard-vouchers__voucher relative" wire:key="{{ $voucher->unique_code }}">
             <p class="dashboard-vouchers__voucher__code">
                 N<sup>o</sup> {{ $voucher->unique_code }}
             </p>
             <p class="dashboard-vouchers__voucher__remaining">
                {{ __('dashboard.vouchers-remaining-value') }} : {{ $voucher->remaining_value }}&euro; 
             </p>
+            <button class="dashboard-vouchers__voucher__delete" wire:click="removeVoucher('{{ $voucher->unique_code }}')">
+                &#10005;
+            </button>
         </div>
     @endforeach
     </div>

@@ -4753,6 +4753,7 @@ input[type=checkbox]:focus {
   width: 45%;
   padding: 10px 0px;
   border-bottom: solid 1px lightgrey;
+  margin-bottom: 20px;
 }
 .dashboard-vouchers__voucher__code {
   text-align: left;
@@ -4763,6 +4764,15 @@ input[type=checkbox]:focus {
   text-align: left;
   font: normal normal 700 16px/36px "Barlow";
   letter-spacing: 0px;
+  color: #D41C1B;
+}
+.dashboard-vouchers__voucher__delete {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  transition: color 0.2s;
+}
+.dashboard-vouchers__voucher__delete:hover {
   color: #D41C1B;
 }
 

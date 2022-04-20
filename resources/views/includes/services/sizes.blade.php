@@ -65,18 +65,18 @@
 				</div>
 
 				<table class="sizes__chapter__table">
-					<tbody>
+					<!-- <tbody>
 						<tr class="grid grid-cols-12">
 							<th class="col-span-3">{{ __('services.sizes-unisex-in-confection') }}</th>
-							<th><!-- 34/XS -->{{ __('services.sizes-unisex-th-1') }}</th>
-							<th><!-- 36/S -->{{ __('services.sizes-unisex-th-2') }}</th>
-							<th><!-- 38/M -->{{ __('services.sizes-unisex-th-3') }}</th>
-							<th><!-- 40/L -->{{ __('services.sizes-unisex-th-4') }}</th>
-							<th><!-- 42/XL -->{{ __('services.sizes-unisex-th-5') }}</th>
-							<th><!-- 44/2XL -->{{ __('services.sizes-unisex-th-6') }}</th>
-							<th><!-- 46/3XL -->{{ __('services.sizes-unisex-th-7') }}</th>
-							<th><!-- 48/4XL -->{{ __('services.sizes-unisex-th-8') }}</th>
-							<th><!-- 50/5XL -->{{ __('services.sizes-unisex-th-9') }}</th>
+							<th>{{ __('services.sizes-unisex-th-1') }}</th>
+							<th>{{ __('services.sizes-unisex-th-2') }}</th>
+							<th>{{ __('services.sizes-unisex-th-3') }}</th>
+							<th>{{ __('services.sizes-unisex-th-4') }}</th>
+							<th>{{ __('services.sizes-unisex-th-5') }}</th>
+							<th>{{ __('services.sizes-unisex-th-6') }}</th>
+							<th>{{ __('services.sizes-unisex-th-7') }}</th>
+							<th>{{ __('services.sizes-unisex-th-8') }}</th>
+							<th>{{ __('services.sizes-unisex-th-9') }}</th>
 						</tr>
 						<tr class="text-right">
 							<td class="p-4 pr-5 font-medium">
@@ -84,8 +84,8 @@
 							</td>
 						</tr>
 						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
-							<td class="col-span-3"><!-- Taille -->{{ __('services.sizes-unisex-table-size') }}</td>
-							<td><!-- 168 -->{{ __('services.sizes-unisex-size-1') }}</td>
+							<td class="col-span-3">{{ __('services.sizes-unisex-table-size') }}</td>
+							<td>{{ __('services.sizes-unisex-size-1') }}</td>
 							<td>{{ __('services.sizes-unisex-size-2') }}</td>
 							<td>{{ __('services.sizes-unisex-size-3') }}</td>
 							<td>{{ __('services.sizes-unisex-size-4') }}</td>
@@ -97,7 +97,7 @@
 						</tr>
 						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 							<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-unisex-table-info-2') }}</td>
-							<td><!-- 80 -->{{ __('services.sizes-unisex-table-info-2-1') }}</td>
+							<td>{{ __('services.sizes-unisex-table-info-2-1') }}</td>
 							<td>{{ __('services.sizes-unisex-table-info-2-2') }}</td>
 							<td>{{ __('services.sizes-unisex-table-info-2-3') }}</td>
 							<td>{{ __('services.sizes-unisex-table-info-2-4') }}</td>
@@ -130,6 +130,73 @@
 							<td>{{ __('services.sizes-unisex-table-info-4-7') }}</td>
 							<td>{{ __('services.sizes-unisex-table-info-4-8') }}</td>
 							<td>{{ __('services.sizes-unisex-table-info-4-9') }}</td>
+						</tr>
+					</tbody> -->
+					<tbody>
+						<tr class="grid grid-cols-12">
+							<th class="col-span-3">{{ __('services.sizes-gentlemen-in-confection') }}</th>
+							<th><!-- 34/XS -->{{ __('services.sizes-gentlemen-th-1') }}</th>
+							<th><!-- 36/S -->{{ __('services.sizes-gentlemen-th-2') }}</th>
+							<th><!-- 38/M -->{{ __('services.sizes-gentlemen-th-3') }}</th>
+							<th><!-- 40/L -->{{ __('services.sizes-gentlemen-th-4') }}</th>
+							<th><!-- 42/XL -->{{ __('services.sizes-gentlemen-th-5') }}</th>
+							<th><!-- 44/2XL -->{{ __('services.sizes-gentlemen-th-6') }}</th>
+							<th><!-- 46/3XL -->{{ __('services.sizes-gentlemen-th-7') }}</th>
+							<th><!-- 48/4XL -->{{ __('services.sizes-gentlemen-th-8') }}</th>
+							<th><!-- 50/5XL -->{{ __('services.sizes-gentlemen-th-9') }}</th>
+						</tr>
+						<tr class="text-right">
+							<td class="p-4 pr-5 font-medium">
+								{{ __('services.sizes-info-cm') }}
+							</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><!-- Taille -->{{ __('services.sizes-gentlemen-table-size') }}</td>
+							<td><!-- 168 -->{{ __('services.sizes-gentlemen-size-1') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-2') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-3') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-4') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-5') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-6') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-7') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-8') }}</td>
+							<td>{{ __('services.sizes-gentlemen-size-9') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-gentlemen-table-info-2') }}</td>
+							<td><!-- 80 -->{{ __('services.sizes-gentlemen-table-info-2-1') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-2') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-3') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-4') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-5') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-6') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-7') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-8') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-2-9') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">C.</span> {{ __('services.sizes-gentlemen-table-info-3') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-1') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-2') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-3') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-4') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-5') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-6') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-7') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-8') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-3-9') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">D.</span> {{ __('services.sizes-gentlemen-table-info-4') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-1') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-2') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-3') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-4') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-5') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-6') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-7') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-8') }}</td>
+							<td>{{ __('services.sizes-gentlemen-table-info-4-9') }}</td>
 						</tr>
 					</tbody>
 				</table>

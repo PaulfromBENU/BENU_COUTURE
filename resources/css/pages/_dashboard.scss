@@ -312,6 +312,7 @@
 		width: 45%;
 		padding: 10px 0px;
 		border-bottom: solid 1px lightgrey;
+		margin-bottom: 20px;
 		&__code {
 			text-align: left;
 			font: normal normal 500 16px/36px 'Barlow';
@@ -322,6 +323,15 @@
 			font: normal normal 700 16px/36px 'Barlow';
 			letter-spacing: 0px;
 			color: $primary-color;
+		}
+		&__delete {
+			position: absolute;
+			top: 10px;
+			right: 5px;
+			transition: color 0.2s;
+			&:hover {
+				color: $primary-color;
+			}
 		}
 	}
 }

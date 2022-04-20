@@ -41,6 +41,15 @@ class Vouchers extends Component
         }
     }
 
+    public function removeVoucher($code)
+    {
+        if (auth()->user()->vouchers()->where('unique_code', $code)->count() > 0) {
+            $deleted_voucher = auth()->user()->vouchers()->where('unique_code', $code)->first();
+            $deleted_voucher->user_id = null;
+            $deleted_voucher->save();
+        }
+    }
+
     public function render()
     {
         return view('livewire.dashboard.vouchers', [
