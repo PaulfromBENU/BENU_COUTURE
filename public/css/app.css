@@ -3116,21 +3116,93 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
   margin-bottom: 60px;
 }
-.delivery__subtitle {
-  width: 50%;
-  margin: auto;
-  margin-bottom: 60px;
-  text-align: left;
-  font: normal normal 500 16px/28px "Barlow";
-  letter-spacing: 0px;
+.delivery__index {
+  width: 20%;
 }
-.delivery__box {
-  width: 32%;
-  height: 350px;
-  background: #D0D0D0 0% 0% no-repeat padding-box;
-  border-radius: 20px;
-  opacity: 0.2;
-  margin-bottom: 65px;
+.delivery__index__menu {
+  font-size: 1.3rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  font-family: "Barlow Condensed";
+}
+.delivery__index__menu li {
+  margin-bottom: 10px;
+}
+.delivery__chapters {
+  width: 75%;
+}
+.delivery__chapter {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.delivery__chapter h3 {
+  font: normal normal 700 28px/36px "Barlow Condensed";
+  color: #D41C1B;
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.delivery__chapter__link {
+  color: #D41C1B;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.delivery__chapter__link:hover {
+  color: #2E1414;
+}
+.delivery__chapter__img-container {
+  width: 45%;
+}
+.delivery__chapter__legend {
+  width: 55%;
+  text-align: left;
+}
+.delivery__chapter__legend__list {
+  width: 50%;
+  margin-left: 25%;
+}
+.delivery__chapter__legend__list h4 {
+  color: #D41C1B;
+  font: normal normal 600 16px/20px "Barlow";
+}
+.delivery__chapter__legend__list p {
+  font: normal normal 500 14px/18px "Barlow";
+}
+.delivery__chapter__legend__list li {
+  margin-bottom: 15px;
+}
+.delivery__chapter__table {
+  margin-top: 50px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.delivery__chapter__table th:nth-child(odd) {
+  color: grey;
+}
+.delivery__chapter__table th:nth-child(even) {
+  color: #2E1414;
+}
+.delivery__chapter__table th:nth-child(1) {
+  color: #D41C1B;
+}
+.delivery__chapter__table__data-rows:nth-child(odd) {
+  background: #ededed;
+}
+.delivery__chapter__table__data-rows td:nth-child(odd) {
+  color: grey;
+}
+.delivery__chapter__table__data-rows td:nth-child(even) {
+  color: #2E1414;
+}
+.delivery__chapter__table__data-rows td:nth-child(1) {
+  color: #2E1414;
+}
+.delivery__chapter__table__data-rows td {
+  padding: 4px 10px;
+  font-weight: 500;
 }
 
 .sizes {
@@ -5714,7 +5786,7 @@ input[type=checkbox]:focus {
   margin-left: 10px;
   overflow: hidden;
   transform: scale(1.1);
-  max-height: 230px;
+  max-height: 199px;
 }
 .cart-content__article__img-container img {
   -o-object-fit: cover;
