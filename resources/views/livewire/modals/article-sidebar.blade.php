@@ -251,7 +251,7 @@
                     Veuillez noter que nous ne prenons en charge les frais de retour qu'en cas de réclamation (marchandise défectueuse, livraison erronée ou autre) !
                 </p>
                 <p class="mb-2 text-sm font-medium">
-                    Tu trouveras <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-returns')]) }}" class="primary-color hover:underline">ici</a> de plus amples informations sur les retours et les remboursements.
+                    Tu trouveras <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" class="primary-color hover:underline">ici</a> de plus amples informations sur les retours et les remboursements.
                 </p>
             @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">
