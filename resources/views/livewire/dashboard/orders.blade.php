@@ -4,6 +4,11 @@
         <h2>
             {!! __('dashboard.my-orders') !!}
         </h2>
+        @if($orders->count() == 0)
+        <p>
+            <em>{{ __('dashboard.no-order-for-the-moment') }}...</em>
+        </p>
+        @endif
         @foreach($orders as $order)
             <div class="dashboard-orders__order flex justify-between" wire:key="{{ $order->id }}">
                 <div class="w-2/3 pr-5">

@@ -76,6 +76,8 @@ class SaleController extends Controller
             ];
 
             return view('checkout.process-card-payment', ['order' => $order, 'order_id' => $request->order, 'client_secret' => json_encode($output)]);
+        } else {
+            return redirect()->route('cart-'.app()->getLocale());
         }
     }
 

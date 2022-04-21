@@ -36,6 +36,15 @@ class CartArticles extends Component
                 $pivot->decrement('stock_in_cart');
             }
 
+            if (Cart::where('cart_id', $this->cart_id)->first()->couture_variations()->count() == 0) {
+                $cart = Cart::where('cart_id', $this->cart_id)->first();
+                if ($cart->order()->count() > 0) {
+                    $cart->order->delete();
+                }
+                $cart->delete();
+                return redirect()->route('cart-'.app()->getLocale());
+            }
+
             $this->loadArticles();
             $this->emit('cartUpdated');
             $this->emit('cartSumUpdated');

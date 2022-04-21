@@ -103,6 +103,7 @@ class PaymentTunnel extends Component
             $this->order_email = User::find($this->user_id)->email;
             if ($order->address_id == 0) {
                 $this->delivery_method = 0;
+                $this->address_chosen = 0;
             } else {
                 $this->country_code = $order->address->country;
                 $this->delivery_address_chosen = 1;
@@ -111,6 +112,7 @@ class PaymentTunnel extends Component
                 $this->address_chosen = 1;
                 $this->delivery_chosen = 1;
                 $this->order_address_id = $order->address_id;
+                $this->address_name = $order->address->address_name;
             }
 
             if ($order->invoice_address_id !== null && $order->invoice_address_id !== 0) {
@@ -119,6 +121,7 @@ class PaymentTunnel extends Component
                 $this->order_invoice_address_id = $order->invoice_address_id;
                 $this->delivery_address_chosen = 1;
                 $this->invoice_address_chosen = 1;
+                $this->invoice_address_name = $order->invoice_address->address_name;
             }
             
             $this->step = 2;
@@ -396,42 +399,45 @@ class PaymentTunnel extends Component
     public function validateOrder($payment_type)
     {
         if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-            // Create new user if not auth
-            if (!auth()->check()) {
-                if (User::where('email', $this->order_email)->count() > 0) {
-                    $user = User::where('email', $this->order_email)->first();
-                    $user->first_name = $this->order_first_name;
-                    $user->last_name = $this->order_last_name;
-                    $user->gender = $this->order_gender;
-                    $user->phone = $this->order_phone;
+            // Create new user if not auth and does not already exists
+            $cart = Cart::where('cart_id', $this->cart_id)->first();
+            if ($cart->order()->count() == 0 || $cart->order->user_id == null) {
+                if (!auth()->check()) {
+                    if (User::where('email', $this->order_email)->count() > 0) {
+                        $user = User::where('email', $this->order_email)->first();
+                        $user->first_name = $this->order_first_name;
+                        $user->last_name = $this->order_last_name;
+                        $user->gender = $this->order_gender;
+                        $user->phone = $this->order_phone;
 
-                    $user->save();
-                } else {
-                    //Client number created randomly  - C#####
-                    $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-                    while (User::where('client_number', $client_number)->count() > 0) {
+                        $user->save();
+                    } else {
+                        //Client number created randomly  - C#####
                         $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                        while (User::where('client_number', $client_number)->count() > 0) {
+                            $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                        }
+
+                        $user = User::create([
+                            'email' => $this->order_email,
+                            'role' => 'guest_client',
+                            'first_name' => $this->order_first_name,
+                            'last_name' => $this->order_last_name,
+                            'gender' => $this->order_gender,
+                            'phone' => $this->order_phone,
+                            'is_over_18' => '1',
+                            'legal_ok' => '1',
+                            'newsletter' => '0',
+                            'origin' => 'couture',
+                            'general_comment' => "",
+                            'client_number' => $client_number,
+                        ]);
                     }
 
-                    $user = User::create([
-                        'email' => $this->order_email,
-                        'role' => 'guest_client',
-                        'first_name' => $this->order_first_name,
-                        'last_name' => $this->order_last_name,
-                        'gender' => $this->order_gender,
-                        'phone' => $this->order_phone,
-                        'is_over_18' => '1',
-                        'legal_ok' => '1',
-                        'newsletter' => '0',
-                        'origin' => 'couture',
-                        'general_comment' => "",
-                        'client_number' => $client_number,
-                    ]);
+                    $user_id = $user->id;
+                } else {
+                    $user_id = auth()->user()->id;
                 }
-
-                $user_id = $user->id;
-            } else {
-                $user_id = auth()->user()->id;
             }
 
             if (Order::find($this->order_id) && Cart::where('cart_id', $this->cart_id)->first()->order->id == $this->order_id) {

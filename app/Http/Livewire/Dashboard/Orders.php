@@ -35,7 +35,7 @@ class Orders extends Component
     public function render()
     {
         if ($this->detailed_order_id == 0) {
-            return view('livewire.dashboard.orders', ['orders' => auth()->user()->orders()->where('status', '>', '0')->orderBy('created_at', 'desc')->get()]);
+            return view('livewire.dashboard.orders', ['orders' => auth()->user()->orders()->where('status', '>', '1')->orderBy('created_at', 'desc')->get()]);
         } else {
             return view('livewire.dashboard.orders', [
                 'order' => auth()->user()->orders()->find($this->detailed_order_id),

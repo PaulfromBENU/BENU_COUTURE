@@ -19,7 +19,7 @@ class CreateCart
      */
     public function handle(Request $request, Closure $next)
     {
-        if (session('cart_id') == null) {
+        if (session('cart_id') == null || Cart::where('cart_id', session('cart_id'))->count() == 0) {
             $random_id = substr(str_shuffle(Str::random(30)."0123456789"), rand(0, 5), 20);
             while (Cart::where('cart_id', $random_id)->count() > 0) {
                 $random_id = substr(str_shuffle(Str::random(30)."0123456789"), rand(0, 5), 20);
