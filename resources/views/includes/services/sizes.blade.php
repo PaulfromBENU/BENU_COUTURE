@@ -1,5 +1,6 @@
 <section class="w-full m-auto text-center sizes service-panel mb-10" id="services-sizes">
 	<h2 class="sizes__title">{{ __('services.sizes-title') }}</h2>
+
 	
 	<div class="flex justify-between benu-container">
 		<div class="sizes__index relative">
@@ -28,6 +29,9 @@
 		</div>
 
 		<div class="sizes__chapters">
+			<p class="text-left font-medium mb-10">
+				{{ __('services.general-description') }}
+			</p>
 			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-unisex') }}</h3>
 				<div class="flex justify-between">
