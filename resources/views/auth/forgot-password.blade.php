@@ -19,7 +19,7 @@ noindex, nofollow
             <div class="pl-5 pr-5">
                 >
             </div>
-            <a href="{{ route('login') }}" class="primary-color"><strong>{{ __('breadcrumbs.forgotten-pwd') }}</strong></a>
+            <a href="{{ route('login-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.forgotten-pwd') }}</strong></a>
         </div>
     </div>
 @endsection
@@ -29,7 +29,7 @@ noindex, nofollow
         <h3 class="login__subtitle">BENU COUTURE</h3>
         <h1 class="login__title">J'ai oublié mon <br/>mot de passe</h1>
 
-        <form method="POST" action="{{ route('password.email') }}" class="w-1/4 m-auto mb-10">
+        <form method="POST" action="{{ route('password.email', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
             @csrf
             <div class="input-group reactive-label-input">
                 <label for="email">Adresse e-mail *</label>

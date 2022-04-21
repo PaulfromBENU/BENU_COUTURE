@@ -11,7 +11,7 @@
 				<label for="header-login-pwd">{{ __('auth.login-password') }} *</label>
 				<input type="password" name="password" class="input-underline w-5/6" id="header-login-pwd" required>
 				<div class="flex items-center justify-start login__options absolute" style="bottom: -26px; left: 0;">
-		            <a class="connect-modal__forgotten-pwd text-sm text-gray-800" href="{{ route('password.request') }}">
+		            <a class="connect-modal__forgotten-pwd text-sm text-gray-800" href="{{ route('password.request-'.app()->getLocale()) }}">
 		                {{ __('auth.login-pwd-forgotten') }}
 		            </a>
 		        </div>

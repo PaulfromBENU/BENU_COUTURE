@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Auth\Notifications\ResetPassword;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,13 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        ResetPassword::createUrlUsing(function ($user, string $token) {
+            if (session('locale') !== null) {
+                $locale = session('locale');
+            } else {
+                $locale = 'en';
+            }
+            return route('password.reset-'.$locale, ['locale' => $locale, 'token' => $token]); //'https://example.com/reset-password?token='.$token;
+        });
     }
 }

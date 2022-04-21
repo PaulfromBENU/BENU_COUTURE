@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="flex items-center justify-end login__options">
-                    <a class="hover:underline" href="{{ route('password.request') }}">
+                    <a class="hover:underline" href="{{ route('password.request-'.app()->getLocale()) }}">
                         {{ __('auth.login-pwd-forgotten') }}
                     </a>
                 </div>
