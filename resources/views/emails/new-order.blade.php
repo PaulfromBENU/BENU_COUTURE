@@ -14,7 +14,7 @@
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
-		<img src="{{ $message->embed(asset('images/favicon/android-icon-192x192.png')) }}" style="height: 180px; margin: auto;" />
+		<img src="{{ $message->embed(asset('images/pictures/logo_benu_couture.png')) }}" style="height: 180px; margin: auto;" />
 	</div>
 	<div>
 		<p>

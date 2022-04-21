@@ -19,7 +19,7 @@
         </div>
 
         <div>
-            <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" type="submit">
+            <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" style="margin-left: 0;" type="submit">
                 {{ __('dashboard.vouchers-confirm-code') }}
             </button>
         </div>
