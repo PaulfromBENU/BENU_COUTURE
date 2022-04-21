@@ -6224,6 +6224,7 @@ input[type=checkbox]:focus {
 .cart-gift-modal__card__type__svg-container img {
   max-height: 120px;
   border-radius: 8px;
+  margin: auto;
 }
 .cart-gift-modal__card__type input[type=radio] {
   margin-top: -3px;
