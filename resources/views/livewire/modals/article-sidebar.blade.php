@@ -228,8 +228,31 @@
                 </ul>
 
             @elseif($content == 'delivery')
-            <p>Contenu à confirmer</p>
+                <h3 class="article-sidebar__content__compo__title mb-3">
+                    Frais de livraison
+                </h3>
+                <p class="mb-2 text-sm font-medium">
+                    Les frais de livraison dépendent de ton pays et du poids total de ta commande. Dès que tu as ajouté l'article de ton choix à ton panier, les frais de livraison estimés pour les articles sélectionnés s'affichent. 
+                </p>
+                <p class="mb-2 text-sm font-medium">
+                    Lorsque tu passes ta commande, les frais de livraison définitifs sont calculés, en fonction de l'adresse de livraison que tu choisis ensuite. Tu peux économiser les frais de livraison en venant chercher ta marchandise en personne dans notre boutique à Esch-sur-Alzette.
+                </p>
+                <p class="mb-10 text-sm font-medium">
+                    Pour savoir comment les frais d'envoi sont calculés en détail, clique <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="primary-color hover:underline">ici</a>.
+                </p>
 
+                <h3 class="article-sidebar__content__compo__title mb-3">
+                    Retours
+                </h3>
+                <p class="mb-2 text-sm font-medium">
+                    Si un article ne te plaît pas ou ne te convient pas, tu peux le renvoyer à BENU COUTURE dans les 28 jours suivant l'envoi de la marchandise. 
+                </p>
+                <p class="mb-2 text-sm font-medium">
+                    Veuillez noter que nous ne prenons en charge les frais de retour qu'en cas de réclamation (marchandise défectueuse, livraison erronée ou autre) !
+                </p>
+                <p class="mb-2 text-sm font-medium">
+                    Tu trouveras <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-returns')]) }}" class="primary-color hover:underline">ici</a> de plus amples informations sur les retours et les remboursements.
+                </p>
             @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">
                     {{ __('sidebar.more-details') }}
