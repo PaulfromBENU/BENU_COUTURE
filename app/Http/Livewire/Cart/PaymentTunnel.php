@@ -434,9 +434,9 @@ class PaymentTunnel extends Component
                         ]);
                     }
 
-                    $user_id = $user->id;
+                    $this->user_id = $user->id;
                 } else {
-                    $user_id = auth()->user()->id;
+                    $this->user_id = auth()->user()->id;
                 }
             }
 
@@ -450,7 +450,7 @@ class PaymentTunnel extends Component
                 }
                 $new_order->unique_id = $order_number;
                 $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
-                $new_order->user_id = $user_id;
+                $new_order->user_id = $this->user_id;
                 $new_order->address_id = $this->order_address_id;
                 $new_order->invoice_address_id = $this->order_invoice_address_id;
             }
