@@ -206,7 +206,8 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU BREAK</h4>
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
-							{!! __('header.break-desc') !!}
+							<!-- {!! __('header.break-desc') !!} -->
+							Tu as besoin de te ressourcer&nbsp;? De prendre ton temps ou tout simplement de trouver de l’inspiration&nbsp;? Et si tu passais quelques jours chez BENU BREAK, la seule chambre d'hôtel avec balcon (!). BENU BREAK se trouve au sein de BENU VILLAGE, un lieu énigmatique, chaleureux et unique, mais surtout un lieu tout simplement idéal.
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{!! __('header.discover-break') !!}</a>

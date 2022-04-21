@@ -238,7 +238,7 @@
                     Lorsque tu passes ta commande, les frais de livraison définitifs sont calculés, en fonction de l'adresse de livraison que tu choisis ensuite. Tu peux économiser les frais de livraison en venant chercher ta marchandise en personne dans notre boutique à Esch-sur-Alzette.
                 </p>
                 <p class="mb-10 text-sm font-medium">
-                    Pour savoir comment les frais d'envoi sont calculés en détail, clique <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="primary-color hover:underline">ici</a>.
+                    Pour savoir comment les frais d'envoi sont calculés en détail, clique <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" target="_blank" class="primary-color hover:underline">ici</a>.
                 </p>
 
                 <h3 class="article-sidebar__content__compo__title mb-3">
@@ -251,7 +251,7 @@
                     Veuillez noter que nous ne prenons en charge les frais de retour qu'en cas de réclamation (marchandise défectueuse, livraison erronée ou autre) !
                 </p>
                 <p class="mb-2 text-sm font-medium">
-                    Tu trouveras <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" class="primary-color hover:underline">ici</a> de plus amples informations sur les retours et les remboursements.
+                    Tu trouveras <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">ici</a> de plus amples informations sur les retours et les remboursements.
                 </p>
             @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">
