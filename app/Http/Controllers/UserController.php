@@ -53,6 +53,9 @@ class UserController extends Controller
         }
         $address->zip_code = $request->register_address_zip;
         $address->city = $request->register_address_city;
+        if (!isset($request->register_address_country) || $request->register_address_country == "") {
+            $request->register_address_country = "LU";
+        }
         $address->country = $request->register_address_country;
         $address->phone = $request->register_address_phone;
         if (isset($request->register_address_other)) {
