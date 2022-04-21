@@ -18,6 +18,8 @@ class PaymentTunnel extends Component
     use CartAnalyzer;
 
     public $cart_id;
+    public $user_id;
+    public $order_id;
     public $step;
     public $fill_info;
     public $info_valid;
@@ -65,6 +67,7 @@ class PaymentTunnel extends Component
         $this->order_invoice_address_id = 0;
 
         if (auth()->check()) {
+            $this->user_id = auth()->user()->id;
             $this->step = 2;
             $this->info_valid = 1;
             // if (auth()->user()->addresses()->count() == 1) {
@@ -74,6 +77,14 @@ class PaymentTunnel extends Component
             $this->step = 1;
         }
 
+        $this->order_id  = 0;
+        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+            $cart = Cart::where('cart_id', $this->cart_id)->first();
+            if ($cart->order()->count() >  0) {
+                $this->order_id = $cart->order->id;
+            }
+        }
+
         $this->fill_info = 0;
         $this->fill_address = 0;
         $this->fill_invoice_address = 0;
@@ -81,6 +92,37 @@ class PaymentTunnel extends Component
 
         $this->address_name = "";
         $this->invoice_address_name = "";
+
+        // If order has already been started, use existing data
+        if ($this->order_id > 0) {
+            $order = Order::find($this->order_id);
+            $this->user_id = $order->user_id;
+            $this->info_valid = 1;
+            $this->order_first_name = User::find($this->user_id)->first_name;
+            $this->order_last_name = User::find($this->user_id)->last_name;
+            $this->order_email = User::find($this->user_id)->email;
+            if ($order->address_id == 0) {
+                $this->delivery_method = 0;
+            } else {
+                $this->country_code = $order->address->country;
+                $this->delivery_address_chosen = 1;
+                $this->delivery_method = 1;
+                $this->address_valid = 1;
+                $this->address_chosen = 1;
+                $this->delivery_chosen = 1;
+                $this->order_address_id = $order->address_id;
+            }
+
+            if ($order->invoice_address_id !== null && $order->invoice_address_id !== 0) {
+                $this->address_valid = 1;
+                $this->address_chosen = 1;
+                $this->order_invoice_address_id = $order->invoice_address_id;
+                $this->delivery_address_chosen = 1;
+                $this->invoice_address_chosen = 1;
+            }
+            
+            $this->step = 2;
+        }
     }
 
     public function changeStep(int $step)
@@ -125,7 +167,67 @@ class PaymentTunnel extends Component
 
         $this->info_valid = 1;
         $this->step = 2;
-        $this->emit('goToPaymentStep2');
+
+        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+            // Create new user if not auth
+            if (!auth()->check()) {
+                if (User::where('email', $this->order_email)->count() > 0) {
+                    $user = User::where('email', $this->order_email)->first();
+                    $user->first_name = $this->order_first_name;
+                    $user->last_name = $this->order_last_name;
+                    $user->gender = $this->order_gender;
+                    $user->phone = $this->order_phone;
+
+                    $user->save();
+                    $this->user_id = $user->id;
+                } else {
+                    //Client number created randomly  - C#####
+                    $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                    while (User::where('client_number', $client_number)->count() > 0) {
+                        $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                    }
+
+                    $user = User::create([
+                        'email' => $this->order_email,
+                        'role' => 'guest_client',
+                        'first_name' => $this->order_first_name,
+                        'last_name' => $this->order_last_name,
+                        'gender' => $this->order_gender,
+                        'phone' => $this->order_phone,
+                        'is_over_18' => '1',
+                        'legal_ok' => '1',
+                        'newsletter' => '0',
+                        'origin' => 'couture',
+                        'general_comment' => "",
+                        'client_number' => $client_number,
+                    ]);
+                }
+
+                $this->user_id = $user->id;
+            } else {
+                $this->user_id = auth()->user()->id;
+            }
+
+            if (Order::find($this->order_id) && Cart::where('cart_id', $this->cart_id)->first()->order->id == $this->order_id) {
+                $new_order = Order::find($this->order_id);
+            } else {
+                $new_order = new Order();
+                $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                while (Order::where('unique_id', $order_number)->count() > 0) {
+                    $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                }
+                $new_order->unique_id = $order_number;
+                $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
+            }
+            $new_order->user_id = $this->user_id;
+            $new_order->status = '0';
+            $new_order->address_id = $this->order_address_id;
+            $new_order->invoice_address_id = $this->order_invoice_address_id;
+
+            if ($new_order->save()) {
+                $this->emit('goToPaymentStep2');
+            }
+        }
     }
 
     public function selectDeliveryMethod()
@@ -244,7 +346,7 @@ class PaymentTunnel extends Component
             $this->emit('addressUpdated', $this->country_code);
             $this->address_valid = 1;
             $this->step = 3;
-            $this->emit('goToPaymentStep3');
+            // $this->emit('goToPaymentStep3');
         } elseif (Address::find($this->order_address_id) && Address::find($this->order_invoice_address_id)) {
             $country = Address::find($this->order_address_id)->country;
             if (strtolower($country) == 'france') {
@@ -256,9 +358,33 @@ class PaymentTunnel extends Component
             }
             $this->emit('addressUpdated', $this->country_code);
             $this->address_valid = 1;
-            $this->emit('goToPaymentStep3');
+            // $this->emit('goToPaymentStep3');
             $this->step = 3;
             $this->address_name = Address::find($this->order_address_id)->address_name;
+        } else {
+            $this->address_valid = 0;
+        }
+
+        if($this->address_valid == 1) {
+            if (Order::find($this->order_id) && Cart::where('cart_id', $this->cart_id)->first()->order->id == $this->order_id) {
+                $new_order = Order::find($this->order_id);
+            } else {
+                $new_order = new Order();
+                $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                while (Order::where('unique_id', $order_number)->count() > 0) {
+                    $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                }
+                $new_order->unique_id = $order_number;
+                $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
+                $new_order->user_id = $this->user_id;
+            }
+            $new_order->status = '0';
+            $new_order->address_id = $this->order_address_id;
+            $new_order->invoice_address_id = $this->order_invoice_address_id;
+
+            if ($new_order->save()) {
+                $this->emit('goToPaymentStep3');
+            }
         }
     }
 
@@ -308,17 +434,20 @@ class PaymentTunnel extends Component
                 $user_id = auth()->user()->id;
             }
 
-            $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-            while (Order::where('unique_id', $order_number)->count() > 0) {
+            if (Order::find($this->order_id) && Cart::where('cart_id', $this->cart_id)->first()->order->id == $this->order_id) {
+                $new_order = Order::find($this->order_id);
+            } else {
+                $new_order = new Order();
                 $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                while (Order::where('unique_id', $order_number)->count() > 0) {
+                    $order_number = "T".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                }
+                $new_order->unique_id = $order_number;
+                $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
+                $new_order->user_id = $user_id;
+                $new_order->address_id = $this->order_address_id;
+                $new_order->invoice_address_id = $this->order_invoice_address_id;
             }
-
-            $new_order = new Order();
-            $new_order->unique_id = $order_number;
-            $new_order->cart_id = Cart::where('cart_id', $this->cart_id)->first()->id;
-            $new_order->user_id = $user_id;
-            $new_order->address_id = $this->order_address_id;
-            $new_order->invoice_address_id = $this->order_invoice_address_id;
             $new_order->total_price = $this->computeTotal($this->cart_id, $this->country_code);
             $new_order->status = '0';
 

@@ -1,5 +1,6 @@
 <section class="payment-tunnel">
     <div class="payment-tunnel__identification payment-tunnel__block">
+        {{ $step }}
         <h2 class="payment-tunnel__block__title @if($step == 1) payment-tunnel__block__title--current @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(1)" id="payment-tunnel-block-1">
             1. {{ __('cart.payment-id') }}
         </h2>

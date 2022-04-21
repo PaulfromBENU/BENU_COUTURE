@@ -19,7 +19,7 @@ class Cart extends Model
         return $this->belongsToMany(Article::class, 'benu_common.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');;
     }
 
-    public function orders()
+    public function order()
     {
         return $this->hasOne(Order::class);
     }

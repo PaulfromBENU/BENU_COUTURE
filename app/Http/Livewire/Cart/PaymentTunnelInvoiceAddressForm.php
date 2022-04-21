@@ -45,6 +45,7 @@ class PaymentTunnelInvoiceAddressForm extends Component
     {
         $this->country_options = DeliveryCountry::all();
         $this->localized_country = "country_".app()->getLocale();
+        $this->address_country  = "LU";
     }
 
     public function createNewAddress()
