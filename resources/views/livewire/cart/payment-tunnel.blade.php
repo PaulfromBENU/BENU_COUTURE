@@ -84,7 +84,7 @@
                                 @endif
                             </p>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                                 @endif
                             </p>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
                             </div>
                         </div>
                     </div>
@@ -188,11 +188,17 @@
                     <div class="mb-5 rounded-xl p-4 relative" style="border: #D41C1B solid 2px">
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-address') }}</strong></h5>
                         <div class="flex justify-between">
-                            <div class="mb-1 w-2/3">
+                            <div class="mb-1 payment-tunnel__delivery__address w-2/3">
                                 @include('includes.cart.cart_address_details')
                             </div>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryAddress" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryAddress" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
+
+                                @auth
+                                <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture btn-couture-plain--fit" style="position: absolute; top: 54px; right: 4px; width: 340px;">
+                                    {{ __('cart.payment-address-modify') }}
+                                </a>
+                                @endauth
                             </div>
                         </div>
                     </div>
@@ -306,7 +312,15 @@
                                 @endif
                             </div>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateInvoiceAddress" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateInvoiceAddress" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
+
+                                @auth
+                                    @if($order_address_id !== $order_invoice_address_id)
+                                    <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture btn-couture-plain--fit" style="position: absolute; top: 54px; right: 4px; width: 340px;">
+                                        {{ __('cart.payment-address-modify') }}
+                                    </a>
+                                    @endif
+                                @endauth
                             </div>
                         </div>
                     </div>

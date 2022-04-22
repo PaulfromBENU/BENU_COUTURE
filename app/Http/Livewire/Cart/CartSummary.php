@@ -18,6 +18,8 @@ class CartSummary extends Component
     use CartAnalyzer;
     use DeliveryCalculator;
 
+    public $in_tunnel;
+
     public $cart_id;
     public $articles_sum;
     public $delivery_sum;
@@ -45,8 +47,10 @@ class CartSummary extends Component
     {
         if (Route::currentRouteName() == 'payment-'.app()->getLocale()) {
             $this->show_payment_btn = 0;
+            $this->in_tunnel = 1;
         } else {
             $this->show_payment_btn = 1;
+            $this->in_tunnel = 0;
         }
 
         $this->with_extra = 0;

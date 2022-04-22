@@ -11,7 +11,7 @@
     @if($with_extra > 0)
     <div class="flex justify-between cart-summary__price">
         <p>
-            @if(Route::current()->getName() == 'payment-'.app()->getLocale())
+            @if($in_tunnel)
             {{ __('cart.extra-pillow-final-price') }}
             @else
             {{ __('cart.extra-pillow-estimate') }}
@@ -25,7 +25,7 @@
 
     <div class="flex justify-between cart-summary__price">
         <p>
-            @if(Route::current()->getName() == 'payment-'.app()->getLocale())
+            @if($in_tunnel)
             {{ __('cart.delivery-final-price') }}
             @else
             {{ __('cart.delivery-estimate') }}
@@ -43,7 +43,7 @@
     @if($gift_sum > 0)
     <div class="flex justify-between cart-summary__price">
         <p>
-            @if(Route::current()->getName() == 'payment-'.app()->getLocale())
+            @if($in_tunnel)
             {{ __('cart.gift-final-price') }}
             @else
             {{ __('cart.gift-estimate') }}
@@ -92,7 +92,7 @@
 
     <div class="flex justify-between cart-summary__price">
         <p>
-            @if(Route::current()->getName() == 'payment-'.app()->getLocale())
+            @if($in_tunnel)
             <strong>{{ __('cart.total-final-price') }}</strong>
             @else
             <strong>{{ __('cart.total-estimate') }}</strong>
