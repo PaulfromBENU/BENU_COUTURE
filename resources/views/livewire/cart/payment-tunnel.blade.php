@@ -186,7 +186,7 @@
                     </div>
                     @if($delivery_method == 1)
                     <div class="mb-5 rounded-xl p-4 relative" style="border: #D41C1B solid 2px">
-                        <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-method') }}</strong></h5>
+                        <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-address') }}</strong></h5>
                         <div class="flex justify-between">
                             <div class="mb-1 w-2/3">
                                 @include('includes.cart.cart_address_details')

@@ -8,11 +8,11 @@
         <div class="header-simplified__menus-container flex flex-col justify-center">
             <div class="flex justify-between header-simplified__main-menu">
                 <nav class="header-simplified__backlink flex justify-start">
-                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="primary-color flex">@svg('arrow_left', 'header-simplified__arrow-left') Modifier mon panier</a>
+                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="primary-color flex">@svg('arrow_left', 'header-simplified__arrow-left') {{ __('cart.modify-cart') }}</a>
                 </nav>
                 <ul class="header-simplified__main-menu__icons flex justify-end">
                     <li class="header-simplified__main-menu__icons__info">
-                        Paiement sécurisé
+                        {{ __('cart.secure-payment') }}
                     </li>
                     @auth
                     <li style="margin-top: -12px;">
