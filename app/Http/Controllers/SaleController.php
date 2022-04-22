@@ -163,7 +163,6 @@ class SaleController extends Controller
             return redirect()->route('home', ['locale' => app()->getLocale()]);
         }
 
-        $order = "T56597ui3e4fiaufge734";
         return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first(), 'url_order' => $order]);
     }
 }

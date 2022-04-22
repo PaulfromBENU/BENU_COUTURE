@@ -1,4 +1,4 @@
-<div class="sold-overview-wishlist" wire:click="triggerSideBar">
+<div class="sold-overview-wishlist">
     <div class="sold-overview-wishlist__cap sold-overview-wishlist__cap--grey"></div>
     <div class="flex justify-start">
         <div class="sold-overview-wishlist__img-container">
