@@ -122,6 +122,8 @@ class SaleController extends Controller
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
 
+                // Send new voucher codes in order recap (e-mail ?) for fabric vouchers.
+
                 // Update used voucher value
                 if ($current_order->cart->use_voucher == 1 && Voucher::where('unique_code', $current_order->cart->voucher_code)->count() > 0) {
                     $voucher = Voucher::where('unique_code', $current_order->cart->voucher_code)->first();
@@ -137,10 +139,12 @@ class SaleController extends Controller
 
                 Mail::to($current_order->user->email)->send(new NewOrder($current_order));
 
-                if ($current_order->payment_type ==  '0') {
+                if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
-                } elseif ($current_order->payment_type == '3') {
+                } elseif ($current_order->payment_type == '3') { // Case bank transfer
                     $current_order->payment_status = 1;
+                } elseif ($current_order->payment_type == '4') { // Case voucher paid all
+                    $current_order->payment_status = 2;
                 }
                 $current_order->delivery_status = 1;
                 if($current_order->save()) {

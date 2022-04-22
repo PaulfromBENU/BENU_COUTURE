@@ -355,6 +355,26 @@
         <h2 class="payment-tunnel__block__title @if($step == 3) payment-tunnel__block__title--current @else payment-tunnel__block__title--waiting @endif" wire:click="changeStep(3)" id="payment-tunnel-block-3">
             3. {{ __('cart.payment-pay') }}
         </h2>
+        @if($total_price == 0)
+        <div class="payment-tunnel__block__content" @if($step !== 3 || !$info_valid || !$address_valid) style="display:none;" @endif>
+            <div class="payment-tunnel__payment__field flex flex-col justify-center">
+                <div class="grid grid-cols-8">
+                    <div class="col-span-3">
+                        <p style="padding-top: 7px;">
+                            {{ __('cart.payment-pay-with-voucher-confirm') }}
+                        </p>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1">
+                        
+                    </div>
+                    <div class="col-span-3 text-right pt-1">
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('voucher')">{{ __('cart.payment-confirm') }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @else
         <div class="payment-tunnel__block__content" @if($step !== 3 || !$info_valid || !$address_valid) style="display:none;" @endif>
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
                 <div class="grid grid-cols-8">
@@ -428,5 +448,6 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
 </section>

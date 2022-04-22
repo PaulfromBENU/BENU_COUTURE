@@ -55,6 +55,7 @@
     </div>
     @endif
 
+    @if(!$in_tunnel)
     <div class="cart-summary__use-voucher">
         <div class="flex">
             <input type="checkbox" name="cart_use_voucher" id="cart-use-voucher" wire:model="use_voucher">
@@ -90,6 +91,17 @@
         @endif
     </div>
 
+    @else
+    <div class="flex justify-between cart-summary__price">
+        <p>
+            {{ __('cart.voucher-reduction') }}
+        </p>
+        <p>
+            -{{ $voucher_current_value - $voucher_remaining_value }}&euro;
+        </p>
+    </div>
+    @endif
+
     <div class="flex justify-between cart-summary__price">
         <p>
             @if($in_tunnel)
@@ -103,7 +115,7 @@
         </p>
     </div>
 
-    @if($show_payment_btn && $total > 0)
+    @if($show_payment_btn)
     <div>
         <a href="{{ route('payment-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
             {{ __('cart.make-order') }}

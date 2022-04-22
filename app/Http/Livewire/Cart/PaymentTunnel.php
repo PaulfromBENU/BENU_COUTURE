@@ -30,6 +30,7 @@ class PaymentTunnel extends Component
     public $country_code;
     public $delivery_chosen;
     public $delivery_method;// 0: collect at shop, 1: home delivery
+    public $total_price;
 
     // Info data
     public $order_gender;
@@ -387,6 +388,7 @@ class PaymentTunnel extends Component
 
             if ($new_order->save()) {
                 $this->emit('goToPaymentStep3');
+                $this->total_price = $this->computeTotal($this->cart_id, $this->country_code);
             }
         }
     }
@@ -454,7 +456,7 @@ class PaymentTunnel extends Component
                 $new_order->address_id = $this->order_address_id;
                 $new_order->invoice_address_id = $this->order_invoice_address_id;
             }
-            $new_order->total_price = $this->computeTotal($this->cart_id, $this->country_code);
+            $new_order->total_price = $this->total_price;
             $new_order->status = '0';
 
             switch ($payment_type) {
@@ -473,6 +475,10 @@ class PaymentTunnel extends Component
                 case 'transfer':
                     $new_order->payment_type = 3;
                     break;
+
+                case 'voucher':
+                    $new_order->payment_type = 4;
+                    break;
                 
                 default:
                     $new_order->payment_type = 3;
@@ -486,6 +492,10 @@ class PaymentTunnel extends Component
                         break;
 
                     case 'transfer':
+                        return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
+                        break;
+
+                    case 'voucher':
                         return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
                     

@@ -49,6 +49,8 @@
 			{!! __('payment.confirmation-digicash') !!} - {!! __('payment.confirmation-payment-ok') !!}
 			@elseif($order->payment_type == '3')
 			{!! __('payment.confirmation-bank-transfer') !!} - {!! __('payment.confirmation-payment-pending') !!}
+			@elseif($order->payment_type == '4')
+			{!! __('payment.confirmation-voucher') !!} - {!! __('payment.confirmation-payment-ok') !!}
 			@else
 			{!! __('payment.confirmation-payment-pending') !!}
 			@endif
