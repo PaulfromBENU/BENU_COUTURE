@@ -27,6 +27,7 @@ noindex, nofollow
 @section('main-content')
     <section class="benu-container login">
         <h3 class="login__subtitle">BENU COUTURE</h3>
+        @if(session('status') == null)
         <h1 class="login__title">J'ai oublié mon <br/>mot de passe</h1>
 
         <form method="POST" action="{{ route('password.email', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
@@ -51,6 +52,13 @@ noindex, nofollow
                 {!! implode('', $errors->all('<div>:message</div>')) !!}
             @endif
         </form>
+        @else
+        <h1 class="login__title">Tu as reçu un e-mail pour <br/>réinitialiser ton mot de passe</h1>
+
+        <p class="font-medium w-1/2 m-auto">
+            Dans cet e-mail, tu trouveras un lien sécurisé, valable une heure, qui te permettra de choisir un nouveau mot de passe. Si tu ne voies pas l'e-mail dans ta boite de réception, vérifie qu'il n'a pas atterri par erreur dans ton courrier indésirable&nbsp;!
+        </p>
+        @endif
     </section>
 @endsection
 
