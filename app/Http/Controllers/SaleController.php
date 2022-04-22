@@ -148,6 +148,11 @@ class SaleController extends Controller
 
     public function showValidPayment($order)
     {
-        return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first()]);
+        if (strlen($order) < 6 || Order::where('unique_id', substr($order, 0, 6))->count() == 0) {
+            return redirect()->route('home', ['locale' => app()->getLocale()]);
+        }
+
+        $order = "T56597ui3e4fiaufge734";
+        return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first(), 'url_order' => $order]);
     }
 }

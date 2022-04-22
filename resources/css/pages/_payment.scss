@@ -239,3 +239,51 @@
 		}
 	}
 }
+
+.payment-confirmation {
+	padding-top: 65px;
+	margin-bottom: 80px;
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0.16px;
+		color: #26254480;
+		margin-bottom: 35px;
+	}
+	&__title {
+		width: 50%;
+		margin-left: 25%;
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E1414;
+		margin-bottom: 70px;
+	}
+	&__order-number {
+		text-align: center;
+		font: normal normal 700 28px/34px 'Barlow Condensed';
+		letter-spacing: 0.28px;
+		color: $primary-color;
+		margin-bottom: 35px;
+	}
+	&__order-infos {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+	}
+	&__txt-details {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+		margin-bottom: 35px;
+	}
+	&__links {
+		padding-top: 35px;
+		width: 60%;
+		margin-left: 20%;
+		a {
+			display: inline-block;
+			margin-bottom: 30px;
+		}
+	}
+}

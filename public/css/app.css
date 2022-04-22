@@ -6530,3 +6530,51 @@ input[type=checkbox]:focus {
   box-shadow: none;
   border-color: #D41C1B;
 }
+
+.payment-confirmation {
+  padding-top: 65px;
+  margin-bottom: 80px;
+}
+.payment-confirmation__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0.16px;
+  color: #26254480;
+  margin-bottom: 35px;
+}
+.payment-confirmation__title {
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+  margin-bottom: 70px;
+}
+.payment-confirmation__order-number {
+  text-align: center;
+  font: normal normal 700 28px/34px "Barlow Condensed";
+  letter-spacing: 0.28px;
+  color: #D41C1B;
+  margin-bottom: 35px;
+}
+.payment-confirmation__order-infos {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+.payment-confirmation__txt-details {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+}
+.payment-confirmation__links {
+  padding-top: 35px;
+  width: 60%;
+  margin-left: 20%;
+}
+.payment-confirmation__links a {
+  display: inline-block;
+  margin-bottom: 30px;
+}
