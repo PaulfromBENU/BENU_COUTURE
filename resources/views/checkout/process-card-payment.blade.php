@@ -10,19 +10,19 @@
 
 @section('main-content')
 	<section class="w-2/3 m-auto text-center">
-		<h1 class="text-3xl primary-color mb-5 font-bold">Paiement par carte bancaire</h1>
+		<h1 class="text-3xl primary-color mb-5 font-bold">{{ __('payment.process-payment-by-card') }}</h1>
 		<div class="mb-5">
-			<h3 class="text-lg text-bold">Cartes acceptées</h3>
+			<h3 class="text-lg text-bold">{{ __('payment.process-accepted-cards') }}</h3>
 			<img src="{{ asset('images/pictures/services_payment_cards.png') }}" style="height: 50px;" class="m-auto" />
 		</div>
-		<h3 class="text-lg mb-5">Prix total de votre commande : <span class="primary-color font-bold">{{ $order->total_price }}&euro;</span></h3>
+		<h3 class="text-lg mb-5">{{ __('payment.process-total-price') }} <span class="primary-color font-bold">{{ $order->total_price }}&euro;</span></h3>
 
 		<div class="mb-10">
 			<p>
-				Nombre d'articles achetés : <span class="primary-color font-bold"> {{ $order->cart->couture_variations()->count() }}</span>
+				{{ __('payment.process-number-of-articles') }} <span class="primary-color font-bold"> {{ $order->cart->couture_variations()->count() }}</span>
 			</p>
 			<p>
-				Utilisateur : <span class="primary-color font-bold"> {{ $order->user->first_name }} {{ $order->user->last_name }}</span>
+				{{ __('payment.process-user-details') }} <span class="primary-color font-bold"> {{ $order->user->first_name }} {{ $order->user->last_name }}</span>
 			</p>
 		</div>
 
@@ -46,9 +46,9 @@
 
 			<button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" id="payment-submit-button">
 				<div class="spinner hidden" id="spinner">
-					Paiement en cours...
+					{{ __('payment.process-payment-on-going') }}...
 				</div>
-        		<span id="button-text">Effectuer le paiement</span>
+        		<span id="button-text">{{ __('payment.process-make-payment') }}</span>
         	</button>
 
         	<div id="payment-message" class="hidden"></div>
