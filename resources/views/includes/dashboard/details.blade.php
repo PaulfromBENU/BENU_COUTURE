@@ -86,6 +86,9 @@
 
                 <div class="w-5/12">
                 	<h4>{{ __('dashboard.has-kulturpass') }}</h4>
+                    <p class="font-medium mt-1 mb-2">
+                        {{ __('dashboard.kulturpass-explanation') }}
+                    </p>
                     <p class="font-bold mb-3">
                         <em>
                         @if($kulturpass_status == 0)

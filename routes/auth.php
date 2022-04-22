@@ -31,7 +31,8 @@ Route::get('/inscription-lu', [RegisteredUserController::class, 'create'])
                 ->name('register-lu');
 
 Route::post('/register', [RegisteredUserController::class, 'store'])
-                ->middleware('guest');
+                ->middleware('guest')
+                ->name('register');
 
 // Route::get('/login', [AuthenticatedSessionController::class, 'create'])
 //                 ->middleware('guest')
