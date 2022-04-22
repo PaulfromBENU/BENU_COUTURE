@@ -122,6 +122,17 @@ class SaleController extends Controller
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
 
+                // Update used voucher value
+                if ($current_order->cart->use_voucher == 1 && Voucher::where('unique_code', $current_order->cart->voucher_code)->count() > 0) {
+                    $voucher = Voucher::where('unique_code', $current_order->cart->voucher_code)->first();
+                    if ($current_order->cart->price_before_voucher > $voucher->remaining_value) {
+                        $voucher->remaining_value = 0;
+                    } else {
+                        $voucher->remaining_value -= $current_order->cart->price_before_voucher;
+                    }
+                    $voucher->save();
+                }
+
                 $current_order->status = '2';
 
                 Mail::to($current_order->user->email)->send(new NewOrder($current_order));

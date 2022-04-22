@@ -114,6 +114,7 @@ class CartSummary extends Component
         if (Voucher::where('unique_code', $this->voucher_code)->count() > 0) {
             $cart = Cart::where('cart_id', $this->cart_id)->first();
             $cart->voucher_code = $this->voucher_code;
+
             if($cart->save()) {
                 $this->voucher_verified = 1;
                 $this->voucher_status = 0;
@@ -206,6 +207,10 @@ class CartSummary extends Component
     public function computeTotalWithVoucher()
     {
         $this->total = $this->articles_sum + $this->with_extra + $this->delivery_sum + $this->gift_sum;
+
+        $cart = Cart::where('cart_id', $this->cart_id)->first();
+        $cart->price_before_voucher = $this->total;
+        $cart->save();
 
         if ($this->total > $this->voucher_current_value) {
             $this->total -= $this->voucher_current_value;
