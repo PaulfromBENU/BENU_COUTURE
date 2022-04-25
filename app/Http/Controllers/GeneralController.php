@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 use App\Models\Article;
 use App\Models\Creation;
 use App\Models\CreationCategory;
 use App\Models\Partner;
 use App\Models\User;
+use App\Mail\NewsletterConfirmation;
+use App\Mail\NewsletterConfirmationForAdmin;
 
 use App\Traits\ArticleAnalyzer;
 use App\Traits\DataImporter;
@@ -118,6 +121,8 @@ class GeneralController extends Controller
                 auth()->user()->newsletter = 1;
                 auth()->user()->save();
                 $message = __('auth.newsletter-subscribe-confirm');
+                Mail::to($auth()->user()->email)->send(new NewsletterConfirmation());
+                Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($auth()->user()));
             }
         } else {
             if (User::where('email', $request->newsletter_email)->count() > 0) {
@@ -125,6 +130,8 @@ class GeneralController extends Controller
                 $user->newsletter = 1;
                 $user->save();
                 $message = __('auth.newsletter-subscribe-confirm');
+                Mail::to($user->email)->send(new NewsletterConfirmation());
+                Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($user));
             } else {
                 $user = new User();
                 $user->email = $request->newsletter_email;
@@ -140,6 +147,8 @@ class GeneralController extends Controller
                 $user->general_comment = "";
                 if($user->save()) {
                     $message = __('auth.newsletter-subscribe-confirm');
+                    Mail::to($user->email)->send(new NewsletterConfirmation());
+                    Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($user));
                 }
             }
         }

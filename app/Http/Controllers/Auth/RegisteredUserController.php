@@ -19,6 +19,8 @@ use App\Models\DeliveryCountry;
 use App\Models\Kulturpass;
 use App\Models\User;
 use App\Mail\UserRegistered;
+use App\Mail\NewsletterConfirmation;
+use App\Mail\NewsletterConfirmationForAdmin;
 
 class RegisteredUserController extends Controller
 {
@@ -180,6 +182,11 @@ class RegisteredUserController extends Controller
         }
 
         Mail::to($user->email)->send(new UserRegistered($user));
+
+        if ($user->newsletter) {
+            Mail::to($user->email)->send(new NewsletterConfirmation());
+            Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($user));
+        }
 
         event(new Registered($user));
 
