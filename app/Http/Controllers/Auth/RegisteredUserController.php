@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        app()->setLocale(session('locale'));
         //Newsletter boolean to false if not checked
         if (!isset($request->register_newsletter)) {
             $request->register_newsletter = 0;

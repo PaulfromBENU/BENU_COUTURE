@@ -4,6 +4,8 @@ namespace App\Traits;
 
 use App\Models\DeliveryCountry;
 
+use App\Models\Cart;
+
 trait DeliveryCalculator {
 
 	protected $fare_table = [
@@ -133,5 +135,21 @@ trait DeliveryCalculator {
 		$delivery_cost += 2;
 
 		return $delivery_cost;
+	}
+
+	public function calculateDeliveryTotalFromCart(Cart $cart)
+	{
+		$total_weight = 0;
+		$country = $cart->order->address->country;
+
+		foreach ($cart->couture_variations as $variation) {
+			if ($variation->name = 'voucher' && $variation->voucher_type !== 'pdf') {
+				$total_weight += 0.02 * $variation->pivot->articles_number;
+			} else {
+				$total_weight += $variation->creation->weight / 1000 * $variation->pivot->articles_number;
+			}
+		}
+
+		return $this->calculateDeliveryTotal($total_weight, $country);
 	}
 }

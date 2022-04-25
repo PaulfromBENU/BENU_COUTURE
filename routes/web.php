@@ -113,6 +113,8 @@ if (app('env') == 'landing') {
 
 			return new UserRegistered($user);
 		});
+
+		Route::get('/facture/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
 	});
 
 	Route::group([

@@ -54,10 +54,15 @@
                         </button>
                     </div>
                     <div class="mb-5 text-right">
+                        <a target="_blank" href="{{ route('invoice-fr', ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
+                            {{ __('dashboard.order-invoice') }}
+                        </a>
+                    </div>
+                    <!-- <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
                         </button>
-                    </div>
+                    </div> -->
                     <div class="text-right">
                         <a href="{{ route('client-service-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-client-service') }}
@@ -187,7 +192,7 @@
                     @if($order->delivery_status <= '1')
                     {{ __('dashboard.order-delivery-under-preparation') }}
                     @else
-                    Expédiée le {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                    {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
                         @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
                     @endif
                 @endif

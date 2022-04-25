@@ -8,16 +8,23 @@ use Illuminate\Support\Facades\Mail;
 
 use App\Models\Article;
 use App\Models\Cart;
+use App\Models\DeliveryCountry;
 use App\Models\Order;
 use App\Models\Voucher;
 use App\Mail\NewOrder;
 
 use Illuminate\Support\Str;
 
+use App\Traits\DeliveryCalculator;
+
 use Stripe;
+
+use PDF;
 
 class SaleController extends Controller
 {
+    use DeliveryCalculator;
+
     public function showCart()
     {
         if (session('cart_id') !== null && Cart::where('cart_id', session('cart_id'))->count() > 0) {
@@ -168,5 +175,21 @@ class SaleController extends Controller
         }
 
         return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first(), 'url_order' => $order]);
+    }
+
+    public function displayInvoice($order_code)
+    {
+        if (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
+            $order = Order::where('unique_id', substr($order_code, 4, 6))->first();
+            $countries = [];
+            foreach (DeliveryCountry::all() as $country) {
+                $countries[$country->country_code] = $country->country_fr;
+            }
+            $countries['Luxembourg'] = 'Luxembourg';
+            $countries['France'] = 'France';
+            $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
+            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+            return $pdf->stream('BENU_Order_'.$order->unique_id.'.pdf');
+        }
     }
 }

@@ -28,13 +28,18 @@
         @if($errors->any())
             <div class="register__errors w-2/3 m-auto mt-5 mb-5">
                 {!! __('auth.register-error') !!}
-                @if(!App::environment('prod'))
+
                 <br/>
-                    <p>
-                        <strong>Infos supplémentaires. Les messages ci-dessous n'apparaitront pas en production&nbsp;: <br/>
-                        {!! implode('', $errors->all('<div class="primary-color">:message</div>')) !!}</strong>
-                    </p>
-                @endif
+
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li class="primary-color">{{ trans($error, [], app()->getLocale()) }}</li>
+                    @endforeach
+                </ul>
+<!--                 <p>
+                    {!! implode('', $errors->all('<div class="primary-color">:message</div>')) !!}</strong>
+                </p> -->
+
             </div>
         @endif
 
