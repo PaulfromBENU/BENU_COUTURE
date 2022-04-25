@@ -14,35 +14,35 @@
                 <div class="w-2/3 pr-5">
                     <div class="flex justify-start mb-5">
                         <p class="mr-5">
-                            No de commande&nbsp;: <strong>{{ $order->unique_id }}</strong>
+                            {{ __('dashboard.order-number') }} <strong>{{ $order->unique_id }}</strong>
                         </p>
                         <p>
-                            Montant&nbsp;: <strong>{{ $order->total_price }}&euro;</strong>
+                            {{ __('dashboard.order-amount') }} <strong>{{ $order->total_price }}&euro;</strong>
                         </p>
                     </div>
                     <div class="dashboard-orders__order__details">
                         <p class="primary-color font-bold mb-5">
                             @if($order->status == '2')
                                 @if($order->payment_status <= '1')
-                                En attente de paiement
+                                {{ __('dashboard.order-payment-pending') }}
                                 @else
-                                Payée - 
+                                {{ __('dashboard.order-payment-paid') }} - 
                                     @if($order->delivery_status <= '1')
-                                    Livraison en cours de préparation
+                                    {{ __('dashboard.order-payment-delivery-under-preparation') }}
                                     @else
-                                    Expédiée le {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
-                                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">Suivre ma commande</a>@endif
+                                    {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
                                     @endif
                                 @endif
                             @else
-                                Commande non finalisée et non payée
+                                {{ __('dashboard.order-not-finished-not-paid') }}
                             @endif
                         </p>
                         <p>
                             <strong>{{ $order->cart->couture_variations->count() }} {{ trans_choice('dashboard.order-articles', $order->cart->couture_variations->count()) }}</strong>
                         </p>
                         <p>
-                            Commande du <strong>{{ $order->created_at->format('d\/m\/Y') }}</strong>
+                            {{ __('dashboard.order-made-on') }} <strong>{{ $order->created_at->format('d\/m\/Y') }}</strong>
                         </p>
                     </div>
                 </div>
@@ -50,17 +50,17 @@
                 <div class="w-1/3">
                     <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;" wire:click="showDetails({{ $order->id }})">
-                            Détails de ma commande
+                            {{ __('dashboard.order-details') }}
                         </button>
                     </div>
                     <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
-                            Facture
+                            {{ __('dashboard.order-invoice') }}
                         </button>
                     </div>
                     <div class="text-right">
                         <a href="{{ route('client-service-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
-                            Service client
+                            {{ __('dashboard.order-client-service') }}
                         </a>
                     </div>
                 </div>
@@ -76,35 +76,35 @@
             <div class="flex justify-between mb-7">
                 <div>
                     <button class="primary-color underline font-bold dashboard-orders__details__summary__backlink" wire:click="hideDetails">
-                        < Retour à mes commandes
+                        < {{ __('dashboard.order-back-to-all-orders') }}
                     </button>
                 </div>
                 <div class="flex justify-end">
                     <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
-                            Facture
+                            {{ __('dashboard.order-invoice') }}
                         </button>
                     </div>
                     <div class="text-right">
                         <a href="{{ route('client-service-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px; width: fit-content;">
-                            Service client
+                            {{ __('dashboard.order-client-service') }}
                         </a>
                     </div>
                 </div>
             </div>
             <div>
                 <p>
-                    No de commande : <strong>{{ $order->unique_id }}</strong>
+                    {{ __('dashboard.order-number') }} <strong>{{ $order->unique_id }}</strong>
                 </p>
                 <p>
-                    Montant : <strong>{{ $order->total_price }}&euro;</strong>
+                    {{ __('dashboard.order-amount') }} <strong>{{ $order->total_price }}&euro;</strong>
                 </p>
             </div>
         </div>
 
         <div class="dashboard-orders__details__addresses flex justify-between">
             <div class="dashboard-orders__details__addresses__address">
-                <h3>Adresse de facturation</h3>
+                <h3>{{ __('dashboard.order-invoice-address') }}</h3>
                 <div class="flex justify-between">
                     <div class="w-7/12">
                         <h4>{{ $order->invoice_address->first_name.' '.$order->invoice_address->last_name }}</h4>
@@ -132,9 +132,9 @@
             </div>
 
             <div class="dashboard-orders__details__addresses__address">
-                <h3>Adresse de livraison</h3>
+                <h3>{{ __('dashboard.order-delivery-address') }}</h3>
                 @if($order->address_id == 0)
-                <h4>Retrait en magasin</h4>
+                <h4>{{ __('dashboard.order-in-shop') }}</h4>
                 <p>
                     {{ $benu_address->address }}
                 </p>
@@ -178,21 +178,21 @@
 
         @if($order->address_id !== 0)
         <p>
-            Statut de la livraison : 
+            {{ __('dashboard.order-delivery-status') }}
             @if($order->status == '2')
                 @if($order->payment_status <= '1')
-                En attente de paiement
+                {{ __('dashboard.order-payment-pending') }}
                 @else
-                Payée - 
+                {{ __('dashboard.order-payment-paid') }} - 
                     @if($order->delivery_status <= '1')
-                    Livraison en cours de préparation
+                    {{ __('dashboard.order-delivery-under-preparation') }}
                     @else
                     Expédiée le {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
-                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">Suivre ma commande</a>@endif
+                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
                     @endif
                 @endif
             @else
-                Commande non finalisée et non payée
+                {{ __('dashboard.order-not-finished-not-paid') }}
             @endif
         </p>
         @endif
@@ -220,7 +220,7 @@
                             {{ strtoupper($article->pivot->value) }}&euro;
                         </div>
                         <p class="dashboard-orders__details__articles__article__desc__number">
-                            Exemplaires : x{{ $article->pivot->articles_number }}
+                            {{ __('dashboard.order-number-of-items') }} : x{{ $article->pivot->articles_number }}
                         </p>
 
                         <p class="dashboard-orders__details__articles__article__desc__price">
@@ -235,7 +235,7 @@
                         </div>
                         <div class="dashboard-orders__details__articles__article__desc__color flex">
                             <p class="pr-1" style="margin-top: -5px;">
-                                Couleur : 
+                                {{ __('dashboard.order-color') }} : 
                             </p>
                             @if($article->color->name == 'multicolored')
                                 <div class="color-circle">
@@ -249,7 +249,7 @@
                             </p>
                         </div>
                         <p class="dashboard-orders__details__articles__article__desc__number">
-                            Exemplaires : x{{ $article->pivot->articles_number }}
+                            {{ __('dashboard.order-number-of-items') }} : x{{ $article->pivot->articles_number }}
                         </p>
                         <!-- @if($article->pivot->with_extra_article)
                         + coussin

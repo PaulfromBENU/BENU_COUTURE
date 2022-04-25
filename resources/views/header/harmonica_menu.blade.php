@@ -171,7 +171,7 @@
 						@svg('logo_benu_design', 'm-auto')
 					</div>
 					<div class="flex flex-col justify-center harmonica-menu__content__col__title">
-						<h3 class="harmonica-menu__content__col__title--design">BENU LIVING</h3>
+						<h3 class="harmonica-menu__content__col__title--design">BENU FORM</h3>
 					</div>
 				</div>
 				<div class="harmonica-menu__content__col__open harmonica-menu__content__col__open--design">
@@ -179,7 +179,7 @@
 						@svg('logo_benu_design_blanc', 'm-auto')
 					</div>
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
-						<h4>BENU LIVING</h4>
+						<h4>BENU FORM</h4>
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.design-desc') !!}
 						</div>

@@ -211,7 +211,7 @@
             </div>  
             <div class="register__options">
                 <label for="register_newsletter" class="inline-flex items-center">
-                    <input id="register_newsletter" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_newsletter" value="1" tabindex="20" checked>
+                    <input id="register_newsletter" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_newsletter" value="1" tabindex="20">
                     <span class="ml-10">{{ __('forms.register-newsletter-ok') }}</span>
                 </label>
             </div>
