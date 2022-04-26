@@ -139,11 +139,14 @@ trait DeliveryCalculator {
 
 	public function calculateDeliveryTotalFromCart(Cart $cart)
 	{
+		if ($cart->order->address_id == 0) {
+			return 0;
+		}
 		$total_weight = 0;
 		$country = $cart->order->address->country;
 
 		foreach ($cart->couture_variations as $variation) {
-			if ($variation->name = 'voucher' && $variation->voucher_type !== 'pdf') {
+			if ($variation->name == 'voucher' && $variation->voucher_type !== 'pdf') {
 				$total_weight += 0.02 * $variation->pivot->articles_number;
 			} else {
 				$total_weight += $variation->creation->weight / 1000 * $variation->pivot->articles_number;
