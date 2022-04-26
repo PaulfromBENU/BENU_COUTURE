@@ -86,9 +86,9 @@
                 </div>
                 <div class="flex justify-end">
                     <div class="mb-5 text-right">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
+                        <a target="_blank" href="{{ route('invoice-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
-                        </button>
+                        </a>
                     </div>
                     <div class="text-right">
                         <a href="{{ route('client-service-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px; width: fit-content;">
@@ -204,9 +204,9 @@
 
         <h3 class="dashboard-wishlist__title dashboard-wishlist__title--couture" style="width: 100%; margin-top: 30px;">BENU COUTURE</h3>
 
-        <div class="dashboard-orders__details__articles">
+        <div class="dashboard-orders__details__articles flex justify-between flex-wrap">
             @foreach($articles as $article)
-                <div wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="dashboard-orders__details__articles__article flex justify-start">
+                <div wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="dashboard-orders__details__articles__article flex justify-start mb-4">
                     <div class="dashboard-orders__details__articles__article__img-container mr-4">
                         @if($article->name ==  'voucher')
                             <img src="{{ asset('images/pictures/vouchers_img.png') }}" />
