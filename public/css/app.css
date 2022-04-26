@@ -1578,6 +1578,7 @@ input[type=checkbox]:focus {
   padding: 0 1.1rem;
   font-family: "Barlow Condensed";
   position: relative;
+  font-size: 1.05rem;
 }
 .header__newsletter-btn__link {
   display: inline-block;
@@ -1585,7 +1586,7 @@ input[type=checkbox]:focus {
   color: #D41C1B;
   padding: 5px 1rem;
   position: relative;
-  top: 0;
+  top: -1px;
   left: 0;
   z-index: 10;
   transition: all 0.5s ease-in-out;
@@ -2984,6 +2985,27 @@ input[type=checkbox]:focus {
 }
 .welcome-others__block:hover {
   padding-top: 0px;
+}
+
+.error-page {
+  min-height: 80vh;
+}
+.error-page h1 {
+  font-family: "Barlow Condensed";
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.error-page h2 {
+  font-family: "Barlow Condensed";
+  font-size: 1.6rem;
+  color: grey;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.error-page svg {
+  max-width: 50vw;
+  margin: auto;
 }
 
 .service {

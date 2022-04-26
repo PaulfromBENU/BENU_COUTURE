@@ -1,6 +1,6 @@
 <div class="modal lang-modal" id="lang-modal" style="display: none;">
     <p class="lang-modal__title">
-        Je choisis ma langue&nbsp;:
+        {{ __('welcome.language-select') }}
     </p>
     <div class="flex justify-between">
         <a href="{{ route($route_name_de, $route_parameters_de) }}" class="lang-modal__block">

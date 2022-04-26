@@ -296,13 +296,14 @@
         padding: 0 1.1rem;
         font-family: 'Barlow Condensed';
         position: relative;
+        font-size: 1.05rem;
         &__link {
             display: inline-block;
             text-decoration: none;
             color: $primary-color;
             padding: 5px 1rem;
             position: relative;
-            top: 0;
+            top: -1px;
             left: 0;
             z-index: 10;
             transition: $transition-village;
