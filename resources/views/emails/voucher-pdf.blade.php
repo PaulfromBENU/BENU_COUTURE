@@ -24,10 +24,10 @@
 			Nous te remercions pour ta commande. Tu trouveras en pièce jointe de cet e-mail le bon d'achat que tu as acheté, au format pdf. 
 		</p>
 		<p>
-			Numéro de commande :Ce bon d'achat a une valeur de <strong>{{ $voucher->initial_value }}&euro;</strong>
+			Ce bon d'achat a une valeur de <strong>{{ $voucher->initial_value }}&euro;</strong>
 		</p>
 		<p>
-			Le bon d'achat n'est pas nominatif, et peut être utilisé soit en magasin, soit en ligne, avec le code <strong>{{ $voucher->unique_code }}&euro;</strong>
+			Le bon d'achat n'est pas nominatif, et peut être utilisé soit en magasin, soit en ligne, avec le code <strong>{{ $voucher->unique_code }}</strong>
 		</p>
 		
 		<p>
