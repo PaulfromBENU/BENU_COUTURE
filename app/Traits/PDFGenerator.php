@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Traits;
+
+use App\Models\DeliveryCountry;
+use App\Models\Order;
+use App\Models\Voucher;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+
+use PDF;
+
+use App\Traits\DeliveryCalculator;
+
+trait PDFGenerator {
+
+    use DeliveryCalculator;
+
+	public function generateInvoicePdf($order_code)
+    {
+        if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
+            $order = Order::where('unique_id', $order_code)->first();
+            $countries = [];
+            $localized_country = "country_".app()->getLocale();
+            foreach (DeliveryCountry::all() as $country) {
+                $countries[$country->country_code] = $country->$localized_country;
+            }
+            $countries['Luxembourg'] = 'Luxembourg';
+            $countries['France'] = 'France';
+            $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
+            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+            return $pdf;
+        }
+    }
+}

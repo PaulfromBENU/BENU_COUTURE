@@ -188,7 +188,7 @@
 						Bon d'achat - version @if($article->voucher_type == 'pdf') PDF @else Tissu @endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 40%;">
-						{{ round($article->pivot->value / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						{{ round($article->pivot->value / (1 + 8/100), 2) }}&euro;
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 55%;">
 						8%
@@ -202,7 +202,7 @@
 				</div>
 				@php 
 					$sum_before_voucher += $article->pivot->value * $article->pivot->articles_number; 
-					$sum_without_tax += $article->pivot->value / (1 + $article->creation->tva_value/100);
+					$sum_without_tax += ($article->pivot->value / (1 + 8/100)) * $article->pivot->articles_number;
 				@endphp
 			@else
 				<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 26px; border-bottom: solid gray 1px;">
@@ -223,7 +223,7 @@
 					</div>
 					@php 
 						$sum_before_voucher += $article->creation->price * $article->pivot->articles_number; 
-						$sum_without_tax += $article->creation->price / (1 + $article->creation->tva_value/100);
+						$sum_without_tax += ($article->creation->price / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
 					@endphp
 				</div>
 				@if($article->pivot->with_extra_article)
@@ -245,7 +245,7 @@
 					</div>
 					@php 
 						$sum_before_voucher += 10 * $article->pivot->articles_number; 
-						$sum_without_tax += 10 / (1 + $article->creation->tva_value/100);
+						$sum_without_tax += (10 / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
 					@endphp
 				</div>
 				@endif
@@ -268,7 +268,7 @@
 					</div>
 					@php 
 						$sum_before_voucher += ($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) * $article->pivot->articles_number; 
-						$sum_without_tax += ($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $article->creation->tva_value/100);
+						$sum_without_tax += (($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
 					@endphp
 				</div>
 				@endif

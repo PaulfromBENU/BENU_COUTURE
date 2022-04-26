@@ -15,7 +15,7 @@ use App\Mail\NewOrder;
 
 use Illuminate\Support\Str;
 
-use App\Traits\DeliveryCalculator;
+use App\Traits\PDFGenerator;
 
 use Stripe;
 
@@ -23,7 +23,7 @@ use PDF;
 
 class SaleController extends Controller
 {
-    use DeliveryCalculator;
+    use PDFGenerator;
 
     public function showCart()
     {
@@ -117,6 +117,7 @@ class SaleController extends Controller
                             $new_voucher = new Voucher();
                             $new_voucher->unique_code = $unique_code;
                             $new_voucher->user_id = null;
+                            $new_voucher->order_id = $current_order->id;
                             $new_voucher->type = $variation->voucher_type;
                             $new_voucher->initial_value = $variation->pivot->value;
                             $new_voucher->remaining_value = $variation->pivot->value;
@@ -124,8 +125,6 @@ class SaleController extends Controller
                         }
                     }
                 }
-
-                // Send e-mail with purchase confirmation, with pdf invoice
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
 
@@ -144,7 +143,10 @@ class SaleController extends Controller
 
                 $current_order->status = '2';
 
-                Mail::to($current_order->user->email)->send(new NewOrder($current_order));
+                $pdf = $this->generateInvoicePdf($current_order->unique_id);
+
+                // Send e-mail with purchase confirmation, with pdf invoice
+                Mail::to($current_order->user->email)->send(new NewOrder($current_order, $pdf));
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
@@ -177,18 +179,29 @@ class SaleController extends Controller
         return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first(), 'url_order' => $order]);
     }
 
+    // public function generateInvoicePdf($order_code)
+    // {
+    //     if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
+    //         $order = Order::where('unique_id', $order_code)->first();
+    //         $countries = [];
+    //         $localized_country = "country_".app()->getLocale();
+    //         foreach (DeliveryCountry::all() as $country) {
+    //             $countries[$country->country_code] = $country->$localized_country;
+    //         }
+    //         $countries['Luxembourg'] = 'Luxembourg';
+    //         $countries['France'] = 'France';
+    //         $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
+    //         $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+    //         return $pdf;
+    //     }
+    // }
+
     public function displayInvoice($order_code)
     {
         if (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
+            $clean_order_code = substr($order_code, 4, 6);
             $order = Order::where('unique_id', substr($order_code, 4, 6))->first();
-            $countries = [];
-            foreach (DeliveryCountry::all() as $country) {
-                $countries[$country->country_code] = $country->country_fr;
-            }
-            $countries['Luxembourg'] = 'Luxembourg';
-            $countries['France'] = 'France';
-            $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
-            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+            $pdf = $this->generateInvoicePdf($clean_order_code);
             return $pdf->stream('BENU_Order_'.$order->unique_id.'.pdf');
         }
     }

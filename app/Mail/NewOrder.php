@@ -20,15 +20,17 @@ class NewOrder extends Mailable
      */
     public $order;
     public $locale;
+    public $invoice;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Order $order)
+    public function __construct(Order $order, $pdf_invoice)
     {
         $this->order = $order;
+        $this->invoice = $pdf_invoice;
         $this->locale = session('locale');
     }
 
@@ -39,6 +41,11 @@ class NewOrder extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), 'BENU')->subject('Merci pour votre achat sur BENU')->view('emails.new-order');
+        return $this->from(env('MAIL_FROM_ADDRESS'), 'BENU')
+                    ->subject('Merci pour votre achat sur BENU')
+                    ->view('emails.new-order')
+                    ->attachData($this->invoice->output(), 'BENU_Invoice_'.$this->order->unique_id.'.pdf', [
+                    'mime' => 'application/pdf',
+                ]);
     }
 }

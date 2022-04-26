@@ -36,4 +36,19 @@ class Order extends Model
     {
         return $this->hasManyThrough(Article::class, Cart::class);
     }
+
+    public function vouchers()
+    {
+        return $this->hasMany(Voucher::class);
+    }
+
+    public function pdf_vouchers()
+    {
+        return $this->hasMany(Voucher::class)->where('type', 'pdf');
+    }
+
+    public function clothe_vouchers()
+    {
+        return $this->hasMany(Voucher::class)->where('type', '<>', 'pdf');
+    }
 }
