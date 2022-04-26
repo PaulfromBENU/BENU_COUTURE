@@ -71,9 +71,6 @@ class PaymentTunnel extends Component
             $this->user_id = auth()->user()->id;
             $this->step = 2;
             $this->info_valid = 1;
-            // if (auth()->user()->addresses()->count() == 1) {
-            //     $this->order_address_id = auth()->user()->addresses()->first()->id;
-            // }
         } else {
             $this->step = 1;
         }
@@ -230,6 +227,7 @@ class PaymentTunnel extends Component
 
             if ($new_order->save()) {
                 $this->emit('goToPaymentStep2');
+                $this->order_id = $new_order->id;
             }
         }
     }
@@ -389,6 +387,7 @@ class PaymentTunnel extends Component
             if ($new_order->save()) {
                 $this->emit('goToPaymentStep3');
                 $this->total_price = $this->computeTotal($this->cart_id, $this->country_code);
+                $this->order_id = $new_order->id;
             }
         }
     }
