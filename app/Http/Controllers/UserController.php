@@ -8,11 +8,16 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Address;
 use App\Models\ContactMessage;
 use App\Models\User;
+use App\Models\Voucher;
 
 use App\Http\Requests\AddressRequest;
 
+use App\Traits\PDFGenerator;
+
 class UserController extends Controller
 {
+    use PDFGenerator;
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -64,6 +69,17 @@ class UserController extends Controller
 
         if ($address->save()) {
             return redirect()->route('dashboard', ['locale' => $locale, 'section' => 'addresses']);
+        }
+    }
+
+    public function displayVoucher($voucher_code)
+    {
+        if (strlen($voucher_code) == 32 && Voucher::where('unique_code', substr($voucher_code, 4, 16))->count() > 0) {
+            $clean_voucher_code = substr($voucher_code, 4, 16);
+            $voucher = Voucher::where('unique_code', $clean_voucher_code)->first();
+            $pdf = $this->generateVoucherPdf($clean_voucher_code);
+            
+            return $pdf->stream('BENU_Voucher_'.$voucher->unique_code.'.pdf');
         }
     }
 }

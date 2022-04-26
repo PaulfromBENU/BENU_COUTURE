@@ -117,6 +117,7 @@ if (app('env') == 'landing') {
 		});
 
 		Route::get('/facture/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
+		Route::get('/bon-d-achat/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-fr');
 	});
 
 	Route::group([

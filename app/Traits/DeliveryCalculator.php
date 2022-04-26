@@ -148,6 +148,8 @@ trait DeliveryCalculator {
 		foreach ($cart->couture_variations as $variation) {
 			if ($variation->name == 'voucher' && $variation->voucher_type !== 'pdf') {
 				$total_weight += 0.02 * $variation->pivot->articles_number;
+			} elseif ($variation->name == 'voucher') {
+				$total_weight += 0;
 			} else {
 				$total_weight += $variation->creation->weight / 1000 * $variation->pivot->articles_number;
 			}

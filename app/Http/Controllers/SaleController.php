@@ -12,14 +12,13 @@ use App\Models\DeliveryCountry;
 use App\Models\Order;
 use App\Models\Voucher;
 use App\Mail\NewOrder;
+use App\Mail\VoucherPdf;
 
 use Illuminate\Support\Str;
 
 use App\Traits\PDFGenerator;
 
 use Stripe;
-
-use PDF;
 
 class SaleController extends Controller
 {
@@ -127,6 +126,10 @@ class SaleController extends Controller
                 }
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
+                foreach ($current_order->pdf_vouchers as $voucher) {
+                    $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
+                    Mail::to($current_order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
+                }
 
                 // Send new voucher codes in order recap (e-mail ?) for fabric vouchers.
 
@@ -179,22 +182,6 @@ class SaleController extends Controller
         return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first(), 'url_order' => $order]);
     }
 
-    // public function generateInvoicePdf($order_code)
-    // {
-    //     if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
-    //         $order = Order::where('unique_id', $order_code)->first();
-    //         $countries = [];
-    //         $localized_country = "country_".app()->getLocale();
-    //         foreach (DeliveryCountry::all() as $country) {
-    //             $countries[$country->country_code] = $country->$localized_country;
-    //         }
-    //         $countries['Luxembourg'] = 'Luxembourg';
-    //         $countries['France'] = 'France';
-    //         $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
-    //         $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
-    //         return $pdf;
-    //     }
-    // }
 
     public function displayInvoice($order_code)
     {

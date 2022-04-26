@@ -36,6 +36,11 @@
             <p class="dashboard-vouchers__voucher__remaining">
                {{ __('dashboard.vouchers-remaining-value') }} : {{ $voucher->remaining_value }}&euro; 
             </p>
+            <p>
+                <a target="_blank" href="{{ route('show-voucher-pdf-'.app()->getLocale(), ['voucher_code' => \Illuminate\Support\Str::random(4).$voucher->unique_code.\Illuminate\Support\Str::random(12)]) }}" class="primary-color hover:underline">
+                    {{ __('dashboard.vouchers-see-pdf') }}
+                </a>
+            </p>
             <button class="dashboard-vouchers__voucher__delete" wire:click="removeVoucher('{{ $voucher->unique_code }}')">
                 &#10005;
             </button>
