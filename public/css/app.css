@@ -3393,6 +3393,13 @@ input[type=checkbox]:focus {
 .return__chapter__legend__list li {
   margin-bottom: 15px;
 }
+.return__chapter__link {
+  color: #D41C1B;
+  transition: color 0.2s;
+}
+.return__chapter__link:hover {
+  color: #2E1414;
+}
 
 .payment {
   padding-top: 60px;

@@ -711,6 +711,11 @@ trait DataImporter {
             $page = strtolower(explode(".", $translation['key'])[0]);
             $key = strtolower(explode(".", $translation['key'])[1]);
 
+            $path = public_path('../resources/lang/fr/'.$page.'.php');
+            if (!File::exists($path)) {
+                echo "<span style='color: red;'> !!! Missing translation page for ".$page."</span><br/>";
+            }
+
             if (Translation::where('page', $page)->where('key', $key)->count() > 0) {
                 // Case translation key is found in the database
                 $updated_translation = Translation::where('page', $page)->where('key', $key)->first();

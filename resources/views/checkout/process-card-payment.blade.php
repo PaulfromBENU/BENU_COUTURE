@@ -15,14 +15,14 @@
 			<h3 class="text-lg text-bold">{{ __('payment.process-accepted-cards') }}</h3>
 			<img src="{{ asset('images/pictures/services_payment_cards.png') }}" style="height: 50px;" class="m-auto" />
 		</div>
-		<h3 class="text-lg mb-5">{{ __('payment.process-total-price') }} <span class="primary-color font-bold">{{ $order->total_price }}&euro;</span></h3>
+		<h3 class="text-lg mb-5">{{ __('payment.process-total-price') }}&nbsp;: <span class="primary-color font-bold">{{ $order->total_price }}&euro;</span></h3>
 
 		<div class="mb-10">
 			<p>
-				{{ __('payment.process-number-of-articles') }} <span class="primary-color font-bold"> {{ $order->cart->couture_variations()->count() }}</span>
+				{{ __('payment.process-number-of-articles') }}&nbsp;: <span class="primary-color font-bold"> {{ $order->cart->couture_variations()->count() }}</span>
 			</p>
 			<p>
-				{{ __('payment.process-user-details') }} <span class="primary-color font-bold"> {{ $order->user->first_name }} {{ $order->user->last_name }}</span>
+				{{ __('payment.process-user-details') }}&nbsp;: <span class="primary-color font-bold"> {{ $order->user->first_name }} {{ $order->user->last_name }}</span>
 			</p>
 		</div>
 

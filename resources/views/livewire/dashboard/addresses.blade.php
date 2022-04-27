@@ -58,6 +58,6 @@
         @endforeach
     </div>
     @else
-        <p class="mt-5"><em>Aucune adresse enregistrée pour le moment...</em></p>
+        <p class="mt-5"><em>{!! __('dashboard.no-address-for-the-moment') !!}</em></p>
     @endif
 </div>

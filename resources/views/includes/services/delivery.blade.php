@@ -32,11 +32,7 @@
 				<h3>{{ __('services.delivery-options') }}</h3>
 				
 				<p class="mb-2">
-					Nous envoyons ta commande par Post Luxembourg à ton adresse de livraison.
-					Tu peux aussi te faire livrer facilement et confortablement à une station d'emballage de la Poste luxembourgeoise (PackUp 24/24). Pour cela, il te suffit d'indiquer la station d'emballage comme adresse de livraison.
-				</p>
-				<p>
-					Si tu es proche de chez nous et que tu souhaites économiser les frais de livraison, tu peux aussi venir chercher personnellement ta marchandise dans <a href="{{  route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="delivery__chapter__link">notre magasin à Esch-sur-Alzette</a>. 
+					{!! __('services.delivery-details') !!} <a href="{{  route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="delivery__chapter__link">{!! __('services.delivery-details-link') !!}</a>. 
 				</p>
 			</div>
 
@@ -44,10 +40,7 @@
 				<h3>{{ __('services.delivery-fees') }}</h3>
 				
 				<p class="mb-2">
-					Les frais de livraison dépendent de ton pays et du poids total de ta commande. Le tableau te donne un aperçu des frais encourus.
-				</p>
-				<p>
-					Le montant respectif comprend les frais d'envoi par Post Luxembourg et en plus 2 euros par paquet pour notre temps de travail pour emballer les articles commandés. Le matériel d'emballage est gratuit.
+					{!! __('services.delivery-costs') !!}
 				</p>
 
 				<table class="delivery__chapter__table">
@@ -248,7 +241,7 @@
 				<h3>{{ __('services.delivery-boxes') }}</h3>
 				
 				<p>
-					Afin d'économiser les matières premières, toutes les marchandises sont envoyées dans des cartons usagés et réutilisés.  Nous renonçons également aux emballages en plastique et utilisons des rubans pour paquets sans plastique et respectueux de l'environnement. 
+					{{ __('services.delivery-low-impact') }}
 				</p>
 			</div>
 
@@ -256,10 +249,7 @@
 				<h3>{{ __('services.delivery-delay') }}</h3>
 				
 				<p class="mb-2">
-					Dès que nous avons reçu le paiement de ta commande, nous pouvons préparer tes articles pour l'expédition. Nous nous efforçons de préparer ta commande et de la remettre à Post Luxembourg dans un délai d'un jour ouvrable.
-				</p>
-				<p>
-					Si ta commande contient un ou plusieurs articles d'un PopUP-Store, la préparation de l'envoi peut toutefois prendre plus de temps pour des raisons logistiques.
+					{!! __('services.delivery-planning') !!}
 				</p>
 			</div>
 		</div>

@@ -391,6 +391,13 @@
 				}
 			}
 		}
+		&__link {
+			color: $primary-color;
+			transition: color 0.2s;
+			&:hover {
+				color: $dark-text;
+			}
+		}
 	}
 }
 

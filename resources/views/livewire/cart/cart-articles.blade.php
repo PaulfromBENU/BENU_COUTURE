@@ -43,7 +43,7 @@
                 {{ __('cart.delivery-method') }}
             </h5>
             <div>
-                <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="btn-couture" style="margin: 0;">
+                <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" class="btn-couture inline-block" style="margin: 0; max-width: 100%;">
                     {{ __('cart.delivery-estimate-cost') }}
                 </a>
             </div>

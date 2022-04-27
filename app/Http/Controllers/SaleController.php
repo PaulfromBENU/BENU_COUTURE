@@ -107,11 +107,11 @@ class SaleController extends Controller
                         for ($i=1; $i <= $variation->pivot->articles_number; $i++) { 
                             $increment = rand(0, 9).rand(0, 9);
                             $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                            $unique_code = "BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99);
+                            $unique_code = strtoupper("BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99));
                             while (Voucher::where('unique_code', $unique_code)->count() > 0) {
                                 $increment = rand(0, 9).rand(0, 9);
                                 $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                                $unique_code = "BC".date('now')->format('mmYY').$increment.$value_code.Str::random(2).rand(10, 99);
+                                $unique_code = strtoupper("BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99));
                             }
                             $new_voucher = new Voucher();
                             $new_voucher->unique_code = $unique_code;

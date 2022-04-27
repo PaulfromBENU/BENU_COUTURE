@@ -1,9 +1,9 @@
 <section class="benu-container footer-more">
 	<div class="benu-container footer-more__wrapper">
 		<div class="footer-more__block">
-			<h3>{{ __('footer.questions-title') }}&nbsp;?</h3>
+			<h3>{!! __('footer.questions-title') !!}</h3>
 			<p>
-				{{ __('footer.questions-txt-1') }}
+				{!! __('footer.questions-txt-1') !!}
 			</p>
 			<div class="text-center">
 				<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="btn-couture">{{ __('footer.questions-contact') }}</a>

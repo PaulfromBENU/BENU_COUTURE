@@ -152,7 +152,7 @@
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" wire:click="addToCart">{{ __('sidebar.add-to-cart') }}</button>
                     @else
                     <p class="text-center mb-2">
-                        {{ __('vouchers.added-to-cart') }}&nbsp;!
+                        {!! __('vouchers.added-to-cart') !!}
                     </p>
                     <a href="{{ route('cart-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn">
                         {{ __('vouchers.go-to-cart') }}
@@ -229,29 +229,21 @@
 
             @elseif($content == 'delivery')
                 <h3 class="article-sidebar__content__compo__title mb-3">
-                    Frais de livraison
+                    {!! __('sidebar.delivery-costs') !!}
                 </h3>
-                <p class="mb-2 text-sm font-medium">
-                    Les frais de livraison dépendent de ton pays et du poids total de ta commande. Dès que tu as ajouté l'article de ton choix à ton panier, les frais de livraison estimés pour les articles sélectionnés s'affichent. 
-                </p>
-                <p class="mb-2 text-sm font-medium">
-                    Lorsque tu passes ta commande, les frais de livraison définitifs sont calculés, en fonction de l'adresse de livraison que tu choisis ensuite. Tu peux économiser les frais de livraison en venant chercher ta marchandise en personne dans notre boutique à Esch-sur-Alzette.
-                </p>
                 <p class="mb-10 text-sm font-medium">
-                    Pour savoir comment les frais d'envoi sont calculés en détail, clique <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" target="_blank" class="primary-color hover:underline">ici</a>.
+                    {!! __('sidebar.delivery-costs-info-1') !!}
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.delivery-costs-info-1-link') !!}</a>.
                 </p>
 
                 <h3 class="article-sidebar__content__compo__title mb-3">
-                    Retours
+                    {!! __('sidebar.returns') !!}
                 </h3>
                 <p class="mb-2 text-sm font-medium">
-                    Si un article ne te plaît pas ou ne te convient pas, tu peux le renvoyer à BENU COUTURE dans les 28 jours suivant l'envoi de la marchandise. 
+                    {!! __('sidebar.returns-info-1') !!}
                 </p>
                 <p class="mb-2 text-sm font-medium">
-                    Veuillez noter que nous ne prenons en charge les frais de retour qu'en cas de réclamation (marchandise défectueuse, livraison erronée ou autre) !
-                </p>
-                <p class="mb-2 text-sm font-medium">
-                    Tu trouveras <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">ici</a> de plus amples informations sur les retours et les remboursements.
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.returns-info-1-link') !!}</a>.
                 </p>
             @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">

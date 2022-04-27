@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             // UserSeeder::class,
             // PartnerSeeder::class,
             // ShopSeeder::class,
-            // TranslationSeeder::class,
+            TranslationSeeder::class,
 
             // Imported - Use data importation route
             // ColorSeeder::class,
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             // ArticleCareRecommendationSeeder::class,
 
             // DeliveryCountrySeeder::class,
-            BadgeSeeder::class,
+            // BadgeSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }
