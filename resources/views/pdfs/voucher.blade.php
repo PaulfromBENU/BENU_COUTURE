@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Votre facture BENU</title>
+	<title>Bon d'achat BENU</title>
 
 	<style type="text/css">
 		@font-face {
