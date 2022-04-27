@@ -1,0 +1,142 @@
+<?php
+
+namespace App\Filament\Pages;
+
+use Filament\Pages\Page;
+use Filament\Forms\Components\TextInput;
+use Carbon\Carbon;
+
+use App\Models\Article;
+use App\Models\Cart;
+use App\Models\Order;
+use App\Models\Voucher;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+
+class OrdersInterface extends Page
+{
+    protected static ?string $navigationIcon = 'heroicon-o-inbox-in';
+
+    protected static string $view = 'filament.pages.orders-interface';
+
+    protected static ?string $title = 'Orders - New, pending and sent';
+ 
+    protected static ?string $navigationLabel = 'Handle Orders';
+     
+    protected static ?string $slug = 'handle-orders';
+
+    protected static ?string $navigationGroup = 'Seller & Sales';
+
+    protected static ?int $navigationSort = 2;
+
+    public $new_orders;
+    public $orders_waiting_for_payment;
+    public $orders_sent;
+
+    public $delivery_link;
+
+    public function mount()
+    {
+        $this->cleanUnsoldArticles();
+        $this->initializeOrders();
+
+        // Initialize Content
+        $this->delivery_link = [];// Array key: order id, value: link
+    }
+
+    public function initializeOrders()
+    {
+        $this->new_orders = Order::where('status', '2')->where('payment_status', '2')->where('delivery_status', '<', '2')->get();
+        $this->orders_waiting_for_payment = Order::where('status', '2')->where('payment_status', '<', '2')->where('delivery_status', '<', '2')->get();
+        $this->orders_sent = Order::where('delivery_status', '>=', '2')->orderBy('delivery_date', 'desc')->get();
+    }
+
+    public function cleanUnsoldArticles()
+    {
+        foreach (Article::has('pending_shops')->get() as $article) {
+            $reinsert_article = 1;
+            foreach ($article->carts as $cart) {
+                // Keep in cart if at least one cart with this article has been updated in the last 24h
+                if ($cart->updated_at >= Carbon::now()->subDays(1)) {
+                    $reinsert_article = 0;
+                }
+            }
+            if ($reinsert_article == 1) {
+                $pivot = $article->pending_shops()->first()->pivot;
+                $pivot->decrement('stock_in_cart');
+                $pivot->increment('stock');
+                foreach ($article->carts as $cart) {
+                    // Delete cart if no order and older than 1 day with status unpaid
+                    if ($cart->updated_at < Carbon::now()->subDays(1) && $cart->order()->count() == 0 && $cart->is_active == 1 && $cart->status < 3) {
+                        $cart->delete();
+                    }
+                }
+            }
+        }
+    }
+
+    public function markAsReadyForCollect($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 3;// Sent or available for collect
+        $order->payment_status = 2;// Payment received
+        $order->delivery_status = 4;// Available for collect
+        $order->delivery_date = Carbon::now()->format('Y-m-d');
+        if($order->save()) {
+            $this->initializeOrders();
+        }
+    }
+
+    public function markAsSentByPost($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 3;// Sent or available for collect
+        $order->payment_status = 2;// Payment received
+        $order->delivery_status = 3;// Available for collect
+        $order->delivery_date = Carbon::now()->format('Y-m-d');
+        if (isset($this->delivery_link[$order_id]) && $this->delivery_link[$order_id] !== "") {
+            $order->delivery_link = $this->delivery_link[$order_id];
+        }
+        if($order->save()) {
+            $this->initializeOrders();
+        }
+    }
+
+    public function markAsUndelivered($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 2;// Confirmed order
+        $order->payment_status = 2;// Payment received
+        $order->delivery_status = 1;// Not available for collect/Not sent
+        if($order->save()) {
+            $this->initializeOrders();
+        }
+    }
+
+    public function markAsUnpaid($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 2;// Order confirmed
+        $order->payment_status = 1;// Payment not received
+        $order->delivery_status = 1;// Not ready for delivery or collect
+        if($order->save()) {
+            $this->initializeOrders();
+        }
+    }
+
+    public function markAsPaid($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 2;// Paid
+        $order->payment_status = 2;// Payment received
+        $order->delivery_status = 1;// Not ready for delivery or collect
+        if($order->save()) {
+            $this->initializeOrders();
+        }
+    }
+
+    // Display new orders - paid & not handled
+    // New orders - Not paid yet
+    // Orders paid & sent
+}

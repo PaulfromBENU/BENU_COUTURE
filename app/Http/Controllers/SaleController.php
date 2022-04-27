@@ -59,11 +59,16 @@ class SaleController extends Controller
         }
         if (is_string($request->order) && Order::where('unique_id', substr($request->order, 0, 6))->count() > 0) {
             $order = Order::where('unique_id', substr($request->order, 0, 6))->first();
-            if ($order->status == 2) {
+            if ($order->status >= 2) {
                 return redirect()->route('payment-processed-'.session('locale'), ['order' => $request->order]);
             }
             $order->status = 1;
             $order->save();
+            $cart = $order->cart;
+
+            // Cart status update to Paying
+            $cart->status = 2;
+            $cart->save();
 
             // This is your test secret API key.
             \Stripe\Stripe::setApiKey('sk_test_51KnNZGADiHn0YYXdEqMAZ9cyLwagbSL6nbbJRj3zF8iiXJwW5A25oNwdOCGi2J9LGz9Wsu1POK7mZx0uuiwaCiwC00sk2V07AZ');
@@ -92,7 +97,7 @@ class SaleController extends Controller
         if (is_string($order) && Order::where('unique_id', substr($order, 0, 6))->count() > 0) {
             $current_order = Order::where('unique_id', substr($order, 0, 6))->first();
 
-            if ($current_order->status == 2) {
+            if ($current_order->status >= 2) {
                 return redirect()->route('payment-processed-'.session('locale'), ['order' => $order]);
             } else {
                 $request->session()->forget('cart_id');
@@ -158,12 +163,19 @@ class SaleController extends Controller
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
                 }
-                $current_order->delivery_status = 1;
+
+                if ($current_order->couture_variations->count() == 1 && $current_order->pdf_vouchers->count() > 0) {
+                    // Case order only contains pdf vouchers
+                    $current_order->delivery_status = 4;
+                } else {
+                    $current_order->delivery_status = 1;
+                }
+
                 if($current_order->save()) {
                     // Update cart status
                     $cart = $current_order->cart;
                     $cart->is_active = 0;
-                    $cart->status = 2;
+                    $cart->status = 3; // Cart status updated to Order Confirmed
                     $cart->save();
 
                     return redirect()->route('payment-processed-'.session('locale'), ['order' => $order]);

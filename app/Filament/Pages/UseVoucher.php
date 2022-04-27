@@ -15,7 +15,7 @@ class UseVoucher extends Page
 
     protected static ?string $title = 'Use a voucher';
  
-    protected static ?string $navigationLabel = 'Use vouchers';
+    protected static ?string $navigationLabel = 'Use voucher manually';
      
     protected static ?string $slug = 'use-voucher';
 

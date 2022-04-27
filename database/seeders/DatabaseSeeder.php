@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             // UserSeeder::class,
             // PartnerSeeder::class,
             // ShopSeeder::class,
-            TranslationSeeder::class,
+            // TranslationSeeder::class,
 
             // Imported - Use data importation route
             // ColorSeeder::class,
