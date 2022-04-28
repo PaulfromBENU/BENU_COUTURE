@@ -40,7 +40,11 @@
                     {{ __('voucher.fabric') }}
                 @endif
             @else
-            {{ $article->size->value }}
+                @if($article->size->value == 'unique')
+                {{ __('components.unique-size') }}
+                @else
+                {{ $article->size->value }}
+                @endif
             @endif
         </div>
     </div>
