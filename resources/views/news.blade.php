@@ -27,7 +27,7 @@
 
 		<div class="flex justify-start flex-wrap mb-10">
 			@if($all_news->count() == 0)
-			<p class="text-xl text-center">
+			<p class="text-xl text-center w-full">
 				<em>{{ __('news.no-news-for-the-moment') }}</em>
 			</p>
 			@endif
