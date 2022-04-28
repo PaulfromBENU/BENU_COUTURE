@@ -58,6 +58,22 @@
 			@endif
 			</strong>
 		</p>
+		@if($order->payment_type == '3')
+		<p>
+			{!! __('payment.confirmation-our-bank-coordinates') !!} :
+		</p>
+		<div class="text-center m-3 font-bold">
+			<p>
+				{!! __('payment.confirmation-our-bank-name') !!}
+			</p>
+			<p>
+				{!! __('payment.confirmation-our-bank-iban') !!}
+			</p>
+			<p>
+				{!! __('payment.confirmation-our-bank-swift') !!}
+			</p>
+		</div
+		@endif
 		<p class="payment-confirmation__txt-details">
 			{!! __('payment.confirmation-email-confirmation') !!} {{ $order->user->email }}
 		</p>
