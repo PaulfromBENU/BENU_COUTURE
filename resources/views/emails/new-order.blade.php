@@ -23,6 +23,23 @@
 		<p>
 			Merci pour votre achat sur notre plate-forme ! Nous allons maintenant préparer votre commande pour que vous puissiez en profiter au plus vite.
 		</p>
+		@if($order->payment_type == 3)
+		<p>
+			Avant de préparer ta commande, nous aurons besoin que tu effectues le paiement par virement bancaire dans les 5 prochains jours.
+		</p>
+		<p>
+			Nos coordonnées bancaires sont les suivantes :
+		</p>
+		<p style="text-align: center; margin: 20px; font-weight: 600;">
+			Données bancaires à inclure ici
+		</p>
+		<p>
+			Merci de mentionner la référence suivante lors de ton virement, pour que nous puissions l'identifier facilement :
+		</p>
+		<p style="text-align: center; margin: 20px; font-weight: 600;">
+			BENU{{ $order->unique_id }}
+		</p>
+		@endif
 		<p>
 			Numéro de commande : <strong>{{ $order->unique_id }}</strong>
 		</p>
