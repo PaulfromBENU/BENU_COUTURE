@@ -157,6 +157,10 @@ class OrdersInterface extends Page
                     $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
                     Mail::to($order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
                 }
+                if ($order->cart->couture_variations->count() == 1) {
+                    $order->delivery_status = 4;
+                    $order->save();
+                }
             }
             // Add e-mail of payment confirmation and order preparation?
             $this->initializeOrders();
