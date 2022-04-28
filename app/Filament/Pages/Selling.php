@@ -135,9 +135,9 @@ class Selling extends Page
             // Reset data
             $this->creation_name = 'none-0';
             $this->clearItem();
-            $this->notify('success', 'La vente a bien été prise en compte dans la base de données :)');
+            $this->notify('success', 'The sale was taken into account in the database :)');
         } else {
-            $this->notify('danger', 'Une erreur s\'est produite, veuillez vérifier le contenu ou contacter l\'administrateur.');
+            $this->notify('danger', 'An error occured, please check the content or contact the administrator.');
         }
     }
 

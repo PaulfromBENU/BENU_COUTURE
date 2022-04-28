@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Article;
 use App\Models\Creation;
 use App\Models\CreationCategory;
+use App\Models\NewsArticle;
 use App\Models\Partner;
 use App\Models\User;
 use App\Mail\NewsletterConfirmation;
@@ -82,7 +83,8 @@ class GeneralController extends Controller
     public function showNews(string $slug = '')
     {
         if ($slug == '') {
-            return view('news');
+            $all_news = NewsArticle::where('is_ready', '1')->get();
+            return view('news', ['all_news' => $all_news]);
         }
         return view('news-single');
     }

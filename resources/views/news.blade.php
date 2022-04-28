@@ -26,29 +26,34 @@
 		<h2 class="all-news__title">{{ __('news.all-title') }}</h2>
 
 		<div class="flex justify-start flex-wrap">
-			@for($i = 1; $i <= 5; $i++)
+			@foreach($all_news as $news)
 			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="all-news__link">
 				<div class="all-news__link__img-container">
-					<img src="{{ asset('images/pictures/news/image_trees.png') }}" alt="Photo news" title="Photo news">
+					<img src="{{ asset('images/pictures/news/'.$news->main_photo) }}" alt="Photo news" title="Photo news">
 				</div>
 				<div class="all-news__link__tags flex justify-start">
-					@for($j = 1; $j <= 2; $j++)
+					@if($news->tag_1_fr !== '' && $news->tag_1_fr !== null)
 					<div class="all-news__link__tags__tag">
-						Tag line {{ $j }}
+						{{ $news->tag_1_fr }}
 					</div>
-					@endfor
+					@endif
+					@if($news->tag_2_fr !== '' && $news->tag_2_fr !== null)
+					<div class="all-news__link__tags__tag">
+						{{ $news->tag_2_fr }}
+					</div>
+					@endif
 				</div>
 				<h3 class="all-news__link__title">
-					Titre de l'actualité {{ $i }}
+					{{ $news->title_fr }}
 				</h3>
 				<p class="all-news__link__date">
-					15 avril 2021
+					{{ $news->created_at->format('d\/m\/Y') }}
 				</p>
 				<p class="all-news__link__summary">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					{{ $news->summary_fr }}
 				</p>
 			</a>
-			@endfor
+			@endforeach
 		</div>
 	</div>
 @endsection
