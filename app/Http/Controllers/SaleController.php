@@ -164,7 +164,7 @@ class SaleController extends Controller
                     $current_order->payment_status = 2;
                 }
 
-                if ($current_order->couture_articles->count() == 1 && $current_order->pdf_vouchers->count() > 0) {
+                if ($current_order->cart->couture_variations->count() == 1 && $current_order->pdf_vouchers->count() > 0) {
                     // Case order only contains pdf vouchers
                     $current_order->delivery_status = 4;
                 } else {
