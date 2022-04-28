@@ -25,9 +25,9 @@
 		<h4 class="all-news__subtitle">{{ __('news.all-subtitle') }}</h4>
 		<h2 class="all-news__title">{{ __('news.all-title') }}</h2>
 
-		<div class="flex justify-start flex-wrap">
+		<div class="flex justify-start flex-wrap mb-10">
 			@if($all_news->count() == 0)
-			<p>
+			<p class="text-xl text-center">
 				<em>{{ __('news.no-news-for-the-moment') }}</em>
 			</p>
 			@endif
