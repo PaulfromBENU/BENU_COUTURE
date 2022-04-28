@@ -26,6 +26,11 @@
 		<h2 class="all-news__title">{{ __('news.all-title') }}</h2>
 
 		<div class="flex justify-start flex-wrap">
+			@if($news->count() == 0)
+			<p>
+				<em>{{ __('news.no-news-for-the-moment') }}</em>
+			</p>
+			@endif
 			@foreach($all_news as $news)
 			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="all-news__link">
 				<div class="all-news__link__img-container">

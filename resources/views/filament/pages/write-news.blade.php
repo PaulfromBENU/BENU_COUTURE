@@ -27,10 +27,10 @@
 		</div>
 
 		@if($show_general_info)
-		<h1 wire:click="toggleGeneralInfo(0)">News data <span class="text-2xl"><strong>-</strong></span></h1>
+		<h1 wire:click="toggleGeneralInfo(0)">Create or Update News <span class="text-2xl"><strong>-</strong></span></h1>
 		<form style="padding-left: 5px; margin-bottom: 40px;" wire:submit.prevent="createNewArticle">
 		@else
-		<h1 wire:click="toggleGeneralInfo(1)" style="margin-bottom: 20px;">News data <span class="text-2xl"><strong>+</strong></span></h1>
+		<h1 wire:click="toggleGeneralInfo(1)" style="margin-bottom: 20px;">Create or Update News <span class="text-2xl"><strong>+</strong></span></h1>
 		<form style="display: none;" wire:submit.prevent="createNewArticle">
 		@endif
 		@csrf
@@ -145,19 +145,19 @@
 			<section class="flex justify-around create-news__title">
 				<div class="create-news__title__input">
 					<label>FR:</label><br/>
-					<textarea name="article_summary_fr" wire:model.defer="article_summary_fr" placeholder="Summary in French" required></textarea> 
+					<textarea name="article_summary_fr" wire:model.defer="article_summary_fr" placeholder="Summary in French" maxlength="190" required></textarea> 
 				</div>
 				<div class="create-news__title__input">
 					<label>LU:</label><br/>
-					<textarea name="article_summary_lu" wire:model.defer="article_summary_lu" placeholder="Summary in Luxemburgish" required></textarea> 
+					<textarea name="article_summary_lu" wire:model.defer="article_summary_lu" placeholder="Summary in Luxemburgish" maxlength="190" required></textarea> 
 				</div>
 				<div class="create-news__title__input">
 					<label>DE:</label><br/>
-					<textarea name="article_summary_de" wire:model.defer="article_summary_de" placeholder="Summary in German" required></textarea> 
+					<textarea name="article_summary_de" wire:model.defer="article_summary_de" placeholder="Summary in German" maxlength="190" required></textarea> 
 				</div>
 				<div class="create-news__title__input">
 					<label>EN:</label><br/>
-					<textarea name="article_summary_en" wire:model.defer="article_summary_en" placeholder="Summary in English" required></textarea> 
+					<textarea name="article_summary_en" wire:model.defer="article_summary_en" placeholder="Summary in English" maxlength="190" required></textarea> 
 				</div>
 			</section>
 
