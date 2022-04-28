@@ -110,13 +110,13 @@ class SaleController extends Controller
                         $pivot->decrement('stock_in_cart', $variation->pivot->articles_number);
                     } else {
                         for ($i=1; $i <= $variation->pivot->articles_number; $i++) { 
-                            $increment = rand(0, 9).rand(0, 9);
+                            // $increment = rand(0, 9).rand(0, 9);
                             $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                            $unique_code = strtoupper("BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99));
+                            $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
                             while (Voucher::where('unique_code', $unique_code)->count() > 0) {
-                                $increment = rand(0, 9).rand(0, 9);
+                                // $increment = rand(0, 9).rand(0, 9);
                                 $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                                $unique_code = strtoupper("BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99));
+                                $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
                             }
                             $new_voucher = new Voucher();
                             $new_voucher->unique_code = $unique_code;
@@ -128,12 +128,6 @@ class SaleController extends Controller
                             $new_voucher->save();
                         }
                     }
-                }
-
-                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
-                foreach ($current_order->pdf_vouchers as $voucher) {
-                    $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
-                    Mail::to($current_order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
                 }
 
                 // Send new voucher codes in order recap (e-mail ?) for fabric vouchers.
@@ -164,8 +158,18 @@ class SaleController extends Controller
                     $current_order->payment_status = 2;
                 }
 
-                if ($current_order->cart->couture_variations->count() == 1 && $current_order->pdf_vouchers->count() > 0) {
-                    // Case order only contains pdf vouchers
+                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
+                if ($current_order->payment_status == 2) {
+                    foreach ($current_order->pdf_vouchers as $voucher) {
+                        $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
+                        Mail::to($current_order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
+                    }
+                }
+
+                if ($current_order->cart->couture_variations->count() == 1 
+                    && $current_order->pdf_vouchers->count() > 0
+                    && $current_order->payment_status == 2) {
+                    // Case order is paid and only contains pdf vouchers
                     $current_order->delivery_status = 4;
                 } else {
                     $current_order->delivery_status = 1;

@@ -27,13 +27,13 @@ class VoucherResource extends Resource
 
     public static function form(Form $form): Form
     {
-        $increment = rand(0, 9).rand(0, 9);
+        // $increment = rand(0, 9).rand(0, 9);
         $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
-        $new_code = strtoupper("BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99));
+        $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
         while (Voucher::where('unique_code', $new_code)->count() > 0) {
             $increment = rand(0, 9).rand(0, 9);
             $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
-            $new_code = strtoupper("BC".date('mY').$increment.$value_code.Str::random(2).rand(10, 99));
+            $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
         }
 
         return $form
@@ -49,7 +49,7 @@ class VoucherResource extends Resource
                 Forms\Components\DateTimePicker::make('expires_on')->hidden(),
                 Forms\Components\TextInput::make('unique_code')
                     ->required()
-                    ->maxLength(16)
+                    ->maxLength(12)
                     ->default($new_code),
             ]);
     }

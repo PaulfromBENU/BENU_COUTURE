@@ -5,17 +5,23 @@ namespace App\Filament\Pages;
 use Filament\Pages\Page;
 use Filament\Forms\Components\TextInput;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 use App\Models\Article;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Voucher;
+use App\Mail\VoucherPdf;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
+use App\Traits\PDFGenerator;
+
 class OrdersInterface extends Page
 {
+    use PDFGenerator;
+
     protected static ?string $navigationIcon = 'heroicon-o-inbox-in';
 
     protected static string $view = 'filament.pages.orders-interface';
@@ -76,6 +82,20 @@ class OrdersInterface extends Page
         }
     }
 
+    public function sendVouchersByEmail($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 3;// Sent or available for collect
+        $order->payment_status = 2;// Payment received
+        $order->delivery_status = 4;// Available for collect
+        if($order->save()) {
+            foreach ($order->pdf_vouchers as $voucher) {
+                $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
+                Mail::to($order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
+            }
+        }
+    }
+
     public function markAsReadyForCollect($order_id)
     {
         $order = Order::find($order_id);
@@ -132,6 +152,13 @@ class OrdersInterface extends Page
         $order->payment_status = 2;// Payment received
         $order->delivery_status = 1;// Not ready for delivery or collect
         if($order->save()) {
+            if ($order->pdf_vouchers->count() > 0) {
+                foreach ($order->pdf_vouchers as $voucher) {
+                    $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
+                    Mail::to($order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
+                }
+            }
+            // Add e-mail of payment confirmation and order preparation?
             $this->initializeOrders();
         }
     }

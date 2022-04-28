@@ -74,8 +74,8 @@ class UserController extends Controller
 
     public function displayVoucher($voucher_code)
     {
-        if (strlen($voucher_code) == 32 && Voucher::where('unique_code', substr($voucher_code, 4, 16))->count() > 0) {
-            $clean_voucher_code = substr($voucher_code, 4, 16);
+        if (strlen($voucher_code) == 28 && Voucher::where('unique_code', substr($voucher_code, 4, 12))->count() > 0) {
+            $clean_voucher_code = substr($voucher_code, 4, 12);
             $voucher = Voucher::where('unique_code', $clean_voucher_code)->first();
             $pdf = $this->generateVoucherPdf($clean_voucher_code);
             

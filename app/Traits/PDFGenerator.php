@@ -36,7 +36,7 @@ trait PDFGenerator {
 
     public function generateVoucherPdf($voucher_code)
     {
-        if (strlen($voucher_code) == 16 && Voucher::where('unique_code', $voucher_code)->count() > 0) {
+        if (strlen($voucher_code) == 12 && Voucher::where('unique_code', $voucher_code)->count() > 0) {
             $voucher = Voucher::where('unique_code', $voucher_code)->first();
             $pdf = PDF::loadView('pdfs.voucher', compact('voucher'));
 

@@ -11,7 +11,11 @@
 		@foreach($new_orders as $new_order)
 		<div class="new-orders__order relative" wire:key="new-{{ $new_order->id }}">
 			<div class="new-orders__order__confirm-ready flex">
-				@if($new_order->address_id == 0)
+				@if($new_order->cart->couture_variations->count() == 1 && $new_order->pdf_vouchers->count() > 0)
+					<button wire:click="sendVouchersByEmail({{ $new_order->id }})">
+						Send PDF vouchers
+					</button>
+				@elseif($new_order->address_id == 0)
 					<button wire:click="markAsReadyForCollect({{ $new_order->id }})">	
 						Mark as 'Ready for collect'
 					</button>
@@ -91,7 +95,7 @@
 								<p>
 									Number of items: <strong class="text-xl">x{{ $article->pivot->articles_number }}</strong>
 								</p>
-								@if($article->voucher_type == 'pdf')
+								@if($article->voucher_type == 'pdf' && $new_order->payment_status == 2)
 									<p class="text-green-200" style="color: lightgreen;">
 										ALREADY SENT BY EMAIL<br/>NO ACTION REQUIRED
 									</p>
