@@ -36,6 +36,7 @@ class CheckArticles extends Page
     public $unchecked_articles;
     public $size_ids = [];
     public $color_ids = [];
+    public $delivery_sizes = [];
     public $all_sizes = [];
     public $all_colors = [];
     public $all_shops = [];
@@ -52,6 +53,7 @@ class CheckArticles extends Page
     protected $rules = [
         'size_ids[*]' => 'required|integer|min:1',
         'color_ids[*]' => 'required|integer|min:1',
+        'delivery_sizes[*]' => 'required|integer|max:3'
     ];
 
     public function mount()
@@ -84,6 +86,7 @@ class CheckArticles extends Page
             foreach ($this->unchecked_articles as $article) {
                 $this->size_ids[$article->id] = $article->size->id;
                 $this->color_ids[$article->id] = $article->color->id;
+                $this->delivery_sizes[$article->id] = $article->size_category;
                 $this->stocks[$article->id] = [];
 
                 foreach ($this->all_shops as $shop_id => $shop_name) {
@@ -136,6 +139,7 @@ class CheckArticles extends Page
             $article = Article::find($article_id);
             $article->size_id = $this->size_ids[$article_id];
             $article->color_id = $this->color_ids[$article_id];
+            $article->size_category = $this->delivery_sizes[$article_id];
 
             // Update stocks and shops
             foreach ($this->stocks[$article_id] as $shop_id => $stock) {

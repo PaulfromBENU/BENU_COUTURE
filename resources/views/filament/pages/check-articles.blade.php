@@ -41,6 +41,15 @@
 									@endforeach
 								</select>
 							</div>
+
+							<div>
+								<label>Size for delivery:<br/></label>
+								<select name="color" class="sell-form__select" wire:model="delivery_sizes.{{ $article->id }}">
+									<option value="0">Send as package</option>
+									<option value="1">Envelope MINI</option>
+									<option value="2">Envelope MAXI</option>
+								</select>
+							</div>
 						</div>
 
 						<h4>> Stock in shops</h4>
