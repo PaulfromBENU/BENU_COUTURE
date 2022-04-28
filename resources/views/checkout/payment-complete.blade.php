@@ -48,7 +48,7 @@
 			@elseif($order->payment_type == '2')
 			{!! __('payment.confirmation-digicash') !!} - {!! __('payment.confirmation-payment-ok') !!}
 			@elseif($order->payment_type == '3')
-			{!! __('payment.confirmation-bank-transfer') !!} - {!! __('payment.confirmation-payment-pending') !!}. {!! __('payment.confirmation-transfer-reference') !!} :<br/>
+			{!! __('payment.confirmation-bank-transfer') !!} - {!! __('payment.confirmation-payment-pending') !!}. <br/>{!! __('payment.confirmation-transfer-reference') !!} :<br/>
 			<strong class="primary-color">BENU{{ $order->unique_id }}</strong>
 			@elseif($order->payment_type == '4')
 			{!! __('payment.confirmation-voucher') !!} - {!! __('payment.confirmation-payment-ok') !!}
@@ -59,7 +59,7 @@
 			</strong>
 		</p>
 		@if($order->payment_type == '3')
-		<p>
+		<p class="payment-confirmation__order-infos mb-7">
 			{!! __('payment.confirmation-our-bank-coordinates') !!} :
 		</p>
 		<div class="text-center m-3 font-bold">
@@ -72,7 +72,7 @@
 			<p>
 				{!! __('payment.confirmation-our-bank-swift') !!}
 			</p>
-		</div
+		</div>
 		@endif
 		<p class="payment-confirmation__txt-details">
 			{!! __('payment.confirmation-email-confirmation') !!} {{ $order->user->email }}
