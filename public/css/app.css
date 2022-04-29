@@ -4223,6 +4223,7 @@ input[type=checkbox]:focus {
 .all-news__link__img-container img {
   -o-object-fit: fill;
      object-fit: fill;
+  min-height: 100%;
 }
 .all-news__link__tags {
   margin-bottom: 30px;
