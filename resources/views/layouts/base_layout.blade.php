@@ -49,7 +49,9 @@
 	<div id="modal-opacifier" class="modal-opacifier" style="display: none;"></div>
 
 	<!-- Language selection -->
-	@livewire('modals.lang-modal')
+	<div class="benu-container">
+		@livewire('modals.lang-modal')
+	</div>
 
 	<!-- Search bar -->
 	@if(1 == 0)

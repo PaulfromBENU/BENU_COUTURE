@@ -1615,7 +1615,7 @@ input[type=checkbox]:focus {
 }
 .header__top-menu {
   padding-top: 7px;
-  padding-bottom: 18px;
+  padding-bottom: 16px;
   overflow: hidden;
 }
 .header__top-nav__links {
@@ -1957,7 +1957,7 @@ input[type=checkbox]:focus {
   width: 370px;
   height: 155px;
   right: 5%;
-  top: 25vh;
+  top: 200px;
   border-radius: 6px;
   padding: 16px 22px;
 }
@@ -1973,7 +1973,7 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 1721px) {
   .lang-modal {
-    right: calc(50vw - 860px);
+    right: calc(50vw - 860px + 5%);
   }
 }
 .lang-modal__block {
@@ -2737,9 +2737,10 @@ input[type=checkbox]:focus {
 }
 
 .welcome-presentation {
-  min-height: max(800px, 100vh);
+  margin-bottom: 80px;
   width: 100%;
   position: relative;
+  height: min(85vh, 900px);
 }
 .welcome-presentation__desc {
   padding-top: 139px;
@@ -2810,6 +2811,7 @@ input[type=checkbox]:focus {
   width: 70%;
   overflow: hidden;
   z-index: 1;
+  height: 80vh;
 }
 
 .welcome-illustration-2, .welcome-illustration-3, .welcome-illustration-4, .welcome-illustration-5 {
@@ -2819,7 +2821,6 @@ input[type=checkbox]:focus {
 .welcome-campaign {
   margin-top: 0px;
   margin-bottom: 67px;
-  min-height: 100vh;
 }
 .welcome-campaign__left {
   width: 50%;
@@ -3693,6 +3694,11 @@ input[type=checkbox]:focus {
   border-bottom: solid 1px #D9D9D9;
   min-height: 80px;
 }
+@media (min-width: 1720px) {
+  .all-models__filters-container__options {
+    left: calc(50vw - 860px);
+  }
+}
 .all-models__filters {
   border-bottom: solid 1px #D9D9D9;
   position: relative;
@@ -4215,9 +4221,8 @@ input[type=checkbox]:focus {
   margin-bottom: 15px;
 }
 .all-news__link__img-container img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .all-news__link__tags {
   margin-bottom: 30px;
@@ -4265,7 +4270,7 @@ input[type=checkbox]:focus {
   text-align: center;
   font: normal normal 600 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
-  margin-bottom: 58px;
+  margin-bottom: 5px;
 }
 .single-news__subtitle {
   text-align: center;
@@ -4273,6 +4278,10 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   color: #2E141480;
   margin-bottom: 35px;
+}
+.single-news__date {
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  margin-bottom: 58px;
 }
 .single-news__txt {
   text-align: left;
@@ -4309,6 +4318,8 @@ input[type=checkbox]:focus {
   width: 100%;
   overflow: hidden;
   margin-bottom: 50px;
+  border-radius: 8px;
+  max-height: 70vh;
 }
 .single-news__img-container img {
   width: 100%;
@@ -4323,6 +4334,64 @@ input[type=checkbox]:focus {
 }
 .single-news__backlink {
   margin-bottom: 100px;
+}
+.single-news__prev-next {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid lightgrey;
+  margin-bottom: 80px;
+}
+.single-news__prev-next__block {
+  padding: 12px;
+  border-radius: 8px;
+  width: 49%;
+  display: flex;
+  box-shadow: lightgrey 0 0 10px;
+  height: 150px;
+  transition: all 0.2s;
+}
+.single-news__prev-next__block:hover {
+  box-shadow: #F9E2E2 0 0 15px;
+}
+.single-news__prev-next__block:hover h3 {
+  color: #2E1414;
+}
+.single-news__prev-next__block:hover .single-news__prev-next__block__chevron--left {
+  padding-left: 0px;
+}
+.single-news__prev-next__block:hover .single-news__prev-next__block__chevron--right {
+  padding-right: 0px;
+}
+.single-news__prev-next__block h3 {
+  font: normal normal 700 24px/28px "Barlow Condensed";
+  color: #D41C1B;
+  transition: color 0.2s;
+}
+.single-news__prev-next__block__chevron {
+  width: 20px;
+}
+.single-news__prev-next__block__chevron--left {
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+.single-news__prev-next__block__chevron--right {
+  padding-right: 10px;
+  transition: all 0.3s;
+}
+.single-news__prev-next__block__text {
+  font: normal normal 600 18px/20px "Barlow Condensed";
+  padding-top: 7px;
+}
+.single-news__prev-next__block__img-container {
+  height: 100%;
+  width: 40%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.single-news__prev-next__block__img-container img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  min-height: 100%;
 }
 
 .register {
@@ -5335,6 +5404,47 @@ input[type=checkbox]:focus {
   font-size: 1.4rem;
   padding-top: 5px;
   width: 32%;
+}
+.create-news__new-element-title {
+  padding-bottom: 5px;
+  border-bottom: solid 1px lightgrey;
+  height: 60px;
+  padding-top: 12px;
+  font-size: 1.4rem;
+}
+.create-news__add-element {
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: solid 1px rgb(234 179 8/var(--tw-bg-opacity));
+  border-radius: 5px;
+}
+.create-news__new-paragraph {
+  padding-top: 10px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.create-news__new-paragraph__field {
+  width: 24%;
+}
+.create-news__new-paragraph textarea {
+  width: 100%;
+  background: transparent;
+  border-radius: 4px;
+}
+.create-news__new-link {
+  padding-top: 10px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.create-news__new-link__field {
+  width: 24%;
+}
+.create-news__new-link__field input[type=text] {
+  width: 100%;
+  background: transparent;
+  border-radius: 4px;
 }
 
 :root {

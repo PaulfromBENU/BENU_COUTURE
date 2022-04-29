@@ -10,6 +10,9 @@
 			background: $white;
 			border-bottom: solid 1px $light-grey;
 			min-height: 80px;
+			@include large {
+				left: calc(50vw - 860px);
+			}
 		}
 	}
 	&__filters {

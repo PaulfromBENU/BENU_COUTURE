@@ -1,11 +1,23 @@
 @extends('layouts.base_layout')
 
+@php
+$localized_seo_title = "seo_title_".app()->getLocale();
+$localized_seo_desc = "seo_desc_".app()->getLocale();
+$localized_tag_1 = "tag_1_".app()->getLocale();
+$localized_tag_2 = "tag_2_".app()->getLocale();
+$localized_title = "title_".app()->getLocale();
+$localized_slug = "slug_".app()->getLocale();
+$localized_summary = "summary_".app()->getLocale();
+$localized_content = "content_".app()->getLocale();
+$localized_label = "link_label_".app()->getLocale();
+@endphp
+
 @section('title')
-	Toutes les actualités de BENU COUTURE
+	{{ $news->$localized_seo_title }}
 @endsection
 
 @section('description')
-	Restez au courant de toutes les actualités de BENU COUTURE en lisant nos articles, mis à jour régulièrement.
+	{{ $news->$localized_seo_desc }}
 @endsection
 
 @section('breadcrumbs')
@@ -19,53 +31,119 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="primary-color"><strong>{{ __('breadcrumbs.news-example') }}</strong></a>
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => $news->$localized_slug]) }}" class="primary-color"><strong>{{ $news->$localized_title }}</strong></a>
 		</div>
 	</div>
 @endsection
 
 @section('main-content')
 	<div class="text-center all-news w-1/2 m-auto">
-		<h4 class="single-news__subtitle">Janvier 2022</h4>
-		<h2 class="single-news__title">Titre de l'actualité 1</h2>
+		<h4 class="single-news__subtitle">{{ __('news.news-small-title') }}</h4>
+		<h1 class="single-news__title">{{ $news->$localized_title }}</h1>
+		<h5 class="single-news__date">{{ $news->created_at->format('d\/m\/Y') }}</h5>
 
-		<p class="single-news__txt">
-			Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula, eu luctus sapien auctor quis. Pellentesque pellentesque molestie erat. Nulla cursus sit amet enim dictum dapibus. Morbi tincidunt commodo magna vitae ullamcorper. Vivamus eu nisi ac velit ultricies. Maecenas sit amet aliquet odio. Ut id venenatis lectus. Maecenas at vestibulum dui. 
+		<p class="single-news__img-container">
+			<img src="{{ asset('images/pictures/news/'.$news->main_photo) }}">
 		</p>
-		<p class="single-news__txt">
-			Vestibulum ultricies at metus quis rhoncus. Pellentesque rhoncus volutpat diam sed posuere. Vivamus mattis consequat lacinia. Cras arcu nisi, eleifend vitae nunc blandit, viverra hendrerit mi. <a href="#" target="_blank">Possibilité de mettre des liens</a> eu pellentesque turpis bibendum. Fusce porta quam gravida malesuada bibendum. Proin dapibus consectetur laoreet. Nullam varius, sem a aliquet tempor, sem eros egestas tortor, nec mattis lectus quam id mauris. Maecenas at facilisis enim, vel convallis magna. Nam non vehicula diam. Fusce porttitor neque eget tellus tempor, eget tincidunt eros finibus. Sed eleifend malesuada nulla, sed rhoncus tellus varius in. Praesent quis tincidunt sapien. Quisque erat lacus, varius fringilla est consectetur, blandit porttitor augue. Phasellus laoreet metus sed tellus accumsan commodo. Phasellus semper enim quam, molestie feugiat nisl elementum eu. 
-		</p>
-		<p class="single-news__txt">
-			Vivamus placerat malesuada leo bibendum maximus. Sed faucibus neque vitae sem ornare, non auctor mi malesuada. Fusce nec dolor et mauris tempus mattis. Nunc cursus arcu sapien, non bibendum quam sollicitudin nec. Phasellus dolor magna, luctus vitae nisl ut, lobortis dictum orci. Donec at felis posuere, mattis odio ac, pretium tortor. Donec ut quam interdum, volutpat dolor sit amet, luctus elit. Phasellus non lacinia ex, id fermentum eros. Sed semper ultrices magna, nec varius nulla pretium quis.
-		</p>
-		<p class="single-news__highlight">
-			Container pour mise en avant d’un contenu
-		</p>
-		<div class="single-news__link">
-			<a href="{{ route('about-'.app()->getLocale()) }}" class="btn-couture">Qui sommes-nous</a>
+
+		@foreach($news->elements()->orderBy('position', 'asc')->get() as $element)
+			@switch($element->type)
+				@case('0')
+					<p class="single-news__txt">
+						{!! $element->$localized_content !!}
+					</p>
+				@break
+
+				@case('1')
+					<p class="single-news__highlight">
+						{!! $element->$localized_content !!}
+					</p>
+				@break
+
+				@case('2')
+					<div class="single-news__link">
+						<a href="{{ $element->link }}" target="_blank" class="btn-couture">{{ $element->$localized_label }}</a>
+					</div>
+				@break
+
+				@case('3')
+					<div class="single-news__img-container">
+						<img src="{{ asset('images/pictures/news/'.$element->photo_file_name) }}" alt="{{ $element->photo_alt }}" title="{{ $element->photo_title }}">
+					</div>
+				@break
+
+				@default
+					<p class="single-news__txt">
+						{!! $element->$localized_content !!}
+					</p>
+				@break
+			@endswitch
+		@endforeach
+
+		<div class="mt-10 flex justify-center flex-wrap">
+			@if($news->$localized_tag_1 !== null && $news->$localized_tag_1 !== "")
+			<div class="all-news__link__tags__tag m-2">
+				{{ $news->$localized_tag_1 }}
+			</div>
+			@endif
+			@if($news->$localized_tag_2 !== null && $news->$localized_tag_2 !== "")
+			<div class="all-news__link__tags__tag m-2">
+				{{ $news->$localized_tag_2 }}
+			</div>
+			@endif
 		</div>
-		<p class="single-news__txt">
-			Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula, eu luctus sapien auctor quis. Pellentesque pellentesque molestie erat. Nulla cursus sit amet enim dictum dapibus. Morbi tincidunt commodo magna vitae ullamcorper. Vivamus eu nisi ac velit ultricies.
-		</p>
-		<div class="single-news__img-container">
-			<img src="{{ asset('images/pictures/news/image_trees.png') }}">
+
+		<div class="single-news__prev-next flex justify-between">
+			@if($previous_news !== null)
+			<a class="single-news__prev-next__block justify-start" href="{{ route('news-'.app()->getLocale(), ['slug' => $previous_news->$localized_slug]) }}">
+				<div class="single-news__prev-next__block__img-container">
+					<img src="{{ asset('images/pictures/news/'.$previous_news->main_photo) }}" alt="{{ $previous_news->main_photo_alt }}" title="{{ $previous_news->main_photo_title }}" />
+				</div>
+				<div class="pl-4">
+					<div class="flex justify-start mb-3">
+						<p class="primary-color text-2xl font-light mr-3 single-news__prev-next__block__chevron single-news__prev-next__block__chevron--left">
+							<
+						</p>
+						<p class="single-news__prev-next__block__text">
+							{{ __('news.previous-article') }}
+						</p>
+					</div>
+					<h3>
+						{{ $previous_news->$localized_title }}
+					</h3>
+				</div>
+			</a>
+			@else
+			<a class="block" style="width: 49%;"></a>
+			@endif
+			
+			@if($next_news !== null)
+			<a class="single-news__prev-next__block justify-end" href="{{ route('news-'.app()->getLocale(), ['slug' => $next_news->$localized_slug]) }}">
+				<div class="pr-4">
+					<div class="flex justify-start mb-3">
+						<p class="single-news__prev-next__block__text">
+							{{ __('news.previous-article') }}
+						</p>
+						<p class="primary-color text-2xl font-light ml-3 single-news__prev-next__block__chevron single-news__prev-next__block__chevron--left">
+							>
+						</p>
+					</div>
+					<h3>
+						{{ $next_news->$localized_title }}
+					</h3>
+				</div>
+				<div class="single-news__prev-next__block__img-container">
+					<img src="{{ asset('images/pictures/news/'.$next_news->main_photo) }}" alt="{{ $next_news->main_photo_alt }}" title="{{ $next_news->main_photo_title }}" />
+				</div>
+			</a>
+			@else
+			<a class="block" style="width: 49%;"></a>
+			@endif
 		</div>
-		<p class="single-news__txt">
-			Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula, eu luctus sapien auctor quis. Pellentesque pellentesque molestie erat. Nulla cursus sit amet enim dictum dapibus. Morbi tincidunt commodo magna vitae ullamcorper. Vivamus eu nisi ac velit ultricies.
-		</p>
-		<div class="single-news__img-container">
-			<img src="{{ asset('images/pictures/news/image_trees.png') }}">
-		</div>
-		<p class="single-news__txt">
-			Duis tincidunt risus vitae diam molestie laoreet. Fusce commodo purus vitae ante mollis lobortis. Cras commodo suscipit nulla, eu lobortis dui auctor et. In et lacinia augue. Aliquam egestas ultrices ex, at efficitur tellus porta id. Cras id neque enim. Suspendisse blandit erat ligula, eu luctus sapien auctor quis. Pellentesque pellentesque molestie erat. Nulla cursus sit amet enim dictum dapibus. Morbi tincidunt commodo magna vitae ullamcorper. Vivamus eu nisi ac velit ultricies.
-		</p>
-		<div class="flex justify-between single-news__nextprev">
-			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="btn-slider-left">Actualité précédente</a>
-			<a href="{{ route('news-'.app()->getLocale(), ['slug' => 'premier-article-benu-couture']) }}" class="btn-slider-right">Actualité suivante</a>
-		</div>
-		<div class="single-news__backlink">
+
+		<!-- <div class="single-news__backlink mt-10">
 			<a href="{{ route('news-'.app()->getLocale()) }}" class="btn-couture">Toutes les actualités</a>
-		</div>
+		</div> -->
 	</div>
 @endsection
 

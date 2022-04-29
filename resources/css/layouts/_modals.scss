@@ -12,7 +12,7 @@
 	width: 370px;
 	height: 155px;
 	right: 5%;
-	top: 25vh;
+	top: 200px;
 	border-radius: 6px;
 	padding: 16px 22px;
 	@include tablet {
@@ -22,7 +22,7 @@
 		right: 4px;
 	}
 	@media(min-width: 1721px) {
-		right: calc(50vw - 860px);
+		right: calc(50vw - 860px + 5%);
 	}
 	&__block {
 		width: 79px;

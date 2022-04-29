@@ -26,6 +26,31 @@
 			@endforeach
 		</div>
 
+		@if($show_online_articles)
+		<h1 wire:click="toggleOnlineArticles(0)">News already online <span class="text-2xl"><strong>-</strong></span></h1>
+		<div style="padding-left: 5px; margin-bottom: 40px;">
+		@else
+		<h1 wire:click="toggleOnlineArticles(1)" style="margin-bottom: 20px;">News already online <span class="text-2xl"><strong>+</strong></span></h1>
+		<div style="display: none;">
+		@endif
+			@if($online_articles->count() == 0)
+				<p>No online news for the moment...</p>
+			@endif
+			@foreach($online_articles as $online_article)
+			<div wire:key="online-{{ $online_article->id }}" class="flex create-news__pending">
+				<p>
+					{{ $online_article->title_en }}
+				</p>
+				<p>
+					Creation date: {{ $online_article->created_at->format('d\/m\/Y') }}
+				</p>
+				<p class="text-right">
+					<button wire:click="fillArticleData({{ $online_article->id }})">Modify</button>
+				</p>
+			</div>
+			@endforeach
+		</div>
+
 		@if($show_general_info)
 		<h1 wire:click="toggleGeneralInfo(0)">Create or Update News <span class="text-2xl"><strong>-</strong></span></h1>
 		<form style="padding-left: 5px; margin-bottom: 40px;" wire:submit.prevent="createNewArticle">
@@ -234,15 +259,155 @@
 			<h1 wire:click="toggleArticleContent(1)" style="margin-bottom: 20px;">Article Content <span class="text-2xl"><strong>+</strong></span></h1>
 			<div style="display: none;">
 			@endif
-				<h2>
-					To be completed with article content
-				</h2>
+
+			@for($i = 0; $i < $number_of_elements; $i++)
+			<div wire:key="elements-{{ $article_id }}-{{ $i }}" class="relative">
+				<div class="absolute" style="top: 5px; right: 5px;">
+					<button wire:click.prevent="deleteElement({{ $i }})">X</button>
+				</div>
+				@switch($element_types[$i])
+					@case('0')
+						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Paragraph</h4>
+						<div class="flex create-news__new-paragraph">
+							<div class="create-news__new-paragraph__field">
+								<label>Content FR:</label><br/>
+								<textarea wire:model.defer="element_contents_fr.{{ $i }}" rows="7"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content DE:</label><br/>
+								<textarea wire:model.defer="element_contents_de.{{ $i }}" rows="7"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content LU:</label><br/>
+								<textarea wire:model.defer="element_contents_lu.{{ $i }}" rows="7"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content EN:</label><br/>
+								<textarea wire:model.defer="element_contents_en.{{ $i }}" rows="7"></textarea>
+							</div>
+						</div>
+					@break
+
+					@case('1')
+						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Highlight</h4>
+						<div class="flex create-news__new-paragraph">
+							<div class="create-news__new-paragraph__field">
+								<label>Content FR:</label><br/>
+								<textarea wire:model.defer="element_contents_fr.{{ $i }}" rows="4"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content DE:</label><br/>
+								<textarea wire:model.defer="element_contents_de.{{ $i }}" rows="4"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content LU:</label><br/>
+								<textarea wire:model.defer="element_contents_lu.{{ $i }}" rows="4"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content EN:</label><br/>
+								<textarea wire:model.defer="element_contents_en.{{ $i }}" rows="4"></textarea>
+							</div>
+						</div>
+					@break
+
+					@case('2')
+						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Link</h4>
+						<div class="create-news__new-link__field">
+							<label>Link:</label><br/>
+							<input type="text" name="element_links_{{ $i }}" wire:model.defer="element_links.{{ $i }}" placeholder="https://..." minlength="7">
+						</div>
+						<div class="flex create-news__new-link">
+							<div class="create-news__new-link__field">
+								<label>Label FR:</label><br/>
+								<input type="text" name="element_link_labels_fr_{{ $i }}" wire:model.defer="element_link_labels_fr.{{ $i }}">
+							</div>
+							<div class="create-news__new-link__field">
+								<label>Label DE:</label><br/>
+								<input type="text" name="element_link_labels_de_{{ $i }}" wire:model.defer="element_link_labels_de.{{ $i }}">
+							</div>
+							<div class="create-news__new-link__field">
+								<label>Label LU:</label><br/>
+								<input type="text" name="element_link_labels_lu_{{ $i }}" wire:model.defer="element_link_labels_lu.{{ $i }}">
+							</div>
+							<div class="create-news__new-link__field">
+								<label>Label EN:</label><br/>
+								<input type="text" name="element_link_labels_en_{{ $i }}" wire:model.defer="element_link_labels_en.{{ $i }}">
+							</div>
+						</div>
+					@break
+
+					@case('3')
+						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Picture</h4>
+						<input type="file" wire:model="element_photo_files.{{ $i }}" class="new-photo-form__file-input">
+					    <div wire:loading wire:target="element_photo_files.{{ $i }}">Uploading...</div>
+
+					    @error('element_photo_files') <span class="error">{{ $message }}</span> @enderror
+					    @if(is_file($element_photo_files[$i]))
+					    	<h4>Photo Preview:</h4>
+					        <div class="flex justify-start new-photo-form__img-gallery">
+						        <div class="new-photo-form__img-gallery__img-container">
+						        	<img src="{{ $element_photo_files[$i]->temporaryUrl() }}">
+						        </div>
+						    </div>
+					    @elseif(is_string($element_photo_files[$i]) && $element_photo_files[$i] !== "")
+					    	<h4>Photo Preview:</h4>
+					        <div class="flex justify-start new-photo-form__img-gallery">
+						        <div class="new-photo-form__img-gallery__img-container">
+						        	<img src="{{ asset('images/pictures/news/'.$element_photo_files[$i]) }}">
+						        </div>
+						    </div>
+					    @endif
+
+					    <div class="flex create-news__new-link">
+							<div class="create-news__new-link__field">
+								<label>Photo Alt:</label><br/>
+								<input type="text" name="element_photo_alts_{{ $i }}" wire:model.defer="element_photo_alts.{{ $i }}">
+							</div>
+							<div class="create-news__new-link__field">
+								<label>Photo Title:</label><br/>
+								<input type="text" name="element_photo_titles_{{ $i }}" wire:model.defer="element_photo_titles.{{ $i }}">
+							</div>
+						</div>
+					@break
+
+					@default
+						<h4 class="create-news__new-element-title" style="margin-bottom: 10px;">Element #{{ $i + 1 }} - Paragraph</h4>
+						<div class="flex create-news__new-paragraph">
+							<div class="create-news__new-paragraph__field">
+								<label>Content FR:</label><br/>
+								<textarea wire:model.defer="element_contents_fr.{{ $i }}" rows="7"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content DE:</label><br/>
+								<textarea wire:model.defer="element_contents_de.{{ $i }}" rows="7"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content LU:</label><br/>
+								<textarea wire:model.defer="element_contents_lu.{{ $i }}" rows="7"></textarea>
+							</div>
+							<div class="create-news__new-paragraph__field">
+								<label>Content EN:</label><br/>
+								<textarea wire:model.defer="element_contents_en.{{ $i }}" rows="7"></textarea>
+							</div>
+						</div>
+					@break
+				@endswitch
+			</div>
+			@endfor
+
+			<div class="flex create-news__add-element">
+				<button wire:click.prevent="addElement(0)">Add a paragraph</button>
+				<button wire:click.prevent="addElement(1)">Add a highlight</button>
+				<button wire:click.prevent="addElement(2)">Add a button with link</button>
+				<button wire:click.prevent="addElement(3)">Add a picture</button>
+			</div>
+			
 			</div>
 
 
 			<div class="text-center" style="margin: 20px;">
 				<button>
-					Create News
+					Create/Update News
 				</button>
 			</div>
 		</form>

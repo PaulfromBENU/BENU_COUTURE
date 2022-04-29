@@ -8,6 +8,7 @@ use Livewire\WithFileUploads;
 use Intervention\Image\Facades\Image;
 
 use App\Models\NewsArticle;
+use App\Models\NewsArticleElement;
 
 class WriteNews extends Page
 {
@@ -35,6 +36,7 @@ class WriteNews extends Page
     public $article_id = 0;
 
     public $pending_articles;
+    public $online_articles;
 
     public $article_title_fr = "";
     public $article_title_de = "";
@@ -76,6 +78,20 @@ class WriteNews extends Page
     public $article_seo_desc_lu = "";
     public $article_seo_desc_en = "";
 
+    public $element_types = [];
+    public $element_contents_fr = [];
+    public $element_contents_de = [];
+    public $element_contents_lu = [];
+    public $element_contents_en = [];
+    public $element_photo_files = [];
+    public $element_photo_alts = [];
+    public $element_photo_titles = [];
+    public $element_links = [];
+    public $element_link_labels_fr = [];
+    public $element_link_labels_de = [];
+    public $element_link_labels_lu = [];
+    public $element_link_labels_en = [];
+
     public $main_photo;
 
     public function mount()
@@ -85,7 +101,8 @@ class WriteNews extends Page
 
     public function refreshData()
     {
-        $this->pending_articles = NewsArticle::where('is_ready', '0')->get();
+        $this->pending_articles = NewsArticle::where('is_ready', '0')->orderBy('updated_at', 'desc')->get();
+        $this->online_articles = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
     }
 
     public function fillArticleData($article_id)
@@ -135,7 +152,34 @@ class WriteNews extends Page
 
         $this->main_photo = $news->main_photo;
 
+        for ($i=0; $i < $news->elements()->count(); $i++) { 
+            $element = $news->elements()->where('position', $i + 1)->first();
+            $this->element_types[$i] = $element->type;
+            $this->element_contents_fr[$i] = $element->content_fr;
+            $this->element_contents_de[$i] = $element->content_de;
+            $this->element_contents_lu[$i] = $element->content_lu;
+            $this->element_contents_en[$i] = $element->content_en;
+            $this->element_photo_files[$i] = $element->photo_file_name;
+            $this->element_photo_alts[$i] = $element->photo_alt;
+            $this->element_photo_titles[$i] = $element->photo_title;
+            $this->element_links[$i] = $element->link;
+            $this->element_link_labels_fr[$i] = $element->link_label_fr;
+            $this->element_link_labels_de[$i] = $element->link_label_de;
+            $this->element_link_labels_en[$i] = $element->link_label_en;
+            $this->element_link_labels_lu[$i] = $element->link_label_lu;
+
+            $this->number_of_elements = $news->elements()->count();
+        }
+
+        if ($news->is_ready == 1) {
+            $news->is_ready = 0;
+            $news->save();
+        }
+
         $this->refreshData();
+
+        $this->show_pending_articles = 0;
+        $this->show_online_articles = 0;
         $this->show_general_info = 1;
     }
 
@@ -145,6 +189,9 @@ class WriteNews extends Page
         $news->is_ready = 1;
         if ($news->save()) {
             $this->refreshData();
+            $this->show_pending_articles = 0;
+            $this->show_online_articles = 1;
+            $this->notify('success', 'The news was successfully published online :)');
         }
     }
 
@@ -181,6 +228,78 @@ class WriteNews extends Page
         if (in_array($value, [0, 1])) {
             $this->show_online_articles = $value;
         }
+    }
+
+    public function addElement($type)
+    {
+        if (in_array($type, [0, 1, 2, 3, 4])) {
+            $this->element_types[$this->number_of_elements] = $type;
+            $this->createNewElement();
+        }
+    }
+
+    public function createNewElement()
+    {
+        $this->element_contents_fr[$this->number_of_elements] = "";
+        $this->element_contents_de[$this->number_of_elements] = "";
+        $this->element_contents_lu[$this->number_of_elements] = "";
+        $this->element_contents_en[$this->number_of_elements] = "";
+        $this->element_photo_files[$this->number_of_elements] = null;
+        $this->element_photo_alts[$this->number_of_elements] = "";
+        $this->element_photo_titles[$this->number_of_elements] = "";
+        $this->element_links[$this->number_of_elements] = "";
+        $this->element_link_labels_fr[$this->number_of_elements] = "";
+        $this->element_link_labels_de[$this->number_of_elements] = "";
+        $this->element_link_labels_lu[$this->number_of_elements] = "";
+        $this->element_link_labels_en[$this->number_of_elements] = "";
+
+        $this->number_of_elements ++;
+
+        $this->refreshData();
+    }
+
+    public function deleteElement($index)
+    {
+        unset($this->element_contents_fr[$index]);
+        $this->element_contents_fr = array_values($this->element_contents_fr);
+
+        unset($this->element_contents_de[$index]);
+        $this->element_contents_de = array_values($this->element_contents_de);
+
+        unset($this->element_contents_lu[$index]);
+        $this->element_contents_lu = array_values($this->element_contents_lu);
+
+        unset($this->element_contents_en[$index]);
+        $this->element_contents_en = array_values($this->element_contents_en);
+
+        unset($this->element_photo_files[$index]);
+        $this->element_photo_files = array_values($this->element_photo_files);
+
+        unset($this->element_photo_alts[$index]);
+        $this->element_photo_alts = array_values($this->element_photo_alts);
+
+        unset($this->element_photo_titles[$index]);
+        $this->element_photo_titles = array_values($this->element_photo_titles);
+
+        unset($this->element_links[$index]);
+        $this->element_links = array_values($this->element_links);
+
+        unset($this->element_link_labels_fr[$index]);
+        $this->element_link_labels_fr = array_values($this->element_link_labels_fr);
+
+        unset($this->element_link_labels_de[$index]);
+        $this->element_link_labels_de = array_values($this->element_link_labels_de);
+
+        unset($this->element_link_labels_lu[$index]);
+        $this->element_link_labels_lu = array_values($this->element_link_labels_lu);
+
+        unset($this->element_link_labels_en[$index]);
+        $this->element_link_labels_en = array_values($this->element_link_labels_en);
+
+        unset($this->element_types[$index]);
+        $this->element_types = array_values($this->element_types);
+
+        $this->number_of_elements --;
     }
 
     public function createNewArticle()
@@ -250,7 +369,74 @@ class WriteNews extends Page
         }
 
         if ($news->save()) {
-            $this->resetExcept('pending_articles');
+            if ($news->elements()->count() > 0) {
+                $news->elements()->where('position', '>', $this->number_of_elements)->delete();
+            }
+
+            for ($i=0; $i < $this->number_of_elements; $i++) { 
+                if ($news->elements()->where('position', $i + 1)->count() > 0) {
+                    $element = $news->elements()->where('position', $i + 1)->first();
+                } else {
+                    $element = new NewsArticleElement();
+                    $element->position = $i + 1;
+                    $element->news_article_id = $news->id;
+                }
+                $element->type = $this->element_types[$i];
+                $element->content_fr = $this->element_contents_fr[$i];
+                $element->content_de = $this->element_contents_de[$i];
+                $element->content_lu = $this->element_contents_lu[$i];
+                $element->content_en = $this->element_contents_en[$i];
+
+                // New article photo handling
+                if(is_file($this->element_photo_files[$i])) {
+                    $img = Image::make($this->element_photo_files[$i]);
+                    $file_name = 'news-additionnal-picture-'.$this->article_slug_en.'-'.$i.'.'.$this->element_photo_files[$i]->getClientOriginalExtension();
+                    if ($img->width() < $img->height()) {
+                        $img->rotate(90);
+                    }
+                    $img->resize(1000, 850, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    });
+
+                    if($img->save(public_path('images/pictures/news/'.$file_name))) {
+                        $element->photo_file_name = $file_name;
+                    }
+                } else {
+                    $element->photo_file_name = $this->element_photo_files[$i];
+                }
+
+                $element->photo_alt = $this->element_photo_alts[$i];
+                $element->photo_title = $this->element_photo_titles[$i];
+
+                $element->link = $this->element_links[$i];
+                $element->link_label_fr = $this->element_link_labels_fr[$i];
+                $element->link_label_de = $this->element_link_labels_de[$i];
+                $element->link_label_lu = $this->element_link_labels_lu[$i];
+                $element->link_label_en = $this->element_link_labels_en[$i];
+
+                $element->save();
+            }
+
+
+            $this->resetExcept([
+                'pending_articles', 
+                'online_articles',
+                'element_types',
+                'element_contents_fr',
+                'element_contents_de',
+                'element_contents_lu',
+                'element_contents_en',
+                'element_photo_files',
+                'element_photo_alts',
+                'element_photo_titles',
+                'element_links',
+                'element_link_labels_fr',
+                'element_link_labels_de',
+                'element_link_labels_lu',
+                'element_link_labels_en',
+            ]);
+            $this->refreshData();
             $this->notify('success', 'The news was successfully created :)');
         }
     }
