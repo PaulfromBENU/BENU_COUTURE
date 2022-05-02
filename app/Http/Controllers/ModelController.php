@@ -71,7 +71,10 @@ class ModelController extends Controller
 
         $creation_articles = $this->getAvailableArticles($creation);
 
-        // To be updated when relationship with shops including stock has been established
+        // Extra accessories
+        $extra_accessories = $this->getAvailableExtraAccessories($creation);
+
+        // Sold articles
         $all_sold_articles = $this->getSoldArticles($creation);
         $sold_articles = $all_sold_articles->slice(0, 4);
         $sold_articles_total = $all_sold_articles->count();
@@ -125,6 +128,7 @@ class ModelController extends Controller
             'model' => $creation, 
             'localized_description' => $localized_desc, 
             'articles' => $creation_articles, 
+            'extra_accessories' => $extra_accessories,
             'sold_articles' => $sold_articles, 
             'sold_articles_total' => $sold_articles_total,
             'keywords' => $keywords,

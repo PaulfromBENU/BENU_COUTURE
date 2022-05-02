@@ -34,6 +34,9 @@
 	@include('includes.model.model_details')
 	@if($model->product_type != "3")
 		@include('includes.model.model_articles')
+		@if($extra_accessories->count() > 0)
+			@include('includes.model.model_extras')
+		@endif
 		@if($sold_articles->count() > 0)
 			@include('includes.model.model_sold')
 		@endif

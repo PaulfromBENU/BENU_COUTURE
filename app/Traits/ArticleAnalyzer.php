@@ -98,6 +98,13 @@ trait ArticleAnalyzer {
          return $available_articles;
     }
 
+    public function getAvailableExtraAccessories(Creation $creation)
+    {
+        $available_articles = $creation->creation_accessories()->has('available_shops')->get();
+
+         return $available_articles;
+    }
+
     public function getAllAvailableArticles()
     {
         $available_articles = Article::has('available_shops')->get();

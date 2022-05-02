@@ -31,7 +31,7 @@ class Creation extends Model
 
     public function creation_accessories()
     {
-        return $this->hasMany('App\Models\CreationAccessory');
+        return $this->hasMany('App\Models\Article')->where('is_extra_accessory', '1');
     }
 
     public function all_articles()
@@ -41,7 +41,7 @@ class Creation extends Model
 
     public function articles()
     {
-        return $this->hasMany('App\Models\Article')->where('checked', '1');
+        return $this->hasMany('App\Models\Article')->where('is_extra_accessory', '0')->where('checked', '1');
     }
 
     public function keywords()
