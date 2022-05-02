@@ -8,7 +8,18 @@
 		<h3 class="payment__option__title">{!! __('services.payment-option-1-title') !!}</h3>
 		<img src="{{ asset('images/pictures/services_payment_cards.png') }}">
 		<p class="payment__option__txt">
-			{!! __('services.payment-option-1-desc') !!}
+			{!! __('services.payment-option-1-desc-1') !!}
+		</p>
+		<ul>
+			<li><span class="primary-color">•</span> {!! __('services.payment-option-1-bullet-1') !!}</li>
+			<li><span class="primary-color">•</span> {!! __('services.payment-option-1-bullet-2') !!}</li>
+			<li><span class="primary-color">•</span> {!! __('services.payment-option-1-bullet-3') !!}</li>
+			<li><span class="primary-color">•</span> {!! __('services.payment-option-1-bullet-4') !!}</li>
+			<li><span class="primary-color">•</span> {!! __('services.payment-option-1-bullet-5') !!}</li>
+			<li><span class="primary-color">•</span> {!! __('services.payment-option-1-bullet-6') !!}</li>
+		</ul>
+		<p class="payment__option__txt">
+			{!! __('services.payment-option-1-desc-2') !!}
 		</p>
 	</div>
 
