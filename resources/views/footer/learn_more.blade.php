@@ -2,7 +2,7 @@
 	<div class="footer-learnmore__block">
 		<img src="{{ asset('images/pictures/footer-img-1.png') }}">
 		<h3>
-			{{ __('footer.more-title-1') }} <span class="primary-color">BENU COUTURE</span>
+			<span class="primary-color">BENU COUTURE</span> {{ __('footer.more-title-1') }}
 		</h3>
 		<p>
 			{{ __('footer.more-txt-1') }}

@@ -24,12 +24,20 @@
     <section class="benu-container login">
         @if(session('success') !== null)
         <div class="bg-red-100 p-5 m-auto text-center mb-5 font-bold w-2/3" style="border-radius: 8px;">
-            {{ session('success') }}
+            {{ __('auth.newsletter-subscribe-success') }}
         </div>
         @endif
 
         <h3 class="login__subtitle">{{ __('auth.newsletter-subscribe-newsletter') }}</h3>
+        @auth
+            @if(auth()->user()->newsletter == '1')
+            <h1 class="login__title">{{ __('auth.newsletter-unsubscribe-title-1') }} <br/>{{ __('auth.newsletter-unsubscribe-title-2') }}</h1>
+            @else
+            <h1 class="login__title">{{ __('auth.newsletter-subscribe-title-1') }} <br/>{{ __('auth.newsletter-subscribe-title-2') }}</h1>
+            @endif
+        @else
         <h1 class="login__title">{{ __('auth.newsletter-subscribe-title-1') }} <br/>{{ __('auth.newsletter-subscribe-title-2') }}</h1>
+        @endauth
 
         <form method="POST" action="{{ route('newsletter-subscribe', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
             @csrf
