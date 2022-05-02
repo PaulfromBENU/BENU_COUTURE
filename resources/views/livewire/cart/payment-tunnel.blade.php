@@ -430,6 +430,7 @@
                 </div>
             </div>
 
+            @auth
             <div class="payment-tunnel__payment__field flex flex-col justify-center">
                 <div class="grid grid-cols-8">
                     <div class="col-span-2">
@@ -447,6 +448,7 @@
                     </div>
                 </div>
             </div>
+            @endauth
         </div>
         @endif
     </div>

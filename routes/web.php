@@ -81,6 +81,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "lu").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-lu');
 
 		Route::get('/'.trans("slugs.show-voucher", [], "lu").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-lu');
+
+		Route::get('/'.trans("slugs.footer-legal-mentions", [], "lu"), 'GeneralController@footerLegal')->name('footer.legal-lu');
 	});
 
 	Route::group([
@@ -120,6 +122,8 @@ if (app('env') == 'landing') {
 
 		Route::get('/facture/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
 		Route::get('/bon-d-achat/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-fr');
+
+		Route::get('/'.trans("slugs.footer-legal-mentions", [], "fr"), 'GeneralController@footerLegal')->name('footer.legal-fr');
 	});
 
 	Route::group([
@@ -151,6 +155,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "en").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-en');
 
 		Route::get('/'.trans("slugs.show-voucher", [], "en").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-en');
+
+		Route::get('/'.trans("slugs.footer-legal-mentions", [], "en"), 'GeneralController@footerLegal')->name('footer.legal-en');
 	});
 
 	Route::group([
@@ -182,6 +188,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "de").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-de');
 
 		Route::get('/'.trans("slugs.show-voucher", [], "de").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-de');
+
+		Route::get('/'.trans("slugs.footer-legal-mentions", [], "de"), 'GeneralController@footerLegal')->name('footer.legal-de');
 	});
 
 	Route::group([

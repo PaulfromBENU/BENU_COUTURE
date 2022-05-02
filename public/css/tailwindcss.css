@@ -2070,6 +2070,9 @@ select {
 .delay-100 {
   transition-delay: 100ms;
 }
+.delay-200 {
+  transition-delay: 200ms;
+}
 .duration-150 {
   transition-duration: 150ms;
 }

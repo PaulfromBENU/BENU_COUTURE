@@ -172,4 +172,9 @@ class GeneralController extends Controller
         return redirect()->route('newsletter-'.session('locale'))->with('success', $message);
 
     }
+
+    public function footerLegal()
+    {
+        return view('footer.pages.legal');
+    }
 }

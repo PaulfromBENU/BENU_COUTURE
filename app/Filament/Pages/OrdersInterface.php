@@ -42,6 +42,8 @@ class OrdersInterface extends Page
 
     public $delivery_link;
 
+    public $show_unpaid = [];
+
     public function mount()
     {
         $this->cleanUnsoldArticles();
@@ -64,7 +66,7 @@ class OrdersInterface extends Page
             $reinsert_article = 1;
             foreach ($article->carts as $cart) {
                 // Keep in cart if at least one cart with this article has been updated in the last 24h
-                if ($cart->updated_at >= Carbon::now()->subDays(1)) {
+                if ($cart->updated_at >= Carbon::now()->subDays(1) && $cart->order->status < 2) {
                     $reinsert_article = 0;
                 }
             }
@@ -145,6 +147,22 @@ class OrdersInterface extends Page
         }
     }
 
+    public function cancelCart($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status = 4;
+        foreach ($order->cart->couture_variations as $variation) {
+            if ($variation->pending_shops()->count() > 0) {
+                $pivot = $variation->pending_shops()->first()->pivot;
+                $pivot->decrement('stock_in_cart');
+                $pivot->increment('stock');
+            }
+        }
+        if($order->save()) {
+            $this->initializeOrders();
+        }
+    }
+
     public function markAsPaid($order_id)
     {
         $order = Order::find($order_id);
@@ -165,6 +183,16 @@ class OrdersInterface extends Page
             // Add e-mail of payment confirmation and order preparation?
             $this->initializeOrders();
         }
+    }
+
+    public function showUnpaidDetails($order_id)
+    {
+        $this->show_unpaid[$order_id] = 1;
+    }
+
+    public function hideUnpaidDetails($order_id)
+    {
+        $this->show_unpaid[$order_id] = 0;
     }
 
     // Display new orders - paid & not handled

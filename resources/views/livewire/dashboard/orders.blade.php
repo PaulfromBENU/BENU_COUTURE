@@ -22,7 +22,7 @@
                     </div>
                     <div class="dashboard-orders__order__details">
                         <p class="primary-color font-bold mb-5">
-                            @if($order->status == '2')
+                            @if($order->status >= 2 && $order->status < 4)
                                 @if($order->payment_status <= '1')
                                 {{ __('dashboard.order-payment-pending') }}
                                 @else
@@ -34,6 +34,8 @@
                                         @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
                                     @endif
                                 @endif
+                            @elseif($order->status == 4)
+                                {{ __('dashboard.order-cancelled-because-not-paid') }}
                             @else
                                 {{ __('dashboard.order-not-finished-not-paid') }}
                             @endif
@@ -184,7 +186,7 @@
         @if($order->address_id !== 0)
         <p>
             {{ __('dashboard.order-delivery-status') }}
-            @if($order->status == '2')
+            @if($order->status >= 2 && $order->status < 4)
                 @if($order->payment_status <= '1')
                 {{ __('dashboard.order-payment-pending') }}
                 @else
@@ -196,6 +198,8 @@
                         @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
                     @endif
                 @endif
+            @elseif($order->status == 4)
+                {{ __('dashboard.order-cancelled-because-not-paid') }}
             @else
                 {{ __('dashboard.order-not-finished-not-paid') }}
             @endif
