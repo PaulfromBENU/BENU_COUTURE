@@ -86,9 +86,11 @@ class ArticleResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->default('01.01.2021'),
-                Forms\Components\Toggle::make('is_returned')
+                Forms\Components\Toggle::make('is_extra_accessory')
                     ->required(),
-                Forms\Components\DatePicker::make('return_date'),
+                // Forms\Components\Toggle::make('is_returned')
+                //     ->required(),
+                // Forms\Components\DatePicker::make('return_date'),
             ]);
     }
 
@@ -98,7 +100,7 @@ class ArticleResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
                 Tables\Columns\BooleanColumn::make('checked')->sortable()->label('Visible'),
-                Tables\Columns\TextColumn::make('type'),
+                Tables\Columns\BooleanColumn::make('is_extra_accessory')->sortable()->label('Interchangeable element'),
                 Tables\Columns\TextColumn::make('creation.name')->label('Creation')->sortable(),
                 Tables\Columns\TextColumn::make('size.value')->label('Size')->sortable(),
                 Tables\Columns\TextColumn::make('color.name')->label('Color')->sortable(),
