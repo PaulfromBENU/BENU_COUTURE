@@ -56,11 +56,11 @@
 	<div style="position: relative; height: 170px;">
 		<p style="position: absolute; top: 0; left: 0; width: 40%;">
 			<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-				Adresse de livraison
+				{{ __('pdf.invoice-delivery-address') }}
 			</span>
 			<br/>
 			@if($order->address_id == 0)
-				Retrait en magasin - BENU Esch
+				{{ __('pdf.invoice-collect-in-shop') }} - BENU Esch
 				<br/>
 				51 rue d'Audun
 				<br/>
@@ -77,13 +77,13 @@
 				{{ $countries[$order->address->country] }}
 				<br/>
 				@if($order->address->floor !== "" && $order->address->floor !== null)
-				Complément d'adresse : {{ $order->address->floor }}
+				{{ __('pdf.invoice-delivery-address-more-info') }} : {{ $order->address->floor }}
 				@endif
 			@endif
 		</p>
 		<p style="position: absolute; top: 0; left: 50%; width: 40%;">
 			<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-				Adresse de facturation
+				{{ __('pdf.invoice-invoice-address') }}
 			</span>
 			<br/>
 			{{ ucfirst($order->invoice_address->last_name) }} {{ ucfirst($order->invoice_address->first_name) }}
@@ -95,38 +95,38 @@
 			{{ $countries[$order->invoice_address->country] }}
 			<br/>
 			@if($order->invoice_address->floor !== "" && $order->invoice_address->floor !== null)
-			Complément d'adresse : {{ $order->invoice_address->floor }}
+			{{ __('pdf.invoice-delivery-address-more-info') }} : {{ $order->invoice_address->floor }}
 			@endif
 		</p>
 	</div>
 
 	<div>
 		<p style="color: #27955B; font-size: 1.4rem; font-family: 'Barlow Condensed Medium'; margin-bottom: 0; padding-bottom: 0;">
-			FACTURE - Commande N<sup>o</sup> {{ $order->unique_id }}
+			{{ __('pdf.invoice-order-number') }} N<sup>o</sup> {{ $order->unique_id }}
 		</p>
 		<div style="position: relative; height: 80px;">
 			<p style="position: absolute; width: 25%; top: 0; left: 0;">
 				<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-					Votre N<sup>o</sup> de commande :
+					{{ __('pdf.invoice-your-order-number') }} :
 				</span>
 				<br/>
 				{{ $order->unique_id }}
 			</p>
 			<p style="position: absolute; width: 25%; top: 0; left: 25%;">
 				<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-					Date de facturation :
+					{{ __('pdf.invoice-date') }} :
 				</span>
 				<br/>
 				{{ $order->created_at->format('d\/m\/Y') }}
 			</p>
 			<p style="position: absolute; width: 25%; top: 0; left: 50%;">
 				<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-					Mode de paiement :
+					{{ __('pdf.invoice-payment-method') }} :
 				</span>
 				<br/>
 				@switch($order->payment_type)
 					@case('0')
-					Carte bancaire
+					{{ __('pdf.invoice-method-card') }}
 					@break
 
 					@case('1')
@@ -138,46 +138,46 @@
 					@break
 
 					@case('3')
-					Virement bancaire
+					{{ __('pdf.invoice-bank-transfer') }}
 					@break
 
 					@case('4')
-					Bon d'achat
+					{{ __('pdf.invoice-vouchers') }}
 					@break
 
 					@default
-					Virement bancaire
+					{{ __('pdf.invoice-bak-transfer') }}
 					@break
 				@endswitch
 			</p>
 			<p style="position: absolute; width: 25%; top: 0; left: 75%;">
 				<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-					Statut du paiement :
+					{{ __('pdf.invoice-payment-status') }}
 				</span>
 				<br/>
 				@if($order->payment_status >= '2')
-				Acquittée
+				{{ __('pdf.invoice-paid') }}
 				@else
-				En attente de paiement
+				{{ __('pdf.invoice-payment-pending') }}
 				@endif
 			</p>
 		</div>
 		<div>
 			<div style="position: relative; color: #27955B; font-family: 'Barlow Condensed SemiBold'; height: 30px; border-bottom: solid #27955B 1px;">
 				<div style="position: absolute; width: 40%; top: 0; left: 0;">
-					Article
+					{{ __('pdf.invoice-article') }}
 				</div>
 				<div style="position: absolute; width: 15%; top: 0; left: 40%;">
-					Prix Unitaire HTVA
+					{{ __('pdf.invoice-unit-price-ht') }}
 				</div>
 				<div style="position: absolute; width: 15%; top: 0; left: 55%;">
-					Taux TVA
+					{{ __('pdf.invoice-vta-number') }}
 				</div>
 				<div style="position: absolute; width: 15%; top: 0; left: 70%;">
-					Quantité
+					{{ __('pdf.invoice-quantity') }}
 				</div>
 				<div style="position: absolute; width: 15%; top: 0; left: 85%;">
-					Prix TTC
+					{{ __('pdf.invoice-price-with-tax') }}
 				</div>
 			</div>
 			@php $sum_before_voucher = 0; $sum_without_tax = 0; @endphp
@@ -185,7 +185,7 @@
 			@if($article->name == 'voucher')
 				<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 26px; border-bottom: solid gray 1px;">
 					<div style="position: absolute; width: 40%; top: 0; left: 0;">
-						Bon d'achat - version @if($article->voucher_type == 'pdf') PDF @else Tissu @endif
+						{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} @if($article->voucher_type == 'pdf') PDF @else {{ __('pdf.invoice-voucher-type-clothe') }} @endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 40%;">
 						{{ round($article->pivot->value / (1 + 8/100), 2) }}&euro;
@@ -229,7 +229,7 @@
 				@if($article->pivot->with_extra_article)
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px;">
 					<div style="position: absolute; width: 40%; top: 0; left: 0;">
-						+ Coussin additionnel
+						+ {{ __('pdf.invoice-aditionnal-pillow') }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 40%;">
 						{{ round(10 / (1 + $article->creation->tva_value/100), 2) }}&euro;
@@ -252,7 +252,7 @@
 				@if($article->pivot->is_gift)
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px;">
 					<div style="position: absolute; width: 40%; top: 0; left: 0;">
-						+ Emballage cadeau
+						+ {{ __('pdf.invoice-gift-wrap') }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 40%;">
 						{{ round(($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $article->creation->tva_value/100), 2) }}&euro;
@@ -276,8 +276,8 @@
 			@endforeach
 
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
-					TOTAL
+				<div style="position: absolute; width: 75%; top: 0; left: 0%; text-transform: uppercase;">
+					{{ __('pdf.invoice-total') }}
 				</div>
 				<div style="position: absolute; width: 25%; top: 0; left: 75%;">
 					{{ number_format($sum_before_voucher, 2) }}&euro;
@@ -286,7 +286,7 @@
 
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
-					Dont TVA
+					{{ __('pdf.invoice-included-vta') }}
 				</div>
 				<div style="position: absolute; width: 25%; top: 0; left: 75%;">
 					{{ number_format($sum_before_voucher - $sum_without_tax, 2) }}&euro;
@@ -295,7 +295,7 @@
 
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
-					Frais de livraison
+					{{ __('pdf.invoice-delivery-fees') }}
 				</div>
 				<div style="position: absolute; width: 25%; top: 0; left: 75%;">
 					{{ number_format($delivery_cost, 2) }}&euro;
@@ -304,8 +304,8 @@
 
 			@if($order->cart->use_voucher)
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
-					UTILISATION BON D'ACHAT
+				<div style="position: absolute; width: 75%; top: 0; left: 0%; text-transform: uppercase;">
+					{{ __('pdf.invoice-voucher-use') }}
 				</div>
 				@php $voucher_discount = $order->cart->price_before_voucher - $order->total_price; @endphp
 				<div style="position: absolute; width: 25%; top: 0; left: 74%;">
@@ -317,8 +317,8 @@
 			@endif
 
 			<div style="position: relative; font-family: 'Barlow Condensed Medium'; min-height: 40px; border-bottom: solid #27955B 2px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 0; left: 0%; padding-top: 10px;">
-					TOTAL À PAYER
+				<div style="position: absolute; width: 75%; top: 0; left: 0%; padding-top: 10px; text-transform: uppercase;">
+					{{ __('pdf.invoice-total-to-pay') }}
 				</div>
 				<div style="position: absolute; width: 25%; top: 0; left: 75%; padding-top: 10px;">
 					@if($order->total_price == max(0, $sum_before_voucher + $delivery_cost - $voucher_discount))

@@ -55,27 +55,27 @@
 
 	<div>
 		<p style="text-align: center; font-size: 2.5rem;">
-			Bon d'achat
+			{{ __('pdf.voucher-voucher') }}
 		</p>
 		<p style="text-align: center; font-size: 3.2rem; color: #27955B; font-family: 'Barlow Condensed SemiBold';">
 			{{ $voucher->initial_value }}&euro;
 		</p>
 		<p style="text-align: center; font-size: 2rem;">
-			Code : <br/>{{ $voucher->unique_code }}
+			{{ __('pdf.voucher-code') }} : <br/>{{ $voucher->unique_code }}
 		</p>
 	</div>
 	<div>
 		<p style="font-size: 2rem; padding-left: 10%;">
-			De :
+			{{ __('pdf.voucher-from') }} :
 			<br/>
-			Pour :
+			{{ __('pdf.voucher-for') }} :
 		</p>
 	</div>
 	<div>
 		<p style="text-align: center; font-size: 2rem;">
-			Valable dans l'ensemble des shops BENU
+			{{ __('pdf.voucher-available-in-all-shops') }}
 			<br/>
-			Illimité dans le temps
+			{{ __('pdf.voucher-no-time-limit') }}
 		</p>
 	</div>
 </body>
