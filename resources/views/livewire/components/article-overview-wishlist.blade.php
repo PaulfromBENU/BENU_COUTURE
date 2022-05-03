@@ -63,7 +63,11 @@
             </p>
             <div>
                 <p class="article-overview-wishlist__footer__price">
+                    @if(session('has_kulturpass') !== null)
+                    {{ round($article->creation->price / 2, 2) }}&euro;
+                    @else
                     {{ $article->creation->price }}&euro;
+                    @endif
                 </p>
             </div>
             <div>

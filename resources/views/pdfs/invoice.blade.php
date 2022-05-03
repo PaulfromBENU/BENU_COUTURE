@@ -302,6 +302,17 @@
 				</div>
 			</div>
 
+			@if(session('has_kulturpass') !== null)
+			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
+				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
+					{{ __('pdf.invoice-kulturpass-discount') }}
+				</div>
+				<div style="position: absolute; width: 25%; top: 0; left: 75%;">
+					-50%
+				</div>
+			</div>
+			@endif
+
 			@if($order->cart->use_voucher)
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%; text-transform: uppercase;">

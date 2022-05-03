@@ -24,7 +24,13 @@
     <div class="cart-gift-modal__wrapping" @if($section !== 'wrapping') style="display: none;" @endif>
         <div class="cart-gift-modal__wrapping__input">
             <input type="checkbox" name="cart_add_wrapping" wire:model="with_wrapping" id="cart-add-wrapping">
-            <label for="cart-add-wrapping">{{ __('cart.add-wrapping') }} <span class="pl-3 font-bold">+ 5&euro;</span></label>
+            <label for="cart-add-wrapping">{{ __('cart.add-wrapping') }} <span class="pl-3 font-bold">
+                @if(session('has_kulturpass') !== null)
+                + 2.50&euro;
+                @else
+                + 5&euro;
+                @endif
+            </span></label>
         </div>
         <p>
             {{ __('cart.add-wrapping-txt') }}
@@ -32,7 +38,14 @@
     </div>
 
     <div class="cart-gift-modal__card" @if($section !== 'card') style="display: none;" @endif>
-        <h5>{{ __('cart.add-card') }} <span class="pl-3 font-bold">+ 3&euro;</span></h5>
+        <h5>{{ __('cart.add-card') }} <span class="pl-3 font-bold">
+            @if(session('has_kulturpass') !== null)
+                + 1.50&euro;
+            @else
+                + 3&euro;
+            @endif
+
+        </span></h5>
         <div class="flex justify-center">
             <div class="cart-gift-modal__card__type @if($card_type == 1) cart-gift-modal__card__type--active @endif" wire:click="updateCard(1)">
                 <div class="cart-gift-modal__card__type__svg-container">

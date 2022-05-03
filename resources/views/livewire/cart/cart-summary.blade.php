@@ -35,7 +35,7 @@
             @if($delivery_sum == 0)
             {{ strtoupper(__('cart.delivery-free')) }}
             @else
-            {{ $delivery_sum }}&euro;
+                {{ $delivery_sum }}&euro;
             @endif
         </p>
     </div>

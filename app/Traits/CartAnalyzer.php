@@ -23,6 +23,7 @@ trait CartAnalyzer {
             foreach ($cart->couture_variations as $variation) {
                 if ($variation->name == 'voucher') {
                     $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
+                    // Add extra 5 euros for clothe voucher here if required
                 } else {
                     $article_amount = $variation->pivot->articles_number * $variation->creation->price;
                     // if ($variation->pivot->with_extra_article == '1') {
@@ -31,7 +32,13 @@ trait CartAnalyzer {
                 }
                 $sum += $article_amount;
             }
-            return $sum;
+
+            if(session('has_kulturpass') !== null) {
+                return round($sum / 2, 2);
+            } else {
+                return $sum;
+            }
+
         }
         return 0;
     }
@@ -48,7 +55,11 @@ trait CartAnalyzer {
                     }
                 }
             }
-            return $sum;
+            if(session('has_kulturpass') !== null) {
+                return round($sum / 2, 2);
+            } else {
+                return $sum;
+            }
         }
         return 0;
     }
@@ -72,7 +83,11 @@ trait CartAnalyzer {
             $delivery_sum = $this->calculateDeliveryTotal($total_weight, $country_code);
         }
 
-        return $delivery_sum;
+        if(session('has_kulturpass') !== null) {
+            return round($delivery_sum / 2, 2);
+        } else {
+            return $delivery_sum;
+        }
     }
 
     public function computeGiftSum($cart_id)
@@ -90,7 +105,11 @@ trait CartAnalyzer {
             }
         }
 
-        return $gift_sum;
+        if(session('has_kulturpass') !== null) {
+            return round($gift_sum / 2, 2);
+        } else {
+            return $gift_sum;
+        }
     }
 
     public function computeTotal($cart_id, $country_code)

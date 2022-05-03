@@ -66,6 +66,7 @@ body {
 }
 .color-circle--white {
   background: #fbf8fb;
+  border: solid 1px lightgrey;
 }
 .color-circle--denim {
   background: #3C41B9;

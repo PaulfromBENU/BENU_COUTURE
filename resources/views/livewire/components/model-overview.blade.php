@@ -54,7 +54,11 @@
             {{ __('components.models-model') }} {{ strtoupper($model->name) }}
         </p>
         <p>
+            @if(session('has_kulturpass') !== null)
+            {{ round($model->price / 2, 2) }}&euro;
+            @else
             {{ $model->price }}&euro;
+            @endif
         </p>
     </div>
 </a>

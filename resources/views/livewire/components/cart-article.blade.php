@@ -9,7 +9,11 @@
         @endif
     </div>
     <div class="col-span-2 cart-content__article__name">
+        @if($article->name == 'voucher')
+        <h4>{{ __('cart.voucher') }} ({{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;)</h4>
+        @else
         <h4>{{ strtoupper($article->name) }}</h4>
+        @endif
         @if($article->pending_shops()->where('filter_key', '<>', 'benu-esch')->count() > 0)
         <button class=" mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3" wire:click="showInfoModal">
             {{ __('cart.in-pop-up-store') }} +
@@ -18,7 +22,12 @@
         @if($has_extra_option)
         <div class="mt-2 text-md font-normal flex">
             <input type="checkbox" class="rounded mr-2" name="with_extra_option" wire:model="with_extra_option" style="margin-top: 5px;" id="with_extra_option_{{ $article->id }}">
-            <label for="with_extra_option_{{ $article->id }}">{{ __('cart.with-extra-pillow') }} : <span class="primary-color font-bold">+&nbsp;10&euro;</span></label>
+            <label for="with_extra_option_{{ $article->id }}">{{ __('cart.with-extra-pillow') }} : <span class="primary-color font-bold">
+                @if(session('has_kulturpass') !== null)
+                +&nbsp;5&euro;</span></label>
+                @else
+                +&nbsp;10&euro;</span></label>
+                @endif
         </div>
         @endif
         <div class="flex cart-content__article__name__checkbox">
@@ -79,14 +88,26 @@
     <div>
         <div class="cart-content__article__price">
             @if($article->name == 'voucher')
-                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
+                @if(session('has_kulturpass') !== null)
+                    {{ round($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value / 2, 2) }}&euro;
+                @else
+                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
+                @endif
             @else
-                {{ $article->creation->price }}&euro;
+                @if(session('has_kulturpass') !== null)
+                    {{ round($article->creation->price / 2, 2) }}&euro;
+                @else
+                    {{ $article->creation->price }}&euro;
+                @endif
             @endif
 
             @if($gift_price > 0)
             <p class="primary-color text-right pr-5" style="margin-top: 50px;">
+                @if(session('has_kulturpass') !== null)
+                + {{ $gift_price / 2 }}&euro;
+                @else
                 + {{ $gift_price }}&euro;
+                @endif
             </p>
             @endif
         </div>

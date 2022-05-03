@@ -87,7 +87,8 @@ if (app('env') == 'landing') {
 
 	Route::group([
 		'prefix' => 'fr',
-		'middleware' => 'setlocale'], function() {
+		'middleware' => ['setlocale', 'checkKulturpass'],
+	], function() {
 
 		Route::get('/'.trans("slugs.models", [], "fr").'/{name?}', 'ModelController@show')->name('model-fr')->middleware('createcart');
 		Route::get('/'.trans("slugs.models", [], "fr").'/{name}/'.trans("slugs.sold", [], "fr"), 'ModelController@soldItems')->name('sold-fr');

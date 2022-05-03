@@ -14,7 +14,7 @@ use App\Models\Translation;
 $pdf_translations = Translation::where('page', 'pdf')->get();
 $translations_array = [];
 
-foreach ($payment_translations as $translation) {
+foreach ($pdf_translations as $translation) {
     $translations_array[$translation->key] = $translation->fr;
 }
 

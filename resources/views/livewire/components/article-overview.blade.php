@@ -50,7 +50,11 @@
         </p>
         <div class="flex justify-between">
             <p class="article-overview__footer__price">
-                {{ $article->creation->price }}&euro;
+                @if(session('has_kulturpass') !== null)
+                    {{ round($article->creation->price / 2, 2) }}&euro;
+                @else
+                    {{ $article->creation->price }}&euro;
+                @endif
             </p>
             @auth
             <div class="article-overview__footer__heart" wire:click.prevent.stop="toggleWishlist">

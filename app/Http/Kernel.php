@@ -65,5 +65,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'setlocale' => \App\Http\Middleware\SetLocale::class,
         'createcart' => \App\Http\Middleware\CreateCart::class,
+        'checkKulturpass' => \App\Http\Middleware\CheckKulturpass::class,
     ];
 }

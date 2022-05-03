@@ -17,7 +17,6 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next)
     {
-
         if (!$request->isMethod('post')) {
             //Get first segment. Should be locale.
             $segment = $request->segment(1);

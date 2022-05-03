@@ -55,8 +55,16 @@ class OrdersInterface extends Page
 
     public function initializeOrders()
     {
-        $this->new_orders = Order::where('status', '2')->where('payment_status', '2')->where('delivery_status', '<', '2')->get();
-        $this->orders_waiting_for_payment = Order::where('status', '2')->where('payment_status', '<', '2')->where('delivery_status', '<', '2')->get();
+        $this->new_orders = Order::where('status', '2')
+                            ->where('payment_status', '2')
+                            ->where('delivery_status', '<', '2')
+                            ->orderBy('updated_at', 'desc')
+                            ->get();
+        $this->orders_waiting_for_payment = Order::where('status', '2')
+                                            ->where('payment_status', '<', '2')
+                                            ->where('delivery_status', '<', '2')
+                                            ->orderBy('updated_at', 'desc')
+                                            ->get();
         $this->orders_sent = Order::where('delivery_status', '>=', '2')->orderBy('delivery_date', 'desc')->get();
     }
 
@@ -66,7 +74,7 @@ class OrdersInterface extends Page
             $reinsert_article = 1;
             foreach ($article->carts as $cart) {
                 // Keep in cart if at least one cart with this article has been updated in the last 24h
-                if ($cart->updated_at >= Carbon::now()->subDays(1) && $cart->order->status < 2) {
+                if ($cart->order !== null && ($cart->updated_at >= Carbon::now()->subDays(1) || $cart->order->status >= 2)) {
                     $reinsert_article = 0;
                 }
             }

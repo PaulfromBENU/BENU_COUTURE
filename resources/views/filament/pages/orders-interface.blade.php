@@ -367,7 +367,7 @@
 		<h2 style="padding-top: 50px;">
 			Sent/collected orders
 		</h2>
-		@if($orders_waiting_for_payment->count() == 0)
+		@if($orders_sent->count() == 0)
 		<p>
 			<em>No sent or collected orders for the moment...</em>
 		</p>

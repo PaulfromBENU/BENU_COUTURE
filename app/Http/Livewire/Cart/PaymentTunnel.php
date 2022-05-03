@@ -386,7 +386,11 @@ class PaymentTunnel extends Component
 
             if ($new_order->save()) {
                 $this->emit('goToPaymentStep3');
-                $this->total_price = $this->computeTotal($this->cart_id, $this->country_code);
+                if (session('has_kulturpass' !== null)) {
+                    $this->total_price = round($this->computeTotal($this->cart_id, $this->country_code) / 2, 2);
+                } else {
+                    $this->total_price = $this->computeTotal($this->cart_id, $this->country_code);
+                }
                 $this->order_id = $new_order->id;
             }
         }
