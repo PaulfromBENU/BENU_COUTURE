@@ -494,6 +494,10 @@ class PaymentTunnel extends Component
                         return redirect()->route('payment-request-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
 
+                    case 'paypal':
+                        return redirect()->route('payment-request-paypal-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
+                        break;
+
                     case 'transfer':
                         return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;

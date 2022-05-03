@@ -92,6 +92,29 @@ class SaleController extends Controller
         }
     }
 
+    public function paypalPayment(Request $request)
+    {
+        if (session('cart_id') == null) {
+            return redirect()->route('home', ['locale' => app()->getLocale()]);
+        }
+        if (is_string($request->order) && Order::where('unique_id', substr($request->order, 0, 6))->count() > 0) {
+            $order = Order::where('unique_id', substr($request->order, 0, 6))->first();
+            if ($order->status >= 2) {
+                return redirect()->route('payment-processed-'.session('locale'), ['order' => $request->order]);
+            }
+            $order->status = 1;
+            $order->save();
+            $cart = $order->cart;
+
+            // Cart status update to Paying
+            $cart->status = 2;
+            $cart->save();
+
+            return view('checkout.process-paypal-payment', ['order' => $order, 'order_id' => $request->order]);
+        }
+        return redirect()->route('home', ['locale' => app()->getLocale()]);
+    }
+
     public function validatePayment($order, Request $request)
     {
         if (is_string($order) && Order::where('unique_id', substr($order, 0, 6))->count() > 0) {
