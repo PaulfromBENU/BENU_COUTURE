@@ -90,11 +90,19 @@
 
                 @if($sold == 0)
                 <div class="article-sidebar__content__size">
+                    @if(strtolower($article->size->value) == 'unique')
+                    {{ __('sidebar.size-unique-sidebar') }}
+                    @else
                     {{ __('sidebar.size') }} {{ strtoupper($article->size->value) }}
+                    @endif
                 </div>
                 @else
                 <div class="article-sidebar__content__size article-sidebar__content__size--sold">
+                    @if(strtolower($article->size->value) == 'unique')
+                    {{ __('sidebar.size-unique-sidebar') }}
+                    @else
                     {{ __('sidebar.size') }} {{ strtoupper($article->size->value) }}
+                    @endif
                 </div>
                 @endif
 
