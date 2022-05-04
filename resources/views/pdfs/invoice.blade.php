@@ -13,6 +13,11 @@
 		}
 
 		@font-face {
+			font-family: "Barlow Condensed Light Italic";
+			src: url({{ storage_path('fonts/BarlowCondensed/BarlowCondensed-LightItalic.ttf') }}) format('truetype');
+		}
+
+		@font-face {
 			font-family: "Barlow Condensed Medium";
 			src: url({{ storage_path('fonts/BarlowCondensed/BarlowCondensed-Medium.ttf') }}) format('truetype');
 		}
@@ -180,7 +185,7 @@
 					{{ __('pdf.invoice-price-with-tax') }}
 				</div>
 			</div>
-			@php $sum_before_voucher = 0; $sum_without_tax = 0; @endphp
+			@php $sum_before_voucher = 0; $sum_without_tax = 0; $vat_low = 0; $vat_med = 0; $vat_high = 0; @endphp
 			@foreach($order->cart->couture_variations as $article)
 			@if($article->name == 'voucher')
 				<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 26px; border-bottom: solid gray 1px;">
@@ -188,10 +193,10 @@
 						{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} @if($article->voucher_type == 'pdf') PDF @else {{ __('pdf.invoice-voucher-type-clothe') }} @endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 40%;">
-						{{ round($article->pivot->value / (1 + 8/100), 2) }}&euro;
+						{{ round($article->pivot->value / (1 + 17/100), 2) }}&euro;
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 55%;">
-						8%
+						17%
 					</div>
 					<div style="position: absolute; width: 15%; top: 0; left: 70%;">
 						{{ $article->pivot->articles_number }}
@@ -202,7 +207,8 @@
 				</div>
 				@php 
 					$sum_before_voucher += $article->pivot->value * $article->pivot->articles_number; 
-					$sum_without_tax += ($article->pivot->value / (1 + 8/100)) * $article->pivot->articles_number;
+					$sum_without_tax += ($article->pivot->value / (1 + 17/100)) * $article->pivot->articles_number;
+					$vat_high += $article->pivot->articles_number * $article->pivot->value * (1 - 1/1.17);
 				@endphp
 			@else
 				<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 26px; border-bottom: solid gray 1px;">
@@ -224,6 +230,13 @@
 					@php 
 						$sum_before_voucher += $article->creation->price * $article->pivot->articles_number; 
 						$sum_without_tax += ($article->creation->price / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
+						if($article->creation->tva_value < 4) {
+							$vat_low += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.03);
+						} elseif ($article->creation->tva_value < 10) {
+							$vat_med += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.08);
+						} else {
+							$vat_high += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.17);
+						}
 					@endphp
 				</div>
 				@if($article->pivot->with_extra_article)
@@ -246,6 +259,13 @@
 					@php 
 						$sum_before_voucher += 10 * $article->pivot->articles_number; 
 						$sum_without_tax += (10 / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
+						if($article->creation->tva_value < 4) {
+							$vat_low += $article->pivot->articles_number * 10 * (1 - 1/1.03);
+						} elseif ($article->creation->tva_value < 10) {
+							$vat_med += $article->pivot->articles_number * 10 * (1 - 1/1.08);
+						} else {
+							$vat_high += $article->pivot->articles_number * 10 * (1 - 1/1.17);
+						}
 					@endphp
 				</div>
 				@endif
@@ -269,6 +289,13 @@
 					@php 
 						$sum_before_voucher += ($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) * $article->pivot->articles_number; 
 						$sum_without_tax += (($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
+						if($article->creation->tva_value < 4) {
+							$vat_low += $article->pivot->articles_number * ($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) * (1 - 1/1.03);
+						} elseif ($article->creation->tva_value < 10) {
+							$vat_med += $article->pivot->articles_number * ($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) * (1 - 1/1.08);
+						} else {
+							$vat_high += $article->pivot->articles_number * ($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) * (1 - 1/1.17);
+						}
 					@endphp
 				</div>
 				@endif
@@ -284,14 +311,14 @@
 				</div>
 			</div>
 
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
+			<!-- <div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
 					{{ __('pdf.invoice-included-vta') }}
 				</div>
 				<div style="position: absolute; width: 25%; top: 0; left: 75%;">
 					{{ number_format($sum_before_voucher - $sum_without_tax, 2) }}&euro;
 				</div>
-			</div>
+			</div> -->
 
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
@@ -302,7 +329,7 @@
 				</div>
 			</div>
 
-			@if(session('has_kulturpass') !== null)
+			@if($order->with_kulturpass)
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
 					{{ __('pdf.invoice-kulturpass-discount') }}
@@ -327,7 +354,7 @@
 				@php $voucher_discount = 0; @endphp
 			@endif
 
-			<div style="position: relative; font-family: 'Barlow Condensed Medium'; min-height: 40px; border-bottom: solid #27955B 2px; width: 60%; margin-left: 40%;">
+			<div style="position: relative; font-family: 'Barlow Condensed Medium'; min-height: 45px; border-bottom: solid #27955B 2px; border-top: solid #27955B 2px; width: 60%; margin-left: 40%; margin-top: 15px;">
 				<div style="position: absolute; width: 75%; top: 0; left: 0%; padding-top: 10px; text-transform: uppercase;">
 					{{ __('pdf.invoice-total-to-pay') }}
 				</div>
@@ -339,6 +366,51 @@
 					@endif
 				</div>
 			</div>
+
+			@if($vat_low > 0)
+			<div style="position: relative; font-family: 'Barlow Condensed Light Italic'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
+				<div style="position: absolute; width: 75%; top: 0; left: 0%; text-transform: uppercase;">
+					{{ __('pdf.invoice-vat-3-percent') }}
+				</div>
+				<div style="position: absolute; width: 25%; top: 0; left: 74%;">
+					@if($order->with_kulturpass)
+					{{ number_format($vat_low / 2, 2) }}&euro;
+					@else
+					{{ number_format($vat_low, 2) }}&euro;
+					@endif
+				</div>
+			</div>
+			@endif
+
+			@if($vat_med > 0)
+			<div style="position: relative; font-family: 'Barlow Condensed Light Italic'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
+				<div style="position: absolute; width: 75%; top: 0; left: 0%; text-transform: uppercase;">
+					{{ __('pdf.invoice-vat-8-percent') }}
+				</div>
+				<div style="position: absolute; width: 25%; top: 0; left: 74%;">
+					@if($order->with_kulturpass)
+					{{ number_format($vat_med / 2, 2) }}&euro;
+					@else
+					{{ number_format($vat_med, 2) }}&euro;
+					@endif
+				</div>
+			</div>
+			@endif
+
+			@if($vat_high > 0)
+			<div style="position: relative; font-family: 'Barlow Condensed Light Italic'; height: 26px; border-bottom: solid gray 1px; width: 60%; margin-left: 40%;">
+				<div style="position: absolute; width: 75%; top: 0; left: 0%; text-transform: uppercase;">
+					{{ __('pdf.invoice-vat-17-percent') }}
+				</div>
+				<div style="position: absolute; width: 25%; top: 0; left: 74%;">
+					@if($order->with_kulturpass)
+					{{ number_format($vat_high / 2, 2) }}&euro;
+					@else
+					{{ number_format($vat_high, 2) }}&euro;
+					@endif
+				</div>
+			</div>
+			@endif
 
 		</div>
 	</div>

@@ -22,7 +22,11 @@ class CheckKulturpass
             $kulturpass = auth()->user()->kulturpasses()->orderBy('updated_at', 'desc')->first();
             if ($kulturpass->approved && $kulturpass->expiry_date >= Carbon::now()) {
                 session(['has_kulturpass' => true]);
+            } else {
+                $request->session()->forget('has_kulturpass');
             }
+        } else {
+            $request->session()->forget('has_kulturpass');
         }
 
         return $next($request);

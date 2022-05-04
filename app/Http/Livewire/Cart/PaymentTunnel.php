@@ -488,6 +488,10 @@ class PaymentTunnel extends Component
                     break;
             }
 
+            if (session('has_kulturpass') !== null) {
+                $new_order->with_kulturpass = 1;
+            }
+
             if ($new_order->save()) {
                 switch ($payment_type) {
                     case 'card':

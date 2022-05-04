@@ -108,5 +108,8 @@ return array (
   'barlow condensed semibold' => array(
     'normal' => $fontDir . '/barlow_condensed_semibold_normal_0ff29c531f13e46945e06f41d5dab8d3',
   ),
+  'barlow condensed light italic' => array(
+    'normal' => $fontDir . '/barlow_condensed_light_italic_normal_6f5bd502287948c6d407f91df1938a16',
+  ),
 );
 }; ?>
