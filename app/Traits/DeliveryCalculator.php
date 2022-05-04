@@ -103,36 +103,44 @@ trait DeliveryCalculator {
 		],
 	];
 
-	public function calculateDeliveryTotal($weight, $country_code)
+	public function calculateDeliveryTotal($weight, $country_code, $envelope = 0)
 	{
 		if ($country_code == 'collect') {
 			return 0;
 		}
-		
-		if (DeliveryCountry::where('country_code', $country_code)->count() == 0) {
-			$code = 5;
-		} else {
-			$code = DeliveryCountry::where('country_code', $country_code)->first()->delivery_zone;
-		}
-
-		if(!in_array($code, ['1', '2', '3', '4', '5'])) {
-			$code = 5;
-		}
 
 		$delivery_cost = 0;
 
-		$index = 0;
-		foreach ($this->fare_table[$code] as $weight_breakpoint => $amount) {
-			if ($index == 0) {
-				$delivery_cost = $amount;
+		if($envelope == 0) {
+			if (DeliveryCountry::where('country_code', $country_code)->count() == 0) {
+				$code = 5;
+			} else {
+				$code = DeliveryCountry::where('country_code', $country_code)->first()->delivery_zone;
 			}
-			$index ++;
-			if ($weight > $weight_breakpoint) {
-				$delivery_cost = $amount;
-			}
-		}
 
-		$delivery_cost += 2;
+			if(!in_array($code, ['1', '2', '3', '4', '5'])) {
+				$code = 5;
+			}
+
+			$index = 0;
+			foreach ($this->fare_table[$code] as $weight_breakpoint => $amount) {
+				if ($index == 0) {
+					$delivery_cost = $amount;
+				}
+				$index ++;
+				if ($weight > $weight_breakpoint) {
+					$delivery_cost = $amount;
+				}
+			}
+
+			$delivery_cost += 2;
+		} elseif ($envelope == 1) {
+			// Case Envelope MINI
+			$delivery_cost = 2;
+		} elseif ($envelope == 2) {
+			// Case Envelope MAXI
+			$delivery_cost = 3;
+		}
 
 		return $delivery_cost;
 	}
@@ -145,6 +153,8 @@ trait DeliveryCalculator {
 		$total_weight = 0;
 		$country = $cart->order->address->country;
 
+		$envelope = 0; // 0: normal package, use grid - 1: MINI envelope - 2: MAXI envelope
+
 		foreach ($cart->couture_variations as $variation) {
 			if ($variation->name == 'voucher' && $variation->voucher_type !== 'pdf') {
 				$total_weight += 0.02 * $variation->pivot->articles_number;
@@ -155,6 +165,35 @@ trait DeliveryCalculator {
 			}
 		}
 
-		return $this->calculateDeliveryTotal($total_weight, $country);
+		if ($total_weight < 0.045) {
+			$size_mini_ok = 1;
+			$size_maxi_ok = 1;
+			foreach ($cart->couture_variations as $variation) {
+				if ($variation->name !== 'voucher' && $variation->size_category !== 1) {
+					$size_mini_ok = 0;
+				} elseif ($variation->name !== 'voucher' && $variation->size_category == 0) {
+					$size_maxi_ok = 0;
+				}
+			}
+			if ($size_mini_ok) {
+				$envelope = 1;
+			} elseif ($size_maxi_ok) {
+				$envelope = 2;
+			}
+		} elseif ($total_weight < 490) {
+			$size_maxi_ok = 1;
+			foreach ($cart->couture_variations as $variation) {
+				if ($variation->name !== 'voucher' && $variation->size_category == 0) {
+					$size_maxi_ok = 0;
+				}
+			}
+			if ($size_maxi_ok) {
+				$envelope = 2;
+			}
+		} else {
+			$envelope = 0;
+		}
+
+		return $this->calculateDeliveryTotal($total_weight, $country, $envelope);
 	}
 }

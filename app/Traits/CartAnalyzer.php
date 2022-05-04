@@ -70,17 +70,18 @@ trait CartAnalyzer {
 
         if (Cart::where('cart_id', $cart_id)->count() > 0) {
             $cart = Cart::where('cart_id', $cart_id)->first();
-            $total_weight = 0;
+            $delivery_sum = $this->calculateDeliveryTotalFromCart($cart);
+            // $total_weight = 0;
 
-            foreach ($cart->couture_variations as $variation) {
-                $variation_weight = 0;
-                if ($variation->name !== 'voucher') {
-                    $variation_weight = $variation->creation->weight / 1000;
-                }
-                $total_weight += $variation_weight;
-            }
+            // foreach ($cart->couture_variations as $variation) {
+            //     $variation_weight = 0;
+            //     if ($variation->name !== 'voucher') {
+            //         $variation_weight = $variation->creation->weight / 1000;
+            //     }
+            //     $total_weight += $variation_weight;
+            // }
 
-            $delivery_sum = $this->calculateDeliveryTotal($total_weight, $country_code);
+            // $delivery_sum = $this->calculateDeliveryTotal($total_weight, $country_code);
         }
 
         if(session('has_kulturpass') !== null) {
