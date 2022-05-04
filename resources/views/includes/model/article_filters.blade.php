@@ -8,7 +8,13 @@
 				@else
 					<div class="all-models__filter-tag">
 				@endif
+				@if($filter_names['sizes'][$size] == 'unique')
+					{{ __('sidebar.size-unique-sidebar') }}
+				@elseif($filter_names['sizes'][$size] == 'specific')
+					{{ __('components.specific-size') }}
+				@else
 					{{ $filter_names['sizes'][$size] }}
+				@endif
 				</div>
 			</div>
 			@endforeach

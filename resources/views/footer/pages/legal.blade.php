@@ -40,7 +40,7 @@
 			{{ __('footer.legal-txt-5') }}
 		</p>
 		<p class="footer-legal__paragraph">
-			{{ __('footer.legal-txt-6') }} <a href="#">{{ __('footer.legal-txt-general-conditions') }}</a> {{ __('footer.legal-txt-7') }} <a href="#">{{ __('footer.legal-txt-data-protection') }}</a>
+			{{ __('footer.legal-txt-6') }} <a href="#">{{ __('footer.legal-txt-general-conditions') }}</a> {{ __('footer.legal-txt-7') }} <a href="#">{{ __('footer.legal-txt-data-protection') }}</a> {{ __('footer.legal-txt-8') }}.
 		</p>
 	</section>
 @endsection
