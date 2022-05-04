@@ -159,9 +159,9 @@
                     </a>
                     @endif
                 @else
-                    <button class="btn-couture-plain article-sidebar__content__cart-btn" style="height: auto;">
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="inline-block btn-couture-plain article-sidebar__content__cart-btn" style="height: auto;">
                         {{ __('sidebar.order-other') }}
-                    </button>
+                    </a>
                 @endif
 
                 <p class="article-sidebar__content__size-check">
