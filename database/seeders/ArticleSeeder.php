@@ -56,21 +56,21 @@ class ArticleSeeder extends Seeder
     //         ]);
     //     }
 
-    //     for ($i=0; $i < 2; $i++) { 
-    //         DB::connection('mysql')->table('articles')->insert([
-    //             'name' => "Bon d'achat",
-    //             'type' => 'voucher',
-    //             'voucher_value' => "Par tranches de 30",
-    //             'voucher_type' => $vouchertype_options[$i],
-    //             'singularity_lu' => 'Une particularité de cet article, écrit en luxembourgeois',
-    //             'singularity_de' => 'article.singularity-modelname-articlename',
-    //             'singularity_en' => 'Une particularité de cet article, écrit en anglais',
-    //             'singularity_fr' => 'Une particularité de cet article, écrit en français',
-    //             'is_returned' => '0',
-    //             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-    //             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-    //         ]);
-    //     }
+        for ($i=0; $i < 2; $i++) { 
+            DB::connection('mysql')->table('articles')->insert([
+                'name' => "voucher",
+                'is_extra_accessory' => '0',
+                'checked' => '0',
+                'voucher_type' => $vouchertype_options[$i],
+                'singularity_lu' => '',
+                'singularity_de' => '',
+                'singularity_en' => '',
+                'singularity_fr' => '',
+                'is_returned' => '0',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            ]);
+        }
 
     //     DB::connection('mysql')->table('articles')->insert([
     //         'name' => 'malati-01',

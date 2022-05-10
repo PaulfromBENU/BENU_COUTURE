@@ -25,7 +25,7 @@ class AddInvoiceAddressToOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
+        Schema::connection('mysql_common')->table('orders', function (Blueprint $table) {
             $table->dropColumn('invoice_address_id');
         });
     }

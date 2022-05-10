@@ -2,16 +2,16 @@
     <div class="model-overview__header flex justify-between">
         <div>
             <p class="model-overview__header__txt">
-                {{ $model_category }}&nbsp;- {{ $available_articles_count }} {!! trans_choice('components.models-header', $available_articles_count) !!}
+                {{ $model_category }}&nbsp;- {{ $available_articles_count }} {{ trans_choice('components.models-header', $available_articles_count) }}
             </p>
             <div class="flex flex-start">
                 @foreach($available_colors as $id => $color)
-                    @if($color == 'multicolor')
-                        <div class="color-circle" wire:key="{{ $id }}">
+                    @if($color == 'multicolored')
+                        <div class="color-circle" wire:key="{{ $model->id }}-color-{{ $id }}">
                             <img src="{{ asset('images/pictures/multicolor.png') }}">
                         </div>
                     @else
-                        <div class="color-circle color-circle--{{ $color }}" wire:key="{{ $id }}"></div>
+                        <div class="color-circle color-circle--{{ $color }}" wire:key="{{ $model->id }}-color-{{ $id }}"></div>
                     @endif
                 @endforeach
                 <div class="color-circle"></div>

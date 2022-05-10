@@ -28,7 +28,7 @@
                                 @else
                                 {{ __('dashboard.order-payment-paid') }} - 
                                     @if($order->delivery_status <= '1')
-                                    {{ __('dashboard.order-payment-delivery-under-preparation') }}
+                                    {{ __('dashboard.order-delivery-under-preparation') }}
                                     @else
                                     {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
                                         @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif

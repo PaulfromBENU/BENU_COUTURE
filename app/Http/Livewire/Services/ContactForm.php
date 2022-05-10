@@ -84,6 +84,7 @@ class ContactForm extends Component
             }
 
             $this->message_sent = 1;
+            $new_message->origin = 'COUTURE';
             if ($new_message->save()) {
                 $this->message_valid = 1;
                 $this->submit_feedback = __('forms.feedback-message-ok');

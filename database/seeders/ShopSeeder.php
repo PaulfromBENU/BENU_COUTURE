@@ -42,13 +42,13 @@ class ShopSeeder extends Seeder
         ]);
 
         DB::connection('mysql')->table('shops')->insert([
-            'name' => "Pop-up store 1",
+            'name' => "Pop-up store Hamilius",
             'type' => "Pop-up",
             'description_fr' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum neque, mollis a mauris sit amet, condimentum ullamcorper tortor. Donec vel ligula imperdiet ex fermentum finibus ac in nunc. Ut quis commodo nec vel ligula imperdiet ex fermentum finib.",
             'description_en' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum neque, mollis a mauris sit amet, condimentum ullamcorper tortor. Donec vel ligula imperdiet ex fermentum finibus ac in nunc. Ut quis commodo nec vel ligula imperdiet ex fermentum finib.",
             'description_lu' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum neque, mollis a mauris sit amet, condimentum ullamcorper tortor. Donec vel ligula imperdiet ex fermentum finibus ac in nunc. Ut quis commodo nec vel ligula imperdiet ex fermentum finib.",
-            'description_de' => "shops.description-pop-up-1",
-            'address' => "XX rue de XX, Ville, Pays",
+            'description_de' => "shops.description-pop-up-hamilius",
+            'address' => "Place Hamilius, Luxembourg, Luxembourg",
             'phone' => "+xxx xx xx xx xx",
             'website' => "www.xxxx.lu",
             'email' => 'email@gmail.com',
@@ -60,7 +60,7 @@ class ShopSeeder extends Seeder
             'opening_thursday' => "9h-12h / 13h-18h",
             'opening_friday' => "9h-12h / 13h-18h",
             'opening_saturday' => "9h-12h / 13h-18h",
-            'filter_key' => 'pop-up-1',
+            'filter_key' => 'pop-up-hamilius',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
