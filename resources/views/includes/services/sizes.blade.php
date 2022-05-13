@@ -36,7 +36,7 @@
 				<h3>{{ __('services.sizes-unisex') }}</h3>
 				<div class="flex justify-between">
 					<div class="sizes__chapter__img-container">
-						<img src="{{ asset('images/pictures/sizes/taille_femme.png') }}" alt="Unisex sizes" title="Unisex sizes" />
+						<img src="{{ asset('images/pictures/sizes/taille_unisexe.png') }}" alt="Unisex sizes" title="Unisex sizes" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
 						<ul class="sizes__chapter__legend__list" id="sizes-chapter-unisex">

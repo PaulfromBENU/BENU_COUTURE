@@ -640,7 +640,7 @@ trait DataImporter {
                                 $new_photo_rand_id = rand(100, 999);
                                 $new_photo->file_name = 'processed/'.$creation->name.'/'.$new_article->name.'-'.$new_photo_rand_id.''.$article_pic_count.'.png';
                                 $new_photo->use_for_model = 1;
-                                if (strpos($picture->getFilename(), "front") !== false) {
+                                if (strpos($picture->getFilename(), " front ") !== false) {
                                     $new_photo->is_front = '1';
                                 }
                                 $new_photo->title = $creation->name." by BENU COUTURE - Article ".$article_counter;
