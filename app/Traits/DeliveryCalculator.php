@@ -147,11 +147,17 @@ trait DeliveryCalculator {
 
 	public function calculateDeliveryTotalFromCart(Cart $cart)
 	{
-		if ($cart->order->address_id == 0) {
+		if ($cart->order()->count() > 0 && $cart->order->address_id == 0) {
 			return 0;
 		}
+
 		$total_weight = 0;
-		$country = $cart->order->address->country;
+
+		if ($cart->order()->count() > 0) {
+			$country = $cart->order->address->country;
+		} else {
+			$country = "LU";
+		}
 
 		$envelope = 0; // 0: normal package, use grid - 1: MINI envelope - 2: MAXI envelope
 
