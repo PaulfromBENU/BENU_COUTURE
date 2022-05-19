@@ -209,11 +209,11 @@ trait DataImporter {
                     $error_detected = 1;
                 }
 
-                if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
-                    $new_creation->is_accessory = '1';
-                } else {
-                    $new_creation->is_accessory = '0';
-                }
+                // if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
+                //     $new_creation->is_accessory = '1';
+                // } else {
+                //     $new_creation->is_accessory = '0';
+                // }
 
                 if (floatval($creation['price']) != 0) {
                     $new_creation->price = floatval($creation['price']);

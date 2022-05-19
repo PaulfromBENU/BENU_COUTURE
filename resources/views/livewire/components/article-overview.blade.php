@@ -31,7 +31,11 @@
                 @if($article->size->value == 'unique')
                 {{ __('components.unique-size') }}
                 @else
-                {{ $article->size->value }}
+                    @if($article->creation->creation_category->filter_key == 'bonnets')
+                    {{ $article->size->value }}cm
+                    @else
+                    {{ $article->size->value }}
+                    @endif
                 @endif
             </p>
             @if($article->color->name == 'multicolored')

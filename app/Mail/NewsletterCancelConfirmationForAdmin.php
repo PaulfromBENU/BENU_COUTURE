@@ -9,7 +9,7 @@ use Illuminate\Queue\SerializesModels;
 
 use App\Models\User;
 
-class NewsletterConfirmation extends Mailable
+class NewsletterCancelConfirmationForAdmin extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -34,6 +34,6 @@ class NewsletterConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), 'BENU')->subject("Newsletter BENU - Confirmation d'inscription")->view('emails.newsletter-confirmation');
+        return $this->from(env('MAIL_FROM_ADDRESS'), 'BENU')->subject('! Annulation inscription newsletter depuis BENU SLO0W')->view('emails.newsletter-cancellation-for-admin');
     }
 }

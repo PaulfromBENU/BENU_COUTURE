@@ -14,6 +14,7 @@ use App\Models\Partner;
 use App\Models\User;
 use App\Mail\NewsletterConfirmation;
 use App\Mail\NewsletterConfirmationForAdmin;
+use App\Mail\NewsletterCancelConfirmationForAdmin;
 
 use App\Traits\ArticleAnalyzer;
 use App\Traits\DataImporter;
@@ -139,7 +140,7 @@ class GeneralController extends Controller
                 auth()->user()->newsletter = 1;
                 auth()->user()->save();
                 $message = __('auth.newsletter-subscribe-confirm');
-                Mail::to($auth()->user()->email)->send(new NewsletterConfirmation());
+                Mail::to($auth()->user()->email)->send(new NewsletterConfirmation($auth()->user()));
                 Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($auth()->user()));
             }
         } else {
@@ -148,7 +149,7 @@ class GeneralController extends Controller
                 $user->newsletter = 1;
                 $user->save();
                 $message = __('auth.newsletter-subscribe-confirm');
-                Mail::to($user->email)->send(new NewsletterConfirmation());
+                Mail::to($user->email)->send(new NewsletterConfirmation($user));
                 Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($user));
             } else {
                 $user = new User();
@@ -165,7 +166,7 @@ class GeneralController extends Controller
                 $user->general_comment = "";
                 if($user->save()) {
                     $message = __('auth.newsletter-subscribe-confirm');
-                    Mail::to($user->email)->send(new NewsletterConfirmation());
+                    Mail::to($user->email)->send(new NewsletterConfirmation($user));
                     Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($user));
                 }
             }
@@ -173,6 +174,21 @@ class GeneralController extends Controller
 
         return redirect()->route('newsletter-'.session('locale'))->with('success', $message);
 
+    }
+
+    public function cancelNewsletter(string $id)
+    {
+        $user_id = substr($id, 6);
+        if (User::find($user_id)) {
+            $user = User::find($user_id);
+            if ($user->newsletter == '1') {
+                $user->newsletter = 0;
+                $user->save();
+                // Mail::to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin($user));
+                Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterCancelConfirmationForAdmin($user));
+            }
+            return view('newsletter-cancelled');
+        }
     }
 
     public function footerLegal()

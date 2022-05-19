@@ -78,6 +78,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.processed-payment", [], "lu").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-lu');
 
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "lu"), 'GeneralController@showNewsletter')->name('newsletter-lu');
+		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "lu").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-lu');
 
 		Route::get('/'.trans("slugs.invoice", [], "lu").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-lu');
 
@@ -116,6 +117,7 @@ if (app('env') == 'landing') {
 		Route::get('/paiement-valide/{order}', 'SaleController@showValidPayment')->name('payment-processed-fr');
 
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "fr"), 'GeneralController@showNewsletter')->name('newsletter-fr');
+		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "fr").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-fr');
 
 		Route::get('/test-mail', function() {
 			$user = User::find(2);
@@ -155,6 +157,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-en');
 
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "en"), 'GeneralController@showNewsletter')->name('newsletter-en');
+		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "en").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-en');
 
 		Route::get('/'.trans("slugs.invoice", [], "en").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-en');
 
@@ -189,6 +192,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.processed-payment", [], "en").'/{order}', 'SaleController@showValidPayment')->name('payment-processed-de');
 
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "de"), 'GeneralController@showNewsletter')->name('newsletter-de');
+		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "de").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-de');
 
 		Route::get('/'.trans("slugs.invoice", [], "de").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-de');
 

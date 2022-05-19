@@ -19,6 +19,7 @@ class NewsletterConfirmationForAdmin extends Mailable
      * @var \App\Models\User
      */
     public $user;
+    public $locale;
 
     /**
      * Create a new message instance.
@@ -28,6 +29,7 @@ class NewsletterConfirmationForAdmin extends Mailable
     public function __construct(User $user)
     {
         $this->user = $user;
+        $this->locale = session('locale');
     }
 
     /**
