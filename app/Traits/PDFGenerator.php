@@ -43,4 +43,20 @@ trait PDFGenerator {
             return $pdf;
         }
     }
+
+    public function generateReturnPdf($order_code)
+    {
+        if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
+            $order = Order::where('unique_id', $order_code)->first();
+
+            $pdf = PDF::loadView('pdfs.return', compact('order'));
+            $pdf->setPaper('A4', 'landscape');
+            return $pdf;
+        } elseif ($order_code == '0') {
+            $order = null;
+            $pdf = PDF::loadView('pdfs.return', compact('order'));
+            $pdf->setPaper('A4', 'landscape');
+            return $pdf;
+        }
+    }
 }

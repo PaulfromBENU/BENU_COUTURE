@@ -111,5 +111,12 @@ return array (
   'barlow condensed light italic' => array(
     'normal' => $fontDir . '/barlow_condensed_light_italic_normal_6f5bd502287948c6d407f91df1938a16',
   ),
+  'barlow condensed' => array(
+    'normal' => $fontDir . '/barlow_condensed_normal_e68a5a484759254dab85731d494c69e6',
+    '300_italic' => $fontDir . '/barlow_condensed_300_italic_6f5bd502287948c6d407f91df1938a16',
+    '500' => $fontDir . '/barlow_condensed_500_b2abbdaa32d82391c115a7f73f0a4b0b',
+    '500_italic' => $fontDir . '/barlow_condensed_500_italic_5392d0d46d31583dc8163e296c8a0198',
+    '600' => $fontDir . '/barlow_condensed_600_0ff29c531f13e46945e06f41d5dab8d3',
+  ),
 );
 }; ?>

@@ -125,6 +125,8 @@ if (app('env') == 'landing') {
 			return new UserRegistered($user);
 		});
 
+		Route::get('/retour/{order_code}', 'SaleController@displayReturn')->name('return-fr');
+
 		Route::get('/facture/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
 		Route::get('/bon-d-achat/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-fr');
 
