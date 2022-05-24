@@ -139,15 +139,15 @@
 					<tbody>
 						<tr class="grid grid-cols-12">
 							<th class="col-span-3">{{ __('services.sizes-gentlemen-in-confection') }}</th>
-							<th><!-- 34/XS -->{{ __('services.sizes-gentlemen-th-1') }}</th>
-							<th><!-- 36/S -->{{ __('services.sizes-gentlemen-th-2') }}</th>
-							<th><!-- 38/M -->{{ __('services.sizes-gentlemen-th-3') }}</th>
-							<th><!-- 40/L -->{{ __('services.sizes-gentlemen-th-4') }}</th>
-							<th><!-- 42/XL -->{{ __('services.sizes-gentlemen-th-5') }}</th>
-							<th><!-- 44/2XL -->{{ __('services.sizes-gentlemen-th-6') }}</th>
-							<th><!-- 46/3XL -->{{ __('services.sizes-gentlemen-th-7') }}</th>
-							<th><!-- 48/4XL -->{{ __('services.sizes-gentlemen-th-8') }}</th>
-							<th><!-- 50/5XL -->{{ __('services.sizes-gentlemen-th-9') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 34/XS -->{{ __('services.sizes-gentlemen-th-1') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 36/S -->{{ __('services.sizes-gentlemen-th-2') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 38/M -->{{ __('services.sizes-gentlemen-th-3') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 40/L -->{{ __('services.sizes-gentlemen-th-4') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 42/XL -->{{ __('services.sizes-gentlemen-th-5') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 44/2XL -->{{ __('services.sizes-gentlemen-th-6') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 46/3XL -->{{ __('services.sizes-gentlemen-th-7') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-gentlemen-th-8') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-gentlemen-th-9') }}</th>
 						</tr>
 						<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 							<td class="col-span-3">{{ __('services.sizes-gentlemen-table-size') }}</td>
@@ -246,15 +246,15 @@
 					<tbody>
 						<tr class="grid grid-cols-12">
 							<th class="col-span-3">{{ __('services.sizes-ladies-in-confection') }}</th>
-							<th><!-- 34/XS -->{{ __('services.sizes-ladies-th-1') }}</th>
-							<th><!-- 36/S -->{{ __('services.sizes-ladies-th-2') }}</th>
-							<th><!-- 38/M -->{{ __('services.sizes-ladies-th-3') }}</th>
-							<th><!-- 40/L -->{{ __('services.sizes-ladies-th-4') }}</th>
-							<th><!-- 42/XL -->{{ __('services.sizes-ladies-th-5') }}</th>
-							<th><!-- 44/2XL -->{{ __('services.sizes-ladies-th-6') }}</th>
-							<th><!-- 46/3XL -->{{ __('services.sizes-ladies-th-7') }}</th>
-							<th><!-- 48/4XL -->{{ __('services.sizes-ladies-th-8') }}</th>
-							<th><!-- 50/5XL -->{{ __('services.sizes-ladies-th-9') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 34/XS -->{{ __('services.sizes-ladies-th-1') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 36/S -->{{ __('services.sizes-ladies-th-2') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 38/M -->{{ __('services.sizes-ladies-th-3') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 40/L -->{{ __('services.sizes-ladies-th-4') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 42/XL -->{{ __('services.sizes-ladies-th-5') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 44/2XL -->{{ __('services.sizes-ladies-th-6') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 46/3XL -->{{ __('services.sizes-ladies-th-7') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-ladies-th-8') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-ladies-th-9') }}</th>
 						</tr>
 						<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 							<td class="col-span-3">{{ __('services.sizes-ladies-table-size') }}</td>
@@ -353,15 +353,15 @@
 					<tbody>
 						<tr class="grid grid-cols-12">
 							<th class="col-span-3">{{ __('services.sizes-gentlemen-in-confection') }}</th>
-							<th><!-- 34/XS -->{{ __('services.sizes-gentlemen-th-1') }}</th>
-							<th><!-- 36/S -->{{ __('services.sizes-gentlemen-th-2') }}</th>
-							<th><!-- 38/M -->{{ __('services.sizes-gentlemen-th-3') }}</th>
-							<th><!-- 40/L -->{{ __('services.sizes-gentlemen-th-4') }}</th>
-							<th><!-- 42/XL -->{{ __('services.sizes-gentlemen-th-5') }}</th>
-							<th><!-- 44/2XL -->{{ __('services.sizes-gentlemen-th-6') }}</th>
-							<th><!-- 46/3XL -->{{ __('services.sizes-gentlemen-th-7') }}</th>
-							<th><!-- 48/4XL -->{{ __('services.sizes-gentlemen-th-8') }}</th>
-							<th><!-- 50/5XL -->{{ __('services.sizes-gentlemen-th-9') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 34/XS -->{{ __('services.sizes-gentlemen-th-1') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 36/S -->{{ __('services.sizes-gentlemen-th-2') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 38/M -->{{ __('services.sizes-gentlemen-th-3') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 40/L -->{{ __('services.sizes-gentlemen-th-4') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 42/XL -->{{ __('services.sizes-gentlemen-th-5') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 44/2XL -->{{ __('services.sizes-gentlemen-th-6') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 46/3XL -->{{ __('services.sizes-gentlemen-th-7') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-gentlemen-th-8') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-gentlemen-th-9') }}</th>
 						</tr>
 						<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 							<td class="col-span-3">{{ __('services.sizes-gentlemen-table-size') }}</td>
@@ -472,19 +472,19 @@
 					<tbody>
 						<tr class="grid grid-cols-12">
 							<th class="col-span-3">{{ __('services.sizes-kids-in-confection') }}</th>
-							<th><!-- 34/XS -->{{ __('services.sizes-kids-th-1') }}</th>
-							<th><!-- 36/S -->{{ __('services.sizes-kids-th-2') }}</th>
-							<th><!-- 38/M -->{{ __('services.sizes-kids-th-3') }}</th>
-							<th><!-- 40/L -->{{ __('services.sizes-kids-th-4') }}</th>
-							<th><!-- 42/XL -->{{ __('services.sizes-kids-th-5') }}</th>
-							<th><!-- 44/2XL -->{{ __('services.sizes-kids-th-6') }}</th>
-							<th><!-- 46/3XL -->{{ __('services.sizes-kids-th-7') }}</th>
-							<th><!-- 48/4XL -->{{ __('services.sizes-kids-th-8') }}</th>
-							<th><!-- 50/5XL -->{{ __('services.sizes-kids-th-9') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 34/XS -->{{ __('services.sizes-kids-th-1') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 36/S -->{{ __('services.sizes-kids-th-2') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 38/M -->{{ __('services.sizes-kids-th-3') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 40/L -->{{ __('services.sizes-kids-th-4') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 42/XL -->{{ __('services.sizes-kids-th-5') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 44/2XL -->{{ __('services.sizes-kids-th-6') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 46/3XL -->{{ __('services.sizes-kids-th-7') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-kids-th-8') }}</th>
+							<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-kids-th-9') }}</th>
 						</tr>
-						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
-							<td class="col-span-3"><!-- Taille -->{{ __('services.sizes-kids-table-size') }}</td>
-							<td><!-- 168 -->{{ __('services.sizes-kids-size-1') }}</td>
+						<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3">{{ __('services.sizes-kids-table-size') }}</td>
+							<td>{{ __('services.sizes-kids-size-1') }}</td>
 							<td>{{ __('services.sizes-kids-size-2') }}</td>
 							<td>{{ __('services.sizes-kids-size-3') }}</td>
 							<td>{{ __('services.sizes-kids-size-4') }}</td>
@@ -493,7 +493,7 @@
 							<td>{{ __('services.sizes-kids-size-7') }}</td>
 							<td>{{ __('services.sizes-kids-size-8') }}</td>
 							<td>{{ __('services.sizes-kids-size-9') }}</td>
-						</tr>
+						</tr> -->
 						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 							<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-kids-table-info-2') }}</td>
 							<td><!-- 80 -->{{ __('services.sizes-kids-table-info-2-1') }}</td>
@@ -553,6 +553,58 @@
 							<td>{{ __('services.sizes-kids-table-info-6-7') }}</td>
 							<td>{{ __('services.sizes-kids-table-info-6-8') }}</td>
 							<td>{{ __('services.sizes-kids-table-info-6-9') }}</td>
+						</tr>
+						<tr class="text-right">
+							<td class="p-4 pr-5 font-medium">
+								{{ __('services.sizes-info-cm') }}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="sizes__chapter__table">
+					<tbody>
+						<tr class="grid grid-cols-12">
+							<th class="col-span-3">{{ __('services.sizes-kids-in-confection') }}</th>
+							<th class="col-span-1" class="sizes__chapter__table__header"><!-- 34/XS -->{{ __('services.sizes-kids-th-10') }}</th>
+							<th class="col-span-1" class="sizes__chapter__table__header"><!-- 36/S -->{{ __('services.sizes-kids-th-11') }}</th>
+							<th class="col-span-1" class="sizes__chapter__table__header"><!-- 38/M -->{{ __('services.sizes-kids-th-12') }}</th>
+							<th class="col-span-1" class="sizes__chapter__table__header"><!-- 40/L -->{{ __('services.sizes-kids-th-13') }}</th>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-kids-table-info-2') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-2-10') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-2-11') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-2-12') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-2-13') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">C.</span> {{ __('services.sizes-kids-table-info-3') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-3-10') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-3-11') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-3-12') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-3-13') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">D.</span> {{ __('services.sizes-kids-table-info-4') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-4-10') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-4-11') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-4-12') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-4-13') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">E.</span> {{ __('services.sizes-kids-table-info-5') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-5-10') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-5-11') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-5-12') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-5-13') }}</td>
+						</tr>
+						<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
+							<td class="col-span-3"><span class="primary-color">F.</span> {{ __('services.sizes-kids-table-info-6') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-6-10') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-6-11') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-6-12') }}</td>
+							<td>{{ __('services.sizes-kids-table-info-6-13') }}</td>
 						</tr>
 						<tr class="text-right">
 							<td class="p-4 pr-5 font-medium">

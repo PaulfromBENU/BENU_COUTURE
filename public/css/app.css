@@ -3692,7 +3692,7 @@ input[type=checkbox]:focus {
 .sizes__chapter__table th:nth-child(1) {
   color: #D41C1B;
 }
-.sizes__chapter__table__data-rows:nth-child(odd) {
+.sizes__chapter__table__data-rows:nth-child(even) {
   background: #ededed;
 }
 .sizes__chapter__table__data-rows td:nth-child(odd) {
@@ -3707,6 +3707,9 @@ input[type=checkbox]:focus {
 .sizes__chapter__table__data-rows td {
   padding: 4px 10px;
   font-weight: 500;
+}
+.sizes__chapter__table__header {
+  padding-left: 10px;
 }
 
 .return {

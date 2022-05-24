@@ -292,7 +292,7 @@
 			th:nth-child(1) {
 				color: $primary-color;
 			}
-			&__data-rows:nth-child(odd) {
+			&__data-rows:nth-child(even) {
 				background: lighten(lightgrey, 10);
 			}
 			&__data-rows {
@@ -309,6 +309,9 @@
 					padding: 4px 10px;
 					font-weight: 500;
 				}
+			}
+			&__header {
+				padding-left: 10px;
 			}
 		}
 	}
