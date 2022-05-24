@@ -3055,7 +3055,7 @@ input[type=checkbox]:focus {
   width: 44px;
 }
 .footer__social {
-  display: block;
+  display: inline-block;
   height: 60px;
   width: 60px;
   border-radius: 6px;
@@ -3063,6 +3063,7 @@ input[type=checkbox]:focus {
   color: #D41C1B;
   font-size: 2rem;
   padding-top: 6px;
+  margin-right: 10px;
   text-align: center;
   transition: all 0.2s ease-in-out;
 }

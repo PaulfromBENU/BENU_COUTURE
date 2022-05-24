@@ -52,7 +52,11 @@
 					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}">{{ __('footer.footer-contact') }}</a></li>
 				</ul>
 				<h4>{{ __('footer.footer-title-5') }}</h4>
-				<a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
+				<div class="flex justify-start">
+					<a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="footer__social"><i class="fab fa-instagram"></i></a>
+					<a href="#" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
+				</div>
 			</div>
 		</div>
 		<div class="footer__copyright">

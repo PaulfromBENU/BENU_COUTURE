@@ -174,7 +174,7 @@
 		}
 	}
 	&__social {
-		display: block;
+		display: inline-block;
 		height: 60px;
 		width: 60px;
 		border-radius: 6px;
@@ -182,6 +182,7 @@
 		color: $primary-color;
 		font-size: 2rem;
 		padding-top: 6px;
+		margin-right: 10px;
 		text-align: center;
 		transition: $transition-base;
 		&:hover {
