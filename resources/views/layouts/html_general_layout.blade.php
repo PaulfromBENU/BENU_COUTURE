@@ -16,16 +16,6 @@
         <meta name="robots" content="@yield('robots-behaviour-top')" />
         <meta name="keywords" content="@yield('seo-keywords-top')" />
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('static/favicon/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('static/favicon/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('static/favicon/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('static/favicon/site.webmanifest') }}">
-        <link rel="mask-icon" href="{{ asset('static/favicon/safari-pinned-tab.svg') }}" color="#f9941d">
-
-        <meta name="msapplication-TileColor" content="#f9941d">
-        <meta name="theme-color" content="#ffffff">
-
         <!-- Fonts -->
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +24,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">  -->
 
         <!-- Favicon -->
+        <link rel="mask-icon" href="{{ asset('static/favicon/safari-pinned-tab.svg') }}" color="#f9941d">
         <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
         <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png') }}">
         <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-icon-72x72.png') }}">

@@ -12,7 +12,7 @@
 		<div class="text-center harmonica-bar__close">
 			<button>&#x2715;</button>
 		</div>
-		<div class="flex justify-center" style="height: 100%; overflow: hidden;">
+		<div class="flex flex-col lg:flex-row justify-center" style="height: 100%; overflow: hidden;">
 			<div class="harmonica-menu__content__col harmonica-menu__content__col--village">
 				<div class="harmonica-menu__content__col__closed harmonica-menu__content__col__closed--village">
 					<div class="harmonica-menu__content__col__banner">
@@ -31,6 +31,9 @@
 						<h4>BENU VILLAGE ESCH ASBL</h4>
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.village-desc') !!}
+						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.village-desc-mobile') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-village">
@@ -58,6 +61,9 @@
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.sis-desc') !!}
 						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.sis-desc-mobile') !!}
+						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{!! __('header.discover-sis') !!}</a>
 						</div>
@@ -83,8 +89,11 @@
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.sloow-desc') !!}
 						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.sloow-desc-mobile') !!}
+						</div>
 						<div class="text-center">
-							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{!! __('header.discover-sloow') !!}</a>
+							<a href="https://sloow.benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{!! __('header.discover-sloow') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -108,8 +117,11 @@
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.couture-desc') !!}
 						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.couture-desc-mobile') !!}
+						</div>
 						<div class="text-center">
-							<a href="{{ route('home', [app()->getLocale()]) }}" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">{!! __('header.discover-couture') !!}</a>
+							<a href="https://couture.benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">{!! __('header.discover-couture') !!}</a>
 						</div>
 					</div>
 				</div>
@@ -132,6 +144,9 @@
 						<h4>BENU REUSE</h4>
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.reuse-desc') !!}
+						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.reuse-desc-mobile') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://www.benureuse.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-reuse">{!! __('header.discover-reuse') !!}</a>
@@ -158,6 +173,9 @@
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.lasa-desc') !!}
 						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.lasa-desc-mobile') !!}
+						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{!! __('header.discover-lasa') !!}</a>
 						</div>
@@ -183,6 +201,9 @@
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
 							{!! __('header.design-desc') !!}
 						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.design-desc-mobile') !!}
+						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{!! __('header.discover-design') !!}</a>
 						</div>
@@ -206,8 +227,10 @@
 					<div class="harmonica-menu__content__col__open__desc flex flex-col justify-center">
 						<h4>BENU BREAK</h4>
 						<div class="text-center harmonica-menu__content__col__open__desc__text">
-							<!-- {!! __('header.break-desc') !!} -->
-							Tu as besoin de te ressourcer&nbsp;? De prendre ton temps ou tout simplement de trouver de l’inspiration&nbsp;? Et si tu passais quelques jours chez BENU BREAK, la seule chambre d'hôtel avec balcon (!). BENU BREAK se trouve au sein de BENU VILLAGE, un lieu énigmatique, chaleureux et unique, mais surtout un lieu tout simplement idéal.
+							{!! __('header.break-desc') !!}
+						</div>
+						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
+							{!! __('header.break-desc-mobile') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{!! __('header.discover-break') !!}</a>
