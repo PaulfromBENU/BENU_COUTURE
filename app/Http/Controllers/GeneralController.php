@@ -138,6 +138,7 @@ class GeneralController extends Controller
                 $message = __('auth.newsletter-unsubscribe-confirm');
             } else {
                 auth()->user()->newsletter = 1;
+                auth()->user()->favorite_language = session('locale');
                 auth()->user()->save();
                 $message = __('auth.newsletter-subscribe-confirm');
                 Mail::to($auth()->user()->email)->send(new NewsletterConfirmation($auth()->user()));
@@ -147,6 +148,7 @@ class GeneralController extends Controller
             if (User::where('email', $request->newsletter_email)->count() > 0) {
                 $user = User::where('email', $request->newsletter_email)->first();
                 $user->newsletter = 1;
+                $user->favorite_language = session('locale');
                 $user->save();
                 $message = __('auth.newsletter-subscribe-confirm');
                 Mail::to($user->email)->send(new NewsletterConfirmation($user));
@@ -163,6 +165,7 @@ class GeneralController extends Controller
                 $user->first_name = $request->newsletter_first_name;
                 $user->last_name = $request->newsletter_last_name;
                 $user->newsletter = 1;
+                $user->favorite_language = session('locale');
                 $user->general_comment = "";
                 if($user->save()) {
                     $message = __('auth.newsletter-subscribe-confirm');
