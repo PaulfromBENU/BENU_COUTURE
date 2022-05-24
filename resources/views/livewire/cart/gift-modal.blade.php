@@ -83,7 +83,7 @@
             <div class="absolute cart-gift-modal__message__placeholder">
                 {{ __('cart.my-message') }}
             </div>
-            <textarea wire:model="message" class="w-full" rows="5" maxlength="1000" placeholder="{{ __('cart.add-message-max-length') }}"></textarea>
+            <textarea wire:model="message" class="w-full" rows="5" maxlength="250" placeholder="{{ __('cart.add-message-max-length') }}"></textarea>
         </div>
     </div>
 

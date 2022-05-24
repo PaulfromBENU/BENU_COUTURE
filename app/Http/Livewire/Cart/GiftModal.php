@@ -24,7 +24,7 @@ class GiftModal extends Component
     protected $rules = [
         'with_wrapping' => 'nullable|boolean',
         'card_type' => 'nullable|integer',
-        'message' => 'nullable|string|max:1000',
+        'message' => 'nullable|string|max:250',
     ];
 
     public function mount()

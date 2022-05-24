@@ -30,7 +30,7 @@
 
 		<div class="sizes__chapters">
 			<p class="text-left font-medium mb-10">
-				{{ __('services.general-description') }}
+				{{ __('services.general-description') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="primary-color hover:text-gray-800 transition">{{ __('services.general-description-link') }}</a>.
 			</p>
 			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-unisex') }}</h3>
