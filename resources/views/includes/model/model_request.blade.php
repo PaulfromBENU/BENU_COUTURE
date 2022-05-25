@@ -4,6 +4,6 @@
 		{{ __('models.request-txt-1') }}
 	</p>
 	<div class="text-center model-request__link">
-		<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="btn-couture m-auto">{{ __('models.request-link') }}</a>
+		<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="btn-couture m-auto">{{ __('models.request-link') }}</a>
 	</div>
 </section>

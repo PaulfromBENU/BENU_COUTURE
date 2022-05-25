@@ -3982,8 +3982,7 @@ input[type=checkbox]:focus {
   font-size: 1.3rem;
   font-family: "Barlow";
   font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 .contact__moreinfo {
