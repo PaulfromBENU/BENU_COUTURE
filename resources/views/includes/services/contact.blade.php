@@ -14,7 +14,11 @@
 		+352 123 456 789
 	</div>
 	<div class="contact__opening">
-		{!! __('services.contact-opening') !!}
+		{!! __('services.contact-opening-1') !!}
+		<br/>
+		{!! __('services.contact-opening-2') !!}
+		<br/>
+		{!! __('services.contact-opening-3') !!}
 	</div>
 	<div class="contact__moreinfo">
 		{!! __('services.contact-extra-txt') !!}
