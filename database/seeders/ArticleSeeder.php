@@ -60,7 +60,7 @@ class ArticleSeeder extends Seeder
             DB::connection('mysql')->table('articles')->insert([
                 'name' => "voucher",
                 'is_extra_accessory' => '0',
-                'checked' => '0',
+                'checked' => '1',
                 'voucher_type' => $vouchertype_options[$i],
                 'singularity_lu' => '',
                 'singularity_de' => '',

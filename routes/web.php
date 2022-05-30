@@ -80,6 +80,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "lu"), 'GeneralController@showNewsletter')->name('newsletter-lu');
 		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "lu").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-lu');
 
+		Route::get('/'.trans("slugs.return", [], "lu").'/{order_code}', 'SaleController@displayReturn')->name('return-lu');
+
 		Route::get('/'.trans("slugs.invoice", [], "lu").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-lu');
 
 		Route::get('/'.trans("slugs.show-voucher", [], "lu").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-lu');
@@ -161,6 +163,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "en"), 'GeneralController@showNewsletter')->name('newsletter-en');
 		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "en").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-en');
 
+		Route::get('/'.trans("slugs.return", [], "en").'/{order_code}', 'SaleController@displayReturn')->name('return-en');
+
 		Route::get('/'.trans("slugs.invoice", [], "en").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-en');
 
 		Route::get('/'.trans("slugs.show-voucher", [], "en").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-en');
@@ -195,6 +199,8 @@ if (app('env') == 'landing') {
 
 		Route::get('/'.trans("slugs.newsletter-subscribe", [], "de"), 'GeneralController@showNewsletter')->name('newsletter-de');
 		Route::get('/'.trans("slugs.newsletter-unsubscribe", [], "de").'/{id}', 'GeneralController@cancelNewsletter')->name('newsletter-stop-de');
+
+		Route::get('/'.trans("slugs.return", [], "de").'/{order_code}', 'SaleController@displayReturn')->name('return-de');
 
 		Route::get('/'.trans("slugs.invoice", [], "de").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-de');
 

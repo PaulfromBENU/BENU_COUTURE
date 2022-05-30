@@ -19,11 +19,12 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             // Not imported, or simply updated with the importation
-            // ArticleSeeder::class,
+            DeliveryCountrySeeder::class,
+            TranslationSeeder::class,
+            ArticleSeeder::class,
             // UserSeeder::class,
             // PartnerSeeder::class,
             // ShopSeeder::class,
-            // TranslationSeeder::class,
 
             // Imported - Use data importation route
             // ColorSeeder::class,
@@ -44,7 +45,6 @@ class DatabaseSeeder extends Seeder
             // ArticleCompositionSeeder::class,
             // ArticleCareRecommendationSeeder::class,
 
-            DeliveryCountrySeeder::class,
             // BadgeSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
