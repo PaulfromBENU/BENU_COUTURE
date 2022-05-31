@@ -15,7 +15,7 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('articles')->delete();
+        // DB::connection('mysql')->table('articles')->truncate();
         
         $name_options = ['article-01', 'model-02', 'declinaison-03', 'article-name'];
         $mask_options = ['mask-01', 'mask-02', 'mask-03', 'mask-04'];

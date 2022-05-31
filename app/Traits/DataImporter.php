@@ -458,7 +458,7 @@ trait DataImporter {
 
         if (env('APP_ENV') != 'production') {
             // WARNING: will empty the table!! To be used with caution.
-            Article::truncate();
+            // Article::truncate(); Deactivated if seeder used before
             Photo::truncate();
             echo "<strong>--- All data deleted from Articles table in database ---</strong><br/>";
         }
