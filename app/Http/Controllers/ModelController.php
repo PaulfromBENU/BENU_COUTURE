@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
+use App\Models\Article;
 use App\Models\Creation;
 use App\Models\ModelFilter;
 
@@ -123,6 +124,11 @@ class ModelController extends Controller
             ModelFilter::where('session_id', session('secret_id'))->delete();
             $request->session()->forget('secret_id');
         }
+
+        $article_id = 0;
+        if (isset($request->article) && Article::where('name', ucfirst($request->article))->count() > 0) {
+            $article_id = Article::where('name', ucfirst($request->article))->first()->id;
+        }
         
         return view('model', [
             'model' => $creation, 
@@ -135,6 +141,7 @@ class ModelController extends Controller
             'model_pictures' => $model_pictures,
             'filter_names' => $filter_names,
             'initial_filters' => $initial_filters,
+            'article_id' => $article_id,
         ]);
     }
 

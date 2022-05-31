@@ -62,5 +62,16 @@
 @endsection
 
 @section('scripts')
-
+<script type="text/javascript">
+	$(function() {
+		let article_id_request = {{ $article_id }};
+		if (article_id_request !== 0) {
+			$('.modal-opacifier').fadeIn();
+			$('#general-side-modal').fadeIn(500, function() {
+				Livewire.emit('ArticleModalReady', article_id_request);
+			});
+			$('#general-side-modal').css('right', '0');
+		}
+	});
+</script>
 @endsection

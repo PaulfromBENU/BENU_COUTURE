@@ -1,5 +1,5 @@
 <div class="grid grid-cols-8 cart-content__article">
-    <div class="col-span-1 cart-content__article__img-container">
+    <a target="_blank" href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($article->creation->name), 'article' => strtolower($article->name)]) }}" class="block col-span-1 cart-content__article__img-container">
         @if($article->name == 'voucher')
         <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" />
         @elseif($article->photos()->where('is_front', '1')->count() > 0)
@@ -7,7 +7,7 @@
         @else
         <img src="{{ asset('images/pictures/articles/'.$article->photos()->first()->file_name) }}">
         @endif
-    </div>
+    </a>
     <div class="col-span-2 cart-content__article__name">
         @if($article->name == 'voucher')
         <h4>{{ __('cart.voucher') }} ({{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;)</h4>
