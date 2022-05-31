@@ -56,12 +56,12 @@ trait DataImporter {
         if (env('APP_ENV') != 'production') {
             // WARNING: will empty the table!! To be used with caution.
             //ArticleCareRecommendation::truncate();
-            CareRecommendation::truncate();
+            // CareRecommendation::truncate();
             //ArticleComposition::truncate();
             Composition::truncate();
-            Color::truncate();
-            Size::truncate();
-            CreationGroup::truncate();
+            // Color::truncate();
+            // Size::truncate();
+            // CreationGroup::truncate();
             echo "<strong>--- All data deleted from CareRecommendation, Composition, Color, Size, CreationGroup tables in database ---</strong><br/>";
         }
 
@@ -82,10 +82,10 @@ trait DataImporter {
                 } else {
                     $new_care->picture = "services_care_1";
                 }
-                if ($new_care->save()) {
-                    array_push($cares_created, $care['name']);
-                    echo "<span style='color:green;'>New care recommendation ".$care['name']." successfully added to the database :)</span><br/>";
-                }
+                // if ($new_care->save()) {
+                //     array_push($cares_created, $care['name']);
+                //     echo "<span style='color:green;'>New care recommendation ".$care['name']." successfully added to the database :)</span><br/>";
+                // }
             }
         }
 
@@ -98,10 +98,10 @@ trait DataImporter {
                 $new_category->name_de = $category['name_de'];
                 $new_category->translation_key = $category['translation_key'];
                 $new_category->filter_key = $category['filter_key'];
-                if ($new_category->save()) {
-                    array_push($categories_created, $category['filter_key']);
-                    echo "<span style='color:green;'>New creation category ".$category['name_fr']." successfully added to the database :)</span><br/>";
-                }
+                // if ($new_category->save()) {
+                //     array_push($categories_created, $category['filter_key']);
+                //     echo "<span style='color:green;'>New creation category ".$category['name_fr']." successfully added to the database :)</span><br/>";
+                // }
             }
         }
 
@@ -110,10 +110,10 @@ trait DataImporter {
                 $new_color = new Color();
                 $new_color->name = strtolower($color['name_en']);
                 $new_color->hex_code = $color['hex_code'];
-                if ($new_color->save()) {
-                    array_push($colors_created, $color['name_en']);
-                    echo "<span style='color:green;'>New color ".$color['name_en']." successfully added to the database :)</span><br/>";
-                }
+                // if ($new_color->save()) {
+                //     array_push($colors_created, $color['name_en']);
+                //     echo "<span style='color:green;'>New color ".$color['name_en']." successfully added to the database :)</span><br/>";
+                // }
             }
         }
 
@@ -130,7 +130,7 @@ trait DataImporter {
                 $new_composition->explanation_de = $composition['explanation_de'];
                 $new_composition->explanation_fr = $composition['explanation_fr'];
                 $new_composition->translation_key_explanation = $composition['translation_key_explanation'];
-                $new_composition->picture = "cotton.jpg";
+                $new_composition->picture = $composition['picture'];
                 if ($new_composition->save()) {
                     array_push($compositions_created, $composition['fabric_fr']);
                     echo "<span style='color:green;'>New composition ".$composition['fabric_fr']." successfully added to the database :)</span><br/>";
@@ -143,10 +143,10 @@ trait DataImporter {
                 $new_size = new Size();
                 $new_size->value = $size['value'];
                 $new_size->category = $size['category'];
-                if ($new_size->save()) {
-                    array_push($sizes_created, $size['value']);
-                    echo "<span style='color:green;'>New size ".$size['value']." successfully added to the database :)</span><br/>";
-                }
+                // if ($new_size->save()) {
+                //     array_push($sizes_created, $size['value']);
+                //     echo "<span style='color:green;'>New size ".$size['value']." successfully added to the database :)</span><br/>";
+                // }
             }
         }
 
@@ -159,10 +159,10 @@ trait DataImporter {
                 $new_type->name_en = $type['name_en'];
                 $new_type->filter_key = $type['filter_key'];
                 $new_type->translation_key = $type['translation_key'];
-                if ($new_type->save()) {
-                    array_push($types_created, $type['name_fr']);
-                    echo "<span style='color:green;'>New type ".$type['name_fr']." successfully added to the database :)</span><br/>";
-                }
+                // if ($new_type->save()) {
+                //     array_push($types_created, $type['name_fr']);
+                //     echo "<span style='color:green;'>New type ".$type['name_fr']." successfully added to the database :)</span><br/>";
+                // }
             }
         }
 
@@ -480,24 +480,34 @@ trait DataImporter {
                 $all_pictures = File::allFiles(public_path('images/pictures/articles/to_be_processed/'.strtoupper($creation->name)));
                 foreach ($all_pictures as $picture) {
                     $picture_info = explode(" ", $picture->getFilename());
+                    $color_options = [
+                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
+                    ];
+
+                    if (in_array(explode("_", $picture_info[2])[0], $color_options)) {
+                        $color_index = 2;
+                    } else {
+                        $color_index = 1;
+                    }
+
                     if ($creation->is_accessory == '0') {
                         if(count($picture_info) == 10) {
-                            $color_index = 2;
+                            // $color_index = 2;
                             $size_index = 9;
                         } else {
-                            $color_index = 1;
+                            // $color_index = 1;
                             $size_index = 8;
                         }
                     } else {
                         if (count($picture_info) == 10) {
-                            $color_index = 2;
+                            // $color_index = 2;
                             $size_index = 9;
                         }
                         elseif(count($picture_info) == 9) {
-                            $color_index = 2;
+                            // $color_index = 2;
                             $size_index = 8;
                         } else {
-                            $color_index = 2;
+                            // $color_index = 2;
                             $size_index = 100; //Not used
                         }
                     }
@@ -536,7 +546,7 @@ trait DataImporter {
                             $picture_main_color  = 'multicolored';
                         } elseif (in_array($picture_main_color, ['pink', 'rose', 'baby', 'salmon', 'lightrose'])) {
                             $picture_main_color  = 'pink';
-                        } elseif (in_array($picture_main_color, ['deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender'])) {
+                        } elseif (in_array($picture_main_color, ['deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'deep', 'old'])) {
                             $picture_main_color  = 'purple';
                         } elseif (in_array($picture_main_color, ['bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet'])) {
                             $picture_main_color  = 'red';
@@ -680,7 +690,7 @@ trait DataImporter {
 
                                     // Determine if article is sold or in stock. Only handles Benu Esch shop and Hamilius pop-up.
                                     //$new_article->shops()->detach();
-                                    if (strpos(strtolower($picture->getPath()), 'Hamilius') !== false) {
+                                    if (strpos(strtolower($picture->getPath()), 'hamilius') !== false) {
                                         if (!($new_article->shops->contains(Shop::where('filter_key', 'pop-up-hamilius')->first()->id))) {
                                             $pop_up_id = Shop::where('filter_key', 'pop-up-hamilius')->first()->id;
                                             if (strpos(strtolower($picture->getPath()), 'sold') !== false) {
@@ -827,7 +837,7 @@ trait DataImporter {
                 //     $new_category->translation_key = $page.'.'.$key;
                 //     if ($new_category->save()) {
                 //         echo "<span style='color: green; padding-left: 10px;'>Category ".$key." translated in the database</span><br/>";
-                //     }
+                //     } 
                 if ($page == 'shops' && $key == 'description-benu-village') {
                     $new_shop = Shop::where('filter_key', 'benu-esch')->first();
                     $new_shop->description_de = $translation['de'];

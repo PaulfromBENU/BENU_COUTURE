@@ -18,10 +18,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            // Not imported, or simply updated with the importation
+            // Required before importation, to clear updated tables and relationship tables
+            ArticlePhotoSeeder::class,
+            ArticleShopSeeder::class,
+            ArticleCareRecommendationSeeder::class,
+            ArticleCompositionSeeder::class,
             DeliveryCountrySeeder::class,
             TranslationSeeder::class,
             ArticleSeeder::class,
+
+            // Required before importation only in case of common DB update
             // UserSeeder::class,
             // PartnerSeeder::class,
             // ShopSeeder::class,
@@ -40,10 +46,6 @@ class DatabaseSeeder extends Seeder
             // ArticleSeeder::class,
             // PhotoSeeder::class,
             // CreationKeywordSeeder::class,
-            // ArticleShopSeeder::class,
-            // ArticlePhotoSeeder::class,
-            // ArticleCompositionSeeder::class,
-            // ArticleCareRecommendationSeeder::class,
 
             // BadgeSeeder::class,
         ]);

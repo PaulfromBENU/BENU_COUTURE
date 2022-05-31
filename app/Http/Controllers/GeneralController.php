@@ -111,13 +111,15 @@ class GeneralController extends Controller
             set_time_limit(3600);
             // $this->createModelsFolders();
             // Article::query()->update(['checked' => '1']);
+
+            // Run db:seed before executing the following, to fully clear and reset data before import
             echo "*** Importation started...<br/>";
             // $this->importDataFromSophie();
             // $this->importCreationsFromLou();
             // $this->importCreationsFromSabine();
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
-            $this->importTranslations();
+            // $this->importTranslations();
         } else {
             return redirect()->route('login-fr');
         }

@@ -15,7 +15,7 @@ class ArticleShopSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('article_shop')->delete();
+        DB::connection('mysql')->table('article_shop')->truncate();
 
         // for ($i=1; $i <= 42; $i++) { 
         //     DB::connection('mysql')->table('article_shop')->insert([

@@ -15,7 +15,7 @@ class ArticlePhotoSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('article_photo')->delete();
+        DB::connection('mysql')->table('article_photo')->truncate();
 
         // for ($i=1; $i <= 42; $i++) { 
         //     DB::connection('mysql')->table('article_photo')->insert([
