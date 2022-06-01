@@ -399,10 +399,10 @@
 
 			@if($vat_high > 0)
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%; ">
+				<div style="position: absolute; width: 74%; top: 4px; left: 0%; ">
 					{{ __('pdf.invoice-vat-17-percent') }}
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
+				<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
 					@if($order->with_kulturpass)
 					{{ number_format($vat_high / 2, 2) }}&euro;
 					@else
@@ -418,7 +418,7 @@
 		<p style="position: absolute; padding-top: 5px; left: 0; width: 50%;">
 			<span style="font-family: 'Barlow Condensed SemiBold';">BENU VILLAGE ESCH ASBL</span> | RCS F11364 | TVA : LU 30223580
 		</p>
-		<p style="text-align: right; position: absolute; left: 50%; width: 50%;">
+		<p style="text-align: right; position: absolute; padding-top: 5px; left: 50%; width: 50%;">
 			IBAN | BCEELULL LU63 0019 5055 5246 0000
 		</p>
 	</footer>
