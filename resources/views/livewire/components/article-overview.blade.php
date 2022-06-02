@@ -6,7 +6,7 @@
             <div class="article-overview__img-container__partner-icon__content flex justify-between">
                 <div class="flex flex-col justify-center">
                     <p class="pl-2 pr-2 text-sm">
-                        <em>{{ __('components.other-shop') }}</em>
+                        <em>{{ $article->available_shops()->first()->name }}</em>
                     </p>
                 </div>
                 <div>
@@ -54,10 +54,18 @@
         </p>
         <div class="flex justify-between">
             <p class="article-overview__footer__price">
-                @if(session('has_kulturpass') !== null)
-                    {{ round($article->creation->price / 2, 2) }}&euro;
+                @if($article->is_extra_accessory)
+                    @if(session('has_kulturpass') !== null)
+                        {{ round($article->specific_price / 2, 2) }}&euro;
+                    @else
+                        {{ $article->specific_price }}&euro;
+                    @endif
                 @else
-                    {{ $article->creation->price }}&euro;
+                    @if(session('has_kulturpass') !== null)
+                        {{ round($article->creation->price / 2, 2) }}&euro;
+                    @else
+                        {{ $article->creation->price }}&euro;
+                    @endif
                 @endif
             </p>
             @auth

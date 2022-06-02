@@ -94,10 +94,18 @@
                     {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
                 @endif
             @else
-                @if(session('has_kulturpass') !== null)
-                    {{ round($article->creation->price / 2, 2) }}&euro;
+                @if($article->is_extra_accessory)
+                    @if(session('has_kulturpass') !== null)
+                        {{ round($article->specific_price / 2, 2) }}&euro;
+                    @else
+                        {{ $article->specific_price }}&euro;
+                    @endif
                 @else
-                    {{ $article->creation->price }}&euro;
+                    @if(session('has_kulturpass') !== null)
+                        {{ round($article->creation->price / 2, 2) }}&euro;
+                    @else
+                        {{ $article->creation->price }}&euro;
+                    @endif
                 @endif
             @endif
 

@@ -275,7 +275,11 @@
                         @endif -->
 
                         <p class="dashboard-orders__details__articles__article__desc__price">
+                            @if($article->is_extra_accessory)
+                            {{ $article->pivot->articles_number * $article->specific_price }}&euro;
+                            @else
                             {{ $article->pivot->articles_number * $article->creation->price }}&euro;
+                            @endif
                         </p>
                         @endif
                     </div>

@@ -20,7 +20,7 @@ trait VariationPhotoHandler {
         if ($img->width() > $img->height()) {
             $img->rotate(-90);
         }
-        $img->resize(560, 747, function ($constraint) {
+        $img->resize(504, 672, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         });

@@ -21,7 +21,7 @@
                         </p>
                         @endif
                         <p>
-                            {{ $address->zip_code }} {{ $address->city }}
+                            {{ $address->zip_code }} {{ $address->city }}, {{ $address->country }}
                         </p>
                         <p>
                             {{ $address->phone }}

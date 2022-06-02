@@ -160,7 +160,11 @@
 									{{ strtoupper($article->name) }}
 								</p>
 								<p style="position: absolute; width: 15%; top: 0; left: 50%; text-align: center;">
+									@if($article->is_extra_accessory == '1')
+									{{ $article->specific_price }}&euro;
+									@else
 									{{ $article->creation->price }}&euro;
+									@endif
 								</p>
 								<p style="position: absolute; width: 35%; top: 0; left: 65%; text-align: center;"></p>
 							</div>

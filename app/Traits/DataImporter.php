@@ -1,5 +1,5 @@
 <?php
-
+// if (strpos(strtolower($picture->getPath()), 'replacement') !== false)
 namespace App\Traits;
 
 //use Illuminate\Support\Facades\Storage;
@@ -13,6 +13,7 @@ use App\Models\CareRecommendation;
 use App\Models\Color;
 use App\Models\Composition;
 use App\Models\Creation;
+use App\Models\CreationAccessory;
 use App\Models\CreationCategory;
 use App\Models\CreationGroup;
 use App\Models\CreationKeyword;
@@ -185,90 +186,96 @@ trait DataImporter {
         $creations_already_present = [];
         $missing_categories = [];
 
+        $replacements = [
+            'JENTINKI' => 'BOBOCA'
+        ];
+
         foreach ($new_creations as $creation) {
             echo "<br/>";
-            $new_creation = new Creation();
-            //$category_id = 0;
-            $error_detected = 0;
+            if (!isset($replacements[$creation['name']])) {
+                $new_creation = new Creation();
+                //$category_id = 0;
+                $error_detected = 0;
 
-            if (!isset($creation['rental_enabled'])) {
-                $creation['rental_enabled'] = 0;
-            }
-
-            if (!isset($creation['partner_id'])) {
-                $creation['partner_id'] = "";
-            }
-
-            if (Creation::where('name', $creation['name'])->count() == 0) {
-                $new_creation->creation_category_id = null;
-                if(is_string($creation['name']) && strlen($creation['name']) > 1) {
-                    $creation['name'] = strtoupper($creation['name']);
-                    $new_creation->name = $creation['name'];
-                } else {
-                    echo "<span style='color:red;'>!!! ".$creation['name'].": name is not correct...</span><br/>";
-                    $error_detected = 1;
+                if (!isset($creation['rental_enabled'])) {
+                    $creation['rental_enabled'] = 0;
                 }
 
-                // if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
-                //     $new_creation->is_accessory = '1';
-                // } else {
-                //     $new_creation->is_accessory = '0';
-                // }
+                if (!isset($creation['partner_id'])) {
+                    $creation['partner_id'] = "";
+                }
 
-                if (floatval($creation['price']) != 0) {
-                    $new_creation->price = floatval($creation['price']);
-                } else {
-                    $error_detected = 1;
-                    echo "<span style='color:red;'>!!! ".$creation['name'].": price". $creation['price'] ." is not correct... Creation not imported to database.</span><br/>";
-                    //echo "<span style='color:red;'>".$creation['name']."</span><br/>";
-                    array_push($creations_failed, $creation['name']);
-                }
-                if (intval($creation['Weight [g]']) != 0) {
-                    $new_creation->weight = floatval($creation['Weight [g]']);
-                }
-                $new_creation->description_lu = $creation['description_lu'];
-                $new_creation->description_fr = $creation['description_fr'];
-                $new_creation->description_de = $creation['description_de'];
-                $new_creation->description_en = $creation['description_en'];
-                if($creation['origin_link_en'] == "/") {
-                    $new_creation->origin_link_en = "";
-                } else {
-                    $new_creation->origin_link_en = $creation['origin_link_en'];
-                }
-                if($creation['origin_link_fr'] == "/") {
-                    $new_creation->origin_link_fr = "";
-                } else {
-                    $new_creation->origin_link_fr = $creation['origin_link_fr'];
-                }
-                if($creation['origin_link_de'] == "/") {
-                    $new_creation->origin_link_de = "";
-                } else {
-                    $new_creation->origin_link_de = $creation['origin_link_de'];
-                }
-                if($creation['origin_link_lu'] == "/") {
-                    $new_creation->origin_link_lu = "";
-                } else {
-                    $new_creation->origin_link_lu = $creation['origin_link_lu'];
-                }
-                $new_creation->rental_enabled = $creation['rental_enabled'];
-                if ($creation['partner_id'] == "") {
-                    $new_creation->partner_id = null;
-                } else if(is_int($creation['partner_id'])) {
-                    $new_creation->partner_id = $creation['partner_id'];
-                }
-                
-                if ($error_detected == 0 && $new_creation->save()) {
-                    echo "<span style='color:green;'>".$creation['name']." successfully added to the database :)</span><br/>";
-                    array_push($creations_success, $creation['name']);
-                } else {
-                    if (!in_array($creation['name'], $creations_failed)) {
-                        array_push($creations_failed, $creation['name']);
-                        echo "<span style='color:red;'>*** ".$creation['name']." could not added to the database :(</span><br/>";
+                if (Creation::where('name', $creation['name'])->count() == 0) {
+                    $new_creation->creation_category_id = null;
+                    if(is_string($creation['name']) && strlen($creation['name']) > 1) {
+                        $creation['name'] = strtoupper($creation['name']);
+                        $new_creation->name = $creation['name'];
+                    } else {
+                        echo "<span style='color:red;'>!!! ".$creation['name'].": name is not correct...</span><br/>";
+                        $error_detected = 1;
                     }
+
+                    // if (strpos(strtolower($creation['desc_loubna']), 'accessoire') !== false) {
+                    //     $new_creation->is_accessory = '1';
+                    // } else {
+                    //     $new_creation->is_accessory = '0';
+                    // }
+
+                    if (floatval($creation['price']) != 0) {
+                        $new_creation->price = floatval($creation['price']);
+                    } else {
+                        $error_detected = 1;
+                        echo "<span style='color:red;'>!!! ".$creation['name'].": price". $creation['price'] ." is not correct... Creation not imported to database.</span><br/>";
+                        //echo "<span style='color:red;'>".$creation['name']."</span><br/>";
+                        array_push($creations_failed, $creation['name']);
+                    }
+                    if (intval($creation['Weight [g]']) != 0) {
+                        $new_creation->weight = floatval($creation['Weight [g]']);
+                    }
+                    $new_creation->description_lu = $creation['description_lu'];
+                    $new_creation->description_fr = $creation['description_fr'];
+                    $new_creation->description_de = $creation['description_de'];
+                    $new_creation->description_en = $creation['description_en'];
+                    if($creation['origin_link_en'] == "/") {
+                        $new_creation->origin_link_en = "";
+                    } else {
+                        $new_creation->origin_link_en = $creation['origin_link_en'];
+                    }
+                    if($creation['origin_link_fr'] == "/") {
+                        $new_creation->origin_link_fr = "";
+                    } else {
+                        $new_creation->origin_link_fr = $creation['origin_link_fr'];
+                    }
+                    if($creation['origin_link_de'] == "/") {
+                        $new_creation->origin_link_de = "";
+                    } else {
+                        $new_creation->origin_link_de = $creation['origin_link_de'];
+                    }
+                    if($creation['origin_link_lu'] == "/") {
+                        $new_creation->origin_link_lu = "";
+                    } else {
+                        $new_creation->origin_link_lu = $creation['origin_link_lu'];
+                    }
+                    $new_creation->rental_enabled = $creation['rental_enabled'];
+                    if ($creation['partner_id'] == "") {
+                        $new_creation->partner_id = null;
+                    } else if(is_int($creation['partner_id'])) {
+                        $new_creation->partner_id = $creation['partner_id'];
+                    }
+                    
+                    if ($error_detected == 0 && $new_creation->save()) {
+                        echo "<span style='color:green;'>".$creation['name']." successfully added to the database :)</span><br/>";
+                        array_push($creations_success, $creation['name']);
+                    } else {
+                        if (!in_array($creation['name'], $creations_failed)) {
+                            array_push($creations_failed, $creation['name']);
+                            echo "<span style='color:red;'>*** ".$creation['name']." could not added to the database :(</span><br/>";
+                        }
+                    }
+                } else {
+                    array_push($creations_already_present, $creation['name']);
+                    echo "<span style='color:orange;'>ooo ".$creation['name']." was already present in the database.</span><br/>";
                 }
-            } else {
-                array_push($creations_already_present, $creation['name']);
-                echo "<span style='color:orange;'>ooo ".$creation['name']." was already present in the database.</span><br/>";
             }
         }
     }
@@ -470,6 +477,7 @@ trait DataImporter {
         $missing_colors = [];
         $missing_sizes = [];
 
+
         foreach (Creation::where('creation_category_id', '<>', null)->get() as $creation) {
 
             $article_counter = 1;
@@ -479,7 +487,8 @@ trait DataImporter {
                 // Check if folder with model name exists
                 $all_pictures = File::allFiles(public_path('images/pictures/articles/to_be_processed/'.strtoupper($creation->name)));
                 foreach ($all_pictures as $picture) {
-                    $picture_info = explode(" ", $picture->getFilename());
+                    $picture_name = trim($picture->getFilename());
+                    $picture_info = explode(" ", $picture_name);
                     $color_options = [
                         'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
                     ];
@@ -616,17 +625,13 @@ trait DataImporter {
                                 $new_article->singularity_de = "article.singularity-".strtolower($creation->name)."-".$new_article->name;
                                 $new_article->translation_key = "article.singularity-".strtolower($new_article->name);
                                 $new_article->creation_date = $picture_info[6];
-                                //$new_article->picture_name = $picture->getFilename();
-
-                                if (strpos(strtolower($picture->getPath()), 'replacement') !== false) {
-                                    $new_article->is_extra_accessory = 1;
-                                }
+                                //$new_article->picture_name = $picture_name;
 
                                 $new_article->checked = 1;
 
                                 if ($new_article->save()) {
                                     $article_counter ++;
-                                    echo "<span style='color: green; padding-top: 5px;'>New article ".$new_article->name." created for model ".strtoupper($creation->name).", with color ".$picture_main_color.", secondary color ". $picture_secondary_color ." and size ".$picture_size.", from file ".$picture->getFilename()."</span><br/>";
+                                    echo "<span style='color: green; padding-top: 5px;'>New article ".$new_article->name." created for model ".strtoupper($creation->name).", with color ".$picture_main_color.", secondary color ". $picture_secondary_color ." and size ".$picture_size.", from file ".$picture_name."</span><br/>";
                                 }
                             }
 
@@ -650,7 +655,7 @@ trait DataImporter {
                                 $new_photo_rand_id = rand(100, 999);
                                 $new_photo->file_name = 'processed/'.$creation->name.'/'.$new_article->name.'-'.$new_photo_rand_id.''.$article_pic_count.'.png';
                                 $new_photo->use_for_model = 1;
-                                if (strpos($picture->getFilename(), " front ") !== false) {
+                                if (strpos($picture_name, " front ") !== false) {
                                     $new_photo->is_front = '1';
                                 }
                                 $new_photo->title = $creation->name." by BENU COUTURE - Article ".$article_counter;
@@ -683,7 +688,7 @@ trait DataImporter {
                                 if ($new_photo->save() && $img_saved) {
 
                                     $success_number ++;
-                                    echo "<span style='color: green; padding-left: 10px;'>New picture added for article ".$new_article->name." of model ".strtoupper($creation->name).", from file ".$picture->getFilename()."</span><br/>";
+                                    echo "<span style='color: green; padding-left: 10px;'>New picture added for article ".$new_article->name." of model ".strtoupper($creation->name).", from file ".$picture_name."</span><br/>";
 
                                     //$new_article->photos()->detach();
                                     $new_article->photos()->attach($new_photo->id);
@@ -711,7 +716,7 @@ trait DataImporter {
                                 }
                             }
                         } else {
-                            echo "<span style='color: red;'>*** Wrong size or color for ".$picture->getFilename()." of creation ".strtoupper($creation->name).", could not be imported. Color is ".$picture_main_color." and size is ".$picture_size."</span><br/>";
+                            echo "<span style='color: red;'>*** Wrong size or color for ".$picture_name." of creation ".strtoupper($creation->name).", could not be imported. Color is ".$picture_main_color." and size is ".$picture_size."</span><br/>";
                             $failure_number ++;
                         }
 
@@ -724,7 +729,7 @@ trait DataImporter {
 
                         if (Size::where('value', $picture_size)->count() == 0) {
                             if ($picture_size == '0') {
-                                echo "Missing size for file ".$picture->getFilename()."<br/>";
+                                echo "Missing size for file ".$picture_name."<br/>";
                                 $missing_sizes_number ++;
                             }
                             // if (!in_array($picture_size, $missing_sizes) && $picture_size != '0') {
@@ -733,16 +738,236 @@ trait DataImporter {
                             // }
                         }
                     } else {
-                        echo "<span style='color: red;'>*** Wrong file name format for picture ".$picture->getFilename()." of creation ".strtoupper($creation->name)."</span><br/>";
-                        // echo "<span style='color: red;'>".$picture->getFilename()." of creation ".strtoupper($creation->name)."</span><br/>";
+                        echo "<span style='color: red;'>*** Wrong file name format for picture ".$picture_name." of creation ".strtoupper($creation->name).".  File size is ".count($picture_info).".</span><br/>";
+                        // echo "<span style='color: red;'>".$picture_name." of creation ".strtoupper($creation->name)."</span><br/>";
                         $failure_number ++;
                     }
-                    // echo "<br/>".$picture->getFilename()."<br/>";
+                    // echo "<br/>".$picture_name."<br/>";
                     // echo $picture->getPath()."<br/>";
                     $pic_count ++;
                 }
             }
         }
+
+
+        // Replacement elements handling
+        $replacements = [
+            'JENTINKI' => 'BOBOCA',
+        ];
+
+        $replacements_prices = [
+            'JENTINKI' => 50,
+        ];
+
+        foreach ($replacements as $replacement => $creation) {
+            $article_counter = 1;
+            $article_pic_count = 0;
+            
+            $replacement_creation_id = 0;
+            if (Creation::where('name', strtoupper($creation))->count() > 0) {
+                $replacement_creation_id = Creation::where('name', strtoupper($creation))->first()->id;
+            }
+            if (File::exists(public_path('images/pictures/articles/to_be_processed/'.strtoupper($replacement)))) {
+            // Check if folder with model name exists
+                $all_replacement_pictures = File::allFiles(public_path('images/pictures/articles/to_be_processed/'.strtoupper($replacement)));
+                foreach ($all_replacement_pictures as $replacement_picture) {
+                    $picture_info = explode(" ", trim($replacement_picture->getFilename()));
+                    $color_options = [
+                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
+                    ];
+
+                    if (in_array(explode("_", $picture_info[2])[0], $color_options)) {
+                        $color_index = 2;
+                    } else {
+                        $color_index = 1;
+                    }
+
+                    if (count($picture_info) == 10) {
+                        // $color_index = 2;
+                        $size_index = 9;
+                    }
+                    elseif(count($picture_info) == 9) {
+                        // $color_index = 2;
+                        $size_index = 8;
+                    } else {
+                        // $color_index = 2;
+                        $size_index = 100; //Not used
+                    }
+
+                    if(count($picture_info) >= 8 && count($picture_info) <= 10) {
+                        // Get first three colors from picture file name
+                        $picture_colors = $picture_info[$color_index];
+                        $picture_main_color = explode("_", $picture_colors)[0];
+                        if (isset(explode("_", $picture_colors)[1])) {
+                            $picture_secondary_color = explode("_", $picture_colors)[1];
+                        } else {
+                            $picture_secondary_color = null;
+                        }
+                        if (isset(explode("_", $picture_colors)[2])) {
+                            $picture_third_color = explode("_", $picture_colors)[2];
+                        } else {
+                            $picture_third_color = null;
+                        }
+
+                        // Convert color to one of the existing colors based on Excel file equivalence
+                        if (in_array($picture_main_color, ['beige', 'wool', 'caramel'])) {
+                            $picture_main_color  = 'beige';
+                        } elseif (in_array($picture_main_color, ['black', 'back', 'dark'])) {
+                            $picture_main_color  = 'black';
+                        } elseif (in_array($picture_main_color, ['babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal'])) {
+                            $picture_main_color  = 'blue';
+                        } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown'])) {
+                            $picture_main_color  = 'brown';
+                        } elseif (in_array($picture_main_color, ['denim', 'jeans', 'jean'])) {
+                            $picture_main_color  = 'denim';
+                        } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss'])) {
+                            $picture_main_color  = 'green';
+                        } elseif (in_array($picture_main_color, ['darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey'])) {
+                            $picture_main_color  = 'grey';
+                        } elseif (in_array($picture_main_color, ['floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive'])) {
+                            $picture_main_color  = 'multicolored';
+                        } elseif (in_array($picture_main_color, ['pink', 'rose', 'baby', 'salmon', 'lightrose'])) {
+                            $picture_main_color  = 'pink';
+                        } elseif (in_array($picture_main_color, ['deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'deep', 'old'])) {
+                            $picture_main_color  = 'purple';
+                        } elseif (in_array($picture_main_color, ['bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet'])) {
+                            $picture_main_color  = 'red';
+                        } elseif (in_array($picture_main_color, ['cream', 'creamwhite', 'white', 'whtie', 'creamy'])) {
+                            $picture_main_color  = 'white';
+                        } elseif (in_array($picture_main_color, ['golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone'])) {
+                            $picture_main_color  = 'yellow';
+                        } elseif (in_array($picture_main_color, ['orange'])) {
+                            $picture_main_color  = 'orange';
+                        }
+
+                        if (isset($picture_info[$size_index]) && in_array($picture_info[$size_index], ['Unique', 'unique', 'unique(1)'])) {
+                            $picture_size = "unique";
+                        } elseif (count($picture_info) >= 9 && isset($picture_info[$size_index])) {
+                            if (explode(".", $picture_info[$size_index])[0] == 'All') {
+                                $picture_size = "unique";
+                            } else {
+                                $picture_size = explode(".", $picture_info[$size_index])[0];
+                            }
+                        } else {
+                            $picture_size = "unique";
+                        }
+                        
+                        if ($picture_size  == 'M(1)') {
+                            $picture_size = 'M';
+                        }
+                        if ($picture_size  == '2XL') {
+                            $picture_size = 'XXL';
+                        }
+                        if ($picture_size  == 'XL(1)') {
+                            $picture_size = 'XL';
+                        }
+                        
+                        if (Color::where('name', $picture_main_color)->count() > 0 && Size::where('value', $picture_size)->count() > 0) {
+                            $color_id  = Color::where('name', $picture_main_color)->first()->id;
+                            $size_id = Size::where('value', $picture_size)->first()->id;
+
+                            if (Article::where('creation_id', $replacement_creation_id)
+                                         ->where('color_id', $color_id)
+                                         ->where('secondary_color', $picture_secondary_color)
+                                         ->where('third_color', $picture_third_color)
+                                         ->where('size_id', $size_id)
+                                         ->where('is_extra_accessory', '1')
+                                         ->count() == 0) {
+
+                                $article_pic_count = 0;
+
+                                $new_replacement = new Article();
+                                $new_replacement->name = ucfirst(strtolower($replacement)).'-'.str_pad($article_counter, 3, '0', STR_PAD_LEFT);
+                                //$new_article->type  = "article";
+                                $new_replacement->creation_id = $replacement_creation_id;
+                                $new_replacement->is_extra_accessory = 1;
+
+                                $new_replacement->size_id = $size_id;
+                                $new_replacement->color_id = $color_id;
+                                $new_replacement->secondary_color = $picture_secondary_color;
+                                $new_replacement->third_color = $picture_third_color;
+                                $new_replacement->singularity_lu = "";
+                                $new_replacement->singularity_fr = "";
+                                $new_replacement->singularity_en = "";
+                                $new_replacement->singularity_de = "article.singularity-".strtolower($replacement)."-".$new_replacement->name;
+                                $new_replacement->translation_key = "article.singularity-".strtolower($new_replacement->name);
+                                $new_replacement->creation_date = $picture_info[6];
+
+                                $new_replacement->checked = 1;
+
+                                $new_replacement->specific_price = $replacements_prices[$replacement];
+
+                                if ($new_replacement->save()) {
+                                    $article_counter ++;
+                                    echo "<span style='color: green; padding-top: 5px;'>New replacement ".$new_replacement->name." created for model ".strtoupper($creation).", with color ".$picture_main_color.", secondary color ". $picture_secondary_color ." and size ".$picture_size.", from file ".$replacement_picture->getFilename()."</span><br/>";
+                                }
+                            }
+
+                            if(Article::where('creation_id', $replacement_creation_id)
+                                         ->where('color_id', $color_id)
+                                         ->where('secondary_color', $picture_secondary_color)
+                                         ->where('third_color', $picture_third_color)
+                                         ->where('size_id', $size_id)
+                                         ->where('is_extra_accessory', '1')
+                                         ->count() == 1) {
+
+                                $new_replacement = Article::where('creation_id', $replacement_creation_id)
+                                         ->where('color_id', $color_id)
+                                         ->where('secondary_color', $picture_secondary_color)
+                                         ->where('third_color', $picture_third_color)
+                                         ->where('size_id', $size_id)
+                                         ->where('is_extra_accessory', '1')
+                                         ->first();
+
+                                $article_pic_count ++;
+
+                                $new_photo = new Photo();
+                                $new_photo_rand_id = rand(100, 999);
+                                $new_photo->file_name = 'processed/'.strtoupper($creation).'/'.$new_replacement->name.'-'.$new_photo_rand_id.''.$article_pic_count.'.png';
+                                $new_photo->use_for_model = 1;
+                                if (strpos($replacement_picture->getFilename(), " front ") !== false) {
+                                    $new_photo->is_front = '1';
+                                }
+                                $new_photo->title = $creation." by BENU COUTURE - Article ".$article_counter;
+                                $new_photo->author = "BENU Village Esch Asbl";
+
+                                $img = Image::make($replacement_picture);
+                                $img_saved = $this->savePhotoWithWatermark($img, $creation, $new_replacement->name, $article_pic_count, $new_photo_rand_id);
+
+                                if ($new_photo->save() && $img_saved) {
+
+                                    $success_number ++;
+                                    echo "<span style='color: green; padding-left: 10px;'>New picture added for article ".$new_replacement->name." of model ".strtoupper($creation).", from file ".$replacement_picture->getFilename()."</span><br/>";
+
+                                    $new_replacement->photos()->attach($new_photo->id);
+
+                                    // Determine if article is sold or in stock. Only handles Benu Esch shop and Hamilius pop-up.
+                                    if (strpos(strtolower($replacement_picture->getPath()), 'hamilius') !== false) {
+                                        if (!($new_replacement->shops->contains(Shop::where('filter_key', 'pop-up-hamilius')->first()->id))) {
+                                            $pop_up_id = Shop::where('filter_key', 'pop-up-hamilius')->first()->id;
+                                            $new_replacement->shops()->attach($pop_up_id, ['stock' => '1']);
+                                        }
+                                    } else {
+                                        if (!($new_replacement->shops->contains(Shop::where('filter_key', 'benu-esch')->first()->id))) {
+                                            $new_replacement->shops()->attach(1, ['stock' => '1']);
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            echo "<span style='color: red;'>*** Wrong size or color for ".$replacement_picture->getFilename()." of creation ".strtoupper($creation).", could not be imported. Color is ".$picture_main_color." and size is ".$picture_size."</span><br/>";
+                            $failure_number ++;
+                        }
+                    } else {
+                        echo "<span style='color: red;'>*** Wrong file name format for picture ".$replacement_picture->getFilename()." of creation ".strtoupper($creation)."</span><br/>";
+                        $failure_number ++;
+                    }
+                    $pic_count ++;
+                }
+            }
+        }
+
+
         $success_rate = round(($success_number / $pic_count) * 100);
         echo "Nombre de photos non vendues avec la taille 0 : ".$missing_sizes_number."<br/>";
         echo "Taux de réussite : ".$success_rate."%";

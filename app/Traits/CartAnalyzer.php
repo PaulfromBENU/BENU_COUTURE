@@ -25,7 +25,11 @@ trait CartAnalyzer {
                     $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
                     // Add extra 5 euros for clothe voucher here if required
                 } else {
-                    $article_amount = $variation->pivot->articles_number * $variation->creation->price;
+                    if ($variation->is_extra_accessory == '1') {
+                        $article_amount = $variation->pivot->articles_number * $variation->specific_price;
+                    } else {
+                        $article_amount = $variation->pivot->articles_number * $variation->creation->price;
+                    }
                     // if ($variation->pivot->with_extra_article == '1') {
                     //     $article_amount += $variation->pivot->articles_number * $this->extra_pillow_price;
                     // }

@@ -216,7 +216,11 @@
 						{{ strtoupper($article->name) }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
+						@if($article->is_extra_accessory == '1')
+						{{ round($article->specific_price / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@else
 						{{ round($article->creation->price / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
 						{{ $article->creation->tva_value }}%
@@ -225,18 +229,34 @@
 						{{ $article->pivot->articles_number }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 85%;">
+						@if($article->is_extra_accessory == '1')
+						{{ number_format($article->specific_price * $article->pivot->articles_number, 2) }}&euro;
+						@else
 						{{ number_format($article->creation->price * $article->pivot->articles_number, 2) }}&euro;
+						@endif
 					</div>
 					@php 
-						$sum_before_voucher += $article->creation->price * $article->pivot->articles_number; 
-						$sum_without_tax += ($article->creation->price / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
-						if($article->creation->tva_value < 4) {
-							$vat_low += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.03);
-						} elseif ($article->creation->tva_value < 10) {
-							$vat_med += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.08);
+						if($article->is_extra_accessory == '1') {
+							$sum_before_voucher += $article->specific_price * $article->pivot->articles_number;
+							$sum_without_tax += ($article->specific_price / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
+							if($article->creation->tva_value < 4) {
+								$vat_low += $article->pivot->articles_number * $article->specific_price * (1 - 1/1.03);
+							} elseif ($article->creation->tva_value < 10) {
+								$vat_med += $article->pivot->articles_number * $article->specific_price * (1 - 1/1.08);
+							} else {
+								$vat_high += $article->pivot->articles_number * $article->specific_price * (1 - 1/1.17);
+							}
 						} else {
-							$vat_high += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.17);
-						}
+							$sum_before_voucher += $article->creation->price * $article->pivot->articles_number;
+							$sum_without_tax += ($article->creation->price / (1 + $article->creation->tva_value/100)) * $article->pivot->articles_number;
+							if($article->creation->tva_value < 4) {
+								$vat_low += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.03);
+							} elseif ($article->creation->tva_value < 10) {
+								$vat_med += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.08);
+							} else {
+								$vat_high += $article->pivot->articles_number * $article->creation->price * (1 - 1/1.17);
+							}
+						} 
 					@endphp
 				</div>
 				@if($article->pivot->with_extra_article)

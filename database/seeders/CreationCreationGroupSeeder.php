@@ -14,7 +14,7 @@ class CreationCreationGroupSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('creation_creation_group')->delete();
+        DB::connection('mysql')->table('creation_creation_group')->truncate();
 
         // for ($i=1; $i <= 8; $i++) { 
         //     DB::connection('mysql')->table('creation_creation_group')->insert([
