@@ -1,7 +1,8 @@
 <section class="dashboard flex justify-start">
     <div class="dashboard__nav">
         <div style="position: sticky; top: 150px;">
-            <h2 class="dashboard__nav__title">@if(date('H') > 22 || date('H') < 6) {{ __('dashboard.nav-hello-evening') }}, @else {{ __('dashboard.nav-hello-day') }}, @endif <strong>{{ Auth::user()->first_name }}</strong></h2>
+            <h2 class="dashboard__nav__title">{{ __('dashboard.nav-hello') }}, <strong>{{ Auth::user()->first_name }}</strong></h2>
+            <!-- <h2 class="dashboard__nav__title">@if(date('H') > 22 || date('H') < 6) {{ __('dashboard.nav-hello-evening') }}, @else {{ __('dashboard.nav-hello-day') }}, @endif <strong>{{ Auth::user()->first_name }}</strong></h2> -->
             <ul class="dashboard__nav__links">
                 <li>
                     <a wire:click="changeSection('overview')" class="btn-slider-left dashboard__nav__link @if($section == 'overview') dashboard__nav__link--active @endif">
