@@ -35,8 +35,8 @@ class CartArticle extends Component
 
         if (Article::find($this->article_id) && Article::find($this->article_id)->name == 'voucher') {
             $this->max_number = 100;
-        } elseif (Article::find($this->article_id) && Article::find($this->article_id)->shops()->where('filter_key', 'benu-esch')->first()->pivot->stock > 1) {
-            $this->max_number = Article::find($this->article_id)->shops()->where('filter_key', 'benu-esch')->first()->pivot->stock;
+        } elseif (Article::find($this->article_id) && Article::find($this->article_id)->pending_shops()->first()->pivot->stock > 1) {
+            $this->max_number = Article::find($this->article_id)->pending_shops()->first()->pivot->stock;
         } else {
             $this->max_number = 1;
         }

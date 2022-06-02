@@ -151,7 +151,7 @@
 					@break
 
 					@default
-					{{ __('pdf.invoice-bak-transfer') }}
+					{{ __('pdf.invoice-bank-transfer') }}
 					@break
 				@endswitch
 			</p>

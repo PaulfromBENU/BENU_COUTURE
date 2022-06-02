@@ -15,7 +15,7 @@
         <h4>{{ strtoupper($article->name) }}</h4>
         @endif
         @if($article->pending_shops()->where('filter_key', '<>', 'benu-esch')->count() > 0)
-        <button class=" mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3" wire:click="showInfoModal">
+        <button class=" mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3 hover:text-white hover:bg-gray-800 transition" wire:click="showInfoModal">
             {{ __('cart.in-pop-up-store') }} +
         </button>
         @endif
