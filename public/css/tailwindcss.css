@@ -2113,6 +2113,10 @@ select {
 .hover\:bg-gray-500\/5:hover {
   background-color: rgb(107 114 128 / 0.05);
 }
+.hover\:bg-gray-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
 .hover\:bg-gray-600\/20:hover {
   background-color: rgb(75 85 99 / 0.2);
 }
@@ -2130,10 +2134,6 @@ select {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-.hover\:bg-gray-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;

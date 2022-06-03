@@ -45,6 +45,17 @@ return [
             'auth_mode' => null,
         ],
 
+        'smtp_admin' => [
+            'transport' => 'smtp',
+            'host' => env('MAIL_HOST', 'ssl0.ovh.net'),
+            'port' => env('MAIL_PORT', 465),//587
+            'encryption' => env('MAIL_ENCRYPTION_ADMIN', 'tls'),
+            'username' => env('MAIL_USERNAME_ADMIN'),
+            'password' => env('MAIL_PASSWORD_ADMIN'),
+            'timeout' => null,
+            'auth_mode' => null,
+        ],
+
         'ses' => [
             'transport' => 'ses',
         ],

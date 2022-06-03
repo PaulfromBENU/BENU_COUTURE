@@ -21,10 +21,10 @@ class NewsletterConfirmation extends Mailable
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(User $user, string $locale)
     {
         $this->user = $user;
-        $this->locale = session('locale');
+        $this->locale = $locale;
     }
 
     /**

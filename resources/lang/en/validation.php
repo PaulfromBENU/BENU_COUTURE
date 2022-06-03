@@ -157,6 +157,29 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'email' => "The email",
+        'register_password' => "Password",
+        'register_company' => "Company",
+        'register_phone' => "Phone",
+        'register_gender' => "Gender",
+        'register_first_name' => "First Name",
+        'register_last_name' => "Last Name",
+        'register_age' => "Age",
+        'register_legal' => "The agreement checkbox",
+        'register_newsletter' => "The newsletter checkbox",
+        'register_address_name' => "Address Name",
+        'register_address_first_name' => "Address First Name",
+        'register_address_last_name' => "Address Last Name",
+        'register_address_number' => "Address Street Number",
+        'register_address_street' => "Address Street",
+        'register_address_floor' => "Address Floor",
+        'register_address_city' => "Address City",
+        'register_address_zip' => "Address ZIP Code",
+        'register_address_phone' => "Address Phone",
+        'register_address_country' => "Address Country",
+        'register_address_other' => "Address additional information",
+        'register_kulturpass' => "Kulturpass file",
+    ],
 
 ];

@@ -132,4 +132,41 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Custom Validation Attributes
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used to swap our attribute placeholder
+    | with something more reader friendly such as "E-Mail Address" instead
+    | of "email". This simply helps us make our message more expressive.
+    |
+    */
+
+    'attributes' => [
+        'email' => "L'adresse e-mail",
+        'register_password' => "Le mot de passe",
+        'register_company' => "L'entreprise",
+        'register_phone' => "Le téléphone",
+        'register_gender' => "Le genre",
+        'register_first_name' => "Le prénom",
+        'register_last_name' => "Le nom de famille",
+        'register_age' => "L'âge",
+        'register_legal' => "La case âge et droits juridiques",
+        'register_newsletter' => "La case newsletter",
+        'register_address_name' => "Le nom de l'adresse",
+        'register_address_first_name' => "Le prénom pour l'adresse",
+        'register_address_last_name' => "Le nom de famille pour l'adresse",
+        'register_address_number' => "Le numéro de rue",
+        'register_address_street' => "Le nom de la rue",
+        'register_address_floor' => "L'étage de l'adresse",
+        'register_address_city' => "La ville de l'adresse",
+        'register_address_zip' => "Le code postal de l'adresse",
+        'register_address_phone' => "Le téléphone de l'adresse",
+        'register_address_country' => "Le pays de l'adresse",
+        'register_address_other' => "Les informations additionnelles de l'adresse",
+        'register_kulturpass' => "Le fichier Kulturpass",
+    ],
 ];
