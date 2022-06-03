@@ -18,20 +18,29 @@
     </div>
     <div>
         <p>
-            <strong>Bonjour,</strong>
+            <strong>{{ __('emails.newsletter-confirmation-hello') }} {{ ucfirst($user->first_name) }},</strong>
         </p>
         <p>
-            Nous confirmons ton inscription à notre newsletter, et nous t'en remercions.
+            {{ __('emails.newsletter-confirmation-txt-1') }} : {{ strtoupper($user->favorite_language) }}. {{ __('emails.newsletter-confirmation-txt-2') }}
+        </p>
+        <p>
+            {{ __('emails.newsletter-confirmation-info-1') }}
+        </p>
+        <p>
+            {{ __('emails.newsletter-confirmation-cancellation') }}
         </p>
         <p>
             Si tu souhaites te désinscrire, tu peux cliquer <a href="{{ route('newsletter-stop-'.$locale, ['id' => rand(10, 99).rand(10, 99).rand(10, 99).$user->id]) }}" style="color: #27955B">ici</a>.
         </p>
 
         <p>
-            À bientôt sur nos plates-formes ou dans notre magasin !
+            {{ __('emails.newsletter-confirmation-conclusion') }}
         </p>
         <p>
-            <em><strong>L'équipe BENU</strong></em>
+            {{ __('emails.newsletter-confirmation-regards') }}
+        </p>
+        <p>
+            <em><strong>{{ __('emails.newsletter-confirmation-your-team') }} BENU</strong></em>
         </p>
     </div>
 </body>
