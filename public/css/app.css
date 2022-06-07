@@ -780,12 +780,12 @@ input[type=checkbox]:focus {
   transform: scale(1);
 }
 .model-overview__img-container {
-  height: min(60vh, 700px);
   background: #FFFFFF;
   margin-top: 22px;
   margin-bottom: 33px;
   overflow: hidden;
   position: relative;
+  aspect-ratio: 3/4;
 }
 .model-overview__img-container img {
   min-height: 100%;
