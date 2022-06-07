@@ -36,7 +36,7 @@ class VoucherPdf extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), 'BENU')
+        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')
                     ->subject('Votre bon cadeau BENU')
                     ->view('emails.voucher-pdf')
                     ->attachData($this->pdf_voucher->output(), 'BENU_Voucher_'.$this->voucher->unique_code.'.pdf', [

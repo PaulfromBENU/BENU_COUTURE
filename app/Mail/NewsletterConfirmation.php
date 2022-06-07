@@ -34,6 +34,6 @@ class NewsletterConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), 'info@benusloow.lu')->subject("Newsletter BENU - Confirmation d'inscription")->view('emails.newsletter-confirmation');
+        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject("Newsletter BENU - Confirmation d'inscription")->view('emails.newsletter-confirmation');
     }
 }

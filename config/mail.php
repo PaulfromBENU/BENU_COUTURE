@@ -43,6 +43,8 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'auth_mode' => null,
+            'admin_receiver' => env('MAIL_TO_ADMIN_ADDRESS'),
+            'sender' => env('MAIL_FROM_ADDRESS'),
         ],
 
         'smtp_admin' => [
@@ -54,6 +56,8 @@ return [
             'password' => env('MAIL_PASSWORD_ADMIN'),
             'timeout' => null,
             'auth_mode' => null,
+            'admin_receiver' => env('MAIL_TO_ADMIN_ADDRESS'),
+            'sender' => env('MAIL_FROM_ADDRESS_ADMIN'),
         ],
 
         'ses' => [
