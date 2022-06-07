@@ -133,7 +133,6 @@ return [
         ],
     ],
 
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -146,27 +145,28 @@ return [
     */
 
     'attributes' => [
-        'email' => "L'adresse e-mail",
-        'register_password' => "Le mot de passe",
-        'register_company' => "L'entreprise",
-        'register_phone' => "Le téléphone",
-        'register_gender' => "Le genre",
-        'register_first_name' => "Le prénom",
-        'register_last_name' => "Le nom de famille",
-        'register_age' => "L'âge",
-        'register_legal' => "La case âge et droits juridiques",
-        'register_newsletter' => "La case newsletter",
-        'register_address_name' => "Le nom de l'adresse",
-        'register_address_first_name' => "Le prénom pour l'adresse",
-        'register_address_last_name' => "Le nom de famille pour l'adresse",
-        'register_address_number' => "Le numéro de rue",
-        'register_address_street' => "Le nom de la rue",
-        'register_address_floor' => "L'étage de l'adresse",
-        'register_address_city' => "La ville de l'adresse",
-        'register_address_zip' => "Le code postal de l'adresse",
-        'register_address_phone' => "Le téléphone de l'adresse",
-        'register_address_country' => "Le pays de l'adresse",
-        'register_address_other' => "Les informations additionnelles de l'adresse",
-        'register_kulturpass' => "Le fichier Kulturpass",
+        'email' => "D'E-Mail Adress",
+        'register_password' => "D'Passwuert",
+        'register_company' => "D'Entreprise",
+        'register_phone' => "D'Telefonsnummer",
+        'register_gender' => "D'Geschlecht",
+        'register_first_name' => "De Virnumm",
+        'register_last_name' => "De Familljennumm",
+        'register_age' => "Den Alter",
+        'register_legal' => "Legal Alter an Rechter",
+        'register_newsletter' => "D’Newsletter",
+        'register_address_name' => "Den Numm vun der Adress",
+        'register_address_first_name' => "Den Virnumm fir d'Adress",
+        'register_address_last_name' => "De Familljennumm fir d'Adress",
+        'register_address_number' => "Hausnummer",
+        'register_address_street' => "Den Numm vun der Strooss",
+        'register_address_floor' => "Adresszousaz",
+        'register_address_city' => "D'Stad fir d'Adress",
+        'register_address_zip' => "De Postleitzuel fir d'Adress",
+        'register_address_phone' => "D'Telefonsnummer fir d'Adress",
+        'register_address_country' => "D'Land fir d'Adress",
+        'register_address_other' => "Zousätzlech Informatioun fir d'Adress",
+        'register_kulturpass' => "D'Dokument Kulturpass",
+
     ],
 ];

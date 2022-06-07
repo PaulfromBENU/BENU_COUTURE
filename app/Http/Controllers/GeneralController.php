@@ -119,7 +119,7 @@ class GeneralController extends Controller
             // $this->importCreationsFromSabine();
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
-            // $this->importTranslations();
+            $this->importTranslations();
         } else {
             return redirect()->route('login-fr');
         }

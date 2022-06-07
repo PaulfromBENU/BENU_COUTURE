@@ -1,4 +1,5 @@
 {
+    "The :attribute must contain at least one uppercase and one lowercase letter.": ":attribute doit contenir au moins une majuscule et une minuscule.",
     "30 Days": "30 jours",
     "60 Days": "60 jours",
     "90 Days": "90 jours",

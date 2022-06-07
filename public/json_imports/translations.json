@@ -480,7 +480,7 @@
     "lu": "D'Kreatioune vu BENU COUTURE"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-sweater",
     "de": "Pullover",
     "fr": "Pulls",
@@ -488,7 +488,7 @@
     "lu": "Pullover"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-home-accessories",
     "de": "zu Hause",
     "fr": "Maison",
@@ -496,7 +496,7 @@
     "lu": "Doheem"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-jacket",
     "de": "Jacken",
     "fr": "Blousons",
@@ -504,7 +504,7 @@
     "lu": "Jacketten"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-ladies-shirts",
     "de": "Frauen-Blusen",
     "fr": "Blouses femme",
@@ -512,7 +512,7 @@
     "lu": "Fraen-Blusen"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-sleep-masks",
     "de": "",
     "fr": "",
@@ -520,7 +520,7 @@
     "lu": ""
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-ladies-trousers",
     "de": "Frauen-Hosen",
     "fr": "Pantalons femme",
@@ -528,7 +528,7 @@
     "lu": "Fraen-Boxen"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-gentlement-cardigans",
     "de": "Männer-Vesten",
     "fr": "Gilets homme",
@@ -536,7 +536,7 @@
     "lu": "Männer Vesten"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.other-words-gentlement-vests",
     "de": "Männer-Jacken",
     "fr": "Vestes homme",
@@ -544,7 +544,7 @@
     "lu": "Männer Jacketten"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.icon-clothes",
     "de": "Kleidung",
     "fr": "Vêtements",
@@ -552,7 +552,7 @@
     "lu": "Kleeder"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.icon-accessories",
     "de": "Accessoires",
     "fr": "Accessoires",
@@ -560,7 +560,7 @@
     "lu": "Accessoiren"
   },
   {
-    "page": "",
+    "page": "Home",
     "key": "welcome.icon-home",
     "de": "zu Hause",
     "fr": "Maison",
@@ -4241,14 +4241,6 @@
   },
   {
     "page": "Créations",
-    "key": "header.menu-title-1",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Créations",
     "key": "header.see-all-home-creations",
     "de": "Alles für zu Hause ansehen",
     "fr": "Voir tout pour la maison",
@@ -4633,7 +4625,7 @@
   },
   {
     "page": "Créations",
-    "key": "colors.multicolor",
+    "key": "colors.multicolored",
     "de": "Bunt",
     "fr": "Multicolore",
     "en": "Multicolored",
@@ -5410,10 +5402,10 @@
   {
     "page": "Newsletter",
     "key": "auth.newsletter-subscribe-confirm",
-    "de": "Der BENU Newsletter wurde erfolgreich gekündigt.",
-    "fr": "La newsletter BENU a été annulée avec succès.",
-    "en": "The BENU newsletter has been successfully cancelled.",
-    "lu": "De BENU Newsletter gouf erfollegräich gekënnegt."
+    "de": "Deine Anfrage, Dein Abonnement des Newsletters zu kündigen ist bei BENU eingegangen und wird schnellst möglich bearbeitet. Du erhälst eine Bestätigung per E-Mail, sobald die Kündigung des Newsletters abgeschlossen ist.",
+    "fr": "Ta demande d'annulation de ton abonnement à la newsletter a été reçue par BENU et sera traitée dans les plus brefs délais. Tu recevras une confirmation par e-mail dès que la résiliation de la newsletter aura été effectuée.",
+    "en": "Your request to cancel your subscription to the newsletter has been received by BENU and will be processed as soon as possible. You will receive an e-mail confirmation as soon as the cancellation of the newsletter has been completed.",
+    "lu": ""
   },
   {
     "page": "Newsletter",
@@ -5961,6 +5953,14 @@
   },
   {
     "page": "Mon compte",
+    "key": "dashboard.nav-hello",
+    "de": "Hallo",
+    "fr": "Bonjour,",
+    "en": "Hello",
+    "lu": "Moien"
+  },
+  {
+    "page": "Mon compte",
     "key": "dashboard.nav-hello-evening",
     "de": "Guten Abend",
     "fr": "Bonsoir",
@@ -5998,14 +5998,6 @@
     "fr": "Mes commandes",
     "en": "My orders",
     "lu": "Meng Bestellungen"
-  },
-  {
-    "page": "Mon compte",
-    "key": "dashboard.order-articles",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
   },
   {
     "page": "Mon compte",
@@ -6206,6 +6198,230 @@
     "fr": "Bon d'achat",
     "en": "Voucher",
     "lu": "Bong"
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-delivery-address",
+    "de": "",
+    "fr": "Adresse de livraison",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-invoice-address",
+    "de": "",
+    "fr": "Adresse de facturation",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-order-number",
+    "de": "",
+    "fr": "Facture",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-order-number",
+    "de": "",
+    "fr": "Ton N° de commande",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-date",
+    "de": "",
+    "fr": "Date de facturation",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-payment-method",
+    "de": "",
+    "fr": "Mode de paiement",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-bank-transfer",
+    "de": "",
+    "fr": "Virement",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-method-card",
+    "de": "",
+    "fr": "Carte bancaire",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-vouchers",
+    "de": "",
+    "fr": "Bons d'achat",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-payment-status",
+    "de": "",
+    "fr": "Facture",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-payment-pending",
+    "de": "Zahlung ausstehend",
+    "fr": "En attente de paiement",
+    "en": "Payment pending",
+    "lu": "Bezuelung steet aus"
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-paid",
+    "de": "Zahlung eingegangen",
+    "fr": "Paiement reçu",
+    "en": "Payment received",
+    "lu": "Bezuelung ass agaang"
+  },
+  {
+    "page": "order facture",
+    "key": "pdf.invoice-article",
+    "de": "Artikel",
+    "fr": "Article",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-unit-price-ht",
+    "de": "",
+    "fr": "Prix HTVA",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-vta-number",
+    "de": "",
+    "fr": "Taux TVA",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-quantity",
+    "de": "",
+    "fr": "Quantité",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-price- with-tax",
+    "de": "",
+    "fr": "Prix TTC",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-gift-wrap",
+    "de": "Geschenkverpackung",
+    "fr": "Emballage cadeau",
+    "en": "Gift wrapping",
+    "lu": "Kaddosverpackung"
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-aditionnal-pillow",
+    "de": "Extra Kissenbezug",
+    "fr": "Taie d'oreiller supplémentaire",
+    "en": "Extra pillowcase",
+    "lu": "Extra Kappzich"
+  },
+  {
+    "page": "Mon compte",
+    "key": "PDF.INVOICE-TOTAL",
+    "de": "TOTAL",
+    "fr": "TOTAL",
+    "en": "TOTAL",
+    "lu": "TOTAL"
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-delivery-fees",
+    "de": "Versandkosten",
+    "fr": "Frais de livraison",
+    "en": "Shipping costs",
+    "lu": "Liwwerkäschten"
+  },
+  {
+    "page": "Mon compte",
+    "key": "PDF.INVOICE-TOTAL-TO-PAY",
+    "de": "",
+    "fr": "Total à payer",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-vat-17-percent",
+    "de": "",
+    "fr": "Dont TVA 17%",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-vat-3-percent",
+    "de": "",
+    "fr": "Dont TVA 3%",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-vat-8-percent",
+    "de": "",
+    "fr": "Dont TVA 8%",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-voucher-use",
+    "de": "",
+    "fr": "Avec voucher",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "pdf.invoice-kulturpass-discount",
+    "de": "Ermäßigung Kulturpass",
+    "fr": "Reduction Kulturpass",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "dashboard.order-return",
+    "de": "Zurück senden",
+    "fr": "",
+    "en": "",
+    "lu": ""
   },
   {
     "page": "Mon compte",
@@ -6810,10 +7026,18 @@
   {
     "page": "Modèle",
     "key": "sidebar.delivery-costs-info-1",
-    "de": "Die Versandkosten richten sich nach Deinem Land und dem Gesamtgewicht Deiner Bestellung. Sobald Du Deinen Wunschartikel in den Warenkorb gelegt hast, werden Dir die geschätzten Versandkosten für die ausgewählten Artikel angezeigt. \n\nWenn Du Deine Bestellung abgibst, werden die definitiven Versandkosten berechnet, je nachdem welche Lieferadresse Du dann auswählst. Du kannst die Versandkosten sparen, indem Du Deine Ware persönlich in unserem Shop in Esch-Alzette abholst.\n\nWie die Versandkosten im Einzelnen berechnet werden, erfährst du hier",
-    "fr": "Les frais de livraison dépendent de ton pays et du poids total de ta commande. Dès que tu as ajouté l'article de ton choix à ton panier, les frais de livraison estimés pour les articles sélectionnés s'affichent. \n\nLorsque tu passes ta commande, les frais de livraison définitifs sont calculés, en fonction de l'adresse de livraison que tu choisis. Tu peux économiser les frais de livraison en venant chercher ta marchandise en personne dans notre boutique à Esch-sur-Alzette.\n\nPour savoir comment les frais d'envoi sont calculés en détail, clique ici",
-    "en": "The shipping costs depend on your country and the total weight of your order. Once you have placed your desired item in the basket, you will be shown the estimated shipping costs for the selected items. \n\nWhen you place your order, the final shipping costs will be calculated depending on the delivery address you choose. You can save the shipping costs by picking up your order in person at our store in Esch-sur-Alzette.\n\nHow the shipping costs are calculated in detail, you can find out here",
-    "lu": "D'Liwwerkäschte riichte sech no Dengem Land an dem Gesamtgewiicht vun Denger Bestellung. Esoubal s Du Däi Wonschartikel an den Akafskierfche geluecht hues, ginn Dir déi estiméiert Liwwerkäschte fir déi ausgewielten Artikelen ugewisen. \n\nWann s Du Deng Bestellung ofschléiss, ginn déi definitiv Liwwerkäschte berechent, déi variéiere je nodeem wéi eng Liwweradress ausgewielt gëtt. Du kanns d'Liwwerkäschte spueren, andeems Du Deng Artikele bei eis an de Shop op Esch-Uelzecht siche kënns.\n\nWéi d'Liwwerkäschten am Detail berechent ginn, gëss Du hei gewuer"
+    "de": "Die Versandkosten richten sich nach Deinem Land und dem Gesamtgewicht Deiner Bestellung. Sobald Du Deinen Wunschartikel in den Warenkorb gelegt hast, werden Dir die geschätzten Versandkosten für die ausgewählten Artikel angezeigt. \n\nWenn Du Deine Bestellung abgibst, werden die definitiven Versandkosten berechnet, je nachdem welche Lieferadresse Du dann auswählst. Du kannst die Versandkosten sparen, indem Du Deine Ware persönlich in unserem Shop in Esch-Alzette abholst.\n\nWie die Versandkosten im Einzelnen berechnet werden, erfährst du",
+    "fr": "Les frais de livraison dépendent de ton pays et du poids total de ta commande. Dès que tu as ajouté l'article de ton choix à ton panier, les frais de livraison estimés pour les articles sélectionnés s'affichent. \n\nLorsque tu passes ta commande, les frais de livraison définitifs sont calculés, en fonction de l'adresse de livraison que tu choisis. Tu peux économiser les frais de livraison en venant chercher ta marchandise en personne dans notre boutique à Esch-sur-Alzette.\n\nPour savoir comment les frais d'envoi sont calculés en détail, clique",
+    "en": "The shipping costs depend on your country and the total weight of your order. Once you have placed your desired item in the basket, you will be shown the estimated shipping costs for the selected items. \n\nWhen you place your order, the final shipping costs will be calculated depending on the delivery address you choose. You can save the shipping costs by picking up your order in person at our store in Esch-sur-Alzette.\n\nHow the shipping costs are calculated in detail, you can find out",
+    "lu": "D'Liwwerkäschte riichte sech no Dengem Land an dem Gesamtgewiicht vun Denger Bestellung. Esoubal s Du Däi Wonschartikel an den Akafskierfche geluecht hues, ginn Dir déi estiméiert Liwwerkäschte fir déi ausgewielten Artikelen ugewisen. \n\nWann s Du Deng Bestellung ofschléiss, ginn déi definitiv Liwwerkäschte berechent, déi variéiere je nodeem wéi eng Liwweradress ausgewielt gëtt. Du kanns d'Liwwerkäschte spueren, andeems Du Deng Artikele bei eis an de Shop op Esch-Uelzecht siche kënns.\n\nInformatiounen wéi d'Liwwerkäschten am Detail berechent ginn, fënnst Du"
+  },
+  {
+    "page": "Modèle",
+    "key": "sidebar.delivery-costs-info-1-link",
+    "de": "hier",
+    "fr": "ici",
+    "en": "here",
+    "lu": "hei"
   },
   {
     "page": "Modèle",
@@ -6826,10 +7050,18 @@
   {
     "page": "Modèle",
     "key": "sidebar.returns-info-1",
-    "de": "Einen Artikel, der Dir nicht gefällt oder passt, kannst Du innerhalb von 28 Tagen nach Versand der Ware an BENU COUTURE zurücksenden. \n\nBitte beachte, dass wir die Rücksendekosten nur bei einer Reklamation (fehlerhafte Ware, falsche Lieferung o.ä.) übernehmen!\n \nWeitere Informationen zu Rücksendung und Rückerstattung findest Du hier",
-    "fr": "Si un article ne te plaît pas ou ne te convient pas, tu peux le renvoyer à BENU COUTURE dans les 28 jours suivant l'envoi de la marchandise. \n\nVeuillez noter que nous ne prenons en charge les frais de retour qu'en cas de réclamation (marchandise défectueuse, livraison erronée ou autre) !\n \nTu trouveras ici de plus amples informations sur les retours et les remboursements",
-    "en": "An item that you do not like or does not fit, you can return within 28 days after shipment of the goods to BENU COUTURE. \n\nPlease note that we will only pay the return shipping costs in case of a complaint (defective goods, wrong delivery or similar)!\n \nMore information about return and refund can be found here",
-    "lu": "En Artikel. deen Dir net gefält oder net passt, kanns Du bannent 28 Deeg nodeems Deng Bestellung verschéckt ginn ass un BENU COUTURE zeréckschécken. \n\nPass wgl. op, dass mir d'Retourkäschte just bei enger Reklamatioun (Artikel mat Mängel, falsch Liwwerung  o.ä.) iwwerhuelen!\n\nWeider Informatiounen zu de Retouren an dem Remboursement fënnst Du hei"
+    "de": "Einen Artikel, der Dir nicht gefällt oder passt, kannst Du innerhalb von 28 Tagen nach Versand der Ware an BENU COUTURE zurücksenden. \n\nBitte beachte, dass wir die Rücksendekosten nur bei einer Reklamation (fehlerhafte Ware, falsche Lieferung o.ä.) übernehmen!\n \nWeitere Informationen zu Rücksendung und Rückerstattung findest Du",
+    "fr": "Si un article ne te plaît pas ou ne te convient pas, tu peux le renvoyer à BENU COUTURE dans les 28 jours suivant l'envoi de la marchandise. \n\nVeuillez noter que nous ne prenons en charge les frais de retour qu'en cas de réclamation (marchandise défectueuse, livraison erronée ou autre) !\n \nPour trouver de plus amples informations sur les retours et les remboursements clique",
+    "en": "An item that you do not like or does not fit, you can return within 28 days after shipment of the goods to BENU COUTURE. \n\nPlease note that we will only pay the return shipping costs in case of a complaint (defective goods, wrong delivery or similar)!\n \nMore information about return and refund can be found",
+    "lu": "En Artikel. deen Dir net gefält oder net passt, kanns Du bannent 28 Deeg nodeems Deng Bestellung verschéckt ginn ass un BENU COUTURE zeréckschécken. \n\nPass wgl. op, dass mir d'Retourkäschte just bei enger Reklamatioun (Artikel mat Mängel, falsch Liwwerung  o.ä.) iwwerhuelen!\n\nWeider Informatiounen zu de Retouren an dem Remboursement fënnst Du"
+  },
+  {
+    "page": "Modèle",
+    "key": "sidebar.returns-info-1-link",
+    "de": "hier",
+    "fr": "ici",
+    "en": "here",
+    "lu": "hei"
   },
   {
     "page": "Modèle",
@@ -6864,7 +7096,7 @@
     "lu": "Mell Dech bei eis"
   },
   {
-    "page": "Variations",
+    "page": "Modèle",
     "key": "sidebar.back",
     "de": "Zurück zur Artikelbeschreibung",
     "fr": "Retour à la description de l'article",
@@ -6872,7 +7104,7 @@
     "lu": "Zréck op d'Artikel Beschreiwung"
   },
   {
-    "page": "Variations",
+    "page": "Modèle",
     "key": "sidebar.care-title",
     "de": "Die Pflegesymbole zeigen Dir, wie Du diese Kreation\npflegen kannst. Um Rücksicht auf Umwelt und Kleidung zu nehmen, empfehlen wir, bei möglichst niedrigen Temperaturen zu waschen. Weitere Tipps zur nachhaltigen und\numweltfreundlichen Pflege findest Du hier",
     "fr": "Les symboles d'entretien montrent comment tu peux soigner cette création.\nAfin de respecter l'environnement et les vêtements, nous te recommandons de les laver à des températures aussi basses que possible. Tu trouveras d'autres conseils pour un entretien durable et respectueux de l'environnement ici",
@@ -7586,10 +7818,10 @@
   {
     "page": "Panier",
     "key": "cart.payment-products",
-    "de": "Artikel",
-    "fr": "Article",
-    "en": "Item",
-    "lu": "Artikel"
+    "de": "Artikel|Artikelen",
+    "fr": "Article|Articles",
+    "en": "Item|Items",
+    "lu": "Artikel|Artikelen"
   },
   {
     "page": "Panier",
@@ -7974,5 +8206,29 @@
     "fr": ".",
     "en": "carefully.",
     "lu": "opmierksam ze liesen."
+  },
+  {
+    "page": "compte inscription",
+    "key": "auth.failed",
+    "de": "Die verwendeten Daten stimmen nicht mit unseren Angaben überein.",
+    "fr": "Les identifiants utilisés ne correspondent pas à nos enregistrements.",
+    "en": "The identifiers used do not match our data files.",
+    "lu": ""
+  },
+  {
+    "page": "compte inscription",
+    "key": "auth.throttle",
+    "de": "Es wurden zu viele Verbindungsversuche unternommen. Bitte versuche es in :seconds seconds erneut.",
+    "fr": "Tentatives de connexion trop nombreuses. Veuilles essayer de nouveau dans :seconds secondes.",
+    "en": "Too many connection attempts. Please try again in :seconds.",
+    "lu": ""
+  },
+  {
+    "page": "compte inscription",
+    "key": "auth.password",
+    "de": "Das angegebene Passwort ist falsch.",
+    "fr": "Le mot de passe fourni est incorrect.",
+    "en": "The password entered is incorrect.",
+    "lu": ""
   }
 ]

@@ -133,7 +133,6 @@ return [
         ],
     ],
 
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -146,27 +145,27 @@ return [
     */
 
     'attributes' => [
-        'email' => "L'adresse e-mail",
-        'register_password' => "Le mot de passe",
-        'register_company' => "L'entreprise",
-        'register_phone' => "Le téléphone",
-        'register_gender' => "Le genre",
-        'register_first_name' => "Le prénom",
-        'register_last_name' => "Le nom de famille",
-        'register_age' => "L'âge",
-        'register_legal' => "La case âge et droits juridiques",
-        'register_newsletter' => "La case newsletter",
-        'register_address_name' => "Le nom de l'adresse",
-        'register_address_first_name' => "Le prénom pour l'adresse",
-        'register_address_last_name' => "Le nom de famille pour l'adresse",
-        'register_address_number' => "Le numéro de rue",
-        'register_address_street' => "Le nom de la rue",
-        'register_address_floor' => "L'étage de l'adresse",
-        'register_address_city' => "La ville de l'adresse",
-        'register_address_zip' => "Le code postal de l'adresse",
-        'register_address_phone' => "Le téléphone de l'adresse",
-        'register_address_country' => "Le pays de l'adresse",
-        'register_address_other' => "Les informations additionnelles de l'adresse",
-        'register_kulturpass' => "Le fichier Kulturpass",
+        'email' => "Die E-Mail-Adresse",
+        'register_password' => "Passwort",
+        'register_company' => "Das Unternehmen",
+        'register_phone' => "Die Telefonnummer",
+        'register_gender' => "Das Geschlecht",
+        'register_first_name' => "Der Vorname",
+        'register_last_name' => "Der Familienname",
+        'register_age' => "Das Alter",
+        'register_legal' => "Volljährigkeit und gesetzliche Rechte",
+        'register_newsletter' => "Das Feld Newsletter",
+        'register_address_name' => "Der Name der Adresse",
+        'register_address_first_name' => "Der Vorname für die Adresse",
+        'register_address_last_name' => "Der Nachname für die Adresse",
+        'register_address_number' => "Die Hausnummer",
+        'register_address_street' => "Der Name der Straße",
+        'register_address_floor' => "Der Adresszusatz",
+        'register_address_city' => "Die Stadt für die Adresse",
+        'register_address_zip' => "Die Postleitzahl für die Adresse",
+        'register_address_phone' => "Die Telefonnummer für die Adresse",
+        'register_address_country' => "Das Land für die Adresse",
+        'register_address_other' => "Zusätzliche Informationen für die Adresse",
+        'register_kulturpass' => "Das Dokument Kulturpass",
     ],
 ];

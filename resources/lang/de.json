@@ -1,4 +1,5 @@
 {
+    "The :attribute must contain at least one uppercase and one lowercase letter.": "Das :attribute muss mindestens einen Großbuchstaben und einen Kleinbuchstaben enthalten.",
     "30 Days": "30 Tage",
     "60 Days": "60 Tage",
     "90 Days": "90 Tage",
@@ -564,7 +565,6 @@
     "Thanks for your continued support. We've attached a copy of your invoice for your records. Please let us know if you have any questions or concerns.": "Vielen Dank für Ihre kontinuierliche Unterstützung. Wir haben eine Kopie Ihrer Rechnung für Ihre Unterlagen beigefügt. Bitte lassen Sie uns wissen, wenn Sie irgendwelche Fragen oder Bedenken haben.",
     "Thanks,": "Vielen Dank,",
     "The :attribute must be a valid role.": ":attribute muss eine gültige Rolle sein.",
-    "The :attribute must be at least :length characters and contain at least one number.": "Das :attribute muss aus mindestens :length Zeichen bestehen und mindestens eine Zahl enthalten.",
     "The :attribute must be at least :length characters and contain at least one special character and one number.": "Das :attribute muss mindestens :length Zeichen lang sein und mindestens ein Sonderzeichen und eine Zahl enthalten.",
     "The :attribute must be at least :length characters and contain at least one special character.": "Das :attribute muss aus mindestens :length Zeichen bestehen und mindestens ein Sonderzeichen enthalten.",
     "The :attribute must be at least :length characters and contain at least one uppercase character and one number.": "Das :attribute muss aus mindestens :length Zeichen bestehen und mindestens einen Großbuchstaben und eine Zahl enthalten.",

@@ -133,7 +133,6 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
-    "The :attribute must contain at least one uppercase and one lowercase letter." => ":attribute doit contenir au moins une majuscule et une minuscule",
 
     /*
     |--------------------------------------------------------------------------
