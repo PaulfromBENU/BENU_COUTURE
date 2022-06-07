@@ -66,10 +66,10 @@ class TranslationResource extends Resource
                 // Tables\Columns\TextColumn::make('page')->sortable()->searchable(),
                 // Tables\Columns\TextColumn::make('key')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('translation_key')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('de')->limit(50),
-                Tables\Columns\TextColumn::make('fr')->limit(50),
-                Tables\Columns\TextColumn::make('en')->limit(50),
-                Tables\Columns\TextColumn::make('lu')->limit(50),
+                Tables\Columns\TextColumn::make('de')->searchable()->limit(50),
+                Tables\Columns\TextColumn::make('fr')->searchable()->limit(50),
+                Tables\Columns\TextColumn::make('en')->searchable()->limit(50),
+                Tables\Columns\TextColumn::make('lu')->searchable()->limit(50),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
             ])

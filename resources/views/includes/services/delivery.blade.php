@@ -63,7 +63,7 @@
 							</td> 
 							</tr> -->
 						<tr class="grid grid-cols-6 delivery__chapter__table__data-rows">
-							<td>50g</td>
+							<td>0.05</td>
 <!-- 							<td>0.1</td> -->
 							<td>2</td>
 							<td>2</td>
@@ -72,7 +72,7 @@
 							<td>2</td>
 						</tr>
 						<tr class="grid grid-cols-6 delivery__chapter__table__data-rows">
-							<td>500g</td>
+							<td>0.5</td>
 <!-- 							<td>0.1</td> -->
 							<td>3</td>
 							<td>4</td>

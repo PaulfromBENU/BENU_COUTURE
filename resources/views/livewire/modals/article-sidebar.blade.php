@@ -249,8 +249,6 @@
                 </h3>
                 <p class="mb-2 text-sm font-medium">
                     {!! __('sidebar.returns-info-1') !!}
-                </p>
-                <p class="mb-2 text-sm font-medium">
                     <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.returns-info-1-link') !!}</a>.
                 </p>
             @elseif($content == 'more')

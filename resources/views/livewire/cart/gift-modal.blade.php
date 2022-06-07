@@ -52,7 +52,7 @@
                     <img src="{{ asset('images/pictures/gift_card_1.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
-                    <input type="radio" name="cart_add_card" value="1" wire:model="card_type" id="cart-add-card-1">
+                    <input type="radio" name="cart_add_card" value="1" wire:model="card_type" wire:click="updateCard(1)" id="cart-add-card-1">
                     <label for="cart-add-card-1">{{ __('cart.add-specific-card') }} #1</label>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <img src="{{ asset('images/pictures/gift_card_2.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
-                    <input type="radio" name="cart_add_card" value="2" wire:model="card_type" id="cart-add-card-2">
+                    <input type="radio" name="cart_add_card" value="2" wire:model="card_type" wire:click="updateCard(2)" id="cart-add-card-2">
                     <label for="cart-add-card-2">{{ __('cart.add-specific-card') }} #2</label>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <img src="{{ asset('images/pictures/gift_card_3.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
-                    <input type="radio" name="cart_add_card" value="3" wire:model="card_type" id="cart-add-card-3">
+                    <input type="radio" name="cart_add_card" value="3" wire:model="card_type" wire:click="updateCard(3)" id="cart-add-card-3">
                     <label for="cart-add-card-3">{{ __('cart.add-specific-card') }} #3</label>
                 </div>
             </div>
