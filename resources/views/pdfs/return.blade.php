@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Votre formulaire de retour BENU COUTURE</title>
+	<title>{{ __('pdf.return-page-title') }}</title>
 
 	<style type="text/css">
 		@font-face {
@@ -96,7 +96,7 @@
 
 			<div style="position: absolute; top: 0px; left: 65%; width: 35%;">
 				<p style="font-family: 'Barlow Condensed'; margin-bottom: 0px; padding-left: 0px;">
-					<span style="font-weight: 600">Bon de retour</span>
+					<span style="font-weight: 600">{{ __('pdf.return-return-voucher') }}</span>
 					@if($order !== null)
 						<br/>
 						{{ ucfirst(strtolower($order->user->last_name)) }} {{ ucfirst(strtolower($order->user->first_name)) }}
@@ -109,37 +109,37 @@
 						{{ $order->address->city }}, {{ $order->address->country }}
 						<br/>
 						@else
-						Retrait en magasin
+						{{ __('pdf.return-in-shop') }}
 						<br/>
 						@endif
 					@else
 					<br/>
-					 Nom :
+					 {{ __('pdf.return-name') }} :
 					 <br/><br/>
-					 Adresse :
+					 {{ __('pdf.return-address') }} :
 					@endif
 				</p>
 			</div>
 
 			<div style="position: relative; width: 100%; height: 30px;">
 				<div style="font-weight: 600; position: absolute; left: 0; top: 0; width: 65%; text-align: left;">
-					N<sup>o</sup> client : @if($order !== null) {{ $order->user->client_number }} @endif
+					N<sup>o</sup> {{ __('pdf.return-client') }} : @if($order !== null) {{ $order->user->client_number }} @endif
 				</div>
 				<div style="font-weight: 600; position: absolute; left: 67%; top: 0; width: 33%; text-align: left;">
-					N<sup>o</sup> commande : @if($order !== null) {{ $order->unique_id }} @endif
+					N<sup>o</sup> {{ __('pdf.return-order') }} : @if($order !== null) {{ $order->unique_id }} @endif
 				</div>
 			</div>
 
 			<div style="position: relative; width: 100%; min-height: 250px;">
 				<div style="position: relative; color: #27955B; font-weight: 600; font-size: 1.2rem; border-bottom: solid 2px #27955B; height: 55px;">
 					<p style="position: absolute; width: 50%; top: 0; left: 0; text-align: left;">
-						Article
+						{{ __('pdf.return-article') }}
 					</p>
 					<p style="position: absolute; width: 15%; top: 0; left: 50%; text-align: center;">
-						Prix TTC
+						{{ __('pdf.return-price-with-tax') }}
 					</p>
 					<p style="position: absolute; width: 35%; top: 0; left: 65%; text-align: center;">
-						Quantité à retourner
+						{{ __('pdf.return-quantity-to-return') }}
 					</p>
 				</div>
 				@if($order !== null)
@@ -214,13 +214,13 @@
 
 			<div style="position: relative; height: 30px;">
 				<div style="position: absolute; top: 0; left: 0; width: 100px; height: 40px; font-weight: 600;">
-					Raison du retour : 
+					{{ __('pdf.return-reason') }} : 
 				</div>
 				<div style="position: absolute; top: 0; left: 110px;">
 					<div style="position: relative;">
 						<div class="checkbox"></div>
 						<div class="checkbox-label" style="width: 150px;">
-							L'article ne me plait pas
+							{{ __('pdf.return-article-not-liked') }}
 						</div>
 					</div>
 				</div>
@@ -228,7 +228,7 @@
 					<div style="position: relative;">
 						<div class="checkbox"></div>
 						<div class="checkbox-label" style="width: 150px;">
-							L'article ne me convient pas
+							{{ __('pdf.return-article-not-fit') }}
 						</div>
 					</div>
 				</div>
@@ -238,7 +238,7 @@
 					<div style="position: relative;">
 						<div class="checkbox"></div>
 						<div class="checkbox-label" style="width: 70px;">
-							Erreur BENU
+							{{ __('pdf.return-benu-mistake') }}
 						</div>
 					</div>
 				</div>
@@ -246,7 +246,7 @@
 					<div style="position: relative;">
 						<div class="checkbox"></div>
 						<div class="checkbox-label" style="width: 220px;">
-							L'article n'est pas celui que j'ai comnmandé
+							{{ __('pdf.return-wrong-delivery') }}
 						</div>
 					</div>
 				</div>
@@ -254,7 +254,7 @@
 
 			<div style="position: relative; margin-top: -40px;">
 				<div style="font-weight: 600;">
-					Autre :
+					{{ __('pdf.return-reason-other') }} :
 				</div>
 				<div class="textbox"></div>
 				<div style="font-weight: 600;">
@@ -262,7 +262,7 @@
 				</div>
 				<div class="textbox"></div>
 				<div style="font-weight: 600;">
-					Titulaire du compte
+					{{ __('pdf.return-account-name') }}
 				</div>
 				<div class="textbox"></div>
 			</div>
@@ -271,7 +271,7 @@
 			<div style="width: 100%; height: 50%; border-bottom: dashed 2px lightgrey; position: relative;">
 				<div style="position: absolute; left: 55%; top: 0;">
 					<div style="text-transform: uppercase; color: gray; font-weight: 600; font-size: 1.2rem;">
-						Expéditeur
+						{{ __('pdf.return-expeditor') }}
 					</div>
 					<div style="font-size: 1.1rem; font-weight: 500;">
 						@if($order !== null)
@@ -285,22 +285,22 @@
 							{{ $order->address->city }}, {{ $order->address->country }}
 							<br/>
 							@else
-							Retrait en magasin
+							{{ __('pdf.return-in-shop') }}
 							<br/>
 							@endif
 						@else
-							Nom et adresse :
+							{{ __('pdf.return-name-and-address') }} :
 							<br/><br/><br/>
 						@endif
 					</div>
 					<div style="padding-top: 20px; font-size: 1.2rem; font-weight: 500;">
-						N<sup>o</sup> client : @if($order !== null) {{ $order->user->client_number }} @endif
+						N<sup>o</sup> {{ __('pdf.return-client') }} : @if($order !== null) {{ $order->user->client_number }} @endif
 					</div>
 				</div>
 
 				<div style="position: absolute; padding-left: 40px; top: 160px;">
 					<div style="text-transform: uppercase; color: gray; font-size: 1.2rem; font-weight: 500;">
-						Destinataire
+						{{ __('pdf.return-sent-to') }}
 					</div>
 					<div style="font-size: 1.3rem; font-weight: 500;">
 						BENU VILLAGE Esch ASBL
@@ -316,10 +316,13 @@
 
 			<div style="width: 100%; height: 50%; padding-left: 40px; padding-top: 35px;">
 				<p style="font-weight: 600; font-size: 1.3rem;">
-					Instructions de retour
+					{{ __('pdf.return-instructions') }}
 				</p>
 				<p style="font-size: 1.1rem;">
-					Lorem ipsum ...
+					{{ __('pdf.return-instruction-txt-1') }}
+				</p>
+				<p style="font-size: 1.1rem;">
+					{{ __('pdf.return-instruction-txt-2') }}
 				</p>
 			</div>
 		</section>
