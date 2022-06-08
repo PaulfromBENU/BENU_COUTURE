@@ -1,5 +1,5 @@
 <x-filament::page>
-	<h2>Sélectionnez un ou plusieurs objets à vendre</h2>
+	<h2>Select one or more items to sell</h2>
 	<form method="POST" wire:submit.prevent="sellArticles" class="sell-form">
 		@csrf
 

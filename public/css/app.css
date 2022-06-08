@@ -5885,6 +5885,54 @@ input[type=checkbox]:focus {
   color: rgb(234 179 8/var(--tw-bg-opacity));
 }
 
+.stock-handling__input-group {
+  border-bottom: solid 1px grey;
+  margin-bottom: 30px;
+}
+.stock-handling__select {
+  background: transparent;
+  color: lightgrey;
+  min-width: 15vw;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+.stock-handling__select option {
+  background: #111827;
+}
+.stock-handling__stock {
+  width: 30%;
+  margin-right: 3%;
+}
+.stock-handling__stock input[type=text] {
+  width: 100%;
+  background: transparent;
+  border-radius: 4px;
+}
+.stock-handling__stock-container {
+  margin-bottom: 30px;
+}
+.stock-handling h2 {
+  font-size: 1.2rem;
+  color: rgb(234 179 8/var(--tw-bg-opacity));
+  margin-bottom: 20px;
+}
+.stock-handling button {
+  background: transparent;
+  padding: 5px 15px;
+  border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+  transition: all 0.2s;
+  color: lightgrey;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+.stock-handling button:hover {
+  background: rgb(234 179 8/var(--tw-bg-opacity));
+  color: #FFFFFF;
+}
+
 :root {
   /* Colors: */
   --unnamed-color-d0d0d0: #D0D0D0;

@@ -524,3 +524,54 @@
 		}
 	}
 }
+
+
+.stock-handling {
+	&__input-group {
+		border-bottom: solid 1px grey;
+		margin-bottom: 30px;
+	}
+	&__select {
+		background: transparent;
+		color: lightgrey;
+		min-width: 15vw;
+		border-radius: 3px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		margin-right: 15px;
+		option {
+			background: #111827;
+		}
+	}
+	&__stock {
+		width: 30%;
+		margin-right: 3%;
+		input[type="text"] {
+			width: 100%;
+			background: transparent;
+			border-radius: 4px;
+		}
+	}
+	&__stock-container {
+		margin-bottom: 30px;
+	}
+	h2 {
+		font-size: 1.2rem;
+		color: rgb(234 179 8/var(--tw-bg-opacity));
+		margin-bottom: 20px;
+	}
+	button {
+		background: transparent;
+		padding: 5px 15px;
+		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		transition: all 0.2s;
+		color: lightgrey;
+		border-radius: 5px;
+		font-size: 1.3rem;
+		margin-left: 10px;
+		&:hover {
+			background: rgb(234 179 8/var(--tw-bg-opacity));
+			color: $white;
+		}
+	}
+}
