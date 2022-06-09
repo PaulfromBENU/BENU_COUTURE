@@ -53,7 +53,7 @@
                     @if($voucher->voucher_type == 'pdf')
                     PDF
                     @else
-                    {{ __('voucher.fabric') }}
+                    {{ __('vouchers.fabric') }}
                     @endif
                 </div>
 

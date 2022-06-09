@@ -46,7 +46,7 @@
                 @if($article->voucher_type == 'pdf')
                     PDF
                 @else
-                    {{ __('voucher.fabric') }}
+                    {{ __('vouchers.fabric') }}
                 @endif
             @else
                 @if($article->size->value == 'unique')
