@@ -26,9 +26,15 @@ class SoldArticleOverview extends Component
             $this->pictures = collect(['modele_caretta_1.png']);// Change to default picture
         } else {
             $this->pictures = collect([]);
-            foreach ($this->article->photos as $photo) {
+            foreach ($this->article->photos()->where('is_front', '1')->get() as $photo) {
                 $this->pictures = $this->pictures->push($photo->file_name);
             }
+            foreach ($this->article->photos()->where('is_front', '<>', '1')->get() as $photo) {
+                $this->pictures = $this->pictures->push($photo->file_name);
+            }
+            // foreach ($this->article->photos as $photo) {
+            //     $this->pictures = $this->pictures->push($photo->file_name);
+            // }
         }
         $this->current_picture_index = 0;
 
