@@ -10,7 +10,7 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
-					<a href="{{ route('model-'.app()->getLocale(), ['shops' => $shop->filter_key]) }}" class="btn-couture-plain">{{ __('services.shops-articles-link') }}</a>
+					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="btn-couture-plain">{{ __('services.shops-articles-link') }}</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
@@ -73,7 +73,7 @@
 			<div class="flex justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
-					<a href="{{ route('model-'.app()->getLocale(), ['shops' => $shop->filter_key]) }}" class="btn-couture-plain">{{ __('services.shops-articles-link') }}</a>
+					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="btn-couture-plain">{{ __('services.shops-articles-link') }}</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">

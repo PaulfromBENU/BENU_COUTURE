@@ -3908,11 +3908,13 @@ input[type=checkbox]:focus {
   overflow: hidden;
   width: 30%;
   height: auto;
+  position: relative;
 }
 .shops__card__img-container img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  position: absolute;
 }
 .shops__card__txt-container {
   width: 65%;
