@@ -33,7 +33,7 @@
                         </li>
                         <li>|</li>
                         <li>
-                            <a href="#">{{ __('header.participate') }}</a>
+                            <a href="{{ route('header.participate-'.app()->getLocale()) }}">{{ __('header.participate') }}</a>
                         </li>
                         <li>|</li>
                         <li>

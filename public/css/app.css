@@ -7337,3 +7337,52 @@ input[type=checkbox]:focus {
   display: inline-block;
   margin-bottom: 30px;
 }
+
+.participate {
+  padding-top: 66px;
+}
+.participate__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+}
+.participate__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.participate__nav {
+  border-bottom: solid 1px #D9D9D9;
+}
+.participate__nav__link {
+  display: block;
+  height: 40px;
+  border-bottom: solid 2px transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font: normal normal 600 18px/22px "Barlow Condensed";
+  letter-spacing: 0.36px;
+  color: #2E1414;
+  text-transform: uppercase;
+  margin-bottom: -1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.participate__nav__link--active {
+  color: #D41C1B;
+  border-bottom: solid 2px #D41C1B;
+}
+.participate__nav__link:hover {
+  color: #D41C1B;
+  border-bottom: solid 2px #D41C1B;
+}
+
+.participate-section-container {
+  padding-top: 60px;
+  margin-bottom: 90px;
+}

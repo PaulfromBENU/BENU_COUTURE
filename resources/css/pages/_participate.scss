@@ -1,0 +1,74 @@
+.participate {
+	padding-top: 66px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__nav {
+		border-bottom: solid 1px $light-grey;
+		&__link {
+			display: block;
+			height: 40px;
+			border-bottom: solid 2px transparent;
+			transition: $transition-base;
+			cursor: pointer;
+			font: normal normal 600 18px/22px 'Barlow Condensed';
+			letter-spacing: 0.36px;
+			color: $dark-text;
+			text-transform: uppercase;
+			margin-bottom: -1px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 1%;
+			margin-right: 1%;
+			&--active {
+				color: $primary-color;
+				border-bottom: solid 2px $primary-color;
+			}
+			&:hover {
+				color: $primary-color;
+				border-bottom: solid 2px $primary-color;
+			}
+		}
+	}
+}
+
+
+.participate-section-container {
+	padding-top: 60px;
+	margin-bottom: 90px;
+}
+
+
+.participate-badges {
+
+}
+
+
+.participate-give {
+
+}
+
+
+.participate-partnership {
+
+}
+
+
+.participate-smart {
+
+}
+
+
+.participate-sustainable {
+
+}
