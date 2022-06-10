@@ -1,6 +1,8 @@
 function clearAllModals() {
     $('#modal-opacifier').fadeOut('fast');
     $('.modal').fadeOut('fast');
+    $('body').css('overflow-y', 'auto');
+    $('html').css('overflow-y', 'auto');
 }
 
 function showModal(modal) {
@@ -64,6 +66,8 @@ $(function() {
     Livewire.on('activateGiftModal', article_id => {
         showModal('general');
         modalStatus = 'on';
+        $('body').css('overflow-y', 'hidden');
+        $('html').css('overflow-y', 'hidden');
     });
 
     Livewire.on('activateInfoModal', function() {

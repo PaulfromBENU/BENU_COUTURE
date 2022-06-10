@@ -50,7 +50,7 @@
 			}
 		}
 		&__name {
-			padding-left: 15%;
+			padding-left: 12%;
 			h4 {
 				text-align: left;
 				font: normal normal 600 42px/50px 'Barlow Condensed';
@@ -70,9 +70,13 @@
 					height: 20px;
 					margin-top: 7px;
 				}
+				label {
+					min-width: 190px;
+				}
 				svg {
 					margin-left: 10px;
 					margin-top: 4px;
+					flex-shrink: 0;
 				}
 				&__svg-active {
 					path {

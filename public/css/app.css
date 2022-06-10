@@ -6667,7 +6667,7 @@ input[type=checkbox]:focus {
   min-height: 100%;
 }
 .cart-content__article__name {
-  padding-left: 15%;
+  padding-left: 12%;
 }
 .cart-content__article__name h4 {
   text-align: left;
@@ -6689,9 +6689,13 @@ input[type=checkbox]:focus {
   height: 20px;
   margin-top: 7px;
 }
+.cart-content__article__name__checkbox label {
+  min-width: 190px;
+}
 .cart-content__article__name__checkbox svg {
   margin-left: 10px;
   margin-top: 4px;
+  flex-shrink: 0;
 }
 .cart-content__article__name__checkbox__svg-active path {
   fill: #D41C1B;
