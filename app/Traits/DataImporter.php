@@ -546,7 +546,7 @@ trait DataImporter {
                         } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown'])) {
                             $picture_main_color  = 'brown';
                         } elseif (in_array($picture_main_color, ['denim', 'jeans', 'jean'])) {
-                            $picture_main_color  = 'denim';
+                            $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss'])) {
                             $picture_main_color  = 'green';
                         } elseif (in_array($picture_main_color, ['darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey'])) {
