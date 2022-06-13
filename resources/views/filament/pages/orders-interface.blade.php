@@ -35,6 +35,9 @@
 			<div class="text-3xl font-medium">
 				Order #{{ $new_order->unique_id }}
 			</div>
+			<p style="margin-bottom: 5px;">
+				Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
+			</p>
 			<p class="text-xl">
 				Total: {{ $new_order->total_price }}&euro; - Paid on {{ $new_order->created_at->format('d\/m\/Y') }} - 
 				<button wire:click="markAsUnpaid({{ $new_order->id }})" class="new-orders__btn-1">Mark as unpaid</button>
@@ -385,6 +388,9 @@
 			<div class="text-3xl font-medium">
 				Order #{{ $sent_order->unique_id }}
 			</div>
+			<p style="margin-bottom: 5px;">
+				Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }}
+			</p>
 			<p class="text-xl">
 				Total: {{ $sent_order->total_price }}&euro; - Paid - Sent/Ready for collect on {{ $sent_order->delivery_date }}
 			</p>

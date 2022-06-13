@@ -5935,6 +5935,25 @@ input[type=checkbox]:focus {
   color: #FFFFFF;
 }
 
+.dark .filament-login-page {
+  background-image: radial-gradient(circle at top, #D41C1B, #1f2937, #111827 100%) !important;
+}
+
+.bg-primary-500 {
+  background: #D41C1B !important;
+}
+
+.filament-logo {
+  max-height: 50px;
+  margin-top: 15px;
+}
+.filament-logo__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D41C1B;
+  padding: 20px;
+}
+
 :root {
   /* Colors: */
   --unnamed-color-d0d0d0: #D0D0D0;
