@@ -3,15 +3,21 @@
 	<p class="participate-badges__content">
 		{{ __('participate.badges-content-1') }}
 	</p>
-	<p class="participate-badges__badge">
+	<div class="participate-badges__badge">
+		<p>
+			{{ __('participate.badges-top-user') }}
+		</p>
 		@svg('icon_benu_couture_top_user_2022_OK')
-	</p>
+	</div>
 	<p class="participate-badges__content">
 		{{ __('participate.badges-content-2') }}
 	</p>
-	<p class="participate-badges__badge">
+	<div class="participate-badges__badge">
+		<p>
+			{{ __('participate.badges-brain') }}
+		</p>
 		@svg('icon_benu_couture_brain_2022_OK')
-	</p>
+	</div>
 	<p class="participate-badges__content">
 		{{ __('participate.badges-content-3') }}
 	</p>

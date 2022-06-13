@@ -308,7 +308,7 @@
 									Codes:
 									@if($article->voucher_type == 'pdf')
 									<ul>
-										@foreach($new_order->pdf_vouchers as $pdf_voucher)
+										@foreach($unpaid_order->pdf_vouchers as $pdf_voucher)
 										<li wire:key="new-article-pdf-voucher-{{ $pdf_voucher->id }}" style="padding-left: 5px;">
 											> <strong class="text-xl">{{ strtoupper($pdf_voucher->unique_code) }}</strong>
 										</li>
@@ -316,7 +316,7 @@
 									</ul>
 									@else
 									<ul>
-										@foreach($new_order->clothe_vouchers as $clothe_voucher)
+										@foreach($unpaid_order->clothe_vouchers as $clothe_voucher)
 										<li wire:key="new-article-clothe-voucher-{{ $clothe_voucher->id }}" style="padding-left: 5px;">
 											> <strong class="text-xl">{{ strtoupper($clothe_voucher->unique_code) }}</strong>
 										</li>

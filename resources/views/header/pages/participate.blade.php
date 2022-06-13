@@ -36,9 +36,9 @@
 					<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}" class="primary-color"><strong>{{ __('breadcrumbs.participate-smart') }}</strong></a>
 					@break
 
-				@case(__('slugs.participate-sustainable'))
+				<!-- @case(__('slugs.participate-sustainable'))
 					<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-sustainable')]) }}" class="primary-color"><strong>{{ __('breadcrumbs.participate-sustainable') }}</strong></a>
-					@break
+					@break -->
 
 				@default
 					<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-badges')]) }}" class="primary-color"><strong>{{ __('breadcrumbs.badges') }}</strong></a>
@@ -65,9 +65,9 @@
 			<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}" class="participate__nav__link @if($page == __('slugs.participate-smart')) participate__nav__link--active @endif" id="participate-nav-return">
 				{{ __('participate.nav-smart') }}
 			</a>
-			<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-sustainable')]) }}" class="participate__nav__link @if($page == __('slugs.participate-sustainable')) participate__nav__link--active @endif" id="participate-nav-payment">
+			<!-- <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-sustainable')]) }}" class="participate__nav__link @if($page == __('slugs.participate-sustainable')) participate__nav__link--active @endif" id="participate-nav-payment">
 				{{ __('participate.nav-sustainable') }}
-			</a>
+			</a> -->
 		</div>
 	</div>
 
@@ -89,9 +89,9 @@
 				@include('includes.participate.smart')
 				@break
 
-			@case(__('slugs.participate-sustainable'))
+			<!-- @case(__('slugs.participate-sustainable'))
 				@include('includes.participate.sustainable')
-				@break
+				@break -->
 
 			@default
 				@include('includes.participate.badges')

@@ -7419,8 +7419,16 @@ input[type=checkbox]:focus {
   text-align: left;
 }
 .participate-badges__badge {
-  margin: 20px;
+  margin: 20px 0px;
   text-align: center;
+  background: #F9E2E2;
+  padding: 30px;
+  border-radius: 8px;
+}
+.participate-badges__badge p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 .participate-badges__badge svg {
   max-height: 80px;
