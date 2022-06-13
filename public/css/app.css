@@ -7386,3 +7386,102 @@ input[type=checkbox]:focus {
   padding-top: 60px;
   margin-bottom: 90px;
 }
+
+.participate-badges__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.participate-badges__content {
+  font: normal normal 500 16px/18px "Barlow";
+  margin-bottom: 40px;
+  text-align: left;
+}
+.participate-badges__badge {
+  margin: 20px;
+  text-align: center;
+}
+.participate-badges__badge svg {
+  max-height: 80px;
+  margin: auto;
+}
+
+.participate-give__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.participate-give__content {
+  margin-bottom: 40px;
+  text-align: left;
+}
+.participate-give__content__txt {
+  font: normal normal 500 16px/18px "Barlow";
+}
+
+.participate-partnership__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.participate-partnership__subtitle {
+  font: normal normal 600 18px/20px "Barlow";
+  margin-bottom: 20px;
+  text-align: left;
+  color: grey;
+}
+.participate-partnership__content {
+  font: normal normal 500 16px/18px "Barlow";
+  margin-bottom: 40px;
+  text-align: left;
+}
+.participate-partnership__highlight {
+  text-align: center;
+  font: normal normal 600 20px/36px Barlow;
+  letter-spacing: 0px;
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.participate-smart__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.participate-sustainable__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.participate-sustainable__content {
+  font: normal normal 500 16px/18px "Barlow";
+  margin-bottom: 40px;
+  text-align: left;
+}
+.participate-sustainable__list {
+  text-align: left;
+}
+.participate-sustainable__list li {
+  display: flex;
+  font: normal normal 500 16px/18px "Barlow";
+  margin-bottom: 5px;
+}
+.participate-sustainable__list li svg {
+  margin-top: 6px;
+  margin-right: 10px;
+}
