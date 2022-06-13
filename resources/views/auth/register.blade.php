@@ -26,7 +26,7 @@
         <h1 class="register__title">{!! __('auth.register-title') !!}</h1>
 
         @if($errors->any())
-            <div class="register__errors w-2/3 m-auto mt-5 mb-5">
+<!--             <div class="register__errors w-2/3 m-auto mt-5 mb-5">
                 {!! __('auth.register-error') !!}
 
                 <br/>
@@ -35,12 +35,12 @@
                     @foreach ($errors->all() as $error)
                         <li class="primary-color">{{ trans($error, [], app()->getLocale()) }}</li>
                     @endforeach
-                </ul>
+                </ul> -->
 <!--                 <p>
                     {!! implode('', $errors->all('<div class="primary-color">:message</div>')) !!}</strong>
                 </p> -->
 
-            </div>
+            <!-- </div> -->
         @endif
 
         <form method="POST" action="{{ route('register', [app()->getLocale()]) }}" class="w-1/2 m-auto mb-10" id="register-form" enctype="multipart/form-data">
