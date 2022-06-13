@@ -126,6 +126,18 @@ class CreationsMenu extends Component
 
         $this->adults_clothes = array_merge($this->unisex_clothes, $this->ladies_clothes, $this->gentlemen_clothes);
         $this->adults_accessories = array_merge($this->unisex_accessories, $this->ladies_accessories, $this->gentlemen_accessories);
+
+        ksort($this->unisex_clothes);
+        ksort($this->unisex_accessories);
+        ksort($this->ladies_clothes);
+        ksort($this->ladies_accessories);
+        ksort($this->gentlemen_clothes);
+        ksort($this->gentlemen_accessories);
+        ksort($this->adults_clothes);
+        ksort($this->adults_accessories);
+        ksort($this->kids_clothes);
+        ksort($this->kids_accessories);
+        ksort($this->accessories);
     }
 
     public function render()

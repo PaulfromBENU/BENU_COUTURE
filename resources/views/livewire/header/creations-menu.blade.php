@@ -2,10 +2,10 @@
     <div class="benu-container">
         <div class="creations-navbar__menu__lists flex justify-start">
             <div class="creations-navbar__menu__list navbar-list-unisex">
-                <h4>{{ __('header.menu-title-1') }}</h4>
+                <h4><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex', 'family' => 'clothes']) }}">{{ __('header.menu-title-1') }}</a></h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex', 'family' => 'clothes']) }}">{{ __('header.see-all-clothes-unisex') }}</a></li>
+                        <!-- <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex', 'family' => 'clothes']) }}">{{ __('header.see-all-clothes-unisex') }}</a></li> -->
                         @foreach($unisex_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'unisex', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -58,6 +58,7 @@
                     </ul>
                     <ul>
                         @if(count($ladies_clothes) > 6)
+                            <li style="color: transparent;">Empty</li>
                             @foreach($ladies_clothes as $category => $link_query)
                                 @if($loop->index >= 6)
                                     <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -158,10 +159,10 @@
             
 
             <div class="creations-navbar__menu__list navbar-list-unisex">
-                <h4>{{ __('header.menu-title-2') }}</h4>
+                <h4><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'unisex']) }}">{{ __('header.menu-title-2') }}</a></h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'unisex']) }}">{{ __('header.see-all-accessories-unisex') }}</a></li>
+                        <!-- <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'unisex']) }}">{{ __('header.see-all-accessories-unisex') }}</a></li> -->
                         @foreach($unisex_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'unisex', 'categories' => $link_query]) }}">{{ $category }}</a></li>
