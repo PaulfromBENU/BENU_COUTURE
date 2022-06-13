@@ -49,7 +49,7 @@
                 <h4>{{ __('header.menu-title-1') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies']) }}">{{ __('header.see-all-clothes-ladies') }}</a></li>
+                        <li style="margin-bottom: 7px;"><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies']) }}">{{ __('header.see-all-clothes-ladies') }}</a></li>
                         @foreach($ladies_clothes as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -58,7 +58,7 @@
                     </ul>
                     <ul>
                         @if(count($ladies_clothes) > 6)
-                            <li style="color: transparent;">Empty</li>
+                            <li style="color: transparent; margin-bottom: 7px;">Empty</li>
                             @foreach($ladies_clothes as $category => $link_query)
                                 @if($loop->index >= 6)
                                     <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => $link_query]) }}">{{ $category }}</a></li>
@@ -206,7 +206,7 @@
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'ladies']) }}">{{ __('header.see-all-accessories-ladies') }}</a></li>
+                        <li style="margin-bottom: 7px;"><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'ladies']) }}">{{ __('header.see-all-accessories-ladies') }}</a></li>
                         @foreach($ladies_accessories as $category => $link_query)
                             @if($loop->index < 6)
                                 <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'ladies', 'categories' => $link_query]) }}">{{ $category }}</a></li>
