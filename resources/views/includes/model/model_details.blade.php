@@ -98,7 +98,7 @@
 				</a>
 				
 				@if($model->creation_accessories()->count() > 0)
-				<a class="flex">
+				<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
 					{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
 				</a>
 				@endif
