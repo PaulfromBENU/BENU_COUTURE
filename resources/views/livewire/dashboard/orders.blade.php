@@ -243,7 +243,11 @@
                         </p>
 
                         <p class="dashboard-orders__details__articles__article__desc__price">
-                            {{ $article->pivot->articles_number * $article->pivot->value }}&euro;
+                            @if($article->voucher_type == 'fabric')
+                                {{ $article->pivot->articles_number * ($article->pivot->value + 5) }}&euro;
+                            @else
+                                {{ $article->pivot->articles_number * $article->pivot->value }}&euro;
+                            @endif
                         </p>
                         @else
                         <h5>
@@ -276,9 +280,9 @@
 
                         <p class="dashboard-orders__details__articles__article__desc__price">
                             @if($article->is_extra_accessory)
-                            {{ $article->pivot->articles_number * $article->specific_price }}&euro;
+                                {{ $article->pivot->articles_number * $article->specific_price }}&euro;
                             @else
-                            {{ $article->pivot->articles_number * $article->creation->price }}&euro;
+                                {{ $article->pivot->articles_number * $article->creation->price }}&euro;
                             @endif
                         </p>
                         @endif

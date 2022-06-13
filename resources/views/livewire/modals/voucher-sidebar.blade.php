@@ -118,7 +118,21 @@
                 </p>
              
             @elseif($content == 'delivery')
-            <p>Contenu à confirmer</p>
+            <h3 class="article-sidebar__content__compo__title mb-3">
+                {!! __('sidebar.delivery-costs') !!}
+            </h3>
+            <p class="mb-10 text-sm font-medium">
+                {!! __('sidebar.delivery-costs-info-1') !!}
+                <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.delivery-costs-info-1-link') !!}</a>.
+            </p>
+
+            <h3 class="article-sidebar__content__compo__title mb-3">
+                {!! __('sidebar.returns') !!}
+            </h3>
+            <p class="mb-2 text-sm font-medium">
+                {!! __('sidebar.returns-info-1') !!}
+                <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.returns-info-1-link') !!}</a>.
+            </p>
 
             @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">
@@ -128,7 +142,31 @@
                 <h5 class="article-sidebar__content__compo__title-expl mb-10">{!! __('sidebar.more-details-title') !!}</h5>
 
                 <ul class="article-sidebar__content__more__list">
-                    <li>A compléter...</li>
+                    <li class="mb-5">Specifique aux bons d'achat - À compléter...</li>
+                    <li class="flex mb-5">
+                        <div class="pt-2">
+                            @svg('list_cintre')
+                        </div> 
+                        <p class="pl-4">
+                            {{ __('sidebar.more-details-vouchers-1') }}
+                        </p>
+                    </li>
+                    <li class="flex mb-5">
+                        <div class="pt-2">
+                            @svg('list_cintre')
+                        </div> 
+                        <p class="pl-4">
+                            {{ __('sidebar.more-details-vouchers-2') }}
+                        </p>
+                    </li>
+                    <li class="flex mb-5">
+                        <div class="pt-2">
+                            @svg('list_cintre')
+                        </div> 
+                        <p class="pl-4">
+                            {{ __('sidebar.more-details-vouchers-3') }}
+                        </p>
+                    </li>
                 </ul>
             @endif
         </div>

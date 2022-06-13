@@ -1,5 +1,9 @@
 <div class="grid grid-cols-8 cart-content__article">
+    @if($article->name == 'voucher')
+    <a target="_blank" href="{{ route('vouchers-'.app()->getLocale()) }}" class="block col-span-1 cart-content__article__img-container">
+    @else
     <a target="_blank" href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($article->creation->name), 'article' => strtolower($article->name)]) }}" class="block col-span-1 cart-content__article__img-container">
+    @endif
         @if($article->name == 'voucher')
         <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" />
         @elseif($article->photos()->where('is_front', '1')->count() > 0)
@@ -10,7 +14,10 @@
     </a>
     <div class="col-span-2 cart-content__article__name">
         @if($article->name == 'voucher')
-        <h4>{{ __('cart.voucher') }} ({{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;)</h4>
+        <h4>{{ __('cart.voucher') }}</h4>
+        <p class="mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3 absolute">
+            {{ __('cart.voucher-value') }} : {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
+        </p>
         @else
         <h4>{{ strtoupper($article->name) }}</h4>
         @endif
@@ -89,9 +96,17 @@
         <div class="cart-content__article__price">
             @if($article->name == 'voucher')
                 @if(session('has_kulturpass') !== null)
+                    @if($article->voucher_type == 'pdf')
                     {{ round($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value / 2, 2) }}&euro;
+                    @else
+                    {{ round(($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5) / 2, 2) }}&euro;
+                    @endif
                 @else
+                    @if($article->voucher_type == 'pdf')
                     {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
+                    @else
+                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
+                    @endif
                 @endif
             @else
                 @if($article->is_extra_accessory)

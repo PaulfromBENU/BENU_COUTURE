@@ -23,7 +23,9 @@ trait CartAnalyzer {
             foreach ($cart->couture_variations as $variation) {
                 if ($variation->name == 'voucher') {
                     $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
-                    // Add extra 5 euros for clothe voucher here if required
+                    if ($variation->voucher_type == 'fabric') {
+                        $article_amount += 5 * $variation->pivot->articles_number;
+                    }
                 } else {
                     if ($variation->is_extra_accessory == '1') {
                         $article_amount = $variation->pivot->articles_number * $variation->specific_price;

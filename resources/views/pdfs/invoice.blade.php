@@ -188,28 +188,53 @@
 			@php $sum_before_voucher = 0; $sum_without_tax = 0; $vat_low = 0; $vat_med = 0; $vat_high = 0; @endphp
 			@foreach($order->cart->couture_variations as $article)
 			@if($article->name == 'voucher')
-				<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 32px; border-bottom: solid lightgrey 1px;">
-					<div style="position: absolute; width: 40%; top: 4px; left: 0;">
-						{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} @if($article->voucher_type == 'pdf') PDF @else {{ __('pdf.invoice-voucher-type-clothe') }} @endif
+				@if($article->voucher_type == 'pdf')
+					<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 32px; border-bottom: solid lightgrey 1px;">
+						<div style="position: absolute; width: 40%; top: 4px; left: 0;">
+							{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} PDF
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
+							{{ $article->pivot->value }}&euro;
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
+							0%
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 70%;">
+							{{ $article->pivot->articles_number }}
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 85%;">
+							{{ number_format($article->pivot->value * $article->pivot->articles_number, 2) }}&euro;
+						</div>
 					</div>
-					<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
-						{{ round($article->pivot->value / (1 + 17/100), 2) }}&euro;
+					@php 
+						$sum_before_voucher += $article->pivot->value * $article->pivot->articles_number; 
+						$sum_without_tax += $article->pivot->value * $article->pivot->articles_number;
+						$vat_high += 0;
+					@endphp
+				@else
+					<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 32px; border-bottom: solid lightgrey 1px;">
+						<div style="position: absolute; width: 40%; top: 4px; left: 0;">
+							{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} {{ __('pdf.invoice-voucher-type-clothe') }}
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
+							{{ $article->pivot->value + round(5 / (1 + 17/100), 2) }}&euro;
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
+							17%
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 70%;">
+							{{ $article->pivot->articles_number }}
+						</div>
+						<div style="position: absolute; width: 15%; top: 4px; left: 85%;">
+							{{ number_format(($article->pivot->value + 5) * $article->pivot->articles_number, 2) }}&euro;
+						</div>
 					</div>
-					<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
-						17%
-					</div>
-					<div style="position: absolute; width: 15%; top: 4px; left: 70%;">
-						{{ $article->pivot->articles_number }}
-					</div>
-					<div style="position: absolute; width: 15%; top: 4px; left: 85%;">
-						{{ number_format($article->pivot->value * $article->pivot->articles_number, 2) }}&euro;
-					</div>
-				</div>
-				@php 
-					$sum_before_voucher += $article->pivot->value * $article->pivot->articles_number; 
-					$sum_without_tax += ($article->pivot->value / (1 + 17/100)) * $article->pivot->articles_number;
-					$vat_high += $article->pivot->articles_number * $article->pivot->value * (1 - 1/1.17);
-				@endphp
+					@php 
+						$sum_before_voucher += ($article->pivot->value + 5) * $article->pivot->articles_number; 
+						$sum_without_tax += ($article->pivot->value + 5 / (1 + 17/100)) * $article->pivot->articles_number;
+						$vat_high += $article->pivot->articles_number * 5 * (1 - 1/1.17);
+					@endphp
+				@endif
 			@else
 				<div style="position: relative; font-family: 'Barlow Condensed Medium'; height: 32px; border-bottom: solid lightgrey 1px;">
 					<div style="position: absolute; width: 40%; top: 4px; left: 0;">
