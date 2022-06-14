@@ -9,8 +9,9 @@
         </div>
     @endif
 
-    <div class="filter-no-result text-center" id="filter-update-loader" style="display: none;">
-        Mise à jour en cours...
+    <div class="filter-no-result text-center" id="filter-update-loader" style="display: none; margin-bottom: 40px; text-align: center;">
+        <img src="{{ asset('images/loaders/loader-square-red.gif') }}" style="height: 70px; margin: auto;" />
+        <!-- Mise à jour en cours... -->
     </div>
 
     <div class="flex flex-wrap justify-start all-models__list" id="filtered-creations">
