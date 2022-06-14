@@ -106,10 +106,10 @@
   {
     "page": "Home",
     "key": "header.design-desc",
-    "de": "Weil Upcycling nicht nur Kleidung betrifft, sondern weit darüber hinausgeht! BENU LIVING entwirft und bietet einzigartige Möbel an, die aus alten Möbeln geupcycelt sind und für die Müllhalde vorgesehen waren. Du kannst alle BENU LIVING-Kreationen im BENU VILLAGE finden. \nEine neue, umfangreichere Website wird bis Sommer 2023 eingerichtet. Mehr dazu hier:",
-    "fr": "Parce que l’upcycling ne concerne pas que les vêtements, mais va bien au-delà ! BENU LIVING conçoit et propose des meubles uniques en Upcycling à partir d’anciens meubles qui étaient destinés à la déchèterie. Tu pourras retrouver l’ensemble des créations BENU LIVING dans BENU VILLAGE.\nUn nouveau site plus complet sera mis en place avant été 2023. Pour en savoir plus :",
-    "en": "Because upcycling is not only about clothes, but goes far beyond! BENU LIVING designs and offers unique upcycled furniture from old furniture that was destined for the rubbish dump. You can find all the BENU LIVING creations in BENU VILLAGE.\nA new, more complete website will be set up before summer 2023. For more information:",
-    "lu": "Well UpCycling net just Kleedung concernéiert, mee wäit doriwwer eraus geet! BENU LIVING entwërft a bitt eenzegaarteg Miwwel un, déi geupcycelt sinn aus ale Miwwel, déi soss um Tipp gelant wieren. All d'BENU LIVING-Kreatioune fënns du am BENU VILLAGE.  Eng nei Internetsäit mat méi Informatioune wäert bis Summer 2023 ageriicht ginn. Méi dozou hei:"
+    "de": "Weil Upcycling nicht nur Kleidung betrifft, sondern weit darüber hinausgeht! BENU FORM entwirft und bietet einzigartige Möbel an, die aus alten Möbeln geupcycelt sind und für die Müllhalde vorgesehen waren. Du kannst alle BENU FORM-Kreationen im BENU VILLAGE finden. \nEine neue, umfangreichere Website wird bis Sommer 2023 eingerichtet. Mehr dazu hier:",
+    "fr": "Parce que l’upcycling ne concerne pas que les vêtements, mais va bien au-delà ! BENU FORM conçoit et propose des meubles uniques en Upcycling à partir d’anciens meubles qui étaient destinés à la déchèterie. Tu pourras retrouver l’ensemble des créations BENU FORM dans BENU VILLAGE.\nUn nouveau site plus complet sera mis en place avant été 2023. Pour en savoir plus :",
+    "en": "Because upcycling is not only about clothes, but goes far beyond! BENU FORM designs and offers unique upcycled furniture from old furniture that was destined for the rubbish dump. You can find all the BENU FORM creations in BENU VILLAGE.\nA new, more complete website will be set up before summer 2023. For more information:",
+    "lu": "Well UpCycling net just Kleedung concernéiert, mee wäit doriwwer eraus geet! BENU FORM entwërft a bitt eenzegaarteg Miwwel un, déi geupcycelt sinn aus ale Miwwel, déi soss um Tipp gelant wieren. All d'BENU FORM-Kreatioune fënns du am BENU VILLAGE.  Eng nei Internetsäit mat méi Informatioune wäert bis Summer 2023 ageriicht ginn. Méi dozou hei:"
   },
   {
     "page": "Home",
@@ -1658,10 +1658,18 @@
   {
     "page": "Service Client",
     "key": "services.delivery-details",
-    "de": "Wir versenden Deine Bestellung mit Post Luxembourg an Deine Lieferadresse.\nDu kannst Dir die bestellte Ware auch ganz einfach und bequem zu einer Packstation der luxemburgischen Post (PackUp 24/24) liefern lassen. Dazu musst Du nur die Packstation als Lieferadresse angeben.\n\nWenn Du in unserer Nähe bist und die Lieferkosten sparen möchtest, kannst Du Deine Ware auch persönlich in unserem Shop in Esch-Alzette abholen.",
-    "fr": "Nous envoyons ta commande par Post Luxembourg à ton adresse de livraison.\nTu peux aussi te faire livrer facilement et confortablement à une station PackUp 24/24 de la poste luxembourgeoise. Pour cela, il te suffit d'indiquer la station comme adresse de livraison.\n\nSi tu es proche de chez nous et que tu souhaites économiser les frais de livraison, tu peux aussi venir chercher personnellement ta marchandise dans notre magasin à Esch-sur-Alzette.",
-    "en": "We ship your order with Post Luxembourg to your delivery address.\nYou can also easily and conveniently have the ordered goods delivered to a packing station of the Luxembourg Post (PackUp 24/24). You only have to enter the Packstation as delivery address.\n\nIf you are close to us and want to save the delivery costs, you can also pick up your goods personally in our store in Esch-Alzette.",
-    "lu": "Mir verschécken Deng Bestellung mat der lëtzebuergescher Post un Deng Liwweradress. \nDu kanns Deng bestallten Artikelen och bequeem an einfach an eng PackUp 24/24-Statioun vun der Post liwwere loossen. Gëff dofir PackUp-Statioun als Liwweradress un.\n\nWann s Du an der Géigend bass an d'Liwwerkäschte spuere wëlls, kanns Du Deng Artikelen och perséinlech an eise Shop zu Esch-Uelzecht siche kommen."
+    "de": "Wir versenden Deine Bestellung mit Post Luxembourg an Deine Lieferadresse.\nDu kannst Dir die bestellte Ware auch ganz einfach und bequem zu einer Packstation der luxemburgischen Post (PackUp 24/24) liefern lassen. Dazu musst Du nur die Packstation als Lieferadresse angeben.\n\nWenn Du in unserer Nähe bist und die Lieferkosten sparen möchtest, kannst Du Deine Ware auch persönlich abholen, in unserem",
+    "fr": "Nous envoyons ta commande par Post Luxembourg à ton adresse de livraison.\nTu peux aussi te faire livrer facilement et confortablement à une station PackUp 24/24 de la poste luxembourgeoise. Pour cela, il te suffit d'indiquer la station comme adresse de livraison.\n\nSi tu es proche de chez nous et que tu souhaites économiser les frais de livraison, tu peux aussi venir chercher personnellement ta marchandise dans notre magasin",
+    "en": "We ship your order with Post Luxembourg to your delivery address.\nYou can also easily and conveniently have the ordered goods delivered to a packing station of the Luxembourg Post (PackUp 24/24). You only have to enter the Packstation as delivery address.\n\nIf you are close to us and want to save the delivery costs, you can also pick up your goods personally in our",
+    "lu": "Mir verschécken Deng Bestellung mat der lëtzebuergescher Post un Deng Liwweradress. \nDu kanns Deng bestallten Artikelen och bequeem an einfach an eng PackUp 24/24-Statioun vun der Post liwwere loossen. Gëff dofir PackUp-Statioun als Liwweradress un.\n\nWann s Du an der Géigend bass an d'Liwwerkäschte spuere wëlls, kanns Du Deng Artikelen och perséinlech siche kommen  an eise"
+  },
+  {
+    "page": "Service Client",
+    "key": "services.delivery-details-link",
+    "de": "Shop in Esch-sur-Alzette",
+    "fr": "à Esch-sur-Alzette",
+    "en": "store in Esch-sur-Alzette",
+    "lu": "Shop zu Esch-Uelzecht"
   },
   {
     "page": "Service Client",
@@ -1678,6 +1686,14 @@
     "fr": "Les frais d'envoi dépendent de ton pays et du poids total de ta commande. \n\nLes articles fins et légers  jusqu'à 500g, comme les bons d'achat, sont envoyés par courrier, les articles plus volumineux sont envoyés dans des cartons. \n\nLe tableau te donne un aperçu des frais encourus. Le montant respectif comprend les frais d'envoi par Post Luxembourg et en plus 2 euros par colis ou 1 euro par envoi postal pour notre temps de travail pour emballer les articles commandés. Le matériel d'emballage est gratuit.",
     "en": "The shipping costs depend on your country and the total weight of your order. \n\nThin and light items up to 500g, such as vouchers, are sent as letter mail, all larger goods are sent in boxes. \n\nThe table gives you an overview of the costs. The respective amount includes the costs for shipping with Post Luxembourg and additionally 2 Euro per package or 1 Euro per letter for our working time to pack the ordered items. The packing material is free of charge.",
     "lu": "D'Liwwerkäschten riichten sech no Dengem Land an dem Gesamtgewiicht vun Denger Bestellung.\n\nDënn a liicht Artikele bis 500 g, wéi z. B. Bongen, verschécke mir als Bréif. All aner, méi grouss Artikele ginn a Këschte verschéckt.\n\nD'Tabell gëtt Dir en Iwwerbléck iwwert d'Fraisen, déi ufalen. Am jeeweilege Montant abegraff sinn d'Liwwerkäschte vun der Post an zousätzlech 2 Euro pro Pak resp. 1 Euro pro Bréif fir eis Aarbechtszäit fir d'Apake vun Denge bestallten Artikelen. D'Vepackungsmaterial ass gratis."
+  },
+  {
+    "page": "Service Client",
+    "key": "services.delivery-weight-in-kg",
+    "de": "Gewicht in Kilogramm",
+    "fr": "Poids en kilogrammes",
+    "en": "Weight in kilogram",
+    "lu": ""
   },
   {
     "page": "Service Client",
@@ -1746,10 +1762,10 @@
   {
     "page": "Service Client",
     "key": "services.general-description-link",
-    "de": "Melde Dich bei uns !",
-    "fr": "N'hésite pas à nous contacter !",
-    "en": "Feel free to contact us !",
-    "lu": "Kontaktéier eis !"
+    "de": "Melde Dich bei uns",
+    "fr": "N'hésite pas à nous contacter",
+    "en": "Feel free to contact us",
+    "lu": "Kontaktéier eis"
   },
   {
     "page": "Service Client",
@@ -3434,18 +3450,18 @@
   {
     "page": "Service Client",
     "key": "services.return-info-1-1",
-    "de": "Du kannst Deine Ware zu den Öffnungszeiten auch persönlich",
-    "fr": "Tu peux également retourner ton article en personne dans",
-    "en": "You can also return your goods in person in",
-    "lu": "Alternativ kanns du Deng Artikelen och wärend den Ëffnungszäite perséinlech"
+    "de": "Du kannst Deine Ware zu den Öffnungszeiten auch persönlich in unserem",
+    "fr": "Tu peux également retourner ton article en personne dans notre",
+    "en": "You can also return your goods in person in our",
+    "lu": "Alternativ kanns du Deng Artikelen och wärend den Ëffnungszäite perséinlech an eisem"
   },
   {
     "page": "Service Client",
     "key": "services.return-info-1-link",
-    "de": "in unserem Shop in Esch-Alzette",
-    "fr": "notre magasin d'Esch-sur-Alzette",
-    "en": "our store in Esch-Alzette",
-    "lu": "an eisem Shop zu Esch-Uelzecht"
+    "de": "Shop in Esch-sur-Alzette",
+    "fr": "magasin d'Esch-sur-Alzette",
+    "en": "store in Esch-sur-Alzette",
+    "lu": "Shop zu Esch-Uelzecht"
   },
   {
     "page": "Service Client",
@@ -3466,10 +3482,10 @@
   {
     "page": "Service Client",
     "key": "services.return-info-2",
-    "de": "Damit wir Deine Rücksendung zügig und unkompliziert bearbeiten können, bitten wir Dich einen Rücksendeschein beizulegen. \n\nWenn Du Deine Bestellung mit Deinem BENU-Konto aufgegeben hast, findest Du den Rücksendeschein in Deinem Konto. Wähle unter der betreffenden Bestellung die Artikel aus, die Du zurücksenden möchtest und gib einen Grund für den Retour an. Du kannst dann den Rücksendeschein herunterladen, ausdrucken und Deiner Rücksendung beilegen. Vergiss bitte nicht die Kontonummer und den/die Kontoinhaber:in einzutragen, sodass wir Dir den Kaufpreis erstatten können!\n\nKannst Du Deinen Rücksendeschein nicht finden? Oder hast Du als Besucher:in ohne BENU-Konto bestellt? Dann findest Du hier einen Blanko-Rücksendeschein. Bitte fülle die leeren Felder manuell aus und lege den Schein Deiner Rücksendung bei.",
-    "fr": "Afin que nous puissions traiter ton retour rapidement et sans complications, nous te prions de joindre un bon de retour. \n\nSi tu as passé ta commande avec ton compte BENU, tu trouveras le bon de retour dans ton compte. Sélectionne sous la commande concernée les articles que tu souhaites renvoyer et indique une raison pour le retour. Tu peux ensuite télécharger le bon de retour, l'imprimer et le joindre à ton envoi. N'oublie pas d'indiquer le numéro de compte et le titulaire du compte, afin que nous puissions te rembourser le prix d'achat !\n\nTu ne trouves pas ton bon de retour ? Ou tu as commandé en tant que visiteur(se) sans compte BENU ? Tu trouveras ici un bon de retour vierge. Merci de remplir manuellement les champs vides et de joindre le bon à ton retour.",
-    "en": "So that we can process your return quickly and easily, we ask you to enclose a return form. \n\nIf you have placed your order with your BENU account, you will find the return form in your account. Select the items you wish to return under the relevant order and indicate the reason for the return. You can then download the return form, print it out and enclose it with your return. Please do not forget to fill in the account number and the account holder, so that we can refund you!\n\nCan't find your return form? Or did you order as a visitor without a BENU account? Then you can find a blank return form here. Please fill in the empty fields manually and attach the form to your return.",
-    "lu": "Fir dass mir Däi Retour schëtzeg an onkomplizéiert  beaarbechte kënnen, lee wgl. e Retourschäin \ndobäi.\n\nWann s Du Deng Bestellung mat Dengem BENU-Kont opginn hues, fënns Du däi Retourschäin an Dengem Kont. Wiel bei der betreffender Bestellung déi Artikelen aus, déi s Du zeréckschécken wëlls a gëff e Grond fir de Retour un. Duerno kanns du de Retourschäin eroflueden, erausdrécken an bei Däi Retour leeën. Vergies wgl. net d'Kontosnummer an den Titulaire vum Kont anzedroen, fir dass mir Dech kënne rembourséieren!\n\nFënns Du Däi Retourschäin net? Oder hues du als Visiteur ouni BENU-Kont bestallt? Da fënns Du hei e Blanko-Retourschäin. Fëll wgl. déi eidel Felder manuell aus a lee dëse Schäin bei Däi Retour dobäi."
+    "de": "Damit wir Deine Rücksendung zügig und unkompliziert bearbeiten können, bitten wir Dich einen Rücksendeschein beizulegen. \n\nWenn Du Deine Bestellung mit Deinem BENU-Konto aufgegeben hast, findest Du den Rücksendeschein in Deinem Konto unter \"Meine Bestellungen\". Wähle die Bestellung aus, von der Du einen oder mehrere Artikel zurücksenden möchtest. Du kannst dann den Rücksendeschein herunterladen, ausdrucken und Deiner Rücksendung beilegen. Vergiss bitte nicht die Kontonummer und den/die Kontoinhaber:in einzutragen, sodass wir Dir den Kaufpreis erstatten können!\n\nKannst Du Deinen Rücksendeschein nicht finden? Oder hast Du als Besucher:in ohne BENU-Konto bestellt? Dann findest Du hier einen Blanko-Rücksendeschein. Bitte fülle die leeren Felder manuell aus und lege den Schein Deiner Rücksendung bei.",
+    "fr": "Afin que nous puissions traiter ton retour rapidement et sans complications, nous te prions de joindre un bon de retour. \n\nSi tu as passé ta commande avec ton compte BENU, tu trouveras le bon de retour dans ton compte  \"mes commandes\". Sélectionne la commande dont tu souhaites renvoyer un ou plusieurs articles. Tu peux ensuite télécharger le bon de retour, l'imprimer et le joindre à ton retour.  N'oublie pas d'indiquer le numéro de compte et le titulaire du compte, afin que nous puissions te rembourser le prix d'achat !\n\nTu ne trouves pas ton bon de retour ? Ou tu as commandé en tant que visiteur(se) sans compte BENU ? Tu trouveras ici un bon de retour vierge. Merci de remplir manuellement les champs vides et de joindre le bon à ton retour.",
+    "en": "So that we can process your return quickly and easily, we ask you to enclose a return form. \n\nIf you have placed your order with your BENU account, you will find the return form in your account under \"my orders\". Select the order from which you want to return one or more items. You can then download the return form, print it out and enclose it with your return. Please do not forget to fill in the account number and the account holder, so that we can refund you!\n\nCan't find your return form? Or did you order as a visitor without a BENU account? Then you can find a blank return form here. Please fill in the empty fields manually and attach the form to your return.",
+    "lu": "Fir dass mir Däi Retour schëtzeg an onkomplizéiert  beaarbechte kënnen, lee wgl. e Retourschäin \ndobäi.\n\nWann s Du Deng Bestellung mat Dengem BENU-Kont opginn hues, fënns Du däi Retourschäin an Dengem Kont ënner \"Meng Bestellungen\". Wiel d'Bestellung aus, vun der s Du eppes zeréckschécken wëlls. Duerno kanns Du de Retourschäin eroflueden, erausdrécken an bei Däi Retour leeën. Vergies wgl. net d'Kontosnummer an den Titulaire vum Kont anzedroen, fir dass mir Dech kënne rembourséieren!\n\nFënns Du Däi Retourschäin net? Oder hues du als Visiteur ouni BENU-Kont bestallt? Da fënns Du hei e Blanko-Retourschäin. Fëll wgl. déi eidel Felder manuell aus a lee dëse Schäin bei Däi Retour dobäi."
   },
   {
     "page": "Service Client",
@@ -3554,7 +3570,7 @@
   {
     "page": "Service Client",
     "key": "services.payment-subtitle",
-    "de": "Im Online-shop von BENU COUTURE kannst Du einfach von zuhause bestellen und bezahlen. Wir bieten Dir folgende bequeme und sichere Bezahlmöglichkeiten an. Die genauen Bedingungen für die Bezahlung und die Lieferung findest Du in unseren Nutzungsbedingungen.",
+    "de": "Im Online-Shop von BENU COUTURE kannst Du einfach von zuhause bestellen und bezahlen. Wir bieten Dir folgende bequeme und sichere Bezahlmöglichkeiten an. Die genauen Bedingungen für die Bezahlung und die Lieferung findest Du in unseren Nutzungsbedingungen.",
     "fr": "Dans le shop en ligne de BENU COUTURE, tu peux commander et payer facilement de chez toi. Nous te proposons les modes de paiement pratiques et sécurisés suivants. Tu trouveras les conditions exactes de paiement et de livraison dans nos conditions d'utilisation.",
     "en": "In the online shop of BENU COUTURE you can easily order and pay from home. We offer you the following convenient and secure payment options. You can find the exact conditions for payment and delivery in our terms of use.",
     "lu": "Am BENU COUTURE Online Shop kanns Du einfach vun doheem bestellen a bezuelen. Mir bidden Dir déi folgend praktesch a sécher Bezuelméiglechkeeten. Déi genee Konditioune fir d'Bezuelung an d'Liwwerung fënns Du an eise Benotzungskonditiounen."
@@ -3625,7 +3641,7 @@
   },
   {
     "page": "Service Client",
-    "key": "services.payment-option-1-bullet-2",
+    "key": "services.payment-option-1-desc-2",
     "de": "Du kannst sowohl als Besucher als auch über Dein BENU-Konto mit Kreditkarte bezahlen. Die Belastung Deiner Kreditkarte erfolgt mit Abschluss der Bestellung.\nNach Eingang der Bestellung erhältst Du eine Bestellbestätigung per E-Mail und die Ware wird für den Versand vorbereitet.",
     "fr": "Tu peux payer par carte de crédit aussi bien en tant que visiteur que via ton compte BENU. Le débit de ta carte de crédit est effectué à la fin de la commande.\nAprès réception de la commande, tu recevras une confirmation de commande par e-mail et la commande sera préparée pour l'expédition.",
     "en": "You can pay by credit card both as a guest and via your BENU account. Your credit card will be charged after the order has been completed.\nUpon receipt of your order, you will receive an order confirmation by e-mail and the goods will be prepared for shipment.",
@@ -3658,10 +3674,10 @@
   {
     "page": "Service Client",
     "key": "services.payment-option-3-desc",
-    "de": "Die Zahlung per Payconiq ist für Nutzer:innen mit BENU-Konto und für Besucher:innen möglich.\nBezahle hierzu bitte die Gesamtsumme unter Angabe Deiner Bestellnummer und gegebenfalls Deiner Kundennummer an folgende Telefonnummer:\n00352 621 763 609\nSobald die Zahlungsbestätigung bei uns eingeht, bereiten wir Deine Artikel für den Versand vor.",
-    "fr": "Le paiement par Payconiq est possible pour les utilisateurs disposant d'un compte BENU et pour les visiteurs.\nPour cela, tu dois payer la somme totale en indiquant ton numéro de commande et éventuellement ton numéro de client au numéro de téléphone suivant :\n00352 621 763 609\nDès que nous recevrons la confirmation du paiement, nous préparerons tes articles pour l'expédition.",
-    "en": "Payment by Payconiq is possible for users with a BENU account and for visitors.\nPlease pay the total amount stating your order number and, if available, your customer number to the following telephone number:\n00352 621 763 609\nAs soon as we receive the payment confirmation, we will prepare your items for shipping.",
-    "lu": "Bezuelung mat Payconiq ass méiglech fir Benotzer mat engem BENU Kont a fir Besicher.\nBezuel w.e.g. de Gesamtbetrag, \nop folgend Telefonsnummer:\n00352 621 763 609 Gëff w.e.g. Deng Bestellungsnummer an, wann zoutreffend, Deng Clientsnummer un.\nSoubal mir d'Bezuelungsbestätegung kréien, preparéiere mir Deng Artikele fir de Versand."
+    "de": "Die Zahlung per Payconiq ist für Nutzer:innen mit BENU-Konto und für Besucher:innen möglich.\nBezahle hierzu bitte die Gesamtsumme unter Angabe Deiner Bestellnummer und gegebenfalls Deiner Kundennummer an folgende Telefonnummer:\n00352 621 763 609.\nSobald die Zahlungsbestätigung bei uns eingeht, bereiten wir Deine Artikel für den Versand vor.",
+    "fr": "Le paiement par Payconiq est possible pour les utilisateurs disposant d'un compte BENU et pour les visiteurs.\nPour cela, tu dois payer la somme totale en indiquant ton numéro de commande et éventuellement ton numéro de client au numéro de téléphone suivant :\n00352 621 763 609.\nDès que nous recevrons la confirmation du paiement, nous préparerons tes articles pour l'expédition.",
+    "en": "Payment by Payconiq is possible for users with a BENU account and for visitors.\nPlease pay the total amount stating your order number and, if available, your customer number to the following telephone number:\n00352 621 763 609.\nAs soon as we receive the payment confirmation, we will prepare your items for shipping.",
+    "lu": "Bezuelung mat Payconiq ass méiglech fir Benotzer mat engem BENU Kont a fir Besicher.\nBezuel w.e.g. de Gesamtbetrag, \nop folgend Telefonsnummer:\n00352 621 763 609. Gëff w.e.g. Deng Bestellungsnummer an, wann zoutreffend, Deng Clientsnummer un.\nSoubal mir d'Bezuelungsbestätegung kréien, preparéiere mir Deng Artikele fir de Versand."
   },
   {
     "page": "Service Client",
@@ -3674,10 +3690,10 @@
   {
     "page": "Service Client",
     "key": "services.payment-option-4-desc",
-    "de": "Eine Bezahlung per Überweisung ist nur möglich, wenn Du vorher ein Konto bei BENU eingerichtet und Dich eingeloggt hast. Überweise bitte die Gesamtsumme unter Angabe Deiner Bestellnummer und Deiner Kundennummer innerhalb von 5 Kalendertagen an unsere Bankverbindung:\nKontoinhaber: BENU Village Esch asbl. Kontonummer: BCEELULL LU63 0019 5055 5248 0000\nNachdem der Gesamtbetrag auf unserem Konto eingegangen ist, wird Deine Ware schnellstmöglich versendet.",
-    "fr": "Le paiement par virement bancaire n'est possible que si tu as préalablement créé un compte chez BENU et que tu t'es connecté(e). Vire le montant total en indiquant ton numéro de commande et ton numéro de client dans un délai de 5 jours calendaires à nos coordonnées bancaires :\nTitulaire du compte : BENU Village Esch asbl. Numéro de compte : BCEELULL LU63 0019 5055 5248 0000 \nAprès réception du montant total sur notre compte, ta commande sera envoyée dans les plus brefs délais.",
-    "en": "Payment by bank transfer is only possible if you have previously set up an account with BENU and logged in. Please transfer the total amount to our bank account within 5 calendar days, stating your order number and customer number:\nAccount holder: BENU Village Esch asbl. Account number: BCEELULL LU63 0019 5055 5248 0000\nAfter the total amount has been credited to our account, your goods will be shipped as soon as possible.",
-    "lu": "Bezuelung per Bankiwerweisung ass nëmme méiglech wann s Du virdru e Kont bei BENU ageriicht hues a ageloggt bass. Iwwerweis w.e.g. de Gesamtbetrag op eise Bankkonto bannent 5 Kalennerdeeg, andeems Du Deng Bestellungsnummer an Deng Clientsnummer ugëss:\nKontinhaber: BENU Village Esch asbl.\nKontonummer: BCEELULL LU63 0019 5055 5248 0000\nNodeems de Gesamtbetrag op eisem Kont ukomm ass, ginn Deng Wueren sou séier wéi méiglech verschéckt."
+    "de": "Eine Bezahlung per Überweisung ist nur möglich, wenn Du vorher ein Konto bei BENU eingerichtet und Dich eingeloggt hast. Überweise bitte die Gesamtsumme unter Angabe Deiner Bestellnummer und Deiner Kundennummer innerhalb von 5 Kalendertagen an unsere Bankverbindung:\nKontoinhaber: BENU Village Esch asbl. Kontonummer: BCEELULL LU63 0019 5055 5248 0000. \nNachdem der Gesamtbetrag auf unserem Konto eingegangen ist, wird Deine Ware schnellstmöglich versendet.",
+    "fr": "Le paiement par virement bancaire n'est possible que si tu as préalablement créé un compte chez BENU et que tu t'es connecté(e). Vire le montant total en indiquant ton numéro de commande et ton numéro de client dans un délai de 5 jours calendaires à nos coordonnées bancaires :\nTitulaire du compte : BENU Village Esch asbl. Numéro de compte : BCEELULL LU63 0019 5055 5248 0000. \nAprès réception du montant total sur notre compte, ta commande sera envoyée dans les plus brefs délais.",
+    "en": "Payment by bank transfer is only possible if you have previously set up an account with BENU and logged in. Please transfer the total amount to our bank account within 5 calendar days, stating your order number and customer number:\nAccount holder: BENU Village Esch asbl. Account number: BCEELULL LU63 0019 5055 5248 0000.\nAfter the total amount has been credited to our account, your goods will be shipped as soon as possible.",
+    "lu": "Bezuelung per Bankiwerweisung ass nëmme méiglech wann s Du virdru e Kont bei BENU ageriicht hues a ageloggt bass. Iwwerweis w.e.g. de Gesamtbetrag op eise Bankkonto bannent 5 Kalennerdeeg, andeems Du Deng Bestellungsnummer an Deng Clientsnummer ugëss:\nKontinhaber: BENU Village Esch asbl.\nKontonummer: BCEELULL LU63 0019 5055 5248 0000.\nNodeems de Gesamtbetrag op eisem Kont ukomm ass, ginn Deng Wueren sou séier wéi méiglech verschéckt."
   },
   {
     "page": "Service Client",
@@ -3706,10 +3722,18 @@
   {
     "page": "Service Client",
     "key": "services.care-subtitle",
-    "de": "Die Pflegesymbole zeigen Dir, wie Du Dein Kleidungsstück waschen, trocknen und bügeln kannst, ohne dass es Schäden nimmt. Die Pflegeempfehlungen berücksichtigen hierbei den empfindlichsten Teil des Textilartikels (z.B. den Reißverschluss). Allerdings können wir nicht garantieren, dass Flecken und Verschmutzungen vollständig verschwinden. Für einen schonenderen Umgang mit Umwelt und Kleidung empfehlen wir Dir, Deine Kleidungsstücke bei möglichst niedrigen Temperaturen zu waschen und zu bügeln. Heutige Waschmittel sind in der Regel so gut, dass eine 30 bis 40 Grad-Wäsche für ein optimales Ergebnis völlig ausreichen. Weitere Tipps zur nachhaltigen und umweltfreundlichen Pflege findest Du hier",
-    "fr": "Les symboles d'entretien  précisent comment le vêtement peut être laver, secher et repasser sans être endommagé. Les recommandations d'entretien tiennent compte des éléments les plus fragiles de l'article textile (p. ex. la fermeture à glissière). Toutefois, nous ne pouvons pas garantir que les taches et les salissures disparaîtront complètement. Pour une approche plus respectueuse envers l'environnement et les vêtements, nous te recommandons toutefois de laver et repasser tes vêtements à des températures aussi basses que possible, par exemple. Les lessives actuelles sont généralement si efficaces que 30 à 40 degrés suffisent amplement pour un résultat optimal. Tu trouveras d'autres conseils pour un entretien durable et respectueux de l'environnement ici",
-    "en": "The care symbols show you how the garment can be washed, dried and ironed without damaging it. The care recommendations take into account the most sensitive part of the textile item (e.g. zip). However we cannot guarantee that stains and impurities will disappear completely. For a gentler approach to both the environment and clothing, we recommend that you wash your garments at the lowest possible temperatures, for example. Today's detergents are usually so effective that 30 to 40 degrees is sufficient for an optimal result. You can find more tips on sustainable and environmentally friendly care here",
-    "lu": "D'Fleegesymboler drécken aus wéi d'Kleedung gewäsch, gedréchent a gestreckt ka ginn ouni se ze beschiedegen. D'Fleegerecommandatioune berécksiichtegen de sensibelsten Deel vum Textilartikel (z.B. d'Tiretten). Allerdéngs kënne mir net garantéieren, datt Flecken an Dreck komplett verschwannen. Fir e méi schounenden Ëmgang mat der Ëmwelt a de Kleeder, empfeele mir Dir Deng Kleeder bei méiglechst niddreger Temperatur ze wäschen. D'Wäschmëttele vun haut si meeschtens esou gutt, datt 30 bis 40 Grad duerginn fir optimal Resultater. Weider Tipps fir nohalteg an ëmweltfrëndlech Fleeg fënns Du hei"
+    "de": "Die Pflegesymbole zeigen Dir, wie Du Dein Kleidungsstück waschen, trocknen und bügeln kannst, ohne dass es Schäden nimmt. Die Pflegeempfehlungen berücksichtigen hierbei den empfindlichsten Teil des Textilartikels (z.B. den Reißverschluss). Allerdings können wir nicht garantieren, dass Flecken und Verschmutzungen vollständig verschwinden. Für einen schonenderen Umgang mit Umwelt und Kleidung empfehlen wir Dir, Deine Kleidungsstücke bei möglichst niedrigen Temperaturen zu waschen und zu bügeln. Heutige Waschmittel sind in der Regel so gut, dass eine 30 bis 40 Grad-Wäsche für ein optimales Ergebnis völlig ausreichen. Weitere Tipps zur nachhaltigen und umweltfreundlichen Pflege findest Du",
+    "fr": "Les symboles d'entretien  précisent comment le vêtement peut être laver, secher et repasser sans être endommagé. Les recommandations d'entretien tiennent compte des éléments les plus fragiles de l'article textile (p. ex. la fermeture à glissière). Toutefois, nous ne pouvons pas garantir que les taches et les salissures disparaîtront complètement. Pour une approche plus respectueuse envers l'environnement et les vêtements, nous te recommandons toutefois de laver et repasser tes vêtements à des températures aussi basses que possible, par exemple. Les lessives actuelles sont généralement si efficaces que 30 à 40 degrés suffisent amplement pour un résultat optimal. Tu trouveras d'autres conseils pour un entretien durable et respectueux de l'environnement",
+    "en": "The care symbols show you how the garment can be washed, dried and ironed without damaging it. The care recommendations take into account the most sensitive part of the textile item (e.g. zip). However we cannot guarantee that stains and impurities will disappear completely. For a gentler approach to both the environment and clothing, we recommend that you wash your garments at the lowest possible temperatures, for example. Today's detergents are usually so effective that 30 to 40 degrees is sufficient for an optimal result. You can find more tips on sustainable and environmentally friendly care",
+    "lu": "D'Fleegesymboler drécken aus wéi d'Kleedung gewäsch, gedréchent a gestreckt ka ginn ouni se ze beschiedegen. D'Fleegerecommandatioune berécksiichtegen de sensibelsten Deel vum Textilartikel (z.B. d'Tiretten). Allerdéngs kënne mir net garantéieren, datt Flecken an Dreck komplett verschwannen. Fir e méi schounenden Ëmgang mat der Ëmwelt a de Kleeder, empfeele mir Dir Deng Kleeder bei méiglechst niddreger Temperatur ze wäschen. D'Wäschmëttele vun haut si meeschtens esou gutt, datt 30 bis 40 Grad duerginn fir optimal Resultater. Weider Tipps fir nohalteg an ëmweltfrëndlech Fleeg fënns Du"
+  },
+  {
+    "page": "Service Client",
+    "key": "services.care-subtitle-link",
+    "de": "hier",
+    "fr": "ici",
+    "en": "here",
+    "lu": "hei"
   },
   {
     "page": "Service Client",
@@ -4449,6 +4473,14 @@
   },
   {
     "page": "Créations",
+    "key": "category.others",
+    "de": "Anderes",
+    "fr": "Autres",
+    "en": "Others",
+    "lu": ""
+  },
+  {
+    "page": "Créations",
     "key": "category.home",
     "de": "Für zu Hause",
     "fr": "Pour la maison",
@@ -4693,7 +4725,7 @@
     "de": "verfügbare Variation|verfügbare Variationen",
     "fr": "variation disponible|variations disponibles",
     "en": "available variation|available variations",
-    "lu": "verfügbar Variatioun|verfügbar Variatiounen"
+    "lu": "{1} verfügbare Variatioun|[2,*] verfügbare Variatiounen"
   },
   {
     "page": "Créations",
@@ -5225,7 +5257,7 @@
   },
   {
     "page": "Bons d'achat",
-    "key": "voucher.fabric",
+    "key": "vouchers.fabric",
     "de": "Stoff",
     "fr": "Tissu",
     "en": "Fabric",
@@ -5265,11 +5297,19 @@
   },
   {
     "page": "Bons d'achat",
-    "key": "voucher.singularity-fabric",
+    "key": "vouchers.singularity-fabric",
     "de": "Der Gutschein wird auf ein Stück Stoff genäht. Dimensionen: ca 22x18cm.",
     "fr": "Le bon d'achat est cousu sur un morceau de tissu. Dimensions : environ 22x18cm.",
     "en": "The voucher is sewn onto a piece of fabric. Dimensions: approx. 22x18cm.",
     "lu": "De Bong gëtt op e Stéck Stoff gebitzt. Dimensiounen: ca 22x18cm."
+  },
+  {
+    "page": "Bons d'achat",
+    "key": "vouchers.add-to-cart",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
   },
   {
     "page": "Bons d'achat",
@@ -5434,14 +5474,6 @@
   {
     "page": "Actualités",
     "key": "breadcrumbs.news-example",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Actualités",
-    "key": "news.all-subtitle",
     "de": "Alle Neuigkeiten",
     "fr": "Toutes les actualités",
     "en": "All news",
@@ -5449,18 +5481,34 @@
   },
   {
     "page": "Actualités",
+    "key": "news.all-subtitle",
+    "de": "Neuigkeiten von BENU COUTURE",
+    "fr": "Les actualités BENU COUTURE",
+    "en": "BENU COUTURE News",
+    "lu": ""
+  },
+  {
+    "page": "Actualités",
     "key": "news.all-title",
-    "de": "",
-    "fr": "",
-    "en": "",
+    "de": "Hier findest Du unsere aktuellen Nachrichten",
+    "fr": "Découvre ici toutes nos dernières actualités !",
+    "en": "Discover all our latest news here",
     "lu": ""
   },
   {
     "page": "Actualités",
     "key": "news.news-small-title",
-    "de": "",
-    "fr": "",
-    "en": "",
+    "de": "Neuigkeiten von BENU COUTURE",
+    "fr": "Les actualités BENU COUTURE",
+    "en": "BENU COUTURE News",
+    "lu": ""
+  },
+  {
+    "page": "Actualités",
+    "key": "news.no-news-for-the-moment",
+    "de": "Im Moment gibt es keine Neuigkeiten",
+    "fr": "Il n'y a pas de nouvelles pour le moment",
+    "en": "There are no news at the moment",
     "lu": ""
   },
   {
@@ -5955,7 +6003,7 @@
     "page": "Mon compte",
     "key": "dashboard.nav-hello",
     "de": "Hallo",
-    "fr": "Bonjour,",
+    "fr": "Bonjour",
     "en": "Hello",
     "lu": "Moien"
   },
@@ -5998,6 +6046,14 @@
     "fr": "Mes commandes",
     "en": "My orders",
     "lu": "Meng Bestellungen"
+  },
+  {
+    "page": "Mon compte",
+    "key": "dashboard.order-articles",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
   },
   {
     "page": "Mon compte",
@@ -6225,7 +6281,7 @@
   },
   {
     "page": "Mon compte",
-    "key": "pdf.invoice-order-number",
+    "key": "pdf.invoice-your-order-number",
     "de": "",
     "fr": "Ton N° de commande",
     "en": "",
@@ -6329,7 +6385,7 @@
   },
   {
     "page": "Mon compte",
-    "key": "pdf.invoice-price- with-tax",
+    "key": "pdf.invoice-price-with-tax",
     "de": "",
     "fr": "Prix TTC",
     "en": "",
@@ -7818,10 +7874,10 @@
   {
     "page": "Panier",
     "key": "cart.payment-products",
-    "de": "Artikel|Artikelen",
-    "fr": "Article|Articles",
-    "en": "Item|Items",
-    "lu": "Artikel|Artikelen"
+    "de": "Artikel",
+    "fr": "Article",
+    "en": "Item",
+    "lu": "Artikel"
   },
   {
     "page": "Panier",
@@ -8229,6 +8285,302 @@
     "de": "Das angegebene Passwort ist falsch.",
     "fr": "Le mot de passe fourni est incorrect.",
     "en": "The password entered is incorrect.",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "breadcrumbs.participate",
+    "de": "Mitmachen",
+    "fr": "Participer",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.main-title",
+    "de": "Du kannst bei BENU COUTURE mitmachen!",
+    "fr": "Tu peux participer à BENU COUTURE !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "breadcrumbs.badges",
+    "de": "Siegel gewinnen",
+    "fr": "Remporter des badges",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "PARTICIPATE.NAV-BADGES",
+    "de": "Siegel gewinnen",
+    "fr": "Remporter des badges",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-title",
+    "de": "So bekommst Du Dein BENU COUTURE-Siegel",
+    "fr": "Comment obtenir ton badge BENU COUTURE ?",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-content-1",
+    "de": "Mitmachen bei BENU COUTURE eröffnet Dir die Möglichkeit, Dein persönliches BENU COUTURE Siegel zu erhalten. Das entsprechende Siegel schicken wir Dir als PDF Datei zu. Es wird außerdem in Deinem BENU-Konto sichtbar sein. Die BENU Siegel haben jeweils eine Gültigkeitsdauer von einem Jahr.",
+    "fr": "La participation à BENU COUTURE te donne la possibilité de recevoir ton badge personnel BENU COUTURE. Nous t’enverrons le badge correspondant sous forme de fichier PDF. Il sera également visible dans ton compte BENU. Les sceaux BENU ont chacun une durée de validité d'un an.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-top-user",
+    "de": "BENU COUTURE TopUser",
+    "fr": "BENU COUTURE TopUser",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-content-2",
+    "de": "Sobald Du innerhalb eines Jahres Bestellungen bei BENU COUTURE eingestellt hast, erhältst Du automatisch das BENU COUTURE TopUser Siegel! Lasst uns gemeinsam beweisen, dass wir die Welt bewegen können, indem wir auf den Kauf von neu produzierter Kleidung verzichten!",
+    "fr": "Dès que tu as placé des commandes chez BENU COUTURE en l'espace d'un an, tu reçois automatiquement le sceau BENU COUTURE TopUser ! Prouvons ensemble que nous pouvons faire bouger le monde en renonçant à l'achat de vêtements nouvellement produits !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-brain",
+    "de": "BENU COUTURE Brain",
+    "fr": "BENU COUTURE Brain",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-content-3",
+    "de": "Du verfügst über fundierte Kenntnisse im Bereich der Nachhaltigkeit, Du hast Zugang zu entsprechenden Studien und möchtest dich an der Diskussion und Gestaltung der Ideen von BENU COUTURE beteiligen? Dann mach mit und erhalte so das BENU COUTURE Brain Siegel! Zusammen gestalten wir eine Seite mit Basiswissen zum Thema nachhaltige Kleidung mit einem fundierten Nachhaltigkeitshintergrund. Wenn Du mitmachen und Dein BENU Siegel anfragen möchtest, dann melde Dich bei uns!",
+    "fr": "Tu as des connaissances approfondies dans le domaine de l'habillement durable, tu as accès aux études correspondantes et tu souhaites participer à la discussion et à la conception des idées de BENU COUTURE ? Alors participe et obtiens ainsi le label BENU COUTURE Brain ! Ensemble, nous créerons une page de connaissances de base sur le thème des vêtements durables avec un arrière-plan de durabilité bien fondé ! Si tu veux participer et demander ton sceau BENU, contacte-nous !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.badges-link",
+    "de": "BENU COUTURE kontaktieren",
+    "fr": "Contacter BENU COUTURE",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "breadcrumbs.give-clothes",
+    "de": "Kleider spenden",
+    "fr": "Donner des vêtements",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "PARTICIPATE.NAV-GIVE",
+    "de": "Kleider spenden",
+    "fr": "Donner des vêtements",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-title",
+    "de": "Du möchtest Deine Altkleider oder gebrauchten Textilien an BENU COUTURE spenden?",
+    "fr": "Tu souhaites faire don de tes vieux vêtements ou de tes textiles usagés à BENU COUTURE ?",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-content-1.1",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-content-1.2",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-content-1.3",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-link-1",
+    "de": "Mehr erfahren",
+    "fr": "En savoir plus",
+    "en": "Learn more",
+    "lu": "Méi Infoen"
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-content-2.1",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-content-2.2",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-link-2",
+    "de": "Mehr erfahren",
+    "fr": "En savoir plus",
+    "en": "Learn more",
+    "lu": "Méi Infoen"
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-title-2",
+    "de": "BENU-Sammelstellen für Altkleider und Textilien",
+    "fr": "Points de collecte pour les vêtements et textiles usagés",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.give-content-3.1",
+    "de": "Du kannst Deine Kleiderspende zu unseren Öffnungszeiten im BENU Shop in Esch-Alzette ohne Voranmeldung abgeben. Bei den übrigen Sammelstellen in Luxemburg bitten wir dich, vorab telefonisch einen Termin zu vereinbaren.",
+    "fr": "Tu peux déposer tes dons de vêtements à la boutique BENU d'Esch-sur-Alzette sans rendez-vous pendant nos heures d'ouverture. Pour les autres points de collecte au Luxembourg, nous te prions de prendre rendez-vous au préalable par téléphone.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "breadcrumbs.participate-partnership",
+    "de": "Partner:in werden",
+    "fr": "Devenir partenaire",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "PARTICIPATE.NAV-PARTNERSHIP",
+    "de": "Partner:in werden",
+    "fr": "Devenir partenaire",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-title",
+    "de": "Du kannst Deine Kreationen als Partner:in bei uns ausstellen oder verkaufen",
+    "fr": "Tu peux exposer ou vendre tes créations en tant que partenaire chez nous",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-content-1",
+    "de": "Du arbeitest wie wir im Upcycling von Kleidung oder Textilien? Du teilst die Werte und Überzeugungen von BENU COUTURE? Deine Produkte werden régional, in einem Umkreis von 300km von Esch-sur-Alzette hergestellt?",
+    "fr": "Tu travailles comme nous dans l'upcycling de vêtements ou de textiles ? Tu partages les valeurs et les convictions de BENU COUTURE ? Tes produits sont fabriqués en région, dans un rayon de 300km d'Esch-sur-Alzette ?",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-content-2",
+    "de": "Wenn Du exklusiv im ReUse, in der Transformation und im Upcycling produzierst, weder chemische Zusatzstoffe, noch natürlichen oder künstlichen Pelz verarbeitest und synthetische Stoffe nur in Ausnahmefällen verwendest, dann bist Du richtig bei uns:",
+    "fr": "Si tu produis exclusivement en réutilisation, transformation et upcycling, si tu ne travailles ni avec des additifs chimiques, ni avec de la fourrure naturelle ou artificielle et si tu n'utilises qu'exceptionnellement des matières synthétiques, alors tu es à la bonne adresse :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-highlight-1",
+    "de": "Werde Partner:in von BENU COUTURE !",
+    "fr": "Deviens partenaire de BENU COUTURE !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-content-3",
+    "de": "Wir bieten Dir an, Deine Produkte bei uns zu verkaufen oder gemeinsam mit uns auf unseren Events auszustellen.",
+    "fr": "Nous te proposons de vendre tes produits chez nous ou de les exposer avec nous lors de nos événements.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-highlight-2",
+    "de": "Wir freuen uns auf Deine Anfrage !",
+    "fr": "Nous nous réjouissons de ta demande !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-highlight-2-link",
+    "de": "Kontaktiere BENU COUTURE",
+    "fr": "Contacte BENU COUTURE",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-subtitle-4",
+    "de": "Warum regional in einem Umkreis von 300 km?",
+    "fr": "Pourquoi régional dans un rayon de 300 km ?",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.partnership-content-4",
+    "de": "Weil BENU VILLAGE das erste Öko-Dorf in einem Umkreis von 300 km ist. Außerdem möchte BENU Produktionen unter schwierigen oder fragwürdigen sozio-ökologischen Bedingungen in zu weit entfernten Ländern ausschließen.",
+    "fr": "Parce que BENU VILLAGE est le premier éco-village dans un rayon de 300 km. De plus, BENU souhaite exclure les productions réalisées dans des conditions socio-environnementales difficiles ou douteuses dans des pays trop éloignés.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "breadcrumbs.participate-smart",
+    "de": "Clever konsumieren",
+    "fr": "Consommer malin",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "PARTICIPATE.NAV-SMART",
+    "de": "Clever konsumieren",
+    "fr": "Consommer malin",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-title",
+    "de": "Worauf kann ich achten, wenn ich Kleidung benötige?",
+    "fr": "A quoi puis-je faire attention lorsque j’ai besoin de vêtements ?",
+    "en": "",
     "lu": ""
   }
 ]
