@@ -706,6 +706,9 @@ select {
 .m-8 {
   margin: 2rem;
 }
+.m-10 {
+  margin: 2.5rem;
+}
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
