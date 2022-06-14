@@ -7404,6 +7404,7 @@ input[type=checkbox]:focus {
 .participate-section-container {
   padding-top: 60px;
   margin-bottom: 90px;
+  letter-spacing: 0.13px;
 }
 
 .participate-badges__title {
@@ -7414,7 +7415,7 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
 }
 .participate-badges__content {
-  font: normal normal 500 16px/18px "Barlow";
+  font: normal normal 400 16px/20px "Barlow";
   margin-bottom: 40px;
   text-align: left;
 }
@@ -7447,7 +7448,7 @@ input[type=checkbox]:focus {
   text-align: left;
 }
 .participate-give__content__txt {
-  font: normal normal 500 16px/18px "Barlow";
+  font: normal normal 400 16px/20px "Barlow";
 }
 
 .participate-partnership__title {
@@ -7464,7 +7465,7 @@ input[type=checkbox]:focus {
   color: grey;
 }
 .participate-partnership__content {
-  font: normal normal 500 16px/18px "Barlow";
+  font: normal normal 400 16px/20px "Barlow";
   margin-bottom: 40px;
   text-align: left;
 }
@@ -7496,7 +7497,7 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
 }
 .participate-sustainable__content {
-  font: normal normal 500 16px/18px "Barlow";
+  font: normal normal 400 16px/20px "Barlow";
   margin-bottom: 40px;
   text-align: left;
 }
@@ -7505,7 +7506,7 @@ input[type=checkbox]:focus {
 }
 .participate-sustainable__list li {
   display: flex;
-  font: normal normal 500 16px/18px "Barlow";
+  font: normal normal 400 16px/20px "Barlow";
   margin-bottom: 5px;
 }
 .participate-sustainable__list li svg {
