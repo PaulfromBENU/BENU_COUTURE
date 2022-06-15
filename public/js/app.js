@@ -5735,9 +5735,51 @@ $(function () {
   \***********************************************/
 /***/ (() => {
 
+function showMenu(id) {
+  var menuClass = '';
+
+  switch (id) {
+    case '#nav-toggle-unisex':
+      menuClass = '.navbar-list-unisex';
+      break;
+
+    case '#nav-toggle-adult':
+      menuClass = '.navbar-list-adult';
+      break;
+
+    case '#nav-toggle-woman':
+      menuClass = '.navbar-list-woman';
+      break;
+
+    case '#nav-toggle-man':
+      menuClass = '.navbar-list-man';
+      break;
+
+    case '#nav-toggle-child':
+      menuClass = '.navbar-list-child';
+      break;
+
+    case '#nav-toggle-accessories':
+      menuClass = '.navbar-list-accessories';
+      break;
+
+    default:
+      menuClass = '';
+  } //Remove all menus to avoid multiple display
+
+
+  $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active'); //Add menu of hovered toggle
+
+  $(this).addClass('creations-navbar__nav__toggle--active');
+  $('.creations-navbar__menu').css('max-height', '280px');
+  $('.creations-navbar__menu__list').hide();
+  $(menuClass).show();
+}
+
 $(function () {
   var creationsBarStatus = 'off';
-  var fullMenuStatus = 'off';
+  var fullMenuStatus = 'off'; // let lastMenu = '';
+
   $('#creations-nav-toggle').on('click', function () {
     $(this).toggleClass('header__main-nav__btn--active'); //$('#creations-nav-toggle path').toggleClass('svg-primary-white--active');
 
@@ -5753,9 +5795,8 @@ $(function () {
     $('#creations-nav-toggle path').addClass('svg-primary-white--active');
   });
   $('#creations-nav-toggle').on('mouseleave', function () {
-    if (creationsBarStatus == 'off') {
-      $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
-    }
+    // if (creationsBarStatus == 'off') {
+    $('#creations-nav-toggle path').removeClass('svg-primary-white--active'); // }
   });
   $(window).on('scroll', function () {
     var scrollTop = $(window).scrollTop();
@@ -5787,28 +5828,28 @@ $(function () {
     fullMenuStatus = 'off';
   });
   $('#nav-toggle-unisex').on('mouseenter', function () {
-    $('.creations-navbar__menu__list').hide();
-    $('.navbar-list-unisex').show();
+    showMenu('#nav-toggle-unisex'); // $('.creations-navbar__menu__list').hide();
+    // $('.navbar-list-unisex').show();
   });
   $('#nav-toggle-adult').on('mouseenter', function () {
-    $('.creations-navbar__menu__list').hide();
-    $('.navbar-list-adult').show();
+    showMenu('#nav-toggle-adult'); // $('.creations-navbar__menu__list').hide();
+    // $('.navbar-list-adult').show();
   });
   $('#nav-toggle-woman').on('mouseenter', function () {
-    $('.creations-navbar__menu__list').hide();
-    $('.navbar-list-woman').show();
+    showMenu('#nav-toggle-woman'); // $('.creations-navbar__menu__list').hide();
+    // $('.navbar-list-woman').show();
   });
   $('#nav-toggle-man').on('mouseenter', function () {
-    $('.creations-navbar__menu__list').hide();
-    $('.navbar-list-man').show();
+    showMenu('#nav-toggle-man'); // $('.creations-navbar__menu__list').hide();
+    // $('.navbar-list-man').show();
   });
   $('#nav-toggle-child').on('mouseenter', function () {
-    $('.creations-navbar__menu__list').hide();
-    $('.navbar-list-child').show();
+    showMenu('#nav-toggle-child'); // $('.creations-navbar__menu__list').hide();
+    // $('.navbar-list-child').show();
   });
   $('#nav-toggle-accessories').on('mouseenter', function () {
-    $('.creations-navbar__menu__list').hide();
-    $('.navbar-list-accessories').show();
+    showMenu('#nav-toggle-accessories'); // $('.creations-navbar__menu__list').hide();
+    // $('.navbar-list-accessories').show();
   });
   $('#nav-toggle-home').on('mouseenter', function () {
     $('.creations-navbar__menu__list').hide();
@@ -5823,7 +5864,10 @@ $(function () {
     if (fullMenuStatus == 'on') {
       $('.creations-navbar__menu').css('max-height', '0px');
       $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
-      fullMenuStatus = 'off';
+      fullMenuStatus = 'off'; // lastMenu = $(this).attr('id');
+    } else {
+      showMenu('#' + $(this).attr('id'));
+      fullMenuStatus = 'on';
     }
   });
   $('.creations-navbar').on('mouseleave', function () {
