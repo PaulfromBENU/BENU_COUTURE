@@ -220,7 +220,12 @@
 
         <div class="dashboard-orders__details__articles flex justify-between flex-wrap">
             @foreach($articles as $article)
-                <div wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="dashboard-orders__details__articles__article flex justify-start mb-4">
+                @if($article->name == 'voucher')
+                <a target="_blank" href="{{ route('vouchers-'.app()->getLocale()) }}" wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="block dashboard-orders__details__articles__article flex justify-start mb-4">
+                @else
+                <a target="_blank" href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($article->creation->name), 'article' => strtolower($article->name)]) }}" wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="block dashboard-orders__details__articles__article flex justify-start mb-4">
+                @endif
+                <!-- <div wire:key="{{ $order->unique_id }}-{{ $article->id }}" class="dashboard-orders__details__articles__article flex justify-start mb-4"> -->
                     <div class="dashboard-orders__details__articles__article__img-container mr-4">
                         @if($article->name ==  'voucher')
                             <img src="{{ asset('images/pictures/vouchers_img.png') }}" />
@@ -287,7 +292,8 @@
                         </p>
                         @endif
                     </div>
-                </div>
+                <!-- </div> -->
+                </a>
             @endforeach
         </div>
 
