@@ -1,0 +1,98 @@
+.model-overview {
+	width: 32.2%;
+	min-width: 380px;
+	background: white;
+	box-shadow: 0px 6px 15px #00000029;
+	border-radius: 25px;
+	padding: 30px 0px;
+	margin-bottom: 50px;
+	margin-right: 1%;
+	&__footer {
+		padding-left: 30px;
+		padding-right: 30px;
+		transition: $transition-base;
+		p {
+			color: $dark-text;
+			text-align: left;
+			font: normal normal 600 26px/28px 'Barlow Condensed';
+			letter-spacing: 0px;
+		}
+	}
+	&__header {
+		padding-left: 30px;
+		padding-right: 30px;
+		transition: $transition-base;
+		&__txt {
+			text-align: left;
+			font: normal normal 500 14px/28px 'Barlow';
+			letter-spacing: 0px;
+			color: $primary-color;
+			margin-bottom: 11px;
+		}
+		&__heart {
+			position: relative;
+			font-size: 1.6rem;
+			color: $primary-color;
+			&__icon {
+				position: absolute;
+				right: 0px;
+				top: 6px;
+				cursor: pointer;
+				&--hovered {
+					transform: scale(0);
+					transition: transform 0.2s;
+					&.--active {
+						transform: scale(1);
+					}
+				}
+			}
+			&:hover {
+				.model-overview__header__heart__icon--hovered {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	&__img-container {
+		// height: min(60vh, 700px);
+		background: $white;
+		margin-top: 22px;
+		margin-bottom: 33px;
+		overflow: hidden;
+		position: relative;
+		aspect-ratio: 3 / 4;
+		img {
+			min-height: 100%;
+			min-width: 100%;
+			object-fit: cover;
+		}
+		&__partner-icon {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			background: white;
+			z-index: 1;
+			border-radius: 10px;
+			height: 50px;
+			width: 45px;
+			transition: width 0.3s;
+			overflow: hidden;
+			font: normal normal 500 14px/20px 'Barlow Condensed';
+			&__content {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 160px;
+				padding: 5px 6px;
+			}
+			&:hover {
+				width: 160px;
+			}
+			svg {
+				margin: auto;
+				width: 35px;
+				transform: scale(0.78);
+			}
+		}
+	}
+}

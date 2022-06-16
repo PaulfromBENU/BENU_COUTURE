@@ -1,0 +1,254 @@
+.footer-connect {
+	text-align: center;
+	font: normal normal 300 44px/53px 'Barlow Condensed';
+	letter-spacing: 0px;
+	overflow: hidden;
+	&__pictures {
+		margin-top: 72px;
+		//width: fit-content;
+		margin-bottom: 20px;
+		&__img-container {
+			width: 12vw;
+			height: 12vw !important;
+			border-radius: 10px;
+			margin-left: 6px;
+			margin-right: 6px;
+			overflow: hidden;
+			background: lightgrey;
+			img {
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.slick-arrow {
+	display: none;
+}
+
+.footer-learnmore {
+	margin-top: 77px;
+	margin-bottom: 50px;
+	&__block {
+		width: 40%;
+		img {
+			width: 21vw;
+			margin: auto;
+			margin-bottom: 23px;
+		}
+		h3 {
+			text-align: center;
+			font: normal normal 600 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			color: $dark-text;
+			margin-bottom: 59px;
+		}
+		p {
+			text-align: center;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+			color: $dark-text;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.footer-more {
+	margin-top: 50px;
+	//background-color: #fff;
+	position: relative;
+	z-index: 2;
+	&__wrapper {
+		position: relative;
+		padding-top: 115px;
+	}
+	&__block {
+		border-radius: .5rem;
+		box-shadow: 0px 30px 30px #CFCFCF80;
+		margin-top: 1.25rem;
+		padding-bottom: 3.9375rem;
+		position: relative;
+		background: $white;
+		text-align: center;
+		h3 {
+			font: normal normal 600 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			color: $primary-color;
+		}
+		p {
+			margin: auto;
+			margin-top: 35px;
+			margin-bottom: 70px;
+			font: normal normal medium 16px/28px Barlow;
+			letter-spacing: 0px;
+			color: $dark-text;
+			width: 50%;
+		}
+	}
+	&__illustration {
+		position: absolute;
+		bottom: 0;
+		height: 95%;
+		&--left {
+			left: 6%;
+		}
+		&--right {
+			right: 6%;
+			img {
+				float: right;
+			}
+		}
+		img {
+			height: 90%;
+		}
+	}
+}
+
+.footer-all {
+	background: $light-grey-transparent 0% 0% no-repeat padding-box;
+	margin-top: -100px;
+	position: relative;
+	z-index: 1;
+	&__txt {
+		font: normal normal 300 44px/53px Barlow Condensed;
+		letter-spacing: 0px;
+		color: $dark-text;
+		&--left {
+			margin-left: 6vw;
+			padding-top: 172px;
+			text-align: right;
+			width: 45%;
+		}
+		&--right {
+			text-align: left;
+			width: 45%;
+			margin-left: calc(50% - 6vw);
+			margin-bottom: 74px;
+		}
+	}
+	a {
+		display: block;
+		width: 230px;
+		margin-left: 19px;
+		margin-right: 19px;
+		margin-bottom: 100px;
+	}
+	strong {
+		font-weight: 600;
+	}
+}
+
+.footer {
+	padding-top: 102px;
+	background: white;
+	position: relative;
+	&__contact {
+		font: normal normal 500 22px/46px 'Barlow Condensed';
+		letter-spacing: 0px;
+		line-height: 1.9rem;
+		transition: $transition-base;
+		// &:hover {
+		// 	color: $primary-color;
+		// }
+	}
+	&__copyright {
+		border-top: solid 1px $light-grey;
+		padding: 23px 0px;
+		text-align: left;
+		font: normal normal 500 16px/36px 'Barlow';
+		letter-spacing: 0px;
+		color: $dark-text;
+	}
+	&__lists {
+		margin-bottom: 110px;
+		&__col {
+			width: 25%;
+		}
+	}
+	&__logo-container {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 22px);
+		&__logo {
+			width: 44px;
+		}
+	}
+	&__social {
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		border-radius: 6px;
+		background: $primary-color-light;
+		color: $primary-color;
+		font-size: 2rem;
+		padding-top: 6px;
+		margin-right: 10px;
+		text-align: center;
+		transition: $transition-base;
+		&:hover {
+			background: $primary-color;
+			color: $white;
+		}
+	}
+	h4 {
+		width: 100%;
+		text-align: left;
+		font: normal normal 600 28px/34px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		margin-bottom: 45px;
+	}
+	ul {
+		min-width: 120px;
+		text-align: left;
+		font: normal normal 500 22px/46px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		a {
+			transition: $transition-base;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+
+.footer-legal {
+	padding-top: 66px;
+	margin-bottom: 100px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+		width: 50%;
+		margin-left: 25%;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__paragraph {
+		font: normal normal 500 16px/36px 'Barlow';
+		margin-bottom: 35px;
+		a {
+			color: $primary-color;
+			transition: color 0.2s;
+			&:hover {
+				color: $dark-text;
+			}
+		}
+	}
+	&__highlight {
+		padding: 30px;
+		background: $primary-color-light;
+		border-radius: 12px;
+		font: normal normal 700 22px/36px 'Barlow';
+		text-align: center;
+		margin-bottom: 35px;
+	}
+}

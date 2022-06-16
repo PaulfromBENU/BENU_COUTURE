@@ -1,0 +1,373 @@
+.all-models {
+	padding-top: 45px;
+	margin-bottom: 80px;
+	&__filters-container {
+		position: relative;
+		&__options {
+			position: absolute;
+			top: 45px;
+			width: 100%;
+			background: $white;
+			border-bottom: solid 1px $light-grey;
+			min-height: 80px;
+			@include large {
+				left: calc(50vw - 860px);
+			}
+		}
+	}
+	&__filters {
+		border-bottom: solid 1px $light-grey;
+		position: relative;
+		margin-bottom: 20px;
+		height: 45px;
+		&__filter {
+			height: 40px;
+			cursor: pointer;
+			padding: 5px 3px;
+			transition: $transition-base;
+			text-align: left;
+			font: normal normal 600 16px/18px 'Barlow';
+			letter-spacing: 0px;
+			margin-right: 50px;
+			&:hover {
+				color: $primary-color;
+			}
+			img {
+				width: 16px;
+				height: 8px;
+				margin-top: 7px;
+				margin-left: 15px;
+				transition: $transition-base;
+				transform: rotate(0deg);
+			}
+		}
+	}
+	&__filter-tag {
+		height: 30px;
+		min-width: 70px;
+		text-align: center;
+		font: normal normal 500 18px/22px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin: 15px 7px 15px 0px;
+		padding-top: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border: solid 1px $light-grey;
+		cursor: pointer;
+		transition: $transition-base;
+		&--active, &:hover {
+			color: $primary-color;
+			border: solid 1px $primary-color;
+		}
+		&--inactive {
+			color: white;
+			background: $light-grey;
+		}
+	}
+	&__active-filters {
+		margin-bottom: 20px;
+		&__filter {
+			min-width: 110px;
+			padding: 3px 10px;
+			background: lighten($primary-color-light, 5);
+			border: 2px solid transparent;
+			border-radius: 20px;
+			color: $primary-color;
+			transition: $transition-base;
+			cursor: pointer;
+			margin-right: 10px;
+			.color-circle {
+				margin-top: 5px;
+			}
+			&:hover {
+				background: $white;
+				border: 2px solid $primary-color;
+			}
+			p {
+				font-size: 0.9rem;
+				font-weight: 500;
+				font-family: 'Barlow Condensed';
+				padding-top: 1px;
+			}
+		}
+	}
+	&__list {
+		padding-top: 60px;
+		&__separator {
+			background-size: 100%;
+			border-radius: 25px;
+			overflow: hidden;
+			height: 350px;
+			width: 100%;
+			margin-bottom: 50px;
+			padding: 140px 125px;
+			&--1 {
+				background: transparent url('/images/pictures/models_separator_1.png') 0% 0% no-repeat padding-box;
+			}
+			&--2 {
+				background: transparent url('/images/pictures/models_separator_2.png') 0% 0% no-repeat padding-box;
+			}
+			&__title {
+				text-align: left;
+				font: normal normal 600 36px/30px 'Barlow';
+				letter-spacing: 0px;
+				padding-bottom: 10px;
+			}
+			&__subtitle {
+				text-align: left;
+				font: normal normal 500 16px/30px 'Barlow';
+				letter-spacing: 0px;
+				width: 40%;
+			}
+		}
+	}
+}
+
+.model-pres {
+	margin-top: 50px;
+	margin-bottom: 97px;
+	width: 100%;
+	&__img-container {
+		width: 29%;
+		height: 640px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 25px;
+		img {
+			min-height: 100%;
+			min-width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__desc {
+		width: 67%;
+		height: 640px;
+		background: $bg-light-grey;
+		border-radius: 25px;
+		padding: 33px 71px; //2.5% 3%;
+		position: relative;
+		&__title {
+			color: $primary-color;
+			text-align: left;
+			font: normal normal 700 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			margin-bottom: 35px;
+		}
+		&__age {
+			background: #D41C1B;
+			border-radius: 8px;
+			padding: 3px 30px;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			text-align: center;
+			font: normal normal 600 20px/28px "Barlow Condensed";
+			letter-spacing: 0px;
+			height: 35px;
+			margin-top: 10px;
+
+		}
+		&__txt {
+			margin-bottom: 55px;
+			text-align: left;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+		}
+		&__txt-vouchers {
+			margin-bottom: 40px;
+			text-align: left;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+		}
+		&__keywords {
+			width: 100%;
+			margin-bottom: 55px;
+			ul {
+				width: 100%;
+			}
+			li {
+				display: flex;
+				justify-content: flex-start;
+				width: 80%;
+				text-align: left;
+				font: normal normal 500 16px/26px 'Barlow';
+				letter-spacing: 0px;
+				svg {
+					margin-top: 9px;
+					margin-right: 5px;
+					width: 19px;
+				}
+			}
+		}
+		&__link {
+			text-align: left;
+			font: normal normal 700 22px/26px 'Barlow Condensed';
+			letter-spacing: 0.44px;
+			//margin-bottom: 110px;
+		}
+		&__seemore {
+			color: $primary-color;
+			font-weight: 600;
+			position: absolute;
+			bottom: 33px;
+			left: 70px;
+			width: 90%;
+			a {
+				display: flex;
+				width: 45%;
+				cursor: pointer;
+				margin-right: 10px;
+				transition: all 0.2s;
+				&:hover {
+					color: $dark-text;
+					path {
+						fill: $dark-text;
+					}
+				}
+				svg {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+.model-articles {
+	//margin-top: 50px;
+	h2 {
+		text-align: center;
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 73px;
+	}
+	&__filters {
+		border-bottom: solid 1px $light-grey;
+		position: relative;
+		margin-bottom: 20px;
+		&__filter {
+			height: 40px;
+			cursor: pointer;
+			padding: 5px 3px;
+			transition: $transition-base;
+			text-align: left;
+			font: normal normal 600 16px/18px 'Barlow';
+			letter-spacing: 0px;
+			margin-right: 50px;
+			&:hover {
+				color: $primary-color;
+			}
+			img {
+				width: 16px;
+				height: 8px;
+				margin-top: 7px;
+				margin-left: 15px;
+			}
+		}
+	}
+	&__active-filters {
+		margin-bottom: 20px;
+		&__filter {
+			min-width: 110px;
+			padding: 3px 10px;
+			background: lighten($primary-color-light, 5);
+			border: 2px solid transparent;
+			border-radius: 20px;
+			color: $primary-color;
+			transition: $transition-base;
+			cursor: pointer;
+			margin-right: 10px;
+			.color-circle {
+				margin-top: 5px;
+			}
+			&:hover {
+				background: $white;
+				border: 2px solid $primary-color;
+			}
+			p {
+				font-size: 0.9rem;
+				font-weight: 500;
+				font-family: 'Barlow Condensed';
+				padding-top: 1px;
+			}
+		}
+	}
+	&__list {
+		margin-bottom: 100px;
+	}
+}
+
+.model-sold {
+	width: 100%;
+	//background: lighten($light-grey, 12) url('/images/svg/pattern_solo_benu_couture_OK.svg') 0% 0% repeat padding-box;
+	//background-size: 12%;
+	min-height: 100px;
+	padding-top: 110px;
+	padding-bottom: 110px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		margin-bottom: 26px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+		margin-bottom: 50px;
+	}
+	&__list {
+		margin-bottom: 75px;
+	}
+	&__link {
+		font: normal normal 700 22px/26px 'Barlow Condensed';
+		letter-spacing: 0.44px;
+	}
+}
+
+.model-request {
+	padding-top: 100px;
+	&__title {
+		text-align: center;
+		font: normal normal 600 105px/126px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $primary-color;
+		margin-bottom: 30px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+		color: $dark-text;
+		margin-bottom: 50px;
+	}
+	&__link {
+		margin-bottom: 120px;
+	}
+}
+
+.sold {
+	padding-top: 72px;
+	margin-bottom: 65px;
+	&__title {
+		text-align: center;
+		font: normal normal 600 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 72px;
+	}
+	.pattern-bg {
+		top: -40px;
+		padding-top: 108px;
+		padding-bottom: 55px;
+	}
+	&__link {
+		margin-top: -50px;
+		font: normal normal 600 22px/26px 'Barlow Condensed';
+		letter-spacing: 0.44px;
+	}
+}
+
+.filter-no-result {
+	font: normal normal 400 22px/26px 'Barlow Condensed';
+	letter-spacing: 0.44px;
+}

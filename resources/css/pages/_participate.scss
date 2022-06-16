@@ -1,0 +1,173 @@
+.participate {
+	padding-top: 66px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__nav {
+		border-bottom: solid 1px $light-grey;
+		&__link {
+			display: block;
+			height: 40px;
+			border-bottom: solid 2px transparent;
+			transition: $transition-base;
+			cursor: pointer;
+			font: normal normal 600 18px/22px 'Barlow Condensed';
+			letter-spacing: 0.36px;
+			color: $dark-text;
+			text-transform: uppercase;
+			margin-bottom: -1px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 1%;
+			margin-right: 1%;
+			&--active {
+				color: $primary-color;
+				border-bottom: solid 2px $primary-color;
+			}
+			&:hover {
+				color: $primary-color;
+				border-bottom: solid 2px $primary-color;
+			}
+		}
+	}
+}
+
+
+.participate-section-container {
+	padding-top: 60px;
+	margin-bottom: 90px;
+	letter-spacing: 0.13px;
+	// letter-spacing: 3px;
+}
+
+
+.participate-badges {
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+	&__content {
+		font: normal normal 400 16px/20px 'Barlow';
+		margin-bottom: 40px;
+		text-align: left;
+	}
+	&__badge {
+		margin: 20px 0px;
+		text-align: center;
+		background: $primary-color-light;
+		padding: 30px;
+		border-radius: 8px;
+		p {
+			font-size: 1.3rem;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		svg {
+			max-height: 80px;
+			margin: auto;
+		}
+	}
+}
+
+
+.participate-give {
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+	&__content {
+		margin-bottom: 40px;
+		text-align: left;
+		&__txt {
+			font: normal normal 400 16px/20px 'Barlow';
+		}
+	}
+}
+
+
+.participate-partnership {
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+	&__subtitle {
+		font: normal normal 600 18px/20px 'Barlow';
+		margin-bottom: 20px;
+		text-align: left;
+		color: grey;
+	}
+	&__content {
+		font: normal normal 400 16px/20px 'Barlow';
+		margin-bottom: 40px;
+		text-align: left;
+	}
+	&__highlight {
+		text-align: center;
+		font: normal normal 600 20px/36px Barlow;
+		letter-spacing: 0px;
+		background: $primary-color-light 0% 0% no-repeat padding-box;
+		border-radius: 8px;
+		padding-top: 28px;
+		padding-bottom: 28px;
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+}
+
+
+.participate-smart {
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+}
+
+
+.participate-sustainable {
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+	&__content {
+		font: normal normal 400 16px/20px 'Barlow';
+		margin-bottom: 40px;
+		text-align: left;
+	}
+	&__list {
+		text-align: left;
+		li {
+			display: flex;
+			font: normal normal 400 16px/20px 'Barlow';
+			margin-bottom: 5px;
+			svg {
+				margin-top: 6px;
+				margin-right: 10px;
+			}
+		}
+	}
+}

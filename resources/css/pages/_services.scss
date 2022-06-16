@@ -1,0 +1,690 @@
+.service {
+	padding-top: 66px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+	}
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 35px;
+	}
+	&__nav {
+		border-bottom: solid 1px $light-grey;
+		&__link {
+			display: block;
+			height: 40px;
+			border-bottom: solid 2px transparent;
+			transition: $transition-base;
+			cursor: pointer;
+			font: normal normal 600 18px/22px 'Barlow Condensed';
+			letter-spacing: 0.36px;
+			color: $dark-text;
+			text-transform: uppercase;
+			margin-bottom: -1px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 1%;
+			margin-right: 1%;
+			&--active {
+				color: $primary-color;
+				border-bottom: solid 2px $primary-color;
+			}
+			&:hover {
+				color: $primary-color;
+				border-bottom: solid 2px $primary-color;
+			}
+		}
+	}
+}
+
+.faq {
+	padding-top: 60px;
+	margin-bottom: 90px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+	&__accordion {
+		&__header {
+			margin-bottom: 30px;
+			background: $primary-color 0% 0% no-repeat padding-box;
+			border-radius: 8px;
+			color: $white;
+			padding: 34px 120px 34px 50px;
+			text-align: left;
+			font: normal normal 700 28px/28px 'Barlow Condensed';
+			letter-spacing: 0px;
+			cursor: pointer;
+			p {
+				margin-right: 15px;
+			}
+			&__chevron {
+				margin-top: 7px;
+				transform: rotate(0deg);
+				transition: $transition-base;
+				&--active {
+					transform: rotate(180deg);
+				}
+			}
+			// &:hover {
+			// 	.faq__accordion__header__chevron {
+			// 		transform: rotate(180deg);
+			// 	}
+			// }
+		}
+		&__answer {
+			width: 75%;
+			margin: auto;
+			padding-top: 10px;
+			li {
+				border-bottom: 1px solid $light-grey;
+			}
+			&__txt {
+				text-align: left;
+				font: normal normal 500 16px/28px 'Barlow';
+				letter-spacing: 0px;
+			}
+			&__subanswer {
+				padding-top: 20px;
+				padding-bottom: 50px;
+				text-align: left;
+				font: normal normal 500 16px/28px 'Barlow';
+				letter-spacing: 0px;
+			}
+			&__header {
+				text-align: left;
+				font: normal normal 700 22px/28px 'Barlow Condensed';
+				letter-spacing: 0px;
+				border-bottom: 2px solid transparent;
+				margin-top: 25px;
+				height: 40px;
+				cursor: pointer;
+				&--active {
+					border-bottom: 2px solid $primary-color;
+					color: $primary-color;
+				}
+				&__plus {
+					font-size: 2.2rem;
+					font-weight: 500;
+				}
+				&__minus {
+					font-size: 3.1rem;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+.delivery {
+	padding-top: 60px;
+	margin-bottom: 90px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+		margin-bottom: 60px;
+	}
+	&__index {
+		width: 20%;
+		&__menu {
+			font-size: 1.3rem;
+			position: sticky;
+			top: 200px;
+			font-family: 'Barlow Condensed';
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__chapters {
+		width: 75%;
+	}
+	&__chapter {
+		text-align: left;
+		margin-bottom: 40px;
+		h3 {
+			font: normal normal 700 28px/36px 'Barlow Condensed';
+			color: $primary-color;
+			padding-bottom: 20px;
+			border-bottom: solid 1px lightgrey;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		&__link {
+			color: $primary-color;
+			font-weight: 500;
+			transition: color 0.2s;
+			&:hover {
+				color: $dark-text;
+			}
+		}
+		&__img-container {
+			width: 45%;
+		}
+		&__legend {
+			width: 55%;
+			text-align: left;
+			&__list {
+				width: 50%;
+				margin-left: 25%;
+				h4 {
+					color: $primary-color;
+					font: normal normal 600 16px/20px 'Barlow';
+				}
+				p {
+					font: normal normal 500 14px/18px 'Barlow';
+				}
+				li {
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&__table {
+			margin-top: 50px;
+			width: 100%;
+			text-align: left;
+			margin-bottom: 40px;
+			th:nth-child(odd) {
+				color: grey;
+			}
+			th:nth-child(even) {
+				color: $dark-text;
+			}
+			th:nth-child(1) {
+				color: $primary-color;
+			}
+			&__data-rows:nth-child(odd) {
+				background: lighten(lightgrey, 10);
+			}
+			&__data-rows {
+				td:nth-child(odd) {
+					color: grey;
+				}
+				td:nth-child(even) {
+					color: $dark-text;
+				}
+				td:nth-child(1) {
+					color: $dark-text;
+				}
+				td {
+					padding: 4px 10px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+.sizes {
+	padding-top: 60px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+	}
+	&__index {
+		width: 20%;
+		&__menu {
+			font-size: 1.3rem;
+			position: sticky;
+			top: 200px;
+			font-family: 'Barlow Condensed';
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__chapters {
+		width: 75%;
+	}
+	&__chapter {
+		h3 {
+			font: normal normal 700 28px/36px 'Barlow Condensed';
+			color: $primary-color;
+			padding-bottom: 20px;
+			border-bottom: solid 1px lightgrey;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		&__img-container {
+			width: 45%;
+		}
+		&__legend {
+			width: 55%;
+			text-align: left;
+			&__list {
+				width: 50%;
+				margin-left: 25%;
+				h4 {
+					color: $primary-color;
+					font: normal normal 600 16px/20px 'Barlow';
+				}
+				p {
+					font: normal normal 500 14px/18px 'Barlow';
+				}
+				li {
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&__table {
+			margin-top: 50px;
+			width: 100%;
+			text-align: left;
+			margin-bottom: 40px;
+			th:nth-child(odd) {
+				color: grey;
+			}
+			th:nth-child(even) {
+				color: $dark-text;
+			}
+			th:nth-child(1) {
+				color: $primary-color;
+			}
+			&__data-rows:nth-child(even) {
+				background: lighten(lightgrey, 10);
+			}
+			&__data-rows {
+				td:nth-child(odd) {
+					color: grey;
+				}
+				td:nth-child(even) {
+					color: $dark-text;
+				}
+				td:nth-child(1) {
+					color: $dark-text;
+				}
+				td {
+					padding: 4px 10px;
+					font-weight: 500;
+				}
+			}
+			&__header {
+				padding-left: 10px;
+			}
+		}
+	}
+}
+
+.return {
+	padding-top: 60px;
+	text-align: left;
+	margin-bottom: 40px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+	}
+	&__txt {
+		text-align: left;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+	}
+	&__highlight {
+		text-align: center;
+		font: normal normal 600 20px/36px Barlow;
+		letter-spacing: 0px;
+		background: $primary-color-light 0% 0% no-repeat padding-box;
+		border-radius: 8px;
+		padding-top: 28px;
+		padding-bottom: 28px;
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+	&__link {
+		margin-top: 60px;
+		margin-bottom: 150px;
+	}
+	&__index {
+		width: 20%;
+		text-align: left;
+		&__menu {
+			font-size: 1.3rem;
+			position: sticky;
+			top: 200px;
+			font-family: 'Barlow Condensed';
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__chapters {
+		width: 75%;
+	}
+	&__chapter {
+		margin-bottom: 40px;
+		h3 {
+			font: normal normal 700 28px/36px 'Barlow Condensed';
+			color: $primary-color;
+			padding-bottom: 20px;
+			border-bottom: solid 1px lightgrey;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		&__img-container {
+			width: 45%;
+		}
+		&__legend {
+			width: 55%;
+			text-align: left;
+			&__list {
+				width: 50%;
+				margin-left: 25%;
+				h4 {
+					color: $primary-color;
+					font: normal normal 600 16px/20px 'Barlow';
+				}
+				p {
+					font: normal normal 500 14px/18px 'Barlow';
+				}
+				li {
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&__link {
+			color: $primary-color;
+			transition: color 0.2s;
+			&:hover {
+				color: $dark-text;
+			}
+		}
+	}
+}
+
+.payment {
+	padding-top: 60px;
+	margin-bottom: 120px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+	}
+	&__subtitle {
+		text-align: left;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+		margin-bottom: 45px;
+	}
+	&__option {
+		background: $light-grey-transparent 0% 0% no-repeat padding-box;
+		border-radius: 20px;
+		padding: 40px 65px;
+		margin-bottom: 30px;
+		&__title {
+			text-align: center;
+			font: normal normal 600 22px/28px 'Barlow Condensed';
+			letter-spacing: 0px;
+			margin-bottom: 35px;
+		}
+		img {
+			height: 44px;
+			margin: auto;
+			margin-bottom: 28px;
+		}
+		&__txt {
+			text-align: center;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+		}
+	}
+}
+
+.care {
+	padding-top: 60px;
+	margin-bottom: 100px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+	}
+	&__subtitle {
+		text-align: left;
+		font: normal normal 500 16px/28px 'Barlow';
+		letter-spacing: 0px;
+		margin-bottom: 43px;
+	}
+	&__grid {
+		&__box {
+			background: $white 0% 0% no-repeat padding-box;
+			box-shadow: 0px 30px 30px #CFCFCF80;
+			border-radius: 8px;
+			padding: 30px;
+			margin-bottom: 35px;
+			width: 32%;
+			&__img-container {
+				margin-bottom: 20px;
+				height: 45px;
+				svg {
+					margin: auto;
+				}
+			}
+			&__txt {
+				width: 100%;
+				text-align: center;
+				font: normal normal 600 16px/18px 'Barlow Condensed';
+				letter-spacing: 0px;
+				//color: $primary-color;
+			}
+		}
+		&__title {
+			color: $primary-color;
+			font: normal normal 700 30px/40px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-top: 20px;
+		}
+	}
+}
+
+.shops {
+	padding-top: 60px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 60px;
+	}
+	&__card {
+		padding: 34px;
+		width: 80%;
+		margin: auto;
+		margin-bottom: 50px;
+		background: $white 0% 0% no-repeat padding-box;
+		box-shadow: 0px 0px 40px #26254433;
+		border-radius: 8px;
+		&__img-container {
+			margin-right: 50px;
+			border-radius: 10px;
+			overflow: hidden;
+			width: 30%;
+			height: auto;
+			position: relative;
+			img {
+				object-fit: cover;
+				height: 100%;
+				position: absolute;
+			}
+		}
+		&__txt-container {
+			width: 65%;
+		}
+		&__title {
+			text-align: left;
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			letter-spacing: 0.28px;
+		}
+		&__desc {
+			margin-top: 25px;
+			margin-bottom: 25px;
+			text-align: left;
+			font: normal normal 500 16px/28px 'Barlow';
+			letter-spacing: 0px;
+		}
+		&__highlight {
+			background: $primary-color-light 0% 0% no-repeat padding-box;
+			border-radius: 8px;
+			padding: 18px 20px;
+		}
+		&__link {
+			text-align: left;
+			font: normal normal 700 16px/28px 'Barlow';
+			letter-spacing: 0.16px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.contact {
+	margin-top: 60px;
+	margin-bottom: 100px;
+	min-height: calc(100vh - 350px);
+	&__subtitle {
+		font-size: 1rem;
+		color: darken($light-grey, 10);
+		font-family: 'Barlow Condensed';
+		font-weight: 500;
+		margin-bottom: 40px;
+	}
+	&__title {
+		text-align: center;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		margin-bottom: 50px;
+	}
+	&__mail {
+		text-align: center;
+		font-size: 1.5rem;
+		font-family: 'Barlow Condensed';
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+	&__phone {
+		font-size: 2.8rem;
+		font-family: 'Barlow Condensed';
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	&__opening {
+		background: $primary-color-light;
+		border-radius: 6px;
+		text-align: center;
+		font-size: 1.3rem;
+		font-family: 'Barlow';
+		font-weight: 600;
+		padding: 10px;
+		margin-bottom: 20px; 
+	}
+	&__moreinfo {
+		font-size: 1rem;
+		color: $dark-text;
+		font-family: 'Barlow';
+		font-weight: 500;
+		margin-bottom: 40px;
+		min-height: 150px;
+	}
+	&__form {
+		padding-top: 5px;
+		&__subtitle {
+			text-align: center;
+			font: normal normal 500 16px/28px 'Barlow Condensed';
+			letter-spacing: 0.16px;
+			color: #26254480;
+			margin-bottom: 35px;
+		}
+		&__title {
+			text-align: center;
+			font: normal normal 700 44px/53px 'Barlow Condensed';
+			letter-spacing: 0px;
+			margin-bottom: 65px;
+		}
+		&__form {
+			label {
+				//color: darken(darkgrey, 30);
+				font: normal normal 500 16px/28px Barlow;
+				letter-spacing: 0px;
+				color: #2E1414;
+			}
+			&__mandatory {
+				font: normal normal normal 14px/28px 'Barlow';
+				letter-spacing: 0px;
+				color: #262544;
+				margin-bottom: 35px;
+				text-align: left;
+			}
+			&__select {
+				text-align: left;
+				font: normal normal 400 16px/36px 'Barlow';
+				letter-spacing: 0px;
+				color: darken(darkgrey, 30);
+			}
+			&__security {
+				p {
+					padding-top: 10px;
+					font: normal normal 500 16px/28px 'Barlow';
+				}
+				input {
+					width: 50px;
+					text-align: center;
+				}
+				&__btn {
+					cursor: pointer;
+					padding-top: 10px;
+				}
+			}
+		}
+		input[type=text], input[type=email] {
+			bottom: 0px;
+			left: 0px;
+		}
+		textarea {
+			border-color: $main-grey;
+			padding: 50px;
+			margin-bottom: 30px;
+			&:focus {
+				box-shadow: none;
+				outline: none;
+				border-color: $main-grey;
+			}
+		}
+		&__valid {
+			border-radius: 10px;
+			padding: 40px;
+			background: lighten($benu_village, 50);
+			color: $benu_village;
+			margin-top: 20px;
+		}
+		&__invalid {
+			border-radius: 10px;
+			padding: 40px;
+			background: $primary-color-light;
+			color: $primary-color;
+			margin-top: 20px;
+		}
+		&__radio-group {
+			height: 65px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding-top: 27px;
+			input[type='radio'] {
+				margin-top: -2px;
+			}
+		}
+	}
+}
