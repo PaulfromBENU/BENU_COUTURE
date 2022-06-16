@@ -36,7 +36,9 @@
 				Order #{{ $new_order->unique_id }}
 			</div>
 			<p style="margin-bottom: 5px;">
-				Ordered by: {{ $new_order->user_id }} {{ $new_order->user->id }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
+				@if($new_order->user->count() !== 0)
+				Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
+				@endif
 			</p>
 			<p class="text-xl">
 				Total: {{ $new_order->total_price }}&euro; - Paid on {{ $new_order->created_at->format('d\/m\/Y') }} - 
@@ -389,7 +391,9 @@
 				Order #{{ $sent_order->unique_id }}
 			</div>
 			<p style="margin-bottom: 5px;">
-				Debug: {{ $sent_order->user_id }}, {{ $sent_order->id }}
+				@if($sent_order->user->count() !== 0)
+				Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }}
+				@endif
 			</p>
 			<p class="text-xl">
 				Total: {{ $sent_order->total_price }}&euro; - Paid - Sent/Ready for collect on {{ $sent_order->delivery_date }}
