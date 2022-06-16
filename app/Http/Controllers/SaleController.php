@@ -237,8 +237,10 @@ class SaleController extends Controller
         if (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
             $clean_order_code = substr($order_code, 4, 6);
             $order = Order::where('unique_id', $clean_order_code)->first();
-            $pdf = $this->generateReturnPdf($clean_order_code);
-            return $pdf->stream('BENU_Return_'.$order->unique_id.'.pdf');
+            if (auth()->check() && auth()->user()->orders->contains($order->id)) {
+                $pdf = $this->generateReturnPdf($clean_order_code);
+                return $pdf->stream('BENU_Return_'.$order->unique_id.'.pdf');
+            }
         } elseif($order_code == '0') {
             $pdf = $this->generateReturnPdf(0);
             return $pdf->stream('BENU_Return_blank.pdf');
