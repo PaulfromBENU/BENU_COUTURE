@@ -36,7 +36,7 @@
 				Order #{{ $new_order->unique_id }}
 			</div>
 			<p style="margin-bottom: 5px;">
-				Ordered by: {{ $new_order->user()->first_name }} {{ $new_order->user()->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
+				Ordered by: {{ $new_order->user_id }} {{ $new_order->user->id }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
 			</p>
 			<p class="text-xl">
 				Total: {{ $new_order->total_price }}&euro; - Paid on {{ $new_order->created_at->format('d\/m\/Y') }} - 
