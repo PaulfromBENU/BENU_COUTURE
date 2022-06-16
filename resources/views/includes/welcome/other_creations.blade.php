@@ -3,6 +3,7 @@
 		{{ __('welcome.others-title') }}
 	</h3>
 	<p>
+		@if(date('m') > 4 && date('m') < 10)
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'sweaters']) }}">{{ __('welcome.other-words-sweater') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'categories' => 'home']) }}">{{ __('welcome.other-words-home-accessories') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-jacket') }}</a>
@@ -11,6 +12,9 @@
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => 'trousers']) }}">{{ __('welcome.other-words-ladies-trousers') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'gentlemen', 'categories' => 'cardigans']) }}">{{ __('welcome.other-words-gentlement-cardigans') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'gentlemen', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-gentlemen-vests') }}</a>
+		@else
+		Ici les liens pour les creations hiver
+		@endif
 	</p>
 
 	<div class="flex justify-center flex-wrap">
