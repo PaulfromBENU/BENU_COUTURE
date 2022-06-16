@@ -6,11 +6,19 @@
             </div>
         </div>
         <div class="article-sidebar__content">
+            @if(in_array(app()->getLocale(), ['lu', 'de']))
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large" wire:click="closeVoucherSideBar">
+                <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                    {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+                </div>
+            </div>
+            @else
             <div class="article-sidebar__content__close-container" wire:click="closeVoucherSideBar">
                 <div class="article-sidebar__content__close">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
             </div>
+            @endif
             <p class="article-sidebar__content__compo__subtitle" wire:click="switchDisplay('overview')" @if($content == 'overview') style="display: none;" @endif>
                 < {{ __('sidebar.back') }}
             </p>
@@ -78,9 +86,9 @@
                     <div class="article-sidebar__content__voucher-value @if($voucher_value == 180) article-sidebar__content__voucher-value--active @endif" wire:click="updateValue(180)">180&euro;</div>
                 </div>
 
-                @if($voucher->$singularity_query != "")
-                <p class="article-sidebar__content__singularity">
-                    <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ $voucher->$singularity_query }}
+                @if($voucher->voucher_type != "pdf")
+                <p class="article-sidebar__content__singularity mt-5">
+                    <span class="primary-color font-semibold">{!! __('sidebar.singularity') !!}</span><br/> {{ __('vouchers.singularity-fabric') }}
                 </p>
                 @endif
 
@@ -108,9 +116,9 @@
                     <li class="flex justify-between" wire:click="switchDisplay('delivery')">
                         <p>{{ __('sidebar.delivery') }}</p> @svg('chevron-down')
                     </li>
-                    <li class="flex justify-between" wire:click="switchDisplay('more')">
+                    <!-- <li class="flex justify-between" wire:click="switchDisplay('more')">
                         <p>{{ __('sidebar.more-details') }}</p> @svg('chevron-down')
-                    </li>
+                    </li> -->
                 </ul>
 
                 <p class="article-sidebar__content__contact">
@@ -134,7 +142,7 @@
                 <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.returns-vouchers-info-1-link') !!}</a>.
             </p>
 
-            @elseif($content == 'more')
+            <!-- @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">
                     {{ __('sidebar.more-details') }}
                 </h3>
@@ -167,7 +175,7 @@
                             {{ __('sidebar.more-details-vouchers-3') }}
                         </p>
                     </li>
-                </ul>
+                </ul> -->
             @endif
         </div>
     @endif
