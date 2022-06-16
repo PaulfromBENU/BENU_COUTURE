@@ -6572,6 +6572,7 @@ input[type=checkbox]:focus {
   background: transparent url("/landing/pictures/pattern_solo_benu_couture_OK.svg") 0% 0% repeat padding-box;
   background-size: 150px;
   z-index: -1;
+  background-attachment: fixed;
 }
 
 .text-center {
