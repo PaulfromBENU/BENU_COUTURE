@@ -69,6 +69,7 @@
 </head>
 <!-- To use a landscape format, use $pdf->set_paper('A4', 'landscape'); in the controller -->
 <body style="width: 100%; margin-left: 0%; font-family: 'Barlow Condensed'; font-weight: 400; font-size: 0.9rem; position: relative;">
+	@for($page_number = 1; $page_number <= intdiv($order->cart->couture_variations->count(), 6) + 1; $page_number ++)
 	<div style="width: 100%; height: 100%;">
 		<section style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-right: dashed lightgrey 2px; padding-right: 20px;">
 			<div style="position: relative; padding-left: 0px; margin-bottom: 50px; height: 120px;">
@@ -143,9 +144,9 @@
 					</p>
 				</div>
 				@if($order !== null)
-					@foreach($order->cart->couture_variations as $article)
+					@foreach($order->cart->couture_variations->skip(($page_number - 1) * 6)->take(6) as $article)
 						@if($article->name == 'voucher')
-							<div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 45px;">
+							<div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 35px;">
 								<p style="position: absolute; width: 50%; top: 0; left: 0; text-align: left;">
 									{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} @if($article->voucher_type == 'pdf') PDF @else {{ __('pdf.invoice-voucher-type-clothe') }} @endif
 								</p>
@@ -155,11 +156,11 @@
 								<p style="position: absolute; width: 35%; top: 0; left: 65%; text-align: center;"></p>
 							</div>
 						@else
-							<div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 45px;">
-								<p style="position: absolute; width: 50%; top: 0; left: 0; text-align: left;">
+							<div style="position: relative; font-weight: 500; font-size: 0.95rem; border-bottom: solid 1px lightgrey; height: 35px;">
+								<p style="position: absolute; width: 50%; top: -12px; left: 0; text-align: left;">
 									{{ strtoupper($article->name) }}
 								</p>
-								<p style="position: absolute; width: 15%; top: 0; left: 50%; text-align: center;">
+								<p style="position: absolute; width: 15%; top: -12px; left: 50%; text-align: center;">
 									@if($article->is_extra_accessory == '1')
 									{{ $article->specific_price }}&euro;
 									@else
@@ -169,7 +170,7 @@
 								<p style="position: absolute; width: 35%; top: 0; left: 65%; text-align: center;"></p>
 							</div>
 							@if($article->pivot->with_extra_article)
-							<div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 45px;">
+							<div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 35px;">
 								<p style="position: absolute; width: 50%; top: 0; left: 0; text-align: left;">
 									+ {{ __('pdf.invoice-aditionnal-pillow') }}
 								</p>
@@ -327,6 +328,7 @@
 			</div>
 		</section>
 	</div>
+	@endfor
 
 
 	<!-- <footer style="position: absolute; bottom: 0; left: 0; width: 100%; height: 30px; border-top: solid 1px lightgrey;">
