@@ -36,7 +36,7 @@
 				Order #{{ $new_order->unique_id }}
 			</div>
 			<p style="margin-bottom: 5px;">
-				@if(count($new_order->user) > 0)
+				@if($new_order->user !== null)
 				Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
 				@endif
 			</p>
@@ -391,7 +391,7 @@
 				Order #{{ $sent_order->unique_id }}
 			</div>
 			<p style="margin-bottom: 5px;">
-				@if(count($sent_order->user) > 0)
+				@if($sent_order->user !== null)
 				Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }}
 				@endif
 			</p>
