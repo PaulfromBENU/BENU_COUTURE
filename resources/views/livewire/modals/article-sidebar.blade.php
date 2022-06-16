@@ -115,7 +115,11 @@
 
                 <p class="article-sidebar__content__price">
                     @if($sold == 0)
+                    @if($article->is_extra_accessory)
+                    {{ $article->specific_price }}&euro;
+                    @else
                     {{ $article->creation->price }}&euro;
+                    @endif
                     @else
                     {{ strtoupper(__('models.sold-sold')) }}
                     @endif
