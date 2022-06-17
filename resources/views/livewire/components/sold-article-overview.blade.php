@@ -14,7 +14,15 @@
     <div class="sold-overview__footer">
         <div class="flex justify-between">
             <p class="sold-overview__footer__size">
-                {{ $article->size->value }}
+                @if($article->size->value == 'unique')
+                {{ __('components.unique-size') }}
+                @else
+                    @if($article->creation->creation_category->filter_key == 'bonnets')
+                    {{ $article->size->value }}cm
+                    @else
+                    {{ $article->size->value }}
+                    @endif
+                @endif
             </p>
             @if($article->color->name == 'multicolor')
                 <div class="color-circle">
@@ -28,7 +36,7 @@
             {{ $localized_creation_category }}
         </p>
         <p class="sold-overview__footer__name">
-            {{ $article->name }}
+            {{ strtoupper($article->name) }}
         </p>
         <div class="flex justify-between">
             <p class="sold-overview__footer__price">
