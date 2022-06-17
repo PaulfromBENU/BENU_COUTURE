@@ -105,7 +105,7 @@
 		</p>
 	</div>
 
-	<div>
+	<div style="padding-bottom: 100px;">
 		<p style="color: #27955B; font-size: 1.4rem; font-family: 'Barlow Condensed Medium'; margin-bottom: 0; padding-bottom: 0;">
 			{{ __('pdf.invoice-order-number') }} N<sup>o</sup> {{ $order->unique_id }}
 		</p>
