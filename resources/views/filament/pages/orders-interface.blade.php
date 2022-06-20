@@ -47,7 +47,7 @@
 
 			<div class="text-lg" style="margin-top: 30px; border-left: solid 1px lightgrey; padding-left: 10px;">
 				@if($new_order->address_id == 0)
-					<p style="color: rgb(234 179 8);">Retrait en magasin</p>
+					<p style="color: rgb(234 179 8);">Pick-up in shop</p>
 				@else
 					<p style="color: rgb(234 179 8);">Delivery address:</p>
 					<p class="uppercase">
@@ -230,7 +230,7 @@
 			@if(isset($show_unpaid[$unpaid_order->id]) && $show_unpaid[$unpaid_order->id] == 1)
 			<div class="text-lg" style="margin-top: 30px; border-left: solid 1px lightgrey; padding-left: 10px;">
 				@if($unpaid_order->address_id == 0)
-					<p style="color: rgb(234 179 8);">Retrait en magasin</p>
+					<p style="color: rgb(234 179 8);">Pick-up in shop</p>
 				@else
 					<p style="color: rgb(234 179 8);">Delivery address:</p>
 					<p class="uppercase">
