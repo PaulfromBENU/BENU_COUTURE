@@ -55,6 +55,7 @@
                             {{ __('dashboard.order-details') }}
                         </button>
                     </div>
+                    @if($order->status !== 4)
                     <div class="mb-5 text-right">
                         <a target="_blank" href="{{ route('invoice-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
@@ -65,6 +66,7 @@
                             {{ __('dashboard.order-return') }}
                         </a>
                     </div>
+                    @endif
                     <!-- <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
