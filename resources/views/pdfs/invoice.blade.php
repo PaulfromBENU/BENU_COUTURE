@@ -412,6 +412,19 @@
 				</div>
 			</div>
 
+			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+				<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+					{{ __('pdf.invoice-total-without-vat') }}
+				</div>
+				<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
+					@if($order->with_kulturpass)
+					{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high) / 2, 2) }}&euro;
+					@else
+					{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high), 2) }}&euro;
+					@endif
+				</div>
+			</div>
+
 			@if($vat_low > 0)
 			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
 				<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
