@@ -77,9 +77,12 @@
     </div>
 
     <!-- Error messages -->
-    @if ($errors->any())
+    @if ($errors->any() || session('account-deleted') !== null)
     <div class="modal error-modal" id="error-modal" style="display: none;">
     	<div class="error-modal__close">&#10005;</div>
+    	@if(session('account-deleted') !== null)
+    	{{ session('account-deleted') }}
+    	@endif
 	    @foreach ($errors->all() as $error)
 	    {{ $error }}
 	    @endforeach
@@ -110,7 +113,7 @@
 
 @section('scripts-top')
 	<script type="text/javascript" src="{{ asset('js/services/slick-1.8.1/slick/slick.min.js') }}"></script>
-	@if($errors->any())
+	@if ($errors->any() || session('account-deleted') !== null)
 	<script type="text/javascript">
 		$(function() {
 			$('#modal-opacifier').fadeIn('fast');

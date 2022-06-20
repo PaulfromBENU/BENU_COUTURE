@@ -260,7 +260,7 @@ class DashboardNavigation extends Component
         auth()->user()->wishlistArticles()->detach();
         auth()->user()->delete();
 
-        return redirect()->route('home')->with('error', "__('dashboard.delete-confirmation')");
+        return redirect()->route('home', ['locale' => app()->getLocale()])->with('account-deleted', __('dashboard.delete-confirmation'));
     }
 
     public function render()
