@@ -2706,6 +2706,14 @@ select {
     width: 50%;
   }
 
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
+  .lg\:w-5\/12 {
+    width: 41.666667%;
+  }
+
   .lg\:max-w-\[20em\] {
     max-width: 20em;
   }
@@ -2777,6 +2785,14 @@ select {
 
   .lg\:flex-wrap {
     flex-wrap: wrap;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:gap-8 {

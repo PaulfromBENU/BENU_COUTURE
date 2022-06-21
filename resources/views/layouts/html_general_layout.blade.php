@@ -103,12 +103,7 @@
                             {!! __('welcome.nav-account') !!}
                         </p>
                     </a>
-                    <div class="inline-block welcome-mobile-nav__link">
-                        @livewire('components.cart-header-icon')
-                        <p>
-                            {!! __('welcome.nav-cart') !!}
-                        </p>
-                    </div>
+                    @livewire('components.cart-mobile-icon')
                 </div>
 
                 <!-- Side menu for mobile -->

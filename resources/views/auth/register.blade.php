@@ -43,11 +43,11 @@
             <!-- </div> -->
         @endif
 
-        <form method="POST" action="{{ route('register', [app()->getLocale()]) }}" class="w-1/2 m-auto mb-10" id="register-form" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('register', [app()->getLocale()]) }}" class="w-5/6 lg:w-1/2 m-auto mb-10" id="register-form" enctype="multipart/form-data">
             @csrf
-            <div class="flex justify-between">
-                <div class="w-5/12">
-                    <div class="flex justify-start input-group register__form__radio-group">
+            <div>
+                <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                    <div class="flex justify-start input-group register__form__radio-group w-full lg:w-5/12">
                         <div class="mr-4">
                             <input type="radio" id="register_gender_male" name="register_gender" value="male" {{ old('register_gender') === 'male' ? 'checked' : '' }}>
                             <label for="register_gender_male" class="ml-3">{{ __('forms.sir') }}</label><br>
@@ -61,7 +61,14 @@
                             <label for="register_gender_neutral" class="ml-3">{{ __('forms.neutral') }}</label> 
                         </div>
                     </div>
-                    <div class="input-group reactive-label-input">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label>{{ __('forms.company') }}</label>
+                        <input type="text" name="register_company" class="input-underline w-full" maxlength="255" value="{{ old('register_company') }}" >
+                    </div>
+                </div>
+
+                <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label for="register_first_name">{{ __('forms.first-name') }} *</label>
                         <input type="text" id="register_first_name" name="register_first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255" value="{{ old('register_first_name') }}" required>
                         @error('register_first_name')
@@ -69,22 +76,19 @@
                         @enderror
                     </div>
 
-                    <div class="input-group reactive-label-input">
-                        <label>{{ __('forms.email') }} *</label>
-                        <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" value="{{ old('email') }}" required>
-                    </div>
-                </div>
-
-                <div class="w-5/12">
-                    <div class="input-group reactive-label-input">
-                        <label>{{ __('forms.company') }}</label>
-                        <input type="text" name="register_company" class="input-underline w-full" maxlength="255" value="{{ old('register_company') }}" >
-                    </div>
-                    <div class="input-group reactive-label-input">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label>{{ __('forms.last-name') }} *</label>
                         <input type="text" name="register_last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" value="{{ old('register_last_name') }}" required>
                     </div>
-                    <div class="input-group reactive-label-input">
+                </div>
+
+                <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label>{{ __('forms.email') }} *</label>
+                        <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" value="{{ old('email') }}" required>
+                    </div>
+
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label>{{ __('forms.phone') }} *</label>
                         <input type="tel" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" value="{{ old('register_phone') }}" required>
                     </div>
@@ -93,8 +97,8 @@
 
             <h3 class="register__lowtitle">{{ __('forms.password') }}</h3>
 
-            <div class="flex justify-between">
-                <div class="input-group reactive-label-input w-5/12">
+            <div class="flex justify-between flex-wrap">
+                <div class="input-group reactive-label-input w-full lg:w-5/12">
                     <label>{{ __('forms.password') }} *</label>
                     <input type="password" name="register_password" class="input-underline w-full" tabindex="5" minlength="8" maxlength="150" required>
                     <div class="reactive-label-input__show-btn reactive-label-input__show-btn--show">
@@ -104,7 +108,7 @@
                         @svg('hide-pwd-btn')
                     </div>
                 </div>
-                <div class="input-group reactive-label-input w-5/12">
+                <div class="input-group reactive-label-input w-full lg:w-5/12">
                     <label>{{ __('forms.password-confirmation') }} *</label>
                     <input type="password" name="register_password_confirmation" class="input-underline w-full" tabindex="6" minlength="8" maxlength="150" required>
                     <div class="reactive-label-input__show-btn reactive-label-input__show-btn--show">
@@ -128,40 +132,43 @@
                     </div>
                     <p class="text-sm text-white"><em>{{ __('forms.register-address-required') }}</em></p>
                 </div>
-                <div class="flex justify-between">
-                    <div class="w-5/12">
-                        <div class="input-group reactive-label-input">
+                <div>
+                    <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
                             <label>{{ __('forms.first-name') }} <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_first_name" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="8" value="{{ old('register_address_first_name') }}" maxlength="255">
                         </div>
-                        <div class="input-group reactive-label-input">
-                            <label>{{ __('forms.register-address-street-number') }} <span class="register_optionnal_star">*</span></label>
-                            <input type="text" name="register_address_number" class="input-underline w-full register_address_field register_address_field_mandatory" value="{{ old('register_address_number') }}" tabindex="10">
-                        </div>
-                        <div class="input-group reactive-label-input">
-                            <label>{{ __('forms.register-address-floor') }}</label>
-                            <input type="text" name="register_address_floor" class="input-underline w-full register_address_field" tabindex="12" value="{{ old('register_address_floor') }}" maxlength="50">
-                        </div>
-                        <div class="input-group reactive-label-input">
-                            <label>{{ __('forms.register-address-city') }} <span class="register_optionnal_star">*</span></label>
-                            <input type="text" name="register_address_city" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="14" value="{{ old('register_address_city') }}" maxlength="150">
-                        </div>
-                    </div>
-
-                    <div class="w-5/12">
-                        <div class="input-group reactive-label-input">
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
                             <label>{{ __('forms.last-name') }} <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_last_name" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="9" value="{{ old('register_address_last_name') }}" maxlength="255">
                         </div>
-                        <div class="input-group reactive-label-input">
+                    </div>
+                    <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
+                            <label>{{ __('forms.register-address-street-number') }} <span class="register_optionnal_star">*</span></label>
+                            <input type="text" name="register_address_number" class="input-underline w-full register_address_field register_address_field_mandatory" value="{{ old('register_address_number') }}" tabindex="10">
+                        </div>
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
                             <label>{{ __('forms.register-address-street-name') }} <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_street" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="11" value="{{ old('register_address_street') }}" maxlength="255">
                         </div>
-                        <div class="input-group reactive-label-input">
+                    </div>
+                    <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
+                            <label>{{ __('forms.register-address-floor') }}</label>
+                            <input type="text" name="register_address_floor" class="input-underline w-full register_address_field" tabindex="12" value="{{ old('register_address_floor') }}" maxlength="50">
+                        </div>
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
                             <label>{{ __('forms.register-address-zip') }} <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_zip" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="13" value="{{ old('register_address_zip') }}" maxlength="10">
                         </div>
-                        <div class="input-group reactive-label-input">
+                    </div>
+                    <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
+                            <label>{{ __('forms.register-address-city') }} <span class="register_optionnal_star">*</span></label>
+                            <input type="text" name="register_address_city" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="14" value="{{ old('register_address_city') }}" maxlength="150">
+                        </div>
+                        <div class="input-group reactive-label-input w-full lg:w-5/12">
                             <label>{{ __('forms.register-address-phone') }} <span class="register_optionnal_star">*</span></label>
                             <input type="text" name="register_address_phone" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="15" value="{{ old('register_address_phone') }}" maxlength="30">
                         </div>
