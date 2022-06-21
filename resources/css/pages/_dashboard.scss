@@ -222,11 +222,23 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	position: relative;
+	@include mobile {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	h2 {
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 20px;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 }
 
@@ -235,16 +247,34 @@
 	padding-right: 5vw;
 	width: 100%;
 	position: relative;
+	@include mobile {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	h2 {
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 40px;
 		width: 100%;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	h3 {
 		font: normal normal 600 20px/22px 'Barlow Condensed';
 		margin-bottom: 40px;
+	}
+	button {
+		@include mobile {
+			width: 100% !important;
+			margin: 0 !important;
+		}
 	}
 }
 
@@ -254,12 +284,24 @@
 	padding-right: 5vw;
 	width: 100%;
 	position: relative;
+	@include mobile {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	h2 {
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 40px;
 		width: 100%;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	h3 {
 		font: normal normal 600 20px/22px 'Barlow Condensed';
@@ -269,6 +311,9 @@
 		font: normal normal 700 22px/26px 'Barlow Condensed';
 		margin-bottom: 15px;
 		margin-top: 20px;
+		@include mobile {
+			margin-bottom: 5px;
+		}
 	}
 }
 

@@ -3,9 +3,9 @@
 	<div>
 		<form method="POST" wire:submit.prevent="updatePersonalData" enctype="multipart/form-data">
 			@csrf
-			<div class="flex justify-between">
-                <div class="w-5/12">
-                    <div class="flex justify-start input-group register__form__radio-group pl-2">
+			<div>
+                <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                    <div class="flex justify-start input-group register__form__radio-group pl-2 w-full lg:w-5/12">
                         <div class="mr-7">
                             <input type="radio" id="register_gender_male" name="gender" value="male" wire:model.defer="gender">
                             <label for="register_gender_male" class="ml-1">{{ __('forms.sir') }}</label><br>
@@ -19,38 +19,40 @@
                             <label for="register_gender_neutral" class="ml-1">{{ __('forms.neutral') }}</label> 
                         </div>
                     </div>
-                    <div class="input-group reactive-label-input">
-                        <label for="register_first_name">{{ __('forms.first-name') }}</label>
-                        <input type="text" id="first_name" name="register_first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255" wire:model.defer="first_name">
-                        @error('register_first_name')
-                            <div class="primary-color">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="input-group reactive-label-input">
-                        <label>{{ __('forms.email') }}</label>
-                        <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" wire:model.defer="email">
-                    </div>
-                </div>
-
-                <div class="w-5/12">
-                    <div class="input-group reactive-label-input">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label>{{ __('forms.company') }}</label>
                         <input type="text" name="company" class="input-underline w-full" maxlength="255" wire:model.defer="company">
                     </div>
-                    <div class="input-group reactive-label-input">
+                </div>
+
+                <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label for="first_name">{{ __('forms.first-name') }}</label>
+                        <input type="text" id="first_name" name="first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255" wire:model.defer="first_name">
+                        @error('first_name')
+                            <div class="primary-color">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label>{{ __('forms.last-name') }}</label>
                         <input type="text" name="last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" wire:model.defer="last_name">
                     </div>
-                    <div class="input-group reactive-label-input">
+                </div>
+
+                <div class="w-full flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label>{{ __('forms.email') }}</label>
+                        <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" wire:model.defer="email">
+                    </div>
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label>{{ __('forms.phone') }}</label>
                         <input type="text" name="phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" wire:model.defer="phone">
                     </div>
                 </div>
             </div>
 
-            <div class="flex justify-between mt-10">
-                <div class="w-5/12">
+            <div class="flex justify-between flex-wrap mt-10">
+                <div class="w-full lg:w-5/12 pb-5">
                 	<h4>{{ __('dashboard.update-password') }}</h4>
                 	<div class="input-group reactive-label-input w-full">
 	                    <label style="color: black;">{{ __('dashboard.old-password-label') }}</label>
@@ -84,7 +86,7 @@
 	                </div>
                 </div>
 
-                <div class="w-5/12">
+                <div class="w-full lg:w-5/12">
                 	<h4>{{ __('dashboard.has-kulturpass') }}</h4>
                     <p class="font-medium mt-1 mb-2">
                         {{ __('dashboard.kulturpass-explanation') }}

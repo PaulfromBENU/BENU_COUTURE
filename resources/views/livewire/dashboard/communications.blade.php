@@ -7,20 +7,22 @@
         @foreach($contact_messages->groupBy('thread')->all() as $thread => $thread_messages)
         <li wire:key="{{ $thread }}">
             <div class="faq__accordion__header flex justify-between">
-                <p>
+                <p class="w-5/6">
                     {!! __('dashboard.com-message-from') !!} {{ auth()->user()->first_name }} - {!! __('dashboard.com-sent-on') !!} {{ $thread_messages->first()->created_at->format('d\/m\/Y') }}
                     @if($thread_messages->first()->closed == '1')
                     <em> - {!! __('dashboard.com-thread-closed') !!}</em>
                     @endif
                 </p>
-                <p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+                <p class="flex flex-col justify-center w-1/6 relative">
+                    <img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron">
+                </p>
             </div>
 
             <div class="faq__accordion__answer pb-10" @if(!isset($showForm[$thread]) || $showForm[$thread] == 0) style="display: none;" @endif>
                 @foreach($thread_messages as $message)
                     <div wire:key="{{ $message->id }}">
                         <p class="faq__accordion__answer__txt">
-                            <span style="color: gray; padding-right: 10px;"><em>[{{ $message->created_at->format('d\/m\/Y\,\ H\hi') }}]</em></span>  {{ $message->message }}
+                            <span style="color: gray; padding-right: 10px;"><em>[{{ $message->created_at->format('d\/m\/Y\,\ H\hi') }}]</em></span> <br/> {{ $message->message }}
                         </p>
                         @if($message->benuAnswers()->count() > 0)
                             <ul class="mb-10">
@@ -28,10 +30,10 @@
                                 <li wire:key="{{ $benu_answer->id }}">
                                     <div class="flex justify-between faq__accordion__answer__header">
                                         <p>{!! __('dashboard.com-answer-by-benu-sent-on') !!} {{ $benu_answer->created_at->format('d\/m\/Y') }}</p>
-                                        <p>
-                                            <span class="faq__accordion__answer__header__plus">+</span>
-                                            <span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
-                                        </p>
+                                        <div class="flex flex-col justify-center">
+                                            <p class="faq__accordion__answer__header__plus">+</p>
+                                            <p class="faq__accordion__answer__header__minus" style="display: none;">-</p>
+                                        </div>
                                     </div>
                                     <p class="faq__accordion__answer__subanswer" style="display: none;">
                                         {{ $benu_answer->message }}

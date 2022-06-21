@@ -58,18 +58,29 @@
 			background: $primary-color 0% 0% no-repeat padding-box;
 			border-radius: 8px;
 			color: $white;
-			padding: 34px 120px 34px 50px;
+			padding: 34px 50px 34px 50px;
 			text-align: left;
 			font: normal normal 700 28px/28px 'Barlow Condensed';
 			letter-spacing: 0px;
 			cursor: pointer;
+			@include mobile {
+				font: normal normal 700 16px/24px 'Barlow Condensed';
+				padding: 14px 20px;
+				margin-bottom: 10px;
+			}
 			p {
 				margin-right: 15px;
+				@include mobile {
+					margin-right: 0;
+				}
 			}
 			&__chevron {
 				margin-top: 7px;
 				transform: rotate(0deg);
 				transition: $transition-base;
+				right: 10px;
+				width: 25px;
+				position: absolute;
 				&--active {
 					transform: rotate(180deg);
 				}
@@ -84,6 +95,16 @@
 			width: 75%;
 			margin: auto;
 			padding-top: 10px;
+			@include mobile {
+				width: 100%;
+			}
+			button {
+				@include mobile {
+					width: 100% !important;
+					margin: 0 !important;
+					margin-bottom: 10px !important;
+				}
+			}
 			li {
 				border-bottom: 1px solid $light-grey;
 			}
@@ -91,6 +112,9 @@
 				text-align: left;
 				font: normal normal 500 16px/28px 'Barlow';
 				letter-spacing: 0px;
+				@include mobile {
+					font: normal normal 500 15px/25px 'Barlow';
+				}
 			}
 			&__subanswer {
 				padding-top: 20px;
@@ -98,6 +122,9 @@
 				text-align: left;
 				font: normal normal 500 16px/28px 'Barlow';
 				letter-spacing: 0px;
+				@include mobile {
+					font: normal normal 500 15px/25px 'Barlow';
+				}
 			}
 			&__header {
 				text-align: left;
@@ -105,8 +132,12 @@
 				letter-spacing: 0px;
 				border-bottom: 2px solid transparent;
 				margin-top: 25px;
-				height: 40px;
+				height: fit-content;
 				cursor: pointer;
+				min-height: 40px;
+				@include mobile {
+					font: normal normal 700 16px/24px 'Barlow Condensed';
+				}
 				&--active {
 					border-bottom: 2px solid $primary-color;
 					color: $primary-color;
