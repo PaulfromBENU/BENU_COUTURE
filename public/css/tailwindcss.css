@@ -2702,6 +2702,10 @@ select {
     display: none;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:max-w-\[20em\] {
     max-width: 20em;
   }

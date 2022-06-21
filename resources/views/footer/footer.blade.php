@@ -1,6 +1,6 @@
 <footer class="footer">
 	<div class="benu-container">
-		<div class="flex flex-start footer__lists">
+		<div class="flex flex-start flex-wrap footer__lists">
 			<div class="footer__lists__col">
 				<h4>{{ __('footer.footer-title-1') }}</h4>
 				<ul>

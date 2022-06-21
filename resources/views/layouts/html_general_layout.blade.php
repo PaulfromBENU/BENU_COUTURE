@@ -85,7 +85,7 @@
                 <div class="welcome-mobile-nav mobile-only flex justify-around">
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="inline-block welcome-mobile-nav__link">
                         <button class="header__main-menu__icons__btn">
-                            Logo
+                            @svg('benu-couture-mobile-home', '')
                         </button>
                         <p>
                             {!! __('welcome.nav-home') !!}
