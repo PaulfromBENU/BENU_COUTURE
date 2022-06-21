@@ -5546,6 +5546,12 @@ input[type=checkbox]:focus {
   padding-top: 60px;
   margin-bottom: 60px;
 }
+@media (max-width: 767px) {
+  .dashboard {
+    padding: 10px 0px;
+    margin-bottom: 10px;
+  }
+}
 .dashboard__nav {
   padding: 29px 0px 29px 100px;
   background: #F9E2E2 0% 0% no-repeat padding-box;
@@ -5559,11 +5565,38 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 45px;
 }
+@media (max-width: 767px) {
+  .dashboard__nav__title {
+    font: normal normal 300 28px/34px "Barlow Condensed";
+    margin-bottom: 25px;
+  }
+}
 .dashboard__nav__title strong {
   font-weight: 700;
 }
 .dashboard__nav__links {
   margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .dashboard__nav__link-mobile {
+    width: 100%;
+    display: block;
+    padding: 10px 30px;
+    background: #D41C1B;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    cursor: pointer;
+    font: normal normal 700 16px/19px "Barlow Condensed";
+    letter-spacing: 0.32px;
+    margin-bottom: 15px;
+  }
+  .dashboard__nav__link-mobile:hover {
+    background: #2E1414;
+  }
 }
 .dashboard__nav__link {
   text-align: left;
@@ -5590,6 +5623,11 @@ input[type=checkbox]:focus {
 .dashboard__content {
   width: calc(73vw - 20px);
 }
+@media (max-width: 767px) {
+  .dashboard__content {
+    width: 100%;
+  }
+}
 .dashboard__content__box {
   margin-right: 20px;
   padding: 18px 40px;
@@ -5599,11 +5637,24 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
   position: relative;
 }
+@media (max-width: 767px) {
+  .dashboard__content__box {
+    padding: 8px 15px;
+    min-height: 20px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
 .dashboard__content__box--normal {
   width: calc(22vw - 10px);
 }
 .dashboard__content__box--large {
   width: 44vw;
+}
+@media (max-width: 767px) {
+  .dashboard__content__box--large {
+    width: 100%;
+  }
 }
 .dashboard__content__box__title {
   text-align: left;
@@ -5634,6 +5685,12 @@ input[type=checkbox]:focus {
 .dashboard__content__box__svg-container svg {
   height: 50px;
   margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .dashboard__content__box__svg-container svg {
+    height: 40px;
+    margin: auto;
+  }
 }
 
 .dashboard-wishlist__title {
@@ -5769,12 +5826,28 @@ input[type=checkbox]:focus {
   width: 100%;
   position: relative;
 }
+@media (max-width: 767px) {
+  .dashboard-delete {
+    width: 83.3333333%;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
 .dashboard-delete h2 {
   font: normal normal 700 44px/53px "Barlow Condensed";
   padding-bottom: 20px;
   border-bottom: solid 1px lightgrey;
   margin-bottom: 40px;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .dashboard-delete h2 {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 .dashboard-delete h3 {
   font: normal normal 700 22px/26px "Barlow Condensed";
@@ -5788,10 +5861,21 @@ input[type=checkbox]:focus {
   border-color: lightgrey;
   border-radius: 4px;
 }
+@media (max-width: 767px) {
+  .dashboard-delete textarea {
+    height: 160px;
+  }
+}
 .dashboard-delete textarea:focus {
   border-color: #D41C1B;
   outline: none;
   box-shadow: none;
+}
+@media (max-width: 767px) {
+  .dashboard-delete button {
+    width: 100% !important;
+    margin: 0 !important;
+  }
 }
 
 .dashboard-vouchers {
