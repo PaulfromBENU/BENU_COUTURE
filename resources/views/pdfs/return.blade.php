@@ -319,8 +319,8 @@
 			</div>
 
 			<div style="width: 100%; height: 50%; padding-left: 40px; padding-top: 5px;">
-				<div style="margin-bottom: 30px; text-align: center; font-weight: 600; color: gray;">
-					↑<br/>{{ __('pdf.return-instruction-arrow-right-1') }}
+				<div style="margin-top:  5px; margin-bottom: 30px; text-align: center; font-weight: 600; color: gray;">
+					<img src="{{ asset('images/svg/return_arrow.svg') }}" style="height: 20px;" /><br/>{{ __('pdf.return-instruction-arrow-right-1') }}
 				</div>
 				<p style="font-weight: 600; font-size: 1.1rem;">
 					{{ __('pdf.return-instructions') }}
