@@ -318,6 +318,9 @@ input[type="checkbox"] {
 		transition: $transition-base;
 		z-index: -1;
 		display: block;
+		@include mobile {
+			font-size: 0.85rem;
+		}
 	}
 	&__label-active {
 		position: absolute;

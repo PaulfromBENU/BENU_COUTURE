@@ -179,10 +179,22 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	position: relative;
+	@include mobile {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	h2 {
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	&__new-address-btn {
 		position: absolute;
@@ -191,6 +203,12 @@
 		color: $primary-color;
 		width: fit-content;
 		font-size: 1.2rem;
+		@include mobile {
+			position: relative;
+			width: 100%;
+			right: 0;
+			text-align: center;
+		}
 	}
 	&__address {
 		margin-top: 30px;
@@ -199,6 +217,10 @@
 		margin-right: 3%;
 		padding: 20px 0px;
 		border-bottom: solid 1px lightgrey;
+		@include mobile {
+			min-width: 300px;
+			width: 100%;
+		}
 		.btn-slider-left {
 			width: fit-content;
 		}
@@ -213,6 +235,12 @@
 			position: absolute;
 			right: 0;
 			top: 0;
+			@include mobile {
+				position: relative;
+				margin-bottom: 10px;
+				width: 100%;
+				height: fit-content;
+			}
 		}
 	}
 }

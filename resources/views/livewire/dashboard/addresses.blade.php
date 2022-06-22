@@ -2,15 +2,15 @@
     <h2>
         {!! __('dashboard.my-addresses') !!}
     </h2>
-    <div class="header__main-nav__btn dashboard-addresses__new-address-btn" wire:click="showAddressModal">
+    <p class="header__main-nav__btn dashboard-addresses__new-address-btn" wire:click="showAddressModal">
         + {!! __('dashboard.create-new-address') !!}
-    </div>
+    </p>
     @if($user_addresses->count() > 0)
     <div class="flex justify-start flex-wrap">
         @foreach($user_addresses as $address)
             <div wire:key="{{ $address->id }}" class="dashboard-addresses__address">
-                <div class="flex justify-between">
-                    <div class="w-7/12">
+                <div class="flex justify-between flex-col-reverse lg:flex-row">
+                    <div class="w-full lg:w-7/12">
                         <h4>{{ $address->first_name.' '.$address->last_name }}</h4>
                         <p>
                             {{ $address->street_number }} {{ $address->street }}
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-5/12 relative">
+                    <div class="w-full lg:w-5/12 relative">
                         <div class="dashboard-addresses__address__name text-center">
                             {{ $address->address_name }}
                         </div>

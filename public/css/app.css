@@ -299,6 +299,11 @@ input[type=checkbox]:focus {
   z-index: -1;
   display: block;
 }
+@media (max-width: 767px) {
+  .reactive-label-input label {
+    font-size: 0.85rem;
+  }
+}
 .reactive-label-input__label-active {
   position: absolute;
   bottom: 35px !important;
@@ -3071,6 +3076,14 @@ input[type=checkbox]:focus {
   overflow: hidden;
   height: calc(100vh - 140px);
 }
+@media (max-width: 767px) {
+  .add-address-modal {
+    width: 94%;
+    left: 3%;
+    height: calc(100vh - 100px);
+    top: 40px;
+  }
+}
 .add-address-modal .reactive-label-input {
   height: 52px;
 }
@@ -5769,10 +5782,26 @@ input[type=checkbox]:focus {
   padding-right: 5vw;
   position: relative;
 }
+@media (max-width: 767px) {
+  .dashboard-addresses {
+    width: 83.3333333%;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
 .dashboard-addresses h2 {
   font: normal normal 700 44px/53px "Barlow Condensed";
   padding-bottom: 20px;
   border-bottom: solid 1px lightgrey;
+}
+@media (max-width: 767px) {
+  .dashboard-addresses h2 {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 .dashboard-addresses__new-address-btn {
   position: absolute;
@@ -5784,6 +5813,14 @@ input[type=checkbox]:focus {
   width: fit-content;
   font-size: 1.2rem;
 }
+@media (max-width: 767px) {
+  .dashboard-addresses__new-address-btn {
+    position: relative;
+    width: 100%;
+    right: 0;
+    text-align: center;
+  }
+}
 .dashboard-addresses__address {
   margin-top: 30px;
   width: 46%;
@@ -5791,6 +5828,12 @@ input[type=checkbox]:focus {
   margin-right: 3%;
   padding: 20px 0px;
   border-bottom: solid 1px lightgrey;
+}
+@media (max-width: 767px) {
+  .dashboard-addresses__address {
+    min-width: 300px;
+    width: 100%;
+  }
 }
 .dashboard-addresses__address .btn-slider-left {
   width: -webkit-fit-content;
@@ -5810,6 +5853,16 @@ input[type=checkbox]:focus {
   position: absolute;
   right: 0;
   top: 0;
+}
+@media (max-width: 767px) {
+  .dashboard-addresses__address__name {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .dashboard-communications {

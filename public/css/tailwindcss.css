@@ -2720,6 +2720,10 @@ select {
     width: 41.666667%;
   }
 
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+
   .lg\:max-w-\[20em\] {
     max-width: 20em;
   }

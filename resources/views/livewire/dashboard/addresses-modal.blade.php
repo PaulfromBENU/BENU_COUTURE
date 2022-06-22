@@ -19,54 +19,60 @@
                 </div>
                 <p class="text-sm"><em>{{ __('forms.register-address-required') }}</em></p>
             </div>
-            <div class="flex justify-between">
-                <div class="w-5/12">
-                    <div class="input-group reactive-label-input">
+            <div>
+                <div class="flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_first_name != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.first-name') }} <span class="register_optionnal_star">*</span>
                         </label>
                         <input type="text" name="register_address_first_name" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="8" maxlength="255" required wire:model="address_first_name">
                     </div>
-                    <div class="input-group reactive-label-input">
-                        <label @if($address_street_number != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
-                            {{ __('forms.register-address-street-number') }} <span class="register_optionnal_star">*</span>
-                        </label>
-                        <input type="text" name="register_address_number" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="10" required wire:model="address_street_number">
-                    </div>
-                    <div class="input-group reactive-label-input">
-                        <label @if($address_floor != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
-                            {{ __('forms.register-address-floor') }}
-                        </label>
-                        <input type="text" name="register_address_floor" class="input-underline w-full register_address_field" tabindex="12" maxlength="50" wire:model="address_floor">
-                    </div>
-                    <div class="input-group reactive-label-input">
-                        <label @if($address_city != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
-                            {{ __('forms.register-address-city') }} <span class="register_optionnal_star">*</span>
-                        </label>
-                        <input type="text" name="register_address_city" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="14" maxlength="150" required wire:model="address_city">
-                    </div>
-                </div>
-
-                <div class="w-5/12">
-                    <div class="input-group reactive-label-input">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_last_name != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.last-name') }} <span class="register_optionnal_star">*</span>
                         </label>
                         <input type="text" name="register_address_last_name" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="9" maxlength="255" required wire:model="address_last_name">
                     </div>
-                    <div class="input-group reactive-label-input">
+                </div>
+
+                <div class="flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label @if($address_street_number != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
+                            {{ __('forms.register-address-street-number') }} <span class="register_optionnal_star">*</span>
+                        </label>
+                        <input type="text" name="register_address_number" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="10" required wire:model="address_street_number">
+                    </div>
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_street != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.register-address-street-name') }} <span class="register_optionnal_star">*</span>
                         </label>
                         <input type="text" name="register_address_street" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="11" maxlength="255" required wire:model="address_street">
                     </div>
-                    <div class="input-group reactive-label-input">
+                </div>
+
+                <div class="flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label @if($address_floor != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
+                            {{ __('forms.register-address-floor') }}
+                        </label>
+                        <input type="text" name="register_address_floor" class="input-underline w-full register_address_field" tabindex="12" maxlength="50" wire:model="address_floor">
+                    </div>
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_zip != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.register-address-zip') }} <span class="register_optionnal_star">*</span>
                         </label>
                         <input type="text" name="register_address_zip" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="13" maxlength="10" required wire:model="address_zip">
                     </div>
-                    <div class="input-group reactive-label-input">
+                </div>
+
+                <div class="flex justify-center lg:justify-between flex-wrap">
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
+                        <label @if($address_city != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
+                            {{ __('forms.register-address-city') }} <span class="register_optionnal_star">*</span>
+                        </label>
+                        <input type="text" name="register_address_city" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="14" maxlength="150" required wire:model="address_city">
+                    </div>
+                    <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_phone != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.register-address-phone') }} <span class="register_optionnal_star">*</span>
                         </label>
