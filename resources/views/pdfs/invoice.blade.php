@@ -34,29 +34,31 @@
 	</style>
 </head>
 <body style="width: 100%; margin-left: 0%; font-family: 'Barlow Condensed Regular'; font-size: 0.9rem; position: relative;">
-	<div style="position: relative; padding-left: 0px; margin-bottom: 50px; height: 180px;">
-		<div style="position: absolute; top: 0; left: 0px;">
-			<img src="{{ asset('images/pictures/logo_benu_green.png') }}" style="height: 180px;" />
+	<header>
+		<div style="position: relative; padding-left: 0px; margin-bottom: 50px; height: 180px;">
+			<div style="position: absolute; top: 0; left: 0px;">
+				<img src="{{ asset('images/pictures/logo_benu_green.png') }}" style="height: 180px;" />
+			</div>
+			<div style="position: absolute; top: 18px; left: 80px;">
+				<p style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
+					BENU Village Esch asbl
+				</p>
+				<p>
+					51 rue d'Audun
+					<br/>
+					4018 Esch-sur-Alzette
+					<br/>
+					Luxembourg
+					<br/>
+					+352 27 91 19 49
+					<br/>
+					<span style="color: #27955B;">
+						benu@benuvillageesch.lu
+					</span>
+				</p>
+			</div>
 		</div>
-		<div style="position: absolute; top: 18px; left: 80px;">
-			<p style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-				BENU Village Esch asbl
-			</p>
-			<p>
-				51 rue d'Audun
-				<br/>
-				4018 Esch-sur-Alzette
-				<br/>
-				Luxembourg
-				<br/>
-				+352 27 91 19 49
-				<br/>
-				<span style="color: #27955B;">
-					benu@benuvillageesch.lu
-				</span>
-			</p>
-		</div>
-	</div>
+	</header>
 
 	<div style="position: relative; height: 170px;">
 		<p style="position: absolute; top: 0; left: 0; width: 40%; font-size: 0.95rem;">
@@ -104,6 +106,15 @@
 			@endif
 		</p>
 	</div>
+
+	<footer style="position: fixed; bottom: 0; left: 0; width: 100%; height: 30px; border-top: solid 1px lightgrey;">
+		<p style="position: absolute; padding-top: 5px; left: 0; width: 50%;">
+			<span style="font-family: 'Barlow Condensed SemiBold';">BENU VILLAGE ESCH ASBL</span> | RCS F11364 | TVA : LU 30223580
+		</p>
+		<p style="text-align: right; position: absolute; padding-top: 5px; left: 50%; width: 50%;">
+			IBAN | BCEELULL LU63 0019 5055 5246 0000
+		</p>
+	</footer>
 
 	<div style="padding-bottom: 50px;">
 		<p style="color: #27955B; font-size: 1.4rem; font-family: 'Barlow Condensed Medium'; margin-bottom: 0; padding-bottom: 0;">
@@ -347,7 +358,7 @@
 			@endif
 			@endforeach
 
-			<div style="min-height: 200px;">
+			<div style="min-height: 200px; page-break-inside: avoid;">
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
 					<div style="position: absolute; width: 75%; top: 4px; left: 0%; text-transform: uppercase;">
 						{{ __('pdf.invoice-total') }}
@@ -417,7 +428,7 @@
 					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
 						{{ __('pdf.invoice-total-without-vat') }}
 					</div>
-					<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
 						@if($order->with_kulturpass)
 						{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high) / 2, 2) }}&euro;
 						@else
@@ -474,13 +485,5 @@
 
 		</div>
 	</div>
-	<footer style="position: absolute; bottom: 0; left: 0; width: 100%; height: 30px; border-top: solid 1px lightgrey;">
-		<p style="position: absolute; padding-top: 5px; left: 0; width: 50%;">
-			<span style="font-family: 'Barlow Condensed SemiBold';">BENU VILLAGE ESCH ASBL</span> | RCS F11364 | TVA : LU 30223580
-		</p>
-		<p style="text-align: right; position: absolute; padding-top: 5px; left: 50%; width: 50%;">
-			IBAN | BCEELULL LU63 0019 5055 5246 0000
-		</p>
-	</footer>
 </body>
 </html>
