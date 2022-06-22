@@ -1,7 +1,8 @@
 .welcome-presentation {
 	// min-height: max(800px, 80vh);
 	margin-bottom: 80px;
-	width: 100%;
+	width: 100vw;
+	overflow-x: hidden;
 	position: relative;
 	height: min(85vh, 900px);
 	@include mobile {

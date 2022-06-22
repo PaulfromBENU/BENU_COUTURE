@@ -3568,7 +3568,8 @@ input[type=checkbox]:focus {
 
 .welcome-presentation {
   margin-bottom: 80px;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   position: relative;
   height: min(85vh, 900px);
 }
