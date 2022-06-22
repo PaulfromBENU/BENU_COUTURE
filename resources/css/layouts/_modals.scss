@@ -610,14 +610,42 @@
 	top: 70px;
 	overflow: hidden;
 	height: calc(100vh - 140px);
+	padding: 20px;
 	@include mobile {
 		width: 94%;
 		left: 3%;
 		height: calc(100vh - 100px);
 		top: 40px;
+		padding: 30px 10px 20px 10px;
 	}
 	.reactive-label-input {
 		height: 52px;
+	}
+	&__close-container {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		overflow: hidden;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		cursor: pointer;
+		transition: all 0.5s;
+		background: $light-grey;
+		&:hover {
+			width: 85px;
+			background: $dark-bg;
+		}
+	}
+	&__close {
+		text-align: right;
+		position: absolute;
+		right: 9px;
+		color: white;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		width: 85px;
+		height: 30px;
 	}
 	// label {
 	// 	transform: scale(0.75);

@@ -1,8 +1,8 @@
 <form method="POST" action="" id="contact-form" class="contact__form__form w-full m-auto mb-10" wire:submit.prevent="sendMessage" @if($safety_check == 0) onsubmit="event.preventDefault();" @endif>
     @csrf
-    <div class="flex justify-between">
-        <div class="w-5/12">
-            <div class="flex justify-start input-group contact__form__radio-group">
+    <div>
+        <div class="flex justify-center lg:justify-between flex-wrap">
+            <div class="flex justify-start input-group contact__form__radio-group w-full lg:w-5/12">
                 <div class="mr-5 ml-1">
                     <input type="radio" id="contact_gender_male" name="gender" value="male" wire:model="gender">
                     <label for="contact_gender_male" class="ml-4">{{ __('forms.sir') }}</label><br>
@@ -16,7 +16,18 @@
                     <label for="contact_gender_neutral" class="ml-4">{{ __('forms.neutral') }}</label> 
                 </div>
             </div>
-            <div class="input-group reactive-label-input">
+            <div class="input-group reactive-label-input w-full lg:w-5/12">
+                @if($company != "")
+                    <label class="reactive-label-input__label-active">{{ __('forms.company') }}</label>
+                @else
+                    <label>{{ __('forms.company') }}</label>
+                @endif
+                <input type="text" name="company" class="input-underline w-full" maxlength="100" wire:model.defer="company">
+            </div>
+        </div>
+
+        <div class="flex justify-center lg:justify-between flex-wrap">
+            <div class="input-group reactive-label-input w-full lg:w-5/12">
                 @if($first_name != "")
                     <label for="contact_first_name" class="reactive-label-input__label-active">{{ __('forms.first-name') }} *</label>
                 @else
@@ -27,27 +38,7 @@
                     <div class="primary-color">{{ $message }}</div>
                 @enderror
             </div>
-
-            <div class="input-group reactive-label-input">
-                @if($contact_email != "")
-                    <label class="reactive-label-input__label-active">{{ __('forms.email') }} *</label>
-                @else
-                    <label>{{ __('forms.email') }} *</label>
-                @endif
-                <input type="email" name="contact_email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" required wire:model.defer="contact_email">
-            </div>
-        </div>
-
-        <div class="w-5/12">
-            <div class="input-group reactive-label-input">
-                @if($company != "")
-                    <label class="reactive-label-input__label-active">{{ __('forms.company') }}</label>
-                @else
-                    <label>{{ __('forms.company') }}</label>
-                @endif
-                <input type="text" name="company" class="input-underline w-full" maxlength="100" wire:model.defer="company">
-            </div>
-            <div class="input-group reactive-label-input">
+            <div class="input-group reactive-label-input w-full lg:w-5/12">
                 @if($last_name != "")
                     <label class="reactive-label-input__label-active">{{ __('forms.last-name') }} *</label>
                 @else
@@ -55,7 +46,18 @@
                 @endif
                 <input type="text" name="last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" required wire:model="last_name">
             </div>
-            <div class="input-group reactive-label-input">
+        </div>
+
+        <div class="flex justify-center lg:justify-between flex-wrap">
+            <div class="input-group reactive-label-input w-full lg:w-5/12">
+                @if($contact_email != "")
+                    <label class="reactive-label-input__label-active">{{ __('forms.email') }} *</label>
+                @else
+                    <label>{{ __('forms.email') }} *</label>
+                @endif
+                <input type="email" name="contact_email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" required wire:model.defer="contact_email">
+            </div>
+            <div class="input-group reactive-label-input w-full lg:w-5/12">
                 @if($phone != "")
                     <label class="reactive-label-input__label-active">{{ __('forms.phone') }}</label>
                 @else
@@ -83,8 +85,8 @@
 
     @if(!$message_sent)
         @if(!$safety_check)
-        <div class="contact__form__form__security flex w-2/3 m-auto justify-between">
-            <p>{!! __('forms.security-question') !!} {{ $checksum_number_1 }} + {{ $checksum_number_2 }}&nbsp;?</p>
+        <div class="contact__form__form__security flex flex-wrap w-5/6 lg:w-2/3 m-auto justify-between">
+            <p>{!! __('forms.security-question') !!} <span class="mobile-only"><br/></span> {{ $checksum_number_1 }} + {{ $checksum_number_2 }}&nbsp;?</p>
             <input type="text" minlength="1" maxlength="2" class="ml-8 input-underline" required wire:model.defer="user_sum" style="height: 40px;">
             <div wire:click="checkSum" class="contact__form__form__security__btn btn-couture-plain" style="height: 50px; margin-left: 30px;">{{ __('forms.check') }}</div>
         </div>

@@ -39,7 +39,7 @@
             <h1 class="login__title">{{ __('auth.newsletter-subscribe-title-1') }} <br/>{{ __('auth.newsletter-subscribe-title-2') }}</h1>
             @endauth
 
-            <form method="POST" action="{{ route('newsletter-subscribe', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
+            <form method="POST" action="{{ route('newsletter-subscribe', ['locale' => app()->getLocale()]) }}" class="w-5/6 lg:w-1/4 m-auto mb-10">
                 @csrf
 
                 <div class="input-group reactive-label-input" @auth style="display: none;" @endauth>

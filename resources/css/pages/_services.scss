@@ -1,10 +1,22 @@
 .service {
 	padding-top: 66px;
+	@include mobile {
+		width: 83.3333333%;
+		margin: auto;
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 58px;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	&__subtitle {
 		text-align: center;
@@ -12,6 +24,9 @@
 		letter-spacing: 0px;
 		color: #2E141480;
 		margin-bottom: 35px;
+		@include mobile {
+			margin-bottom: 15px;
+		}
 	}
 	&__nav {
 		border-bottom: solid 1px $light-grey;
@@ -585,12 +600,21 @@
 	margin-top: 60px;
 	margin-bottom: 100px;
 	min-height: calc(100vh - 350px);
+	@include mobile {
+		width: 83.3333333%;
+		margin: auto;
+		margin-top: 30px;
+		padding-bottom: 40px;
+	}
 	&__subtitle {
 		font-size: 1rem;
 		color: darken($light-grey, 10);
 		font-family: 'Barlow Condensed';
 		font-weight: 500;
 		margin-bottom: 40px;
+		@include mobile {
+			margin-bottom: 25px;
+		}
 	}
 	&__title {
 		text-align: center;
@@ -598,6 +622,12 @@
 		letter-spacing: 0px;
 		color: $dark-text;
 		margin-bottom: 50px;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 20px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	&__mail {
 		text-align: center;
@@ -605,12 +635,24 @@
 		font-family: 'Barlow Condensed';
 		font-weight: 600;
 		margin-bottom: 20px;
+		@include mobile {
+			font: normal normal 700 24px/32px 'Barlow Condensed';
+			margin-bottom: 10px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	&__phone {
 		font-size: 2.8rem;
 		font-family: 'Barlow Condensed';
 		font-weight: 700;
 		margin-bottom: 20px;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 	}
 	&__opening {
 		background: $primary-color-light;
@@ -619,8 +661,11 @@
 		font-size: 1.3rem;
 		font-family: 'Barlow';
 		font-weight: 600;
-		padding: 10px;
-		margin-bottom: 20px; 
+		padding: 15px;
+		margin-bottom: 20px;
+		@include mobile {
+			font: normal normal 600 18px/26px 'Barlow';
+		}
 	}
 	&__moreinfo {
 		font-size: 1rem;
@@ -644,6 +689,12 @@
 			font: normal normal 700 44px/53px 'Barlow Condensed';
 			letter-spacing: 0px;
 			margin-bottom: 65px;
+			@include mobile {
+				font: normal normal 700 28px/34px 'Barlow Condensed';
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				padding-top: 10px;
+			}
 		}
 		&__form {
 			label {
@@ -651,6 +702,9 @@
 				font: normal normal 500 16px/28px Barlow;
 				letter-spacing: 0px;
 				color: #2E1414;
+				@include mobile {
+					font-size: 0.85rem;
+				}
 			}
 			&__mandatory {
 				font: normal normal normal 14px/28px 'Barlow';
@@ -669,14 +723,25 @@
 				p {
 					padding-top: 10px;
 					font: normal normal 500 16px/28px 'Barlow';
+					@include mobile {
+						font: normal normal 500 15px/24px 'Barlow';
+					}
 				}
 				input {
 					width: 50px;
 					text-align: center;
+					@include mobile {
+						margin: auto;
+						margin-bottom: 10px;
+					}
 				}
 				&__btn {
 					cursor: pointer;
 					padding-top: 10px;
+					@include mobile {
+						width: 100%;
+						margin: 0 !important;
+					}
 				}
 			}
 		}
@@ -688,6 +753,7 @@
 			border-color: $main-grey;
 			padding: 50px;
 			margin-bottom: 30px;
+			border-radius: 4px;
 			&:focus {
 				box-shadow: none;
 				outline: none;

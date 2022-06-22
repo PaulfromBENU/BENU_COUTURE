@@ -3075,6 +3075,7 @@ input[type=checkbox]:focus {
   top: 70px;
   overflow: hidden;
   height: calc(100vh - 140px);
+  padding: 20px;
 }
 @media (max-width: 767px) {
   .add-address-modal {
@@ -3082,10 +3083,37 @@ input[type=checkbox]:focus {
     left: 3%;
     height: calc(100vh - 100px);
     top: 40px;
+    padding: 30px 10px 20px 10px;
   }
 }
 .add-address-modal .reactive-label-input {
   height: 52px;
+}
+.add-address-modal__close-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: #D9D9D9;
+}
+.add-address-modal__close-container:hover {
+  width: 85px;
+  background: #2E1414;
+}
+.add-address-modal__close {
+  text-align: right;
+  position: absolute;
+  right: 9px;
+  color: white;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  width: 85px;
+  height: 30px;
 }
 
 .general-modal {
@@ -3962,11 +3990,27 @@ input[type=checkbox]:focus {
 .service {
   padding-top: 66px;
 }
+@media (max-width: 767px) {
+  .service {
+    width: 83.3333333%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
 .service__title {
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 58px;
+}
+@media (max-width: 767px) {
+  .service__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 .service__subtitle {
   text-align: center;
@@ -3974,6 +4018,11 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   color: #2E141480;
   margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .service__subtitle {
+    margin-bottom: 15px;
+  }
 }
 .service__nav {
   border-bottom: solid 1px #D9D9D9;
@@ -4549,12 +4598,25 @@ input[type=checkbox]:focus {
   margin-bottom: 100px;
   min-height: calc(100vh - 350px);
 }
+@media (max-width: 767px) {
+  .contact {
+    width: 83.3333333%;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+}
 .contact__subtitle {
   font-size: 1rem;
   color: silver;
   font-family: "Barlow Condensed";
   font-weight: 500;
   margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .contact__subtitle {
+    margin-bottom: 25px;
+  }
 }
 .contact__title {
   text-align: center;
@@ -4563,6 +4625,14 @@ input[type=checkbox]:focus {
   color: #2E1414;
   margin-bottom: 50px;
 }
+@media (max-width: 767px) {
+  .contact__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+}
 .contact__mail {
   text-align: center;
   font-size: 1.5rem;
@@ -4570,11 +4640,27 @@ input[type=checkbox]:focus {
   font-weight: 600;
   margin-bottom: 20px;
 }
+@media (max-width: 767px) {
+  .contact__mail {
+    font: normal normal 700 24px/32px "Barlow Condensed";
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+}
 .contact__phone {
   font-size: 2.8rem;
   font-family: "Barlow Condensed";
   font-weight: 700;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .contact__phone {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 .contact__opening {
   background: #F9E2E2;
@@ -4583,8 +4669,13 @@ input[type=checkbox]:focus {
   font-size: 1.3rem;
   font-family: "Barlow";
   font-weight: 600;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .contact__opening {
+    font: normal normal 600 18px/26px "Barlow";
+  }
 }
 .contact__moreinfo {
   font-size: 1rem;
@@ -4610,10 +4701,23 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 65px;
 }
+@media (max-width: 767px) {
+  .contact__form__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
 .contact__form__form label {
   font: normal normal 500 16px/28px Barlow;
   letter-spacing: 0px;
   color: #2E1414;
+}
+@media (max-width: 767px) {
+  .contact__form__form label {
+    font-size: 0.85rem;
+  }
 }
 .contact__form__form__mandatory {
   font: normal normal normal 14px/28px "Barlow";
@@ -4632,13 +4736,30 @@ input[type=checkbox]:focus {
   padding-top: 10px;
   font: normal normal 500 16px/28px "Barlow";
 }
+@media (max-width: 767px) {
+  .contact__form__form__security p {
+    font: normal normal 500 15px/24px "Barlow";
+  }
+}
 .contact__form__form__security input {
   width: 50px;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .contact__form__form__security input {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
 .contact__form__form__security__btn {
   cursor: pointer;
   padding-top: 10px;
+}
+@media (max-width: 767px) {
+  .contact__form__form__security__btn {
+    width: 100%;
+    margin: 0 !important;
+  }
 }
 .contact__form input[type=text], .contact__form input[type=email] {
   bottom: 0px;
@@ -4648,6 +4769,7 @@ input[type=checkbox]:focus {
   border-color: #D0D0D0;
   padding: 50px;
   margin-bottom: 30px;
+  border-radius: 4px;
 }
 .contact__form textarea:focus {
   box-shadow: none;

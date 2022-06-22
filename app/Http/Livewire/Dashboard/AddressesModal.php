@@ -52,6 +52,12 @@ class AddressesModal extends Component
         $this->address_other = '';
     }
 
+    public function closeModal()
+    {
+        // dd($this->pivot);
+        $this->emit('closeModal');
+    }
+
     public function showAddressModal($address_id = '')
     {
         if (is_int($address_id)) {

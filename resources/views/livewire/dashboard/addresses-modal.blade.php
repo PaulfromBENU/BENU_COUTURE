@@ -1,4 +1,9 @@
-<div class="modal add-address-modal" style="padding: 20px;">
+<div class="modal add-address-modal relative">
+    <div class="add-address-modal__close-container" wire:click="closeModal">
+        <div class="add-address-modal__close">
+            {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+        </div>
+    </div>
     <form method="POST" action="{{ route('dashboard.add-address', ['locale' => app()->getLocale()]) }}" style="overflow-y: auto; height: 100%;">
         @csrf
         <input type="hidden" name="address_id" wire:model="address_id">
