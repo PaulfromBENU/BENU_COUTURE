@@ -4006,7 +4006,7 @@ input[type=checkbox]:focus {
 
 .side-mobile {
   position: fixed;
-  bottom: 100vh;
+  bottom: 150vh;
   width: 100vw;
   height: 100vh;
   background: #FFFFFF;
