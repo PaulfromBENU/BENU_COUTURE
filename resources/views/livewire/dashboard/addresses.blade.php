@@ -2,7 +2,7 @@
     <h2>
         {!! __('dashboard.my-addresses') !!}
     </h2>
-    <p class="header__main-nav__btn dashboard-addresses__new-address-btn" wire:click="showAddressModal">
+    <p class="dashboard-addresses__new-address-btn" wire:click="showAddressModal">
         + {!! __('dashboard.create-new-address') !!}
     </p>
     @if($user_addresses->count() > 0)

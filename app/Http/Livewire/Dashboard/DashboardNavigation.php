@@ -125,6 +125,7 @@ class DashboardNavigation extends Component
     public function changeSection(string $section)
     {
         $this->section = $section;
+        $this->emit('sectionUpdated');
         if ($section == 'communications') {
             $this->emit('communicationsLoaded'); // Used to reload JS for accordeon behaviour
         }

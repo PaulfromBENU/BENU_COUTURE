@@ -10,8 +10,8 @@
         </p>
         @endif
         @foreach($orders as $order)
-            <div class="dashboard-orders__order flex justify-between" wire:key="{{ $order->id }}">
-                <div class="w-2/3 pr-5">
+            <div class="dashboard-orders__order flex justify-between flex-col lg:flex-row" wire:key="{{ $order->id }}">
+                <div class="w-full lg:w-2/3 lg:pr-5">
                     <div class="flex justify-start mb-5">
                         <p class="mr-5">
                             {{ __('dashboard.order-number') }} <strong>{{ $order->unique_id }}</strong>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <div class="w-1/3">
+                <div class="w-full lg:w-1/3 pt-4 lg:pt-0">
                     <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;" wire:click="showDetails({{ $order->id }})">
                             {{ __('dashboard.order-details') }}
@@ -87,13 +87,13 @@
         </h2>
 
         <div class="dashboard-orders__details__summary">
-            <div class="flex justify-between mb-7">
+            <div class="flex justify-between flex-col lg:flex-row mb-7">
                 <div>
                     <button class="primary-color underline font-bold dashboard-orders__details__summary__backlink" wire:click="hideDetails">
                         < {{ __('dashboard.order-back-to-all-orders') }}
                     </button>
                 </div>
-                <div class="flex justify-end">
+                <div class="flex lg:justify-end flex-col lg:flex-row">
                     <div class="text-right">
                         <a target="_blank" href="{{ route('invoice-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
@@ -121,11 +121,11 @@
             </div>
         </div>
 
-        <div class="dashboard-orders__details__addresses flex justify-between">
+        <div class="dashboard-orders__details__addresses flex justify-between flex-col lg:flex-row">
             <div class="dashboard-orders__details__addresses__address">
                 <h3>{{ __('dashboard.order-invoice-address') }}</h3>
-                <div class="flex justify-between">
-                    <div class="w-7/12">
+                <div class="flex justify-between flex-col-reverse lg:flex-row">
+                    <div class="w-full lg:w-7/12">
                         <h4>{{ $order->invoice_address->first_name.' '.$order->invoice_address->last_name }}</h4>
                         <p>
                             {{ $order->invoice_address->street_number }} {{ $order->invoice_address->street }}
@@ -142,7 +142,7 @@
                             {{ $order->invoice_address->phone }}
                         </p>
                     </div>
-                    <div class="w-5/12 relative">
+                    <div class="w-full lg:w-5/12 relative">
                         <div class="dashboard-addresses__address__name text-center">
                             {{ $order->invoice_address->address_name }}
                         </div>
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="dashboard-orders__details__addresses__address">
+            <div class="dashboard-orders__details__addresses__address pt-5 lg:pt-0">
                 <h3>{{ __('dashboard.order-delivery-address') }}</h3>
                 @if($order->address_id == 0)
                 <h4>{{ __('dashboard.order-in-shop') }}</h4>
@@ -168,7 +168,7 @@
                 </a>
                 @else
                 <div class="flex justify-between">
-                    <div class="w-7/12">
+                    <div class="w-full lg:w-7/12">
                         <h4>{{ $order->address->first_name.' '.$order->address->last_name }}</h4>
                         <p>
                             {{ $order->address->street_number }} {{ $order->address->street }}
@@ -185,7 +185,7 @@
                             {{ $order->address->phone }}
                         </p>
                     </div>
-                    <div class="w-5/12 relative">
+                    <div class="w-full lg:w-5/12 relative">
                         <div class="dashboard-addresses__address__name text-center">
                             {{ $order->address->address_name }}
                         </div>
