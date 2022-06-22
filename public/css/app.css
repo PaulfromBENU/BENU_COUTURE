@@ -183,6 +183,8 @@ body {
 
 body, html {
   width: 100vw;
+  height: 100%;
+  min-height: 100%;
 }
 
 .color-circle {
@@ -2163,7 +2165,7 @@ input[type=checkbox]:focus {
   position: fixed;
   top: 0;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   z-index: 10;
   background: #f3f3f3 0% 0% no-repeat padding-box;
   cursor: pointer;
@@ -3435,7 +3437,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .footer__copyright {
-    padding: 60px 0px 10px 0px;
+    padding: 70px 0px;
     text-align: center;
   }
 }
@@ -3462,7 +3464,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .footer__logo-container {
-    bottom: 90px;
+    bottom: 140px;
     left: calc(50% - 15px);
   }
 }
@@ -3967,8 +3969,7 @@ input[type=checkbox]:focus {
 }
 
 .welcome-mobile-nav {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100vw;
   height: 55px;
