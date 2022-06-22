@@ -232,7 +232,7 @@
 		letter-spacing: 0px;
 		color: $dark-text;
 		@include mobile {
-			padding: 60px 0px;
+			padding: 60px 0px 10px 0px;
 			text-align: center;
 		}
 	}
@@ -253,7 +253,7 @@
 		bottom: 0;
 		left: calc(50% - 22px);
 		@include mobile {
-			bottom: 140px;
+			bottom: 90px;
 			left: calc(50% - 15px);
 		}
 		&__logo {

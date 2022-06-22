@@ -181,6 +181,10 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+body, html {
+  width: 100vw;
+}
+
 .color-circle {
   height: 14px;
   width: 14px;
@@ -3431,7 +3435,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .footer__copyright {
-    padding: 60px 0px;
+    padding: 60px 0px 10px 0px;
     text-align: center;
   }
 }
@@ -3458,7 +3462,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .footer__logo-container {
-    bottom: 140px;
+    bottom: 90px;
     left: calc(50% - 15px);
   }
 }
@@ -3963,7 +3967,8 @@ input[type=checkbox]:focus {
 }
 
 .welcome-mobile-nav {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   width: 100vw;
   height: 55px;
