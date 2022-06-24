@@ -64,7 +64,7 @@ class RegisteredUserController extends Controller
 
         //Client number created randomly  - C#####
         $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-        while (User::where('client_number', $client_number)->count() > 0) {
+        while (User::withTrashed()->where('client_number', $client_number)->count() > 0) {
             $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
         }
 
