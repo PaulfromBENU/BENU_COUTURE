@@ -5359,11 +5359,27 @@ input[type=checkbox]:focus {
 .all-news {
   padding-top: 60px;
 }
+@media (max-width: 767px) {
+  .all-news {
+    width: 83.3333333%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
 .all-news__title {
   text-align: center;
   font: normal normal 600 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 58px;
+}
+@media (max-width: 767px) {
+  .all-news__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 .all-news__subtitle {
   text-align: center;
