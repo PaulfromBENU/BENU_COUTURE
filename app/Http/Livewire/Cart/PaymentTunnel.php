@@ -450,6 +450,7 @@ class PaymentTunnel extends Component
                             $user->restore();
                             $user->update([
                                 'email' => $this->order_email,
+                                'password' => null,
                                 'role' => 'guest_client',
                                 'first_name' => $this->order_first_name,
                                 'last_name' => $this->order_last_name,
