@@ -69,7 +69,12 @@
 </head>
 <!-- To use a landscape format, use $pdf->set_paper('A4', 'landscape'); in the controller -->
 <body style="width: 100%; margin-left: 0%; font-family: 'Barlow Condensed'; font-weight: 400; font-size: 0.9rem; position: relative;">
-	@for($page_number = 1; $page_number <= intdiv($order->cart->couture_variations->count(), 5) + 1; $page_number ++)
+	@if($order !== null)
+	@php $loop_max = intdiv($order->cart->couture_variations->count(), 5) + 1; @endphp
+	@else
+	@php $loop_max = 1; @endphp
+	@endif
+	@for($page_number = 1; $page_number <= $loop_max; $page_number ++)
 	<div style="width: 100%; height: 100%;">
 		<section style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-right: dashed lightgrey 2px; padding-right: 20px;">
 			<div style="position: relative; padding-left: 0px; margin-bottom: 50px; height: 120px;">

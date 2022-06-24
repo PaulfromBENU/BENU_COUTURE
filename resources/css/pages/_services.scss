@@ -448,6 +448,20 @@
 			}
 		}
 	}
+	&__form {
+		&__fieldset {
+			text-align: left;
+			margin: 5px;
+			input {
+				border-radius: 3px;
+				border-color: lightgrey;
+				margin-top: 2px;
+				@include mobile {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 .payment {

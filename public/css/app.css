@@ -4499,6 +4499,20 @@ input[type=checkbox]:focus {
 .return__chapter__link:hover {
   color: #2E1414;
 }
+.return__form__fieldset {
+  text-align: left;
+  margin: 5px;
+}
+.return__form__fieldset input {
+  border-radius: 3px;
+  border-color: lightgrey;
+  margin-top: 2px;
+}
+@media (max-width: 767px) {
+  .return__form__fieldset input {
+    width: 100%;
+  }
+}
 
 .payment {
   padding-top: 60px;
