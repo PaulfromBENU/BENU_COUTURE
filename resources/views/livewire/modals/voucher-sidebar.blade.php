@@ -134,13 +134,13 @@
                 <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.delivery-costs-vouchers-info-1-link') !!}</a>.
             </p>
 
-            <h3 class="article-sidebar__content__compo__title mb-3">
+            <!-- <h3 class="article-sidebar__content__compo__title mb-3">
                 {!! __('sidebar.returns-vouchers') !!}
             </h3>
             <p class="mb-2 text-sm font-medium">
                 {!! __('sidebar.returns-vouchers-info-1') !!}
                 <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.returns-vouchers-info-1-link') !!}</a>.
-            </p>
+            </p> -->
 
             <!-- @elseif($content == 'more')
                 <h3 class="article-sidebar__content__compo__title">
