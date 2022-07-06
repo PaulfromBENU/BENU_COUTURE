@@ -8622,12 +8622,12 @@ input[type=checkbox]:focus {
   border-radius: 8px;
 }
 .participate-badges__badge p {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 .participate-badges__badge svg {
-  max-height: 80px;
+  max-height: 150px;
   margin: auto;
 }
 
