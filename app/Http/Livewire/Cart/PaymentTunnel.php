@@ -493,7 +493,7 @@ class PaymentTunnel extends Component
                     $new_order->payment_type = 1;
                     break;
 
-                case 'payconic':
+                case 'payconiq':
                     $new_order->payment_type = 2;
                     break;
 
@@ -524,6 +524,10 @@ class PaymentTunnel extends Component
                         return redirect()->route('payment-request-paypal-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
 
+                    case 'payconiq':
+                        return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
+                        break;
+
                     case 'transfer':
                         return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
@@ -533,7 +537,7 @@ class PaymentTunnel extends Component
                         break;
                     
                     default:
-                        dd('Logic not developed yet for this payment method.');
+                        dd('Logic not developed for this payment method.');
                         break;
                 }
             }

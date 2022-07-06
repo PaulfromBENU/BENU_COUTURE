@@ -177,13 +177,17 @@ class SaleController extends Controller
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
+                } elseif ($current_order->payment_type == '1') { // Case PayPal
+                    $current_order->payment_status = 2;
+                } elseif ($current_order->payment_type == '2') { // Case Payconiq
+                    $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '3') { // Case bank transfer
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
                 }
 
-                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
+                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher) if already paid
                 if ($current_order->payment_status == 2) {
                     foreach ($current_order->pdf_vouchers as $voucher) {
                         $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);

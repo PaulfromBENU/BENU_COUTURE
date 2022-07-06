@@ -23,11 +23,11 @@
                     <div class="dashboard-orders__order__details">
                         <p class="primary-color font-bold mb-5">
                             @if($order->status >= 2 && $order->status < 4)
-                                @if($order->payment_status <= '1')
+                                @if($order->payment_status <= 1)
                                 {{ __('dashboard.order-payment-pending') }}
                                 @else
                                 {{ __('dashboard.order-payment-paid') }} - 
-                                    @if($order->delivery_status <= '1')
+                                    @if($order->delivery_status <= 1)
                                     {{ __('dashboard.order-delivery-under-preparation') }}
                                     @else
                                     {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
@@ -61,11 +61,13 @@
                             {{ __('dashboard.order-invoice') }}
                         </a>
                     </div>
-                    <div class="mb-5 text-right">
-                        <a target="_blank" href="{{ route('return-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
-                            {{ __('dashboard.order-return') }}
-                        </a>
-                    </div>
+                        @if($order->delivery_status > 1)
+                        <div class="mb-5 text-right">
+                            <a target="_blank" href="{{ route('return-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
+                                {{ __('dashboard.order-return') }}
+                            </a>
+                        </div>
+                        @endif
                     @endif
                     <!-- <div class="mb-5 text-right">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
@@ -195,11 +197,11 @@
             </div>
         </div>
 
-        @if($order->address_id !== 0)
         <p>
             {{ __('dashboard.order-delivery-status') }}
+            <strong class="primary-color">
             @if($order->status >= 2 && $order->status < 4)
-                @if($order->payment_status <= '1')
+                @if($order->payment_status <= 1)
                 {{ __('dashboard.order-payment-pending') }}
                 @else
                 {{ __('dashboard.order-payment-paid') }} - 
@@ -215,8 +217,8 @@
             @else
                 {{ __('dashboard.order-not-finished-not-paid') }}
             @endif
+            </strong>
         </p>
-        @endif
 
         <h3 class="dashboard-wishlist__title dashboard-wishlist__title--couture" style="width: 100%; margin-top: 30px;">BENU COUTURE</h3>
 
