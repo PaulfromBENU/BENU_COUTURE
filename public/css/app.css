@@ -5038,20 +5038,20 @@ input[type=checkbox]:focus {
   margin-top: 10px;
 }
 .model-pres__desc__txt {
-  margin-bottom: 55px;
+  margin-bottom: 25px;
   text-align: left;
-  font: normal normal 500 16px/28px "Barlow";
+  font: normal normal 500 15px/26px "Barlow";
   letter-spacing: 0px;
 }
 .model-pres__desc__txt-vouchers {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   text-align: left;
-  font: normal normal 500 16px/28px "Barlow";
+  font: normal normal 500 15px/26px "Barlow";
   letter-spacing: 0px;
 }
 .model-pres__desc__keywords {
   width: 100%;
-  margin-bottom: 55px;
+  margin-bottom: 25px;
 }
 .model-pres__desc__keywords ul {
   width: 100%;
@@ -5061,7 +5061,7 @@ input[type=checkbox]:focus {
   justify-content: flex-start;
   width: 80%;
   text-align: left;
-  font: normal normal 500 16px/26px "Barlow";
+  font: normal normal 500 15px/24px "Barlow";
   letter-spacing: 0px;
 }
 .model-pres__desc__keywords li svg {
@@ -5097,6 +5097,20 @@ input[type=checkbox]:focus {
 }
 .model-pres__desc__seemore a svg {
   margin-left: 10px;
+}
+.model-pres__wiki-link {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  color: #2E1414;
+}
+.model-pres__wiki-link a {
+  display: inline-block;
+  text-align: center;
+}
+.model-pres__wiki-link a:hover {
+  color: #FFFFFF;
 }
 
 .model-articles h2 {
