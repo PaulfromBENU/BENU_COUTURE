@@ -20,6 +20,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
+        if (session('status') !== null) {
+            session()->flash('success', session('status'));
+            session()->forget('status');
+        } else {
+            session()->forget('success');
+        }
         return view('auth.login');
     }
 

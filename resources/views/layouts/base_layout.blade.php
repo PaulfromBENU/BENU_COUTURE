@@ -91,7 +91,7 @@
 
    	<!-- Success messages -->
     @if (session('success') !== null)
-    <div class="modal success-modal" id="success-modal" style="display: none;">
+    <div class="modal success-modal" id="success-modal" >
     	<div class="success-modal__close">&#10005;</div>
     	{{ session('success') }}
     </div>
