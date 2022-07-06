@@ -4219,7 +4219,7 @@
     "page": "Créations",
     "key": "header.children",
     "de": "Kinder",
-    "fr": "Enfant",
+    "fr": "Enfants",
     "en": "Kids",
     "lu": "Kanner"
   },
@@ -5198,6 +5198,22 @@
     "fr": "Les bons peuvent être utilisés sur n'importe quel site Internet de BENU ou auprès du BENU à Esch-sur-Alzette pour toutes les activités du BENU.",
     "en": "The vouchers can be redeemed on any BENU website or at BENU in Esch-sur-Alzette for all BENU activities.",
     "lu": "D’Bonge kënne bequeem op eisen Internetsitten oder am BENU zu Esch-sur-Alzette fir all d’Aktivitéite vu BENU ageléist ginn."
+  },
+  {
+    "page": "Bons d'achat",
+    "key": "vouchers.link-explanation",
+    "de": "Wir „retten“ Kleidung. Gleichzeitig wollen wir an all die bedrohten Tiere und Pflanzen erinnern, die unseren Schutz brauchen. Daher trägt jede Kreation einen Namen, der von einer gefährdeten Art inspiriert ist.",
+    "fr": "Nous „sauvons“ des vêtements. En même temps, nous voulons rappeler tous les animaux et plantes menacés qui ont besoin de notre protection. C'est pourquoi chaque création porte un nom inspiré d'une espèce menacée.",
+    "en": "We \"save\" clothes. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation carries a name inspired by an endangered species.",
+    "lu": "Mir \"rette\" Gezei. Gläichzäiteg wëlle mir un all déi bedroten Déieren a Planzen erënneren, déi eise Schutz brauchen. Dofir sinn all d'Nimm vun de Kreatioune vu vulnerabelen Aarten inspiréiert."
+  },
+  {
+    "page": "Bons d'achat",
+    "key": "vouchers.model-origins",
+    "de": "Die Bedeutung des Wortes",
+    "fr": "Toutes les origines du mot",
+    "en": "All the origins of the word",
+    "lu": "All d'Originne vum Wuert"
   },
   {
     "page": "Bons d'achat",

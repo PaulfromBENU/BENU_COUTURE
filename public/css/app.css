@@ -3917,6 +3917,14 @@ input[type=checkbox]:focus {
     margin-bottom: 20px;
   }
 }
+.welcome-others__list a {
+  display: inline-block;
+  transition: all 0.3s;
+  padding: 0px 15px;
+}
+.welcome-others__list a:hover {
+  color: #2E1414;
+}
 .welcome-others__plus {
   height: 104px;
   width: 104px;

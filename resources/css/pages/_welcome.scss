@@ -287,6 +287,16 @@
 			margin-bottom: 20px;
 		}
 	}
+	&__list {
+		a {
+			display: inline-block;
+			transition: all 0.3s;
+			padding: 0px 15px;
+			&:hover {
+				color: $dark-text;
+			}
+		}
+	}
 	&__plus {
 		height: 104px;
 		width: 104px;

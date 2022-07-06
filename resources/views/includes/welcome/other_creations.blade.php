@@ -2,7 +2,7 @@
 	<h3 class="text-center">
 		{{ __('welcome.others-title') }}
 	</h3>
-	<p>
+	<p class="welcome-others__list">
 		@if(date('m') > 4 && date('m') < 10)
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'blouses-shirts']) }}">{{ __('welcome.other-words-summer-1') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-summer-2') }}</a>
