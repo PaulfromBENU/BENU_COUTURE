@@ -89,6 +89,14 @@
     </div>
    	@endif
 
+   	<!-- Success messages -->
+    @if (session('success') !== null)
+    <div class="modal success-modal" id="success-modal" style="display: none;">
+    	<div class="success-modal__close">&#10005;</div>
+    	{{ session('success') }}
+    </div>
+   	@endif
+
    	<!-- Dashboard add address modal -->
    	@if(Route::currentRouteName() == 'dashboard')
    	<div class="add-address-modal-container" style="display: none;">
@@ -121,6 +129,18 @@
 			$('.error-modal__close').on('click', function() {
 				$('#modal-opacifier').fadeOut('fast');
 				$('#error-modal').fadeOut('fast');
+			});
+		});
+	</script>
+	@endif
+	@if (session('success') !== null)
+	<script type="text/javascript">
+		$(function() {
+			$('#modal-opacifier').fadeIn('fast');
+			$('#success-modal').fadeIn();
+			$('.success-modal__close').on('click', function() {
+				$('#modal-opacifier').fadeOut('fast');
+				$('#success-modal').fadeOut('fast');
 			});
 		});
 	</script>

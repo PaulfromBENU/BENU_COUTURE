@@ -604,6 +604,30 @@
 }
 
 
+.success-modal {
+	border: solid 2px green;
+	width: 50vw;
+	left: 25vw;
+	top: 100px;
+	font-size: 1.2rem;
+	text-align: center;
+	color: green;
+	font: normal normal 500 18px/26px 'Barlow';
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		transition: color 0.2s;
+		font: normal normal 600 24px/26px 'Barlow';
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+
+
 .add-address-modal {
 	width: 60vw;
 	left: 20vw;
