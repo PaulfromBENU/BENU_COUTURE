@@ -17,6 +17,7 @@ use App\Mail\VoucherPdf;
 use Illuminate\Support\Str;
 
 use App\Traits\PDFGenerator;
+use App\Traits\VoucherGenerator;
 
 use Stripe;
 
@@ -134,13 +135,14 @@ class SaleController extends Controller
                     } else {
                         for ($i=1; $i <= $variation->pivot->articles_number; $i++) { 
                             // $increment = rand(0, 9).rand(0, 9);
-                            $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                            $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
-                            while (Voucher::where('unique_code', $unique_code)->count() > 0) {
-                                // $increment = rand(0, 9).rand(0, 9);
-                                $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                                $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
-                            }
+                            // $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
+                            // $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
+                            // while (Voucher::where('unique_code', $unique_code)->count() > 0) {
+                            //     // $increment = rand(0, 9).rand(0, 9);
+                            //     $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
+                            //     $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
+                            // }
+                            $unique_code = VoucherGenerator::generateVoucherCode($variation->pivot->value);
                             $new_voucher = new Voucher();
                             $new_voucher->unique_code = $unique_code;
                             $new_voucher->user_id = null;
