@@ -129,10 +129,10 @@
 
 			<div style="position: relative; width: 100%; height: 30px;">
 				<div style="font-weight: 600; position: absolute; left: 0; top: 0; width: 65%; text-align: left;">
-					N<sup>o</sup> {{ __('pdf.return-client') }} : @if($order !== null) {{ $order->user->client_number }} @endif
+					{{ __('pdf.return-client') }} : @if($order !== null) {{ $order->user->client_number }} @endif
 				</div>
 				<div style="font-weight: 600; position: absolute; left: 67%; top: 0; width: 33%; text-align: left;">
-					N<sup>o</sup> {{ __('pdf.return-order') }} : @if($order !== null) {{ $order->unique_id }} @endif
+					{{ __('pdf.return-order') }} : @if($order !== null) {{ $order->unique_id }} @endif
 				</div>
 			</div>
 
@@ -303,7 +303,7 @@
 						@endif
 					</div>
 					<div style="padding-top: 20px; font-size: 1.2rem; font-weight: 500;">
-						N<sup>o</sup> {{ __('pdf.return-client') }} : @if($order !== null) {{ $order->user->client_number }} @endif
+						{{ __('pdf.return-client') }} : @if($order !== null) {{ $order->user->client_number }} @endif
 					</div>
 				</div>
 
@@ -330,12 +330,39 @@
 				<p style="font-weight: 600; font-size: 1.1rem;">
 					{{ __('pdf.return-instructions') }}
 				</p>
-				<p style="font-size: 0.95rem;">
-					{{ __('pdf.return-instruction-txt-1') }}
-				</p>
-				<p style="font-size: 0.95rem;">
-					{{ __('pdf.return-instruction-txt-2') }}
-				</p>
+				@if($order !== null)
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-1') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-2') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-3') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-4') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-5') }}
+					</p>
+				@else
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-6') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-2') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-3') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-7') }}
+					</p>
+					<p style="font-size: 0.95rem;">
+						{{ __('pdf.return-instruction-txt-5') }}
+					</p>
+				@endif
 			</div>
 		</section>
 	</div>

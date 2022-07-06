@@ -32,7 +32,9 @@ class VoucherResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('initial_value')
+                Select::make('initial_value')
+                    ->options([30 => '30', 60 => '60', 90 => '90', 120 => '120', 150 => '150', 180 => '180'])
+                // Forms\Components\TextInput::make('initial_value')
                     ->reactive()
                     ->afterStateUpdated(function($set, $state) {
                         // $voucher_count = str_pad(Voucher::where('unique_code', 'LIKE', '%'.date('m').substr(date('Y').'%', 2, 2))->count() + 1, 2, '0', STR_PAD_LEFT);
