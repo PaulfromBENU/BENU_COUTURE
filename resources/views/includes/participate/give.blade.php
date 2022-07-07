@@ -135,12 +135,15 @@
 			</p>
 			<div class="flex">
 				<p class="w-3/5">
-					<strong>{!! __('services.shops-phone') !!} :</strong> +352 90 81 88-633
+					<strong>{!! __('services.shops-phone') !!} :</strong> +352 90 81 88-1
+				</p>
+				<p class="w-full lg:w-2/5">
+					<strong>{!! __('services.shops-website') !!} : </strong> <a href="https://naturpark-our.lu" target="_blank">naturpark-our.lu</a>
 				</p>
 			</div>
 		</div>
 		<div class="flex justify-around flex-wrap">
-			<a href="tel:+352908188633" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="tel:+3529081881" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
 		</div>
 	</div>
 
