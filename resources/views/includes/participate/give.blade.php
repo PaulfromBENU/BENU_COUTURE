@@ -1,4 +1,4 @@
-<section class="w-2/3 m-auto text-center participate-give participate-panel" id="participate-give">
+<section class="w-11/12 lg:w-2/3 m-auto text-center participate-give participate-panel" id="participate-give">
 	<h2 class="participate-give__title">{{ __('participate.give-title') }}</h2>
 
 	<div class="participate-give__content">
@@ -53,19 +53,18 @@
 			<p class="mb-3">
 				<strong>{!! __('services.shops-address') !!} : </strong>  51 rue d'Audun, 4018 Esch-sur-Alzette, Luxembourg
 			</p>
-			<div class="flex">
-				<p class="w-3/5">
+			<div class="flex flex-wrap">
+				<p class="w-full lg:w-3/5 mb-3 lg:mb-0">
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 27 91 19 49
 				</p>
-				<p class="w-2/5">
+				<p class="w-full lg:w-2/5">
 					<strong>{!! __('services.shops-website') !!} : </strong> <a href="https://www.benu.lu" target="_blank">www.benu.lu</a>
 				</p>
 			</div>
 		</div>
-		<div class="flex justify-around">
-			<p class="mt-2 mb-2">
-				<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{!! __('participate.give-opening-time') !!}</a>
-			</p>
+		<div class="flex justify-around flex-wrap">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="inline-block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mt-2 mb-2">{!! __('participate.give-opening-time') !!}</a>
+			<a href="tel:+35227911949" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
 		</div>
 	</div>
 
@@ -83,6 +82,9 @@
 				</p>
 			</div>
 		</div>
+		<div class="flex justify-around flex-wrap">
+			<a href="tel:+352691358713" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+		</div>
 	</div>
 
 	<div class="participate-give__collect-box">
@@ -98,6 +100,9 @@
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 72 82 42
 				</p>
 			</div>
+		</div>
+		<div class="flex justify-around flex-wrap">
+			<a href="tel:+352728242" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
 		</div>
 	</div>
 
@@ -115,6 +120,9 @@
 				</p>
 			</div>
 		</div>
+		<div class="flex justify-around flex-wrap">
+			<a href="tel:+35226803250" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+		</div>
 	</div>
 
 	<div class="participate-give__collect-box">
@@ -131,6 +139,9 @@
 				</p>
 			</div>
 		</div>
+		<div class="flex justify-around flex-wrap">
+			<a href="tel:+352908188633" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+		</div>
 	</div>
 
 	<div class="participate-give__collect-box">
@@ -143,9 +154,12 @@
 			</p>
 			<div class="flex">
 				<p class="w-3/5">
-					<strong>{!! __('services.shops-phone') !!} :</strong> +352 6 21 18 81 05
+					<strong>{!! __('services.shops-phone') !!} :</strong> +352 621 18 81 05
 				</p>
 			</div>
+		</div>
+		<div class="flex justify-around flex-wrap">
+			<a href="tel:+352621188105" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
 		</div>
 	</div>
 </section>

@@ -8708,6 +8708,16 @@ input[type=checkbox]:focus {
   text-align: left;
   margin-bottom: 40px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .participate-give__collect-box {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .participate-give__collect-box {
+    width: 100%;
+  }
+}
 .participate-give__collect-box h3 {
   font: normal normal 700 28px/34px "Barlow Condensed";
   letter-spacing: 0.28px;

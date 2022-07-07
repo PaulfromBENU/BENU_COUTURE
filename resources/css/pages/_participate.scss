@@ -107,6 +107,12 @@
 		background: $white;
 		text-align: left;
 		margin-bottom: 40px;
+		@include tablet {
+			width: 90%;
+		}
+		@include mobile {
+			width: 100%;
+		}
 		h3 {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			letter-spacing: 0.28px;
