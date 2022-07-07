@@ -19,7 +19,7 @@ noindex, nofollow
             <div class="pl-5 pr-5">
                 >
             </div>
-            <a href="{{ route('password.reset-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.forgotten-pwd') }}</strong></a>
+            <a href="{{ route('password.request-'.app()->getLocale()) }}" class="primary-color"><strong>{{ __('breadcrumbs.forgotten-pwd') }}</strong></a>
         </div>
     </div>
 @endsection

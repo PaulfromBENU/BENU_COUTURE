@@ -65,7 +65,7 @@ class OrdersInterface extends Page
         $unpaid_orders_to_be_deleted = Order::where('status', '2')
                                             ->where('payment_status', '<', '2')
                                             ->where('delivery_status', '<', '2')
-                                            ->where('created_at', '<', Carbon::now()->subDays(8))
+                                            ->where('created_at', '<', Carbon::now()->subDays(9))
                                             ->select('id')
                                             ->get();
         foreach ($unpaid_orders_to_be_deleted as $unpaid_order_to_be_deleted) {
