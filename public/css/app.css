@@ -5845,6 +5845,10 @@ input[type=checkbox]:focus {
   margin-bottom: 15px;
   padding: 15px 20px;
 }
+.login__forgotten-form {
+  width: 30%;
+  min-width: 450px;
+}
 
 .dashboard {
   padding-top: 60px;
