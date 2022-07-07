@@ -629,11 +629,11 @@
 
 
 .add-address-modal {
-	width: 60vw;
-	left: 20vw;
-	top: 70px;
+	width: 64vw;
+	left: 18vw;
+	top: 50px;
 	overflow: hidden;
-	height: calc(100vh - 140px);
+	height: calc(100vh - 100px);
 	padding: 20px;
 	@include mobile {
 		width: 94%;
@@ -670,6 +670,12 @@
 		letter-spacing: 0px;
 		width: 85px;
 		height: 30px;
+	}
+	&__inputs-container {
+		margin-top: 0 !important; 
+		margin-bottom: 0 !important; 
+		background: transparent !important; 
+		padding: 36px 8% !important;
 	}
 	// label {
 	// 	transform: scale(0.75);

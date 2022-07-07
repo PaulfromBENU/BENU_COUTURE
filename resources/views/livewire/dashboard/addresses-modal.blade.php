@@ -7,7 +7,7 @@
     <form method="POST" action="{{ route('dashboard.add-address', ['locale' => app()->getLocale()]) }}" style="overflow-y: auto; height: 100%;">
         @csrf
         <input type="hidden" name="address_id" wire:model="address_id">
-        <div class="register__address" style="margin-top: 0; margin-bottom: 0; background: transparent;">
+        <div class="register__address add-address-modal__inputs-container">
             <h4 class="register__address__title" style="margin-bottom: 10px;">
                 @if($is_update == "0")
                 {{ __('forms.register-add-address') }}
@@ -15,7 +15,7 @@
                 {{ __('forms.register-update-address') }}
                 @endif
             </h4>
-            <div class="register__address__address-name" style="background: transparent; margin-bottom: 0px;">
+            <div class="register__address__address-name" style="background: transparent; padding-bottom: 0px;">
                 <div class="reactive-label-input">
                     <label @if($address_name != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                         {{ __('forms.register-address-name') }} <span class="register_optionnal_star">*</span>
@@ -25,7 +25,7 @@
                 <p class="text-sm"><em>{{ __('forms.register-address-required') }}</em></p>
             </div>
             <div>
-                <div class="flex justify-center lg:justify-between flex-wrap">
+                <div class="flex justify-center lg:justify-between flex-wrap mb-2">
                     <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_first_name != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.first-name') }} <span class="register_optionnal_star">*</span>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center lg:justify-between flex-wrap">
+                <div class="flex justify-center lg:justify-between flex-wrap mb-2">
                     <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_street_number != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.register-address-street-number') }} <span class="register_optionnal_star">*</span>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center lg:justify-between flex-wrap">
+                <div class="flex justify-center lg:justify-between flex-wrap mb-2">
                     <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_floor != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.register-address-floor') }}
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center lg:justify-between flex-wrap">
+                <div class="flex justify-center lg:justify-between flex-wrap mb-2">
                     <div class="input-group reactive-label-input w-full lg:w-5/12">
                         <label @if($address_city != "") style="color: darkgray; bottom: 35px; transform: scale(0.75);" @else style="color: black;" @endif>
                             {{ __('forms.register-address-city') }} <span class="register_optionnal_star">*</span>
@@ -85,8 +85,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full">
-                <label style="color: gray; bottom: 35px; font-size: 0.8rem;">
+            <div class="w-full mb-3">
+                <label style="color: gray; bottom: 35px; font-size: 0.8rem; padding-left: 5px;">
                     {{ __('forms.register-address-country') }} <span class="register_optionnal_star">*</span>
                 </label>
                 <select name="register_address_country" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="16" maxlength="50" required wire:model="address_country">

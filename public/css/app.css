@@ -3142,11 +3142,11 @@ input[type=checkbox]:focus {
 }
 
 .add-address-modal {
-  width: 60vw;
-  left: 20vw;
-  top: 70px;
+  width: 64vw;
+  left: 18vw;
+  top: 50px;
   overflow: hidden;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 100px);
   padding: 20px;
 }
 @media (max-width: 767px) {
@@ -3186,6 +3186,12 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   width: 85px;
   height: 30px;
+}
+.add-address-modal__inputs-container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  background: transparent !important;
+  padding: 36px 8% !important;
 }
 
 .general-modal {
