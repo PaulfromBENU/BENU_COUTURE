@@ -185,7 +185,7 @@
 
 
 	<section class="new-orders">
-		<h2 style="padding-top: 50px;">
+		<h2 style="padding-top: 100px;">
 			Unpaid orders - Waiting for payment - Bank account to be verified for payment confirmation
 		</h2>
 		@if($orders_waiting_for_payment->count() == 0)
@@ -226,7 +226,7 @@
 				</p>
 			@else
 				<p class="text-xl font-medium" style="padding-top: 10px;">
-					<strong>Payment method: Bank Transfer</strong>
+					Payment method: <strong style="color: rgb(234 179 8);">Bank Transfer</strong>
 				</p>
 				<p class="text-xl font-medium">
 					Expected bank transfer reference: "BENU{{ $unpaid_order->unique_id }}"
@@ -389,7 +389,7 @@
 
 
 	<section class="new-orders">
-		<h2 style="padding-top: 50px;">
+		<h2 style="padding-top: 100px;">
 			Sent/collected orders
 		</h2>
 		@if($orders_sent->count() == 0)
