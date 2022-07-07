@@ -56,6 +56,19 @@ class ModelOverview extends Component
             // Compute available articles count
             $this->available_articles_count ++;
         }
+
+        // Sort colors by chromatic order
+        $unsorted_colors = $this->available_colors;
+        $this->available_colors = [];
+        $sorted_colors = [
+            'white', 'beige', 'yellow', 'orange', 'red', 'pink', 'purple', 'blue', 'green', 'brown', 'grey', 'black', 'multicolored'
+        ];
+
+        foreach ($sorted_colors as $sorted_color) {
+            if (($index = array_search($sorted_color, $unsorted_colors)) !== false) {
+                array_push($this->available_colors, $unsorted_colors[$index]);
+            }
+        }
     }
 
     public function changePicture(string $side)
