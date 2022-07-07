@@ -8698,6 +8698,39 @@ input[type=checkbox]:focus {
 .participate-give__content__txt {
   font: normal normal 400 16px/20px "Barlow";
 }
+.participate-give__collect-box {
+  width: 80%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: lightgrey 0 0 22px;
+  padding: 25px;
+  background: #FFFFFF;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.participate-give__collect-box h3 {
+  font: normal normal 700 28px/34px "Barlow Condensed";
+  letter-spacing: 0.28px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.participate-give__collect-box__details {
+  background: #F9E2E2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding: 18px 20px;
+  font: normal normal 500 15px/22px "Barlow";
+  margin-bottom: 25px;
+}
+.participate-give__collect-box__details a {
+  text-align: left;
+  font: normal normal 600 15px/22px "Barlow";
+  letter-spacing: 0.16px;
+  color: #D41C1B;
+  transition: all 0.3s;
+}
+.participate-give__collect-box__details a:hover {
+  color: #2E1414;
+}
 
 .participate-partnership__title {
   text-align: center;

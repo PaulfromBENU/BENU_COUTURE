@@ -98,6 +98,39 @@
 			font: normal normal 400 16px/20px 'Barlow';
 		}
 	}
+	&__collect-box {
+		width: 80%;
+		margin: auto;
+		border-radius: 12px;
+		box-shadow: lightgrey 0 0 22px;
+		padding: 25px;
+		background: $white;
+		text-align: left;
+		margin-bottom: 40px;
+		h3 {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			letter-spacing: 0.28px;
+			margin-bottom: 25px;
+			text-align: center;
+		}
+		&__details {
+			background: $primary-color-light 0% 0% no-repeat padding-box;
+			border-radius: 8px;
+			padding: 18px 20px;
+			font: normal normal 500 15px/22px 'Barlow';
+			margin-bottom: 25px;
+			a {
+				text-align: left;
+				font: normal normal 600 15px/22px 'Barlow';
+				letter-spacing: 0.16px;
+				color: $primary-color;
+				transition: all 0.3s;
+				&:hover {
+					color: $dark-text;
+				}
+			}
+		}
+	}
 }
 
 
