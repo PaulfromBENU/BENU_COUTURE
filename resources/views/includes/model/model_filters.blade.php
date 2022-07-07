@@ -58,7 +58,13 @@
 				@else
 					<div class="all-models__filter-tag flex justify-between">
 				@endif
+				@if($color == 'multicolored')
+                    <div class="color-circle w-1/5 mt-1 mr-2">
+                        <img src="{{ asset('images/pictures/multicolor.png') }}">
+                    </div>
+                @else
 					<div class="color-circle color-circle--{{ $color }} w-1/5 mt-1 mr-2"></div>
+				@endif
 					<p>{{ $filter_names['colors'][$color] }}</p>
 				</div>
 			</div>

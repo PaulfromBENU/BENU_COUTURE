@@ -6,11 +6,11 @@
                     <p>{{ __('models.filter-family') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>
                 @if($family !== 'home')
-                    <div class="all-models__filters__filter flex" id="filter-category">
-                        <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
-                    </div>
                     <div class="all-models__filters__filter flex" id="filter-gender">
                         <p>{{ __('models.filter-type') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                    </div>
+                    <div class="all-models__filters__filter flex" id="filter-category">
+                        <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                     </div>
                 @endif
                 <div class="all-models__filters__filter flex" id="filter-color">
@@ -60,8 +60,14 @@
             <div wire:click="toggleFilter('colors', '{{ $color }}')" wire:key="{{ $color }}">
             @if($color_filter == '1')
                 <div class="all-models__active-filters__filter flex justify-between">
-                    <div class="color-circle color-circle--{{ $color }} w-1/5"></div>
-                    <p class="w-3/5 pl-1">{{ $filter_names['colors'][$color] }}</p>
+                    @if($color == 'multicolored')
+                        <div class="color-circle w-1/5">
+                            <img src="{{ asset('images/pictures/multicolor.png') }}">
+                        </div>
+                    @else
+                        <div class="color-circle color-circle--{{ $color }} w-1/5"></div>
+                    @endif
+                    <p class="w-3/5 pl-1" style="min-width: fit-content; padding-right: 4px;">{{ $filter_names['colors'][$color] }}</p>
                     <div class="w-1/5">&#x2715;</div>
                 </div>
             @endif

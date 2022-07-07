@@ -47,13 +47,16 @@ trait FiltersGenerator {
         $name_query = "name_".app()->getLocale();
 
         $unsorted_prices = [];
+        $unsorted_types = [];
+        $unsorted_categories = [];
+        $unsorted_colors = [];
 
         foreach ($this->getAvailableCreations($family) as $creation) {
             //Creation categories
             $creation_category_key = $creation->creation_category->filter_key;
             $creation_category_name = $creation->creation_category->$name_query;
-            if (!in_array($creation_category_key, $filter_options['categories'])) {
-                array_push($filter_options['categories'], $creation_category_key);
+            if (!in_array($creation_category_key, $unsorted_categories)) {
+                array_push($unsorted_categories, $creation_category_key);
                 $filter_names['categories'][$creation_category_key] = $creation_category_name;
             }
 
@@ -62,8 +65,8 @@ trait FiltersGenerator {
             foreach ($type_options as $type) {
                 $type_key = $type->filter_key;
                 $type_name = $type->$name_query;
-                if (!in_array($type_key, $filter_options['types'])) {
-                    array_push($filter_options['types'], $type_key);
+                if (!in_array($type_key, $unsorted_types)) {
+                    array_push($unsorted_types, $type_key);
                     $filter_names['types'][$type_key] = $type_name;
                 }
             }
@@ -119,6 +122,42 @@ trait FiltersGenerator {
             // }
         }
 
+
+        // Sorting the categories by alphabetical order
+        $localized_category_query = 'name_'.session('locale');
+        $sorted_categories = [];
+        foreach (CreationCategory::all() as $category) {
+            $sorted_categories[$category->filter_key] = $category->$localized_category_query;
+        }
+
+        asort($sorted_categories);
+        // dd($unsorted_categories, $sorted_categories);
+
+        foreach ($sorted_categories as $key => $sorted_category) {
+            if (($index = array_search($key, $unsorted_categories)) !== false) {
+                array_push($filter_options['categories'], $unsorted_categories[$index]);
+            }
+        }
+
+
+        // Sorting the types by header order
+        $sorted_types = [
+            'unisex' => __('header.unisex'), 
+            'ladies' => __('header.women'), 
+            'gentlemen' => __('header.men'), 
+            'adults' => __('header.adults'), 
+            'kids' => __('header.children'), 
+            'accessories' => __('header.accessories'), 
+            'home' => __('header.house')
+        ];
+
+        foreach ($sorted_types as $key => $sorted_type) {
+            if (($index = array_search($key, $unsorted_types)) !== false) {
+                array_push($filter_options['types'], $unsorted_types[$index]);
+            }
+        }
+
+
         // Sorting the prices
         $sorted_prices = [
             '0-30', '31-60', '61-120', '121-180', 'more'
@@ -153,10 +192,21 @@ trait FiltersGenerator {
 
         foreach ($available_colors as $color) {
             $color_key = $color->name;
-            if (!in_array($color_key, $filter_options['colors'])) {
+            if (!in_array($color_key, $unsorted_colors)) {
                 $color_name = __("colors.".$color_key);
-                array_push($filter_options['colors'], $color_key);
+                array_push($unsorted_colors, $color_key);
                 $filter_names['colors'][$color_key] = $color_name;
+            }
+        }
+
+        // Sorting the colors by chromatic order
+        $sorted_colors = [
+            'white', 'beige', 'yellow', 'orange', 'red', 'pink', 'purple', 'blue', 'green', 'brown', 'grey', 'black', 'multicolored'
+        ];
+
+        foreach ($sorted_colors as $sorted_color) {
+            if (($index = array_search($sorted_color, $unsorted_colors)) !== false) {
+                array_push($filter_options['colors'], $unsorted_colors[$index]);
             }
         }
 
