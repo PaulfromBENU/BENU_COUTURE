@@ -30,7 +30,11 @@
 			{!! __('payment.confirmation-congrats') !!}
 		</h3>
 		<h1 class="payment-confirmation__title">
+			@if($order->payment_status >= 2)
 			{!! __('payment.confirmation-order-validated') !!}
+			@else
+			{!! __('payment.confirmation-order-pending') !!}
+			@endif
 		</h1>
 
 		<p class="payment-confirmation__order-number">
@@ -46,7 +50,7 @@
 			@elseif($order->payment_type == '1')
 			{!! __('payment.confirmation-paypal') !!} - {!! __('payment.confirmation-payment-ok') !!}
 			@elseif($order->payment_type == '2')
-			{!! __('payment.confirmation-digicash') !!} - {!! __('payment.confirmation-payment-ok') !!}
+			{!! __('payment.confirmation-digicash') !!} - {!! __('payment.confirmation-payment-pending') !!}
 			@elseif($order->payment_type == '3')
 			{!! __('payment.confirmation-bank-transfer') !!} - {!! __('payment.confirmation-payment-pending') !!}
 			@elseif($order->payment_type == '4')
@@ -75,13 +79,34 @@
 				{!! __('payment.confirmation-our-bank-swift') !!}
 			</p>
 		</div>
+		@elseif($order->payment_type == '2')
+		<p class="payment-confirmation__order-infos mb-7">
+			{!! __('payment.confirmation-payconiq-reference') !!} :<br/>
+			<strong class="primary-color">BENU{{ $order->unique_id }}</strong>
+		</p>
+		<p class="payment-confirmation__order-infos mb-7">
+			{!! __('payment.confirmation-our-payconiq-coordinates') !!} :
+		</p>
+		<div class="text-center m-3 font-bold">
+			<p>
+				{!! __('payment.confirmation-payconiq-number-intro') !!} : <strong class="primary-color">{!! __('payment.confirmation-payconiq-number') !!}</strong>
+			</p>
+			<p>
+				{!! __('payment.confirmation-payconiq-amount') !!} : <strong class="primary-color">{{ $order->total_price }}&euro;</strong>
+			</p>
+			<p>
+				{!! __('payment.confirmation-payconiq-reference') !!} : <strong class="primary-color">BENU{{ $order->unique_id }}</strong>
+			</p>
+		</div>
 		@endif
 		<p class="payment-confirmation__txt-details">
 			{!! __('payment.confirmation-email-confirmation') !!} {{ $order->user->email }}
 		</p>
-		<p class="payment-confirmation__txt-details">
-			{!! __('payment.confirmation-email-info') !!}
-		</p>
+		@if($order->payment_status < 2)
+			<p class="payment-confirmation__txt-details">
+				{!! __('payment.confirmation-email-info') !!}
+			</p>
+		@endif
 		<div class="payment-confirmation__links flex justify-around flex-wrap">
 			@auth
 			<div class="text-center">

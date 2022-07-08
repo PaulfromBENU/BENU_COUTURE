@@ -2,7 +2,7 @@
 	<div class="benu-container">
 		<h2 class="model-sold__title">{{ __('models.sold-title') }}</h2>
 		<p class="model-sold__subtitle w-1/2 m-auto">
-			{{ __('models.sold-txt-1') }}
+			{{ __('models.sold-txt-1') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="primary-color hover:text-gray-800 transition">{{ __('models.sold-txt-1-link') }}</a>
 		</p>
 		<div class="flex flex-wrap justify-start model-sold__list">
 			@foreach($sold_articles as $article)

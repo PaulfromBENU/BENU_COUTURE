@@ -416,16 +416,16 @@
                 <div class="grid grid-cols-8">
                     <div class="col-span-2">
                         <p style="padding-top: 7px;">
-                            {{ __('cart.payment-pay-with-digicash') }}
+                            {{ __('cart.payment-pay-with-payconiq') }}
                         </p>
                     </div>
                     <div class="col-span-1"></div>
                     <div class="col-span-2">
-                        <img src="{{ asset('images/pictures/services_payment_digicash.png') }}" alt="Payment with Digicash" class="m-auto" />
+                        <img src="{{ asset('images/pictures/services_payment_digicash.png') }}" alt="Payment with Payconiq" class="m-auto" />
                     </div>
                     <div class="col-span-1"></div>
                     <div class="col-span-2 text-right pt-1">
-                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('digicash')">{{ __('cart.payment-confirm') }}</button>
+                        <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('payconiq')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
             </div>

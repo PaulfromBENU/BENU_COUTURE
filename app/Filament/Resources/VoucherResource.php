@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\VoucherResource\Pages;
 use App\Filament\Resources\VoucherResource\RelationManagers;
-use App\Models\Voucher;
+use App\Filament\Resources\Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -14,9 +14,12 @@ use Filament\Forms\Components\Select;
 use Illuminate\Support\Str;
 
 use App\Models\User;
+use App\Models\Voucher;
+
+use App\Traits\VoucherGenerator;
 
 class VoucherResource extends Resource
-{
+{       
     protected static ?string $model = Voucher::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-receipt-tax';
@@ -27,18 +30,26 @@ class VoucherResource extends Resource
 
     public static function form(Form $form): Form
     {
-        // $increment = rand(0, 9).rand(0, 9);
-        $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
-        $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
-        while (Voucher::where('unique_code', $new_code)->count() > 0) {
-            $increment = rand(0, 9).rand(0, 9);
-            $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
-            $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
-        }
-
         return $form
             ->schema([
-                Forms\Components\TextInput::make('initial_value')
+                Select::make('initial_value')
+                    ->options([30 => '30', 60 => '60', 90 => '90', 120 => '120', 150 => '150', 180 => '180'])
+                // Forms\Components\TextInput::make('initial_value')
+                    ->reactive()
+                    ->afterStateUpdated(function($set, $state) {
+                        // $voucher_count = str_pad(Voucher::where('unique_code', 'LIKE', '%'.date('m').substr(date('Y').'%', 2, 2))->count() + 1, 2, '0', STR_PAD_LEFT);
+                        // $value_code = str_pad(substr($state / 10, 0, 2), 2, '0', STR_PAD_LEFT);
+                        // // $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+                        // $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$voucher_count.$value_code.str_shuffle(Str::random(1).rand(0, 9)));
+                        // while (Voucher::where('unique_code', $new_code)->count() > 0) {
+                        //     $increment = rand(0, 9).rand(0, 9);
+                        //     $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+                        //     $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$voucher_count.$value_code.str_shuffle(Str::random(1).rand(0, 9)));
+                        // }
+                        $new_code = VoucherGenerator::generateVoucherCode($state);
+                        $set('unique_code', $new_code);
+                        $set('remaining_value', $state);
+                    })
                     ->required(),
                 Forms\Components\TextInput::make('remaining_value')
                     ->required(),
@@ -50,7 +61,19 @@ class VoucherResource extends Resource
                 Forms\Components\TextInput::make('unique_code')
                     ->required()
                     ->maxLength(12)
-                    ->default($new_code),
+                    ->default(function(callable $get) {
+                        // $voucher_count = str_pad(Voucher::where('unique_code', 'LIKE', '%'.date('m').substr(date('Y').'%', 2, 2))->count() + 1, 2, '0', STR_PAD_LEFT);
+                        // $value_code = '00';
+                        // // $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+                        // $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$voucher_count.$value_code.str_shuffle(Str::random(1).rand(0, 9)));
+                        // while (Voucher::where('unique_code', $new_code)->count() > 0) {
+                        //     $increment = rand(0, 9).rand(0, 9);
+                        //     $value_code = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+                        //     $new_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$voucher_count.$value_code.str_shuffle(Str::random(1).rand(0, 9)));
+                        // }
+                        // return $new_code;
+                        return VoucherGenerator::generateVoucherCode('00');
+                    }),
             ]);
     }
 

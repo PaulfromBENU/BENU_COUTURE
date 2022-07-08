@@ -17,6 +17,7 @@ use App\Mail\VoucherPdf;
 use Illuminate\Support\Str;
 
 use App\Traits\PDFGenerator;
+use App\Traits\VoucherGenerator;
 
 use Stripe;
 
@@ -134,13 +135,14 @@ class SaleController extends Controller
                     } else {
                         for ($i=1; $i <= $variation->pivot->articles_number; $i++) { 
                             // $increment = rand(0, 9).rand(0, 9);
-                            $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                            $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
-                            while (Voucher::where('unique_code', $unique_code)->count() > 0) {
-                                // $increment = rand(0, 9).rand(0, 9);
-                                $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
-                                $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
-                            }
+                            // $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
+                            // $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
+                            // while (Voucher::where('unique_code', $unique_code)->count() > 0) {
+                            //     // $increment = rand(0, 9).rand(0, 9);
+                            //     $value_code = str_pad(intval($variation->pivot->value) / 10, 2, '0', STR_PAD_LEFT);
+                            //     $unique_code = strtoupper("BC".date('m').substr(date('Y'), 2, 2).$value_code.Str::random(2).rand(10, 99));
+                            // }
+                            $unique_code = VoucherGenerator::generateVoucherCode($variation->pivot->value);
                             $new_voucher = new Voucher();
                             $new_voucher->unique_code = $unique_code;
                             $new_voucher->user_id = null;
@@ -175,13 +177,17 @@ class SaleController extends Controller
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
+                } elseif ($current_order->payment_type == '1') { // Case PayPal
+                    $current_order->payment_status = 2;
+                } elseif ($current_order->payment_type == '2') { // Case Payconiq
+                    $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '3') { // Case bank transfer
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
                 }
 
-                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher)
+                // Send e-mails with pdf vouchers (1 e-mail/pdf voucher) if already paid
                 if ($current_order->payment_status == 2) {
                     foreach ($current_order->pdf_vouchers as $voucher) {
                         $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
@@ -234,11 +240,22 @@ class SaleController extends Controller
 
     public function displayReturn($order_code)
     {
-        if (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
+        if (strlen($order_code) == 28) {
+            if (in_array(substr($order_code, 4, 6), ['nykul3', '7intxw', 'Xnik7b', '12liug', '09baf9', 'kEH76f', 'oiGfz6'])) {
+                if (Order::where('unique_id', substr($order_code, 10, 6))->count() > 0) {
+                    $clean_order_code = substr($order_code, 10, 6);
+                    $order = Order::where('unique_id', $clean_order_code)->first();
+                    $pdf = $this->generateReturnPdf($clean_order_code);
+                    return $pdf->stream('BENU_Return_'.$order->unique_id.'.pdf');
+                }
+            }
+        } elseif (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
             $clean_order_code = substr($order_code, 4, 6);
             $order = Order::where('unique_id', $clean_order_code)->first();
-            $pdf = $this->generateReturnPdf($clean_order_code);
-            return $pdf->stream('BENU_Return_'.$order->unique_id.'.pdf');
+            if (auth()->check() && auth()->user()->orders->contains($order->id)) {
+                $pdf = $this->generateReturnPdf($clean_order_code);
+                return $pdf->stream('BENU_Return_'.$order->unique_id.'.pdf');
+            }
         } elseif($order_code == '0') {
             $pdf = $this->generateReturnPdf(0);
             return $pdf->stream('BENU_Return_blank.pdf');

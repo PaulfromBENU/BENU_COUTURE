@@ -20,8 +20,12 @@
 	}
 	@include mobile {
 		right: 4px;
+		width: calc(100% - 8px);
+		max-width: 350px;
+		padding: 16px 10px;
+		top: 120px;
 	}
-	@media(min-width: 1721px) {
+	@include large {
 		right: calc(50vw - 860px + 5%);
 	}
 	&__block {
@@ -65,6 +69,9 @@
 		letter-spacing: 0px;
 		color: $dark-text;
 		margin-bottom: 2px;
+		@include mobile {
+			text-align: center;
+		}
 	}
 }
 
@@ -597,14 +604,80 @@
 }
 
 
+.success-modal {
+	border: solid 1px green;
+	background: #E6F1EFFF;
+	border-radius: 5px;
+	width: 50vw;
+	left: 25vw;
+	top: 110px;
+	font-size: 1.2rem;
+	text-align: left;
+	color: green;
+	font: normal normal 500 16px/26px 'Barlow';
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		transition: color 0.2s;
+		font: normal normal 600 24px/26px 'Barlow';
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+
+
 .add-address-modal {
-	width: 60vw;
-	left: 20vw;
-	top: 70px;
+	width: 64vw;
+	left: 18vw;
+	top: 50px;
 	overflow: hidden;
-	height: calc(100vh - 140px);
+	height: calc(100vh - 100px);
+	padding: 20px;
+	@include mobile {
+		width: 94%;
+		left: 3%;
+		height: calc(100vh - 100px);
+		top: 40px;
+		padding: 30px 10px 20px 10px;
+	}
 	.reactive-label-input {
 		height: 52px;
+	}
+	&__close-container {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		overflow: hidden;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		cursor: pointer;
+		transition: all 0.5s;
+		background: $light-grey;
+		&:hover {
+			width: 85px;
+			background: $dark-bg;
+		}
+	}
+	&__close {
+		text-align: right;
+		position: absolute;
+		right: 9px;
+		color: white;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		width: 85px;
+		height: 30px;
+	}
+	&__inputs-container {
+		margin-top: 0 !important; 
+		margin-bottom: 0 !important; 
+		background: transparent !important; 
+		padding: 36px 8% !important;
 	}
 	// label {
 	// 	transform: scale(0.75);

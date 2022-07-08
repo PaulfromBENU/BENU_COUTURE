@@ -51,6 +51,10 @@
                 }
             });
         });
+
+        Livewire.on('sectionUpdated', function() {
+            window.scrollTo(0, 0);
+        });
     })
 </script>
 @endsection

@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
             // return $this->app->isProduction()
             //             ? $rule->mixedCase()->uncompromised()
             //             : $rule;
-            return $rule->mixedCase()->uncompromised();
+            return $rule->mixedCase();// ->uncompromised();
         });
 
         Filament::registerStyles([

@@ -60,6 +60,19 @@ class OrdersInterface extends Page
                             ->where('delivery_status', '<', '2')
                             ->orderBy('updated_at', 'desc')
                             ->get();
+
+        // Automatically clear unpaid orders after 8 days
+        $unpaid_orders_to_be_deleted = Order::where('status', '2')
+                                            ->where('payment_status', '<', '2')
+                                            ->where('delivery_status', '<', '2')
+                                            ->where('created_at', '<', Carbon::now()->subDays(9))
+                                            ->select('id')
+                                            ->get();
+        foreach ($unpaid_orders_to_be_deleted as $unpaid_order_to_be_deleted) {
+            $this->cancelCart($unpaid_order_to_be_deleted->id);
+        }
+
+        // Display other unpaid orders, with warning and manual delete option if > 5 days
         $this->orders_waiting_for_payment = Order::where('status', '2')
                                             ->where('payment_status', '<', '2')
                                             ->where('delivery_status', '<', '2')

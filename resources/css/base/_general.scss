@@ -193,8 +193,8 @@
 		//max-width: 720px;
 	}
 	@include mobile {
-		padding-left: 4px;
-		padding-right: 4px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
@@ -202,6 +202,13 @@ body {
 	margin: 0px;
 	box-sizing: border-box;
 	font-family: 'Barlow', sans-serif;
+}
+
+body, html {
+	width: 100vw;
+	overflow-x: hidden;
+	height: 100%;
+	min-height: 100%;
 }
 
 .color-circle {
@@ -261,6 +268,9 @@ body {
 	left: 0;
 	width: 100vw;
 	z-index: 1;
+	@include mobile {
+		padding-top: 90px;
+	}
 }
 
 .input-underline {
@@ -315,6 +325,9 @@ input[type="checkbox"] {
 		transition: $transition-base;
 		z-index: -1;
 		display: block;
+		@include mobile {
+			font-size: 0.85rem;
+		}
 	}
 	&__label-active {
 		position: absolute;
@@ -522,5 +535,39 @@ input[type="checkbox"] {
 			visibility: visible;
 			opacity: 1;
 		}
+	}
+}
+
+
+.tablet-hidden {
+	@include tablet {
+		visibility: hidden;
+		display: none;
+	}
+	@include mobile {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+.mobile-hidden {
+	@include mobile {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+.mobile-only {
+	@include large {
+		visibility: hidden;
+		display: none;
+	}
+	@include desktop {
+		visibility: hidden;
+		display: none;
+	}
+	@include tablet {
+		visibility: hidden;
+		display: none;
 	}
 }

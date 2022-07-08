@@ -48,6 +48,15 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         app()->setLocale(session('locale'));
+
+        $user_exists = 0;
+        $email_rule = 'unique:mysql_common.users';
+        // Case user already existed, and was soft deleted
+        if (isset($request->email) && User::withTrashed()->where('email', $request->email)->count() > 0) {
+            $user_exists = 1;
+            $email_rule = "";
+        }
+
         //Newsletter boolean to false if not checked
         if (!isset($request->register_newsletter)) {
             $request->register_newsletter = 0;
@@ -55,7 +64,7 @@ class RegisteredUserController extends Controller
 
         //Client number created randomly  - C#####
         $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-        while (User::where('client_number', $client_number)->count() > 0) {
+        while (User::withTrashed()->where('client_number', $client_number)->count() > 0) {
             $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
         }
 
@@ -75,7 +84,7 @@ class RegisteredUserController extends Controller
 
             $address_entered = true;
             $request->validate([
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
+                'email' => ['required', 'string', 'email', 'max:255', $email_rule],
                 'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
                 'register_company' => ['nullable', 'string', 'max:255'],
                 'register_phone' => ['required', 'string', 'max:30'],
@@ -118,7 +127,7 @@ class RegisteredUserController extends Controller
 
         } else { //case no address provided, address data is nullable
             $request->validate([
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql_common.users'],
+                'email' => ['required', 'string', 'email', 'max:255', $email_rule],
                 'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
                 'register_company' => ['nullable', 'string', 'max:255'],
                 'register_phone' => ['required', 'string', 'max:30'],
@@ -143,24 +152,42 @@ class RegisteredUserController extends Controller
             ]);
         }
 
-        //Create user in any case, even if no address has been added
-        $user = User::create([
-            'email' => $request->email,
-            'password' => Hash::make($request->register_password),
-            'role' => 'user',
-            'first_name' => $request->register_first_name,
-            'last_name' => $request->register_last_name,
-            'gender' => $request->register_gender,
-            'company' => $request->register_company,
-            'phone' => $request->register_phone,
-            'is_over_18' => $request->register_age,
-            'legal_ok' => $request->register_legal,
-            'newsletter' => $request->register_newsletter,
-            'origin' => 'couture',
-            'client_number' => $client_number,
-            'general_comment' => "No comment",
-            'delete_feedback' => "",
-        ]);
+        if (!$user_exists) {
+            //Create user in any case, even if no address has been added
+            $user = User::create([
+                'email' => $request->email,
+                'password' => Hash::make($request->register_password),
+                'role' => 'user',
+                'first_name' => $request->register_first_name,
+                'last_name' => $request->register_last_name,
+                'gender' => $request->register_gender,
+                'company' => $request->register_company,
+                'phone' => $request->register_phone,
+                'is_over_18' => $request->register_age,
+                'legal_ok' => $request->register_legal,
+                'newsletter' => $request->register_newsletter,
+                'origin' => 'couture',
+                'client_number' => $client_number,
+                'general_comment' => "No comment",
+                'delete_feedback' => "",
+            ]);
+        } else {
+            $user = User::withTrashed()->where('email', $request->email)->first();
+            $user->restore();
+            $user->update([
+                'password' => Hash::make($request->register_password),
+                'role' => 'user',
+                'first_name' => $request->register_first_name,
+                'last_name' => $request->register_last_name,
+                'gender' => $request->register_gender,
+                'company' => $request->register_company,
+                'phone' => $request->register_phone,
+                'is_over_18' => $request->register_age,
+                'legal_ok' => $request->register_legal,
+                'newsletter' => $request->register_newsletter,
+                'origin' => 'couture',
+            ]);
+        }
 
         //User creation was required to establish user_id
         if ($address_entered) {
@@ -185,7 +212,7 @@ class RegisteredUserController extends Controller
         Mail::to($user->email)->send(new UserRegistered($user));
 
         if ($user->newsletter) {
-            Mail::to($user->email)->send(new NewsletterConfirmation());
+            // Mail::to($user->email)->send(new NewsletterConfirmation());
             Mail::to(env('MAIL_TO_ADMIN_ADDRESS'))->send(new NewsletterConfirmationForAdmin($user));
         }
 

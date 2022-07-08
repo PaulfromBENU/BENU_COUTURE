@@ -157,7 +157,7 @@
                 </div>
             </div> -->
             
-
+            @if(count($unisex_accessories) > 0)
             <div class="creations-navbar__menu__list navbar-list-unisex">
                 <h4><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'types' => 'unisex']) }}">{{ __('header.menu-title-2') }}</a></h4>
                 <div class="flex">
@@ -180,6 +180,9 @@
                     </ul>
                 </div>
             </div>
+            @endif
+
+            @if(count($adults_accessories) > 0)
             <div class="creations-navbar__menu__list navbar-list-adult">
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
@@ -202,6 +205,9 @@
                     </ul>
                 </div>
             </div>
+            @endif
+
+            @if(count($ladies_accessories) > 0)
             <div class="creations-navbar__menu__list navbar-list-woman">
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
@@ -224,6 +230,9 @@
                     </ul>
                 </div>
             </div>
+            @endif
+
+            @if(count($gentlemen_accessories) > 0)
             <div class="creations-navbar__menu__list navbar-list-man">
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
@@ -246,6 +255,9 @@
                     </ul>
                 </div>
             </div>
+            @endif
+
+            @if(count($kids_accessories) > 0)
             <div class="creations-navbar__menu__list navbar-list-child">
                 <h4>{{ __('header.menu-title-2') }}</h4>
                 <div class="flex">
@@ -268,6 +280,7 @@
                     </ul>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 </div>

@@ -25,7 +25,7 @@
         <h3 class="login__subtitle">BENU COUTURE</h3>
         <h1 class="login__title">{{ __('auth.login-title-1') }} <br/>{{ __('auth.login-title-2') }}</h1>
 
-        <form method="POST" action="{{ route('login.connect', ['locale' => app()->getLocale()]) }}" class="w-1/4 m-auto mb-10">
+        <form method="POST" action="{{ route('login.connect', ['locale' => app()->getLocale()]) }}" class="w-full lg:w-1/4 m-auto mb-10">
             @csrf
             <div class="input-group reactive-label-input">
                 <label for="login_email">{{ __('auth.login-email') }} *</label>
@@ -36,7 +36,7 @@
                 <input type="password" id="login_password" name="password" class="input-underline w-full" required>
             </div>
 
-            <div class="flex justify-between">
+            <div class="flex justify-between flex-wrap flex-col lg:flex-row">
                 <!-- Remember Me -->
                 <div class="login__options">
                     <input id="remember" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="remember" value="1" checked>
@@ -45,7 +45,7 @@
                     </label>
                 </div>
 
-                <div class="flex items-center justify-end login__options">
+                <div class="flex items-center lg:justify-end login__options">
                     <a class="hover:underline" href="{{ route('password.request-'.app()->getLocale()) }}">
                         {{ __('auth.login-pwd-forgotten') }}
                     </a>

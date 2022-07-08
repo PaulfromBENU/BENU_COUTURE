@@ -1187,7 +1187,121 @@ trait DataImporter {
 
 
         foreach ($creations_lou as $creation_lou) {
-            if (Creation::where('name', $creation_lou['name'])->count() > 0) {
+            if (Article::query()
+                ->where('is_extra_accessory', '1')
+                ->where('name', 'LIKE', '%'.ucfirst(strtolower($creation_lou['name'])).'%')
+                ->count() > 0) {
+
+                $extra_accessory_articles = Article::query()
+                ->where('is_extra_accessory', '1')
+                ->where('name', 'LIKE', '%'.ucfirst(strtolower($creation_lou['name'])).'%')
+                ->get();
+
+                foreach ($extra_accessory_articles as $article) {
+                    if ($creation_lou['Soie'] == "x") {
+                        $article->compositions()->attach($compo_silk_id);
+                    }
+                    if ($creation_lou['Crêpe de soie'] == "x") {
+                        $article->compositions()->attach($compo_silk_crepe_id);
+                    }
+                    if ($creation_lou['Coton'] == "x") {
+                        $article->compositions()->attach($compo_cotton_id);
+                    }
+                    if ($creation_lou['Crêpe de coton'] == "x") {
+                        $article->compositions()->attach($compo_cotton_crepe_id);
+                    }
+                    if ($creation_lou['Jersey'] == "x") {
+                        $article->compositions()->attach($compo_jersey_id);
+                    }
+                    if ($creation_lou['Laine'] == "x") {
+                        $article->compositions()->attach($compo_wool_id);
+                    }
+                    if ($creation_lou['Laine tissée'] == "x") {
+                        $article->compositions()->attach($compo_tissed_wool_id);
+                    }
+                    if ($creation_lou['Viscose'] == "x") {
+                        $article->compositions()->attach($compo_viscose_id);
+                    }
+                    if ($creation_lou['Fibres synthétiques'] == "x") {
+                        $article->compositions()->attach($compo_synthetic_id);
+                    }
+                    if ($creation_lou['Crêpe de Polyester'] == "x") {
+                        $article->compositions()->attach($compo_poly_crepe_id);
+                    }
+                    if ($creation_lou['Élasthanne'] == "x") {
+                        $article->compositions()->attach($compo_elasthane_id);
+                    }
+                    if ($creation_lou['Lin'] == "x") {
+                        $article->compositions()->attach($compo_linen_id);
+                    }
+                    if ($creation_lou['Nylon'] == "x") {
+                        $article->compositions()->attach($compo_nylon_id);
+                    }
+                    if ($creation_lou['Velours côtelé'] == "x") {
+                        $article->compositions()->attach($compo_velvet_id);
+                    }
+                    if ($creation_lou['Velours lisse'] == "x") {
+                        $article->compositions()->attach($compo_smooth_velvet_id);
+                    }
+                    if ($creation_lou['Denim'] == "x") {
+                        $article->compositions()->attach($compo_denim_id);
+                    }
+                    if ($creation_lou['Acrylic'] == "x") {
+                        $article->compositions()->attach($compo_acrylic_id);
+                    }
+
+                    echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
+
+                    if ($creation_lou['Pas de lavage recommandé'] == "x") {
+                        $article->care_recommendations()->attach($care_no_washing_id);
+                    }
+                    if ($creation_lou['Programme laine'] == "x") {
+                        $article->care_recommendations()->attach($care_wool_id);
+                    }
+                    if ($creation_lou['30°C max'] == "x") {
+                        $article->care_recommendations()->attach($care_30deg_id);
+                    }
+                    if ($creation_lou['40°C max'] == "x") {
+                        $article->care_recommendations()->attach($care_40deg_id);
+                    }
+                    if ($creation_lou['60°C max'] == "x") {
+                        $article->care_recommendations()->attach($care_60deg_id);
+                    }
+                    if ($creation_lou['Lavage délicat (option supplémentaire)'] == "x") {
+                        $article->care_recommendations()->attach($care_delicate_id);
+                    }
+                    if ($creation_lou['Eviter essorage (option supplémentaire)'] == "x") {
+                        $article->care_recommendations()->attach($care_no_spinning_id);
+                    }
+                    if ($creation_lou['Pas de séchoir'] == "x") {
+                        $article->care_recommendations()->attach($care_no_drying_id);
+                    }
+                    if ($creation_lou['Séchage modéré'] == "x") {
+                        $article->care_recommendations()->attach($care_low_drying_id);
+                    }
+                    if ($creation_lou['Séchage normal'] == "x") {
+                        $article->care_recommendations()->attach($care_medium_drying_id);
+                    }
+                    if ($creation_lou['Séchage manuel à l\'horizontale (ex. pullover)'] == "x") {
+                        $article->care_recommendations()->attach($care_flat_drying_id);
+                    }
+                    if ($creation_lou['Ne pas repasser'] == "x") {
+                        $article->care_recommendations()->attach($care_no_iron_id);
+                    }
+                    if ($creation_lou['Repassage à basse température'] == "x") {
+                        $article->care_recommendations()->attach($care_low_iron_id);
+                    }
+                    if ($creation_lou['Repassage à température moyenne'] == "x") {
+                        $article->care_recommendations()->attach($care_medium_iron_id);
+                    }
+                    if ($creation_lou['Repassage à haute température'] == "x") {
+                        $article->care_recommendations()->attach($care_high_iron_id);
+                    }
+
+                    echo "<span style='color: green;'>Care Recommendations updated for article ".$article->name."</span><br/>";
+                }
+
+            } elseif (Creation::where('name', $creation_lou['name'])->count() > 0) {
                 $creation = Creation::where('name', $creation_lou['name'])->first();
 
                 foreach ($creation->articles as $article) {

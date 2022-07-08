@@ -20,6 +20,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
+        if (session('status') !== null) {
+            session()->flash('success', session('status'));
+            session()->forget('status');
+        } else {
+            session()->forget('success');
+        }
         return view('auth.login');
     }
 
@@ -33,10 +39,15 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        if (Auth::user()->role == 'guest_client') {
+            $this->destroy($request);
+            return redirect('/');
+        }
+
         $request->session()->regenerate();
 
-        auth::user()->last_login = DB::raw('CURRENT_TIMESTAMP');
-        auth::user()->save();
+        Auth::user()->last_login = DB::raw('CURRENT_TIMESTAMP');
+        Auth::user()->save();
 
         if (session('payment-ongoing') == 'active') {
             session()->forget('payment-ongoing');

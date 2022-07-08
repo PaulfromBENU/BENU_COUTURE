@@ -87,10 +87,11 @@
                         Lancement du site&nbsp;: 2ème trimestre 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée de tailleurs et stylistes professionnels, s’engage chaque jour à choisir les meilleures qualités de tissus, à trouver les meilleurs assemblages afin de créer des produits uniques pour toi : de haute qualité et composés surtout de matières naturelles pour assurer leur durabilité. 
+                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée de tailleurs/ses et stylistes professionnel.le.s, s’engage chaque jour à choisir les plus beaux assemblages avec les meilleures qualités de tissus afin de créer des produits uniques pour toi&nbsp;   : composés principalement de matières naturelles, ils garantissent qualité et durabilité. 
+
                     </p>
                     <p class="central_textbox__desc">
-                        Notre production est artisanale et locale et les vêtements produits ne subissent aucun traitement chimique. <strong>BENU COUTURE</strong> te permet également de réparer tes pièces préférées ou bien de les intégrer dans une nouvelle création, personnelle et rien que pour toi.
+                        Notre production est artisanale et locale et les vêtements ne subissent aucun traitement chimique. <strong>BENU COUTURE</strong> te permet également de réparer tes pièces préférées ou bien de les intégrer dans une nouvelle création, personnelle et rien que pour toi.
                     </p>
                     <ul class="central_textbox__desc">
                         <li><strong>BENU COUTURE</strong></li>
@@ -101,17 +102,17 @@
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> offre des solutions allant des tailles XS jusqu'à 5XL ainsi que des merveilles pour nos plus jeunes,
+                            <p> propose des tailles allant du XS au 5XL ainsi que des merveilles pour nos plus jeunes,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> répare et transforme selon tes idées individuelles (tant qu'à faire!) : changement de couleurs, design, taille ...,
+                            <p> répare et transforme selon tes idées individuelles (tant qu'à faire&nbsp;!)&nbsp;: changement de couleurs, design, taille ...,
                             </p>
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> sensibilise sur les problématiques du marché de textile ordinaire, prend position et discute les sujets liés à la mode durable.
+                            <p> sensibilise aux problématiques du marché textile, prend position et discute les sujets liés à la mode durable.
                             </p>
                         </li>
                     </ul>

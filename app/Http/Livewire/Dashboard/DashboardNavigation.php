@@ -125,6 +125,7 @@ class DashboardNavigation extends Component
     public function changeSection(string $section)
     {
         $this->section = $section;
+        $this->emit('sectionUpdated');
         if ($section == 'communications') {
             $this->emit('communicationsLoaded'); // Used to reload JS for accordeon behaviour
         }
@@ -260,7 +261,7 @@ class DashboardNavigation extends Component
         auth()->user()->wishlistArticles()->detach();
         auth()->user()->delete();
 
-        return redirect()->route('home')->with('error', "__('dashboard.delete-confirmation')");
+        return redirect()->route('home', ['locale' => app()->getLocale()])->with('account-deleted', __('dashboard.delete-confirmation'));
     }
 
     public function render()

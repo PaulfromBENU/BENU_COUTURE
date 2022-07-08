@@ -77,12 +77,23 @@
     </div>
 
     <!-- Error messages -->
-    @if ($errors->any())
+    @if ($errors->any() || session('account-deleted') !== null)
     <div class="modal error-modal" id="error-modal" style="display: none;">
     	<div class="error-modal__close">&#10005;</div>
+    	@if(session('account-deleted') !== null)
+    	{{ session('account-deleted') }}
+    	@endif
 	    @foreach ($errors->all() as $error)
 	    {{ $error }}
 	    @endforeach
+    </div>
+   	@endif
+
+   	<!-- Success messages -->
+    @if (session('success') !== null)
+    <div class="modal success-modal" id="success-modal" >
+    	<div class="success-modal__close">&#10005;</div>
+    	{{ session('success') }}
     </div>
    	@endif
 
@@ -110,7 +121,7 @@
 
 @section('scripts-top')
 	<script type="text/javascript" src="{{ asset('js/services/slick-1.8.1/slick/slick.min.js') }}"></script>
-	@if($errors->any())
+	@if ($errors->any() || session('account-deleted') !== null)
 	<script type="text/javascript">
 		$(function() {
 			$('#modal-opacifier').fadeIn('fast');
@@ -118,6 +129,18 @@
 			$('.error-modal__close').on('click', function() {
 				$('#modal-opacifier').fadeOut('fast');
 				$('#error-modal').fadeOut('fast');
+			});
+		});
+	</script>
+	@endif
+	@if (session('success') !== null)
+	<script type="text/javascript">
+		$(function() {
+			$('#modal-opacifier').fadeIn('fast');
+			$('#success-modal').fadeIn();
+			$('.success-modal__close').on('click', function() {
+				$('#modal-opacifier').fadeOut('fast');
+				$('#success-modal').fadeOut('fast');
 			});
 		});
 	</script>

@@ -60,7 +60,8 @@
 		margin-bottom: 60px;
 	}
 	&__content {
-		font: normal normal 400 16px/20px 'Barlow';
+		font: normal normal 400 16px/28px 'Barlow';
+		letter-spacing: 0;
 		margin-bottom: 40px;
 		text-align: left;
 	}
@@ -71,12 +72,12 @@
 		padding: 30px;
 		border-radius: 8px;
 		p {
-			font-size: 1.3rem;
-			font-weight: 600;
+			font-size: 1.25rem;
+			font-weight: 700;
 			margin-bottom: 10px;
 		}
 		svg {
-			max-height: 80px;
+			max-height: 150px;
 			margin: auto;
 		}
 	}
@@ -95,7 +96,46 @@
 		margin-bottom: 40px;
 		text-align: left;
 		&__txt {
-			font: normal normal 400 16px/20px 'Barlow';
+			font: normal normal 400 16px/28px 'Barlow';
+		}
+	}
+	&__collect-box {
+		width: 80%;
+		margin: auto;
+		border-radius: 12px;
+		box-shadow: lightgrey 0 0 22px;
+		padding: 25px;
+		background: $white;
+		text-align: left;
+		margin-bottom: 40px;
+		@include tablet {
+			width: 90%;
+		}
+		@include mobile {
+			width: 100%;
+		}
+		h3 {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			letter-spacing: 0.28px;
+			margin-bottom: 25px;
+			text-align: center;
+		}
+		&__details {
+			background: $primary-color-light 0% 0% no-repeat padding-box;
+			border-radius: 8px;
+			padding: 18px 20px;
+			font: normal normal 500 15px/22px 'Barlow';
+			margin-bottom: 25px;
+			a {
+				text-align: left;
+				font: normal normal 600 15px/22px 'Barlow';
+				letter-spacing: 0.16px;
+				color: $primary-color;
+				transition: all 0.3s;
+				&:hover {
+					color: $dark-text;
+				}
+			}
 		}
 	}
 }
@@ -116,7 +156,7 @@
 		color: grey;
 	}
 	&__content {
-		font: normal normal 400 16px/20px 'Barlow';
+		font: normal normal 400 16px/28px 'Barlow';
 		margin-bottom: 40px;
 		text-align: left;
 	}
@@ -154,7 +194,7 @@
 		margin-bottom: 60px;
 	}
 	&__content {
-		font: normal normal 400 16px/20px 'Barlow';
+		font: normal normal 400 16px/28px 'Barlow';
 		margin-bottom: 40px;
 		text-align: left;
 	}
@@ -162,7 +202,7 @@
 		text-align: left;
 		li {
 			display: flex;
-			font: normal normal 400 16px/20px 'Barlow';
+			font: normal normal 500 16px/20px 'Barlow';
 			margin-bottom: 5px;
 			svg {
 				margin-top: 6px;

@@ -104,27 +104,6 @@ class GeneralController extends Controller
         return redirect()->route('news-'.app()->getLocale());
     }
 
-    public function startImport()
-    {
-        // if(auth::check() && auth::user()->role == 'admin') {
-        if(1 == 1) {
-            set_time_limit(3600);
-            // $this->createModelsFolders();
-            // Article::query()->update(['checked' => '1']);
-
-            // Run db:seed before executing the following, to fully clear and reset data before import
-            echo "*** Importation started...<br/>";
-            // $this->importDataFromSophie();
-            // $this->importCreationsFromLou();
-            // $this->importCreationsFromSabine();
-            // $this->createArticlesFromPictures();
-            // $this->updateArticlesFromLouAndSophie();
-            $this->importTranslations();
-        } else {
-            return redirect()->route('login-fr');
-        }
-    }
-
     public function showNewsletter()
     {
         return view('newsletter');
@@ -233,5 +212,28 @@ class GeneralController extends Controller
         // $localized_desc_query = "description_".app()->getLocale();
 
         return view('header.pages.participate', ['page' => $page]);
+    }
+
+
+
+    public function startImport()
+    {
+        // if(auth::check() && auth::user()->role == 'admin') {
+        if(1 == 1) {
+            set_time_limit(3600);
+            // $this->createModelsFolders();
+            // Article::query()->update(['checked' => '1']);
+
+            // Run db:seed before executing the following, to fully clear and reset data before import
+            echo "*** Importation started...<br/>";
+            // $this->importDataFromSophie();
+            // $this->importCreationsFromLou();
+            // $this->importCreationsFromSabine();
+            // $this->createArticlesFromPictures();
+            // $this->updateArticlesFromLouAndSophie();
+            $this->importTranslations();
+        } else {
+            return redirect()->route('login-fr');
+        }
     }
 }

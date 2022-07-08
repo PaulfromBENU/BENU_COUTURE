@@ -34,29 +34,31 @@
 	</style>
 </head>
 <body style="width: 100%; margin-left: 0%; font-family: 'Barlow Condensed Regular'; font-size: 0.9rem; position: relative;">
-	<div style="position: relative; padding-left: 0px; margin-bottom: 50px; height: 180px;">
-		<div style="position: absolute; top: 0; left: 0px;">
-			<img src="{{ asset('images/pictures/logo_benu_green.png') }}" style="height: 180px;" />
+	<header>
+		<div style="position: relative; padding-left: 0px; margin-bottom: 50px; height: 180px;">
+			<div style="position: absolute; top: 0; left: 0px;">
+				<img src="{{ asset('images/pictures/logo_benu_green.png') }}" style="height: 180px;" />
+			</div>
+			<div style="position: absolute; top: 18px; left: 80px;">
+				<p style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
+					BENU Village Esch asbl
+				</p>
+				<p>
+					51 rue d'Audun
+					<br/>
+					4018 Esch-sur-Alzette
+					<br/>
+					Luxembourg
+					<br/>
+					+352 27 91 19 49
+					<br/>
+					<span style="color: #27955B;">
+						benu@benuvillageesch.lu
+					</span>
+				</p>
+			</div>
 		</div>
-		<div style="position: absolute; top: 18px; left: 80px;">
-			<p style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
-				BENU Village Esch asbl
-			</p>
-			<p>
-				51 rue d'Audun
-				<br/>
-				4018 Esch-sur-Alzette
-				<br/>
-				Luxembourg
-				<br/>
-				+352 27 91 19 49
-				<br/>
-				<span style="color: #27955B;">
-					benu@benuvillageesch.lu
-				</span>
-			</p>
-		</div>
-	</div>
+	</header>
 
 	<div style="position: relative; height: 170px;">
 		<p style="position: absolute; top: 0; left: 0; width: 40%; font-size: 0.95rem;">
@@ -105,7 +107,16 @@
 		</p>
 	</div>
 
-	<div>
+	<footer style="position: fixed; bottom: 0; left: 0; width: 100%; height: 30px; border-top: solid 1px lightgrey;">
+		<p style="position: absolute; padding-top: 5px; left: 0; width: 50%;">
+			<span style="font-family: 'Barlow Condensed SemiBold';">BENU VILLAGE ESCH ASBL</span> | RCS F11364 | TVA : LU 30223580
+		</p>
+		<p style="text-align: right; position: absolute; padding-top: 5px; left: 50%; width: 50%;">
+			IBAN | BCEELULL LU63 0019 5055 5246 0000
+		</p>
+	</footer>
+
+	<div style="padding-bottom: 50px;">
 		<p style="color: #27955B; font-size: 1.4rem; font-family: 'Barlow Condensed Medium'; margin-bottom: 0; padding-bottom: 0;">
 			{{ __('pdf.invoice-order-number') }} N<sup>o</sup> {{ $order->unique_id }}
 		</p>
@@ -347,125 +358,132 @@
 			@endif
 			@endforeach
 
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%; text-transform: uppercase;">
-					{{ __('pdf.invoice-total') }}
+			<div style="min-height: 200px; page-break-inside: avoid;">
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%; text-transform: uppercase;">
+						{{ __('pdf.invoice-total') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
+						{{ number_format($sum_before_voucher, 2) }}&euro;
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
-					{{ number_format($sum_before_voucher, 2) }}&euro;
-				</div>
-			</div>
 
-			<!-- <div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 0; left: 0%;">
-					{{ __('pdf.invoice-included-vta') }}
-				</div>
-				<div style="position: absolute; width: 25%; top: 0; left: 75%;">
-					{{ number_format($sum_before_voucher - $sum_without_tax, 2) }}&euro;
-				</div>
-			</div> -->
+				<!-- <div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 0; left: 0%;">
+						{{ __('pdf.invoice-included-vta') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 0; left: 75%;">
+						{{ number_format($sum_before_voucher - $sum_without_tax, 2) }}&euro;
+					</div>
+				</div> -->
 
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
-					{{ __('pdf.invoice-delivery-fees') }}
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+						{{ __('pdf.invoice-delivery-fees') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
+						{{ number_format($delivery_cost, 2) }}&euro;
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
-					{{ number_format($delivery_cost, 2) }}&euro;
-				</div>
-			</div>
 
-			@if($order->with_kulturpass)
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
-					{{ __('pdf.invoice-kulturpass-discount') }}
+				@if($order->with_kulturpass)
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-top: solid lightgrey 1px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+						{{ __('pdf.invoice-kulturpass-discount') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
+						-50%
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
-					-50%
-				</div>
-			</div>
-			@endif
+				@endif
 
-			@if($order->cart->use_voucher)
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%; text-transform: uppercase;">
-					{{ __('pdf.invoice-voucher-use') }}
+				@if($order->cart->use_voucher)
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%; text-transform: uppercase;">
+						{{ __('pdf.invoice-voucher-use') }}
+					</div>
+					@php $voucher_discount = $order->cart->price_before_voucher - $order->total_price; @endphp
+					<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
+						-{{ number_format($voucher_discount, 2) }}&euro;
+					</div>
 				</div>
-				@php $voucher_discount = $order->cart->price_before_voucher - $order->total_price; @endphp
-				<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
-					-{{ number_format($voucher_discount, 2) }}&euro;
-				</div>
-			</div>
-			@else
-				@php $voucher_discount = 0; @endphp
-			@endif
+				@else
+					@php $voucher_discount = 0; @endphp
+				@endif
 
-			<div style="position: relative; font-family: 'Barlow Condensed Medium'; min-height: 45px; border-bottom: solid #27955B 2px; border-top: solid #27955B 2px; width: 60%; margin-left: 40%; margin-top: 15px;">
-				<div style="position: absolute; width: 75%; top: 0; left: 0%; padding-top: 10px; text-transform: uppercase;">
-					{{ __('pdf.invoice-total-to-pay') }}
+				<div style="position: relative; font-family: 'Barlow Condensed Medium'; min-height: 45px; border-bottom: solid #27955B 2px; border-top: solid #27955B 2px; width: 60%; margin-left: 40%; ">
+					<div style="position: absolute; width: 75%; top: 0; left: 0%; padding-top: 10px; text-transform: uppercase;">
+						{{ __('pdf.invoice-total-to-pay') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 0; left: 75%; padding-top: 10px;">
+						@if($order->total_price == max(0, $sum_before_voucher + $delivery_cost - $voucher_discount))
+						{{ number_format(max(0, $sum_before_voucher + $delivery_cost - $voucher_discount), 2) }}&euro;
+						@else
+						{{ number_format($order->total_price, 2) }}&euro;
+						@endif
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 0; left: 75%; padding-top: 10px;">
-					@if($order->total_price == max(0, $sum_before_voucher + $delivery_cost - $voucher_discount))
-					{{ number_format(max(0, $sum_before_voucher + $delivery_cost - $voucher_discount), 2) }}&euro;
-					@else
-					{{ number_format($order->total_price, 2) }}&euro;
-					@endif
-				</div>
-			</div>
 
-			@if($vat_low > 0)
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
-					{{ __('pdf.invoice-vat-3-percent') }}
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+						{{ __('pdf.invoice-total-without-vat') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
+						@if($order->with_kulturpass)
+						{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high) / 2, 2) }}&euro;
+						@else
+						{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high), 2) }}&euro;
+						@endif
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
-					@if($order->with_kulturpass)
-					{{ number_format($vat_low / 2, 2) }}&euro;
-					@else
-					{{ number_format($vat_low, 2) }}&euro;
-					@endif
-				</div>
-			</div>
-			@endif
 
-			@if($vat_med > 0)
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
-					{{ __('pdf.invoice-vat-8-percent') }}
+				@if($vat_low > 0)
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+						{{ __('pdf.invoice-vat-3-percent') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
+						@if($order->with_kulturpass)
+						{{ number_format($vat_low / 2, 2) }}&euro;
+						@else
+						{{ number_format($vat_low, 2) }}&euro;
+						@endif
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
-					@if($order->with_kulturpass)
-					{{ number_format($vat_med / 2, 2) }}&euro;
-					@else
-					{{ number_format($vat_med, 2) }}&euro;
-					@endif
-				</div>
-			</div>
-			@endif
+				@endif
 
-			@if($vat_high > 0)
-			<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-				<div style="position: absolute; width: 74%; top: 4px; left: 0%; ">
-					{{ __('pdf.invoice-vat-17-percent') }}
+				@if($vat_med > 0)
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+						{{ __('pdf.invoice-vat-8-percent') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
+						@if($order->with_kulturpass)
+						{{ number_format($vat_med / 2, 2) }}&euro;
+						@else
+						{{ number_format($vat_med, 2) }}&euro;
+						@endif
+					</div>
 				</div>
-				<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
-					@if($order->with_kulturpass)
-					{{ number_format($vat_high / 2, 2) }}&euro;
-					@else
-					{{ number_format($vat_high, 2) }}&euro;
-					@endif
+				@endif
+
+				@if($vat_high > 0)
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 74%; top: 4px; left: 0%; ">
+						{{ __('pdf.invoice-vat-17-percent') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
+						@if($order->with_kulturpass)
+						{{ number_format($vat_high / 2, 2) }}&euro;
+						@else
+						{{ number_format($vat_high, 2) }}&euro;
+						@endif
+					</div>
 				</div>
+				@endif
 			</div>
-			@endif
 
 		</div>
 	</div>
-	<footer style="position: absolute; bottom: 0; left: 0; width: 100%; height: 30px; border-top: solid 1px lightgrey;">
-		<p style="position: absolute; padding-top: 5px; left: 0; width: 50%;">
-			<span style="font-family: 'Barlow Condensed SemiBold';">BENU VILLAGE ESCH ASBL</span> | RCS F11364 | TVA : LU 30223580
-		</p>
-		<p style="text-align: right; position: absolute; padding-top: 5px; left: 50%; width: 50%;">
-			IBAN | BCEELULL LU63 0019 5055 5246 0000
-		</p>
-	</footer>
 </body>
 </html>

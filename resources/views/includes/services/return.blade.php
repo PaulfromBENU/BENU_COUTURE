@@ -61,9 +61,7 @@
 				<p class="mb-2">
 					{!! __('services.return-info-2') !!}
 				</p>
-				<div class="text-center mt-5 pt-5">
-					<a href="{{ route('return-'.app()->getLocale(), ['order_code' => 0]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{!! __('services.return-btn-pdf') !!}</a>
-				</div>
+				@livewire('services.return-form-check')
 			</div>
 
 			<div class="return__chapter" id="return-chapter-refund">

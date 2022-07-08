@@ -417,26 +417,48 @@ class PaymentTunnel extends Component
 
                         $user->save();
                     } else {
+                        $user_exists = 0;
+                        // Case user already existed, and was soft deleted
+                        if ($this->order_email !== "" && User::withTrashed()->where('email', $this->order_email)->count() > 0) {
+                            $user_exists = 1;
+                        }
+
                         //Client number created randomly  - C#####
                         $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-                        while (User::where('client_number', $client_number)->count() > 0) {
+                        while (User::withTrashed()->where('client_number', $client_number)->count() > 0) {
                             $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
                         }
 
-                        $user = User::create([
-                            'email' => $this->order_email,
-                            'role' => 'guest_client',
-                            'first_name' => $this->order_first_name,
-                            'last_name' => $this->order_last_name,
-                            'gender' => $this->order_gender,
-                            'phone' => $this->order_phone,
-                            'is_over_18' => '1',
-                            'legal_ok' => '1',
-                            'newsletter' => '0',
-                            'origin' => 'couture',
-                            'general_comment' => "",
-                            'client_number' => $client_number,
-                        ]);
+                        if (!$user_exists) {
+                            //Create user in any case, even if no address has been added
+                            $user = User::create([
+                                'email' => $this->order_email,
+                                'role' => 'guest_client',
+                                'first_name' => $this->order_first_name,
+                                'last_name' => $this->order_last_name,
+                                'gender' => $this->order_gender,
+                                'phone' => $this->order_phone,
+                                'is_over_18' => '1',
+                                'legal_ok' => '1',
+                                'newsletter' => '0',
+                                'origin' => 'couture',
+                                'general_comment' => "",
+                                'client_number' => $client_number,
+                            ]);
+                        } else {
+                            $user = User::withTrashed()->where('email', $request->email)->first();
+                            $user->restore();
+                            $user->update([
+                                'email' => $this->order_email,
+                                'password' => null,
+                                'role' => 'guest_client',
+                                'first_name' => $this->order_first_name,
+                                'last_name' => $this->order_last_name,
+                                'gender' => $this->order_gender,
+                                'phone' => $this->order_phone,
+                                'origin' => 'couture',
+                            ]);
+                        }
                     }
 
                     $this->user_id = $user->id;
@@ -471,7 +493,7 @@ class PaymentTunnel extends Component
                     $new_order->payment_type = 1;
                     break;
 
-                case 'payconic':
+                case 'payconiq':
                     $new_order->payment_type = 2;
                     break;
 
@@ -502,6 +524,10 @@ class PaymentTunnel extends Component
                         return redirect()->route('payment-request-paypal-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
 
+                    case 'payconiq':
+                        return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
+                        break;
+
                     case 'transfer':
                         return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                         break;
@@ -511,7 +537,7 @@ class PaymentTunnel extends Component
                         break;
                     
                     default:
-                        dd('Logic not developed yet for this payment method.');
+                        dd('Logic not developed for this payment method.');
                         break;
                 }
             }

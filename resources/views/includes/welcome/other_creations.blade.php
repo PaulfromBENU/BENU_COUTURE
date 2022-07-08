@@ -2,18 +2,22 @@
 	<h3 class="text-center">
 		{{ __('welcome.others-title') }}
 	</h3>
-	<p>
+	<p class="welcome-others__list">
 		@if(date('m') > 4 && date('m') < 10)
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'sweaters']) }}">{{ __('welcome.other-words-sweater') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'categories' => 'home']) }}">{{ __('welcome.other-words-home-accessories') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-jacket') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => 'blouses-shirts']) }}">{{ __('welcome.other-words-ladies-shirts') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories']) }}">{{ __('welcome.other-words-sleep-masks') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => 'trousers']) }}">{{ __('welcome.other-words-ladies-trousers') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'gentlemen', 'categories' => 'cardigans']) }}">{{ __('welcome.other-words-gentlement-cardigans') }}</a>
-		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'gentlemen', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-gentlemen-vests') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'blouses-shirts']) }}">{{ __('welcome.other-words-summer-1') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-summer-2') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'trousers']) }}">{{ __('welcome.other-words-summer-3') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('welcome.other-words-summer-4') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'cardigans']) }}">{{ __('welcome.other-words-summer-5') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'kids']) }}">{{ __('welcome.other-words-summer-6') }}</a>
 		@else
 		Ici les liens pour les creations hiver
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'blouses-shirts']) }}">{{ __('welcome.other-words-summer-1') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-summer-2') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'trousers']) }}">{{ __('welcome.other-words-summer-3') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('welcome.other-words-summer-4') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'cardigans']) }}">{{ __('welcome.other-words-summer-5') }}</a>
+		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'kids']) }}">{{ __('welcome.other-words-summer-6') }}</a>
 		@endif
 	</p>
 

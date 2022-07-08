@@ -9,10 +9,10 @@
 				<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="btn-couture">{{ __('footer.questions-contact') }}</a>
 			</div>
 		</div>
-		<div class="footer-more__illustration footer-more__illustration--left">
+		<div class="footer-more__illustration footer-more__illustration--left mobile-hidden">
 			<img src="{{ asset('images/pictures/footer-before-questions.png') }}">
 		</div>
-		<div class="footer-more__illustration footer-more__illustration--right">
+		<div class="footer-more__illustration footer-more__illustration--right mobile-hidden">
 			<img src="{{ asset('images/pictures/footer-after-questions.png') }}">
 		</div>
 	</div>

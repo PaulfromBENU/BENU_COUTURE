@@ -14,6 +14,7 @@ require('./model_overview_animation');
 require('./sidebar_handler');
 require('./sidebar_picture_scroll');
 require('./payment_tunnel_behaviour');
+require('./mobile_side_menu_handle');
 
 import Alpine from 'alpinejs';
 
