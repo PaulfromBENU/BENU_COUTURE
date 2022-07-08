@@ -87,7 +87,7 @@
                         Lancement vun der Websäit: 2. Quartal 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Zwou Jeansboxen, déi s Du net méi wëlls? E Pullover, deen Dir um Häerz läit, awer net méi passt? <strong>BENU COUTURE</strong> ass deen éischten UpCycling-Schneideratelier zu Lëtzebuerg, deen seng originell an eenzegaarteg Kreatiounen aus lokale Kleederspenden hierstellt. Eist Team, aus professionelle Schneider:innen an Designer:innen, setz sech all Dag dofir an, mat beschte Stoffqualitéiten déi schéinste Kombinatiounen ze fannen an eenzegaarteg Produite fir Dech hierzestellen: zesummegesat aus virun allem natierleche Materialie bidden si déi héchste Qualitéit a Laangliewegkeet.
+                        Zwou Jeansboxen, déi s Du net méi wëlls? E Pullover, deen Dir um Häerz läit, awer net méi passt? <strong>BENU COUTURE</strong> ass deen éischten UpCycling-Schneideratelier zu Lëtzebuerg, deen seng originell an eenzegaarteg Kreatiounen aus lokale Kleederspenden hierstellt. Eist Team, aus professionelle Schneider:innen an Designer:innen, setz sech all Dag dofir an, mat beschte Stoffqualitéiten déi schéinste Kombinatiounen ze fannen an eenzegaarteg Produite fir Dech hierzestellen: zesummegesat aus virun allem natierleche Materialien zesummegesat, bidde si déi héchste Qualitéit a Liewenszäit.
                     </p>
                     <p class="central_textbox__desc">
                         Eis Kreatioune sinn handgemaach a gi kengem cheemeschen Traitement ënnerzunn. <strong>BENU COUTURE</strong> bitt Dir och un, Deng Liblingsstécker ze flécken oder si an enger neier, perséinlecher a just fir Dech bestëmmter Kreatioun z’integréieren.
@@ -101,7 +101,7 @@
                         </li>
                         <li class="text-left flex">
                             <p class="pr-2 pt-2 lg:pt-3">@svg('list_cintre')</p>
-                            <p> bitt eng grouss Bandbreet vu Gréisste vun XS bis 5XL, esouwéi kleng Wonnerwierker fir déi Jéngsten,
+                            <p> bitt Gréissten u vun XS bis 5XL, esouwéi kleng Wonnerwierker fir déi Jéngsten,
                             </p>
                         </li>
                         <li class="text-left flex">
@@ -158,7 +158,7 @@
             <div class="landing-footer__links">
                 <div class="landing-footer__links__header-container">
                     <div class="landing-footer__links__header">
-                        Verfolleg eis op
+                        Suivéier eis op
                     </div>
                 </div>
                 <div class="landing-footer__links__icons">

@@ -84,10 +84,10 @@
                     </div>
                     <h1>BENU COUTURE</h1>
                     <p class="central_textbox__sub">
-                        Launch of the website: 2nd quarter 2022
+                        Website launch: 2nd quarter 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Two pairs of jeans that you no longer want? A jumper that is dear to you but no longer fits? <strong>BENU COUTURE</strong> is the first UpCycling tailor shop in Luxembourg that produces its imaginative and unique creations on site from local clothing donations. Our team of professional tailors and designers works hard every day to create the most beautiful combinations and unique products for you, using outstanding quality fabrics: Composed mainly of natural materials, they offer the highest quality and durability.
+                        Two pairs of jeans that you no longer want? A jumper you love but no longer fits? <strong>BENU COUTURE</strong> is the first UpCycling tailor shop in Luxembourg that produces its imaginative and unique creations on site from local clothing donations. Our team of professional tailors and designers works hard every day to create the most beautiful combinations and unique products for you, using outstanding quality fabrics: Composed mainly of natural materials, they offer the highest quality and durability.
                     </p>
                     <p class="central_textbox__desc">
                         Our creations are handmade and do not undergo any chemical treatment. <strong>BENU COUTURE</strong> also offers to patch up your favourite pieces or to integrate them into a new, personal creation just for you.
