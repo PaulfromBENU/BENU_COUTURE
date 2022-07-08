@@ -7641,6 +7641,7 @@ input[type=checkbox]:focus {
   width: 100%;
   height: 704px;
   background: #D41C1B 0% 0% no-repeat padding-box;
+  position: relative;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .landing-header {
