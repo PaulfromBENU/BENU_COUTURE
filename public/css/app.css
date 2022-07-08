@@ -6029,6 +6029,11 @@ input[type=checkbox]:focus {
   }
 }
 
+.dashboard-wishlist {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  position: relative;
+}
 @media (max-width: 767px) {
   .dashboard-wishlist {
     width: 83.3333333%;
@@ -6052,8 +6057,7 @@ input[type=checkbox]:focus {
   }
 }
 .dashboard-wishlist__title {
-  width: 80%;
-  margin: auto;
+  width: 100%;
   border-radius: 10px;
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
