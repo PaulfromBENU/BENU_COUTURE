@@ -5527,7 +5527,7 @@ input[type=checkbox]:focus {
   color: #2E1414;
 }
 .all-news__link__date {
-  font: normal normal 500 14px/24px "Barlow";
+  font: normal normal 500 12px/20px "Barlow";
   text-align: left;
   margin-bottom: 20px;
 }
