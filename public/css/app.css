@@ -5436,7 +5436,7 @@ input[type=checkbox]:focus {
   text-align: center;
   font: normal normal 600 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
-  margin-bottom: 58px;
+  margin-bottom: 15px;
 }
 @media (max-width: 767px) {
   .all-news__title {
@@ -5452,6 +5452,26 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   color: #2E141480;
   margin-bottom: 35px;
+}
+.all-news__filter-tags {
+  margin-bottom: 58px;
+}
+.all-news__filter-tags__tag {
+  background: #F9E2E2;
+  padding: 7px 15px;
+  border-radius: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px;
+  color: #D41C1B;
+  font: normal normal 500 14px/20px "Barlow Condensed";
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.all-news__filter-tags__tag:hover, .all-news__filter-tags__tag--active {
+  background: #D41C1B;
+  color: #FFFFFF;
 }
 .all-news__link {
   width: 30%;
