@@ -19,14 +19,14 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             // Required before importation, to clear updated tables and relationship tables
-            ArticlePhotoSeeder::class,
-            ArticleShopSeeder::class,
-            ArticleCareRecommendationSeeder::class,
-            ArticleCompositionSeeder::class,
-            CreationCreationGroupSeeder::class,
+            // ArticlePhotoSeeder::class,
+            // ArticleShopSeeder::class,
+            // ArticleCareRecommendationSeeder::class,
+            // ArticleCompositionSeeder::class,
+            // CreationCreationGroupSeeder::class,
             DeliveryCountrySeeder::class,
-            TranslationSeeder::class,
-            ArticleSeeder::class,
+            // TranslationSeeder::class,
+            // ArticleSeeder::class,
 
             // Required before importation only in case of common DB update
             // UserSeeder::class,

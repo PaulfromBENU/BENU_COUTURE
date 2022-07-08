@@ -14,7 +14,7 @@ class DeliveryCountrySeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql_common')->table('delivery_countries')->delete();
+        DB::connection('mysql_common')->table('delivery_countries')->truncate();
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'LU',
@@ -140,6 +140,78 @@ class DeliveryCountrySeeder extends Seeder
             'country_en' => "Slovakia",
             'country_fr' => "Slovaquie",
             'delivery_zone' => '4',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'ES',
+            'country_lu' => "Spuenien",
+            'country_de' => "Spanien",
+            'country_en' => "Spain",
+            'country_fr' => "Espagne",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'GR',
+            'country_lu' => "Griichenland",
+            'country_de' => "Griechenland",
+            'country_en' => "Greece",
+            'country_fr' => "Grèce",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'HU',
+            'country_lu' => "Ungarn",
+            'country_de' => "Ungarn",
+            'country_en' => "Hungary",
+            'country_fr' => "Hongrie",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'IR',
+            'country_lu' => "Irland",
+            'country_de' => "Irland",
+            'country_en' => "Ireland",
+            'country_fr' => "Irlande",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'IS',
+            'country_lu' => "Island",
+            'country_de' => "Island",
+            'country_en' => "Iceland",
+            'country_fr' => "Islande",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'LT',
+            'country_lu' => "Litauen",
+            'country_de' => "Litauen",
+            'country_en' => "Lituania",
+            'country_fr' => "Lituanie",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'NO',
+            'country_lu' => "Norwegen",
+            'country_de' => "Norwegen",
+            'country_en' => "Norway",
+            'country_fr' => "Norvège",
+            'delivery_zone' => '5',
+        ]);
+
+        DB::connection('mysql_common')->table('delivery_countries')->insert([
+            'country_code' => 'UK',
+            'country_lu' => "Vereenegt Kinnekräich",
+            'country_de' => "Vereinigtes Königreich",
+            'country_en' => "United Kingdom",
+            'country_fr' => "Royaume-Uni",
+            'delivery_zone' => '5',
         ]);
     }
 }
