@@ -210,7 +210,7 @@
 			position: absolute;
 			bottom: 33px;
 			left: 70px;
-			width: 90%;
+			width: calc(100% - 140px);
 			a {
 				display: flex;
 				width: 45%;

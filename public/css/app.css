@@ -3120,19 +3120,21 @@ input[type=checkbox]:focus {
 }
 
 .success-modal {
-  border: solid 2px green;
+  border: solid 1px green;
+  background: #E6F1EFFF;
+  border-radius: 5px;
   width: 50vw;
   left: 25vw;
-  top: 100px;
+  top: 110px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   color: green;
-  font: normal normal 500 18px/26px "Barlow";
+  font: normal normal 500 16px/26px "Barlow";
 }
 .success-modal__close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   transition: color 0.2s;
   font: normal normal 600 24px/26px "Barlow";
@@ -5116,7 +5118,7 @@ input[type=checkbox]:focus {
   position: absolute;
   bottom: 33px;
   left: 70px;
-  width: 90%;
+  width: calc(100% - 140px);
 }
 .model-pres__desc__seemore a {
   display: flex;
