@@ -137,11 +137,11 @@
 			</div>
 
 			<div style="position: relative; width: 100%; min-height: 250px;">
-				<div style="position: relative; color: #27955B; font-weight: 600; font-size: 1.2rem; border-bottom: solid 2px #27955B; height: 55px;">
-					<p style="position: absolute; width: 45%; top: 0; left: 0; text-align: left;">
+				<div style="position: relative; color: #27955B; font-weight: 600; font-size: 1.1rem; border-bottom: solid 2px #27955B; height: 55px;">
+					<p style="position: absolute; width: 43%; top: 0; left: 0; text-align: left;">
 						{{ __('pdf.return-article') }}
 					</p>
-					<p style="position: absolute; width: 20%; top: 0; left: 45%; text-align: center;">
+					<p style="position: absolute; width: 22%; top: 0; left: 43%; text-align: center;">
 						{{ __('pdf.return-price-with-tax') }}
 					</p>
 					<p style="position: absolute; width: 35%; top: 0; left: 65%; text-align: center;">
@@ -225,7 +225,7 @@
 				<div style="position: absolute; top: 0; left: 110px;">
 					<div style="position: relative;">
 						<div class="checkbox"></div>
-						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem;">
+						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem; margin-top: 1px;">
 							{{ __('pdf.return-article-not-liked') }}
 						</div>
 					</div>
@@ -233,7 +233,7 @@
 				<div style="position: absolute; top: 0; left: 280px;">
 					<div style="position: relative;">
 						<div class="checkbox"></div>
-						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem;">
+						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem; margin-top: 1px;">
 							{{ __('pdf.return-article-not-fit') }}
 						</div>
 					</div>
@@ -243,7 +243,7 @@
 				<div style="position: absolute; top: 0; left: 110px;">
 					<div style="position: relative;">
 						<div class="checkbox"></div>
-						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem;">
+						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem; margin-top: 1px;">
 							{{ __('pdf.return-benu-mistake') }}
 						</div>
 					</div>
@@ -251,7 +251,7 @@
 				<div style="position: absolute; top: 0; left: 280px;">
 					<div style="position: relative;">
 						<div class="checkbox"></div>
-						<div class="checkbox-label" style="width: 150px; font-size: 0.8rem;">
+						<div class="checkbox-label" style="width: 220px; font-size: 0.8rem; margin-top: 1px;">
 							{{ __('pdf.return-wrong-delivery') }}
 						</div>
 					</div>
