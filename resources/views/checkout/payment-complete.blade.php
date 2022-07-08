@@ -102,9 +102,11 @@
 		<p class="payment-confirmation__txt-details">
 			{!! __('payment.confirmation-email-confirmation') !!} {{ $order->user->email }}
 		</p>
-		<p class="payment-confirmation__txt-details">
-			{!! __('payment.confirmation-email-info') !!}
-		</p>
+		@if($order->payment_status < 2)
+			<p class="payment-confirmation__txt-details">
+				{!! __('payment.confirmation-email-info') !!}
+			</p>
+		@endif
 		<div class="payment-confirmation__links flex justify-around flex-wrap">
 			@auth
 			<div class="text-center">
