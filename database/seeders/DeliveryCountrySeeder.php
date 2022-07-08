@@ -19,7 +19,7 @@ class DeliveryCountrySeeder extends Seeder
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'LU',
             'country_lu' => "Lëtzebuerg",
-            'country_de' => "Luxembourg",
+            'country_de' => "Luxemburg",
             'country_en' => "Luxemburg",
             'country_fr' => "Luxembourg",
             'delivery_zone' => '1',
@@ -27,8 +27,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'BE',
-            'country_lu' => "Belgique",
-            'country_de' => "Belgique",
+            'country_lu' => "Belsch",
+            'country_de' => "Belgien",
             'country_en' => "Belgium",
             'country_fr' => "Belgique",
             'delivery_zone' => '2',
@@ -36,8 +36,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'NL',
-            'country_lu' => "Netherlands",
-            'country_de' => "Netherlands",
+            'country_lu' => "Holland",
+            'country_de' => "Niederlande",
             'country_en' => "Netherlands",
             'country_fr' => "Pays-Bas",
             'delivery_zone' => '2',
@@ -45,7 +45,7 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'DE',
-            'country_lu' => "Deutschland",
+            'country_lu' => "Däitschland",
             'country_de' => "Deutschland",
             'country_en' => "Deutschland",
             'country_fr' => "Allemagne",
@@ -54,8 +54,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'FR',
-            'country_lu' => "France",
-            'country_de' => "France",
+            'country_lu' => "Frankräich",
+            'country_de' => "Frankreich",
             'country_en' => "France",
             'country_fr' => "France",
             'delivery_zone' => '3',
@@ -63,8 +63,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'AU',
-            'country_lu' => "Austria",
-            'country_de' => "Austria",
+            'country_lu' => "Éisträich",
+            'country_de' => "Österreich",
             'country_en' => "Austria",
             'country_fr' => "Autriche",
             'delivery_zone' => '3',
@@ -72,8 +72,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'CH',
-            'country_lu' => "Switzerland",
-            'country_de' => "Switzerland",
+            'country_lu' => "Schwäiz",
+            'country_de' => "Schweiz",
             'country_en' => "Switzerland",
             'country_fr' => "Suisse",
             'delivery_zone' => '4',
@@ -81,8 +81,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'CZ',
-            'country_lu' => "Czech Republic",
-            'country_de' => "Czech Republic",
+            'country_lu' => "Tschechesch Republik",
+            'country_de' => "Tschechische Republik",
             'country_en' => "Czech Republic",
             'country_fr' => "République Tchèque",
             'delivery_zone' => '4',
@@ -90,8 +90,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'DK',
-            'country_lu' => "Danemark",
-            'country_de' => "Danemark",
+            'country_lu' => "Dänemark",
+            'country_de' => "Dänemark",
             'country_en' => "Denmark",
             'country_fr' => "Danemark",
             'delivery_zone' => '4',
@@ -99,8 +99,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'FI',
-            'country_lu' => "Finland",
-            'country_de' => "Finland",
+            'country_lu' => "Finnland",
+            'country_de' => "Finnland",
             'country_en' => "Finland",
             'country_fr' => "Finlande",
             'delivery_zone' => '4',
@@ -108,8 +108,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'IT',
-            'country_lu' => "Italy",
-            'country_de' => "Italy",
+            'country_lu' => "Italien",
+            'country_de' => "Italien",
             'country_en' => "Italy",
             'country_fr' => "Italie",
             'delivery_zone' => '4',
@@ -126,8 +126,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'SE',
-            'country_lu' => "Slovenia",
-            'country_de' => "Slovenia",
+            'country_lu' => "Slowenien",
+            'country_de' => "Slowenien",
             'country_en' => "Slovenia",
             'country_fr' => "Slovénie",
             'delivery_zone' => '4',
@@ -135,8 +135,8 @@ class DeliveryCountrySeeder extends Seeder
 
         DB::connection('mysql_common')->table('delivery_countries')->insert([
             'country_code' => 'SK',
-            'country_lu' => "Slovakia",
-            'country_de' => "Slovakia",
+            'country_lu' => "Slowakei",
+            'country_de' => "Slowakei",
             'country_en' => "Slovakia",
             'country_fr' => "Slovaquie",
             'delivery_zone' => '4',
