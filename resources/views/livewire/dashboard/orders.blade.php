@@ -101,11 +101,13 @@
                             {{ __('dashboard.order-invoice') }}
                         </a>
                     </div>
+                    @if($order->delivery_status > 1 && $order->cart->couture_variations()->where('name', 'voucher')->count() !== $order->cart->couture_variations()->count())
                     <div class="text-right">
                         <a target="_blank" href="{{ route('return-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-return') }}
                         </a>
                     </div>
+                    @endif
                     <div class="text-right">
                         <a href="{{ route('client-service-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px; width: fit-content;">
                             {{ __('dashboard.order-client-service') }}
