@@ -92,7 +92,7 @@ class DeliveryCountrySeeder extends Seeder
             'country_code' => 'DK',
             'country_lu' => "Danemark",
             'country_de' => "Danemark",
-            'country_en' => "Danemark",
+            'country_en' => "Denmark",
             'country_fr' => "Danemark",
             'delivery_zone' => '4',
         ]);

@@ -151,7 +151,7 @@
 				@if($order !== null)
 					@foreach($order->cart->couture_variations->skip(($page_number - 1) * 5)->take(5) as $article)
 						@if($article->name == 'voucher')
-							<div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 35px;">
+							<!-- <div style="position: relative; font-weight: 500; font-size: 1rem; border-bottom: solid 1px lightgrey; height: 35px;">
 								<p style="position: absolute; width: 45%; top: 0; left: 0; text-align: left;">
 									{{ __('pdf.invoice-voucher') }} - {{ __('pdf.invoice-voucher-type') }} @if($article->voucher_type == 'pdf') PDF @else {{ __('pdf.invoice-voucher-type-clothe') }} @endif
 								</p>
@@ -159,7 +159,7 @@
 									{{ $article->pivot->value }}&euro;
 								</p>
 								<p style="position: absolute; width: 35%; top: 0; left: 65%; text-align: center;"></p>
-							</div>
+							</div> -->
 						@else
 							<div style="position: relative; font-weight: 500; font-size: 0.95rem; border-bottom: solid 1px lightgrey; height: 35px;">
 								<p style="position: absolute; width: 45%; top: -12px; left: 0; text-align: left;">
