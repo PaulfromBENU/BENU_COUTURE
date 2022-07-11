@@ -1,11 +1,13 @@
-<section class="w-1/2 m-auto text-center faq service-panel" id="services-faq">
+<section class="w-11/12 lg:w-1/2 m-auto text-center faq service-panel" id="services-faq">
 	<h2 class="faq__title">{!! __('services.faq-title') !!}</h2>
 	<ul class="faq__accordion">
 		@for($index = 1; $index <= $faq_titles_count; $index ++)
 			<li>
 				<div class="faq__accordion__header flex justify-between">
-					<p>{!! __('services.faq-group-title-'.$index) !!}</p>
-					<p><img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron"></p>
+					<p class="faq__accordion__header__title">{!! __('services.faq-group-title-'.$index) !!}</p>
+					<p class="faq__accordion__header__arrow flex flex-col justify-center">
+						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron">
+					</p>
 				</div>
 
 				<div class="faq__accordion__answer" style="display: none;">

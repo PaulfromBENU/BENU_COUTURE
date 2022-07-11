@@ -16,7 +16,7 @@
 	</div> -->
 
 	<div class="flex justify-between benu-container">
-		<div class="return__index relative">
+		<div class="return__index relative mobile-hidden tablet-hidden">
 			<ul class="return__index__menu">
 				<li>
 					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-article').scrollIntoView({ behavior: 'smooth', block: 'center' });">

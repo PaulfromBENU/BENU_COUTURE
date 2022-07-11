@@ -64,7 +64,10 @@
 	<div class="benu-container text-center service">
 		<h4 class="service__subtitle">BENU COUTURE</h4>
 		<h2 class="service__title">{{ __('services.main-title') }}</h2>
-		<div class="service__nav flex justify-center">
+		<div class="service__nav flex justify-start lg:justify-center">
+			<div class="service__nav__arrow service__nav__arrow--left mobile-only">
+				@svg('chevron-down')
+			</div>
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-faq')]) }}" class="service__nav__link @if($page == '' || $page == __('slugs.services-faq')) service__nav__link--active @endif" id="service-nav-faq">
 				{{ __('services.nav-faq') }}
 			</a>
@@ -89,6 +92,9 @@
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="service__nav__link @if($page == __('slugs.services-contact')) service__nav__link--active @endif" id="service-nav-contact">
 				{{ __('services.nav-contact') }}
 			</a>
+			<div class="service__nav__arrow service__nav__arrow--right mobile-only">
+				@svg('chevron-down')
+			</div>
 		</div>
 	</div>
 
@@ -137,6 +143,18 @@
 		$('.service__nav__link').on('click', function() {
 			$('.service__nav__link').removeClass('service__nav__link--active');
 			$(this).addClass('service__nav__link--active');
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('.service__nav__arrow--left').on('click', function() {
+			let leftPos = $('.service__nav').scrollLeft();
+   			$(".service__nav").animate({scrollLeft: leftPos - 100}, 'fast');
+		});
+		$('.service__nav__arrow--right').on('click', function() {
+			let leftPos = $('.service__nav').scrollLeft();
+   			$(".service__nav").animate({scrollLeft: leftPos + 100}, 'fast');
 		});
 	});
 </script>

@@ -3103,6 +3103,10 @@ select {
     justify-content: flex-end;
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
@@ -3138,6 +3142,10 @@ select {
 
   .lg\:pt-3 {
     padding-top: 0.75rem;
+  }
+
+  .lg\:text-left {
+    text-align: left;
   }
 
   .lg\:transition {
