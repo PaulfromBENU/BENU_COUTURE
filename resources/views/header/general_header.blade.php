@@ -57,7 +57,7 @@
                         {{ __('header.newsletter') }}
                     </a>
                     @else
-                        @if(auth()->user()->newsletter == '0')
+                        @if(auth()->user()->newsletter < 2)
                         <a href="{{ route('newsletter-'.app()->getLocale()) }}" class="header__newsletter-btn__link">
                             {{ __('header.newsletter') }}
                         </a>

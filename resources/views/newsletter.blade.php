@@ -22,15 +22,20 @@
 
 @section('main-content')
     <section class="benu-container login">
-        @if(session('success') !== null)
+
+        <!-- Update to display according to newsletter status -->
+        @if(session('subscription') !== null || (auth()->check() && auth()->user()->newsletter == '1'))
         <div class="bg-red-100 p-5 m-auto text-center mb-5 font-bold w-2/3" style="border-radius: 8px;">
-            {{ __('auth.newsletter-subscribe-success') }}
+            {{ __('auth.newsletter-subscription-pending') }}
+        </div>
+        @elseif(session('cancellation') !== null || (auth()->check() && auth()->user()->newsletter == '3'))
+        <div class="bg-red-100 p-5 m-auto text-center mb-5 font-bold w-2/3" style="border-radius: 8px;">
+            {{ __('auth.newsletter-cancellation-pending') }}
         </div>
         @else
-
             <h3 class="login__subtitle">{{ __('auth.newsletter-subscribe-newsletter') }}</h3>
             @auth
-                @if(auth()->user()->newsletter == '1')
+                @if(auth()->user()->newsletter >= 2)
                 <h1 class="login__title">{{ __('auth.newsletter-unsubscribe-title-1') }} <br/>{{ __('auth.newsletter-unsubscribe-title-2') }}</h1>
                 @else
                 <h1 class="login__title">{{ __('auth.newsletter-subscribe-title-1') }} <br/>{{ __('auth.newsletter-subscribe-title-2') }}</h1>
@@ -62,7 +67,7 @@
                 
                 <div class="m-auto login__validate">
                     @auth
-                        @if(auth()->user()->newsletter == '1')
+                        @if(auth()->user()->newsletter >= 2)
                         <input type="submit" name="newsletter_submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" value="{{ __('auth.newsletter-subscribe-unsubscribe') }}">
                         @else
                         <input type="submit" name="newsletter_submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" value="{{ __('auth.newsletter-subscribe-subscribe') }}">

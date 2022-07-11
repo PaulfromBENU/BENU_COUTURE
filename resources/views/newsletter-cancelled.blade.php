@@ -24,7 +24,7 @@
     <section class="benu-container login" style="min-height: 60vh;">
         <h3 class="login__subtitle">{{ __('auth.newsletter-unsubscribe-newsletter') }}</h3>
 
-        <h1 class="login__title">{{ __('auth.newsletter-unsubscribe-confirmed') }}</h1>
+        <h1 class="login__title">{{ __('auth.newsletter-unsubscribe-pending') }}</h1>
 
         <p class="w-1/2 m-auto text-center">
             {{ __('auth.newsletter-unsubscribe-details') }}
