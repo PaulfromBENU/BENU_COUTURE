@@ -238,7 +238,7 @@ class GeneralController extends Controller
             // $this->importCreationsFromLou();
             // $this->importCreationsFromSabine();
             // $this->createArticlesFromPictures();
-            // $this->updateArticlesFromLouAndSophie();
+            $this->updateArticlesFromLouAndSophie();
             $this->importTranslations();
         } else {
             return redirect()->route('login-fr');
