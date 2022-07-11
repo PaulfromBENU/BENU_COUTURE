@@ -87,7 +87,7 @@
                         Lancement du site&nbsp;: 2ème trimestre 2022
                     </p>
                     <p class="central_textbox__desc">
-                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée de tailleurs/ses et stylistes professionnel.le.s, s’engage chaque jour à choisir les plus beaux assemblages avec les meilleures qualités de tissus afin de créer des produits uniques pour toi&nbsp;   : composés principalement de matières naturelles, ils garantissent qualité et durabilité. 
+                        Deux jeans que tu ne veux plus&nbsp;? Un pull qui t’est cher mais qui est devenu trop petit&nbsp;? <strong>BENU COUTURE</strong> est le premier atelier de couture UpCycling au Luxembourg qui confectionne ses créations, inventives et uniques, à partir de dons de vêtements locaux. Notre équipe, constituée de tailleurs/ses et stylistes professionnel·le·s, s’engage chaque jour à choisir les plus beaux assemblages avec les meilleures qualités de tissus afin de créer des produits uniques pour toi&nbsp;: composés principalement de matières naturelles, ils garantissent qualité et durabilité. 
 
                     </p>
                     <p class="central_textbox__desc">
