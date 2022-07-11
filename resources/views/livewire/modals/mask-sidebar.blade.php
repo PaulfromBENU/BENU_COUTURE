@@ -45,9 +45,11 @@
             <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ __('sidebar.mask-singularity') }}
         </p>
 
+        @if($age == 'kid')
         <h4 class="article-sidebar__content__mask-subtitle">
             {{ __('models.masks-options') }}
         </h4>
+        @endif
 
         <form method="POST" wire:submit.prevent="submitMasksRequest">
             @csrf
@@ -59,7 +61,7 @@
                     <label for="mask_size_option_large">{{ __('sidebar.mask-large-size') }}</label><br>
                 </div>
             @else
-                <div class="flex justify-between article-sidebar__content__radio-option">
+                <!-- <div class="flex justify-between article-sidebar__content__radio-option">
                     <input type="radio" id="mask_filter_option" name="mask_filter_option" value="1" checked wire:model="with_filter">
                     <label for="mask_filter_option">{{ __('sidebar.mask-with-filter') }}</label><br>
                     <input type="radio" id="mask_no_filter_option" name="mask_filter_option" value="0" wire:model="with_filter">
@@ -70,7 +72,7 @@
                     <label for="mask_elastic_option">{{ __('sidebar.mask-elastic-option') }}</label><br>
                     <input type="radio" id="mask_cotton_option" name="mask_cord_option" value="1" wire:model="with_cotton">
                     <label for="mask_cotton_option">{{ __('sidebar.mask-cotton-option') }}</label><br>
-                </div>
+                </div> -->
             @endif
 
             <div class="flex justify-start mt-10 mb-5">
