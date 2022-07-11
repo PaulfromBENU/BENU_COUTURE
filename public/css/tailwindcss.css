@@ -741,14 +741,14 @@ select {
 .m-5 {
   margin: 1.25rem;
 }
+.m-2 {
+  margin: 0.5rem;
+}
 .m-10 {
   margin: 2.5rem;
 }
 .m-3 {
   margin: 0.75rem;
-}
-.m-2 {
-  margin: 0.5rem;
 }
 .m-8 {
   margin: 2rem;
@@ -842,11 +842,11 @@ select {
 .mb-1 {
   margin-bottom: 0.25rem;
 }
-.ml-auto {
-  margin-left: auto;
-}
 .mr-3 {
   margin-right: 0.75rem;
+}
+.ml-auto {
+  margin-left: auto;
 }
 .ml-5 {
   margin-left: 1.25rem;
@@ -1692,6 +1692,9 @@ select {
 .pr-3 {
   padding-right: 0.75rem;
 }
+.pr-4 {
+  padding-right: 1rem;
+}
 .pr-8 {
   padding-right: 2rem;
 }
@@ -1703,9 +1706,6 @@ select {
 }
 .pb-3 {
   padding-bottom: 0.75rem;
-}
-.pr-4 {
-  padding-right: 1rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1767,11 +1767,11 @@ select {
 .font-normal {
   font-weight: 400;
 }
-.font-semibold {
-  font-weight: 600;
-}
 .font-light {
   font-weight: 300;
+}
+.font-semibold {
+  font-weight: 600;
 }
 .font-black {
   font-weight: 900;

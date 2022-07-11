@@ -5436,7 +5436,7 @@ input[type=checkbox]:focus {
   text-align: center;
   font: normal normal 600 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
-  margin-bottom: 58px;
+  margin-bottom: 15px;
 }
 @media (max-width: 767px) {
   .all-news__title {
@@ -5452,6 +5452,26 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   color: #2E141480;
   margin-bottom: 35px;
+}
+.all-news__filter-tags {
+  margin-bottom: 58px;
+}
+.all-news__filter-tags__tag {
+  background: #F9E2E2;
+  padding: 7px 15px;
+  border-radius: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px;
+  color: #D41C1B;
+  font: normal normal 500 14px/20px "Barlow Condensed";
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.all-news__filter-tags__tag:hover, .all-news__filter-tags__tag--active {
+  background: #D41C1B;
+  color: #FFFFFF;
 }
 .all-news__link {
   width: 30%;
@@ -5507,12 +5527,12 @@ input[type=checkbox]:focus {
   color: #2E1414;
 }
 .all-news__link__date {
-  font: normal normal 500 14px/24px "Barlow";
+  font: normal normal 500 12px/20px "Barlow";
   text-align: left;
   margin-bottom: 20px;
 }
 .all-news__link__summary {
-  font: normal normal 400 15px/28px "Barlow";
+  font: normal normal 500 15px/28px "Barlow";
   text-align: left;
   padding-bottom: 20px;
 }
@@ -6009,6 +6029,11 @@ input[type=checkbox]:focus {
   }
 }
 
+.dashboard-wishlist {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  position: relative;
+}
 @media (max-width: 767px) {
   .dashboard-wishlist {
     width: 83.3333333%;
@@ -6032,8 +6057,7 @@ input[type=checkbox]:focus {
   }
 }
 .dashboard-wishlist__title {
-  width: 80%;
-  margin: auto;
+  width: 100%;
   border-radius: 10px;
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
