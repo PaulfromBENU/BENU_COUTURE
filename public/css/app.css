@@ -194,6 +194,14 @@ body, html {
   border-radius: 50%;
   margin-right: 5px;
 }
+.color-circle--mobile {
+  height: 30px;
+  width: 30px;
+  margin-right: 16px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border: solid 3px #FFFFFF;
+}
 .color-circle--green {
   background: #27955B;
 }
@@ -230,6 +238,11 @@ body, html {
 .color-circle--white {
   background: #fbf8fb;
   border: solid 1px lightgrey;
+}
+@media (max-width: 767px) {
+  .color-circle--white {
+    border: solid 3px lightgrey;
+  }
 }
 .color-circle--denim {
   background: #3C41B9;
@@ -1515,7 +1528,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .breadcrumbs__content {
-    font: normal normal 500 16px/20px "Barlow";
+    font: normal normal 500 14px/17px "Barlow";
     padding-top: 20px;
   }
 }
@@ -5217,6 +5230,103 @@ input[type=checkbox]:focus {
     left: calc(50vw - 860px);
   }
 }
+.all-models__mobile-header__button {
+  cursor: pointer;
+  transition: all 0.3s;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+}
+.all-models__mobile-header__button:hover {
+  color: #D41C1B;
+}
+.all-models__mobile-header__button:hover path {
+  fill: #D41C1B;
+}
+.all-models__mobile-header__button svg {
+  margin-right: 6px;
+  height: 20px;
+  width: 20px;
+  margin-top: 4px;
+}
+.all-models__mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  overflow: hidden;
+}
+.all-models__mobile-menu__opacifier {
+  background: #2E1414;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.all-models__mobile-menu__sidebar {
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 88%;
+  transition: left 0.4s;
+  padding-top: 110px;
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow-y: auto;
+}
+.all-models__mobile-menu__sidebar__close {
+  position: absolute;
+  top: 109px;
+  right: 10px;
+  color: #FFFFFF;
+  padding: 2px 8px 3px 8px;
+  background: lightgrey;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+.all-models__mobile-menu__sidebar__close:hover {
+  background: #D41C1B;
+}
+.all-models__mobile-menu__sidebar__header {
+  font: normal normal 500 16px/28px "Barlow";
+  padding-bottom: 10px;
+  border-bottom: solid 1px lightgrey;
+}
+.all-models__mobile-menu__sidebar__accordion {
+  border-bottom: solid 1px lightgrey;
+  transition: all 0.3s;
+}
+.all-models__mobile-menu__sidebar__accordion:hover {
+  border-bottom: solid 1px #F9E2E2;
+}
+.all-models__mobile-menu__sidebar__accordion__header {
+  font: normal normal 600 16px/28px "Barlow";
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.all-models__mobile-menu__sidebar__accordion__header--active {
+  transform: rotate(180deg) !important;
+}
+.all-models__mobile-menu__sidebar__accordion__header svg {
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+  margin-right: 4px;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+.all-models__mobile-menu__sidebar__accordion__header svg path {
+  fill: #D41C1B;
+}
+.all-models__mobile-menu__sidebar__accordion__content {
+  padding-top: 5px;
+}
 .all-models__filters {
   border-bottom: solid 1px #D9D9D9;
   position: relative;
@@ -5243,6 +5353,28 @@ input[type=checkbox]:focus {
   margin-left: 15px;
   transition: all 0.2s ease-in-out;
   transform: rotate(0deg);
+}
+.all-models__color-filter-tag {
+  height: 30px;
+  min-width: 70px;
+  text-align: center;
+  font: normal normal 500 18px/22px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin: 15px 7px 15px 0px;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.all-models__color-filter-tag:hover {
+  color: #D41C1B;
+}
+.all-models__color-filter-tag__circle {
+  background: #D41C1B;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
 }
 .all-models__filter-tag {
   height: 30px;
@@ -5280,6 +5412,11 @@ input[type=checkbox]:focus {
   cursor: pointer;
   margin-right: 10px;
 }
+@media (max-width: 767px) {
+  .all-models__active-filters__filter {
+    margin-bottom: 12px;
+  }
+}
 .all-models__active-filters__filter .color-circle {
   margin-top: 5px;
 }
@@ -5295,6 +5432,11 @@ input[type=checkbox]:focus {
 }
 .all-models__list {
   padding-top: 60px;
+}
+@media (max-width: 767px) {
+  .all-models__list {
+    padding-top: 10px;
+  }
 }
 .all-models__list__separator {
   background-size: 100%;

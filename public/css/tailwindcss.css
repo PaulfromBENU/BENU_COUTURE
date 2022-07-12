@@ -2825,6 +2825,10 @@ select {
     width: 50%;
   }
 
+  .md\:w-1\/5 {
+    width: 20%;
+  }
+
   .md\:max-w-md {
     max-width: 28rem;
   }
@@ -2968,6 +2972,10 @@ select {
 
   .lg\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:flex {
