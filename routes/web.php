@@ -89,6 +89,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "lu"), 'GeneralController@footerLegal')->name('footer.legal-lu');
 
 		Route::get('/'.trans("slugs.header-participate", [], "lu").'/{page?}', 'GeneralController@showParticipate')->name('header.participate-lu');
+		Route::get('/'.trans("slugs.header-download-drop-off", [], "lu"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-lu');
 	});
 
 	Route::group([
@@ -137,6 +138,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "fr"), 'GeneralController@footerLegal')->name('footer.legal-fr');
 
 		Route::get('/'.trans("slugs.header-participate", [], "fr").'/{page?}', 'GeneralController@showParticipate')->name('header.participate-fr');
+		Route::get('/'.trans("slugs.header-download-drop-off", [], "fr"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-fr');
 	});
 
 	Route::group([
@@ -176,6 +178,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "en"), 'GeneralController@footerLegal')->name('footer.legal-en');
 
 		Route::get('/'.trans("slugs.header-participate", [], "en").'/{page?}', 'GeneralController@showParticipate')->name('header.participate-en');
+
+		Route::get('/'.trans("slugs.header-download-drop-off", [], "en"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-en');
 	});
 
 	Route::group([
@@ -215,6 +219,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "de"), 'GeneralController@footerLegal')->name('footer.legal-de');
 
 		Route::get('/'.trans("slugs.header-participate", [], "de").'/{page?}', 'GeneralController@showParticipate')->name('header.participate-de');
+
+		Route::get('/'.trans("slugs.header-download-drop-off", [], "de"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-de');
 	});
 
 	Route::group([

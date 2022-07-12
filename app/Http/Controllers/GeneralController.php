@@ -21,6 +21,8 @@ use App\Traits\DataImporter;
 
 use App\Http\Requests\NewsletterRequest;
 
+use JeroenDesloovere\VCard\VCard;
+
 class GeneralController extends Controller
 {
     use ArticleAnalyzer;
@@ -220,6 +222,29 @@ class GeneralController extends Controller
         // $localized_desc_query = "description_".app()->getLocale();
 
         return view('header.pages.participate', ['page' => $page]);
+    }
+
+
+    public function downloadDropOff(Request $request)
+    {
+        // define vcard
+        $vcard = new VCard();
+
+        // define variables
+        $lastname = $request->last_name;
+        $firstname = $request->first_name;
+        $additional = '';
+        $prefix = '';
+        $suffix = '';
+
+        // add personal data
+        $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
+
+        // add phone
+        $vcard->addPhoneNumber($request->phone, 'PREF;WORK');
+
+        // return vcard as a download
+        return $vcard->download();
     }
 
 
