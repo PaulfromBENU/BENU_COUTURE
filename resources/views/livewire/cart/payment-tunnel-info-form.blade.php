@@ -48,12 +48,11 @@
         </div>
     </div>
     <p class="mb-3" style="width: 100%;">
-        <strong>{{ __('forms.personnal-data-info') }}En poursuivant mon achat, j'accepte que les données personnelles fournies soient utilisées et conservées pour permettre le suivi de la commande.</strong>
+        <strong>{{ __('forms.personnal-data-info') }}</strong>
     </p>
     @if($duplicate_email_info == 1)
     <p class="primary-color">
         <strong>{{ __('forms.e-mail-already-exists-please-confirm') }}</strong>
-        <strong>Cette adresse e-mail a déjà été utilisée avec BENU. Les informations ci-dessus mettront à jour vos données personnelles. Confirmer ?</strong>
     </p>
     @endif
     <div class="flex justify-between mt-5">
