@@ -42,7 +42,7 @@
                 </div>
                 <div class="input-group reactive-label-input">
                     <label>{{ __('forms.phone') }} *</label>
-                    <input type="text" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" wire:model="phone">
+                    <input type="tel" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" wire:model="phone">
                 </div>
             </div>
         </div>
