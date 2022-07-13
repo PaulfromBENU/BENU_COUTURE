@@ -243,6 +243,76 @@
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 		}
 	}
+	h3 {
+		text-align: center;
+		font: normal normal 700 20px/30px 'Barlow Condensed';
+	}
+	&__cards {
+		padding-bottom: 55px;
+		&__card {
+			width: 30%;
+			min-width: 280px;
+			border-radius: 12px;
+			box-shadow: lightgrey 0 0 20px;
+			margin: calc(10% / 6);
+			min-height: 200px;
+			overflow: hidden;
+			position: relative;
+			padding: 125px 12px;
+			@include mobile {
+				width: 100%;
+				margin: 10px;
+			}
+			&:hover {
+				.participate-smart__cards__card__number {
+					transform: scale(1.15);
+				}
+			}
+			&__img-container {
+				height: 50px;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+			&__number {
+				position: absolute;
+				top: 25px;
+				right: -16px;
+				font: normal normal 700 40px/30px 'Barlow';
+				color: white;
+				background: $primary-color;
+				width: 75px;
+				height: 75px;
+				padding-top: 22px;
+				border-radius: 50%;
+				transform: scale(1);
+				transition: transform 0.3s;
+			}
+			&__txt {
+				text-align: left;
+				font: normal normal 500 16px/24px 'Barlow';
+			}
+			&__message {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background: $primary-color;
+				width: 100%;
+				color: $white;
+				text-align: left;
+				padding: 7px 12px;
+				font: normal normal 600 14px/17px 'Barlow';
+			}
+		}
+		&__final {
+			width: 60%;
+			margin: auto;
+			font: normal normal 500 14px/17px 'Barlow';
+			text-align: left;
+		}
+	}
 }
 
 

@@ -3631,7 +3631,7 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .welcome-presentation__desc {
     padding-top: 10px;
-    height: 520px;
+    height: 550px;
   }
 }
 .welcome-presentation__desc__bar {
@@ -9367,6 +9367,76 @@ input[type=checkbox]:focus {
   .participate-smart__title {
     font: normal normal 700 28px/34px "Barlow Condensed";
   }
+}
+.participate-smart h3 {
+  text-align: center;
+  font: normal normal 700 20px/30px "Barlow Condensed";
+}
+.participate-smart__cards {
+  padding-bottom: 55px;
+}
+.participate-smart__cards__card {
+  width: 30%;
+  min-width: 280px;
+  border-radius: 12px;
+  box-shadow: lightgrey 0 0 20px;
+  margin: 1.6666666667%;
+  min-height: 200px;
+  overflow: hidden;
+  position: relative;
+  padding: 125px 12px;
+}
+@media (max-width: 767px) {
+  .participate-smart__cards__card {
+    width: 100%;
+    margin: 10px;
+  }
+}
+.participate-smart__cards__card:hover .participate-smart__cards__card__number {
+  transform: scale(1.15);
+}
+.participate-smart__cards__card__img-container {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.participate-smart__cards__card__number {
+  position: absolute;
+  top: 25px;
+  right: -16px;
+  font: normal normal 700 40px/30px "Barlow";
+  color: white;
+  background: #D41C1B;
+  width: 75px;
+  height: 75px;
+  padding-top: 22px;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.participate-smart__cards__card__txt {
+  text-align: left;
+  font: normal normal 500 16px/24px "Barlow";
+}
+.participate-smart__cards__card__message {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #D41C1B;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 7px 12px;
+  font: normal normal 600 14px/17px "Barlow";
+}
+.participate-smart__cards__final {
+  width: 60%;
+  margin: auto;
+  font: normal normal 500 14px/17px "Barlow";
+  text-align: left;
 }
 
 .participate-sustainable__title {
