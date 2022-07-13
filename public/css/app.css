@@ -5862,7 +5862,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .all-news {
-    width: 83.3333333%;
+    width: 92%;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 40px;
@@ -5877,8 +5877,8 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .all-news__title {
     font: normal normal 700 28px/34px "Barlow Condensed";
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     padding-top: 10px;
   }
 }
@@ -5889,8 +5889,18 @@ input[type=checkbox]:focus {
   color: #2E141480;
   margin-bottom: 35px;
 }
+@media (max-width: 767px) {
+  .all-news__subtitle {
+    margin-bottom: 20px;
+  }
+}
 .all-news__filter-tags {
   margin-bottom: 58px;
+}
+@media (max-width: 767px) {
+  .all-news__filter-tags {
+    margin-bottom: 25px;
+  }
 }
 .all-news__filter-tags__tag {
   background: #F9E2E2;
@@ -5905,6 +5915,13 @@ input[type=checkbox]:focus {
   transition: all 0.3s;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .all-news__filter-tags__tag {
+    margin: 6px;
+    padding: 4px 11px;
+    font: normal normal 500 12px/16px "Barlow Condensed";
+  }
+}
 .all-news__filter-tags__tag:hover, .all-news__filter-tags__tag--active {
   background: #D41C1B;
   color: #FFFFFF;
@@ -5918,6 +5935,14 @@ input[type=checkbox]:focus {
   margin-bottom: 30px;
   box-shadow: lightgrey 0 2px 10px;
   transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .all-news__link {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 .all-news__link:hover {
   box-shadow: #c6c6c6 2px 4px 20px;
@@ -5966,6 +5991,11 @@ input[type=checkbox]:focus {
   font: normal normal 500 12px/20px "Barlow";
   text-align: left;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .all-news__link__date {
+    margin-bottom: 7px;
+  }
 }
 .all-news__link__summary {
   font: normal normal 500 15px/28px "Barlow";

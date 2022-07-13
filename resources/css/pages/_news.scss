@@ -1,7 +1,7 @@
 .all-news {
 	padding-top: 60px;
 	@include mobile {
-		width: 83.3333333%;
+		width: 92%;
 		margin: auto;
 		padding-top: 30px;
 		padding-bottom: 40px;
@@ -13,8 +13,8 @@
 		margin-bottom: 15px;
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
-			margin-bottom: 30px;
-			padding-bottom: 30px;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
 			padding-top: 10px;
 		}
 	}
@@ -24,9 +24,15 @@
 		letter-spacing: 0px;
 		color: #2E141480;
 		margin-bottom: 35px;
+		@include mobile {
+			margin-bottom: 20px;
+		}
 	}
 	&__filter-tags {
 		margin-bottom: 58px;
+		@include mobile {
+			margin-bottom: 25px;
+		}
 		&__tag {
 			background: $primary-color-light;
 			padding: 7px 15px;
@@ -37,6 +43,11 @@
 			font: normal normal 500 14px/20px 'Barlow Condensed';
 			transition: all 0.3s;
 			cursor: pointer;
+			@include mobile {
+				margin: 6px;
+				padding: 4px 11px;
+				font: normal normal 500 12px/16px 'Barlow Condensed';
+			}
 			&:hover, &--active {
 				background: $primary-color;
 				color: $white;
@@ -52,6 +63,12 @@
 		margin-bottom: 30px;
 		box-shadow: lightgrey 0 2px 10px;
 		transition: all 0.3s;
+		@include mobile {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
 		&:hover {
 			box-shadow: darken(lightgrey, 5) 2px 4px 20px;
 		}
@@ -100,6 +117,9 @@
 			font: normal normal 500 12px/20px 'Barlow';
 			text-align: left;
 			margin-bottom: 20px;
+			@include mobile {
+				margin-bottom: 7px;
+			}
 		}
 		&__summary {
 			font: normal normal 500 15px/28px 'Barlow';
