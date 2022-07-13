@@ -77,6 +77,14 @@
 				font: normal normal 500 15px/26px 'Barlow';
 				// min-height: 300px;
 			}
+			li::before {
+			  content: "\2022";  /* CSS Code/unicode for a bullet */
+			  color: $primary-color;
+			  font-weight: bold; /* If you want it to be bold */
+			  display: inline-block; /* Needed to add space between the bullet and the text */
+			  width: 1em; /* Also needed for space (tweak if needed) */
+			  margin-left: -1em; /* Also needed for space (tweak if needed) */
+			}
 		}
 		&__link {
 			text-align: left;

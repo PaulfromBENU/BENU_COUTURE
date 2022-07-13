@@ -3705,6 +3705,19 @@ input[type=checkbox]:focus {
     font: normal normal 500 15px/26px "Barlow";
   }
 }
+.welcome-presentation__desc__text li::before {
+  content: "•";
+  /* CSS Code/unicode for a bullet */
+  color: #D41C1B;
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
 .welcome-presentation__desc__link {
   text-align: left;
   font: normal normal 800 22px/33px "Barlow";
