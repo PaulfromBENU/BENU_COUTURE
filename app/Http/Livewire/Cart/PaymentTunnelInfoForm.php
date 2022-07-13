@@ -15,6 +15,8 @@ class PaymentTunnelInfoForm extends Component
     public $email;
     public $phone;
     public $duplicate_email_info;
+    public $is_over_18;
+    public $accepts_conditions;
 
     public $rules = [
         'gender' => 'nullable|string',
@@ -22,6 +24,8 @@ class PaymentTunnelInfoForm extends Component
         'last_name' => 'required|string|min:2|max:255',
         'email' => 'email|required',
         'phone' => 'required|string|min:4|max:20',
+        'is_over_18' => "required",
+        'accepts_conditions' => "required",
     ];
 
     public function mount()

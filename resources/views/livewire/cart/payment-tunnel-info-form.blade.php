@@ -20,7 +20,7 @@
                 </div>
                 <div class="input-group reactive-label-input">
                     <label for="first-name">{{ __('forms.first-name') }} *</label>
-                    <input type="text" id="first-name" name="first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255" wire:model="first_name">
+                    <input type="text" id="first-name" name="first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255" wire:model="first_name" required>
                     @error('register_first_name')
                         <div class="primary-color">{{ $message }}</div>
                     @enderror
@@ -28,7 +28,7 @@
 
                 <div class="input-group reactive-label-input">
                     <label>{{ __('forms.email') }} *</label>
-                    <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" wire:model="email">
+                    <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" wire:model="email" required>
                 </div>
             </div>
 
@@ -38,15 +38,29 @@
                 </div>
                 <div class="input-group reactive-label-input">
                     <label>{{ __('forms.last-name') }} *</label>
-                    <input type="text" name="register_last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" wire:model="last_name">
+                    <input type="text" name="register_last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" wire:model="last_name" required>
                 </div>
                 <div class="input-group reactive-label-input">
                     <label>{{ __('forms.phone') }} *</label>
-                    <input type="tel" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" wire:model="phone">
+                    <input type="tel" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" wire:model="phone" required>
                 </div>
             </div>
         </div>
     </div>
+
+    <div>
+        <label for="register_age" style="color: #2E1414;">
+            <input id="register_age" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_age" value="1" tabindex="5" wire:model="is_over_18" required>
+            <span class="ml-10">{{ __('forms.register-major-conf') }} *</span>
+        </label>
+    </div>
+    <div class="mb-3">
+        <label for="register_legal" style="color: #2E1414;">
+            <input id="register_legal" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_legal" value="1" tabindex="6" wire:model="accepts_conditions" required>
+            <span class="ml-10">{!! __('forms.register-conditions-conf') !!} *</span>
+        </label>
+    </div>
+
     <p class="mb-3" style="width: 100%;">
         <strong>{{ __('forms.personnal-data-info') }}</strong>
     </p>
