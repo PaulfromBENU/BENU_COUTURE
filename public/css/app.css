@@ -9142,6 +9142,7 @@ input[type=checkbox]:focus {
 .participate__nav {
   max-width: 100vw;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 @media (max-width: 767px) {
   .participate__nav {
