@@ -1,7 +1,62 @@
-<section class="w-2/3 m-auto text-center participate-smart participate-panel" id="participate-smart">
+<section class="w-full lg:w-2/3 m-auto text-center participate-smart participate-panel" id="participate-smart">
 	<h2 class="participate-smart__title">{{ __('participate.smart-title') }}</h2>
 
-	<p>
-		Design de la pyramide a définir - Kamoo
+	<h3>
+		{{ __('participate.smart-subtitle-1') }}
+	</h3>
+
+	<div class="participate-smart__cards flex justify-start flex-wrap">
+		@for($i = 1; $i <= 6; $i++)
+		<div class="participate-smart__cards__card">
+			<div class="participate-smart__cards__card__img-container">
+				<img src="" />
+			</div>
+			<div class="participate-smart__cards__card__number">
+				{{ $i }}
+			</div>
+			<p class="participate-smart__cards__card__txt">
+				<strong class="primary-color">{{ __('participate.smart-card-'.$i.'-title') }}</strong>
+			</p>
+			<p class="participate-smart__cards__card__txt">
+				{{ __('participate.smart-card-'.$i.'-content') }}
+			</p>
+
+			<p class="participate-smart__cards__card__message">
+				{{ __('participate.smart-card-'.$i.'-message') }}
+			</p>
+		</div>
+		@endfor
+	</div>
+
+	<h3 class="mt-10 mb-5">
+		{{ __('participate.smart-subtitle-2') }}
+	</h3>
+
+	<div class="participate-smart__cards flex justify-start flex-wrap">
+		@for($i = 7; $i <= 8; $i++)
+		<div class="participate-smart__cards__card">
+			<div class="participate-smart__cards__card__img-container">
+				<img src="" />
+			</div>
+			<div class="participate-smart__cards__card__number">
+				{{ $i }}
+			</div>
+			<p class="participate-smart__cards__card__txt">
+				<strong class="primary-color">{{ __('participate.smart-card-'.$i.'-title') }}</strong>
+			</p>
+			<p class="participate-smart__cards__card__txt">
+				{{ __('participate.smart-card-'.$i.'-content') }}
+			</p>
+
+			<p class="participate-smart__cards__card__message">
+				{{ __('participate.smart-card-'.$i.'-message') }}
+			</p>
+		</div>
+		@endfor
+	</div>
+
+	<p class="participate-smart__final">
+		{{ __('participate.smart-final-message') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('participate.smart-final-message-link') }}</a>
 	</p>
+
 </section>

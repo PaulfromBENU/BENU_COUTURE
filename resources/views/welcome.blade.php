@@ -19,8 +19,13 @@
         let newText = "";
         let newSentence;
         splitText.forEach(function(sentence, index) {
-            if (index > 0) {
-                newSentence = "• " + sentence + '</li><li>';
+            if (index > 0 && index) {
+                // newSentence = "• " + sentence + '</li><li>';
+                if (index == splitText.length - 1) {
+                    newSentence = " " + sentence;
+                } else {
+                    newSentence = " " + sentence + '</li><li>';
+                }
                 newText += newSentence;
             }
         });

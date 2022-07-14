@@ -1,4 +1,4 @@
-<section class="w-1/2 m-auto text-center payment service-panel" id="services-payment">
+<section class="w-11/12 lg:w-1/2 m-auto text-center payment service-panel" id="services-payment">
 	<h2 class="payment__title">{!! __('services.payment-title') !!}</h2>
 	<p class="payment__subtitle">
 		{!! __('services.payment-subtitle') !!}

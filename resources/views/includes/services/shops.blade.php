@@ -2,21 +2,21 @@
 	<h2 class="shops__title">{{ __('services.shops-title') }}</h2>
 
 	@foreach($shops_benu as $shop)
-	<div class="shops__card flex justify-start">
+	<div class="shops__card flex justify-start flex-col lg:flex-row">
 		<div class="shops__card__img-container">
 			<img src="{{ asset('images/pictures/shops/'.$shop->picture) }}">
 		</div>
 		<div class="shops__card__txt-container">
-			<div class="flex justify-between">
+			<div class="flex flex-col lg:flex-row justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
-					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="btn-couture-plain">{{ __('services.shops-articles-link') }}</a>
+					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="inline-block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('services.shops-articles-link') }}</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
 				{!! $shop->$desc_query !!}
 			</p>
-			<div class="flex justify-start mb-5 shops__card__desc">
+			<div class="flex justify-start flex-col lg:flex-row mb-5 shops__card__desc">
 				<p class="mr-4"><strong>{!! __('services.shops-opening') !!}:</strong></p>
 				<div class="text-left">
 					<p>
@@ -43,19 +43,19 @@
 				</div>
 			</div>
 			<div class="text-left shops__card__highlight">
-				<div class="flex justify-start flex-wrap">
-					<p class="mb-2 w-7/12">
+				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
+					<p class="mb-2 w-full lg:w-7/12">
 						<strong>{!! __('services.shops-address') !!}:</strong> <span class="font-medium">{{ $shop->address }}</span>
 					</p>
-					<p class="w-5/12">
+					<p class="mb-2 w-full lg:w-5/12">
 						<strong>{!! __('services.shops-phone') !!}:</strong> <span class="font-medium">{{ $shop->phone }}</span>
 					</p>
 				</div>
-				<div class="flex justify-start">
-					<p class="mb-2 w-7/12">
+				<div class="flex flex-col lg:flex-row justify-start">
+					<p class="mb-2 w-full lg:w-7/12">
 						<strong>{!! __('services.shops-email') !!}:</strong> <a href="mailto:{{ $shop->email }}" class="primary-color shops__card__link">{{ $shop->email }}</a>
 					</p>
-					<p class="w-5/12">
+					<p class="mb-2 w-full lg:w-5/12">
 						<strong>{!! __('services.shops-website') !!}:</strong> <span class="primary-color shops__card__link"><a href="https://{{ $shop->website }}" target="_blank">{{ $shop->website }}</a></span>
 					</p>
 				</div>
@@ -65,12 +65,12 @@
 	@endforeach
 
 	@foreach($shops_other as $shop)
-	<div class="shops__card flex justify-start">
+	<div class="shops__card flex justify-start flex-col lg:flex-row">
 		<div class="shops__card__img-container">
 			<img src="{{ asset('images/pictures/shops/'.$shop->picture) }}">
 		</div>
 		<div class="shops__card__txt-container">
-			<div class="flex justify-between">
+			<div class="flex flex-col lg:flex-row justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
 					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="btn-couture-plain">{{ __('services.shops-articles-link') }}</a>
@@ -79,7 +79,7 @@
 			<p class="shops__card__desc">
 				{{ $shop->$desc_query }}
 			</p>
-			<div class="flex justify-start mb-5 shops__card__desc">
+			<div class="flex flex-col lg:flex-row justify-start mb-5 shops__card__desc">
 				<p class="mr-4"><strong>{!! __('services.shops-opening') !!}:</strong></p>
 				<div class="text-left">
 					<p>
@@ -106,19 +106,19 @@
 				</div>
 			</div>
 			<div class="text-left shops__card__highlight">
-				<div class="flex justify-start flex-wrap">
-					<p class="mb-2 w-7/12">
+				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
+					<p class="mb-2 w-full lg:w-7/12">
 						<strong>{!! __('services.shops-address') !!}:</strong> <span class="font-medium">{{ $shop->address }}</span>
 					</p>
-					<p class="w-5/12">
+					<p class="mb-2 w-full lg:w-5/12">
 						<strong>{!! __('services.shops-phone') !!}:</strong> <span class="font-medium">{{ $shop->phone }}</span>
 					</p>
 				</div>
-				<div class="flex justify-start">
-					<p class="mb-2 w-7/12">
+				<div class="flex flex-col lg:flex-row justify-start">
+					<p class="mb-2 w-full lg:w-7/12">
 						<strong>{!! __('services.shops-email') !!}:</strong> <a href="mailto:{{ $shop->email }}" class="primary-color shops__card__link">{{ $shop->email }}</a>
 					</p>
-					<p class="w-5/12">
+					<p class="mb-2 w-full lg:w-5/12">
 						<strong>{!! __('services.shops-website') !!}:</strong> <a href="https://{{ $shop->website }}" class="shops__card__link primary-color" target="_blank">{{ $shop->website }}</a>
 					</p>
 				</div>

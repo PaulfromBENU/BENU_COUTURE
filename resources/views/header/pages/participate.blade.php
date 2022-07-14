@@ -52,7 +52,10 @@
 	<div class="benu-container text-center participate">
 		<h4 class="participate__subtitle">BENU COUTURE</h4>
 		<h2 class="participate__title">{{ __('participate.main-title') }}</h2>
-		<div class="participate__nav flex justify-center">
+		<div class="participate__nav flex justify-start lg:justify-center">
+			<div class="participate__nav__arrow participate__nav__arrow--left mobile-only">
+				@svg('chevron-down')
+			</div>
 			<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-badges')]) }}" class="participate__nav__link @if($page == '' || $page == __('slugs.participate-badges')) participate__nav__link--active @endif" id="participate-nav-faq">
 				{{ __('participate.nav-badges') }}
 			</a>
@@ -65,6 +68,9 @@
 			<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}" class="participate__nav__link @if($page == __('slugs.participate-smart')) participate__nav__link--active @endif" id="participate-nav-return">
 				{{ __('participate.nav-smart') }}
 			</a>
+			<div class="participate__nav__arrow participate__nav__arrow--right mobile-only">
+				@svg('chevron-down')
+			</div>
 			<!-- <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-sustainable')]) }}" class="participate__nav__link @if($page == __('slugs.participate-sustainable')) participate__nav__link--active @endif" id="participate-nav-payment">
 				{{ __('participate.nav-sustainable') }}
 			</a> -->
@@ -106,6 +112,18 @@
 		$('.participate__nav__link').on('click', function() {
 			$('.participate__nav__link').removeClass('participate__nav__link--active');
 			$(this).addClass('participate__nav__link--active');
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('.participate__nav__arrow--left').on('click', function() {
+			let leftPos = $('.participate__nav').scrollLeft();
+   			$(".participate__nav").animate({scrollLeft: leftPos - 100}, 'fast');
+		});
+		$('.participate__nav__arrow--right').on('click', function() {
+			let leftPos = $('.participate__nav').scrollLeft();
+   			$(".participate__nav").animate({scrollLeft: leftPos + 100}, 'fast');
 		});
 	});
 </script>

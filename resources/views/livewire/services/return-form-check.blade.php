@@ -1,5 +1,5 @@
 <div class="text-center mt-5 pt-5">
-    <a href="{{ route('return-'.app()->getLocale(), ['order_code' => 0]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{!! __('services.return-btn-pdf') !!}</a>
+    <a href="{{ route('return-'.app()->getLocale(), ['order_code' => 0]) }}" target="_blank" class="inline-block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{!! __('services.return-btn-pdf') !!}</a>
 
     <p class="mt-5 mb-5 font-semibold">
         {{ __('services.or-fill') }}

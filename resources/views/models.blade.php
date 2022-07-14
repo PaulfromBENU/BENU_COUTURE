@@ -48,6 +48,25 @@
 		Livewire.on('pageChanged', function() {
 			document.getElementById("all-models").scrollIntoView({ behavior: "smooth", block: "start" });
 		});
+
+
+		$('.all-models__mobile-menu__opacifier').hide();
+		// $('.all-models__mobile-menu__sidebar').css('left', '100%');
+
+		Livewire.on('showSortMobile', function() {
+			$('.all-models__mobile-menu__opacifier').fadeIn();
+			$('.all-models__mobile-menu__sidebar--sort').css('left', '12%');
+		});
+
+		Livewire.on('showFiltersMobile', function() {
+			$('.all-models__mobile-menu__opacifier').fadeIn();
+			$('.all-models__mobile-menu__sidebar--filters').css('left', '12%');
+		});
+
+		Livewire.on('resetMobileWindow', function() {
+			$('.all-models__mobile-menu__opacifier').hide();
+			$('.all-models__mobile-menu__sidebar').css('left', '100%');
+		});
 	})
 </script>
 @endsection

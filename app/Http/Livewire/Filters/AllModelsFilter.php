@@ -16,6 +16,16 @@ class AllModelsFilter extends Component
     public $active_filters;
     public $sorting_order;
 
+    public $mobile_sort_active;
+    public $mobile_filters_active;
+    public $mobile_show_families;
+    public $mobile_show_types;
+    public $mobile_show_categories;
+    public $mobile_show_colors;
+    public $mobile_show_prices;
+    public $mobile_show_shops;
+    public $mobile_show_partners;
+
     protected $queryString = ['family' => ['except' => '']];
 
     public function mount(Request $request)
@@ -30,6 +40,25 @@ class AllModelsFilter extends Component
         // }
 
         $this->active_filters = $this->initial_filters;
+        $this->initializeMobileDisplay();
+    }
+
+    public function initializeMobileDisplay()
+    {
+        $this->mobile_sort_active = 0;
+        $this->mobile_filters_active = 0;
+        $this->initializeFiltersDisplay();
+    }
+
+    public function initializeFiltersDisplay()
+    {
+        $this->mobile_show_families = 0;
+        $this->mobile_show_types = 0;
+        $this->mobile_show_categories = 0;
+        $this->mobile_show_colors = 0;
+        $this->mobile_show_prices = 0;
+        $this->mobile_show_shops = 0;
+        $this->mobile_show_partners = 0;
     }
 
     public function toggleFilter($filter, $value)
@@ -47,6 +76,7 @@ class AllModelsFilter extends Component
         }
 
         $this->sendFilters();
+        $this->initializeMobileDisplay();
     }
 
     public function updateSorting(string $sort_order)
@@ -54,6 +84,7 @@ class AllModelsFilter extends Component
         if (in_array($sort_order, ['asc', 'desc'])) {
             $this->sorting_order = $sort_order;
             $this->emit('sortUpdated', $this->sorting_order, $this->active_filters);
+            $this->initializeMobileDisplay();
         }
     }
 
@@ -65,6 +96,134 @@ class AllModelsFilter extends Component
         $stored_filters->save();
 
         $this->emit('filtersUpdated', $this->active_filters);
+    }
+
+    public function showSortMobileOptions()
+    {
+        $this->mobile_sort_active = 1;
+        $this->mobile_filters_active = 0;
+        $this->emit('showSortMobile');
+    }
+
+    public function showSortMobileFilters()
+    {
+        $this->mobile_sort_active = 0;
+        $this->mobile_filters_active = 1;
+        $this->emit('showFiltersMobile');
+    }
+
+    public function resetMobileWindow()
+    {
+        $this->mobile_sort_active = 0;
+        $this->mobile_filters_active = 0;
+        $this->emit('resetMobileWindow');
+    }
+
+    public function showMobileFilters(string $filter)
+    {
+        switch ($filter) {
+            case 'family':
+                $show = 0;
+                if (!$this->mobile_show_families) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_families = 1;
+                } else {
+                    $this->mobile_show_families = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+
+            case 'type':
+                $show = 0;
+                if (!$this->mobile_show_types) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_types = 1;
+                } else {
+                    $this->mobile_show_types = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+
+            case 'category':
+                $show = 0;
+                if (!$this->mobile_show_categories) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_categories = 1;
+                } else {
+                    $this->mobile_show_categories = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+
+            case 'color':
+                $show = 0;
+                if (!$this->mobile_show_colors) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_colors = 1;
+                } else {
+                    $this->mobile_show_colors = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+
+            case 'price':
+                $show = 0;
+                if (!$this->mobile_show_prices) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_prices = 1;
+                } else {
+                    $this->mobile_show_prices = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+
+            case 'shop':
+                $show = 0;
+                if (!$this->mobile_show_shops) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_shops = 1;
+                } else {
+                    $this->mobile_show_shops = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+
+            case 'partner':
+                $show = 0;
+                if (!$this->mobile_show_partners) {
+                    $show = 1;
+                }
+                // $this->initializeFiltersDisplay();
+                if ($show) {
+                    $this->mobile_show_partners = 1;
+                } else {
+                    $this->mobile_show_partners = 0;
+                }
+                $this->emit('showFiltersMobile');
+                break;
+            
+            default:
+                $this->initializeFiltersDisplay();
+                break;
+        }
     }
 
     public function render()

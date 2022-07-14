@@ -32,7 +32,7 @@
 		<p class="participate-give__content__txt">
 			{{ __('participate.give-content-2-5') }}
 		</p>
-		<div class="text-left mt-5 pt-5">
+		<div class="text-center lg:text-left mt-5 pt-5">
 			<a href="#" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('participate.give-link-2') }}</a>
 		</div>
 	</div>
@@ -65,6 +65,7 @@
 		<div class="flex justify-around flex-wrap">
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="inline-block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mt-2 mb-2">{!! __('participate.give-opening-time') !!}</a>
 			<a href="tel:+35227911949" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="{{ route('header.download-dropoff-'.app()->getLocale(), ['first_name' => 'BENU', 'last_name' => 'Shop', 'phone' => '+35227911949']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mt-2 mb-2">{!! __('participate.give-add-to-contacts') !!}</a>
 		</div>
 	</div>
 
@@ -84,6 +85,7 @@
 		</div>
 		<div class="flex justify-around flex-wrap">
 			<a href="tel:+352691358713" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="{{ route('header.download-dropoff-'.app()->getLocale(), ['first_name' => 'Gérard', 'last_name' => 'Kieffer', 'phone' => '+352691358713']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mt-2 mb-2">{!! __('participate.give-add-to-contacts') !!}</a>
 		</div>
 	</div>
 
@@ -103,6 +105,7 @@
 		</div>
 		<div class="flex justify-around flex-wrap">
 			<a href="tel:+352728242" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="{{ route('header.download-dropoff-'.app()->getLocale(), ['first_name' => 'Jean-Marie', 'last_name' => 'Kieffer', 'phone' => '+352728242']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mt-2 mb-2">{!! __('participate.give-add-to-contacts') !!}</a>
 		</div>
 	</div>
 
@@ -122,6 +125,7 @@
 		</div>
 		<div class="flex justify-around flex-wrap">
 			<a href="tel:+35226803250" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="{{ route('header.download-dropoff-'.app()->getLocale(), ['first_name' => 'Sylvie', 'last_name' => 'Hamus', 'phone' => '+35226803250']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mt-2 mb-2">{!! __('participate.give-add-to-contacts') !!}</a>
 		</div>
 	</div>
 
@@ -144,6 +148,7 @@
 		</div>
 		<div class="flex justify-around flex-wrap">
 			<a href="tel:+3529081881" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="{{ route('header.download-dropoff-'.app()->getLocale(), ['first_name' => 'Christian', 'last_name' => 'Kayser', 'phone' => '+3529081881']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mt-2 mb-2">{!! __('participate.give-add-to-contacts') !!}</a>
 		</div>
 	</div>
 
@@ -163,6 +168,7 @@
 		</div>
 		<div class="flex justify-around flex-wrap">
 			<a href="tel:+352621188105" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mobile-only mt-2 mb-2">{!! __('participate.give-call-this-number') !!}</a>
+			<a href="{{ route('header.download-dropoff-'.app()->getLocale(), ['first_name' => 'Georges', 'last_name' => 'Kieffer', 'phone' => '+352621188105']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block mt-2 mb-2">{!! __('participate.give-add-to-contacts') !!}</a>
 		</div>
 	</div>
 </section>

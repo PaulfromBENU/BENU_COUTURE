@@ -21,6 +21,8 @@ use App\Traits\DataImporter;
 
 use App\Http\Requests\NewsletterRequest;
 
+use JeroenDesloovere\VCard\VCard;
+
 class GeneralController extends Controller
 {
     use ArticleAnalyzer;
@@ -113,10 +115,15 @@ class GeneralController extends Controller
     {
         $message = "";
         if (auth()->check()) {
-            if (auth()->user()->newsletter == '1') {
-                auth()->user()->newsletter = 0;
+            if (auth()->user()->newsletter == '2') {
+                auth()->user()->newsletter = 3;
                 auth()->user()->save();
-                $message = __('auth.newsletter-unsubscribe-confirm');
+
+                Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin(auth()->user()));
+                Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterCancelConfirmationForAdmin(auth()->user()));
+
+                $message = __('auth.newsletter-unsubscribe-pending');
+                return redirect()->route('newsletter-'.session('locale'))->with('cancellation', $message);
             } else {
                 auth()->user()->newsletter = 1;
                 auth()->user()->favorite_language = session('locale');
@@ -125,6 +132,9 @@ class GeneralController extends Controller
                 // Mail::to(auth()->user()->email)->send(new NewsletterConfirmation(auth()->user()));
                 Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterConfirmationForAdmin(auth()->user()));
                 Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin(auth()->user()));
+
+                $message = __('auth.newsletter-subscribe-pending');
+                return redirect()->route('newsletter-'.session('locale'))->with('subscription', $message);
             }
         } else {
             if (User::where('email', $request->newsletter_email)->count() > 0) {
@@ -148,6 +158,7 @@ class GeneralController extends Controller
                 $user->first_name = $request->newsletter_first_name;
                 $user->last_name = $request->newsletter_last_name;
                 $user->newsletter = 1;
+                $user->role = 'newsletter';
                 $user->favorite_language = session('locale');
                 $user->general_comment = "";
                 if($user->save()) {
@@ -157,9 +168,8 @@ class GeneralController extends Controller
                     Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
                 }
             }
+            return redirect()->route('newsletter-'.session('locale'))->with('subscription', $message);
         }
-
-        return redirect()->route('newsletter-'.session('locale'))->with('success', $message);
 
     }
 
@@ -169,7 +179,7 @@ class GeneralController extends Controller
         if (User::find($user_id)) {
             $user = User::find($user_id);
             if ($user->newsletter == '2') {
-                $user->newsletter = 0;
+                $user->newsletter = 3;
                 $user->save();
                 Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin($user));
                 Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterCancelConfirmationForAdmin($user));
@@ -215,6 +225,29 @@ class GeneralController extends Controller
     }
 
 
+    public function downloadDropOff(Request $request)
+    {
+        // define vcard
+        $vcard = new VCard();
+
+        // define variables
+        $lastname = $request->last_name;
+        $firstname = $request->first_name;
+        $additional = '';
+        $prefix = '';
+        $suffix = '';
+
+        // add personal data
+        $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
+
+        // add phone
+        $vcard->addPhoneNumber($request->phone, 'PREF;WORK');
+
+        // return vcard as a download
+        return $vcard->download();
+    }
+
+
 
     public function startImport()
     {
@@ -231,7 +264,7 @@ class GeneralController extends Controller
             // $this->importCreationsFromSabine();
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
-            $this->importTranslations();
+            // $this->importTranslations();
         } else {
             return redirect()->route('login-fr');
         }

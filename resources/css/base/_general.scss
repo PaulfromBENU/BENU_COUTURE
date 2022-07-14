@@ -216,6 +216,14 @@ body, html {
 	width: 14px;
 	border-radius: 50%;
 	margin-right: 5px;
+	&--mobile {
+		height: 30px;
+		width: 30px;
+		margin-right: 16px;
+		margin-top: 2px;
+		margin-left: 2px;
+		border: solid 3px $white;
+	}
 	&--green {
 		background: #27955B;
 	}
@@ -252,6 +260,9 @@ body, html {
 	&--white {
 		background: #fbf8fb;
 		border: solid 1px lightgrey;
+		@include mobile {
+			border: solid 3px lightgrey;
+		}
 	}
 	&--denim {
 		background: #3C41B9;

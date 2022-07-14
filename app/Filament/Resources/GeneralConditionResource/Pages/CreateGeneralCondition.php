@@ -16,5 +16,7 @@ class CreateGeneralCondition extends CreateRecord
         User::where('last_conditions_agreed', '1')->update([
             'last_conditions_agreed' => '0',
         ]);
+
+        // Add e-mail sending to all registered users here?
     }
 }
