@@ -132,6 +132,7 @@
         <div class="dashboard-orders__details__addresses flex justify-between flex-col lg:flex-row">
             <div class="dashboard-orders__details__addresses__address">
                 <h3>{{ __('dashboard.order-invoice-address') }}</h3>
+                @if($order->invoice_address_id > 0)
                 <div class="flex justify-between flex-col-reverse lg:flex-row">
                     <div class="w-full lg:w-7/12">
                         <h4>{{ $order->invoice_address->first_name.' '.$order->invoice_address->last_name }}</h4>
@@ -156,6 +157,11 @@
                         </div>
                     </div>
                 </div>
+                @else
+                <p>
+                    {{ __('dashboard.sold-in-shop') }}
+                </p>
+                @endif
             </div>
 
             <div class="dashboard-orders__details__addresses__address pt-5 lg:pt-0">

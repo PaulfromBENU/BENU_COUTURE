@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Blade;
 
 use Filament\Facades\Filament;
 
@@ -50,6 +51,14 @@ class AppServiceProvider extends ServiceProvider
                 'Site Data',
                 'Shops & Partners',
             ]);
+        });
+
+        Blade::directive('inshop', function () {
+            return "<?php if(auth()->check() && auth()->user()->role == 'vendor'): ?>";
+        });
+
+        Blade::directive('endinshop', function () {
+            return "<?php endif ?>";
         });
     }
 }

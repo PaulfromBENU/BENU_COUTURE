@@ -21,6 +21,11 @@ class Orders extends Component
     public function showDetails($order_id)
     {
         $this->show_details = 1;
+        if (auth()->user()->role == 'vendor') {
+            if (Order::where('payment_type', '5')->find($order_id)) {
+                $this->detailed_order_id = $order_id;
+            }
+        }
         if (auth()->user()->orders()->find($order_id)) {
             $this->detailed_order_id = $order_id;
         }
@@ -35,13 +40,24 @@ class Orders extends Component
     public function render()
     {
         if ($this->detailed_order_id == 0) {
+            if (auth()->user()->role == 'vendor') {
+                return view('livewire.dashboard.orders', ['orders' => Order::where('payment_type', '5')->orderBy('created_at', 'desc')->get()]);
+            }
             return view('livewire.dashboard.orders', ['orders' => auth()->user()->orders()->where('status', '>', '1')->orderBy('created_at', 'desc')->get()]);
         } else {
-            return view('livewire.dashboard.orders', [
-                'order' => auth()->user()->orders()->find($this->detailed_order_id),
-                'benu_address' => Shop::where('filter_key', 'benu-esch')->first(),
-                'articles' => auth()->user()->orders()->find($this->detailed_order_id)->cart->couture_variations,
-            ]);
+            if (auth()->user()->role == 'vendor') {
+                return view('livewire.dashboard.orders', [
+                    'order' => Order::find($this->detailed_order_id),
+                    'benu_address' => Shop::where('filter_key', 'benu-esch')->first(),
+                    'articles' => Order::find($this->detailed_order_id)->cart->couture_variations,
+                ]);
+            } else {
+                return view('livewire.dashboard.orders', [
+                    'order' => auth()->user()->orders()->find($this->detailed_order_id),
+                    'benu_address' => Shop::where('filter_key', 'benu-esch')->first(),
+                    'articles' => auth()->user()->orders()->find($this->detailed_order_id)->cart->couture_variations,
+                ]);
+            }
         }
     }
 }

@@ -1,4 +1,60 @@
 <section class="payment-tunnel">
+    @inshop
+    <div class="payment-tunnel__in-shop">
+        <h2>
+            {{ __('cart.payment-in-shop-title') }}
+        </h2>
+        <p class="mb-10">
+            {{ __('cart.payment-in-shop-explanation') }}
+        </p>
+
+        <form class="payment-tunnel__in-shop__form" method="POST" wire:submit.prevent="sellFromShop">
+            @csrf
+            <p class="payment-tunnel__in-shop__form__explanation">
+                {{ __('cart.payment-in-shop-optional-client-info') }}
+            </p>
+            <p class="text-left mb-4">
+                @if(session('has_kulturpass') !== null)
+                    <a href="{{ route('forget-kulturpass', ['locale' => app()->getLocale()]) }}" class="primary-color hover:text-gray-800 transition font-bold">{{ __('cart.payment-in-shop-has-no-kulturpass') }}</a>
+                @else
+                    <a href="{{ route('add-kulturpass', ['locale' => app()->getLocale()]) }}" class="primary-color hover:text-gray-800 transition font-bold">{{ __('cart.payment-in-shop-has-kulturpass') }}</a>
+                @endif
+            </p>
+            <div class="flex justify-between flex-wrap flex-col lg:flex-row">
+                <div class="w-full lg:w-2/5">
+                    <label for="inshop_first_name">{{ __('forms.first-name') }}</label>
+                    <input type="text" id="inshop_first_name" name="inshop_first_name" wire:model.defer="inshop_first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255">
+                </div>
+                <div class="w-full lg:w-2/5">
+                    <label for="inshop_last_name">{{ __('forms.last-name') }}</label>
+                    <input type="text" id="inshop_last_name" name="inshop_last_name" wire:model.defer="inshop_last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255">
+                </div>
+            </div>
+            <div class="w-full mt-4">
+                <label for="inshop_email">{{ __('forms.email') }}</label>
+                <input type="email" id="inshop_email" name="inshop_email" wire:model.defer="inshop_email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255">
+            </div>
+            <div class="mt-6 pb-5" style="border-bottom: solid 1px #D41C1B;">
+                <label for="inshop_newsletter" class="inline-flex items-center">
+                    <input id="inshop_newsletter" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="inshop_newsletter" value="1" tabindex="4" style="margin-top: 2px;">
+                    <span class="ml-5">{{ __('forms.subscribe-to-newsletter') }}</span>
+                </label>
+            </div>
+
+            <div class="w-full mt-8">
+                <label for="inshop_security">{{ __('forms.security-code') }} *</label>
+                <input type="password" id="inshop_security" name="inshop_security" wire:model.defer="inshop_security" class="input-underline w-full" tabindex="5" minlength="2" maxlength="255" required>
+            </div>
+
+            <div class="w-full mt-8 text-center">
+                <p class="mb-5">
+                    <span class="uppercase">{{ __('cart.payment-in-shop-warning') }}</span> {{ __('cart.payment-in-shop-pay-before-validate') }}
+                </p>
+                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('cart.payment-in-shop-validation') }}</button>
+            </div>
+        </form>
+    </div>
+    @else
     <div class="payment-tunnel__identification payment-tunnel__block">
         <h2 class="payment-tunnel__block__title @if($step == 1) payment-tunnel__block__title--current @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(1)" id="payment-tunnel-block-1">
             1. {{ __('cart.payment-id') }}
@@ -452,4 +508,5 @@
         </div>
         @endif
     </div>
+    @endinshop
 </section>

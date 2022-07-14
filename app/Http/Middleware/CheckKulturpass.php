@@ -18,7 +18,9 @@ class CheckKulturpass
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->check() && auth()->user()->kulturpasses()->where('approved', '1')->count() > 0) {
+        if(auth()->check() && auth()->user()->role == 'vendor') {
+            //do nothing, keep status
+        } elseif (auth()->check() && auth()->user()->kulturpasses()->where('approved', '1')->count() > 0) {
             $kulturpass = auth()->user()->kulturpasses()->orderBy('updated_at', 'desc')->first();
             if ($kulturpass->approved && $kulturpass->expiry_date >= Carbon::now()) {
                 session(['has_kulturpass' => true]);

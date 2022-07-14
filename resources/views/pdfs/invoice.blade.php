@@ -92,17 +92,19 @@
 			<span style="font-family: 'Barlow Condensed SemiBold'; margin-bottom: 0px; padding-bottom: 0px;">
 				{{ __('pdf.invoice-invoice-address') }}
 			</span>
-			<br/>
-			{{ ucfirst($order->invoice_address->last_name) }} {{ ucfirst($order->invoice_address->first_name) }}
-			<br/>
-			{{ $order->invoice_address->street_number }}, {{ $order->invoice_address->street }}
-			<br/>
-			{{ $order->invoice_address->zip_code }} {{ $order->invoice_address->city }}
-			<br/>
-			{{ $countries[$order->invoice_address->country] }}
-			<br/>
-			@if($order->invoice_address->floor !== "" && $order->invoice_address->floor !== null)
-			{{ __('pdf.invoice-delivery-address-more-info') }} : {{ $order->invoice_address->floor }}
+			@if($order->invoice_address_id > 0)
+				<br/>
+				{{ ucfirst($order->invoice_address->last_name) }} {{ ucfirst($order->invoice_address->first_name) }}
+				<br/>
+				{{ $order->invoice_address->street_number }}, {{ $order->invoice_address->street }}
+				<br/>
+				{{ $order->invoice_address->zip_code }} {{ $order->invoice_address->city }}
+				<br/>
+				{{ $countries[$order->invoice_address->country] }}
+				<br/>
+				@if($order->invoice_address->floor !== "" && $order->invoice_address->floor !== null)
+				{{ __('pdf.invoice-delivery-address-more-info') }} : {{ $order->invoice_address->floor }}
+				@endif
 			@endif
 		</p>
 	</div>
@@ -161,6 +163,10 @@
 					{{ __('pdf.invoice-vouchers') }}
 					@break
 
+					@case('5')
+					{{ __('pdf.invoice-in-shop') }}
+					@break
+
 					@default
 					{{ __('pdf.invoice-bank-transfer') }}
 					@break
@@ -171,7 +177,7 @@
 					{{ __('pdf.invoice-payment-status') }}
 				</span>
 				<br/>
-				@if($order->payment_status >= '2')
+				@if($order->payment_status >= 2)
 				{{ __('pdf.invoice-paid') }}
 				@else
 				{{ __('pdf.invoice-payment-pending') }}
@@ -429,11 +435,12 @@
 						{{ __('pdf.invoice-total-without-vat') }}
 					</div>
 					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
-						@if($order->with_kulturpass)
+						{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high), 2) }}&euro;
+						<!-- @if($order->with_kulturpass)
 						{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high) / 2, 2) }}&euro;
 						@else
 						{{ number_format(($order->total_price - $vat_low - $vat_med - $vat_high), 2) }}&euro;
-						@endif
+						@endif -->
 					</div>
 				</div>
 
@@ -443,11 +450,12 @@
 						{{ __('pdf.invoice-vat-3-percent') }}
 					</div>
 					<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
-						@if($order->with_kulturpass)
+						{{ number_format($vat_low, 2) }}&euro;
+						<!-- @if($order->with_kulturpass)
 						{{ number_format($vat_low / 2, 2) }}&euro;
 						@else
 						{{ number_format($vat_low, 2) }}&euro;
-						@endif
+						@endif -->
 					</div>
 				</div>
 				@endif
@@ -458,11 +466,12 @@
 						{{ __('pdf.invoice-vat-8-percent') }}
 					</div>
 					<div style="position: absolute; width: 25%; top: 4px; left: 74%;">
-						@if($order->with_kulturpass)
+						{{ number_format($vat_med, 2) }}&euro;
+						<!-- @if($order->with_kulturpass)
 						{{ number_format($vat_med / 2, 2) }}&euro;
 						@else
 						{{ number_format($vat_med, 2) }}&euro;
-						@endif
+						@endif -->
 					</div>
 				</div>
 				@endif
@@ -473,11 +482,12 @@
 						{{ __('pdf.invoice-vat-17-percent') }}
 					</div>
 					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
-						@if($order->with_kulturpass)
+						{{ number_format($vat_high, 2) }}&euro;
+						<!-- @if($order->with_kulturpass)
 						{{ number_format($vat_high / 2, 2) }}&euro;
 						@else
 						{{ number_format($vat_high, 2) }}&euro;
-						@endif
+						@endif -->
 					</div>
 				</div>
 				@endif

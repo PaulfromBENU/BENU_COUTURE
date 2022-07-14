@@ -46,6 +46,14 @@ if (app('env') == 'landing') {
 			});
 			Route::post('/dashboard/addresses', 'UserController@addAddress')->name('dashboard.add-address');
 			Route::post('/store-newsletter', 'GeneralController@storeNewsletter')->name('newsletter-subscribe');
+			Route::get('/add-kulturpass', function() {
+				session(['has_kulturpass' => '1']);
+				return redirect()->back();
+			})->name('add-kulturpass');
+			Route::get('/forget-kulturpass', function() {
+				session(['has_kulturpass' => null]);
+				return redirect()->back();
+			})->name('forget-kulturpass');
 			
 			//Auth routes
 			require __DIR__.'/auth.php';

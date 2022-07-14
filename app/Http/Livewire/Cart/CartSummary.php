@@ -56,6 +56,9 @@ class CartSummary extends Component
         $this->with_extra = 0;
 
         $this->country_code = "LU";
+        if (auth()->check() && auth()->user()->role == 'vendor') {
+            $this->country_code = "collect";
+        }
 
         $this->use_voucher = 0;
         $this->voucher_code = "";
@@ -149,60 +152,6 @@ class CartSummary extends Component
         $this->computeTotalWithVoucher();
     }
 
-    // public function computeArticlesSum()
-    // {
-    //     if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-    //         $cart = Cart::where('cart_id', $this->cart_id)->first();
-    //         $sum = 0;
-    //         foreach ($cart->couture_variations as $variation) {
-    //             if ($variation->name == 'voucher') {
-    //                 $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
-    //             } else {
-    //                 $article_amount = $variation->pivot->articles_number * $variation->creation->price;
-    //                 if ($variation->pivot->with_extra_article == '1') {
-    //                     $article_amount += $variation->pivot->articles_number * self::EXTRA_PILLOW_PRICE;
-    //                 }
-    //             }
-    //             $sum += $article_amount;
-    //         }
-    //         $this->articles_sum = $sum;
-    //     }
-    // }
-
-    // public function computeDeliverySum()
-    // {
-    //     $this->delivery_sum = 0;
-
-    //     if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-    //         $cart = Cart::where('cart_id', $this->cart_id)->first();
-    //         $total_weight = 0;
-
-    //         foreach ($cart->couture_variations as $variation) {
-    //             if ($variation->name !== 'voucher') {
-    //                 $variation_weight = $variation->creation->weight / 1000;
-    //             }
-    //             $total_weight += $variation_weight;
-    //         }
-
-    //         $this->delivery_sum = $this->calculateDeliveryTotal($total_weight, $this->country_code);
-    //     }
-    // }
-
-    // public function computeGiftSum()
-    // {
-    //     $this->gift_sum = 0;
-    //     if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
-    //         $cart = Cart::where('cart_id', $this->cart_id)->first();
-    //         foreach ($cart->couture_variations as $variation) {
-    //             if ($variation->pivot->is_gift && $variation->pivot->with_wrapping) {
-    //                 $this->gift_sum += self::GIFT_WRAP_PRICE;
-    //             }
-    //             if ($variation->pivot->is_gift && $variation->pivot->with_card) {
-    //                 $this->gift_sum += self::GIFT_CARD_PRICE;
-    //             }
-    //         }
-    //     }
-    // }
 
     public function computeTotalWithVoucher()
     {

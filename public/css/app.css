@@ -8973,6 +8973,27 @@ input[type=checkbox]:focus {
 .payment-tunnel__payment img {
   max-height: 55px;
 }
+.payment-tunnel__in-shop {
+  width: 70%;
+  margin: auto;
+}
+.payment-tunnel__in-shop h2 {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  width: 100%;
+  padding: 10px 40px;
+  margin-bottom: 30px;
+}
+.payment-tunnel__in-shop__form label {
+  font-size: 0.9rem;
+}
+.payment-tunnel__in-shop__form__explanation {
+  margin-bottom: 20px;
+  border-bottom: solid 1px #D41C1B;
+  padding-bottom: 6px;
+  font-size: 1.1rem;
+}
 
 .payment-summary {
   width: 25%;
