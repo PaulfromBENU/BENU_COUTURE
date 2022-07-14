@@ -251,8 +251,8 @@ class GeneralController extends Controller
 
     public function startImport()
     {
-        // if(auth::check() && auth::user()->role == 'admin') {
-        if(1 == 1) {
+        if(auth::check() && auth::user()->role == 'admin') {
+        // if(1 == 1) {
             set_time_limit(3600);
             // $this->createModelsFolders();
             // Article::query()->update(['checked' => '1']);
@@ -264,7 +264,7 @@ class GeneralController extends Controller
             // $this->importCreationsFromSabine();
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
-            // $this->importTranslations();
+            $this->importTranslations();
         } else {
             return redirect()->route('login-fr');
         }
