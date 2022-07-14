@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
+use Filament\Forms\Components\Select;
 use Filament\Tables;
 
 class UserResource extends Resource
@@ -42,9 +43,19 @@ class UserResource extends Resource
                     ->email()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('role')
-                    ->required()
+                Forms\Components\TextInput::make('password')
+                    ->password()
                     ->maxLength(255),
+                Select::make('role')
+                    ->label('Role')
+                    ->options([
+                        'admin' => 'Administrator (full rights)',
+                        'vendor' => 'Shop vendor',
+                        'author' => 'Content Editor',
+                        'standard' => 'Basic user',
+                        'newsletter' => 'Newsletter subscriber',
+                        'guest_client' => 'Simple guest',
+                    ]),
                 Forms\Components\TextInput::make('first_name')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('last_name')
@@ -56,20 +67,37 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('phone')
                     ->tel()
                     ->maxLength(255),
+                Forms\Components\Toggle::make('is_over_18')
+                    ->required(),
+                Forms\Components\Toggle::make('legal_ok')
+                    ->required(),
+                Forms\Components\Toggle::make('last_conditions_agreed')
+                    ->required(),
+                Forms\Components\Toggle::make('newsletter')
+                    ->required(),
+                Forms\Components\TextInput::make('origin')
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('badge')
-                    ->required()
+                    ->default('standard')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('client_number')
                     ->required()
                     ->maxLength(255),
+                Select::make('favorite_language')
+                    ->label('Default language')
+                    ->options([
+                        'en' => 'English',
+                        'lu' => 'Luxemburgish',
+                        'de' => 'German',
+                        'fr' => 'French',
+                    ]),
                 Forms\Components\TextInput::make('rating')
-                    ->required()
+                    ->label('Rating # / 10')
+                    ->default('10')
                     ->maxLength(255),
                 Forms\Components\Textarea::make('general_comment')
-                    ->required()
+                    ->default('No comment')
                     ->maxLength(65535),
-                Forms\Components\Toggle::make('newsletter')
-                    ->required(),
             ]);
     }
 
@@ -77,38 +105,51 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('first_name')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('last_name')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('email')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('client_number')->searchable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime(),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime(),
                 Tables\Columns\TextColumn::make('last_login')
                     ->dateTime(),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('role'),
+                Tables\Columns\TextColumn::make('first_name'),
+                Tables\Columns\TextColumn::make('last_name'),
                 Tables\Columns\TextColumn::make('gender'),
                 Tables\Columns\TextColumn::make('company'),
                 Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\BooleanColumn::make('is_over_18'),
                 Tables\Columns\BooleanColumn::make('legal_ok'),
+                Tables\Columns\BooleanColumn::make('last_conditions_agreed'),
                 Tables\Columns\BooleanColumn::make('newsletter'),
                 Tables\Columns\TextColumn::make('origin'),
                 Tables\Columns\TextColumn::make('badge'),
+                Tables\Columns\TextColumn::make('client_number'),
+                Tables\Columns\TextColumn::make('favorite_language'),
                 Tables\Columns\TextColumn::make('rating'),
                 Tables\Columns\TextColumn::make('general_comment'),
-                Tables\Columns\TextColumn::make('role'),
-                Tables\Columns\TextColumn::make('created_at')
+                Tables\Columns\TextColumn::make('stripe_id'),
+                Tables\Columns\TextColumn::make('pm_type'),
+                Tables\Columns\TextColumn::make('pm_last_four'),
+                Tables\Columns\TextColumn::make('trial_ends_at')
+                    ->dateTime(),
+                Tables\Columns\BooleanColumn::make('delete_confirmation'),
+                Tables\Columns\TextColumn::make('delete_feedback'),
+                Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime(),
             ])
             ->filters([
                 //
             ]);
     }
-
+    
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-
+    
     public static function getPages(): array
     {
         return [
