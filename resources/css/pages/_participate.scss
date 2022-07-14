@@ -283,6 +283,10 @@
 				img {
 					object-fit: fill;
 					height: 100%;
+					@include mobile {
+						object-fit: cover;
+						width: 100%;
+					}
 				}
 			}
 			&__number {
@@ -314,6 +318,9 @@
 				padding: 7px 12px;
 				font: normal normal 600 14px/17px 'Barlow';
 				transition: bottom 0.4s;
+				@include mobile {
+					bottom: 0;
+				}
 			}
 		}
 		&__final {

@@ -9413,6 +9413,13 @@ input[type=checkbox]:focus {
      object-fit: fill;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .participate-smart__cards__card__img-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+}
 .participate-smart__cards__card__number {
   position: absolute;
   top: 40px;
@@ -9442,6 +9449,11 @@ input[type=checkbox]:focus {
   padding: 7px 12px;
   font: normal normal 600 14px/17px "Barlow";
   transition: bottom 0.4s;
+}
+@media (max-width: 767px) {
+  .participate-smart__cards__card__message {
+    bottom: 0;
+  }
 }
 .participate-smart__cards__final {
   width: 60%;
