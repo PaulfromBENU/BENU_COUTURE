@@ -268,18 +268,26 @@
 				.participate-smart__cards__card__number {
 					transform: scale(1.15);
 				}
+				.participate-smart__cards__card__message {
+					bottom: 0px;
+				}
 			}
 			&__img-container {
-				height: 50px;
+				height: 100px;
 				width: 100%;
 				position: absolute;
 				top: 0;
 				left: 0;
 				z-index: -1;
+				overflow: hidden;
+				img {
+					object-fit: fill;
+					height: 100%;
+				}
 			}
 			&__number {
 				position: absolute;
-				top: 25px;
+				top: 40px;
 				right: -16px;
 				font: normal normal 700 40px/30px 'Barlow';
 				color: white;
@@ -298,13 +306,14 @@
 			&__message {
 				position: absolute;
 				left: 0;
-				bottom: 0;
+				bottom: -50px;
 				background: $primary-color;
 				width: 100%;
 				color: $white;
 				text-align: left;
 				padding: 7px 12px;
 				font: normal normal 600 14px/17px 'Barlow';
+				transition: bottom 0.4s;
 			}
 		}
 		&__final {

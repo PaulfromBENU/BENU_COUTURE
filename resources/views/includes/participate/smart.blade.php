@@ -9,7 +9,7 @@
 		@for($i = 1; $i <= 6; $i++)
 		<div class="participate-smart__cards__card">
 			<div class="participate-smart__cards__card__img-container">
-				<img src="" />
+				<img src="{{ asset('images/pictures/BC_Participate_Smart_'.$i.'.jpg') }}" />
 			</div>
 			<div class="participate-smart__cards__card__number">
 				{{ $i }}
@@ -36,7 +36,7 @@
 		@for($i = 7; $i <= 8; $i++)
 		<div class="participate-smart__cards__card">
 			<div class="participate-smart__cards__card__img-container">
-				<img src="" />
+				<img src="{{ asset('images/pictures/BC_Participate_Smart_'.$i.'.jpg') }}" />
 			</div>
 			<div class="participate-smart__cards__card__number">
 				{{ $i }}

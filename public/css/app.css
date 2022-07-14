@@ -9396,17 +9396,26 @@ input[type=checkbox]:focus {
 .participate-smart__cards__card:hover .participate-smart__cards__card__number {
   transform: scale(1.15);
 }
+.participate-smart__cards__card:hover .participate-smart__cards__card__message {
+  bottom: 0px;
+}
 .participate-smart__cards__card__img-container {
-  height: 50px;
+  height: 100px;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  overflow: hidden;
+}
+.participate-smart__cards__card__img-container img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100%;
 }
 .participate-smart__cards__card__number {
   position: absolute;
-  top: 25px;
+  top: 40px;
   right: -16px;
   font: normal normal 700 40px/30px "Barlow";
   color: white;
@@ -9425,13 +9434,14 @@ input[type=checkbox]:focus {
 .participate-smart__cards__card__message {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -50px;
   background: #D41C1B;
   width: 100%;
   color: #FFFFFF;
   text-align: left;
   padding: 7px 12px;
   font: normal normal 600 14px/17px "Barlow";
+  transition: bottom 0.4s;
 }
 .participate-smart__cards__final {
   width: 60%;
