@@ -43,9 +43,12 @@ class UserResource extends Resource
                     ->email()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->maxLength(255),
+                // Forms\Components\TextInput::make('password')
+                //     ->password()
+                //     ->required()
+                //     ->minLength(8)
+                //     ->maxLength(255)
+                //     ->hiddenOn(Pages\EditUser::class),
                 Select::make('role')
                     ->label('Role')
                     ->options([
