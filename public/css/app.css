@@ -3986,7 +3986,7 @@ input[type=checkbox]:focus {
   border-radius: 8px;
   box-shadow: 0 10px 20px lightgrey;
   padding: 20px;
-  height: 140px;
+  height: 170px;
   overflow: hidden;
 }
 .welcome-others__svg-container svg {
