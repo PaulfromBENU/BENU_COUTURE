@@ -4,9 +4,9 @@
 	line-height: 2rem;
 	&__title {
 		text-align: center;
-		font: normal normal 700 44px/53px 'Barlow Condensed';
+		font: normal normal 700 38px/45px 'Barlow Condensed';
 		letter-spacing: 0px;
-		margin-bottom: 75px;
+		margin-bottom: 55px;
 	}
 	&__subtitle {
 		text-align: center;
@@ -21,6 +21,13 @@
 		letter-spacing: 0px;
 		margin-top: 65px;
 		margin-bottom: 32px;
+	}
+	&__section-title {
+		text-align: center;
+		font: normal normal 700 38px/45px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 75px;
+		color: $primary-color;
 	}
 	&__txt {
 		margin-bottom: 45px;
@@ -60,6 +67,187 @@
 			display: inline-block; /* Needed to add space between the bullet and the text */
 			width: 1em; /* Also needed for space (tweak if needed) */
 			margin-left: -1em; /* Also needed for space (tweak if needed) */
+		}
+	}
+	&__general {
+		position: relative;
+		&__menu-container {
+			position: absolute;
+			width: 15%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			&__menu {
+				position: sticky;
+				top: 200px;
+				padding: 20px;
+				border-radius: 12px;
+				z-index: 5;
+				background: $white;
+			}
+		}
+		&__content {
+			width: 100%;
+			position: relative;
+			&__slider {
+				overflow-x: auto;
+				width: 85%;
+				margin-left: 15%;
+				position: relative;
+				&__cards {
+					position: relative;
+					width: 100%;
+					&__card {
+						width: 300px;
+						min-width: 300px;
+						height: 320px;
+						border-radius: 8px;
+						box-shadow: lightgrey 0 0 10px;
+						margin: 10px;
+						position: relative;
+						overflow: hidden;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+						&__footer {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							background: $primary-color;
+							color: $white;
+							padding: 12px 10px;
+							&--number {
+								height: 50px;
+								width: 50px;
+								padding-top: 7px;
+								text-align: center;
+								color: $primary-color;
+								background: $white;
+								border-radius: 50%;
+								margin-right: 20px;
+								font: normal normal 700 26px/34px 'Barlow Condensed';
+							}
+							&--txt {
+								width: calc(100% - 70px);
+								font: normal normal 700 16px/24px 'Barlow Condensed';
+							}
+						}
+					}
+				}
+				&__bar {
+					margin-top: 25px;
+					margin-left: 15%;
+					width: 85%;
+					margin-bottom: 80px;
+					&__btn {
+						height: 80px;
+						width: 80px;
+						background: $white;
+						border: 2px solid $primary-color;
+						border-radius: 50%;
+						padding-top: 23px;
+						padding-left: 20px;
+						transition: all 0.2s;
+						cursor: pointer;
+						margin: 12px;
+						&:hover {
+							background: $primary-color;
+							.full-story__general__content__slider__bar__svg {
+								path {
+									fill: $white;
+								}
+							}
+						}
+						&--left {
+							transform: rotate(90deg);
+							transform-origin: center;
+						}
+						&--right {
+							transform: rotate(-90deg);
+							transform-origin: center;
+						}
+					}
+					&__svg {
+						height: 35px;
+						width: 35px;
+						path {
+							fill: $primary-color;
+						}
+					}
+					&__scroll {
+						position: relative;
+						height: 2px;
+						background: lightgrey;
+						align-self: center;
+						right: 0;
+						margin-right: 10px;
+						&--red {
+							left: 0;
+							top: -1px;
+							height: 4px;
+							border-radius: 2px;
+							background: $primary-color;
+							width: 25%;
+							animation: left 0.2s;
+						}
+					}
+				}
+			}
+			&__info-section {
+				&__picture {
+					width: 100%;
+					height: 500px;
+					overflow: hidden;
+					img {
+						object-fit: cover;
+					}
+				}
+				&__transition {
+					margin-top: 40px;
+					margin-bottom: 100px;
+					width: 100%;
+					height: 300px;
+					overflow: hidden;
+					img {
+						object-fit: cover;
+					}
+				}
+				&__txt {
+					padding: 50px 70px;
+					width: 70%;
+					margin: auto;
+					margin-top: -40px;
+					background: $white;
+					position: relative;
+					z-index: 2;
+					h4 {
+						color: $primary-color;
+						font: normal normal 700 25px/32px 'Barlow Condensed';
+						margin-bottom: 30px;
+						text-align: left;
+					}
+					h5 {
+						font: normal normal 700 25px/32px 'Barlow Condensed';
+						margin-bottom: 30px;
+						text-align: left;
+					}
+					&__paragraph {
+						font: normal normal 500 16px/22px 'Barlow';
+						margin-bottom: 60px;
+					}
+					&__highlight {
+						font: normal normal 600 19px/24px 'Barlow';
+						text-align: center;
+						background: $primary-color-light;
+						padding: 20px 40px;
+						border-radius: 12px;
+						margin-bottom: 60px;
+					}
+				}
+			}
 		}
 	}
 }
