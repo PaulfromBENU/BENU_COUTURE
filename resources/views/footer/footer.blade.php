@@ -53,9 +53,9 @@
 				</ul>
 				<h4>{{ __('footer.footer-title-5') }}</h4>
 				<div class="flex justify-start">
-					<a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="footer__social"><i class="fab fa-instagram"></i></a>
-					<a href="#" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://www.facebook.com/benuvillageesch/" target="_blank" class="footer__social"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/benu_village/" target="_blank" class="footer__social"><i class="fab fa-instagram"></i></a>
+					<a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 			</div>
 		</div>
