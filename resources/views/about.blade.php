@@ -54,7 +54,7 @@
 				<div class="full-story__general__content__slider__cards flex justify-start">
 					@for($i = 1; $i <= 7; $i++)
 					<div class="full-story__general__content__slider__cards__card" @if($i == 1) id="slider-card-1" @endif>
-						<img src="" />
+						<img src="{{ asset('images/pictures/about/about-slider-'.$i.'.jpg') }}" />
 						<div class="full-story__general__content__slider__cards__card__footer flex justify-start">
 							<div class="flex flex-col justify-center">
 								<p class="full-story__general__content__slider__cards__card__footer--number">
@@ -91,7 +91,7 @@
 			</h3>
 			<div class="full-story__general__content__info-section">
 				<div class="full-story__general__content__info-section__picture">
-					<img src="{{ asset('images/pictures/footer-img-1.png') }}">
+					<img src="{{ asset('images/pictures/about/about-transition-1.jpg') }}">
 				</div>
 				<div class="full-story__general__content__info-section__txt">
 					<h4>{{ __('about.section-2-subtitle-1') }}</h4>
@@ -102,7 +102,7 @@
 
 					<div class="flex justify-between flex-wrap mb-10">
 						<div class="w-2/5">
-							<img src="{{ asset('images/pictures/vouchers_img.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-1.jpg') }}">
 						</div>
 						<div class="w-3/5 pl-5">
 							<h5>
@@ -131,13 +131,13 @@
 							</p>
 						</div>
 						<div class="w-2/5">
-							<img src="{{ asset('images/pictures/vouchers_img.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-2.jpg') }}">
 						</div>
 					</div>
 				</div>
 
 				<div class="full-story__general__content__info-section__transition">
-					<img src="{{ asset('images/pictures/footer-img-1.png') }}">
+					<img src="{{ asset('images/pictures/about/about-transition-2.jpg') }}">
 				</div>
 
 				<div class="full-story__general__content__info-section__txt">
@@ -149,7 +149,7 @@
 
 					<div class="flex justify-between flex-wrap mb-10">
 						<div class="w-2/5">
-							<img src="{{ asset('images/pictures/vouchers_img.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-3.jpg') }}">
 						</div>
 						<div class="w-3/5 pl-5">
 							<h4>{{ __('about.section-2-subtitle-4') }}</h4>
@@ -195,7 +195,7 @@
 
 			<div class="full-story__general__content__info-section">
 				<div class="full-story__general__content__info-section__picture">
-					<img src="{{ asset('images/pictures/footer-img-1.png') }}">
+					<img src="{{ asset('images/pictures/about/about-transition-3.jpg') }}">
 				</div>
 				<div class="full-story__general__content__info-section__txt">
 					<p class="full-story__general__content__info-section__txt__paragraph">
@@ -203,12 +203,12 @@
 					</p>
 
 					<p class="w-1/2 m-auto text-center mb-10">
-						<img src="{{ asset('images/pictures/footer-img-1.png') }}">
+						<img src="{{ asset('images/pictures/about/about-content-4.jpg') }}">
 					</p>
 
 					<div class="flex justify-between flex-wrap mb-10">
 						<div class="w-2/5">
-							<img src="{{ asset('images/pictures/vouchers_img.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-5.jpg') }}">
 						</div>
 						<div class="w-3/5 pl-5">
 							<p class="full-story__general__content__info-section__txt__paragraph">
@@ -233,7 +233,7 @@
 							</p>
 						</div>
 						<div class="w-2/5">
-							<img src="{{ asset('images/pictures/vouchers_img.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-6.jpg') }}">
 						</div>
 					</div>
 				</div>

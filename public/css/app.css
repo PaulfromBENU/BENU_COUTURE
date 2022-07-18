@@ -5945,7 +5945,7 @@ input[type=checkbox]:focus {
 }
 .full-story__general__content__info-section__picture {
   width: 100%;
-  height: 500px;
+  height: 700px;
   overflow: hidden;
 }
 .full-story__general__content__info-section__picture img {
@@ -5953,10 +5953,10 @@ input[type=checkbox]:focus {
      object-fit: cover;
 }
 .full-story__general__content__info-section__transition {
-  margin-top: 40px;
-  margin-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   width: 100%;
-  height: 300px;
+  height: 600px;
   overflow: hidden;
 }
 .full-story__general__content__info-section__transition img {
@@ -5971,6 +5971,7 @@ input[type=checkbox]:focus {
   background: #FFFFFF;
   position: relative;
   z-index: 2;
+  border-radius: 12px;
 }
 .full-story__general__content__info-section__txt h4 {
   color: #D41C1B;
