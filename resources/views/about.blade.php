@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	{{ __('models.seo-title', ['name' => 'Caretta']) }}
+	{{ __('about.seo-title') }}
 @endsection
 
 @section('description')
-	{{ __('models.seo-description') }}
+	{{ __('about.seo-description') }}
 @endsection
 
 @section('breadcrumbs')
@@ -250,28 +250,42 @@
 @section('scripts')
 <script type="text/javascript">
 	$(function() {
+		$('.full-story__general__content__slider').animate({scrollLeft: 0}, 'fast');
+		$('.full-story__general__content__slider__bar__scroll--red').css('left', 0);
+
 		$('.full-story__general__content__slider__bar__btn--right').on('click', function() {
-			let leftPos = $('.full-story__general__content__slider').scrollLeft();
-  			$('.full-story__general__content__slider').animate({scrollLeft: leftPos + 100}, 'fast');
+			if (!$('.full-story__general__content__slider').is(':animated')) {
+				let leftPos = $('.full-story__general__content__slider').scrollLeft();
+				let fullSliderWidth = $('.full-story__general__content__slider').innerWidth();
+	  			$('.full-story__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 4}, 'fast');
 
-  			let leftPosScroll = parseInt($('.full-story__general__content__slider__bar__scroll--red').css('left'));
-  			if (leftPosScroll < ($('.full-story__general__content__slider__bar__scroll').width() * 0.75)) {
-  				$('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll + 80}, 'fast');
-  			} else {
-  				$('.full-story__general__content__slider__bar__scroll--red').css('left', $('.full-story__general__content__slider__bar__scroll').width() * 0.75);
-  			}
+	  			let leftPosScroll = parseInt($('.full-story__general__content__slider__bar__scroll--red').css('left'));
+	  			let fullBarWidth = $('.full-story__general__content__slider__bar__scroll').width();
+	  			let redBarWidth = fullBarWidth / 4;
+	  			if (leftPosScroll < (3 * redBarWidth - 20)) {//Margin to avoid bugs
+	  				$('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll + redBarWidth}, 'fast');
+	  			} else {
+	  				$('.full-story__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
+	  			}
+	  		}
 	 	});
-	 	$('.full-story__general__content__slider__bar__btn--left').on('click', function() {
-			let leftPos = $('.full-story__general__content__slider').scrollLeft();
-  			$('.full-story__general__content__slider').animate({scrollLeft: leftPos - 100}, 'fast');
 
-  			let leftPosScroll = $('.full-story__general__content__slider__bar__scroll--red').position().left;
-  			// console.log(leftPosScroll, $('.full-story__general__content__slider__bar__scroll').width());
-  			if ($('.full-story__general__content__slider__bar__scroll--red').position().left >= 80) {
-  				$('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll - 80}, 'fast');
-  			} else {
-  				$('.full-story__general__content__slider__bar__scroll--red').css('left', 0);
-  			}
+	 	$('.full-story__general__content__slider__bar__btn--left').on('click', function() {
+	 		if (!$('.full-story__general__content__slider').is(':animated')) {
+				let leftPos = $('.full-story__general__content__slider').scrollLeft();
+	  			let fullSliderWidth = $('.full-story__general__content__slider').innerWidth();
+	  			$('.full-story__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 4}, 'fast');
+
+	  			let leftPosScroll = $('.full-story__general__content__slider__bar__scroll--red').position().left;
+	  			let fullBarWidth = $('.full-story__general__content__slider__bar__scroll').width();
+	  			let redBarWidth = fullBarWidth / 4;
+	  			// console.log(leftPosScroll, $('.full-story__general__content__slider__bar__scroll').width());
+	  			if (leftPosScroll >= (fullBarWidth / 4) + 20) {
+	  				$('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll - fullBarWidth / 4}, 'fast');
+	  			} else {
+	  				$('.full-story__general__content__slider__bar__scroll--red').css('left', 0);
+	  			}
+	  		}
 	 	});
 
 	 	$('.full-story__general__content__slider').on('scroll', function() {
