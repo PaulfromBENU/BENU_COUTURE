@@ -1,4 +1,4 @@
-<section class="flex justify-between model-pres benu-container">
+<section class="flex justify-between flex-wrap model-pres benu-container">
 	<div class="model-pres__img-container">
 		@foreach($model_pictures as $picture)
             <img src="{{ asset('images/pictures/articles/'.$picture) }}" @if($loop->index > 0) style="display: none;" @endif>
@@ -12,6 +12,19 @@
             </div>
         @endif
 	</div>
+
+	<div class="model-pres__mobile-anchors mobile-only">
+		<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
+			{{ __('models.model-link-articles') }} @svg('model_arrow_down')
+		</a>
+		
+		@if($model->creation_accessories()->count() > 0)
+		<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
+			{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+		</a>
+		@endif
+	</div>
+
 	<div class="model-pres__desc">
 		@if($model->product_type == 0)
 			<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
@@ -48,19 +61,19 @@
 			{{ $localized_description }}
 		</p>
 		<div class="flex justify-start model-pres__desc__keywords">
-			<ul>
+			<ul class="w-1/2">
 				@for($i = 0; $i < 4; $i++)
 					@if(isset($keywords[$i]))
-					<li>@svg('list_cintre') {{ $keywords[$i] }}</li>
+					<li class="flex">@svg('list_cintre', 'w-1/5') <p class="w-4/5">{{ $keywords[$i] }}</p></li>
 					@endif
 				@endfor
 			</ul>
 			
 			@if(sizeof($keywords) > 4)
-			<ul>
+			<ul class="w-1/2">
 				@for($i = 4; $i < 8; $i++)
 					@if(isset($keywords[$i]))
-					<li>@svg('list_cintre') {{ $keywords[$i] }}</li>
+					<li class="flex">@svg('list_cintre', 'w-1/5') <p class="w-4/5">{{ $keywords[$i] }}</p></li>
 					@endif
 				@endfor
 			</ul>
@@ -93,7 +106,7 @@
 					</p>
 				</div>
 
-				<div class="flex">
+				<div class="flex mobile-hidden">
 					<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
 						{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 					</a>
