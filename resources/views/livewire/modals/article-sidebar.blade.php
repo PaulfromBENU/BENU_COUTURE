@@ -1,7 +1,7 @@
-<div class="article-sidebar flex justify-right">
+<div class="article-sidebar flex flex-col lg:flex-row justify-start lg:justify-right relative">
     @if($article_id != '0')
-        <div class="article-sidebar__img-container">
-
+        <!-- Hidden on mobile -->
+        <div class="article-sidebar__img-container mobile-hidden">
             @if($article->creation->partner != null)
             <div class="model-overview__img-container__partner-icon">
                 <div class="model-overview__img-container__partner-icon__content flex justify-between">
@@ -35,16 +35,70 @@
             </div>
             @endif
         </div>
-        <div class="article-sidebar__content">
 
+
+        @if(in_array(app()->getLocale(), ['lu', 'de']))
+        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-only" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @else
+        <div class="article-sidebar__content__close-container mobile-only" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @endif
+
+        <!-- Mobile only -->
+        <div class="article-sidebar__img-container-mobile relative mobile-only">
+            @if($content == 'overview')
+                @if($article->creation->partner != null)
+                <div class="model-overview__img-container__partner-icon">
+                    <div class="model-overview__img-container__partner-icon__content flex justify-between">
+                        <div>
+                            <p class="primary-color pl-2 pr-2 text-sm">
+                                <strong>{{ $article->creation->partner->name }}</strong>
+                            </p>
+                            <p class="pl-2 pr-2 text-sm">
+                                <em>{{ __('components.partner') }}</em>
+                            </p>
+                        </div>
+                        <div>
+                            @svg('icon_partenaire')
+                        </div>
+                    </div>
+                </div>
+                @endif
+
+                <div class="flex justify-between absolute" style="width: 70%; left: 15%; bottom: 20px;">
+                    <div class="article-sidebar__img-container-mobile__arrow article-sidebar__img-container-mobile__arrow--left">
+                        @svg('chevron-down')
+                    </div>
+                    <div class="article-sidebar__img-container-mobile__arrow article-sidebar__img-container-mobile__arrow--right">
+                        @svg('chevron-down')
+                    </div>
+                </div>
+
+                <div class="flex justify-start article-sidebar__img-container-mobile__images">
+                    @foreach($article_pictures as $picture)
+                        <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $article->creation->name }}" class="w-full">
+                    @endforeach
+                </div>
+            @endif
+        </div>
+
+
+        <div class="article-sidebar__content">
             @if(in_array(app()->getLocale(), ['lu', 'de']))
-            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-hidden" wire:click="closeSideBar">
                 <div class="article-sidebar__content__close article-sidebar__content__close--large">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
             </div>
             @else
-            <div class="article-sidebar__content__close-container" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close-container mobile-hidden" wire:click="closeSideBar">
                 <div class="article-sidebar__content__close">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
