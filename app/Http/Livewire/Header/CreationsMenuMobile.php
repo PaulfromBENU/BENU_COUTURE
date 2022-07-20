@@ -8,7 +8,7 @@ use App\Models\CreationGroup;
 use App\Models\Creation;
 use App\Traits\ArticleAnalyzer;
 
-class CreationsMenu extends Component
+class CreationsMenuMobile extends Component
 {
     use ArticleAnalyzer;
 
@@ -29,7 +29,7 @@ class CreationsMenu extends Component
     public $accessories;
     public $home_creations;
 
-    protected $listeners = ['loadCreations' => 'computeHeaderContent'];
+    protected $listeners = ['loadCreationsMobile' => 'computeMenuContent'];
 
     public function mount()
     {
@@ -49,11 +49,9 @@ class CreationsMenu extends Component
         $this->kids_accessories = [];
         $this->accessories = [];
         $this->home_creations = [];
-
-        // $this->computeHeaderContent();
     }
 
-    public function computeHeaderContent()
+    public function computeMenuContent()
     {
         if(!$this->already_loaded) {
             $category_query = "name_".app()->getLocale();
@@ -61,7 +59,6 @@ class CreationsMenu extends Component
             $ladies_id = CreationGroup::where('filter_key', 'ladies')->first()->id;
             $gentlemen_id = CreationGroup::where('filter_key', 'gentlemen')->first()->id;
             $kids_id = CreationGroup::where('filter_key', 'kids')->first()->id;
-            //$home_id = CreationGroup::where('filter_key', 'home')->first()->id;
             $accessories_id = CreationGroup::where('filter_key', 'accessories')->first()->id;
 
             foreach ($this->getAvailableCreations() as $creation) {
@@ -122,13 +119,6 @@ class CreationsMenu extends Component
                         $this->accessories[$query] = $filter_key;
                     }
                 }
-
-                // Fill Home creations arrays
-                // if (!isset($this->home_creations[$query])) {
-                //     if ($creation->creation_groups->contains($home_id)) {
-                //         $this->home_creations[$query] = $filter_key;
-                //     }
-                // }
             }
 
             $this->adults_clothes = array_merge($this->unisex_clothes, $this->ladies_clothes, $this->gentlemen_clothes);
@@ -152,6 +142,6 @@ class CreationsMenu extends Component
 
     public function render()
     {
-        return view('livewire.header.creations-menu');
+        return view('livewire.header.creations-menu-mobile');
     }
 }
