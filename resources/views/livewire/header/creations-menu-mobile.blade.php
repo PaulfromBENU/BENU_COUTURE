@@ -128,7 +128,7 @@
             </div>
             <div class="side-mobile__creations__list side-mobile__creations__list--hidden">
     <!--             <h4><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories']) }}">{{ __('header.menu-title-2') }}</a></h4> -->
-                <ul class="side-mobile__creations__list__links">
+                <ul class="side-mobile__creations__list__links mt-3">
                     @foreach($accessories as $category => $link_query)
                         <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'categories' => $link_query]) }}">{{ $category }}</a></li>
                     @endforeach

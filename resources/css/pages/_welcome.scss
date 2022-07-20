@@ -519,10 +519,18 @@
 					}
 				}
 			}
+			&--active {
+				color: $primary-color;
+				font-weight: 600;
+			}
 			&__svg {
 				height: 18px;
 				width: 18px;
 				margin-right: 10px;
+				transform: rotate(0deg);
+				&--open {
+					transform: rotate(180deg);
+				}
 				path {
 					fill: $primary-color;
 				}
@@ -531,6 +539,7 @@
 		&__list {
 			overflow: hidden;
 			transition: all 0.2s;
+
 			&--hidden {
 				max-height: 0;
 			}
@@ -540,12 +549,14 @@
 			h4 {
 				font: normal normal 600 16px/19px 'Barlow Condensed';
 				color: $primary-color;
-				margin-top: 7px;
-				margin-bottom: 10px;
+				margin-top: 15px;
+				margin-bottom: 15px;
 			}
 			&__links {
-				font: normal normal 500 15px/19px 'Barlow Condensed';
+				font: normal normal 500 16px/19px 'Barlow Condensed';
 				li {
+					padding-top: 4px;
+					padding-bottom: 4px;
 					margin-bottom: 8px;
 					padding-left: 7px;
 				}

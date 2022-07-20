@@ -5918,9 +5918,13 @@ $(function () {
       if (menuList.hasClass('side-mobile__creations__list--hidden')) {
         menuList.removeClass('side-mobile__creations__list--hidden');
         menuList.addClass('side-mobile__creations__list--visible');
+        $(this).parent().find('.side-mobile__creations__title__svg').addClass('side-mobile__creations__title__svg--open');
+        $(this).addClass('side-mobile__creations__title--active');
       } else {
         menuList.removeClass('side-mobile__creations__list--visible');
         menuList.addClass('side-mobile__creations__list--hidden');
+        $(this).parent().find('.side-mobile__creations__title__svg').removeClass('side-mobile__creations__title__svg--open');
+        $(this).removeClass('side-mobile__creations__title--active');
       }
     }
   });

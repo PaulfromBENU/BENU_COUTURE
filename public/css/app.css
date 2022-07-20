@@ -4287,10 +4287,18 @@ input[type=checkbox]:focus {
 .side-mobile__creations__title:hover .side-mobile__creations__title__svg path {
   fill: #FFFFFF;
 }
+.side-mobile__creations__title--active {
+  color: #D41C1B;
+  font-weight: 600;
+}
 .side-mobile__creations__title__svg {
   height: 18px;
   width: 18px;
   margin-right: 10px;
+  transform: rotate(0deg);
+}
+.side-mobile__creations__title__svg--open {
+  transform: rotate(180deg);
 }
 .side-mobile__creations__title__svg path {
   fill: #D41C1B;
@@ -4310,13 +4318,15 @@ input[type=checkbox]:focus {
 .side-mobile__creations__list h4 {
   font: normal normal 600 16px/19px "Barlow Condensed";
   color: #D41C1B;
-  margin-top: 7px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .side-mobile__creations__list__links {
-  font: normal normal 500 15px/19px "Barlow Condensed";
+  font: normal normal 500 16px/19px "Barlow Condensed";
 }
 .side-mobile__creations__list__links li {
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin-bottom: 8px;
   padding-left: 7px;
 }
