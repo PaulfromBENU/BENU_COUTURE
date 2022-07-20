@@ -1879,6 +1879,15 @@ input[type=checkbox]:focus {
   font-weight: 500;
 }
 @media (max-width: 767px) {
+  .header__main-menu__icons__btn__cart-counter {
+    bottom: 24px;
+    right: 30%;
+    width: 19px;
+    height: 19px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 767px) {
   .header__main-menu__icons__lang-container {
     position: absolute;
     right: 10px;
@@ -4165,6 +4174,7 @@ input[type=checkbox]:focus {
   text-align: center;
   width: 33%;
   cursor: pointer;
+  position: relative;
 }
 .welcome-mobile-nav__link button, .welcome-mobile-nav__link a {
   margin: auto !important;
@@ -6369,10 +6379,21 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 35px;
 }
+@media (max-width: 767px) {
+  .partners__side-title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    text-align: center;
+  }
+}
 .partners__side-txt {
   text-align: left;
   font: normal normal 500 16px/28px "Barlow";
   letter-spacing: 0px;
+}
+@media (max-width: 767px) {
+  .partners__side-txt {
+    margin-bottom: 20px;
+  }
 }
 .partners__box {
   padding: 34px;
@@ -6388,6 +6409,11 @@ input[type=checkbox]:focus {
   width: 30%;
   height: auto;
 }
+@media (max-width: 767px) {
+  .partners__box__img-container {
+    width: 100%;
+  }
+}
 .partners__box__img-container img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -6396,10 +6422,21 @@ input[type=checkbox]:focus {
 .partners__box__txt-container {
   width: 65%;
 }
+@media (max-width: 767px) {
+  .partners__box__txt-container {
+    width: 100%;
+  }
+}
 .partners__box__title {
   text-align: left;
   font: normal normal 700 28px/34px "Barlow Condensed";
   letter-spacing: 0.28px;
+}
+@media (max-width: 767px) {
+  .partners__box__title {
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
 }
 .partners__box__desc {
   margin-top: 25px;
@@ -8955,11 +8992,22 @@ input[type=checkbox]:focus {
   margin-top: 72px;
   width: 74.5%;
 }
+@media (max-width: 767px) {
+  .cart-content {
+    width: 100%;
+  }
+}
 .cart-content h1 {
   text-align: left;
   font: normal normal 700 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
   margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .cart-content h1 {
+    text-align: center;
+    font: normal normal 700 28px/34px "Barlow Condensed";
+  }
 }
 .cart-content__banner {
   width: 100%;
@@ -8971,6 +9019,11 @@ input[type=checkbox]:focus {
   padding-top: 9px;
   padding-bottom: 9px;
   margin-bottom: 70px;
+}
+@media (max-width: 767px) {
+  .cart-content__banner {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+  }
 }
 .cart-content__banner--couture {
   background: #D41C1B;
@@ -8987,6 +9040,11 @@ input[type=checkbox]:focus {
   padding-top: 50px;
   padding-bottom: 50px;
   border-bottom: solid 1px #CFCFCF;
+}
+@media (max-width: 767px) {
+  .cart-content__article {
+    padding-top: 30px;
+  }
 }
 .cart-content__article__img-container {
   border-radius: 8px;
@@ -9005,6 +9063,11 @@ input[type=checkbox]:focus {
 .cart-content__article__name {
   padding-left: 12%;
 }
+@media (max-width: 767px) {
+  .cart-content__article__name {
+    margin-bottom: 15px;
+  }
+}
 .cart-content__article__name h4 {
   text-align: left;
   font: normal normal 600 42px/50px "Barlow Condensed";
@@ -9012,11 +9075,24 @@ input[type=checkbox]:focus {
   color: #D41C1B;
   padding-top: 30px;
 }
+@media (max-width: 767px) {
+  .cart-content__article__name h4 {
+    padding-top: 0px;
+    font: normal normal 600 28px/34px "Barlow Condensed";
+  }
+}
 .cart-content__article__name__checkbox {
   margin-top: 65px;
   text-align: left;
   font: normal normal 500 16px/36px "Barlow";
   letter-spacing: 0px;
+}
+@media (max-width: 767px) {
+  .cart-content__article__name__checkbox {
+    margin-top: 10px;
+    font: normal normal 500 16px/24px "Barlow";
+    margin-bottom: 10px;
+  }
 }
 .cart-content__article__name__checkbox input {
   border-radius: 4px;
@@ -9025,13 +9101,31 @@ input[type=checkbox]:focus {
   height: 20px;
   margin-top: 7px;
 }
+@media (max-width: 767px) {
+  .cart-content__article__name__checkbox input {
+    width: 30px;
+    height: 30px;
+  }
+}
 .cart-content__article__name__checkbox label {
   min-width: 190px;
+}
+@media (max-width: 767px) {
+  .cart-content__article__name__checkbox label {
+    margin-left: 5px;
+    margin-top: 9px;
+  }
 }
 .cart-content__article__name__checkbox svg {
   margin-left: 10px;
   margin-top: 4px;
   flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .cart-content__article__name__checkbox svg {
+    margin-top: 8px;
+    margin-left: 5px;
+  }
 }
 .cart-content__article__name__checkbox__svg-active path {
   fill: #D41C1B;
@@ -9052,12 +9146,34 @@ input[type=checkbox]:focus {
   margin-top: 39px;
   margin-left: 15%;
 }
+@media (max-width: 767px) {
+  .cart-content__article__size {
+    margin: 0;
+    margin-top: 5px;
+    width: 50%;
+    border-radius: 20px;
+    margin-bottom: 5px;
+  }
+}
+.cart-content__article__color-mobile {
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  margin-top: 8px;
+}
 .cart-content__article__color {
   height: 36px;
   width: 36px;
   border-radius: 50%;
   margin-left: 25%;
   margin-top: 38px;
+}
+@media (max-width: 767px) {
+  .cart-content__article__color {
+    height: 18px;
+    width: 18px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 7px;
+  }
 }
 .cart-content__article__number {
   text-align: left;
@@ -9066,12 +9182,41 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-top: 30px;
 }
+@media (max-width: 767px) {
+  .cart-content__article__number {
+    padding-left: 0;
+    margin-top: 0px;
+    font: normal normal 500 16px/28px "Barlow Condensed";
+  }
+}
+.cart-content__article__number__counter {
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  text-align: center;
+  border: solid 2px #D41C1B;
+  padding-top: 0px;
+  color: #D41C1B;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.cart-content__article__number__counter:hover {
+  background: #D41C1B;
+  color: #FFFFFF;
+}
 .cart-content__article__price {
   text-align: left;
   font: normal normal 500 42px/50px "Barlow Condensed";
   letter-spacing: 0px;
   margin-top: 30px;
   padding-left: 10px;
+}
+@media (max-width: 767px) {
+  .cart-content__article__price {
+    padding-left: 0;
+    margin-top: 5px;
+  }
 }
 .cart-content__article__icons {
   position: relative;
@@ -9083,6 +9228,13 @@ input[type=checkbox]:focus {
   top: 0px;
   font-size: 1.6rem;
   color: #D41C1B;
+}
+@media (max-width: 767px) {
+  .cart-content__article__icons__heart {
+    right: 7px;
+    top: 72%;
+    font-size: 2.1rem;
+  }
 }
 .cart-content__article__icons__heart__icon {
   position: absolute;
@@ -9113,6 +9265,13 @@ input[type=checkbox]:focus {
   font-size: 1.6rem;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .cart-content__article__icons__trash {
+    right: 7px;
+    top: 2.5%;
+    font-size: 2.5rem;
+  }
+}
 .cart-content__article__icons__trash:hover svg path {
   fill: grey;
   transition: fill 0.2s;
@@ -9122,6 +9281,11 @@ input[type=checkbox]:focus {
   margin-top: 72px;
   width: 22%;
   position: relative;
+}
+@media (max-width: 767px) {
+  .cart-summary-container {
+    width: 100%;
+  }
 }
 .cart-summary-container__sticky-container {
   position: -webkit-sticky;

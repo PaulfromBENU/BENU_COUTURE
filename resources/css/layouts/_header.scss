@@ -226,6 +226,13 @@
 					font-size: 0.85rem;
 					text-align: center;
 					font-weight: 500;
+					@include mobile {
+						bottom: 24px;
+						right: 30%;
+						width: 19px;
+						height: 19px;
+						font-size: 0.8rem;
+					}
 				}
 			}
 			&__lang-container {

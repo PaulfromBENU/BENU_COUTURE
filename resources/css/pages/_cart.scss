@@ -1,11 +1,18 @@
 .cart-content {
 	margin-top: 72px;
 	width: 74.5%;
+	@include mobile {
+		width: 100%;
+	}
 	h1 {
 		text-align: left;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 40px;
+		@include mobile {
+			text-align: center;
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+		}
 	}
 	&__banner {
 		width: 100%;
@@ -17,6 +24,9 @@
 		padding-top: 9px;
 		padding-bottom: 9px;
 		margin-bottom: 70px;
+		@include mobile {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+		}
 		&--couture {
 			background: $benu_couture;
 		}
@@ -35,6 +45,9 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 		border-bottom: solid 1px #CFCFCF;
+		@include mobile {
+			padding-top: 30px;
+		}
 		&__img-container {
 			border-radius: 8px;
 			width: calc(100% - 10px);
@@ -51,32 +64,56 @@
 		}
 		&__name {
 			padding-left: 12%;
+			@include mobile {
+				margin-bottom: 15px;
+			}
 			h4 {
 				text-align: left;
 				font: normal normal 600 42px/50px 'Barlow Condensed';
 				letter-spacing: 0px;
 				color: $primary-color;
 				padding-top: 30px;
+				@include mobile {
+					padding-top: 0px;
+					font: normal normal 600 28px/34px 'Barlow Condensed';
+				}
 			}
 			&__checkbox {
 				margin-top: 65px;
 				text-align: left;
 				font: normal normal 500 16px/36px 'Barlow';
 				letter-spacing: 0px;
+				@include mobile {
+					margin-top: 10px;
+					font: normal normal 500 16px/24px 'Barlow';
+					margin-bottom: 10px;
+				}
 				input {
 					border-radius: 4px;
 					border: 2px solid #D0D0D0;
 					width: 20px;
 					height: 20px;
 					margin-top: 7px;
+					@include mobile {
+						width: 30px;
+						height: 30px;
+					}
 				}
 				label {
 					min-width: 190px;
+					@include mobile {
+						margin-left: 5px;
+						margin-top: 9px;
+					}
 				}
 				svg {
 					margin-left: 10px;
 					margin-top: 4px;
 					flex-shrink: 0;
+					@include mobile {
+						margin-top: 8px;
+						margin-left: 5px;
+					}
 				}
 				&__svg-active {
 					path {
@@ -98,6 +135,17 @@
 			text-transform: uppercase;
 			margin-top: 39px;
 			margin-left: 15%;
+			@include mobile {
+				margin: 0;
+				margin-top: 5px;
+				width: 50%;
+				border-radius: 20px;
+				margin-bottom: 5px;
+			}
+		}
+		&__color-mobile {
+			font: normal normal 500 16px/28px 'Barlow Condensed';
+			margin-top: 8px;
 		}
 		&__color {
 			height: 36px;
@@ -105,6 +153,13 @@
 			border-radius: 50%;
 			margin-left: 25%;
 			margin-top: 38px;
+			@include mobile {
+				height: 18px;
+				width: 18px;
+				margin-top: 5px;
+				margin-left: 0px;
+				margin-right: 7px;
+			}
 		}
 		&__number {
 			text-align: left;
@@ -112,6 +167,27 @@
 			font: normal normal 500 42px/50px 'Barlow Condensed';
 			letter-spacing: 0px;
 			margin-top: 30px;
+			@include mobile {
+				padding-left: 0;
+				margin-top: 0px;
+				font: normal normal 500 16px/28px 'Barlow Condensed';
+			}
+			&__counter {
+				margin-right: 15px;
+				width: 32px;
+				height: 32px;
+				border-radius: 6px;
+				text-align: center;
+				border: solid 2px $primary-color;
+				padding-top: 0px;
+				color: $primary-color;
+				transition: all 0.2s;
+				cursor: pointer;
+				&:hover {
+					background: $primary-color;
+					color: $white;
+				}
+			}
 		}
 		&__price {
 			text-align: left;
@@ -119,6 +195,10 @@
 			letter-spacing: 0px;
 			margin-top: 30px;
 			padding-left: 10px;
+			@include mobile {
+				padding-left: 0;
+				margin-top: 5px;
+			}
 		}
 		&__icons {
 			position: relative;
@@ -129,6 +209,11 @@
 				top: 0px;
 				font-size: 1.6rem;
 				color: $primary-color;
+				@include mobile {
+					right: 7px;
+					top: 72%;
+					font-size: 2.1rem;
+				}
 				&__icon {
 					position: absolute;
 					right: 0px;
@@ -160,6 +245,11 @@
 				top: 13px;
 				font-size: 1.6rem;
 				cursor: pointer;
+				@include mobile {
+					right: 7px;
+					top: 2.5%;
+					font-size: 2.5rem;
+				}
 				&:hover {
 					svg {
 						path {
@@ -177,6 +267,9 @@
 	margin-top: 72px;
 	width: 22%;
 	position: relative;
+	@include mobile {
+		width: 100%;
+	}
 	&__sticky-container {
 		position: sticky;
 		top: 160px;

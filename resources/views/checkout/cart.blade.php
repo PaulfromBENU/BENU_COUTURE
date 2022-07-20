@@ -46,12 +46,12 @@
 @endsection
 
 @section('main-content')
-<div class="flex justify-between benu-container mb-10 pb-10">
+<div class="flex flex-col lg:flex-row justify-start lg:justify-between benu-container mb-10 pb-10">
 	<section class="cart-content" @if($cart_id == 0 || $cart_count == 0) style="width: 100%;" @endif>
 		<h1>{{ __('cart.your-cart') }}</h1>
 
 		@if($cart_id == 0 || $cart_count == 0)
-			<p class="bg-gray-100 text-center text-4xl font-bold primary-color p-4" style="border-radius: 8px; font-family: 'Barlow Condensed';">
+			<p class="bg-gray-100 text-center text-2xl lg:text-4xl font-bold primary-color p-4" style="border-radius: 8px; font-family: 'Barlow Condensed';">
 				{{ __('cart.no-article-for-the-moment') }}
 			</p>
 			<p class="text-center mt-5 pt-5 mb-10">
