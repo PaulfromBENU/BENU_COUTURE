@@ -110,20 +110,74 @@
 			<section>
 				<div class="flex justify-around create-news__title">
 					<div class="create-news__title__input">
+						<label>Tag 1:</label><br/>
+						<select wire:model="article_tag_1_en">
+							<option value="" style="color: lightgrey;">Tag 1 (in English)</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}</option>
+						</select>
+						<!-- <input type="text" name="article_tag_1_fr" wire:model.defer="article_tag_1_fr" placeholder="Tag 1 in French"> -->
+					</div>
+					<div class="create-news__title__input">
+						<label>Tag 2:</label><br/>
+						<select wire:model="article_tag_2_en">
+							<option value="" style="color: lightgrey;">Tag 2 (in English)</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}</option>
+						</select>
+					</div>
+					<div class="create-news__title__input">
+						<label>Tag 3:</label><br/>
+						<select wire:model="article_tag_3_en">
+							<option value="" style="color: lightgrey;">Tag 3 (in English)</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}</option>
+						</select>
+					</div>
+				</div>
+
+
+
+<!-- 				<div class="flex justify-around create-news__title">
+					<div class="create-news__title__input">
 						<label>Tag 1 FR:</label><br/>
+						<select wire:model="article_tag_1_fr" placeholder="Tag 1 in French">
+							<option value="" style="color: lightgrey;">Tag 1 in French</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'fr'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'fr'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'fr'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'fr'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'fr'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'fr'))) }}</option>
+						</select>
 						<input type="text" name="article_tag_1_fr" wire:model.defer="article_tag_1_fr" placeholder="Tag 1 in French">
 					</div>
 					<div class="create-news__title__input">
 						<label>Tag 1 LU:</label><br/>
-						<input type="text" name="article_tag_1_lu" wire:model.defer="article_tag_1_lu" placeholder="Tag 1 in Luxemburgish">
+						<select wire:model="article_tag_1_lu" placeholder="Tag 1 in Luxemburgish">
+							<option value="" style="color: lightgrey;">Tag 1 in Luxemburgish</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'lu'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'lu'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'lu'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'lu'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'lu'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'lu'))) }}</option>
+						</select>
 					</div>
 					<div class="create-news__title__input">
 						<label>Tag 1 DE:</label><br/>
-						<input type="text" name="article_tag_1_de" wire:model.defer="article_tag_1_de" placeholder="Tag 1 in German">
+						<select wire:model="article_tag_1_de" placeholder="Tag 1 in German">
+							<option value="" style="color: lightgrey;">Tag 1 in German</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'de'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'de'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'de'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'de'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'de'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'de'))) }}</option>
+						</select>
 					</div>
 					<div class="create-news__title__input">
 						<label>Tag 1 EN:</label><br/>
-						<input type="text" name="article_tag_1_en" wire:model.defer="article_tag_1_en" placeholder="Tag 1 in English">
+						<select wire:model="article_tag_1_en" placeholder="Tag 1 in English">
+							<option value="" style="color: lightgrey;">Tag 1 in English</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-events', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-what-s-new', [], 'en'))) }}</option>
+							<option value="{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}">{{ ucfirst(strtolower(__('news.tag-environment', [], 'en'))) }}</option>
+						</select>
 					</div>
 				</div>
 				<div class="flex justify-around create-news__title">
@@ -161,7 +215,7 @@
 						<label>Tag 3 EN:</label><br/>
 						<input type="text" name="article_tag_3_en" wire:model.defer="article_tag_3_en" placeholder="Tag 3 in English">
 					</div>
-				</div>
+				</div> -->
 			</section>
 
 			<h2>
