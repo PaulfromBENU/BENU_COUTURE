@@ -1727,6 +1727,9 @@ select {
 .pb-3 {
   padding-bottom: 0.75rem;
 }
+.pr-0 {
+  padding-right: 0px;
+}
 .text-left {
   text-align: left;
 }
@@ -3139,6 +3142,18 @@ select {
 
   .lg\:pt-3 {
     padding-top: 0.75rem;
+  }
+
+  .lg\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .lg\:pr-0 {
+    padding-right: 0px;
+  }
+
+  .lg\:pl-0 {
+    padding-left: 0px;
   }
 
   .lg\:text-left {

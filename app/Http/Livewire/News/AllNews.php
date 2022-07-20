@@ -19,6 +19,7 @@ class AllNews extends Component
             $this->all_news = NewsArticle::query()
                             ->where('tag_1_'.session('locale'), $tag)
                             ->orWhere('tag_2_'.session('locale'), $tag)
+                            ->orWhere('tag_3_'.session('locale'), $tag)
                             ->where('is_ready', '1')
                             ->orderBy('updated_at', 'desc')
                             ->get();

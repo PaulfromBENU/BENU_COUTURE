@@ -163,7 +163,7 @@
 	}
 	&__date {
 		font: normal normal 500 16px/28px 'Barlow Condensed';
-		margin-bottom: 58px;
+		margin-bottom: 20px;
 	}
 	&__txt {
 		text-align: left;
@@ -229,6 +229,9 @@
 			box-shadow: lightgrey 0 0 10px;
 			height: 150px;
 			transition: all 0.2s;
+			@include mobile {
+				width: 100%;
+			}
 			&:hover {
 				box-shadow: $primary-color-light 0 0 15px;
 				h3 {

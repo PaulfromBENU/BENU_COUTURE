@@ -6586,7 +6586,7 @@ input[type=checkbox]:focus {
 }
 .single-news__date {
   font: normal normal 500 16px/28px "Barlow Condensed";
-  margin-bottom: 58px;
+  margin-bottom: 20px;
 }
 .single-news__txt {
   text-align: left;
@@ -6654,6 +6654,11 @@ input[type=checkbox]:focus {
   box-shadow: lightgrey 0 0 10px;
   height: 150px;
   transition: all 0.2s;
+}
+@media (max-width: 767px) {
+  .single-news__prev-next__block {
+    width: 100%;
+  }
 }
 .single-news__prev-next__block:hover {
   box-shadow: #F9E2E2 0 0 15px;
