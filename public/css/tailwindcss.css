@@ -2824,6 +2824,14 @@ select {
     width: 50%;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
   .md\:max-w-md {
     max-width: 28rem;
   }
@@ -2874,6 +2882,10 @@ select {
 
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:border-t-0 {

@@ -5,6 +5,9 @@
 	overflow: hidden;
 	position: relative;
 	height: min(85vh, 900px);
+	@include tablet {
+		height: auto;
+	}
 	@include mobile {
 		height: auto;
 	}
@@ -14,6 +17,10 @@
 		z-index: 2;
 		top: 0;
 		left: 0;
+		@include tablet {
+			padding-top: 30px;
+			// height: 550px;
+		}
 		@include mobile {
 			padding-top: 10px;
 			height: 550px;
@@ -24,6 +31,9 @@
 			background: $primary-color-light 0% 0% no-repeat padding-box;
 			border-radius: 8px;
 			width: fit-content;
+			@include tablet {
+				margin-bottom: 25vh;
+			}
 			@include mobile {
 				width: 100%;
 				overflow-x: auto;
@@ -59,6 +69,10 @@
 			letter-spacing: 0px;
 			color: $dark-text;
 			margin-bottom: 55px;
+			@include tablet {
+				font: normal normal bold 35px/42px 'Barlow Condensed';
+				margin-bottom: 35px;
+			}
 			@include mobile {
 				font: normal normal bold 30px/38px 'Barlow Condensed';
 				margin-bottom: 35px;
@@ -71,6 +85,12 @@
 			letter-spacing: 0px;
 			color: #2E1739;
 			margin-bottom: 30px;
+			@include tablet {
+				width: 100%;
+				margin-bottom: 20px;
+				font: normal normal 500 16px/28px 'Barlow';
+				// min-height: 300px;
+			}
 			@include mobile {
 				width: 100%;
 				margin-bottom: 20px;
@@ -130,6 +150,9 @@
 	&__left {
 		width: 50%;
 		margin-top: 50px;
+		@include tablet {
+			width: 100%;
+		}
 		@include mobile {
 			width: 100%;
 		}
@@ -152,6 +175,10 @@
 			font: normal normal 300 40px/48px 'Barlow Condensed';
 			letter-spacing: 0.36px;
 			color: $dark-text;
+			@include tablet {
+				text-align: center;
+				font: normal normal 300 35px/40px 'Barlow Condensed';
+			}
 			@include mobile {
 				text-align: center;
 				font: normal normal 300 30px/34px 'Barlow Condensed';
@@ -163,6 +190,12 @@
 			letter-spacing: 0px;
 			color: $primary-color;
 			margin-top: -25px;
+			@include tablet {
+				text-align: center;
+				font: normal normal 600 70px/60px 'Barlow Condensed';
+				margin-top: 5px;
+				margin-bottom: 40px;
+			}
 			@include mobile {
 				text-align: center;
 				font: normal normal 600 42px/40px 'Barlow Condensed';
@@ -172,6 +205,9 @@
 		}
 		&__links {
 			margin-bottom: 20%;
+			@include tablet {
+				margin-bottom: 0px;
+			}
 			@include mobile {
 				margin-bottom: 40px;
 			}
@@ -189,6 +225,9 @@
 		//max-height: 1072px;
 		overflow: hidden;
 		//padding-top: 40px;
+		@include tablet {
+			margin: auto;
+		}
 		@include mobile {
 			width: 100%;
 		}
@@ -204,6 +243,9 @@
 .welcome-creations {
 	min-height: 100vh;
 	padding: 79px 100px;
+	@include tablet {
+		padding: 60px 30px;
+	}
 	@include mobile {
 		padding: 50px 10px;
 	}
@@ -247,6 +289,9 @@
 		letter-spacing: 0px;
 		color: $dark-text;
 		margin-bottom: 26px;
+		@include tablet {
+			font: normal normal 700 34px/40px 'Barlow Condensed';
+		}
 		@include mobile {
 			font: normal normal 700 28px/32px 'Barlow Condensed';
 		}
@@ -259,6 +304,10 @@
 		width: 45%;
 		margin: auto;
 		margin-bottom: 50px;
+		@include tablet {
+			width: 70%;
+			font: normal normal 500 16px/28px 'Barlow';
+		}
 		@include mobile {
 			width: 80%;
 			font: normal normal 500 16px/28px 'Barlow';
@@ -279,6 +328,9 @@
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		color: $dark-text;
+		@include tablet {
+			font: normal normal 700 34px/40px 'Barlow Condensed';
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 		}
@@ -290,6 +342,10 @@
 		color: $primary-color;
 		padding: 20px;
 		margin-bottom: 10px;
+		@include tablet {
+			font: normal normal 600 65px/85px 'Barlow Condensed';
+			margin-bottom: 20px;
+		}
 		@include mobile {
 			font: normal normal 600 48px/70px 'Barlow Condensed';
 			margin-bottom: 20px;

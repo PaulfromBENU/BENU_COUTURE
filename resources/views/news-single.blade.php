@@ -38,7 +38,7 @@ $localized_label = "link_label_".app()->getLocale();
 @endsection
 
 @section('main-content')
-	<div class="text-center all-news w-1/2 m-auto">
+	<div class="text-center all-news md:w-4/5 lg:w-1/2 m-auto">
 		<h4 class="single-news__subtitle">{{ __('news.news-small-title') }}</h4>
 		<h1 class="single-news__title">{{ $news->$localized_title }}</h1>
 		<h5 class="single-news__date">{{ $news->created_at->format('d\/m\/Y') }}</h5>

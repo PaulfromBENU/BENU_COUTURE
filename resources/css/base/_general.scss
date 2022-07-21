@@ -279,6 +279,9 @@ body, html {
 	left: 0;
 	width: 100vw;
 	z-index: 1;
+	@include tablet {
+		padding-top: 100px;
+	}
 	@include mobile {
 		padding-top: 90px;
 	}
@@ -577,8 +580,8 @@ input[type="checkbox"] {
 		visibility: hidden;
 		display: none;
 	}
-	@include tablet {
-		visibility: hidden;
-		display: none;
-	}
+	// @include tablet {
+	// 	visibility: hidden;
+	// 	display: none;
+	// }
 }

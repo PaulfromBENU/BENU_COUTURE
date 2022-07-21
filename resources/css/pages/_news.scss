@@ -63,6 +63,12 @@
 		margin-bottom: 30px;
 		box-shadow: lightgrey 0 2px 10px;
 		transition: all 0.3s;
+		@include tablet {
+			width: 48%;
+			margin-left: 1%;
+			margin-right: 1%;
+			margin-bottom: 20px;
+		}
 		@include mobile {
 			width: 100%;
 			margin-left: 0;

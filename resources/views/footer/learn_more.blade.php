@@ -1,4 +1,4 @@
-<section class="benu-container footer-learnmore flex flex-col lg:flex-row flex-wrap justify-around">
+<section class="benu-container footer-learnmore flex flex-col md:flex-row flex-wrap justify-around">
 	<div class="footer-learnmore__block">
 		<img src="{{ asset('images/pictures/footer-img-1.png') }}">
 		<h3>
