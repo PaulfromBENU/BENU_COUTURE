@@ -1,4 +1,4 @@
-<div class="model-articles__list flex flex-col lg:flex-row flex-wrap justify-start benu-container">
+<div class="model-articles__list flex flex-col md:flex-row flex-wrap justify-start benu-container">
     @if($articles->count() == 0)
         <div class="filter-no-result">
             {{ __('models.filter-no-result') }}

@@ -247,7 +247,7 @@
         </div>
     </div>
 
-    <div class="all-models__filters-container mobile-hidden">
+    <div class="all-models__filters-container tablet-hidden">
         <div class="all-models__filters flex justify-between benu-container">
             <div class="flex justify-start">
                 <div class="all-models__filters__filter flex" id="filter-family">

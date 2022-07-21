@@ -13,7 +13,7 @@
         @endif
     </a>
 
-    <div class="col-span-2 cart-content__article__name mobile-hidden">
+    <div class="col-span-2 cart-content__article__name tablet-hidden">
         @if($article->name == 'voucher')
         <h4>{{ __('cart.voucher') }}</h4>
         <p class="mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3 absolute">
@@ -48,7 +48,7 @@
             @endif
         </div>
     </div>
-    <div class="mobile-hidden">
+    <div class="tablet-hidden">
         <div class="cart-content__article__size">
             @if($article->name == 'voucher')
                 @if($article->voucher_type == 'pdf')
@@ -65,7 +65,7 @@
             @endif
         </div>
     </div>
-    <div class="mobile-hidden">
+    <div class="tablet-hidden">
         @if($article->name == 'voucher')
         <div class="cart-content__article__color">
             
@@ -78,7 +78,7 @@
         <div class="cart-content__article__color" style="background: {{ $article->color->hex_code }}"></div>
         @endif
     </div>
-    <div class="mobile-hidden">
+    <div class="tablet-hidden">
         <div class="cart-content__article__number flex">
             x{{ $number }}
             @if($max_number > 1)
@@ -93,7 +93,7 @@
             @endif
         </div>
     </div>
-    <div class="mobile-hidden">
+    <div class="tablet-hidden">
         <div class="cart-content__article__price">
             @if($article->name == 'voucher')
                 @if(session('has_kulturpass') !== null)
@@ -136,7 +136,7 @@
             @endif
         </div>
     </div>
-    <div class="mobile-hidden">
+    <div class="tablet-hidden">
         <div class="flex justify-end cart-content__article__icons">
             @auth
             <div class="cart-content__article__icons__heart" wire:click.prevent.stop="toggleWishlist">

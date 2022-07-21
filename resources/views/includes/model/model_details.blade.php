@@ -13,13 +13,13 @@
         @endif
 	</div>
 
-	<div class="model-pres__mobile-anchors mobile-only">
-		<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
+	<div class="model-pres__mobile-anchors mobile-only flex flex-col md:flex-row justify-start md:justify-center">
+		<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex justify-start md:justify-center">
 			{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 		</a>
 		
 		@if($model->creation_accessories()->count() > 0)
-		<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
+		<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex justify-start md:justify-center">
 			{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
 		</a>
 		@endif
@@ -106,7 +106,7 @@
 					</p>
 				</div>
 
-				<div class="flex mobile-hidden">
+				<div class="flex tablet-hidden">
 					<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
 						{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 					</a>

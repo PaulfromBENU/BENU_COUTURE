@@ -185,6 +185,11 @@
 	border-radius: 0;
 	transition: right 0.8s;
 	padding: 0;
+	@include tablet {
+		width: 70%;
+		right: -70%;
+		overflow-y: auto;
+	}
 	@include mobile {
 		width: 100%;
 		right: -100%;
@@ -257,6 +262,10 @@
 				min-width: 100vw;
 				width: 100vw;
 				scroll-snap-align: start;
+				@include tablet {
+					min-width: 100%;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -267,13 +276,18 @@
 		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
+		@include tablet {
+			width: 100%;
+			padding: 20px 30px;
+			height: auto;
+		}
 		@include mobile {
 			width: 100%;
 			padding: 20px 30px;
 			height: auto;
 		}
 		&__close-container {
-			position: absolute;
+			position: fixed;
 			top: 30px;
 			right: 40px;
 			overflow: hidden;
@@ -285,10 +299,16 @@
 			cursor: pointer;
 			transition: all 0.5s;
 			background: $light-grey;
+			@include tablet {
+				top: 25px;
+				right: 35px;
+				background: $primary-color;
+				z-index: 5;
+			}
 			@include mobile {
 				top: 15px;
 				right: 25px;
-				background: darken($light-grey, 10);
+				background: $primary-color;
 				z-index: 5;
 			}
 			&:hover {
@@ -779,6 +799,13 @@
 	left: 20vw;
 	top: max(50px, calc(50vh - 310px));
 	min-height: 20vh;
+	@include tablet {
+		width: 90vw;
+		left: 5vw;
+		top: 40px;
+		overflow-y: auto;
+		max-height: calc(100vh - 80px);
+	}
 	@include mobile {
 		width: 96vw;
 		left: 2vw;

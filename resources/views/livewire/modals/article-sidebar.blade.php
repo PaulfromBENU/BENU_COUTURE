@@ -1,7 +1,7 @@
 <div class="article-sidebar flex flex-col lg:flex-row justify-start lg:justify-right relative">
     @if($article_id != '0')
         <!-- Hidden on mobile -->
-        <div class="article-sidebar__img-container mobile-hidden">
+        <div class="article-sidebar__img-container tablet-hidden">
             @if($article->creation->partner != null)
             <div class="model-overview__img-container__partner-icon">
                 <div class="model-overview__img-container__partner-icon__content flex justify-between">
@@ -92,13 +92,13 @@
 
         <div class="article-sidebar__content">
             @if(in_array(app()->getLocale(), ['lu', 'de']))
-            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-hidden" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large tablet-hidden" wire:click="closeSideBar">
                 <div class="article-sidebar__content__close article-sidebar__content__close--large">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
             </div>
             @else
-            <div class="article-sidebar__content__close-container mobile-hidden" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close-container tablet-hidden" wire:click="closeSideBar">
                 <div class="article-sidebar__content__close">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>

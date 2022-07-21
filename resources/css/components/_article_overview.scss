@@ -10,6 +10,11 @@
 	overflow: hidden;
 	margin-right: 1.15%;
 	cursor: pointer;
+	@include tablet {
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+		width: 45%;
+	}
 	@include mobile {
 		width: 100%;
 	}
