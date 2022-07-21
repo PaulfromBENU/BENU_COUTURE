@@ -9,7 +9,7 @@
     <h4>{{ __('cart.article-is-gift') }}</h4>
     
     @if($article_id > 0)
-    <div class="flex justify-center">
+    <div class="flex flex-col lg:flex-row justify-center">
         <button class="cart-gift-modal__section-btn @if($section == 'wrapping') cart-gift-modal__section-btn--active @endif" wire:click.prevent.stop="changeSection('wrapping')">
             {{ __('cart.gift-wrapping') }}
         </button>
@@ -24,7 +24,7 @@
     <div class="cart-gift-modal__wrapping" @if($section !== 'wrapping') style="display: none;" @endif>
         <div class="cart-gift-modal__wrapping__input">
             <input type="checkbox" name="cart_add_wrapping" wire:model="with_wrapping" id="cart-add-wrapping">
-            <label for="cart-add-wrapping">{{ __('cart.add-wrapping') }} <span class="pl-3 font-bold">
+            <label for="cart-add-wrapping">{{ __('cart.add-wrapping') }} <span class="pl-1 lg:pl-3 font-bold">
                 @if(session('has_kulturpass') !== null)
                 + 2.50&euro;
                 @else
@@ -46,7 +46,7 @@
             @endif
 
         </span></h5>
-        <div class="flex justify-center">
+        <div class="flex justify-start lg:justify-center cart-gift-modal__card-container">
             <div class="cart-gift-modal__card__type @if($card_type == 1) cart-gift-modal__card__type--active @endif" wire:click="updateCard(1)">
                 <div class="cart-gift-modal__card__type__svg-container">
                     <img src="{{ asset('images/pictures/gift_card_1.png') }}" alt="Gift card from BENU" title="Gift Card" />

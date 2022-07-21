@@ -6,6 +6,9 @@
 	z-index: 102;
 	border-radius: 20px;
 	padding: 30px;
+	@include mobile {
+		padding: 20px;
+	}
 }
 
 .lang-modal {
@@ -768,4 +771,11 @@
 	left: 20vw;
 	top: max(50px, calc(50vh - 310px));
 	min-height: 20vh;
+	@include mobile {
+		width: 96vw;
+		left: 2vw;
+		top: 40px;
+		overflow-y: auto;
+		max-height: calc(100vh - 80px);
+	}
 }
