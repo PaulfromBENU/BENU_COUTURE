@@ -1,5 +1,5 @@
-<div class="items-sidebar flex justify-right">
-    <div class="article-sidebar__img-container">
+<div class="items-sidebar flex flex-col lg:flex-row justify-start lg:justify-right relative">
+    <div class="article-sidebar__img-container mobile-hidden">
         <div style="height: 100%;">
         @foreach($pictures as $picture)
             <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo {{ $creation_name }}" class="w-full">
@@ -15,12 +15,54 @@
         @endif
     </div>
 
-    <div class="article-sidebar__content">
-        <div class="article-sidebar__content__close-container" wire:click="closeItemsSideBar">
+    <!-- Mobile only -->
+    <div class="article-sidebar__img-container-mobile relative mobile-only">
+        @if($content == 'overview')
+            <div class="flex justify-between absolute" style="width: 70%; left: 15%; bottom: 20px;">
+                <div class="article-sidebar__img-container-mobile__arrow article-sidebar__img-container-mobile__arrow--left">
+                    @svg('chevron-down')
+                </div>
+                <div class="article-sidebar__img-container-mobile__arrow article-sidebar__img-container-mobile__arrow--right">
+                    @svg('chevron-down')
+                </div>
+            </div>
+
+            <div class="flex justify-start article-sidebar__img-container-mobile__images">
+                @foreach($pictures as $picture)
+                    <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo {{ $creation_name }}" class="w-full">
+                @endforeach
+            </div>
+        @endif
+    </div>
+
+    @if(in_array(app()->getLocale(), ['lu', 'de']))
+        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-only" wire:click="closeSideBar">
+            <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @else
+        <div class="article-sidebar__content__close-container mobile-only" wire:click="closeSideBar">
             <div class="article-sidebar__content__close">
                 {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
             </div>
         </div>
+    @endif
+
+    <div class="article-sidebar__content">
+        @if(in_array(app()->getLocale(), ['lu', 'de']))
+        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-hidden" wire:click="closeVoucherSideBar">
+            <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @else
+        <div class="article-sidebar__content__close-container mobile-hidden" wire:click="closeVoucherSideBar">
+            <div class="article-sidebar__content__close">
+                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            </div>
+        </div>
+        @endif
 
         <h3 class="article-sidebar__content__subtitle mb-10">
             {{ __('sidebar.mask-subtitle') }}
@@ -51,7 +93,7 @@
                 <p class="article-sidebar__content__mask-number ml-5">
                     x {{ $items_number }}
                 </p>
-                <div class="ml-5">
+                <div class="ml-5 flex flex-row lg:flex-col">
                     <p class="article-sidebar__content__mask-btn" wire:click.prevent.stop="updateItemsNumber('up')">
                         <i class="fas fa-plus"></i>
                     </p>

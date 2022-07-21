@@ -390,6 +390,13 @@
 			font: normal normal 700 22px/26px 'Barlow Condensed';
 			letter-spacing: 0.44px;
 			//margin-bottom: 110px;
+			button {
+				height: 45px; 
+				margin-left: 0;
+				@include mobile {
+					height: 65px;
+				}
+			}
 		}
 		&__seemore {
 			color: $primary-color;
@@ -437,6 +444,7 @@
 		a {
 			display: inline-block;
 			text-align: center;
+			min-width: fit-content;
 			&:hover {
 				color: $white;
 			}

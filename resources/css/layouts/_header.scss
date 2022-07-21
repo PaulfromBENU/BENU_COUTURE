@@ -98,6 +98,9 @@
 	border-bottom: solid 1px $light-grey;
 	background-color: white;
 	height: 150px;
+	@include mobile {
+		height: 50px;
+	}
 }
 
 .header {
@@ -442,10 +445,17 @@
 	background-color: white;
 	height: 100%;
 	&__backlink {
+		@include mobile {
+			min-width: fit-content;
+			padding-top: 10px;
+		}
 		a {
 			text-align: left;
 			font: normal normal 600 26px/31px 'Barlow Condensed';
 			letter-spacing: 0px;
+			@include mobile {
+				font: normal normal 500 16px/21px 'Barlow Condensed';
+			}
 		}
 	}
 	&__arrow-left {
@@ -458,6 +468,12 @@
 		display: block;
 		min-width: 55px;
 		background-color: transparent;
+		@include mobile {
+			background-color: $primary-color;
+			min-width: 50px;
+			width: 50px;
+			text-align: center;
+		}
 	}
 	&__logo {
 		position: absolute;
@@ -465,6 +481,10 @@
 		height: 175px;
 		left: 0;
 		top: 0;
+		@include mobile {
+			position: relative;
+			margin: auto;
+		}
 		&--desktop {
 			@include desktop {
 				display: block;
@@ -507,8 +527,16 @@
 	}
 	&__main-menu {
 		padding-top: 0px;
+		@include mobile {
+			max-height: 50px;
+			overflow: hidden;
+		}
 		&__icons {
 			padding-top: 2px;
+			@include mobile {
+				margin-top: 10px;
+				margin-bottom: 0px;
+			}
 			button {
 				height: 50px;
 				width: 50px;
@@ -544,12 +572,27 @@
 				font: normal normal 700 20px/24px 'Barlow';
 				letter-spacing: 0px;
 			}
+			&__connect {
+				margin-top: -12px;
+				@include mobile {
+					margin-right: 10px;
+				}
+			}
+			&__locale {
+				margin-top: -12px;
+				@include mobile {
+					margin-top: -8px;
+					svg {
+						height: 35px;
+						width: 35px;
+					}
+				}
+			}
 			li {
 				padding-left: 1.1rem;
-			}
-			@include mobile {
-				margin-top: -11px;
-				margin-bottom: 1px;
+				@include mobile {
+					padding-left: 0;
+				}
 			}
 		}
 	}

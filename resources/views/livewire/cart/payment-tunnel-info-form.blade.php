@@ -3,7 +3,7 @@
     <h4>{{ __('cart.info-required') }}</h4>
     <div class="mb-5">
         <div class="flex justify-between">
-            <div class="w-5/12">
+            <div class="w-full lg:w-5/12">
                 <div class="flex justify-start input-group register__form__radio-group">
                     <div class="mr-4">
                         <input type="radio" id="register_gender_male" name="register_gender" value="male" wire:model="gender">
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="w-5/12">
+            <div class="w-full lg:w-5/12">
                 <div class="input-group reactive-label-input">
                     
                 </div>

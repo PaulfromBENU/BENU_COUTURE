@@ -1,5 +1,8 @@
 .payment-tunnel {
 	width: 72%;
+	@include mobile {
+		width: 100%;
+	}
 	&__block {
 		margin-bottom: 30px;
 		background: #D0D0D040;
@@ -13,6 +16,11 @@
 			padding: 10px 40px;
 			cursor: pointer;
 			height: 75px;
+			@include mobile {
+				font: normal normal 700 28px/34px 'Barlow Condensed';
+				padding: 10px 20px;
+				height: auto;
+			}
 			&--waiting {
 				color: #2E1414;
 				opacity: 0.5;
@@ -29,7 +37,9 @@
 		}
 		&__content {
 			padding: 40px;
-
+			@include mobile {
+				padding: 20px;
+			}
 		}
 	}
 	&__identification {
@@ -47,23 +57,40 @@
 			border-radius: 10px;
 			padding: 20px 30px;
 			position: relative;
+			@include mobile {
+				padding: 10px 20px;
+			}
 			h4 {
 				text-align: left;
 				font: normal normal 700 44px/53px 'Barlow Condensed';
 				letter-spacing: 0px;
 				margin-bottom: 10px;
+				@include mobile {
+					font: normal normal 700 28px/34px 'Barlow Condensed';
+				}
 			}
 			p {
 				text-align: left;
 				font: normal normal 500 16px/26px 'Barlow';
 				letter-spacing: 0px;
 				width: 50%;
+				@include mobile {
+					width: 100%;
+				}
 			}
 			&__btn-container {
 				position: absolute;
 				top: 0;
 				right: 20px;
 				height: 100%;
+				@include mobile {
+					position: relative;
+					margin: 0;
+					margin-top: 15px;
+					margin-bottom: 10px;
+					right: 0;
+					width: 100%;
+				}
 			}
 			label {
 				z-index: 1;
@@ -83,17 +110,47 @@
 			background: $white;
 			border-radius: 10px;
 			padding: 20px 30px;
+			@include mobile {
+				padding: 10px 20px;
+				font: normal normal 500 16px/28px 'Barlow';
+			}
 			h4 {
 				text-align: left;
 				font: normal normal 700 44px/53px 'Barlow Condensed';
 				letter-spacing: 0px;
 				margin-bottom: 30px;
+				@include mobile {
+					font: normal normal 700 28px/34px 'Barlow Condensed';
+				}
 			}
 			p {
 				text-align: left;
 				font: normal normal 500 16px/26px 'Barlow';
 				letter-spacing: 0px;
 				width: 50%;
+				@include mobile {
+					width: 100%;
+				}
+			}
+			&__radio-block {
+				@include mobile {
+					margin-bottom: 10px;
+				}
+			}
+			&__btn {
+				position: absolute; 
+				top: 14px; 
+				right: 4px; 
+				padding-top: 0; 
+				padding-bottom: 0; 
+				width: 340px;
+				@include mobile {
+					position: relative;
+					width: 100%;
+					top: 0px; 
+					right: 0px; 
+					margin: 10px 0px;
+				}
 			}
 		}
 		&__address-container {
@@ -113,11 +170,45 @@
 				padding: 4px 10px;
 				width: fit-content;
 				margin-bottom: 15px;
+				@include mobile {
+					width: 100%;
+				}
 			}
 			h5 {
 				text-align: left;
 				font: normal normal 700 20px/28px 'Barlow';
 				letter-spacing: 0px;
+			}
+			&__btn {
+				position: absolute; 
+				right: 4px; 
+				padding-top: 0; 
+				padding-bottom: 0; 
+				width: 340px;
+				@include mobile {
+					position: relative;
+					top: 0;
+					right: 0;
+					width: 100%;
+					margin: 0;
+				}
+				&--1 {
+					top: 14px;
+					@include mobile {
+						top: 0;
+						margin-top: 15px;
+					}
+				}
+				&--2 {
+					top: 54px;
+					@include mobile {
+						top: 0;
+						display: inline-block;
+						margin-top: 12px;
+						font-size: 1.2rem;
+						padding: 5px;
+					}
+				}
 			}
 		}
 		&__summary {
@@ -176,6 +267,9 @@
 .payment-summary {
 	width: 25%;
 	position: relative;
+	@include mobile {
+		width: 100%;
+	}
 	&__title {
 		background: #2E1414;
 		color: $white;
@@ -187,6 +281,10 @@
 		border-radius: 10px;
 		position: relative;
 		z-index: 2;
+		@include mobile {
+			padding: 8px 20px;
+			font: normal normal 500 24px/28px 'Barlow Condensed';
+		}
 		h3 {
 			padding-right: 3px;
 		}
@@ -244,6 +342,9 @@
 		width: 70%;
 		margin: auto;
 		margin-bottom: 40px;
+		@include mobile {
+			width: 100%;
+		}
 		label {
 			text-align: left;
 			color: grey;
@@ -281,6 +382,11 @@
 		letter-spacing: 0px;
 		color: #2E1414;
 		margin-bottom: 70px;
+		@include mobile {
+			width: 100%;
+			margin-left: 0%;
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+		}
 	}
 	&__order-number {
 		text-align: center;
@@ -299,14 +405,29 @@
 		font: normal normal 500 16px/28px 'Barlow';
 		letter-spacing: 0px;
 		margin-bottom: 35px;
+		@include mobile {
+			margin-bottom: 5px;
+		}
 	}
 	&__links {
 		padding-top: 35px;
 		width: 60%;
 		margin-left: 20%;
+		@include mobile {
+			width: 100%;
+			margin-left: 0%;
+		}
 		a {
 			display: inline-block;
 			margin-bottom: 30px;
+			@include mobile {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+		div {
+			width: 100%;
 		}
 	}
 }

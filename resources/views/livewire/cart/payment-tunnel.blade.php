@@ -116,11 +116,11 @@
                 @if(!$delivery_chosen)
                     <div>
                         <h5 class="mb-5"><strong>{{ __('cart.payment-choose-delivery') }}</strong></h5>
-                        <div>
+                        <div class="payment-tunnel__delivery__field__radio-block">
                             <input type="radio" name="delivery_method" value="0" wire:model="delivery_method" style="margin-top: -2px; margin-right: 5px;" id="delivery_method_collect">
                             <label for="delivery_method_collect">{{ __('cart.payment-delivery-in-shop-free') }}</label>
                         </div>
-                        <div>
+                        <div class="payment-tunnel__delivery__field__radio-block">
                             <input type="radio" name="delivery_method" value="1" wire:model="delivery_method" style="margin-top: -2px; margin-right: 5px;" id="delivery_method_delivery">
                             <label for="delivery_method_delivery">{{ __('cart.payment-delivery-at-home-with-fees') }}</label>
                         </div>
@@ -131,7 +131,7 @@
                 @elseif(!$delivery_address_chosen)
                     <div class="mb-5 rounded-xl p-4 relative" style="border: #D41C1B solid 2px">
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-method') }}</strong></h5>
-                        <div class="flex justify-between">
+                        <div class="flex flex-col lg:flex-row justify-start lg:justify-between">
                             <p class="mb-1">
                                 @if($delivery_method == '0')
                                 {{ __('cart.payment-delivery-in-shop') }}
@@ -140,7 +140,7 @@
                                 @endif
                             </p>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover payment-tunnel__delivery__field__btn" wire:click="updateDeliveryMethod">{{ __('cart.payment-btn-modify') }}</button>
                             </div>
                         </div>
                     </div>
@@ -156,12 +156,12 @@
                                 <p>
                                     {!! __('cart.payment-delivery-wish') !!}:
                                 </p>
-                                <div class="flex justify-between payment-tunnel__delivery__address-container">
-                                    <div class="payment-tunnel__delivery__address w-2/3">
+                                <div class="flex flex-col lg:flex-row justofy-start lg:justify-between payment-tunnel__delivery__address-container">
+                                    <div class="payment-tunnel__delivery__address w-full lg:w-2/3">
                                         @include('includes.cart.cart_address_details')
                                     </div>
 
-                                    <div class="w-1/3">
+                                    <div class="w-full lg:w-1/3">
                                         <div>
                                             <button class="btn-couture mb-5" wire:click="changeAddress">
                                                 {{ __('cart.payment-delivery-choose-other') }}
@@ -177,7 +177,7 @@
                                 @else
                                 <div class="flex justify-around flex-wrap mt-5 mb-10">
                                     @foreach(auth()->user()->addresses as $address)
-                                        <div class="text-center w-2/5 mt-2 mb-2" wire:key="{{ $address->id }}">
+                                        <div class="text-center w-full lg:w-2/5 mt-2 mb-2" wire:key="{{ $address->id }}">
                                             <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectAddress({{ $address->id }})">
                                                 {{ $address->address_name }}
                                             </button>
@@ -227,7 +227,7 @@
                 @else
                     <div class="mb-5 rounded-xl p-4 relative" style="border: #D41C1B solid 2px">
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-method') }}</strong></h5>
-                        <div class="flex justify-between">
+                        <div class="flex flex-col lg:flex-row jsutify-start lg:justify-between">
                             <p class="mb-1">
                                 @if($delivery_method == '0')
                                 {{ __('cart.payment-delivery-in-shop') }}
@@ -236,22 +236,22 @@
                                 @endif
                             </p>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryMethod" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover payment-tunnel__delivery__field__btn" wire:click="updateDeliveryMethod">{{ __('cart.payment-btn-modify') }}</button>
                             </div>
                         </div>
                     </div>
                     @if($delivery_method == 1)
                     <div class="mb-5 rounded-xl p-4 relative" style="border: #D41C1B solid 2px">
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-address') }}</strong></h5>
-                        <div class="flex justify-between">
-                            <div class="mb-1 payment-tunnel__delivery__address w-2/3">
+                        <div class="flex flex-col lg:flex-row justify-start lg:justify-between">
+                            <div class="mb-1 payment-tunnel__delivery__address w-full lg:w-2/3">
                                 @include('includes.cart.cart_address_details')
                             </div>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateDeliveryAddress" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover payment-tunnel__delivery__address__btn payment-tunnel__delivery__address__btn--1" wire:click="updateDeliveryAddress">{{ __('cart.payment-btn-modify') }}</button>
 
                                 @auth
-                                <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture btn-couture-plain--fit" style="position: absolute; top: 54px; right: 4px; width: 340px;">
+                                <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture btn-couture-plain--fit payment-tunnel__delivery__address__btn payment-tunnel__delivery__address__btn--2">
                                     {{ __('cart.payment-address-modify') }}
                                 </a>
                                 @endauth
@@ -264,7 +264,7 @@
                         <h3 class="font-bold text-xl mb-10 mt-10 text-center">{{ __('cart.payment-choose-invoice-address') }}</h3>
 
                         @if(!$require_invoice_address)
-                        <div class="flex justify-center">
+                        <div class="flex flex-col lg:flex-row justify-start lg:justify-center">
                             <div class="m-5">
                                 <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="useDeliveryAddressForInvoice">
                                     {{ __('cart.payment-invoice-use-delivery') }}
@@ -308,7 +308,7 @@
                                         @else
                                         <div class="flex justify-around flex-wrap mt-5 mb-10">
                                             @foreach(auth()->user()->addresses as $invoice_address)
-                                                <div class="text-center w-2/5 mt-2 mb-2" wire:key="invoice-{{ $invoice_address->id }}">
+                                                <div class="text-center w-full lg:w-2/5 mt-2 mb-2" wire:key="invoice-{{ $invoice_address->id }}">
                                                     <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="selectInvoiceAddress({{ $invoice_address->id }})">
                                                         {{ $invoice_address->address_name }}
                                                     </button>
@@ -359,8 +359,8 @@
                     @else
                     <div class="mb-5 rounded-xl p-4 relative" style="border: #D41C1B solid 2px">
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-invoice-address') }}</strong></h5>
-                        <div class="flex justify-between">
-                            <div class="mb-1 w-2/3">
+                        <div class="flex flex-col lg:flex-row justify-start lg:justify-between">
+                            <div class="mb-1 w-full lg:w-2/3">
                                 @if($order_address_id == $order_invoice_address_id)
                                     {{ __('cart.payment-invoice-address-same-as-delivery') }}
                                 @else
@@ -368,11 +368,11 @@
                                 @endif
                             </div>
                             <div class="text-right">
-                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="updateInvoiceAddress" style="position: absolute; top: 14px; right: 4px; padding-top: 0; padding-bottom: 0; width: 340px;">{{ __('cart.payment-btn-modify') }}</button>
+                                <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover payment-tunnel__delivery__address__btn payment-tunnel__delivery__address__btn--1" wire:click="updateInvoiceAddress">{{ __('cart.payment-btn-modify') }}</button>
 
                                 @auth
                                     @if($order_address_id !== $order_invoice_address_id)
-                                    <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture btn-couture-plain--fit" style="position: absolute; top: 54px; right: 4px; width: 340px;">
+                                    <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'addresses']) }}" class="btn-couture btn-couture-plain--fit payment-tunnel__delivery__address__btn payment-tunnel__delivery__address__btn--2">
                                         {{ __('cart.payment-address-modify') }}
                                     </a>
                                     @endif
@@ -433,54 +433,54 @@
         @else
         <div class="payment-tunnel__block__content" @if($step !== 3 || !$info_valid || !$address_valid) style="display:none;" @endif>
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
-                <div class="grid grid-cols-8">
-                    <div class="col-span-2">
+                <div class="grid grid-cols-1 lg:grid-cols-8">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-left">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-card') }}
                         </p>
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2">
                         <img src="{{ asset('images/pictures/services_payment_cards.png') }}" alt="Payment with Visa, Mastercard, AmEx" class="m-auto" />
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2 text-right pt-1">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('card')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
             </div>
 
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
-                <div class="grid grid-cols-8">
-                    <div class="col-span-2">
+                <div class="grid grid-cols-1 lg:grid-cols-8">
+                    <div class="col-span-1 lg:col-span-2">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-paypal') }}
                         </p>
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2">
                         <img src="{{ asset('images/pictures/services_payment_paypal.png') }}" alt="Payment with Paypal" class="m-auto" />
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2 text-right pt-1">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('paypal')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
             </div>
 
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
-                <div class="grid grid-cols-8">
-                    <div class="col-span-2">
+                <div class="grid grid-cols-1 lg:grid-cols-8">
+                    <div class="col-span-1 lg:col-span-2">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-payconiq') }}
                         </p>
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2">
                         <img src="{{ asset('images/pictures/services_payment_digicash.png') }}" alt="Payment with Payconiq" class="m-auto" />
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2 text-right pt-1">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('payconiq')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
@@ -488,18 +488,18 @@
 
             @auth
             <div class="payment-tunnel__payment__field flex flex-col justify-center">
-                <div class="grid grid-cols-8">
-                    <div class="col-span-2">
+                <div class="grid grid-cols-1 lg:grid-cols-8">
+                    <div class="col-span-1 lg:col-span-2">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-transfer') }}
                         </p>
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2">
                         <img src="{{ asset('images/pictures/services_payment_transfer.png') }}" alt="Payment with bank transfer" class="m-auto" />
                     </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-2 text-right pt-1">
+                    <div class="col-span-1 mobile-hidden"></div>
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('transfer')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>

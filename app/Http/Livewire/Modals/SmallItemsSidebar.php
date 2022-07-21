@@ -95,6 +95,12 @@ class SmallItemsSidebar extends Component
         }
     }
 
+    public function closeSideBar()
+    {
+        $this->emit('closeSideBar');
+        $this->closeItemsSideBar();
+    }
+
     public function closeItemsSideBar()
     {
         $this->emit('closeItemsSideBar');

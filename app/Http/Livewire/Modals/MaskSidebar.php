@@ -121,6 +121,12 @@ class MaskSidebar extends Component
         }
     }
 
+    public function closeSideBar()
+    {
+        $this->emit('closeSideBar');
+        $this->closeMaskSideBar();
+    }
+
     public function closeMaskSideBar()
     {
         $this->emit('closeMaskSideBar');

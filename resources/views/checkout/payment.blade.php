@@ -9,7 +9,7 @@
 @endsection
 
 @section('main-content')
-	<div class="flex justify-between mt-10 pt-10 benu-container">
+	<div class="flex flex-col-reverse lg:flex-row justify-start lg:justify-between mt-10 lg:pt-10 benu-container">
 		@livewire('cart.payment-tunnel', ['cart_id' => $cart_id])
 
 		<section class="payment-summary">
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 
-			<div>
+			<div id="payment-summary-details">
 				<div>
 					@livewire('cart.cart-summary', ['cart_id' => $cart_id])
 				</div>
@@ -118,16 +118,26 @@
 @section('scripts')
 <script type="text/javascript">
 	$(function() {
+		if ($(document).width() <= 768) {
+			$('#payment-summary-details').hide();
+		}
+
 		$('#payment-cart-content-btn').on('click', function() {
 			if ($('#payment-cart-content').css('display') == 'none') {
 				$('#payment-cart-content').fadeIn();
 				$('#payment-cart-content').css('height', 'fit-content');
+				if ($(document).width() <= 768) {
+					$('#payment-summary-details').fadeIn();
+				}
 				$('#payment-cart-plus').hide();
 				$('#payment-cart-minus').show();
 			} else {
 				$('#payment-cart-content').fadeOut('fast', function() {
 					$('#payment-cart-content').css('height', '0px');
 				});
+				if ($(document).width() <= 768) {
+					$('#payment-summary-details').hide();
+				}
 				$('#payment-cart-minus').hide();
 				$('#payment-cart-plus').show();
 			}
