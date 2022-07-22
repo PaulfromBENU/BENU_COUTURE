@@ -28,7 +28,7 @@
 				{{ __('partners.side-txt') }}
 			</p>
 		</div>
-		<div class="w-full lg:w-9/12">
+		<div class="w-full lg:w-9/12 flex flex-col md:flex-row lg:flex-col flex-wrap">
 			@foreach($partners as $partner)
 			<div class="partners__box flex flex-col lg:flex-row justify-start">
 				<div class="partners__box__img-container">

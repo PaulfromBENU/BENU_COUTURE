@@ -6,6 +6,10 @@
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 35px;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			text-align: center;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			text-align: center;
@@ -15,6 +19,10 @@
 		text-align: left;
 		font: normal normal 500 16px/28px 'Barlow';
 		letter-spacing: 0px;
+		@include tablet {
+			margin-bottom: 20px;
+			padding-left: 1%;
+		}
 		@include mobile {
 			margin-bottom: 20px;
 		}
@@ -25,12 +33,21 @@
 		background: $white 0% 0% no-repeat padding-box;
 		box-shadow: 0px 0px 40px #26254433;
 		border-radius: 8px;
+		@include tablet {
+			min-width: 48%;
+			width: 48%;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
 		&__img-container {
 			margin-right: 50px;
 			border-radius: 10px;
 			overflow: hidden;
 			width: 30%;
 			height: auto;
+			@include tablet {
+				width: 100%;
+			}
 			@include mobile {
 				width: 100%;
 			}
@@ -41,6 +58,9 @@
 		}
 		&__txt-container {
 			width: 65%;
+			@include tablet {
+				width: 100%;
+			}
 			@include mobile {
 				width: 100%;
 			}
@@ -49,6 +69,10 @@
 			text-align: left;
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			letter-spacing: 0.28px;
+			@include tablet {
+				margin-top: 45px;
+				margin-bottom: 25px;
+			}
 			@include mobile {
 				margin-top: 45px;
 				margin-bottom: 25px;
