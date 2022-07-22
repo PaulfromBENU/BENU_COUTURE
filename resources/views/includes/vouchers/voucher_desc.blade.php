@@ -3,8 +3,8 @@
 		<img src="{{ asset('images/pictures/vouchers_img.png') }}">
 	</div>
 
-	<div class="model-pres__mobile-anchors mobile-only">
-		<a onclick='document.getElementById("voucher-options").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
+	<div class="model-pres__mobile-anchors mobile-only flex flex-col md:flex-row justify-start md:justify-center">
+		<a onclick='document.getElementById("voucher-options").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex justify-start md:justify-center">
 			{{ __('vouchers.desc-link') }} @svg('model_arrow_down')
 		</a>
 	</div>
@@ -55,7 +55,7 @@
 			</p>
 		</div> -->
 		
-		<div class="flex model-pres__desc__seemore mobile-hidden">
+		<div class="flex model-pres__desc__seemore tablet-hidden">
 			<a onclick='document.getElementById("voucher-options").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
 				{{ __('vouchers.desc-link') }} @svg('model_arrow_down')
 			</a>

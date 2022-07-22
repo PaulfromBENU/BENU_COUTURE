@@ -1,7 +1,7 @@
 <div class="voucher-sidebar flex flex-col lg:flex-row justify-start lg:justify-right relative">
     @if($voucher_id != '0')
         <!-- Hidden on mobile -->
-        <div class="article-sidebar__img-container mobile-hidden">
+        <div class="article-sidebar__img-container tablet-hidden">
             <div style="height: 100%;">
                 <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
             </div>
@@ -34,13 +34,13 @@
 
         <div class="article-sidebar__content">
             @if(in_array(app()->getLocale(), ['lu', 'de']))
-            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-hidden" wire:click="closeVoucherSideBar">
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large tablet-hidden" wire:click="closeVoucherSideBar">
                 <div class="article-sidebar__content__close article-sidebar__content__close--large">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
             </div>
             @else
-            <div class="article-sidebar__content__close-container mobile-hidden" wire:click="closeVoucherSideBar">
+            <div class="article-sidebar__content__close-container tablet-hidden" wire:click="closeVoucherSideBar">
                 <div class="article-sidebar__content__close">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
