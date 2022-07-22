@@ -63,6 +63,7 @@
 			padding-left: 12px;
 			padding-right: 12px;
 			overflow-y: auto;
+			padding-bottom: 80px;
 			@include tablet {
 				transition: left 0.7s;
 			}
@@ -292,7 +293,9 @@
 		width: 100%;
 		padding: 27px 15px;
 		color: $primary-color;
-		border-bottom: solid 1px lightgrey;
+		&--with-border {
+			border-top: solid 1px lightgrey;
+		}
 		a {
 			display: flex;
 			width: 100%;
@@ -324,14 +327,14 @@
 		position: relative;
 		@include tablet {
 			width: 100%;
-			margin-top: 10px;
+			margin-top: 0px;
 			border-radius: 12px;
 			padding: 23px 20px;
 			height: fit-content;
 		}
 		@include mobile {
 			width: 100%;
-			margin-top: 10px;
+			margin-top: 0px;
 			border-radius: 12px;
 			padding: 23px 20px;
 			height: fit-content;

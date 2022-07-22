@@ -19,7 +19,7 @@
 		</a>
 		
 		@if($model->creation_accessories()->count() > 0)
-		<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex justify-start md:justify-center">
+		<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex justify-start md:justify-center model-pres__mobile-anchors--with-border">
 			{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
 		</a>
 		@endif

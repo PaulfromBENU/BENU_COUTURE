@@ -297,7 +297,7 @@
                 <h3 class="article-sidebar__content__compo__title mb-3">
                     {!! __('sidebar.delivery-costs') !!}
                 </h3>
-                <p class="mb-10 text-sm font-medium">
+                <p class="mb-0 lg:mb-10 text-sm font-medium">
                     {!! __('sidebar.delivery-costs-info-1') !!}
                     <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-delivery')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.delivery-costs-info-1-link') !!}</a>.
                 </p>
@@ -305,7 +305,7 @@
                 <h3 class="article-sidebar__content__compo__title mb-3">
                     {!! __('sidebar.returns') !!}
                 </h3>
-                <p class="mb-2 text-sm font-medium">
+                <p class="mb-10 lg:mb-2 text-sm font-medium">
                     {!! __('sidebar.returns-info-1') !!}
                     <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-return')]) }}" target="_blank" class="primary-color hover:underline">{!! __('sidebar.returns-info-1-link') !!}</a>.
                 </p>

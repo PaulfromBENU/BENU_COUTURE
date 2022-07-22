@@ -71,6 +71,8 @@
 				Livewire.emit('ArticleModalReady', article_id_request);
 			});
 			$('#general-side-modal').css('right', '0');
+			$('body').css('overflow-y', 'hidden');
+        	$('html').css('overflow-y', 'hidden');
 		}
 	});
 
@@ -80,16 +82,22 @@
 	Livewire.on('showSortMobile', function() {
 		$('.all-models__mobile-menu__opacifier').fadeIn();
 		$('.all-models__mobile-menu__sidebar--sort').css('left', '12%');
+		$('body').css('overflow-y', 'hidden');
+        $('html').css('overflow-y', 'hidden');
 	});
 
 	Livewire.on('showFiltersMobile', function() {
 		$('.all-models__mobile-menu__opacifier').fadeIn();
 		$('.all-models__mobile-menu__sidebar--filters').css('left', '12%');
+		$('body').css('overflow-y', 'hidden');
+        $('html').css('overflow-y', 'hidden');
 	});
 
 	Livewire.on('resetMobileWindow', function() {
 		$('.all-models__mobile-menu__opacifier').hide();
 		$('.all-models__mobile-menu__sidebar').css('left', '100%');
+		$('body').css('overflow-y', 'auto');
+    	$('html').css('overflow-y', 'auto');
 	});
 </script>
 @endsection

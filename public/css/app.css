@@ -3425,7 +3425,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .article-sidebar__content__compo__title {
-    margin-top: 75px;
+    margin-top: 55px;
   }
 }
 .article-sidebar__content__compo__subtitle {
@@ -3760,7 +3760,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .footer-more__wrapper {
-    padding-top: 50px;
+    padding-top: 20px;
   }
 }
 .footer-more__block {
@@ -4091,6 +4091,7 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .welcome-presentation {
     height: auto;
+    margin-bottom: 20px;
   }
 }
 .welcome-presentation__desc {
@@ -4282,6 +4283,7 @@ input[type=checkbox]:focus {
     width: 100%;
     margin-top: 0px;
     margin-bottom: 10px;
+    height: 275px;
   }
 }
 .welcome-campaign__left__title-1 {
@@ -5952,6 +5954,7 @@ input[type=checkbox]:focus {
   padding-left: 12px;
   padding-right: 12px;
   overflow-y: auto;
+  padding-bottom: 80px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .all-models__mobile-menu__sidebar {
@@ -6196,7 +6199,9 @@ input[type=checkbox]:focus {
   width: 100%;
   padding: 27px 15px;
   color: #D41C1B;
-  border-bottom: solid 1px lightgrey;
+}
+.model-pres__mobile-anchors--with-border {
+  border-top: solid 1px lightgrey;
 }
 .model-pres__mobile-anchors a {
   display: flex;
@@ -6231,7 +6236,7 @@ input[type=checkbox]:focus {
 @media (min-width: 768px) and (max-width: 1023px) {
   .model-pres__desc {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0px;
     border-radius: 12px;
     padding: 23px 20px;
     height: -webkit-fit-content;
@@ -6242,7 +6247,7 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .model-pres__desc {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0px;
     border-radius: 12px;
     padding: 23px 20px;
     height: -webkit-fit-content;
