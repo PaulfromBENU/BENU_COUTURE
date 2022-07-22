@@ -64,6 +64,8 @@
 		}
 		@include mobile {
 			padding-top: 30px;
+			padding-bottom: 0;
+			border-bottom: none;
 		}
 		&__img-container {
 			border-radius: 8px;
@@ -73,6 +75,10 @@
 			overflow: hidden;
 			transform: scale(1.1);
 			max-height: 199px;
+			@include tablet {
+				max-height: 320px;
+				margin-bottom: 30px;
+			}
 			img {
 				object-fit: cover;
 				min-width: 100%;
@@ -276,12 +282,12 @@
 				@include tablet {
 					right: 7px;
 					top: 72%;
-					font-size: 2.1rem;
+					font-size: 1.8rem;
 				}
 				@include mobile {
 					right: 7px;
 					top: 72%;
-					font-size: 2.1rem;
+					font-size: 1.8rem;
 				}
 				&__icon {
 					position: absolute;
@@ -342,9 +348,11 @@
 	width: 22%;
 	position: relative;
 	@include tablet {
+		margin-top: 60px;
 		width: 100%;
 	}
 	@include mobile {
+		margin-top: 50px;
 		width: 100%;
 	}
 	&__sticky-container {
@@ -413,6 +421,9 @@
 	padding: 24px;
 	position: sticky;
 	top: 420px;
+	@include mobile {
+		padding: 22px 12px;
+	}
 	svg {
 		height: 50px;
 		margin: auto;

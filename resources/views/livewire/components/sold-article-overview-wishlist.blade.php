@@ -1,6 +1,6 @@
 <div class="sold-overview-wishlist">
     <div class="sold-overview-wishlist__cap sold-overview-wishlist__cap--grey"></div>
-    <div class="flex justify-start">
+    <div class="flex flex-col lg:flex-row justify-start">
         <div class="sold-overview-wishlist__img-container">
             <img src="{{ asset('images/pictures/articles/'.$pictures[$current_picture_index]) }}" alt="Model {{ $article->creation->name }}">
             @if($pictures->count() > 1)

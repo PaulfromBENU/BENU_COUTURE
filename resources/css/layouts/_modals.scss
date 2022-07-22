@@ -315,6 +315,12 @@
 				width: 85px;
 				max-width: 120px;
 				background: $dark-bg;
+				@include tablet {
+					width: 30px;
+				}
+				@include mobile {
+					width: 30px;
+				}
 			}
 			&--large {
 				&:hover {
@@ -532,6 +538,14 @@
 		&__color {
 			margin: auto;
 			margin-bottom: 20px;
+			@include tablet {
+				height: 50px;
+				width: 50px;
+			}
+			@include mobile {
+				height: 50px;
+				width: 50px;
+			}
 		}
 		&__desc {
 			font: normal normal 500 16px/28px 'Barlow';
@@ -567,6 +581,20 @@
 			margin-left: 0;
 			margin-right: 0;
 			margin-bottom: 25px;
+			@include tablet {
+				// position: fixed;
+				// bottom: 60px;
+				// margin: 0;
+				// left: 10%;
+				// width: 80%;
+			}
+			@include mobile {
+				position: fixed;
+				bottom: 110px;
+				margin: 0;
+				left: 10%;
+				width: 80%;
+			}
 			&:hover {
 				color: $white;
 				background: $dark-bg;
@@ -792,6 +820,12 @@
 		&:hover {
 			width: 85px;
 			background: $dark-bg;
+			@include tablet {
+				width: 30px;
+			}
+			@include mobile {
+				width: 30px;
+			}
 		}
 	}
 	&__close {

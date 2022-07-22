@@ -126,7 +126,7 @@
             @endif
 
             @if($gift_price > 0)
-            <p class="primary-color text-right pr-5" style="margin-top: 50px;">
+            <p class="primary-color text-left lg:text-right pr-5" style="margin-top: 50px;">
                 @if(session('has_kulturpass') !== null)
                 + {{ $gift_price / 2 }}&euro;
                 @else
@@ -282,7 +282,7 @@
             @endif
 
             @if($gift_price > 0)
-            <p class="primary-color text-right" style="margin-top: 5px;">
+            <p class="primary-color text-left lg:text-right" style="margin-top: 5px;">
                 @if(session('has_kulturpass') !== null)
                 + {{ $gift_price / 2 }}&euro;
                 @else

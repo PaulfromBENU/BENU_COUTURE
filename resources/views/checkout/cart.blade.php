@@ -68,7 +68,7 @@
 		<div class="cart-summary-container__sticky-container">
 			@livewire('cart.cart-summary', ['cart_id' => $cart_id])
 
-			<div class="cart-client-service flex justify-center flex-wrap">
+			<div class="cart-client-service flex justify-center lg:flex-wrap">
 				<div>
 					@svg('svg_conseil_tel')
 					<p>{{ __('cart.service-tel') }}</p>
