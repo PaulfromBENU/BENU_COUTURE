@@ -6035,6 +6035,12 @@ input[type=checkbox]:focus {
   width: 50px;
   text-align: center;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact__form__form__security input {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 767px) {
   .contact__form__form__security input {
     margin: auto;
@@ -6044,11 +6050,20 @@ input[type=checkbox]:focus {
 .contact__form__form__security__btn {
   cursor: pointer;
   padding-top: 10px;
+  height: 50px;
+  margin: auto;
+  margin-top: 25px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact__form__form__security__btn {
+    width: 50%;
+    margin: auto;
+  }
 }
 @media (max-width: 767px) {
   .contact__form__form__security__btn {
     width: 100%;
-    margin: 0 !important;
+    margin: auto;
   }
 }
 .contact__form input[type=text], .contact__form input[type=email] {

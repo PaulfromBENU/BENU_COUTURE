@@ -963,6 +963,10 @@
 				input {
 					width: 50px;
 					text-align: center;
+					@include tablet {
+						margin: auto;
+						margin-bottom: 10px;
+					}
 					@include mobile {
 						margin: auto;
 						margin-bottom: 10px;
@@ -971,9 +975,16 @@
 				&__btn {
 					cursor: pointer;
 					padding-top: 10px;
+					height: 50px;
+					margin: auto;
+					margin-top: 25px;
+					@include tablet {
+						width: 50%;
+						margin: auto;
+					}
 					@include mobile {
 						width: 100%;
-						margin: 0 !important;
+						margin: auto;
 					}
 				}
 			}

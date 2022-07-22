@@ -2797,6 +2797,10 @@ select {
     margin-top: 0px;
   }
 
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .md\:flex {
     display: flex;
   }
