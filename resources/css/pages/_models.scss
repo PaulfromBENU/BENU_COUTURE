@@ -429,14 +429,22 @@
 			font: normal normal 700 22px/26px 'Barlow Condensed';
 			letter-spacing: 0.44px;
 			//margin-bottom: 110px;
+			@include tablet {
+				text-align: center;
+			}
+			@include mobile {
+				text-align: center;
+			}
 			button {
 				height: 45px; 
 				margin-left: 0;
 				@include tablet {
 					height: 65px;
+					margin-right: 0;
 				}
 				@include mobile {
 					height: 65px;
+					margin-right: 0;
 				}
 			}
 		}

@@ -348,6 +348,12 @@
 			font: normal normal 500 20px/34px 'Barlow Condensed';
 			letter-spacing: 0px;
 			color: #2E1414;
+			@include tablet {
+				// padding-top: 9px;
+			}
+			@include mobile {
+				// padding-top: 9px;
+			}
 		}
 		&__radio-option {
 			font: normal normal 500 14px/28px 'Barlow';
@@ -367,6 +373,14 @@
 			color: #2E1414;
 			width: 45px;
 			margin-top: -13px;
+			@include tablet {
+				font: normal normal 600 30px/40px 'Barlow Condensed';
+				padding-top: 9px;
+			}
+			@include mobile {
+				font: normal normal 600 28px/36px 'Barlow Condensed';
+				padding-top: 9px;
+			}
 		}
 		&__mask-btn {
 			width: 30px;
@@ -380,9 +394,15 @@
 			position: relative;
 			cursor: pointer;
 			transition: all 0.2s;
-			@include mobile {
-				height: 80%;
+			@include tablet {
+				height: 30px;
 				margin-right: 15px;
+				// margin-top: 8px;
+			}
+			@include mobile {
+				height: 30px;
+				margin-right: 15px;
+				// margin-top: 8px;
 			}
 			i {
 				position: absolute;
@@ -391,6 +411,10 @@
 				width: 100%;
 				text-align: center;
 				left: 0;
+				@include tablet {
+					top: 20%;
+					font-size: 1.2rem;
+				}
 				@include mobile {
 					top: 20%;
 					font-size: 1.2rem;
