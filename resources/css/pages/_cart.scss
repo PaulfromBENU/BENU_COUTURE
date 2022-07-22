@@ -424,11 +424,19 @@
 	@include mobile {
 		padding: 22px 12px;
 	}
+	div {
+		@include mobile {
+			width: 20%;
+		}
+	}
 	svg {
 		height: 50px;
 		margin: auto;
 		margin-top: 5px;
 		margin-bottom: 0px;
+		@include mobile {
+			height: 35px;
+		}
 	}
 	p {
 		text-align: center;

@@ -998,6 +998,14 @@
 			padding: 50px;
 			margin-bottom: 30px;
 			border-radius: 4px;
+			@include tablet {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			@include mobile {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 			&:focus {
 				box-shadow: none;
 				outline: none;
@@ -1007,9 +1015,12 @@
 		&__valid {
 			border-radius: 10px;
 			padding: 40px;
-			background: lighten($benu_village, 50);
+			background: $success-green;
 			color: $benu_village;
 			margin-top: 20px;
+			@include mobile {
+				padding: 15px;
+			}
 		}
 		&__invalid {
 			border-radius: 10px;

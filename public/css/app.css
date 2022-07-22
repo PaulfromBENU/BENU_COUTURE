@@ -6076,6 +6076,18 @@ input[type=checkbox]:focus {
   margin-bottom: 30px;
   border-radius: 4px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact__form textarea {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .contact__form textarea {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .contact__form textarea:focus {
   box-shadow: none;
   outline: none;
@@ -6084,9 +6096,14 @@ input[type=checkbox]:focus {
 .contact__form__valid {
   border-radius: 10px;
   padding: 40px;
-  background: #caf1dc;
+  background: #E6F1EFFF;
   color: #27955B;
   margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .contact__form__valid {
+    padding: 15px;
+  }
 }
 .contact__form__invalid {
   border-radius: 10px;
@@ -10290,11 +10307,21 @@ input[type=checkbox]:focus {
     padding: 22px 12px;
   }
 }
+@media (max-width: 767px) {
+  .cart-client-service div {
+    width: 20%;
+  }
+}
 .cart-client-service svg {
   height: 50px;
   margin: auto;
   margin-top: 5px;
   margin-bottom: 0px;
+}
+@media (max-width: 767px) {
+  .cart-client-service svg {
+    height: 35px;
+  }
 }
 .cart-client-service p {
   text-align: center;
