@@ -3095,6 +3095,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .side-modal {
+    height: 100%;
     width: 100%;
     right: -100%;
     overflow-y: auto;
