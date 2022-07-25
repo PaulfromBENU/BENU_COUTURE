@@ -6,22 +6,22 @@
 		<div class="sizes__index relative mobile-hidden tablet-hidden">
 			<ul class="sizes__index__menu">
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-unisex').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-unisex') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-ladies').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-ladies') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-gentlemen').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-gentlemen') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-kids').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-kids') }}
 					</button>
 				</li>
