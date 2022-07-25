@@ -52,7 +52,7 @@
 		<div class="full-story__general__content">
 			<div class="full-story__general__content__slider">	
 				<div class="full-story__general__content__slider__cards flex justify-start">
-					@for($i = 1; $i <= 7; $i++)
+					@for($i = 1; $i <= 11; $i++)
 					<div class="full-story__general__content__slider__cards__card" @if($i == 1) id="slider-card-1" @endif>
 						<img src="{{ asset('images/pictures/about/about-slider-'.$i.'.jpg') }}" />
 						<div class="full-story__general__content__slider__cards__card__footer flex justify-start">
@@ -115,7 +115,7 @@
 								{{ __('about.section-2-txt-2-2') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-2-3') }}
+								{{ __('about.section-2-txt-2-3') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-2-link-1') }}</a> {{ __('about.section-2-txt-2-4') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-2-link-2') }}</a> {{ __('about.section-2-txt-2-5') }}
 							</p>
 						</div>
 					</div>
@@ -124,10 +124,13 @@
 						<div class="w-3/5 pr-5">
 							<h4>{{ __('about.section-2-subtitle-2') }}</h4>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-3-1') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-3-link') }}</a>
+								{{ __('about.section-2-txt-3-1') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
 								{{ __('about.section-2-txt-3-2') }}
+							</p>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-2-txt-3-3') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-3-link') }}</a>
 							</p>
 						</div>
 						<div class="w-2/5">
@@ -144,7 +147,10 @@
 					<h4>{{ __('about.section-2-subtitle-3') }}</h4>
 
 					<p class="full-story__general__content__info-section__txt__paragraph">
-						{{ __('about.section-2-txt-4') }}
+						{{ __('about.section-2-txt-4-1') }}
+					</p>
+					<p class="full-story__general__content__info-section__txt__paragraph">
+						{{ __('about.section-2-txt-4-2') }}
 					</p>
 
 					<div class="flex justify-between flex-wrap mb-10">
@@ -157,7 +163,7 @@
 								{{ __('about.section-2-txt-5-1') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-5-2') }}
+								{{ __('about.section-2-txt-5-2') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-5-link') }}</a>
 							</p>
 						</div>
 					</div>
@@ -229,7 +235,7 @@
 								{{ __('about.section-2-txt-3-2') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-3-2') }}
+								{{ __('about.section-2-txt-3-3') }}
 							</p>
 						</div>
 						<div class="w-2/5">
@@ -253,27 +259,27 @@
 		$('.full-story__general__content__slider').animate({scrollLeft: 0}, 'fast');
 		$('.full-story__general__content__slider__bar__scroll--red').css('left', 0);
 
-		$('.full-story__general__content__slider__bar__btn--right').on('click', function() {
+		$('.full-story__general__content__slider__bar__btn--right').on('click', function(e) {
 			if (!$('.full-story__general__content__slider').is(':animated')) {
 				let leftPos = $('.full-story__general__content__slider').scrollLeft();
-				let fullSliderWidth = $('.full-story__general__content__slider').innerWidth();
+				let fullSliderWidth = $('.full-story__general__content__slider').get(0).scrollWidth - $('.full-story__general__content__slider').width();
 	  			$('.full-story__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 4}, 'fast');
 
 	  			let leftPosScroll = parseInt($('.full-story__general__content__slider__bar__scroll--red').css('left'));
 	  			let fullBarWidth = $('.full-story__general__content__slider__bar__scroll').width();
 	  			let redBarWidth = fullBarWidth / 4;
 	  			if (leftPosScroll < (3 * redBarWidth - 20)) {//Margin to avoid bugs
-	  				$('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll + redBarWidth}, 'fast');
+	  				// $('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll + redBarWidth}, 'fast');
 	  			} else {
 	  				$('.full-story__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
 	  			}
 	  		}
 	 	});
 
-	 	$('.full-story__general__content__slider__bar__btn--left').on('click', function() {
+	 	$('.full-story__general__content__slider__bar__btn--left').on('click', function(e) {
 	 		if (!$('.full-story__general__content__slider').is(':animated')) {
 				let leftPos = $('.full-story__general__content__slider').scrollLeft();
-	  			let fullSliderWidth = $('.full-story__general__content__slider').innerWidth();
+	  			let fullSliderWidth = $('.full-story__general__content__slider').get(0).scrollWidth - $('.full-story__general__content__slider').width();
 	  			$('.full-story__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 4}, 'fast');
 
 	  			let leftPosScroll = $('.full-story__general__content__slider__bar__scroll--red').position().left;
@@ -281,15 +287,22 @@
 	  			let redBarWidth = fullBarWidth / 4;
 	  			// console.log(leftPosScroll, $('.full-story__general__content__slider__bar__scroll').width());
 	  			if (leftPosScroll >= (fullBarWidth / 4) + 20) {
-	  				$('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll - fullBarWidth / 4}, 'fast');
+	  				// $('.full-story__general__content__slider__bar__scroll--red').animate({left: leftPosScroll - fullBarWidth / 4}, 'fast');
 	  			} else {
 	  				$('.full-story__general__content__slider__bar__scroll--red').css('left', 0);
 	  			}
 	  		}
 	 	});
 
-	 	$('.full-story__general__content__slider').on('scroll', function() {
-	 		$('.full-story__general__content__slider__bar__scroll--red').css('left', $('.full-story__general__content__slider').scrollLeft() * 0.8);
+	 	$('.full-story__general__content__slider').on('scroll', function(e) {
+	 		let leftPos = $('.full-story__general__content__slider').scrollLeft();
+			let fullSliderWidth = $('.full-story__general__content__slider').get(0).scrollWidth - $('.full-story__general__content__slider').width();
+			let ratio = leftPos / fullSliderWidth;
+
+ 			console.log(ratio);
+ 			$('.full-story__general__content__slider__bar__scroll--red').css('left', $('.full-story__general__content__slider__bar__scroll').width() * ratio * 0.75);
+ 			console.log($('.full-story__general__content__slider__bar__scroll--red').css('left'));
+
 	 	})
 	});
 </script>
