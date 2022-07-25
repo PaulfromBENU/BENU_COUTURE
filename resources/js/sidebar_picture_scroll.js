@@ -24,9 +24,8 @@ $(function() {
 			let windowWidth = $(document).width();
 			// let currentInnerWidth = $('.article-sidebar__img-container-mobile__images').innerWidth();
 			let currentInnerWidth = $('.article-sidebar__img-container-mobile__images').get(0).scrollWidth;
-			console.log(currentScrollLeft, currentInnerWidth, $('.article-sidebar__img-container-mobile__images').width());
 
-			if (currentScrollLeft <= currentInnerWidth - 2 * $('.article-sidebar__img-container-mobile__images').width()) {
+			if (currentScrollLeft < currentInnerWidth - $('.article-sidebar__img-container-mobile__images').width()) {
 				// $('.article-sidebar__img-container-mobile__images').animate({scrollLeft: currentScrollLeft + windowWidth});
 				$('.article-sidebar__img-container-mobile__images').scrollLeft(currentScrollLeft + windowWidth);
 			} else {
