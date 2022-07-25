@@ -29,14 +29,45 @@
 		</div>
 
 		<div class="sizes__chapters">
+			<div class="sizes__index relative mobile-only">
+				<ul class="sizes__index__menu flex justify-center">
+					<li>
+						<button onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+							Unisexe
+							<!-- {{ __('services.sizes-unisex-short') }} -->
+						</button>
+					</li>
+					<li>
+						<button onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+							Femmes
+							<!-- {{ __('services.sizes-ladies-short') }} -->
+						</button>
+					</li>
+					<li>
+						<button onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+							Hommes
+							<!-- {{ __('services.sizes-gentlemen-short') }} -->
+						</button>
+					</li>
+					<li>
+						<button onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+							Enfants
+							<!-- {{ __('services.sizes-kids-short') }} -->
+						</button>
+					</li>
+				</ul>
+			</div>
+
 			<p class="text-left font-medium mb-10">
 				{{ __('services.general-description') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="primary-color hover:text-gray-800 transition">{{ __('services.general-description-link') }}</a>.
 			</p>
+
+
 			<div class="sizes__chapter">
 				<h3>{{ __('services.sizes-unisex') }}</h3>
 				<div class="flex flex-col lg:flex-row justify-between">
 					<div class="sizes__chapter__img-container">
-						<img src="{{ asset('images/pictures/sizes/taille_unisexe_v2.png') }}" alt="Unisex sizes" title="Unisex sizes" />
+						<img src="{{ asset('images/pictures/sizes/taille_unisexe_v2.png') }}" alt="Unisex sizes" title="Unisex sizes" id="sizes-chapter-unisex-picture" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
 						<ul class="sizes__chapter__legend__list" id="sizes-chapter-unisex">
@@ -133,7 +164,7 @@
 				<h3>{{ __('services.sizes-ladies') }}</h3>
 				<div class="flex flex-col lg:flex-row justify-between">
 					<div class="sizes__chapter__img-container">
-						<img src="{{ asset('images/pictures/sizes/taille_femme.png') }}" alt="Ladies sizes" title="Ladies sizes" />
+						<img src="{{ asset('images/pictures/sizes/taille_femme.png') }}" alt="Ladies sizes" title="Ladies sizes" id="sizes-chapter-ladies-picture" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
 						<ul class="sizes__chapter__legend__list" id="sizes-chapter-ladies">
@@ -242,7 +273,7 @@
 				<h3>{{ __('services.sizes-gentlemen') }}</h3>
 				<div class="flex flex-col lg:flex-row justify-between">
 					<div class="sizes__chapter__img-container">
-						<img src="{{ asset('images/pictures/sizes/taille_homme.png') }}" alt="Gentlemen sizes" title="Gentlemen sizes" />
+						<img src="{{ asset('images/pictures/sizes/taille_homme.png') }}" alt="Gentlemen sizes" title="Gentlemen sizes" id="sizes-chapter-gentlemen-picture" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center">
 						<ul class="sizes__chapter__legend__list" id="sizes-chapter-gentlemen">
@@ -351,7 +382,7 @@
 				<h3>{{ __('services.sizes-kids') }}</h3>
 				<div class="flex flex-col lg:flex-row justify-between">
 					<div class="sizes__chapter__img-container">
-						<img src="{{ asset('images/pictures/sizes/taille_enfant.png') }}" alt="Kids sizes" title="Kids sizes" />
+						<img src="{{ asset('images/pictures/sizes/taille_enfant.png') }}" alt="Kids sizes" title="Kids sizes" id="sizes-chapter-kids-picture" />
 					</div>
 					<div class="sizes__chapter__legend flex flex-col justify-center" id="sizes-chapter-kids">
 						<ul class="sizes__chapter__legend__list">
