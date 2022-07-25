@@ -280,7 +280,7 @@
 			// font-size: 1.6rem;
 			color: $primary-color;
 			@include mobile {
-				font-size: 2.1rem;
+				font-size: 1.2rem;
 			}
 			&__icon {
 				position: absolute;
@@ -289,8 +289,8 @@
 				cursor: pointer;
 				transform: scale(1.4);
 				@include mobile {
-					right: -3px;
-					top: 2px;
+					right: 5px;
+					top: -2px;
 				}
 				&--hovered {
 					transform: scale(0);
