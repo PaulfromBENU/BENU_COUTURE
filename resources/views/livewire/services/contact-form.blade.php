@@ -104,6 +104,10 @@
         @elseif($safety_check == 1)
         <input type="submit" name="contact_submit" value="{{ __('forms.send-message') }}" class="btn-couture-plain" style="height: 50px;">
         @endif
+        
+        <div class="contact__form__valid">
+                Test
+            </div>
     @else
         @if($message_valid)
             <div class="contact__form__valid">
