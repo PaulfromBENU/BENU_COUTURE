@@ -1,6 +1,6 @@
 <div class="article-overview-wishlist">
     <div class="article-overview-wishlist__cap article-overview-wishlist__cap--red"></div>
-    <div class="flex flex-col lg:flex-row justify-start">
+    <div class="flex flex-col md:flex-row justify-start">
         <div class="article-overview-wishlist__img-container">
             @if($is_pop_up == 1)
             <div class="article-overview-wishlist__img-container__partner-icon">

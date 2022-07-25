@@ -39,11 +39,11 @@
                             {{ __('dashboard.nav-demands') }}
                         </a>
                     </li>
-                    <li>
+<!--                     <li>
                         <a wire:click="changeSection('returns')" class="btn-slider-left dashboard__nav__link @if($section == 'returns') dashboard__nav__link--active @endif">
                             {{ __('dashboard.nav-returns') }}
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a wire:click="changeSection('wishlist')" class="btn-slider-left dashboard__nav__link @if($section == 'wishlist') dashboard__nav__link--active @endif">
                             {{ __('dashboard.nav-wishlist') }}
@@ -101,9 +101,9 @@
                     @livewire('dashboard.communications')
                     @break
 
-                @case('returns')
+                <!-- @case('returns')
                     @include('includes.dashboard.returns')
-                    @break
+                    @break -->
 
                 @case('wishlist')
                     @include('includes.dashboard.wishlist')

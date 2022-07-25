@@ -31,7 +31,7 @@
                 @svg('chevron-down', 'side-mobile__creations__title__svg')
             </div>
             <div class="side-mobile__creations__list side-mobile__creations__list--hidden">
-                <h4><a href="{{ route('model-'.app()->getLocale(), ['types' => 'unisex', 'family' => 'clothes']) }}">{{ __('header.menu-title-1') }}</a></h4>
+                <h4><a href="{{ route('model-'.app()->getLocale(), ['types' => 'ladies', 'family' => 'clothes']) }}">{{ __('header.menu-title-1') }}</a></h4>
                 <ul class="side-mobile__creations__list__links mb-3">
                     @foreach($ladies_clothes as $category => $link_query)
                         <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'ladies', 'categories' => $link_query]) }}">{{ $category }}</a></li>

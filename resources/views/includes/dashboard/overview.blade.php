@@ -38,11 +38,11 @@
                 {{ __('dashboard.nav-demands') }}
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a wire:click="changeSection('returns')" class="dashboard__nav__link-mobile">
                 {{ __('dashboard.nav-returns') }}
             </a>
-        </li>
+        </li> -->
         <li>
             <a wire:click="changeSection('wishlist')" class="dashboard__nav__link-mobile">
                 {{ __('dashboard.nav-wishlist') }}
