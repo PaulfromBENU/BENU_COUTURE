@@ -521,11 +521,6 @@ input[type=checkbox]:focus {
   border: 5px solid transparent;
   border-top-color: #D41C1B;
 }
-@media (max-width: 767px) {
-  .tooltip .tooltiptext--top::before {
-    left: 90%;
-  }
-}
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
@@ -3201,6 +3196,7 @@ input[type=checkbox]:focus {
     width: 100%;
     padding: 20px 30px;
     height: auto;
+    padding-bottom: 60px;
   }
 }
 .article-sidebar__content__close-container {
@@ -3513,10 +3509,20 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .article-sidebar__content__cart-btn {
     position: fixed;
-    bottom: 110px;
+    bottom: 10px;
     margin: 0;
     left: 10%;
     width: 80%;
+    background: #D41C1B;
+    border-radius: 8px;
+    padding: 4px 30px;
+    font: normal normal 600 20px/28px "Barlow Condensed";
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: none;
+    width: calc(100% - 60px);
+    left: 30px;
   }
 }
 .article-sidebar__content__cart-btn:hover {
@@ -10520,6 +10526,11 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .cart-content__article__icons__heart .tooltiptext--top {
     left: -180px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .cart-content__article__icons__heart .tooltiptext--top::before {
+    left: 90%;
   }
 }
 .cart-content__article__icons__heart:hover .cart-content__article__icons__heart__icon--hovered {

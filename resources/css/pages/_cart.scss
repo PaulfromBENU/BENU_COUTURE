@@ -317,6 +317,11 @@
 					left: calc(50% - 103px);
 					@include mobile {
 						left: -180px;
+						&::before {
+							@include mobile {
+								left: 90%;
+							}
+						}
 					}
 				}
 				&:hover {
