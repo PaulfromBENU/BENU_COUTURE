@@ -79,6 +79,9 @@
 				max-height: 320px;
 				margin-bottom: 30px;
 			}
+			@include mobile {
+				margin-bottom: 20px;
+			}
 			img {
 				object-fit: cover;
 				min-width: 100%;
@@ -296,6 +299,9 @@
 					right: 0px;
 					top: 6px;
 					cursor: pointer;
+					@include mobile {
+						top: 9px;
+					}
 					&--hovered {
 						transform: scale(0);
 						transition: transform 0.2s;
@@ -309,6 +315,9 @@
 				}
 				.tooltiptext--top {
 					left: calc(50% - 103px);
+					@include mobile {
+						left: -180px;
+					}
 				}
 				&:hover {
 					.cart-content__article__icons__heart__icon--hovered {

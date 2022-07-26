@@ -540,7 +540,10 @@ input[type="checkbox"] {
 				left: 50%;
 				margin-left: -5px;
 				border: 5px solid transparent;
-				border-top-color: $primary-color
+				border-top-color: $primary-color;
+				@include mobile {
+					left: 90%;
+				}
 			}
 		}
 	}
