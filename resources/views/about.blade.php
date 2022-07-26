@@ -115,7 +115,7 @@
 								{{ __('about.section-2-txt-2-2') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-2-3') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-2-link-1') }}</a> {{ __('about.section-2-txt-2-4') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-2-link-2') }}</a> {{ __('about.section-2-txt-2-5') }}
+								{{ __('about.section-2-txt-2-3') }} <a href="{{ route('model-'.app()->getLocale()) }}" class="primary-color hover:text-gray-800 transition" target="_blank">{{ __('about.section-2-txt-2-link-1') }}</a> {{ __('about.section-2-txt-2-4') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="primary-color hover:text-gray-800 transition" target="_blank">{{ __('about.section-2-txt-2-link-2') }}</a> {{ __('about.section-2-txt-2-5') }}
 							</p>
 						</div>
 					</div>
@@ -130,7 +130,7 @@
 								{{ __('about.section-2-txt-3-2') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-3-3') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-3-link') }}</a>
+								{{ __('about.section-2-txt-3-3') }} <a onclick="document.getElementById('about-sub-menu-1').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="primary-color hover:text-gray-800 transition" style="cursor: pointer;">{{ __('about.section-2-txt-3-link') }}</a>
 							</p>
 						</div>
 						<div class="w-2/5">
@@ -163,12 +163,12 @@
 								{{ __('about.section-2-txt-5-1') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-5-2') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-5-link') }}</a>
+								{{ __('about.section-2-txt-5-2') }}
 							</p>
 						</div>
 					</div>
 
-					<h4>{{ __('about.section-2-subtitle-5') }}</h4>
+					<h4 id="about-sub-menu-1">{{ __('about.section-2-subtitle-5') }}</h4>
 
 					<p class="full-story__general__content__info-section__txt__paragraph">
 						{{ __('about.section-2-txt-6') }}
@@ -184,6 +184,10 @@
 
 					<p class="full-story__general__content__info-section__txt__paragraph">
 						{{ __('about.section-2-txt-9') }}
+					</p>
+
+					<p class="full-story__general__content__info-section__txt__paragraph">
+						{{ __('about.section-2-txt-10') }}
 					</p>
 
 					<p class="text-center mb-10">
@@ -217,6 +221,9 @@
 							<img src="{{ asset('images/pictures/about/about-content-5.jpg') }}">
 						</div>
 						<div class="w-3/5 pl-5">
+							<h5>
+								{{ __('about.section-3-lowtitle-0') }}
+							</h5>
 							<p class="full-story__general__content__info-section__txt__paragraph">
 								{{ __('about.section-3-txt-2-1') }}
 							</p>
@@ -229,7 +236,7 @@
 					<div class="flex justify-between flex-wrap pt-10">
 						<div class="w-3/5 pr-5">
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-3-txt-3-1') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-3-txt-3-link') }}</a>
+								{{ __('about.section-3-txt-3-1') }}
 							</p>
 							<h5>
 								{{ __('about.section-3-lowtitle-1') }}
