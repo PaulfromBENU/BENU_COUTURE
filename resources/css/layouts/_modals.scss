@@ -299,7 +299,8 @@
 			border-radius: 30px;
 			cursor: pointer;
 			transition: all 0.5s;
-			background: $light-grey;
+			background: $primary-color;
+			// background: $light-grey;
 			@include tablet {
 				top: 25px;
 				right: 35px;
