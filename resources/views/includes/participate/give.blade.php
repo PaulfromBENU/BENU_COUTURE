@@ -3,10 +3,10 @@
 
 	<div class="participate-give__content">
 		<p class="participate-give__content__txt">
-			{{ __('participate.give-content-1-1') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('participate.give-content-1-1-link') }}</a>
+			{{ __('participate.give-content-1-1') }} <a href="{{ route('about-'.app()->getLocale()) }}" class="primary-color hover:text-gray-800 transition">{{ __('participate.give-content-1-1-link') }}</a>
 		</p>
 		<p class="participate-give__content__txt">
-			{{ __('participate.give-content-1-2') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('participate.give-content-1-2-link') }}</a>
+			{{ __('participate.give-content-1-2') }} <a onclick="document.getElementById('participate-give-collect-point-1').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="primary-color hover:text-gray-800 transition" style="cursor: pointer;">{{ __('participate.give-content-1-2-link') }}</a>
 		</p>
 <!-- 		<div class="text-center mt-5 pt-5">
 			<a href="#" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('participate.give-link-1') }}</a>
@@ -46,7 +46,7 @@
 
 
 	<div class="participate-give__collect-box">
-		<h3>
+		<h3 id="participate-give-collect-point-1">
 			BENU Shop Esch-sur-Alzette
 		</h3>
 		<div class="participate-give__collect-box__details">

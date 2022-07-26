@@ -56,7 +56,7 @@
 	</div>
 
 	<p class="participate-smart__final">
-		{{ __('participate.smart-final-message') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('participate.smart-final-message-link') }}</a>
+		{{ __('participate.smart-final-message') }}
 	</p>
 
 </section>
