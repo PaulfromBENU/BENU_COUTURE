@@ -25,7 +25,7 @@
 	<h2 class="full-story__subtitle">{{ __('about.subtitle-top') }}</h2>
 	<h1 class="full-story__title">{{ __('about.title-top') }}</h1>
 
-	<h3 class="full-story__section-title">
+	<h3 id="about-chapter-creations" class="full-story__section-title">
 		{{ __('about.section-title-1') }}
 	</h3>
 
@@ -34,16 +34,16 @@
 			<div class="full-story__general__menu-container__menu">
 				<ul>
 					<li>
-						<button class="btn-slider-left text-lg font-bold">Titre 1</button>
+						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-creations').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-1') }}</button>
 					</li>
 					<li>
-						<button class="btn-slider-left text-lg font-bold">Titre 2</button>
+						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-services').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-2') }}</button>
 					</li>
 					<li>
-						<button class="btn-slider-left text-lg font-bold">Titre 3</button>
+						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-team').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-3') }}</button>
 					</li>
 					<li>
-						<button class="btn-slider-left text-lg font-bold">Titre 4</button>
+						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-materials').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-4') }}</button>
 					</li>
 				</ul>
 			</div>
@@ -86,7 +86,7 @@
 			</div>
 
 
-			<h3 class="full-story__section-title">
+			<h3 id="about-chapter-services" class="full-story__section-title">
 				{{ __('about.section-title-2') }}
 			</h3>
 			<div class="full-story__general__content__info-section">
@@ -168,7 +168,7 @@
 						</div>
 					</div>
 
-					<h4>{{ __('about.section-2-subtitle-4') }}</h4>
+					<h4>{{ __('about.section-2-subtitle-5') }}</h4>
 
 					<p class="full-story__general__content__info-section__txt__paragraph">
 						{{ __('about.section-2-txt-6') }}
@@ -194,7 +194,7 @@
 			</div>
 
 
-			<h3 class="full-story__section-title">
+			<h3 id="about-chapter-team" class="full-story__section-title">
 				{{ __('about.section-title-3') }}
 			</h3>
 
