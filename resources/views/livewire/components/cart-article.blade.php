@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="tablet-hidden">
-        <div class="cart-content__article__size">
+        <div class="cart-content__article__size text-center">
             @if($article->name == 'voucher')
                 @if($article->voucher_type == 'pdf')
                     PDF
@@ -79,8 +79,10 @@
         @endif
     </div>
     <div class="tablet-hidden">
-        <div class="cart-content__article__number flex">
-            x{{ $number }}
+        <div class="cart-content__article__number flex justify-center">
+            <p class="text-center">
+                x{{ $number }}
+            </p>
             @if($max_number > 1)
             <div class="ml-3 mt-3">
                 <p class="article-sidebar__content__mask-btn" wire:click="updateNumber('up')">

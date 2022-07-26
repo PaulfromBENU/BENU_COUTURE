@@ -16,16 +16,16 @@
         <div class="col-span-2">
             
         </div>
-        <div>
+        <div class="text-center">
             {{ __('cart.title-size') }}
         </div>
-        <div>
+        <div class="text-center">
             {{ __('cart.title-color') }}
         </div>
-        <div>
+        <div class="text-center">
             {{ __('cart.title-number') }}
         </div>
-        <div class="pl-1">
+        <div class="pl-1 text-center">
             {{ __('cart.title-price') }}
         </div>
         <div>
