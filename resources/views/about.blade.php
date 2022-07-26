@@ -229,13 +229,13 @@
 					<div class="flex justify-between flex-wrap pt-10">
 						<div class="w-3/5 pr-5">
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-3-1') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-2-txt-3-link') }}</a>
+								{{ __('about.section-3-txt-3-1') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('about.section-3-txt-3-link') }}</a>
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-3-2') }}
+								{{ __('about.section-3-txt-3-2') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-3-3') }}
+								{{ __('about.section-3-txt-3-3') }}
 							</p>
 						</div>
 						<div class="w-2/5">
