@@ -43,6 +43,8 @@
 		Livewire.on('filtersUpdated', function() {
 			$('#filtered-creations').hide();
 			$('#filter-update-loader').show();
+			$('body').css('overflow-y', 'auto');
+    		$('html').css('overflow-y', 'auto');
 		});
 
 		Livewire.on('pageChanged', function() {
