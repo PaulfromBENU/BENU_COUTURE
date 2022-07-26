@@ -418,17 +418,17 @@
   {
     "page": "Home",
     "key": "welcome.campaign-title-1",
-    "de": "",
-    "fr": "",
-    "en": "",
+    "de": "BENU COUTURE's Politische Kampage",
+    "fr": "BENU COUTURE's Campagne politique",
+    "en": "BENU COUTURE's Political Campaign",
     "lu": ""
   },
   {
     "page": "Home",
     "key": "welcome.campaign-title-2",
-    "de": "",
-    "fr": "",
-    "en": "",
+    "de": "Persilschein",
+    "fr": "Chèque en blanc",
+    "en": "Free letter",
     "lu": ""
   },
   {
@@ -9427,9 +9427,9 @@
     "page": "Participer",
     "key": "participate.give-content-2-2",
     "de": "Caritative Organisationen lassen in Luxemburg jährlich mehr als 9.000 Tonnen Altkleider sammeln. Ein marginaler Anteil von 1,7% wird an Menschen in Not verteilt. Die restlichen Kleider werden ins Ausland verkauft, wo sie sortiert und weiter an Second Hand Shops (10%) und internationale Märkte (36%) verkauft werden. Der Rest wird zu Lumpen verarbeitet, verbrannt oder landet in einer Deponie. Da der internationale Markt bereits vollkommen mit Kleidung überschwemmt wird, ist es sinnlos weiter Kleiderspenden zu verschicken.",
-    "fr": "Les organisations caritatives font collecter plus de 9.000 tonnes de vieux vêtements par an au Luxembourg. Une part marginale de 1,7% est distribuée aux personnes dans le besoin. Le reste des vêtements est vendu à l'étranger, où ils sont triés et revendus à des boutiques de seconde main (10%) et à des marchés internationaux (36%). Le reste est transformé en chiffons, incinéré ou finit dans une décharge. Comme le marché international est déjà complètement inondé de vêtements, il est inutile de continuer à envoyer des dons de vêtements.",
-    "en": "Charitable organisations in Luxembourg collect more than 9,000 tonnes of old clothes every year. A marginal share of 1.7% is distributed to people in need. The remaining clothes are sold abroad, where they are sorted and sold on to second hand shops (10%) and international markets (36%). The rest is turned into rags, burned or ends up in a landfill. As the international market is already completely flooded with clothes, it is pointless to continue sending clothing donations.",
-    "lu": ""
+    "fr": "Au Luxembourg, les associations caritatives récupèrent 9.000 tonnes de vêtements chaque année. Un pourcentage très faible de 1,7% est effectivement distribué à des personnes dans le besoin. Les vêtements restants sont vendus à l'étranger, où ils sont une nouvelle fois triés, puis revendus à des magasins de seconde main (10%) et sur le marché international (36%). Le reste est transformé en chiffons, incinéré ou atterrit à la décharge. Le marché étant d'ores et déjà submergé de vêtements, donner des vêtements n'a plus aucune utilité.",
+    "en": "Charitable organisations in Luxembourg collect more than 9.000 tonnes of old clothes every year. A marginal share of 1.7% is distributed to people in need. The remaining clothes are sold abroad, where they are sorted and sold on to second hand shops (10%) and international markets (36%). The rest is turned into rags, burned or ends up in a landfill. As the international market is already completely flooded with clothes, it is pointless to continue sending clothing donations.",
+    "lu": "A Lëtzebuerg sammele karitativ Associatioune järlech 9.000 Tonne Kleeder. E ganz klenge Prozentsaz vun 1,7% gëtt tatsächlech u Leit am Besoin verdeelt. Déi reschtlech Kleeder ginn an d'Ausland verkaf, wou se nach eemol gesënnert ginn, an dann nees un e Second Hand Shop (10%) oder op den internationale Maart (36%) weiderverkaf. De Rescht gëtt a Lompe transforméiert, verbrannt oder lant op der Deponie. De Maart ass schonn esou vu Kleeder iwwerschwemmt datt et sënnlos ass, weider Kleeder ze spenden."
   },
   {
     "page": "Participer",
@@ -9437,15 +9437,15 @@
     "de": "Daher laden wir Dich ein mit uns nach anderen Lösungen zu suchen. Lass uns gemeinsam aktiv werden, nachhaltiger handeln!",
     "fr": "C'est pourquoi nous t'invitons à chercher avec nous d'autres solutions. Agissons ensemble de manière plus durable !",
     "en": "Therefore, we invite you to look for other solutions with us. Let's become active together, act more sustainably!",
-    "lu": ""
+    "lu": "Dowéinst invitéiere mir Dech, mat eis aner Léisungen ze sichen. Looss eis zesummen aktiv ginn, méi nohalteg handelen!"
   },
   {
     "page": "Participer",
     "key": "participate.give-content-2-4",
-    "de": "Vielleicht gibt es in Deiner Gemeinde oder in der Umgebung schon Initiativen, die Secondhand-Kleidung wiederverwenden und weiterverkaufen… ? Oder existiert sogar eine Tauschbörse für Kleidung? Vielleicht lassen sich alte Kleidungsstücke auch reparieren oder aufwerten…  Die Abgabe und Spende von Altkleidern steht für uns erst an letzter Stelle. Trotzdem vielen Dank, dass Du an BENU gedacht hast :)",
-    "fr": "Peut-être existe-t-il déjà dans ta commune ou dans les environs des initiatives de réutilisation et de revente de vêtements de seconde main... ? Ou existe-t-il même une bourse d'échange de vêtements ? Peut-être est-il possible de réparer ou de revaloriser de vieux vêtements... Pour nous, la remise et le don de vieux vêtements ne viennent qu'en dernier lieu. Merci néanmoins d'avoir pensé à BENU :)",
-    "en": "Maybe there are already initiatives in your community or neighbourhood that reuse and resell second-hand clothes...? Or is there even a clothing exchange? Maybe old clothes can be repaired or upgraded... For us, handing in and donating old clothes is only in last place. Nevertheless, thank you for thinking of BENU :)",
-    "lu": ""
+    "de": "Vielleicht gibt es in Deiner Gemeinde oder in der Umgebung schon Initiativen, die Secondhand-Kleidung wiederverwenden und weiterverkaufen…? Oder existiert sogar eine Tauschbörse für Kleidung? Vielleicht lassen sich alte Kleidungsstücke auch reparieren oder aufwerten… Die Abgabe und Spende von Altkleidern steht für uns erst an letzter Stelle. Trotzdem vielen Dank, dass Du an BENU gedacht hast :)",
+    "fr": "Peut-être existe-t-il déjà des initiatives de réutilisation et de revente de vêtements de seconde main dans ta commune ou dans les environs... ? Ou une bourse d'échange de vêtements ? Peut-être les vieux vêtements peuvent-ils être réparés ou revalorisés... Pour nous, la remise et le don de vieux vêtements ne viennent qu'en dernière option. Merci malgré tout d'avoir pensé à BENU :)",
+    "en": "Maybe there are already initiatives in your Commune or neighbourhood that reuse and resell second-hand clothes...? Or is there even a clothing exchange? Maybe old clothes can be repaired or upgraded... For us, handing in and donating old clothes is only the last option. Nevertheless, thank you for thinking of BENU :)",
+    "lu": "Vläicht gëtt et an Denger Gemeng oder an der Ëmgéigend schonn Initiativen, déi Secondhand-Kleedung weiderverwenden oder weiderverkafen...? Oder eng \"Tauschbörse\" fir Kleeder? Vläicht kann een déi al Kleeder flécken oder opwäerten... D'Ofginn an d'Spende vu Kleeder komme fir eis eréischt als allerlescht Optiounen a Fro. Merci awer, datt s Du u BENU geduecht hues :)"
   },
   {
     "page": "Participer",
@@ -9453,7 +9453,7 @@
     "de": "Weitere Gedanken hierzu findest du in unserer ersten politischen Geschichte!",
     "fr": "Tu trouveras d'autres réflexions à ce sujet dans notre première histoire politique !",
     "en": "You can find more thoughts on this in our first political story!",
-    "lu": ""
+    "lu": "Weider Gedanken dozou fënns Du an eiser éischter politescher Geschicht!"
   },
   {
     "page": "Participer",
@@ -9467,17 +9467,17 @@
     "page": "Participer",
     "key": "participate.give-title-2",
     "de": "BENU Sammelstellen für Altkleider und Textilien",
-    "fr": "Points de collecte pour les vêtements et textiles usagés",
+    "fr": "Points de collecte BENU pour vêtements et textiles usagés",
     "en": "BENU collection points for old clothes and textiles",
-    "lu": ""
+    "lu": "BENU Sammelplaze fir al Kleeder an Textilien"
   },
   {
     "page": "Participer",
     "key": "participate.give-content-3-1",
     "de": "Du kannst Deine Kleiderspende zu unseren Öffnungszeiten im BENU Shop in Esch-sur-Alzette ohne Voranmeldung abgeben. Bei den übrigen Sammelstellen bitten wir Dich, vorab telefonisch einen Termin zu vereinbaren.",
     "fr": "Tu peux déposer tes dons de vêtements au BENU Shop d'Esch-sur-Alzette sans rendez-vous pendant nos heures d'ouverture. Pour les autres points de collecte, nous te prions de prendre rendez-vous au préalable par téléphone.",
-    "en": "You can drop off your clothing donation at the BENU Shop in Esch-sur-Alzette during our opening hours without making an appointment. At the other collection points, we ask you to make an appointment in advance by telephone.",
-    "lu": ""
+    "en": "You can drop off your clothing donation at the BENU Shop in Esch-sur-Alzette during our opening hours without making an appointment. For the other collection points, please make an appointment in advance by phone.",
+    "lu": "Du kanns Deng Kleederspend wärend den Ëffnungszäiten ouni Rendez-vous am BENU Shop zu Esch/Uelzecht ofginn. Fir déi aner Sammelplaze biede mir Dech, virdrun telefonesch e Rendez-vous festzeleeën."
   },
   {
     "page": "Participer",
@@ -9485,7 +9485,7 @@
     "de": "Öffnungszeiten",
     "fr": "Heures d'ouverture",
     "en": "Opening hours",
-    "lu": ""
+    "lu": "Ëffnungszäiten"
   },
   {
     "page": "Participer",
@@ -9493,7 +9493,7 @@
     "de": "Diesen Kontakt anrufen",
     "fr": "Téléphoner à ce contact",
     "en": "Call this contact",
-    "lu": ""
+    "lu": "Dëse Kontakt uruffen"
   },
   {
     "page": "Participer",
@@ -9501,7 +9501,7 @@
     "de": "Partner:in werden",
     "fr": "Devenir partenaire",
     "en": "Become partner",
-    "lu": ""
+    "lu": "Partner:in ginn"
   },
   {
     "page": "Participer",
@@ -9509,7 +9509,7 @@
     "de": "Partner:in werden",
     "fr": "Devenir partenaire",
     "en": "Become partner",
-    "lu": ""
+    "lu": "Partner:in ginn"
   },
   {
     "page": "Participer",
@@ -9517,23 +9517,23 @@
     "de": "Du kannst Deine Kreationen als Partner:in bei BENU ausstellen oder verkaufen",
     "fr": "Tu peux exposer ou vendre tes créations en tant que partenaire chez BENU",
     "en": "You can exhibit or sell your creations as a partner at BENU",
-    "lu": ""
+    "lu": "Du kanns Deng Kreatiounen als Partner:in bei BENU ausstellen oder verkafen"
   },
   {
     "page": "Participer",
     "key": "participate.partnership-content-1",
-    "de": "Du arbeitest wie wir im Upcycling von Kleidung oder Textilien? Du teilst die Werte und Überzeugungen von BENU COUTURE? Deine Produkte werden régional, in einem Umkreis von 300 km von Esch-sur-Alzette hergestellt?",
-    "fr": "Tu travailles comme nous dans l'upcycling de vêtements ou de textiles ? Tu partages les valeurs et les convictions de BENU COUTURE ? Tes produits sont fabriqués en région, dans un rayon de 300 km d'Esch-sur-Alzette ?",
-    "en": "You work like us in the upcycling of clothes or textiles? You share the values and beliefs of BENU COUTURE? Your products are produced regionally, within a radius of 300 km from Esch-sur-Alzette?",
-    "lu": ""
+    "de": "Du arbeitest wie wir im UpCycling von Kleidung oder Textilien? Du teilst die Werte und Überzeugungen von BENU COUTURE? Deine Produkte werden régional, in einem Umkreis von 300 km von Esch-sur-Alzette hergestellt?",
+    "fr": "Comme nous, tu travailles dans le domaine de l'UpCycling de vêtements ou de textiles ? Tu partages les valeurs et les convictions de BENU COUTURE ? Tes produits sont fabriqués en région, dans un rayon de 300 km autour d'Esch-sur-Alzette ?",
+    "en": "You work like us in the UpCycling of clothes or textiles? You share the values and beliefs of BENU COUTURE? Your products are produced regionally, within a radius of 300 km from Esch-sur-Alzette?",
+    "lu": "Bass Du och am Beräich vum UpCycling vu Kleeder oder Textilien täteg? Du deels d'Wäerter an d'Iwwerzeegunge vu BENU COUTURE? Deng Produite gi regional, an engem Ëmkrees vun 300 km vun Esch/Uelzecht hiergestallt?"
   },
   {
     "page": "Participer",
     "key": "participate.partnership-content-2",
-    "de": "Wenn Du exklusiv im ReUse, in der Transformation und im Upcycling produzierst, weder chemische Zusatzstoffe, noch natürlichen oder künstlichen Pelz verarbeitest und synthetische Stoffe nur in Ausnahmefällen verwendest, dann bist Du richtig bei uns.",
-    "fr": "Si tu produis exclusivement en réutilisation, transformation et upcycling, si tu ne travailles ni avec des additifs chimiques, ni avec de la fourrure naturelle ou artificielle et si tu n'utilises qu'exceptionnellement des matières synthétiques, alors tu es à la bonne adresse.",
-    "en": "If you produce exclusively in reuse, transformation and upcycling, use neither chemical additives nor natural or artificial fur and use synthetic materials only in exceptional cases, then you've come to the right place.",
-    "lu": ""
+    "de": "Wenn Du exklusiv im ReUse, in der Transformation und im UpCycling produzierst, weder chemische Zusatzstoffe, noch natürlichen oder künstlichen Pelz verarbeitest und synthetische Stoffe nur in Ausnahmefällen verwendest, dann bist Du richtig bei uns.",
+    "fr": "Si tu produis exclusivement en \"ReUse\" (réutilisation), transformation et UpCycling, sans additifs chimiques ni fourrure naturelle ou synthétique et que tu n'utilises des matières synthétiques qu'exceptionnellement, alors tu es à la bonne adresse.",
+    "en": "If you produce exclusively in ReUse, transformation and UpCycling, use neither chemical additives nor natural or artificial fur and use synthetic materials only in exceptional cases, then you've come to the right place.",
+    "lu": "Wann s Du nëmmen am ReUse, an der Transformatioun an dem UpCycling produzéiers, weder cheemesch Zousazstoffer nach natierlechen oder syntheetesche Pelz verschaffs a syntheetesch Stoffer just an Ausnamefäll benotz, da bass Du bei eis richteg."
   },
   {
     "page": "Participer",
@@ -9541,31 +9541,31 @@
     "de": "Werde Partner:in von BENU COUTURE !",
     "fr": "Deviens partenaire de BENU COUTURE !",
     "en": "Become a partner of BENU COUTURE !",
-    "lu": ""
+    "lu": "Gëff Partner:in vu BENU COUTURE!"
   },
   {
     "page": "Participer",
     "key": "participate.partnership-content-3",
     "de": "Wir bieten Dir an, Deine Produkte in unserem Shop in Esch-sur-Alzette zu verkaufen oder gemeinsam mit uns auf unseren Events auszustellen.",
-    "fr": "Nous te proposons de vendre tes produits chez nous ou de les exposer avec nous lors de nos événements.",
+    "fr": "Nous te proposons de vendre tes produits dans notre BENU Shop ou de les exposer avec nous lors de nos événements.",
     "en": "We offer you to sell your products with us or to exhibit them together with us at our events.",
-    "lu": ""
+    "lu": "Mir proposéieren DIr, Deng Produite an eisem BENU Shop zu Esch/Uelzecht ze verkafen oder gemeinsam mat eis op eisen Events auszestellen."
   },
   {
     "page": "Participer",
     "key": "participate.partnership-highlight-2",
-    "de": "Wir freuen uns auf Deine Anfrage !",
+    "de": "Wir freuen uns auf Deine Anfrage!",
     "fr": "Nous nous réjouissons de ta demande !",
-    "en": "We are looking forward to your request !",
-    "lu": ""
+    "en": "We are looking forward to your request!",
+    "lu": "Mir freeën eis op Deng Ufro!"
   },
   {
     "page": "Participer",
     "key": "participate.partnership-highlight-2-link",
     "de": "Kontaktiere BENU COUTURE",
-    "fr": "Contacte BENU COUTURE.",
+    "fr": "Contacte BENU COUTURE",
     "en": "Contact BENU COUTURE",
-    "lu": ""
+    "lu": "Kontaktéier BENU COUTURE"
   },
   {
     "page": "Participer",
@@ -9573,15 +9573,15 @@
     "de": "Warum regional in einem Umkreis von 300 km?",
     "fr": "Pourquoi régional dans un rayon de 300 km ?",
     "en": "Why regionally within a radius of 300 km?",
-    "lu": ""
+    "lu": "Firwat regional an engem Ëmkrees vun 300 km?"
   },
   {
     "page": "Participer",
     "key": "participate.partnership-content-4",
-    "de": "Weil BENU VILLAGE das erste Öko-Dorf in einem Umkreis von 300 km ist. Außerdem möchte BENU Produktionen unter schwierigen oder fragwürdigen sozio-ökologischen Bedingungen in zu weit entfernten Ländern ausschließen und regionale Produzenten unterstützen.",
-    "fr": "Parce que BENU VILLAGE est le premier éco-village dans un rayon de 300 km. De plus, BENU souhaite exclure les productions dans des conditions socio-écologiques difficiles ou douteuses dans des pays trop éloignés et soutenir les producteurs régionaux.",
-    "en": "Because BENU VILLAGE is the first eco-village within a radius of 300 km. BENU also wants to exclude production under difficult or questionable socio-ecological conditions in countries too far away and support regional producers.",
-    "lu": ""
+    "de": "Weil BENU VILLAGE das erste Ökodorf in einem Umkreis von 300 km ist. Außerdem möchte BENU Produktionen unter schwierigen oder fragwürdigen sozio-ökologischen Bedingungen in zu weit entfernten Ländern ausschließen und regionale Produzenten unterstützen.",
+    "fr": "Parce que BENU VILLAGE est le premier écovillage dans un rayon de 300 km. De plus, BENU exclut les productions aux conditions socio-écologiques difficiles ou douteuses dans des pays trop éloignés et au lieu de cela, souhaite soutenir les producteurs régionaux.",
+    "en": "Because BENU VILLAGE is the first ecovillage within a radius of 300 km. BENU also wants to exclude production under difficult or questionable socio-ecological conditions in countries too far away and support regional producers.",
+    "lu": "Wëll BENU VILLAGE dat éischt Ekoduerf an engem Ëmkrees vun 300 km ass. Ausserdeem wëll BENU Produktiounen ënner schwieregen oder zweifelhafte Bedéngungen an ze wäit entfernte Länner ausschléissen a regional Produkteuren ënnerstëtzen."
   },
   {
     "page": "Participer",

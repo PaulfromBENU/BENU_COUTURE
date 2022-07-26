@@ -9578,10 +9578,10 @@
   {
     "page": "Participer",
     "key": "participate.partnership-content-4",
-    "de": "Weil BENU VILLAGE das erste Ökodorf in einem Umkreis von 300 km ist. Außerdem möchte BENU Produktionen unter schwierigen oder fragwürdigen sozio-ökologischen Bedingungen in zu weit entfernten Ländern ausschließen und regionale Produzenten unterstützen.",
-    "fr": "Parce que BENU VILLAGE est le premier écovillage dans un rayon de 300 km. De plus, BENU exclut les productions aux conditions socio-écologiques difficiles ou douteuses dans des pays trop éloignés et au lieu de cela, souhaite soutenir les producteurs régionaux.",
+    "de": "Weil BENU VILLAGE das erste Ökodorf in einem Umkreis von 300 km ist. Außerdem möchte BENU Produktionen unter schwierigen oder fragwürdigen sozio-ökologischen Bedingungen in zu weit entfernten Ländern ausschließen und regionale Produzenten/innen unterstützen.",
+    "fr": "Parce que BENU VILLAGE est le premier écovillage dans un rayon de 300 km. De plus, BENU exclut les productions aux conditions socio-écologiques difficiles ou douteuses dans des pays trop éloignés et au lieu de cela, souhaite soutenir les producteurs·rices régionaux·ales.",
     "en": "Because BENU VILLAGE is the first ecovillage within a radius of 300 km. BENU also wants to exclude production under difficult or questionable socio-ecological conditions in countries too far away and support regional producers.",
-    "lu": "Wëll BENU VILLAGE dat éischt Ekoduerf an engem Ëmkrees vun 300 km ass. Ausserdeem wëll BENU Produktiounen ënner schwieregen oder zweifelhafte Bedéngungen an ze wäit entfernte Länner ausschléissen a regional Produkteuren ënnerstëtzen."
+    "lu": "Wëll BENU VILLAGE dat éischt Ekoduerf an engem Ëmkrees vun 300 km ass. Ausserdeem wëll BENU Produktiounen ënner schwieregen oder zweiwelhafte Bedéngungen an ze wäit entfernte Länner ausschléissen a regional Produzenten/tinnen ënnerstëtzen."
   },
   {
     "page": "Participer",
@@ -9589,7 +9589,7 @@
     "de": "Clever konsumieren",
     "fr": "Consommer malin",
     "en": "Consuming smartly",
-    "lu": ""
+    "lu": "Clever consomméieren"
   },
   {
     "page": "Participer",
@@ -9597,23 +9597,23 @@
     "de": "Clever konsumieren",
     "fr": "Consommer malin",
     "en": "Consuming smartly",
-    "lu": ""
+    "lu": "Clever consomméieren"
   },
   {
     "page": "Participer",
     "key": "participate.smart-title",
     "de": "Worauf kann ich achten, wenn ich Kleidung benötige?",
-    "fr": "A quoi puis-je faire attention lorsque j’ai besoin de vêtements ?",
+    "fr": "A quoi puis-je veiller lorsque j’ai besoin de vêtements ?",
     "en": "What can I look out for when I need clothes?",
-    "lu": ""
+    "lu": "Op wat kann ech oppassen, wann ech Kleeder brauch?"
   },
   {
     "page": "À propos",
     "key": "about.subtitle-top",
-    "de": "",
-    "fr": "À propos BENU COUTURE",
-    "en": "",
-    "lu": ""
+    "de": "Über BENU COUTURE",
+    "fr": "À propos de BENU COUTURE",
+    "en": "About BENU COUTURE",
+    "lu": "Iwwer BENU COUTURE"
   },
   {
     "page": "À propos",
@@ -9625,51 +9625,83 @@
   },
   {
     "page": "À propos",
+    "key": "about.side-menu-1",
+    "de": "Kreationen",
+    "fr": "Créations",
+    "en": "Creations",
+    "lu": "Kreatiounen"
+  },
+  {
+    "page": "À propos",
+    "key": "about.side-menu-2",
+    "de": "Dienstleistungen",
+    "fr": "Services",
+    "en": "Services",
+    "lu": "Servicer"
+  },
+  {
+    "page": "À propos",
+    "key": "about.side-menu-3",
+    "de": "Team",
+    "fr": "Équipe",
+    "en": "Team",
+    "lu": "Ekipp"
+  },
+  {
+    "page": "À propos",
+    "key": "about.side-menu-4",
+    "de": "Materialien",
+    "fr": "Matériaux",
+    "en": "Materials",
+    "lu": "Materialien"
+  },
+  {
+    "page": "À propos",
     "key": "about.section-title-1",
     "de": "Wie entsteht ein Kleidungsstück in der Schneiderei BENU COUTURE?",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Comment est créé un vêtement à l'atelier de BENU COUTURE ?",
+    "en": "How is a garment made in the BENU COUTURE tailor shop?",
+    "lu": "Wéi entsteet e Kleedungsstéck am Schneideratelier BENU COUTURE?"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-1",
-    "de": "Begutachten der verschiedenen gebrauchten Textilien im Lager. Auswahl der besten Qualitäten",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Auswahl hochwertiger gebrauchter Textilien im Lager",
+    "fr": "Évaluation des différents textiles usagés dans l'entrepôt. Sélection des meilleures qualités",
+    "en": "Evaluation of the different used textiles in the warehouse. Selection of the best qualities",
+    "lu": "Bewäertung vun de gebrauchten Textilien am Lager. Auswiel vun de beschte Qualitéiten"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-2",
-    "de": "Ideensammlung für den Entwurf eines Modells, das gleichzeitig modern und zeitlos ist",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Ideensammlung für den Entwurf eines Modells",
+    "fr": "Échange d'idées pour la création d'un modèle, à la fois moderne et intemporel",
+    "en": "Brainstorming for the creation of a model, both modern and timeless",
+    "lu": "Austausch vun Iddie fir den Entworf vn engem Modell, dee gläichzäiteg modern an"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-3",
-    "de": "Konzeption des Modells anhand von Skizzen und technischen Zeichnungen",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Konzeption des Modells anhand von Skizzen und Zeichnungen",
+    "fr": "Conception du modèle à l'aide de croquis et dessins techniques",
+    "en": "Conception of the model based on sketches and technical drawings",
+    "lu": "Gestaltung vum Modell unhand vu Skizzen an technesch Zeechnungen"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-4",
-    "de": "Realisierung der Schnittmuster in verschiedenen Größen von XS bis 5XL",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Realisierung der Schnittmuster in verschiedenen Größen",
+    "fr": "Réalisation des patrons en différentes tailles, allant de XS à 5XL",
+    "en": "Realisation of the pattern in different sizes from XS to 5XL",
+    "lu": "Realisatioun vun de Patronen a verschiddene Gréisste vun XS bis 5XL"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-5",
-    "de": "Zerschneiden der gebrauchten Kleidungsstücke, die für die Realisierung der einzelnen Variationen verwendet werden",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Zerschneiden der gebrauchten Kleidungsstücke",
+    "fr": "Découpe des vêtements usagés qui serviront à la réalisation des différentes variations",
+    "en": "Cutting up the used garments that will be used for the realisation of the different variations",
+    "lu": "Zerschneide vun de gebrauchte Kleeder, déi fir d'Realisatioun vun den eenzelne Variatioune benotzt ginn"
   },
   {
     "page": "À propos",
@@ -9677,79 +9709,79 @@
     "de": "Zuschneiden der Stoffe für die unterschiedlichen Variationen",
     "fr": "",
     "en": "",
-    "lu": ""
+    "lu": "Zouschneide vun de Stoffer fir déi verschidde Variatiounen"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-7",
     "de": "Zusammennähen der ersten Variation eines Modells",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Confection de la première variante d'un modèle",
+    "en": "Sewing the first variation of a model",
+    "lu": "Zesummebitze vun der éischter Variatioun vum Modell"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-8",
-    "de": "Wenn erforderlich, Umsetzung von Korrekturen bevor die gesamte Kollektion realisiert wird",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Notwendige Korrekturen bevor die gesamte Kollektion realisiert wird",
+    "fr": "Si nécessaire, des corrections sont entreprises avant réalisation de la collection",
+    "en": "If necessary, corrections are made before the entire collection is produced",
+    "lu": "Falls néideg gi Korrekture gemaach éier déi ganz Kollektioun realiséiert gëtt"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-9",
     "de": "Letzte Qualitätskontrolle",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Dernier contrôle qualité",
+    "en": "Last quality check",
+    "lu": "Lescht Qualitéitskontroll"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-10",
     "de": "Fotografieren der neuen Kreation",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "La nouvelle création est photographiée",
+    "en": "The new creation is being photographed",
+    "lu": "Fotograféiere vun der neier Kreatioun"
   },
   {
     "page": "À propos",
     "key": "about.card-txt-11",
-    "de": "Aufnahme der neuen Kreation in den Online-Shop und den BENU Shop in Esch-sur-Alzette",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Aufnahme der neuen Kreation in den Shop",
+    "fr": "Le modèle est intégré au magasin en ligne et au BENU Shop à Esch-sur-Alzette",
+    "en": "Inclusion of the new creation in the online shop and the BENU shop in Esch-sur-Alzette",
+    "lu": "Opnam vun der neier Kreatioun am Online-Shop an am BENU Shop zu Esch/Uelzecht"
   },
   {
     "page": "À propos",
     "key": "about.section-title-2",
     "de": "Welche Dienstleistungen bietet BENU COUTURE?",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Quels services sont offerts par BENU COUTURE ?",
+    "en": "What services are provided by BENU COUTURE?",
+    "lu": "Wat fir eng Servicer gi vu BENU COUTURE ugebueden?"
   },
   {
     "page": "À propos",
     "key": "about.section-2-subtitle-1",
     "de": "BENU Kreationen",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Créations BENU",
+    "en": "BENU creations",
+    "lu": "BENU Kreatiounen"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-1",
-    "de": "Wir entwerfen und produzieren UpCycling-Mode und Accessoires, und dies alles vor Ort in unserem Schneideratelier in Esch-sur-Alzette. Unser Team aus professionellen Schneider:innen und Designer:innen realisiert aus ausgewählten, qualitativ hochwertigen Stoffen eine Vielfalt an",
-    "fr": "",
-    "en": "",
+    "de": "Wir entwerfen und produzieren UpCycling-Mode und Accessoires, und dies alles vor Ort in unserem Schneideratelier in Esch-sur-Alzette. Unser Team aus professionellen Schneider:innen und Designer:innen realisiert aus ausgewählten, qualitativ hochwertigen Stoffen eine Vielfalt an Kreationen für Kinder und Erwachsene.",
+    "fr": "Nous créons et produisons des vêtements et accessoires UpCycling, directement dans notre atelier de couture à Esch-sur-Alzette. Notre équipe de couturiers·e et de designers professionnel·le·s réalise, à partir de tissus sélectionnés et de haute qualité, une grande variété de créations pour enfants et adultes.",
+    "en": "We design and produce upcycled fashion and accessories, all on site in our tailoring studio in Esch-sur-Alzette. Our team of professional tailors and designers produce a variety of upcycled garments from selected, high quality fabrics.",
     "lu": ""
   },
   {
     "page": "À propos",
     "key": "about.section-2-lowtitle-1",
-    "de": "Kreationen für Kinder und Erwachsene!",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Jeder Artikel ist ein Unikat!",
+    "fr": "Chaque article est unique !",
+    "en": "Every item is unique!",
+    "lu": "All Artikel ass eenzegaarteg!"
   },
   {
     "page": "À propos",
@@ -9777,6 +9809,14 @@
   },
   {
     "page": "À propos",
+    "key": "about.section-2-txt-2-link-1",
+    "de": "Modellen",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
     "key": "about.section-2-txt-2-4",
     "de": "überraschen! Du kannst alle BENU-Kreationen auf benucouture.lu und in unseren",
     "fr": "",
@@ -9785,7 +9825,15 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-txt-2-4",
+    "key": "about.section-2-txt-2-link-2",
+    "de": "Verkaufsstellen",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-2-txt-2-5",
     "de": "erwerben.",
     "fr": "",
     "en": "",
@@ -9841,8 +9889,16 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-txt-4",
+    "key": "about.section-2-txt-4-1",
     "de": "Ein Loch in Deiner Hose? Das geliebte T-Shirt zu eng geworden? Wir reparieren und verwandeln Dein altes Lieblingsstück nach Deinen individuellen Vorstellungen. Oder warum nicht gleich ein komplett neues Kleidungsstück auf Basis der von Dir zur Verfügung gestellten Kleider und Stoffreste? BENU COUTURE bietet Dir an, eine neue und nur für Dich bestimmte Kreation herzustellen!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-2-txt-4-2",
+    "de": "Besonders beliebt ist die BRING-IN Produktion: hierbei suchst Du Dir eine bestehende BENU Kreation aus, die wir für Dich produzieren. Dabei integrieren wir ein Stück Stoff, das Du uns zur Verfügung stellst. Der Stoff stammt dabei z.B. aus dem Lieblingspulli, dem Hemd vom Freund, der Bluse der Freundin … So entsteht ein Einzel-Emotions-Stück, nur für Dich!",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9953,7 +10009,7 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-txt-3-1",
+    "key": "about.section-3-txt-3-1",
     "de": "Unser Arbeitsplatz ist das BENU COUTURE Atelier in Esch-sur-Alzette. Alle notwendigen Arbeitsschritte von Entwurf über Produktion bis hin zum Vertrieb werden vor Ort realisiert und organisiert. Und das ist uns wichtig! \nDenn lokale Produktion bedeutet ausgezeichnete handwerkliche Qualität und faire Arbeitsbedingungen. Außerdem werden die Wege, die hinter jedem Produkt stehen, konsequent reduziert.",
     "fr": "",
     "en": "",
@@ -9961,7 +10017,7 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-txt-3-link",
+    "key": "about.section-3-txt-3-link",
     "de": "Hier erfährst du mehr zu den Hintergründen",
     "fr": "",
     "en": "",
@@ -9969,7 +10025,15 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-txt-3-2",
+    "key": "about.section-3-lowtitle-1",
+    "de": "Warum ist der soziale Aspekt so wichtig für uns?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-3-txt-3-2",
     "de": "BENU COUTURE bietet ein Arbeitsumfeld, das sich durch Wertschätzung und Respekt für alle Beschäftigten auszeichnet. Dabei geben wir bewusst auch Menschen, die Schwierigkeiten haben, auf dem Arbeitsmarkt Fuß zu fassen, eine Chance. Zudem bilden wir aus, um unseren Beitrag für bessere lokale Kompetenzen zu leisten. So integriert das Team z.B. Langzeitsarbeitslose, Flüchtlinge, junge Menschen ohne Arbeitserfahrung und Auszubildende. Voraussetzung zur Mitarbeit im Kernteam Design, Schnittmuster und Produktion ist eine professionelle Ausbildung. Nur so können wir die hohen Ziele der BENU Qualität gewährleisten. Die Diversität sehen wir als Bereicherung für uns als Team, aber auch für das Projekt insgesamt.",
     "fr": "",
     "en": "",
@@ -9977,7 +10041,7 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-txt-3-2",
+    "key": "about.section-3-txt-3-2",
     "de": "Hier erreichst du uns:",
     "fr": "",
     "en": "",
@@ -9985,7 +10049,7 @@
   },
   {
     "page": "À propos",
-    "key": "about.section-2-btn-contact",
+    "key": "about.section-3-btn-contact",
     "de": "Kontakt",
     "fr": "",
     "en": "",
