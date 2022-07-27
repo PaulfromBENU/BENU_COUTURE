@@ -288,10 +288,10 @@
 			border-radius: 12px;
 			box-shadow: lightgrey 0 0 20px;
 			margin: calc(10% / 6);
-			min-height: 200px;
+			min-height: 300px;
 			overflow: hidden;
 			position: relative;
-			padding: 125px 12px;
+			padding: 125px 12px 60px 12px;
 			@include tablet {
 				width: 48%;
 				margin-left: 1%;

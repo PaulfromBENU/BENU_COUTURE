@@ -11738,10 +11738,10 @@ input[type=checkbox]:focus {
   border-radius: 12px;
   box-shadow: lightgrey 0 0 20px;
   margin: 1.6666666667%;
-  min-height: 200px;
+  min-height: 300px;
   overflow: hidden;
   position: relative;
-  padding: 125px 12px;
+  padding: 125px 12px 60px 12px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .participate-smart__cards__card {
