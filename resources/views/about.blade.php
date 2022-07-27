@@ -234,7 +234,7 @@
 					</div>
 
 					<div class="flex justify-between flex-wrap pt-10">
-						<div class="w-3/5 pr-5">
+						<div class="w-1/2 pr-5">
 							<p class="full-story__general__content__info-section__txt__paragraph">
 								{{ __('about.section-3-txt-3-1') }}
 							</p>
@@ -244,16 +244,16 @@
 							<p class="full-story__general__content__info-section__txt__paragraph">
 								{{ __('about.section-3-txt-3-2') }}
 							</p>
-							<p class="full-story__general__content__info-section__txt__paragraph">
+							<p class="full-story__general__content__info-section__txt__paragraph" style="margin-bottom: 10px;">
 								{{ __('about.section-3-txt-3-3') }}
 							</p>
 						</div>
-						<div class="w-2/5">
+						<div class="w-1/2">
 							<img src="{{ asset('images/pictures/about/about-content-6.jpg') }}">
 						</div>
 					</div>
 				</div>
-				<p class="text-center mt-10 mb-10">
+				<p class="text-center mt-4 mb-10">
 					<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-3-btn-contact') }}</a>
 				</p>
 			</div>
