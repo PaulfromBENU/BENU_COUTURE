@@ -1,4 +1,11 @@
 @charset "UTF-8";
+::-moz-selection {
+  background: #F9E2E2;
+}
+::selection {
+  background: #F9E2E2;
+}
+
 @font-face {
   font-family: "Barlow";
   src: url("/fonts/Barlow/Barlow-ExtraLight.ttf");

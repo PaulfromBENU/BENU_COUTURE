@@ -8337,6 +8337,14 @@
   },
   {
     "page": "Panier",
+    "key": "forms.e-mail-already-exists-please-connect-or-change-email",
+    "de": "Diese E-Mail-Adresse wird bereits verwendet. Bitte verbinde Dich mit Deinem Konto oder gib eine andere E-Mail-Adresse ein.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Panier",
     "key": "cart.info-validate",
     "de": "Meine Daten bestätigen",
     "fr": "Valider mes données",
