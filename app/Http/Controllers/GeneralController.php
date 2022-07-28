@@ -248,6 +248,12 @@ class GeneralController extends Controller
     }
 
 
+    public function showPolicy()
+    {
+        return view('footer.pages.policy');
+    }
+
+
 
     public function startImport()
     {

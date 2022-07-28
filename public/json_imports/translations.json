@@ -7570,10 +7570,10 @@
   {
     "page": "Mon compte",
     "key": "dashboard.delete-account-txt-1",
-    "de": "Schade, dass Du Dein Konto löschen möchtest! Wenn Du später doch wieder bei BENU mitmachen möchtest, kannst Du jederzeit ein neues Konto eröffnen. Du hilfst uns BENU zu verbessern, wenn Du uns erklärst, warum Du Dein Konto löschen möchtest. Vielen Dank!",
-    "fr": "Dommage que tu souhaites supprimer ton compte ! Si tu as envie de rejoindre BENU ultérieurement, tu peux rouvrir un compte à tout moment. En nous expliquant pourquoi tu souhaites supprimer ton compte, tu nous aides à améliorer BENU. Merci beaucoup !",
-    "en": "It's a pity that you want to delete your account! If you want to join BENU again later, you can open a new account at any time. You will help us to improve BENU if you explain why you want to delete your account. Thank you very much!",
-    "lu": "Schued datt s Du Däi Kont läsche wëlls! Wann s Du méi spéit nach eng Kéier bei BENU wëlls bäitrieden, kanns Du zu all Moment en neie Kont opmaachen. Du hëllefs eis BENU ze verbessere wann s Du eis erkläers, firwat s Du däi Kont läsche wëlls. Villmools Merci!"
+    "de": "Schade, dass Du Dein Konto löschen möchtest! Wenn Du später doch wieder bei BENU mitmachen möchtest, kannst Du jederzeit ein neues Konto eröffnen. Du hilfst uns BENU COUTURE zu verbessern, wenn Du uns erklärst, warum Du Dein Konto löschen möchtest. Vielen Dank!",
+    "fr": "Dommage que tu souhaites supprimer ton compte ! Si tu as envie de rejoindre BENU ultérieurement, tu peux rouvrir un compte à tout moment. En nous expliquant pourquoi tu souhaites supprimer ton compte, tu nous aides à améliorer BENU COUTURE. Merci beaucoup !",
+    "en": "It's a pity that you want to delete your account! If you want to join BENU again later, you can open a new account at any time. You will help us to improve BENU COUTURE if you explain why you want to delete your account. Thank you very much!",
+    "lu": "Schued datt s Du Däi Kont läsche wëlls! Wann s Du méi spéit nach eng Kéier bei BENU wëlls bäitrieden, kanns Du zu all Moment en neie Kont opmaachen. Du hëllefs eis BENU COUTURE ze verbessere wann s Du eis erkläers, firwat s Du däi Kont läsche wëlls. Villmools Merci!"
   },
   {
     "page": "Mon compte",
@@ -9642,7 +9642,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-2-message",
-    "de": "Lass Deine Kleidung reparieren!",
+    "de": "Hochwertige Kleidungsstücke lassen sich bestens reparieren!",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9666,7 +9666,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-3-message",
-    "de": "Kleidertausch schont Umwelt und Geldbeutel",
+    "de": "Kleidertausch schont Umwelt und Geldbeutel.",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9682,7 +9682,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-4-content",
-    "de": "Ein besonderes Event steht an? Verleih-Plattformen bieten  ausgefallene Mode und Accessoires an, die sich für besondere Gelegenheiten eignen, für die Du später keine Verwendung mehr hast.",
+    "de": "Ein besonderes Event steht an? Verleih-Plattformen bieten für besondere Gelegenheiten ausgefallene Mode und Accessoires an, für die Du später keine Verwendung mehr hast.",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9690,7 +9690,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-4-message",
-    "de": "Kleidermiete sorgt für Abwechslung im Kleiderschrank",
+    "de": "Kleidermiete sorgt für Abwechslung im Kleiderschrank.",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9714,7 +9714,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-5-message",
-    "de": "Secondhand bedeutet i.d.R. weniger Verpackung und Müll.",
+    "de": "Secondhand bedeutet i.d.R. auch weniger Verpackung und Müll.",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9762,7 +9762,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-7-content",
-    "de": "Dein Lieblingspullover passt Dir nicht mehr? Vielleicht gibt es ja unter Deinen Freund:innen oder in Deiner Familie jemand der/die sich darüber freut und ihn weiterträgt...",
+    "de": "Dein Lieblingspullover passt Dir nicht mehr? Vielleicht gibt es ja unter Deinen Freund:innen oder in Deiner Familie eine Person, die sich darüber freut und ihn weiterträgt...",
     "fr": "",
     "en": "",
     "lu": ""
@@ -9770,7 +9770,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-7-message",
-    "de": "Ein zweites Leben für deine Kleidung",
+    "de": "Ein zweites Leben für deine Kleidung!",
     "fr": "",
     "en": "",
     "lu": ""
@@ -10115,121 +10115,121 @@
     "page": "À propos",
     "key": "about.section-2-txt-5-1",
     "de": "Wir möchten, dass Du möglichst lange Freude an Deiner BENU Kreation hast! Jeder einzelne Artikel wird daher in der BENU Schneiderei professionell und mit äußerster Sorgfalt verarbeitet. Solltest Du dennoch einen Verarbeitungsmangel entdecken, wie z.B. einen Fehler an einer Naht oder an einem Verschluss, komm zu uns oder schicke uns Deinen Artikel.",
-    "fr": "Nous souhaitons que tu puisses profiter le plus longtemps possible de ta création BENU ! C'est pourquoi chaque article est travaillé de manière professionnelle et avec le plus grand soin dans l'atelier de couture BENU. Si toutefois tu découvres un défaut de fabrication, comme par exemple un défaut sur une couture ou une fermeture, viens nous voir ou envoie-nous ton article.",
+    "fr": "Nous souhaitons que tu puisses profiter le plus longtemps possible de ta création BENU ! C'est pourquoi chaque article est travaillé de manière professionnelle et avec le plus grand soin dans l'atelier de couture BENU. Si toutefois tu découvres un défaut de fabrication, par exemple sur une couture ou une fermeture, viens nous voir ou envoie-nous ton article.",
     "en": "We want you to enjoy your BENU creation for as long as possible! That's why every single item is made professionally and with the utmost care in the BENU tailor shop. Should you nevertheless discover a processing defect, such as a fault in a seam or on a fastener, come to us or send us your item.",
-    "lu": ""
+    "lu": "Mir wëllen, datt s Du esou laang ewéi méiglech, Freed un Denger BENU Kreatioun hues! Dowéinst gëtt all Artikel professionell a mat vill Grëndlechkeet am BENU Schneideratelier veraarbecht. Falls Du awer nach Mängel entdecks, zum Beispill e Feeler un enger Nout oder un enger Tirett, da komm bei eis oder schéck eis Däin Artikel."
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-5-2",
     "de": "Wir kümmern uns kostenfrei um die Ausbesserung und dies lebenslang! Schäden, die auf normalen Verschleiß zurückzuführen sind, wie z.B. die Abnutzung von Stoffen, reparieren wir für Dich nach Aufwand zu unseren üblichen Preisen.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Nous nous chargeons gratuitement des réparations et ce, à vie ! Les dommages dus à l'usure normale, comme par exemple l'usure des tissus, sont réparés selon nos tarifs habituels.",
+    "en": "We will take care of the repair free of charge for a lifetime! Damage due to normal wear and tear, such as the wear and tear of fabrics, will be repaired for you at our usual prices.",
+    "lu": "Mir këmmeren eis gratis ëm d'Reparaturen, an dat e Liewe laang! Schueden, déi op normalem Verschläiss zeréckzeféiere sinn, ewéi z.B. dem Verschläiss vun de Stoffer, gi käschteflichteg, eisen übleche Präisser no, reparéiert."
   },
   {
     "page": "À propos",
     "key": "about.section-2-subtitle-5",
     "de": "Preise",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Prix",
+    "en": "Prices",
+    "lu": "Präisser"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-6",
     "de": "BENU COUTURE steht für faire und transparente Preise, welche die realen Kosten der Kleiderproduktion widerspiegeln. Ganz im Gegensatz zur internationalen Kleiderindustrie, die ihre Kosten durch ausbeuterische Arbeitsbedingungen und schlechte Bezahlung niedrig hält und so den Markt mit den allgegenwärtigen Billigprodukten flutet.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "BENU COUTURE pratique une politique des prix synonyme de transparence et de justice, reflétant le coût réel de la production de vêtements. Tout le contraire de l'industrie internationale, qui maintient les coûts très bas en exploitant les ressources humaines tant au niveau des conditions de travail que des rémunérations et ainsi, inonde le marché de produits bon marchés.",
+    "en": "BENU COUTURE stands for fair and transparent prices that reflect the real costs of clothing production. This is in stark contrast to the international clothing industry, which keeps its costs low through exploitative working conditions and poor pay, thus flooding the market with the ubiquitous cheap products.",
+    "lu": "BENU COUTURE steet fir gerecht an transparent Präisser, déi de reelle Käschte vun der Kleederproduktioun entspriechen. Alles anescht ewéi d'international Kleederindustrie, déi d'Käschten duerch ausbeuteresch Aarbechtsbedéngungen a schlechtem Gehalt, ganz niddereg hält, an de Maart esou mat Bëllegprodukter iwwerschwemmt."
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-7",
     "de": "Die Preise für sämtliche BENU Kreationen ermitteln wir nach dem tatsächlichen Arbeitsaufwand:",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Les prix des créations BENU sont fixés en fonction de la durée de travail effectif :",
+    "en": "We calculate the prices for all BENU creations according to the actual amount of work:",
+    "lu": "Mir berechnen den Aarbechtsopwand fir d'Präisser vun de BENU Kreatiounen ze bestëmmen:"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-8",
     "de": "1 Stunde Arbeit = 30 Euro",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "1 heure de travail = 30 euros",
+    "en": "1 hour of work = 30 euros",
+    "lu": "1 Aarbechtsstonn = 30 Euro"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-9",
-    "de": "Wir messen also wie lange es dauert, ein Kleidungsstück herzustellen. In dieser Arbeitszeit sind alle Arbeitsschritte für die Produktion einer BENU Kreation enthalten: Vorbereitung der Stoffe, Zuschneiden, Anpassen, Zusammennähen, abschließende Qualitätskontrolle und Abfotografieren. Die verwendeten Materialien werden nicht in die Preise eingerechnet. Nehmen wir ein Beispiel: die  Herstellung der Bluse Modell SUMATAN dauert 2,5 Stunden. Hieraus ergibt sich der Preis von 2,5 x 30 Euro, also 75 Euro.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Wir messen also wie lange es dauert, ein Kleidungsstück herzustellen. In dieser Arbeitszeit sind alle Arbeitsschritte für die Produktion einer BENU Kreation enthalten: Vorbereitung der Stoffe, Zuschneiden, Anpassen, Zusammennähen, abschließende Qualitätskontrolle und Abfotografieren. Die verwendeten Materialien werden nicht in die Preise eingerechnet. Nehmen wir ein Beispiel: die Herstellung der Bluse Modell SUMATAN dauert 2,5 Stunden. Hieraus ergibt sich der Preis von 2,5 x 30 Euro, also 75 Euro.",
+    "fr": "Ainsi, nous comptabilisons le temps nécessaire à la fabrication d'un vêtement. Cela comprend toutes les étapes liées à la production d'une création BENU : préparation des tissus, coupe, ajustement, couture, contrôle qualité et photographie. Les matériaux utilisés ne sont pas inclus dans le prix. Prenons un exemple : la réalisation du chemisier modèle SUMATAN dure 2,5 heures. Il en résulte un prix de 2,5 x 30 euros, soit 75 euros.",
+    "en": "So we measure how long it takes to make a garment. This working time includes all the steps for the production of a BENU creation: preparing the fabrics, cutting, fitting, sewing together, final quality check and photographing. The materials used are not included in the prices. Let's take an example: the production of the blouse model SUMATAN takes 2.5 hours. This results in a price of 2.5 x 30 euros, i.e. 75 euros.",
+    "lu": "Mir berechnen also, wéi laang et dauert, fir e Kleedungsstéck hierzestellen. An dëser Aarbechtszäit sinn all d'Etappen abegraff, déi fir d'Produktioun vun enger BENU Kreatioun ufalen: Virbereedung vun de Stoffer, Schneiden, Upassen, Zesummebitzen, uschléissend Qualitéitskontroll a Fotograféieren. Déi benotzte Materialie ginn net agerechent. E Beispill: d'Hierstelle vun der Blus Modell SUMATAN dauert 2,5 Stonnen. Doraus entsteet de Präis vun 2,5 x 30 Euro, also 75 Euro."
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-10",
     "de": "Hier kannst Du uns für unsere Dienstleistungen kontaktieren:",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Contacte-nous ici pour bénéficier de nos services :",
+    "en": "To benefit from our services you can contact us here:",
+    "lu": "Fir vun eise Servicer ze profitéiere kanns Du eis hei kontaktéieren:"
   },
   {
     "page": "À propos",
     "key": "about.section-2-btn-contact",
     "de": "Kontakt",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Contact",
+    "en": "Contact",
+    "lu": "Kontakt"
   },
   {
     "page": "À propos",
     "key": "about.section-title-3",
     "de": "Wer arbeitet eigentlich bei BENU COUTURE?",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Qui travaille chez BENU COUTURE ?",
+    "en": "Who's working at BENU COUTURE?",
+    "lu": "Wee schafft eigentlech bei BENU COUTURE?"
   },
   {
     "page": "À propos",
     "key": "about.section-3-txt-1",
     "de": "Wir sind ein bunt gemischtes Team aus jungen und älteren Menschen. Wir kommen aus unterschiedlichen Ländern und Kulturen. Alleine im Schneider-Team werden 7 verschiedene Sprachen gesprochen! Uns eint die Freude, gemeinsam zu arbeiten und Neues aus Altem zu erschaffen!",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Nous sommes une équipe panachée, composée de jeunes et de moins jeunes. Nous venons de différents pays et cultures. Rien que dans l'équipe couture, nous parlons 7 langues différentes ! Ce qui nous unit, c'est la joie de travailler ensemble et de faire du neuf avec du vieux !",
+    "en": "We are a mixed team of young and older people. We come from different countries and cultures. In the tailor team alone, 7 different languages are spoken! We are united by the joy of working together and creating something new from something old!",
+    "lu": "Mir sinn eng ganz gemëschten Ekipp aus jonken a eelere Mënschen. Mir kommen aus verschiddene Länner a Kulturen. Alleng an der Schneider-Ekipp gi 7 verschidde Sprooche geschwat! Wat eis verbënnt ass d'Freed, zesummen ze schaffen an Neies aus Alem ze kreéieren!"
   },
   {
     "page": "À propos",
     "key": "about.section-3-lowtitle-0",
     "de": "Vielfalt an Menschen und Berufen",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Diversité humaine et professionnelle",
+    "en": "Diversity of people and professions",
+    "lu": "Vilfalt u Mënschen a Beruffer"
   },
   {
     "page": "À propos",
     "key": "about.section-3-txt-2-1",
-    "de": "Unsere Arbeit gewinnt durch die vielfältigen beruflichen Kompetenzen und Fähigkeiten der Team-Mitglieder. Ob als Modedesigner:in, Schneidermeister:in, Maßschneider:in, Schneider:in oder Auszubildende:r - jede/jeder Einzelne bringt ihre/seine professionellen Erfahrungen in Entwurf und Produktion ein!",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Unsere Arbeit gewinnt durch die vielfältigen beruflichen Kompetenzen und Fähigkeiten der Team-Mitglieder. Ob als Modedesigner:in, Schneidermeister:in, Maßschneider:in, Schneider:in oder Auszubildende:r - jede:r Einzelne bringt ihre/seine professionellen Erfahrungen in Entwurf und Produktion ein!",
+    "fr": "Notre travail bénéficie de la diversité des compétences et capacités professionnelles des membres de l'équipe. Qu'il s'agisse d'un·e créateur·rice de mode, d'un·e maître tailleur·se, d'un·e tailleur·se sur mesure, d'un·e couturier·ère ou d'un·e apprenti·e - chacun·e apporte son expérience professionnelle à la conception et à la production !",
+    "en": "Our work benefits from the diverse professional competences and skills of our team members. Whether as a fashion designer, master tailor, custom tailor, tailor or apprentice - each individual brings their professional experience to design and production!",
+    "lu": "Eis Aarbecht profitéiert vun der Diversitéit u beruffleche Kompetenzen a Fäegkeeten vun eisen Ekipp-Memberen. Ob als Modedesigner:in, Schneidermeeschter/tesch, Schneider:in op Mooss, Schneider:in oder Léierjong/meedchen - jiddweree/eng bréngt dem Entworf an der Produktioun seng eege professionell Erfarung an!"
   },
   {
     "page": "À propos",
     "key": "about.section-3-txt-2-2",
-    "de": "Das Vertriebs-Team wird durch einen Webentwickler, eine Fotografin und eine Koordinatorin für den Verkauf unterstützt. Und nicht zu vergessen die Freiwilligen und Student:innen, die dem Team bei Bedarf unter die Arme greifen!",
-    "fr": "",
-    "en": "",
+    "de": "Das Vertriebs-Team wird durch einen Webentwickler, eine Fotografin und eine Koordinatorin für den Verkauf unterstützt. Und nicht zu vergessen die Freiwilligen und Studenten/innen, die dem Team bei Bedarf unter die Arme greifen!",
+    "fr": "L'équipe commerciale est soutenue par un développeur web, une photographe et une coordinatrice. Sans oublier les bénévoles et étudiant·e·s qui donnent un coup de main à l'équipe en cas de besoin !",
+    "en": "The sales team is supported by a web developer, a photographer and a coordinator. And not to forget the volunteers and students who help out the team when needed!",
     "lu": ""
   },
   {
     "page": "À propos",
     "key": "about.section-3-txt-3-1",
     "de": "Unser Arbeitsplatz ist das BENU COUTURE Atelier in Esch-sur-Alzette. Alle notwendigen Arbeitsschritte von Entwurf über Produktion bis hin zum Vertrieb werden vor Ort realisiert und organisiert. Und das ist uns wichtig! \nDenn lokale Produktion bedeutet ausgezeichnete handwerkliche Qualität und faire Arbeitsbedingungen. Außerdem werden die Wege, die hinter jedem Produkt stehen, konsequent reduziert.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Notre lieu de travail est l'atelier BENU COUTURE à Esch-sur-Alzette. Toutes les étapes, de la conception à la distribution en passant par la production, sont réalisées et organisées sur place. Et c'est important pour nous ! Car la production locale est synonyme de qualité artisanale et de conditions de travail équitables.",
+    "en": "Our workplace is the BENU COUTURE studio in Esch-sur-Alzette. All necessary work steps from design to production to distribution are realised and organised on site. And that is important to us! Because local production means excellent craftsmanship and fair working conditions. In addition, the distances behind each product are consistently reduced.",
+    "lu": "Eis Aarbechtsplaz ass de BENU COUTURE Schneideratelier zu Esch/Uelzecht. All noutwenneg Etapp, vum Entworf iwwer d'Produktioun bis hin zur Vermaartung, gëtt direkt op der Plaz realiséiert an organiséiert. An dat ass eis wichteg! Well eng lokal Produktioun bedeit excellent handwierklech Qualitéit a gerecht Aarbechtsbedéngungen. Ausserdeem ginn d'Distanzen, déi hannert all Poduit stinn, drastesch reduzéiert."
   },
   {
     "page": "À propos",
@@ -10243,9 +10243,9 @@
     "page": "À propos",
     "key": "about.section-3-lowtitle-1",
     "de": "Warum ist der soziale Aspekt so wichtig für uns?",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Pourquoi l'aspect social est-il si important pour nous ?",
+    "en": "Why is the social aspect so important to us?",
+    "lu": "Firwat ass de sozialen Aspekt eis esou wichteg?"
   },
   {
     "page": "À propos",
@@ -10270,6 +10270,62 @@
     "fr": "Contact",
     "en": "Contact",
     "lu": "Kontakt"
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-subtitle",
+    "de": "Was geschieht mit Deinen persönlichen Daten?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-title",
+    "de": "Datenschutz",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-txt-1",
+    "de": "Persönliche Daten wie Name, Vorname, E-Mail-Adresse, Adresse und Telefonnummer werden vertraulich behandelt. Sie werden nur im Rahmen des Online-Verkaufs bis zum Abschluss der Transaktion durch BENU VILLAGE Esch asbl verwendet. Die Daten werden für die gesetzlich vorgeschriebene Dauer im Sinne der Datenschutzgesetzgebung aufbewahrt.",
+    "fr": "Les données personnelles telles que le nom, le prénom, l'adresse e-mail, l’adresse et le numéro de téléphone sont traitées de manière confidentielle. Elles ne sont utilisées que dans le cadre de la vente en ligne par BENU VILLAGE Esch asbl. Les données sont utilisées jusqu'à la conclusion de la transaction et sont conservées pendant la durée légale au sens de la législation sur la protection des données.",
+    "en": "Personal data such as surname, first name, e-mail address and telephone number are treated confidentially. They are only used within the framework of online purchase by BENU VILLAGE Esch asbl. The data will be used until the transaction is completed and be stored for the legal period as defined by data protection law",
+    "lu": "vergleiche BENU SLOOW\n\nText wurde geringfügig angepasst."
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-txt-2",
+    "de": "BENU VILLAGE Esch asbl anerkennt und verpflichtet sich zur Einhaltung der Gesetze und Vorschriften Schutz personenbezogener Daten einzuhalten, einschließlich, aber nicht beschränkt auf die Verordnung (EU) 2016/679 des Parlaments und des Rates vom 27. April 2016 zum Schutz von Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr (die \"DSGVO\") und alle anderen anwendbaren nationalen Gesetze oder Vorschriften, die die Verarbeitung dieser personenbezogenen Daten regeln.",
+    "fr": "BENU VILLAGE Esch asbl reconnaît et s'engage à respecter les lois et règlements régissant la protection des données personnelles, y compris, mais sans s’y limiter, le règlement (UE) 2016/679 du Parlement et du Conseil du 27 avril 2016 sur la protection des personnes en ce qui concerne le traitement des données personnelles et sur la libre circulation de ces données (le « RGPD ») et toute autre loi ou réglementation nationale applicable régissant le traitement de ces données personnelles.",
+    "en": "BENU VILLAGE Esch asbl acknowledges and agrees to comply with laws and regulations governing the protection of personal data, including, but not limited to, the Regulation (EU) 2016/679 of the Parliament and Council from 27th of april 2016 regarding the protection of individuals concerning the processing of personal data and the free movement of such data (the \"GDPR\") and any other applicable national laws or regulations governing the processing of such personal data.",
+    "lu": ""
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-txt-3",
+    "de": "Wir erheben und verarbeiten insbesondere Deinen Namen, Vornamen, E-Mail-Adresse, Telefonnummer, IP-Adresse, historische Verbindungsdaten für Verkäufe ausschließlich im Rahmen und für den Zeitraum, der für den Online-Verkauf unbedingt erforderlich ist. Der obligatorische oder optionale Charakter der Datenerhebung wird Dir bei der Erhebung durch ein Sternchen angezeigt.",
+    "fr": "Nous collectons et traitons en particulier vos nom, prénom, adresse e-mail, numéro de téléphone, adresse IP, données de connexion historique pour les ventes uniquement dans le cadre et pour la période strictement nécessaires la vente. Le caractère obligatoire ou facultatif de la collecte des données t’ est signalé lors de la collecte par un astérisque.",
+    "en": "We collect and process in particular your name, first name, e-mail address, telephone number, IP address and historical connection data within the framework online purchase and for a period limited to the processing thereof. The compulsory or optional nature of data collection is indicated by an asterisk at the time of collection.",
+    "lu": ""
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-txt-4",
+    "de": "Die für die Anmeldung zum BENU Newsletter erhobenen Daten (Vorname, Name und E-Mail-Adresse) werden ausschließlich genutzt, um Dir BENU Informations-E-Mails zuzuschicken. Die Daten tauschen wir mit niemandem, demnach auch mit keiner beliebigen Organisation, Verwaltung, Unternehmen, Interessensgruppe oder anderen. Ebenso werden die Daten, die bei der Einrichtung eines Kontos erhoben werden, nur gespeichert und nicht an Dritte weitergegeben.",
+    "fr": "Les données collectées pour l’inscription à la newsletter BENU (prénom, nom et adresse e-mail) sont exclusivement utilisées pour vous envoyer des e-mails d’information BENU. Nous ne partageons les données avec personne, et donc avec aucune organisation, administration, entreprise, groupe d’intérêt ou autre.",
+    "en": "The data collected for the registration to the BENU newsletter (first name, surname and e-mail address) are exclusively intended for the sending of information e-mails concerning BENU. We do not share the data with any third party, including any organisation, administration, company, group of interest or others. Likewise, the data collected when creating an account is only stored and not passed on to third parties.",
+    "lu": ""
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-txt-5",
+    "de": "Die Internetseite verwendet nur Cookies, die für den Betrieb der Internetseite notwendig sind. Es werden keine Cookies von Drittanbietern auf dem Gerät des/der Nutzers/in abgelegt",
+    "fr": "Le site web utilise uniquement des cookies nécessaires à son fonctionnement. Aucun cookie tiers n'est déposé sur l'appareil de l'utilisateur.",
+    "en": "The website only uses cookies that are necessary for the operation of the website. No cookies from third-party providers are stored on the user's device.",
+    "lu": ""
   },
   {
     "page": "Version mobile",

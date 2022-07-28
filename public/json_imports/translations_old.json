@@ -5640,30 +5640,6 @@
     "lu": "D’Newsletter kënnegen"
   },
   {
-    "page": "Newsletter",
-    "key": "auth.newsletter-subscribe-confirm",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Newsletter",
-    "key": "auth.newsletter-subscribe-first-name",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Newsletter",
-    "key": "auth.newsletter-subscribe-last-name",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
     "page": "Actualités",
     "key": "breadcrumbs.news",
     "de": "Alle Neuigkeiten",
@@ -9616,6 +9592,222 @@
     "lu": "Op wat kann ech oppassen, wann ech Kleeder brauch?"
   },
   {
+    "page": "Participer",
+    "key": "participate.smart-subtitle-1",
+    "de": "Unsere GEWINNER!",
+    "fr": "",
+    "en": "Our WINNERS!",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-1-title",
+    "de": "Überprüfe Deinen Kleiderschrank und frage Dich, was Du wirklich brauchst und was Du verwendest!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-1-content",
+    "de": "Denn jedes Kleidungsstück (auch wenn es ein Nachhaltigkeits-Siegel trägt) verursacht Wasserverbrauch, Umweltverschmutzung und soziale Diskriminierung.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-1-message",
+    "de": "Weniger Kleidung bedeutet auch weniger Waschmittel.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-2-title",
+    "de": "Bessere Deine Kleidung aus und verwende sie weiter!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-2-content",
+    "de": "Du hast einen kaputten Pullover, Deine Jeans hat Risse? Wenn Du selber nicht nähen oder flicken kannst, frage z.B. in einer Änderungsschneiderei nach.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-2-message",
+    "de": "Lass Deine Kleidung reparieren!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-3-title",
+    "de": "Tausche Deine Kleidung mit Freunden und Familie!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-3-content",
+    "de": "Wie wäre es mit einer Swap Party mit gesunden und nachhaltigen Lebensmitteln und Getränken?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-3-message",
+    "de": "Kleidertausch schont Umwelt und Geldbeutel",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-4-title",
+    "de": "Leihe oder miete Kleidung!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-4-content",
+    "de": "Ein besonderes Event steht an? Verleih-Plattformen bieten  ausgefallene Mode und Accessoires an, die sich für besondere Gelegenheiten eignen, für die Du später keine Verwendung mehr hast.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-4-message",
+    "de": "Kleidermiete sorgt für Abwechslung im Kleiderschrank",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-5-title",
+    "de": "Kaufe Second-Hand Kleidung!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-5-content",
+    "de": "Gebrauchte Kleider kaufen reduziert die Neuproduktion, schont  Umwelt und Ressourcen und ist dabei auch noch sozial verträglich.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-5-message",
+    "de": "Secondhand bedeutet i.d.R. weniger Verpackung und Müll.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-6-title",
+    "de": "Kaufe Upcycling-Mode!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-6-content",
+    "de": "Du findest sie z.B. bei BENU COUTURE :-) Unser Team kann auch Teile Deiner geliebter Kleidungsstücke in eine neue Kreation integrieren.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-6-message",
+    "de": "Upcycling ist kreativ, individuell und nachhaltig.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-subtitle-2",
+    "de": "Möchtest Du zusätzlich zu unseren Winner-Strategien auch noch einen Teil Deiner Kleidung weggeben?  Dann haben wir die folgenden Tipps für Dich:",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-7-title",
+    "de": "Verschenke Deine Kleidung!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-7-content",
+    "de": "Dein Lieblingspullover passt Dir nicht mehr? Vielleicht gibt es ja unter Deinen Freund:innen oder in Deiner Familie jemand der/die sich darüber freut und ihn weiterträgt...",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-7-message",
+    "de": "Ein zweites Leben für deine Kleidung",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-8-title",
+    "de": "Verkaufe Deine Kleidung!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-8-content",
+    "de": "Es gibt viele Möglichkeiten: Im Internet, in sozialen Medien, im Secondhand-Shop um die Ecke, auf dem Flohmarkt, im lokalen Anzeiger Deiner Stadt....",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-card-8-message",
+    "de": "Secondhand ist en vogue...",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Participer",
+    "key": "participate.smart-final-message",
+    "de": "Und wenn es wirklich notwendig ist... wenn Du es nicht vermeiden kannst neue Kleidung zu kaufen...  dann stelle sicher, dass sie lokal produziert wurde und ein Nachhaltigkeits-Label trägt.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
     "page": "À propos",
     "key": "about.subtitle-top",
     "de": "Über BENU COUTURE",
@@ -9819,16 +10011,16 @@
     "page": "À propos",
     "key": "about.section-2-txt-2-link-1",
     "de": "Modellen",
-    "fr": "modèles",
-    "en": "models",
+    "fr": "modèles !",
+    "en": "models!",
     "lu": "Modeller"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-2-4",
     "de": "überraschen! Du kannst alle BENU Kreationen auf benucouture.lu und in unseren",
-    "fr": "! Retrouve toutes les créations BENU sur benucouture.lu ainsi que sur nos",
-    "en": "!",
+    "fr": "Tu peux te procurer les créations BENU sur benucouture.lu ainsi que dans nos",
+    "en": "You can purchase all the BENU creations at benucouture.lu and in our",
     "lu": "iwwerraschen! Du kanns all d'BENU Kreatiounen op benucouture.lu an op eise"
   },
   {
@@ -9836,7 +10028,7 @@
     "key": "about.section-2-txt-2-link-2",
     "de": "Verkaufsstellen",
     "fr": "points de vente.",
-    "en": "",
+    "en": "sales points.",
     "lu": "Verkafsplazen"
   },
   {
@@ -9851,80 +10043,80 @@
     "page": "À propos",
     "key": "about.section-2-subtitle-2",
     "de": "Anpassungen",
-    "fr": "Modifications",
-    "en": "",
-    "lu": ""
+    "fr": "Ajustements",
+    "en": "Adjustments",
+    "lu": "Upassungen"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-3-1",
     "de": "Du hast Dich in eine BENU Kreation verliebt, doch Deine Lieblings-Variation passt Dir nicht? Bei Bedarf können wir eine fertige Kreation für Dich anpassen.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Sous le charme d'une création BENU mais ta variante favorite ne te va pas ? Selon tes besoins, nous pouvons réaliser les ajustements nécessaires.",
+    "en": "You have fallen in love in a BENU creation but your favourite variant doesn't fit? Depending on your needs, we can make the necessary adjustments.",
+    "lu": "Du hues Dech an eng BENU Kreatioun verléift, mee Deng Liblingsvariant passt Dir net? Jee no Besoin realiséiere mir déi néideg Upassungen."
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-3-2",
     "de": "Vielleicht ist ein Modell nicht in Deiner Lieblingsfarbe erhältlich? Oder die Variation, die Dir gefällt ist schon verkauft? Kein Problem! Gerne können wir ein bestehendes Modell nach Deinen Farb-Wünschen realisieren.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Le modèle n'est pas disponible dans ta couleur préférée ? Ou la variante qui te plaît est déjà vendue ? Pas de problème ! Nous pouvons réaliser le modèle selon tes souhaits de coloris.",
+    "en": "Maybe a model is not available in your favourite colour? Or the variant you like is already sold? No problem! We would be happy to realise an existing model according to your colour wishes.",
+    "lu": "Vläicht ass e Modell net an Denger Liblingsfaarf disponibel? Oder déi Variant, déi Dir gefält ass scho verkaf? Kee Problem! Gäre realiséiere mir dee Modell no Denge Faarf-Wënsch."
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-3-3",
     "de": "In beiden Fällen berechnen wir den Mehraufwand zu unseren üblichen",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Dans les deux cas, nous rajoutons des frais supplémentaires à nos",
+    "en": "In both cases, we add extra costs to our",
+    "lu": "A béide Fäll, verrechne mir zousätzlech Käschten zu eise"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-3-link",
     "de": "Preisen.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "prix.",
+    "en": "prices.",
+    "lu": "Präisser."
   },
   {
     "page": "À propos",
     "key": "about.section-2-subtitle-3",
     "de": "Maßanfertigungen",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Sur mesure",
+    "en": "Made to measure",
+    "lu": "Op Mooss"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-4-1",
     "de": "Ein Loch in Deiner Hose? Das geliebte T-Shirt zu eng geworden? Wir reparieren und verwandeln Dein altes Lieblingsstück nach Deinen individuellen Vorstellungen. Oder warum nicht gleich ein komplett neues Kleidungsstück auf Basis der von Dir zur Verfügung gestellten Kleider und Stoffreste? BENU COUTURE bietet Dir an, eine neue und nur für Dich bestimmte Kreation herzustellen!",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Un trou dans ton pantalon ? Ton T-shirt adoré est trop petit ? Nous réparons et transformons ton ancien vêtement préféré selon tes envies. Ou pourquoi ne pas créer une toute nouvelle pièce en utilisant les vêtements et chutes de tissu que tu as mis à disposition ? BENU COUTURE te propose de réaliser une nouvelle création rien que pour toi !",
+    "en": "A hole in your trousers? Your beloved T-shirt too tight? We repair and transform your old favourite piece according to your individual ideas. Or why not create a completely new garment based on the clothes and fabric scraps you provide? BENU COUTURE offers to make a new creation just for you!",
+    "lu": "E Lach an Denger Box? Däi Liblings-T-Shirt ass Dir elo ze enk? Mir flécken a verwandelen Däin aalt Liblings-Kleedungsstéck no Dengen Iddien. Oder firwat net eppes ganz neies kreéieren, op Basis vum Gezei a vun de Stoffrester, déi s Du eis zur Verfügung stells? BENU COUTURE ka fir Dech, eng ganz nei Kreatioun hierstellen!"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-4-2",
     "de": "Besonders beliebt ist die BRING-IN Produktion: hierbei suchst Du Dir eine bestehende BENU Kreation aus, die wir für Dich produzieren. Dabei integrieren wir ein Stück Stoff, das Du uns zur Verfügung stellst. Der Stoff stammt dabei z.B. aus dem Lieblingspulli, dem Hemd vom Freund, der Bluse der Freundin … So entsteht ein Einzel-Emotions-Stück, nur für Dich!",
-    "fr": "",
-    "en": "",
+    "fr": "L'option BRING-IN est particulièrement appréciée : tu choisis un modèle BENU existant que nous produisons pour toi et auquel nous intégrons une pièce de tissu que tu mets à notre disposition. Le tissu provient par exemple de ton pull préféré, de la chemise d'un ami, du chemisier de ta petite amie... C'est ainsi que naît une pièce d'émotion unique, rien que pour toi !",
+    "en": "The BRING-IN production is particularly popular: here you choose an existing BENU creation that we produce for you. We integrate a piece of fabric that you provide us with. The fabric comes from your favourite jumper, your boyfriend's shirt, your girlfriend's blouse, etc. This creates a single emotional piece just for you!",
     "lu": ""
   },
   {
     "page": "À propos",
     "key": "about.section-2-subtitle-4",
     "de": "Garantie",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Garantie",
+    "en": "Warranty",
+    "lu": "Garantie"
   },
   {
     "page": "À propos",
     "key": "about.section-2-txt-5-1",
     "de": "Wir möchten, dass Du möglichst lange Freude an Deiner BENU Kreation hast! Jeder einzelne Artikel wird daher in der BENU Schneiderei professionell und mit äußerster Sorgfalt verarbeitet. Solltest Du dennoch einen Verarbeitungsmangel entdecken, wie z.B. einen Fehler an einer Naht oder an einem Verschluss, komm zu uns oder schicke uns Deinen Artikel.",
-    "fr": "",
-    "en": "",
+    "fr": "Nous souhaitons que tu puisses profiter le plus longtemps possible de ta création BENU ! C'est pourquoi chaque article est travaillé de manière professionnelle et avec le plus grand soin dans l'atelier de couture BENU. Si toutefois tu découvres un défaut de fabrication, comme par exemple un défaut sur une couture ou une fermeture, viens nous voir ou envoie-nous ton article.",
+    "en": "We want you to enjoy your BENU creation for as long as possible! That's why every single item is made professionally and with the utmost care in the BENU tailor shop. Should you nevertheless discover a processing defect, such as a fault in a seam or on a fastener, come to us or send us your item.",
     "lu": ""
   },
   {
@@ -9970,7 +10162,7 @@
   {
     "page": "À propos",
     "key": "about.section-2-txt-9",
-    "de": "Wir messen also wie lange es dauert, ein Kleidungsstück herzustellen. In dieser Arbeitszeit sind alle Arbeitsschritte für die Produktion einer BENU Kreation enthalten: Vorbereitung der Stoffe, Zuschneiden, Anpassen, Zusammennähen, abschließende Qualitätskontrolle und Abfotografieren. Die verwendeten Materialien werden nicht in die Preise eingerechnet. Nehmen wir ein Beispiel: die  Herstellung der Bluse Modell SUMATAN dauert 2,5 Stunden. Hieraus ergibt sich der Preis von 2,5 x 30 Euro, also 75 Euro. Hier kannst Du uns für unsere Dienstleistungen kontaktieren:",
+    "de": "Wir messen also wie lange es dauert, ein Kleidungsstück herzustellen. In dieser Arbeitszeit sind alle Arbeitsschritte für die Produktion einer BENU Kreation enthalten: Vorbereitung der Stoffe, Zuschneiden, Anpassen, Zusammennähen, abschließende Qualitätskontrolle und Abfotografieren. Die verwendeten Materialien werden nicht in die Preise eingerechnet. Nehmen wir ein Beispiel: die  Herstellung der Bluse Modell SUMATAN dauert 2,5 Stunden. Hieraus ergibt sich der Preis von 2,5 x 30 Euro, also 75 Euro.",
     "fr": "",
     "en": "",
     "lu": ""
@@ -10018,7 +10210,7 @@
   {
     "page": "À propos",
     "key": "about.section-3-txt-2-1",
-    "de": "Unsere Arbeit gewinnt durch die vielfältigen beruflichen Kompetenzen und Fähigkeiten der Team-Mitglieder. Ob als Modedesignerin, Schneidermeisterin, Maßschneiderin, Schneider:in oder Auszubildende - jede/jeder Einzelne bringt ihre/seine professionellen Erfahrungen in Entwurf und Produktion ein!",
+    "de": "Unsere Arbeit gewinnt durch die vielfältigen beruflichen Kompetenzen und Fähigkeiten der Team-Mitglieder. Ob als Modedesigner:in, Schneidermeister:in, Maßschneider:in, Schneider:in oder Auszubildende:r - jede/jeder Einzelne bringt ihre/seine professionellen Erfahrungen in Entwurf und Produktion ein!",
     "fr": "",
     "en": "",
     "lu": ""
@@ -10075,8 +10267,120 @@
     "page": "À propos",
     "key": "about.section-3-btn-contact",
     "de": "Kontakt",
+    "fr": "Contact",
+    "en": "Contact",
+    "lu": "Kontakt"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.nav-home",
+    "de": "Startseite",
     "fr": "",
     "en": "",
     "lu": ""
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.nav-account",
+    "de": "Mein Konto",
+    "fr": "Mon compte",
+    "en": "My account",
+    "lu": "Mäi Kont"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.nav-cart",
+    "de": "Warenkorb",
+    "fr": "Panier",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-home",
+    "de": "Startseite",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-news",
+    "de": "Aktualitäten",
+    "fr": "Actualités",
+    "en": "News",
+    "lu": "Neiegkeeten"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-about",
+    "de": "Über BENU COUTURE",
+    "fr": "À propos de BENU COUTURE",
+    "en": "About BENU COUTURE",
+    "lu": "Iwwer BENU COUTURE"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-shops",
+    "de": "Verkaufsstellen",
+    "fr": "Points de vente",
+    "en": "Sales points",
+    "lu": "Verkafsplazen"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-service",
+    "de": "Kundenservice",
+    "fr": "Service client",
+    "en": "Customer service",
+    "lu": "Service"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-history",
+    "de": "Geschichte",
+    "fr": "Histoire",
+    "en": "History",
+    "lu": "Geschicht"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-partners",
+    "de": "Partner",
+    "fr": "Partenaires",
+    "en": "Partners",
+    "lu": "Partner"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-participate",
+    "de": "Mitmachen",
+    "fr": "Participer",
+    "en": "Participate",
+    "lu": "Matmaachen"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-vouchers",
+    "de": "Gutscheine",
+    "fr": "Bons d'achat",
+    "en": "Vouchers",
+    "lu": "Bongen"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-contact",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "en": "Contact",
+    "lu": "Kontakt"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.side-menu-client-newsletter",
+    "de": "Newsletter",
+    "fr": "Newsletter",
+    "en": "Newsletter",
+    "lu": "Newsletter"
   }
 ]
