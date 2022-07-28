@@ -21,7 +21,7 @@
 @endsection
 
 @section('main-content')
-	<section class="footer-legal benu-container">
+	<section class="footer-legal w-4/5 lg:w-1/2 m-auto">
 		<h3 class="footer-legal__subtitle">{{ __('footer.policy-subtitle') }}</h3>
 		<h1 class="footer-legal__title">{{ __('footer.policy-title') }}</h1>
 		<p class="footer-legal__paragraph">
