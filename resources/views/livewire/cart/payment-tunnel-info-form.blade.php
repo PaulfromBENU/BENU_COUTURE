@@ -66,13 +66,15 @@
     </p>
     @if($duplicate_email_info == 1)
     <p class="primary-color">
-        <strong>{{ __('forms.e-mail-already-exists-please-confirm') }}</strong>
+        <strong>{{ __('forms.e-mail-already-exists-please-connect-or-change-email') }}</strong>
     </p>
     @endif
     <div class="flex justify-between mt-5">
+        @if($duplicate_email_info !== 1)
         <button type="submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mr-5">
             {{ __('cart.info-validate') }}
         </button>
+        @endif
         <a href="{{ route('login-'.app()->getLocale()) }}" class="btn-slider-left mr-3">
             {{ __('cart.info-connect') }}
         </a>

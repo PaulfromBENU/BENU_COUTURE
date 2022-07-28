@@ -33,6 +33,11 @@ class PaymentTunnelInfoForm extends Component
         $this->duplicate_email_info = 0;
     }
 
+    public function updatedEmail()
+    {
+        $this->duplicate_email_info = 0;
+    }
+
     public function validateInfo()
     {
         if (User::where('email', $this->email)->count() == 0 || (User::where('email', $this->email)->count() > 0 && $this->duplicate_email_info == 1)) {

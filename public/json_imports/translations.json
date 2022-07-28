@@ -5640,30 +5640,6 @@
     "lu": "D’Newsletter kënnegen"
   },
   {
-    "page": "Newsletter",
-    "key": "auth.newsletter-subscribe-confirm",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Newsletter",
-    "key": "auth.newsletter-subscribe-first-name",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Newsletter",
-    "key": "auth.newsletter-subscribe-last-name",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
     "page": "Actualités",
     "key": "breadcrumbs.news",
     "de": "Alle Neuigkeiten",
