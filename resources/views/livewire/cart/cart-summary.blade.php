@@ -115,9 +115,16 @@
         </p>
     </div>
 
+    @if(auth()->check() && !auth()->user()->last_conditions_agreed)
+        <div class="flex cart-summary__validate-conditions">
+            <input type="checkbox" name="validate_conditions" id="validate-conditions" wire:model="conditions_validated" wire:click="acceptConditions">
+            <label for="validate-conditions">{{ __('cart.validate-conditions') }} <a href="{{ route('footer.legal-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('cart.validate-conditions-link') }}</a></label>
+        </div>
+    @endif
+
     @if($show_payment_btn)
     <div>
-        <a href="{{ route('payment-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
+        <a href="#" wire:click.prevent="goToPaymentTunnel" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
             {{ __('cart.make-order') }}
         </a>
     </div>

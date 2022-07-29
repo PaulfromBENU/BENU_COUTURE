@@ -10645,6 +10645,15 @@ input[type=checkbox]:focus {
   max-height: 25px;
   margin: 5px;
 }
+.cart-summary__validate-conditions {
+  margin-bottom: 25px;
+}
+.cart-summary__validate-conditions input[type=checkbox] {
+  margin-top: 5px;
+  margin-right: 10px;
+  border-color: #D41C1B;
+  border-radius: 4px;
+}
 
 .cart-client-service {
   background: #FFFFFF 0% 0% no-repeat padding-box;

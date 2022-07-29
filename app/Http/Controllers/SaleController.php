@@ -47,6 +47,13 @@ class SaleController extends Controller
             $cart_id = session('cart_id');
             $cart = Cart::where('cart_id', $cart_id)->first();
             session(['payment-ongoing' => 'active']);
+
+            if (auth()->check() && auth()->user()->last_conditions_agreed) {
+                return view('checkout.payment', ['cart_id' => $cart_id, 'cart' => $cart]);
+            } elseif (auth()->check()) {
+                return redirect()->route('cart-'.app()->getLocale());
+            }
+
             return view('checkout.payment', ['cart_id' => $cart_id, 'cart' => $cart]);
         } else {
             return redirect()->route('cart-'.app()->getLocale());

@@ -36,6 +36,7 @@ class CartSummary extends Component
     public $voucher_status;
 
     public $show_payment_btn;
+    public $conditions_validated;
 
     const GIFT_WRAP_PRICE = 5;
     const GIFT_CARD_PRICE = 3;
@@ -49,7 +50,13 @@ class CartSummary extends Component
             $this->show_payment_btn = 0;
             $this->in_tunnel = 1;
         } else {
-            $this->show_payment_btn = 1;
+            if (auth()->check() && auth()->user()->last_conditions_agreed || !auth()->check()) {
+                $this->show_payment_btn = 1;
+                $this->conditions_validated = 1;
+            } else {
+                $this->show_payment_btn = 0;
+                $this->conditions_validated = 0;
+            }
             $this->in_tunnel = 0;
         }
 
@@ -167,6 +174,28 @@ class CartSummary extends Component
         } else {
             $this->voucher_remaining_value = $this->voucher_current_value - $this->total;
             $this->total = 0;
+        }
+    }
+
+    public function acceptConditions()
+    {
+        if ($this->conditions_validated) {
+            $this->show_payment_btn = 1;
+        } else {
+            $this->show_payment_btn = 0;
+        }
+    }
+
+    public function goToPaymentTunnel()
+    {
+        if (auth()->check() && !auth()->user()->last_conditions_agreed) {
+            if ($this->conditions_validated) {
+                auth()->user()->last_conditions_agreed = 1;
+                auth()->user()->save();
+                return redirect()->route('payment-'.app()->getLocale());
+            }
+        } else {
+            return redirect()->route('payment-'.app()->getLocale());
         }
     }
 

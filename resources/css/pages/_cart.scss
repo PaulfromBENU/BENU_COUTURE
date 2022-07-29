@@ -431,6 +431,15 @@
 			margin: 5px;
 		}
 	}
+	&__validate-conditions {
+		margin-bottom: 25px;
+		input[type="checkbox"] {
+			margin-top: 5px;
+			margin-right: 10px;
+			border-color: $primary-color;
+			border-radius: 4px;
+		}
+	}
 }
 
 .cart-client-service {

@@ -1,6 +1,6 @@
 <section class="footer-connect">
 	<p class="text-center">
-		{{ __('footer.connect') }} <span class="primary-color" style="font-weight: 600;">@benucouture</span>
+		{{ __('footer.connect') }} <a href="https://www.instagram.com/benu_village/" target="_blank" class="primary-color" style="font-weight: 600;">@benucouture</a>
 	</p>
 	@php
 	$links = [
