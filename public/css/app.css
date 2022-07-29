@@ -3893,6 +3893,11 @@ input[type=checkbox]:focus {
   margin: auto;
   margin-bottom: 23px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-learnmore__block img {
+    width: 40vw;
+  }
+}
 @media (max-width: 767px) {
   .footer-learnmore__block img {
     width: 80vw;

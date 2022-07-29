@@ -59,6 +59,9 @@
 			width: 21vw;
 			margin: auto;
 			margin-bottom: 23px;
+			@include tablet {
+				width: 40vw;
+			}
 			@include mobile {
 				width: 80vw;
 			}
