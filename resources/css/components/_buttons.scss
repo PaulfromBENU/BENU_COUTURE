@@ -169,6 +169,17 @@
 			color: grey;
 		}
 	}
+	&--disabled {
+		background: grey;
+		color: white;
+		border-color: grey;
+		cursor: not-allowed;
+		&:hover {
+			background: grey;
+			color: white;
+			border-color: grey;
+		}
+	}
 }
 
 .btn-dashboard-plain {

@@ -124,7 +124,13 @@
 
     @if($show_payment_btn)
     <div>
-        <a href="#" wire:click.prevent="goToPaymentTunnel" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
+        <a wire:key="valid-payment-button" wire:click.prevent.stop="goToPaymentTunnel" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0; cursor: pointer;">
+            {{ __('cart.make-order') }}
+        </a>
+    </div>
+    @elseif(!$conditions_validated)
+    <div>
+        <a class="block btn-couture-plain btn-couture-plain--disabled btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
             {{ __('cart.make-order') }}
         </a>
     </div>

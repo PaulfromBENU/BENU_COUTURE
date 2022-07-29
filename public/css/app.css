@@ -1,6 +1,5 @@
 @charset "UTF-8";
 html, body {
-  position: relative;
   height: 100%;
 }
 
@@ -750,6 +749,17 @@ input[type=checkbox]:focus {
 }
 .btn-couture-plain--grey:hover {
   color: grey;
+}
+.btn-couture-plain--disabled {
+  background: grey;
+  color: white;
+  border-color: grey;
+  cursor: not-allowed;
+}
+.btn-couture-plain--disabled:hover {
+  background: grey;
+  color: white;
+  border-color: grey;
 }
 
 .btn-dashboard-plain {
@@ -10389,7 +10399,7 @@ input[type=checkbox]:focus {
   .cart-content__article__size {
     margin: 0;
     margin-top: 5px;
-    width: 50%;
+    width: 100px;
     border-radius: 20px;
     margin-bottom: 5px;
   }
@@ -10399,6 +10409,7 @@ input[type=checkbox]:focus {
     margin: 0;
     margin-top: 5px;
     width: 50%;
+    max-width: 100px;
     border-radius: 20px;
     margin-bottom: 5px;
     font: normal normal 600 16px/28px "Barlow Condensed";
@@ -10444,6 +10455,8 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cart-content__article__number {
+    text-align: left;
+    margin-left: 0px;
     padding-left: 0;
     margin-top: 0px;
     font: normal normal 500 16px/28px "Barlow Condensed";
@@ -10451,6 +10464,8 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .cart-content__article__number {
+    text-align: left;
+    margin-left: 0px;
     padding-left: 0;
     margin-top: 0px;
     font: normal normal 500 16px/28px "Barlow Condensed";
@@ -10481,12 +10496,14 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cart-content__article__price {
+    text-align: left;
     padding-left: 0;
     margin-top: 5px;
   }
 }
 @media (max-width: 767px) {
   .cart-content__article__price {
+    text-align: left;
     padding-left: 0;
     margin-top: 5px;
   }

@@ -47,6 +47,7 @@ class CartSummary extends Component
     public function mount()
     {
         if (Route::currentRouteName() == 'payment-'.app()->getLocale()) {
+            $this->conditions_validated = 1;
             $this->show_payment_btn = 0;
             $this->in_tunnel = 1;
         } else {

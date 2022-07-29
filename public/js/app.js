@@ -6442,6 +6442,18 @@ $(function () {
   \*****************************************/
 /***/ (() => {
 
+function deactivateBgScroll() {
+  $('body').css('overflow-y', 'hidden'); //.css('position', 'relative');
+
+  $('html').css('overflow-y', 'hidden').css('position', 'relative');
+}
+
+function activateBgScroll() {
+  $('body').css('overflow-y', 'auto'); //.css('position', 'static');
+
+  $('html').css('overflow-y', 'auto').css('position', 'static');
+}
+
 $(function () {
   $('.article-sidebar').hide();
   $('.mask-sidebar').hide();
@@ -6457,8 +6469,7 @@ $(function () {
   Livewire.on('articleLoaded', function () {
     $('.article-sidebar').hide();
     $('.article-sidebar').fadeIn();
-    $('body').css('overflow-y', 'hidden');
-    $('html').css('overflow-y', 'hidden');
+    deactivateBgScroll();
   });
   $('.modal-opacifier').on('click', function () {
     $('#general-side-modal').css('right', '-60vw');
@@ -6468,8 +6479,7 @@ $(function () {
       $('.items-sidebar').hide();
       $('.voucher-sidebar').hide();
     });
-    $('body').css('overflow-y', 'auto');
-    $('html').css('overflow-y', 'auto');
+    activateBgScroll();
     Livewire.emit('ArticleModalReady', 0);
   });
   Livewire.on('closeSideBar', function () {
@@ -6478,8 +6488,7 @@ $(function () {
     $('#general-side-modal').fadeOut(400, function () {
       $('.article-sidebar').hide();
     });
-    $('body').css('overflow-y', 'auto');
-    $('html').css('overflow-y', 'auto');
+    activateBgScroll();
     Livewire.emit('ArticleModalReady', 0);
   }); // Mask sidebar handler
 
@@ -6488,8 +6497,7 @@ $(function () {
     $('#general-side-modal').fadeIn(500, function () {
       $('.mask-sidebar').fadeIn();
     });
-    $('body').css('overflow-y', 'hidden');
-    $('html').css('overflow-y', 'hidden');
+    deactivateBgScroll();
     $('#general-side-modal').css('right', '0');
     $('.article-sidebar__img-container').scroll(function () {
       $('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
@@ -6501,8 +6509,7 @@ $(function () {
     $('#general-side-modal').fadeOut(400, function () {
       $('.mask-sidebar').hide();
     });
-    $('body').css('overflow-y', 'auto');
-    $('html').css('overflow-y', 'auto');
+    activateBgScroll();
   }); // Small Items sidebar handler
 
   $('#items-specific-order-btn').on('click', function () {
@@ -6510,8 +6517,7 @@ $(function () {
     $('#general-side-modal').fadeIn(500, function () {
       $('.items-sidebar').fadeIn();
     });
-    $('body').css('overflow-y', 'hidden');
-    $('html').css('overflow-y', 'hidden');
+    deactivateBgScroll();
     $('#general-side-modal').css('right', '0');
     $('.article-sidebar__img-container').scroll(function () {
       $('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $(this).scrollTop() / 100));
@@ -6523,8 +6529,7 @@ $(function () {
     $('#general-side-modal').fadeOut(400, function () {
       $('.items-sidebar').hide();
     });
-    $('body').css('overflow-y', 'auto');
-    $('html').css('overflow-y', 'auto');
+    activateBgScroll();
   }); // Voucher sidebar handler
 
   Livewire.on('displayVoucher', function (voucher_id) {
@@ -6540,8 +6545,7 @@ $(function () {
   Livewire.on('voucherLoaded', function () {
     $('.voucher-sidebar').hide();
     $('.voucher-sidebar').fadeIn();
-    $('body').css('overflow-y', 'hidden');
-    $('html').css('overflow-y', 'hidden');
+    deactivateBgScroll();
   });
   Livewire.on('closeVoucherSideBar', function () {
     $('.modal-opacifier').fadeOut();
@@ -6549,8 +6553,7 @@ $(function () {
     $('#general-side-modal').fadeOut(400, function () {
       $('.voucher-sidebar').hide();
     });
-    $('body').css('overflow-y', 'auto');
-    $('html').css('overflow-y', 'auto');
+    activateBgScroll();
   });
 });
 

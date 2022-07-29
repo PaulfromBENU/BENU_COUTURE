@@ -189,7 +189,7 @@
 			@include tablet {
 				margin: 0;
 				margin-top: 5px;
-				width: 50%;
+				width: 100px;
 				border-radius: 20px;
 				margin-bottom: 5px;
 			}
@@ -197,6 +197,7 @@
 				margin: 0;
 				margin-top: 5px;
 				width: 50%;
+				max-width: 100px;
 				border-radius: 20px;
 				margin-bottom: 5px;
 				font: normal normal 600 16px/28px 'Barlow Condensed';
@@ -238,11 +239,15 @@
 			margin-left: 10px;
 			margin-right: 10px;
 			@include tablet {
+				text-align: left;
+				margin-left: 0px;
 				padding-left: 0;
 				margin-top: 0px;
 				font: normal normal 500 16px/28px 'Barlow Condensed';
 			}
 			@include mobile {
+				text-align: left;
+				margin-left: 0px;
 				padding-left: 0;
 				margin-top: 0px;
 				font: normal normal 500 16px/28px 'Barlow Condensed';
@@ -271,10 +276,12 @@
 			margin-top: 30px;
 			padding-left: 10px;
 			@include tablet {
+				text-align: left;
 				padding-left: 0;
 				margin-top: 5px;
 			}
 			@include mobile {
+				text-align: left;
 				padding-left: 0;
 				margin-top: 5px;
 			}

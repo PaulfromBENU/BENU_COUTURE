@@ -328,7 +328,7 @@
         </div>
         <!-- </div> -->
     </div>
-    <div class="col-span-10 pl-1">
+    <div class="col-span-10 pl-1 mobile-only">
         @if($has_extra_option)
         <div class="flex cart-content__article__name__checkbox">
             <input type="checkbox" name="with_extra_option" wire:model="with_extra_option" id="with_extra_option_{{ $article->id }}">
