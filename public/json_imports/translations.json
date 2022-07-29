@@ -170,18 +170,18 @@
   {
     "page": "Home",
     "key": "header.partners",
-    "de": "Partner",
+    "de": "Partner:innen",
     "fr": "Partenaires",
     "en": "Partners",
-    "lu": "Partner"
+    "lu": "Partner:innen"
   },
   {
     "page": "Home",
     "key": "breadcrumbs.partners",
-    "de": "Die Partner von BENU COUTURE",
+    "de": "Die Partner:innen von BENU COUTURE",
     "fr": "Les partenaires de BENU COUTURE",
     "en": "The BENU COUTURE partners",
-    "lu": "D'Partner vu BENU COUTURE"
+    "lu": "D'Partner:inne vu BENU COUTURE"
   },
   {
     "page": "Home",
@@ -274,10 +274,10 @@
   {
     "page": "Home",
     "key": "welcome.pres-txt-1",
-    "de": "BENU COUTURE produziert hochwertige Kleidung & Accessoires im Upcycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.\nAls Verpackung für den Versand benutzen wir wiederverwendete Papierboxen sowie umweltschonende Kleber und Paketbänder.",
-    "fr": "BENU COUTURE produit des vêtements & accessoires de haute qualité en upcycling. Nous utilisons exclusivement des vêtements et textiles usagés mis à notre disposition par des personnes privées. Les matériaux tels que le coton, la laine et la soie sont privilégiés. Nous évitons autant que possible les tissus synthétiques.\nPour l'emballage des envois, nous réutilisons des boîtes en papier et nous servons d'adhésifs et de rubans écologiques.",
-    "en": "BENU COUTURE produces high-quality clothing & accessories using upcycling. Only used garments and fabrics are processed, which are provided to us by private individuals. Materials such as cotton, wool and silk are preferably used. We avoid synthetic fabrics as far as possible.\nAs packaging for shipping, we work with reused paper boxes as well as environmentally friendly adhesives and parcel tapes.",
-    "lu": "BENU COUTURE produzéiert héichwäerteg Kleeder an Accessoiren am Upcycling. Et ginn nëmme gebrauchte Kleeder a Stoffer benotzt, déi eis vu Privatleit zur Verfügung gestallt ginn. Materialien ewéi Kotteng, Woll a Seid gi mat Virléift verschafft. Syntheetesch Stoffer vermeide mir esou gutt ewéi méiglech.\nFir d'Expeditioun benotze mir gebrauchte Kartrongskëschten an ëmweltfrëndleche Pechpabéier."
+    "de": "BENU COUTURE produziert hochwertige Kleidung & Accessoires im UpCycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.\nAls Verpackung für den Versand benutzen wir wiederverwendete Papierboxen sowie umweltschonende Kleber und Paketbänder.",
+    "fr": "BENU COUTURE produit des vêtements & accessoires de haute qualité en UpCycling. Nous utilisons exclusivement des vêtements et textiles usagés mis à notre disposition par des personnes privées. Les matériaux tels que le coton, la laine et la soie sont privilégiés. Nous évitons autant que possible les tissus synthétiques.\nPour emballer les envois, nous réutilisons des boîtes en carton et nous servons d'adhésifs et de rubans écologiques.",
+    "en": "BENU COUTURE produces high-quality clothing & accessories using UpCycling. Only used garments and fabrics are processed, which are provided to us by private individuals. Materials such as cotton, wool and silk are preferably used. We avoid synthetic fabrics as far as possible.\nAs packaging for shipping, we work with reused paper boxes as well as environmentally friendly adhesives and parcel tapes.",
+    "lu": "BENU COUTURE produzéiert héichwäerteg Kleeder an Accessoiren am UpCycling. Et ginn nëmme gebrauchte Kleeder a Stoffer benotzt, déi eis vu Privatleit zur Verfügung gestallt ginn. Materialien ewéi Kotteng, Woll a Seid gi mat Virléift verschafft. Syntheetesch Stoffer vermeide mir esou gutt ewéi méiglech.\nFir d'Expeditioun benotze mir gebrauchte Kartrongskëschten an ëmweltfrëndleche Pechpabéier."
   },
   {
     "page": "Home",
@@ -307,7 +307,7 @@
     "page": "Home",
     "key": "welcome.pres-txt-2",
     "de": "BENU COUTURE ist ein professionelles Schneideratelier mit lokaler Produktion in Esch-sur-Alzette. Gelernte Schneider:innen mit langjähriger Erfahrung entwerfen und nähen unsere Kreationen. Gleichzeitig leistet BENU COUTURE einen Beitrag zur sozialen Integration und bietet Arbeitsplätze für Personen, die auf dem Arbeitsmarkt benachteiligt sind und solchen, die eines besonderen Schutzes bedürfen.",
-    "fr": "BENU COUTURE est un atelier de couture professionnel qui produit localement, à Esch-sur-Alzette. Nos créations sont conçues et réalisées par des couturiers·ères qualifié·e·s, disposant de plusieurs années d'expérience. Parallèlement, BENU COUTURE contribue à l'intégration sociale en offrant des emplois à des personnes défavorisées sur le marché du travail et/ou nécessitant une protection particulière.",
+    "fr": "BENU COUTURE est un atelier de couture professionnel qui produit localement, à Esch-sur-Alzette. Nos créations sont conçues et réalisées par des couturiers·e qualifié·e·s, disposant de plusieurs années d'expérience. Parallèlement, BENU COUTURE contribue à l'intégration sociale en offrant des emplois à des personnes défavorisées sur le marché du travail et/ou nécessitant une protection particulière.",
     "en": "BENU COUTURE is a professional tailor's studio with a local production in Esch-sur-Alzette. Skilled tailors with many years of experience design and sew our creations. At the same time, BENU COUTURE contributes to social integration and provides workplaces for people who are disadvantaged on the labour market and for those who need special protection.",
     "lu": "BENU COUTURE ass e professionelle Schneideratelier mat lokaler Produktioun zu Esch/Uelzecht. \nGeléiert Schneider:inne mat jorelaanger Erfarung entwerfen a bitzen eis Kreatiounen. \nGläichzäiteg dréit BENU COUTURE zur sozialer Integratioun bäi a bitt Aarbechtsplaze fir Leit un, \ndéi um Aarbechtsmaart benodeelegt sinn an déi spezielle Schutz brauchen."
   },
@@ -347,7 +347,7 @@
     "page": "Home",
     "key": "welcome.pres-link-3",
     "de": "So entsteht eine BENU Kreation!",
-    "fr": "C'est ainsi que naît une création BENU !",
+    "fr": "Ainsi naît une création BENU !",
     "en": "This is how a BENU creation is born!",
     "lu": "Esou entsteet eng BENU Kreatioun!"
   },
@@ -381,7 +381,7 @@
     "de": "Lass uns aktiv werden!",
     "fr": "Soyons actifs !",
     "en": "Let's get active!",
-    "lu": "Loosst eis aktiv ginn!"
+    "lu": "Looss eis aktiv ginn!"
   },
   {
     "page": "Home",
@@ -397,7 +397,7 @@
     "de": "Das Wichtigste auf einen Blick",
     "fr": "L'essentiel en un coup d'œil",
     "en": "The most important at a glance",
-    "lu": "Dat Wichtegst op ee Bléck"
+    "lu": "Dat Wichtegst op engem Bléck"
   },
   {
     "page": "Home",
@@ -419,17 +419,17 @@
     "page": "Home",
     "key": "welcome.campaign-title-1",
     "de": "BENU COUTURE's Politische Kampage",
-    "fr": "BENU COUTURE's Campagne politique",
+    "fr": "Campagne politique de BENU COUTURE",
     "en": "BENU COUTURE's Political Campaign",
-    "lu": ""
+    "lu": "Politesch Campagne vu BENU COUTURE"
   },
   {
     "page": "Home",
     "key": "welcome.campaign-title-2",
     "de": "Persilschein",
-    "fr": "Chèque en blanc",
-    "en": "Free letter",
-    "lu": ""
+    "fr": "Carte blanche",
+    "en": "Free hand",
+    "lu": "Fräischäin"
   },
   {
     "page": "Home",
@@ -459,7 +459,7 @@
     "page": "Home",
     "key": "welcome.last-subtitle",
     "de": "Unser Team aus Designer:innen und Schneider:innen entwirft und näht die BENU Kreationen im eigenen Schneider-Atelier in Esch-sur-Alzette. Entdecke hier unsere neuesten Modelle!",
-    "fr": "Notre équipe de designers et de couturiers·ères conçoit et réalise les créations BENU dans son propre atelier de couture à Esch-sur-Alzette. Découvre nos derniers modèles ici !",
+    "fr": "Notre équipe de designers et de couturiers·e conçoit et réalise les créations BENU dans son propre atelier de couture à Esch-sur-Alzette. Découvre nos derniers modèles ici !",
     "en": "Our team of designers and tailors designs and sews the BENU creations in our own sewing studio in Esch-sur-Alzette. Discover our latest models here!",
     "lu": "Eis Ekipp aus Designer:innen a Schneider:innen entwërft a bitzt d'BENU Kreatiounen am eegene Schneideratelier zu Esch/Uelzecht. Entdeck hei eis neiste Modeller!"
   },
@@ -578,10 +578,10 @@
   {
     "page": "Home",
     "key": "welcome.other-words-gentlement-cardigans",
-    "de": "Männer-Vesten",
+    "de": "Männer-Westen",
     "fr": "Gilets homme",
     "en": "Men waistcoats",
-    "lu": "Männer-Vesten"
+    "lu": "Männer-Gileten"
   },
   {
     "page": "Home",
@@ -661,7 +661,7 @@
     "de": "Wir entwerfen und produzieren einzigartige UpCycling-Mode aus lokalen Kleiderspenden. Nach Deinen individuellen Vorstellungen reparieren und verwandeln wir Deine Lieblingsstücke.",
     "fr": "Nous créons et produisons des vêtements en UpCycling uniques à partir de dons de vêtements locaux. Selon tes propres idées, nous réparons et transformons tes vêtements préférés.",
     "en": "We design and produce unique upcycled fashion from local clothing donations. We repair and transform your favourite pieces following your own ideas.",
-    "lu": "Mir entwerfen a produzéieren eenzegaarteg UpCycling-Moud aus lokale Kleederdonen. No Dengen individuelle Virstellungen, flécken a transforméiere mir Deng Liblingsstécker."
+    "lu": "Mir entwerfen a produzéieren eenzegaarteg UpCycling-Moud aus lokale Kleederdonen. No Dengen individuelle Virstellungen, flécken an transforméiere mir Deng Liblingsstécker."
   },
   {
     "page": "Home",
@@ -669,7 +669,7 @@
     "de": "Mehr erfahren",
     "fr": "En savoir plus",
     "en": "Learn more",
-    "lu": "Méi Infoen"
+    "lu": "Méi dozou"
   },
   {
     "page": "Home",
@@ -786,10 +786,10 @@
   {
     "page": "Home",
     "key": "footer.footer-list-1-5",
-    "de": "Partner",
+    "de": "Partner:innen",
     "fr": "Partenaires",
     "en": "Partners",
-    "lu": "Partner"
+    "lu": "Partner:innen"
   },
   {
     "page": "Home",
@@ -941,7 +941,7 @@
     "de": "Seitenübersicht",
     "fr": "Plan du site",
     "en": "Site map",
-    "lu": "Sitemap"
+    "lu": "Säiteniwwersiicht"
   },
   {
     "page": "Home",
@@ -1012,7 +1012,7 @@
     "key": "services.faq-title",
     "de": "Hier findest Du Antworten auf die häufigsten Fragen",
     "fr": "Voici les réponses aux questions les plus fréquentes",
-    "en": "Here you will find answers to the most frequently asked questions",
+    "en": "Here are the answers to the most frequently asked questions",
     "lu": "Hei kriss Du Äntwerten op déi meescht gestallte Froen"
   },
   {
@@ -6938,7 +6938,7 @@
   {
     "page": "Mon compte",
     "key": "pdf.return-benu-mistake",
-    "de": "Die Ware ist beschädigt",
+    "de": "Die Ware ist fehlerhaft",
     "fr": "L'article est endommagé",
     "en": "The item is damaged",
     "lu": "Den Artikel ass beschiedegt"
@@ -8337,19 +8337,19 @@
   },
   {
     "page": "Panier",
-    "key": "forms.e-mail-already-exists-please-connect-or-change-email",
-    "de": "Diese E-Mail-Adresse wird bereits verwendet. Bitte verbinde Dich mit Deinem Konto oder gib eine andere E-Mail-Adresse ein.",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Panier",
     "key": "cart.info-validate",
     "de": "Meine Daten bestätigen",
     "fr": "Valider mes données",
     "en": "Confirm my data",
     "lu": "Meng Donnéeë bestätegen"
+  },
+  {
+    "page": "Panier",
+    "key": "forms.e-mail-already-exists-please-connect-or-change-email",
+    "de": "Diese E-Mail-Adresse wird bereits verwendet. Bitte verbinde Dich mit Deinem Konto oder gib eine andere E-Mail-Adresse ein.",
+    "fr": "",
+    "en": "",
+    "lu": ""
   },
   {
     "page": "Panier",
@@ -8800,6 +8800,14 @@
     "lu": "Telefonsnummer"
   },
   {
+    "page": "",
+    "key": "payment.confirmation-payconiq-number",
+    "de": "00352 621 763 609",
+    "fr": "00352 621 763 609",
+    "en": "00352 621 763 609",
+    "lu": "00352 621 763 609"
+  },
+  {
     "page": "Panier",
     "key": "payment.confirmation-payconiq-amount",
     "de": "Gesamtpreis der Bestellung",
@@ -9130,9 +9138,9 @@
   {
     "page": "mentions legals",
     "key": "footer.legal-txt-12",
-    "de": "die von BENU Village Esch asbl betrieben wird.",
-    "fr": "exploité par BENU Village Esch asbl.",
-    "en": "operated by BENU Village Esch asbl.",
+    "de": "die von BENU Village Esch asbl betrieben wird",
+    "fr": "exploité par BENU Village Esch asbl",
+    "en": "operated by BENU Village Esch asbl",
     "lu": "bedriwwe vu BENU Village Esch asbl."
   },
   {
@@ -9176,7 +9184,7 @@
     "lu": "D'Benotzer:inne vun der Internetsäit ginn opgefuerdert,"
   },
   {
-    "page": "",
+    "page": "mentions legals",
     "key": "footer.legal-txt-general-conditions",
     "de": "Nutzungsbedingungen",
     "fr": "conditions générales d'utilisation",
@@ -9192,20 +9200,20 @@
     "lu": "an"
   },
   {
-    "page": "",
-    "key": "footer.legal-txt-general-data-protection",
+    "page": "mentions legals",
+    "key": "footer.legal-txt-data-protection",
     "de": "Bedingungen zum Datenschutz",
-    "fr": "politique de confidentialité.",
+    "fr": "politique de confidentialité",
     "en": "privacy policy",
     "lu": "d'Dateschutzrichtlinne"
   },
   {
     "page": "mentions legals",
     "key": "footer.legal-txt-8",
-    "de": "aufmerksam zu lesen.",
-    "fr": "",
-    "en": "carefully.",
-    "lu": "opmierksam ze liesen."
+    "de": "aufmerksam zu lesen",
+    "fr": ".",
+    "en": "carefully",
+    "lu": "opmierksam ze liesen"
   },
   {
     "page": "compte inscription",
@@ -10259,17 +10267,17 @@
     "page": "À propos",
     "key": "about.section-3-txt-3-2",
     "de": "BENU COUTURE bietet ein Arbeitsumfeld, das sich durch Wertschätzung und Respekt für alle Beschäftigten auszeichnet. Dabei geben wir bewusst auch Menschen, die Schwierigkeiten haben, auf dem Arbeitsmarkt Fuß zu fassen, eine Chance. Zudem bilden wir aus, um unseren Beitrag für bessere lokale Kompetenzen zu leisten. So integriert das Team z.B. Langzeitsarbeitslose, Flüchtlinge, junge Menschen ohne Arbeitserfahrung und Auszubildende. Voraussetzung zur Mitarbeit im Kernteam Design, Schnittmuster und Produktion ist eine professionelle Ausbildung. Nur so können wir die hohen Ziele der BENU Qualität gewährleisten. Die Diversität sehen wir als Bereicherung für uns als Team, aber auch für das Projekt insgesamt.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "BENU COUTURE offre un environnement de travail qui se caractérise par l'estime et le respect de ses employé·e·s. Ce faisant, nous donnons également une chance aux personnes recontrant des difficultés à s'insérer sur le marché du travail. De plus, nous formons nos employé·e·s afin de contribuer au renforcement des compétences locales. Ainsi, l'équipe rassemble par exemple des chômeurs·ses de longue durée, des réfugié·e·s, des jeunes sans expérience professionnelle et des apprenti·e·s. Pour intégrer l'équipe design, conception de patrons et production, une formation professionnelle est nécessaire. Ce critère est essentiel pour satisfaire aux standards de qualité BENU. Nous considérons la diversité comme un enrichissement pour nous en tant qu'équipe, mais aussi pour le projet dans son ensemble.",
+    "en": "BENU COUTURE offers a working environment that is characterised by esteem and respect for all employees. In doing so, we also give people who have difficulties gaining a foothold in the labour market a chance. In addition, we train to make our contribution to better local skills. For example, the team integrates long-term unemployed, refugees, young people without work experience and apprentices. A prerequisite for working in the core team for design, pattern and production is professional qualification. Only in this way can we guarantee the high goals of BENU quality. We see diversity as an enrichment for us as a team, but also for the project as a whole.",
+    "lu": "Wäertschätzung a Respekt vun de Leit ass dat wat d'Aarbechtsëmfeld vu BENU COUTURE ausmécht. Dobäi gi mir bewosst och Mënschen eng Chance, déi et um Aarbechtsmaart méi schwiereg hunn. Ausserdeem bilde mir och aus, fir déi lokal Kompetenzen weider ze entwéckelen. An der Ekipp sinn z.B. Laangzäit-Aarbechtslosen, Flüchtlingen, jonk Leit ouni Aarbechtserfarung a Léierjongen/meedercher. Fir an der Kär-Ekipp Design, Patronen a Produktioun ze schaffen, ass eng professionell Ausbildung gefuerdert. Dëst ass e grondleeënde Krittär, fir d'Qualitéitstandarde vu BENU ze garantéieren."
   },
   {
     "page": "À propos",
     "key": "about.section-3-txt-3-3",
-    "de": "Hier erreichst du uns:",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Hier erreichst Du uns:",
+    "fr": "Tu peux nous contacter ici :",
+    "en": "You can contact us here:",
+    "lu": "Hei erreechs Du eis:"
   },
   {
     "page": "À propos",
@@ -10280,68 +10288,228 @@
     "lu": "Kontakt"
   },
   {
-    "page": "Confidentialité",
-    "key": "footer.policy-subtitle",
-    "de": "Was geschieht mit Deinen persönlichen Daten?",
+    "page": "À propos",
+    "key": "about.section-title-4",
+    "de": "Welche Materialien verarbeiten wir?",
     "fr": "",
     "en": "",
     "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-1",
+    "de": "Wolle, Seide, Baumwolle… für unsere Kreationen verwenden wir möglichst Stoffe aus Naturfasern. Nur dann, wenn es die Funktion eines Kleidungsstückes unverzichtbar macht, werden Materialien verarbeitet, die (auch) synthetische Fasern enthalten. Doch eines ist allen verarbeiteten Stoffen gleich: sie stammen ausschließlich von gebrauchten Kleidungsstücken und Textilien! Auch Ausstattungsteile, wie z.B. Knöpfe finden in BENU Kreationen ein zweites Leben. Pelz wird bei BENU COUTURE aus ethischen Gründen grundsätzlich nicht verarbeitet!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-2",
+    "de": "Nur in Ausnahmefällen kaufen wir Komponenten, wie z.B. Reißverschlüsse neu hinzu. Jeder Neukauf wird kritisch im Hinblick auf eine bestmögliche Nachhaltigkeitsbilanz geprüft. Regionale Produktion, Ökolabel, Freiheit von Schwermetallen, sozialverträgliche Produktion … all dies sind Kriterien, die uns wichtig sind!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-lowtitle-1",
+    "de": "Woher stammen die gebrauchten Kleider und Textilien?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-1-1",
+    "de": "Bei den Materialien handelt es sich ausschließlich um Kleider-Spenden von Privatpersonen. Unser Nähteam wählt qualitativ hochwertige Materialien aus, die sich zu langlebigen Kleidungstücken verarbeiten lassen. Den Rest übergeben wir dem nationalen Sammel- und Sortierzentrum für Kleiderspenden von",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-link-1",
+    "de": "„Spëndchen asbl“",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-1-1-end",
+    "de": ", einem gemeinsamen Verein von Caritas Luxembourg und Croix Rouge Luxembourg.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-1-2",
+    "de": "Möchtest Du uns gebrauchte Kleidung und Stoffe abgeben? Dann wende Dich an eine unserer",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-link-2",
+    "de": "Sammelstellen",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-1-2-end",
+    "de": ". Zustellungen per Post nehmen wir indes nicht an, dies aus dem einzigen Grund, weil alleine der ökologische Fußabdruck der Zusendung bereits zu groß ist. Sämtliche Märkte der Industrienationen leiden unter der fast unendlichen Flut an Kleidern. Wenn Du also weiter weg wohnst und einen sozio-ökologisch orientierten Abnehmer für Deine Kleider suchst, dann erkundige Dich gleich bei Dir um die Ecke, welche Initiativen es gibt. Du wirst (in den meisten Fällen) überrascht sein, wie viele Du davon findest.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-1-3",
+    "de": "Und… wir laden Dich ein, unsere Gedanken zu Kleiderspenden zu lesen!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-link-3",
+    "de": "Hier erfährst du mehr",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-lowtitle-2",
+    "de": "Warum verwenden wir keine Industrieabfälle?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-2-1",
+    "de": "In der Kleiderindustrie fallen nicht unerhebliche Mengen an Stoffresten an, die als Abfall entsorgt werden. Und doch haben wir uns entschieden, diese nicht abzunehmen. Warum? Wir wollen nicht, dass sich die Industrie ein „grünes Mäntelchen“ umhängt, indem sie BENU COUTURE ihre Überproduktion überlässt und dann verkündet: „Seht, wie nachhaltig wir sind!“…  Wir wünschen uns, dass die Industrie Verantwortung übernimmt. Endlich…  Der Markt wird ohnehin überschwemmt mit Kleidungsstücken, die die Menschen loswerden wollen.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-lowtitle-3",
+    "de": "Womit arbeiten wir?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-3-1",
+    "de": "Nähmaschinen, Scheren, Bügeleisen, Maßbänder…. alle möglichen kleinen und großen Werkzeuge und Hilfsmittel kommen bei BENU COUTURE zum Einsatz. Wann immer möglich, nutzen wir Geräte aus zweiter Hand!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-3-2",
+    "de": "Professionelle Geräte für das Schneider-Atelier, wie z.B. Nähmaschinen, kaufen wir gebraucht und immer mit professioneller Unterstützung und Wartungsdienst. Nur in Ausnahmefällen werden neue Geräte hinzu gekauft. Für semi-professionelle oder nicht-professionelle Hilfsmittel, wie wir sie z.B. für Workshops benutzen, nehmen wir gerne Spenden an. Die gespendeten Geräte werden kontrolliert und bei Bedarf professionell repariert und gewartet.",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-3-3",
+    "de": "Hast auch Du Geräte oder Hilfsmittel, die Du BENU COTURE spenden möchtest?",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-link-4",
+    "de": "Dann melde Dich bei uns!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "À propos",
+    "key": "about.section-4-txt-3-4",
+    "de": "Unabhängig von BENU COUTURE wollen wir zeigen, dass der Markt voll ist mit funktionsfähigen Gebrauchtgeräten. Umso wichtiger sind daher lokale Angebote für Reparatur und Wartung!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Confidentialité",
+    "key": "footer.policy-subtitle",
+    "de": "Was geschieht mit Deinen persönlichen Daten?",
+    "fr": "Que se passe-t-il avec tes données personnelles ?",
+    "en": "What happens to your personal data?",
+    "lu": "Wat geschitt mat Denge perséinlechen Donnéeën?"
   },
   {
     "page": "Confidentialité",
     "key": "footer.policy-title",
     "de": "Datenschutz",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Politique de confidentialité",
+    "en": "Privacy policy",
+    "lu": "Dateschutz"
   },
   {
     "page": "Confidentialité",
     "key": "footer.policy-txt-1",
-    "de": "Persönliche Daten wie Name, Vorname, E-Mail-Adresse, Adresse und Telefonnummer werden vertraulich behandelt. Sie werden nur im Rahmen des Online-Verkaufs bis zum Abschluss der Transaktion durch BENU VILLAGE Esch asbl verwendet. Die Daten werden für die gesetzlich vorgeschriebene Dauer im Sinne der Datenschutzgesetzgebung aufbewahrt.",
-    "fr": "Les données personnelles telles que le nom, le prénom, l'adresse e-mail, l’adresse et le numéro de téléphone sont traitées de manière confidentielle. Elles ne sont utilisées que dans le cadre de la vente en ligne par BENU VILLAGE Esch asbl. Les données sont utilisées jusqu'à la conclusion de la transaction et sont conservées pendant la durée légale au sens de la législation sur la protection des données.",
-    "en": "Personal data such as surname, first name, e-mail address and telephone number are treated confidentially. They are only used within the framework of online purchase by BENU VILLAGE Esch asbl. The data will be used until the transaction is completed and be stored for the legal period as defined by data protection law",
-    "lu": "vergleiche BENU SLOOW\n\nText wurde geringfügig angepasst."
+    "de": "Persönliche Daten wie Name, Vorname, E-Mail-Adresse, Adresse und Telefonnummer werden vertraulich behandelt. Sie werden nur im Rahmen des Online-Verkaufs bis zum Abschluss der Transaktion durch BENU Village Esch asbl verwendet. Die Daten werden für die gesetzliche Frist im Sinne des Datenschutzrechts gespeichert.",
+    "fr": "Les données personnelles telles que le nom, le prénom, l'adresse e-mail et le numéro de téléphone, sont traitées de manière confidentielle. Elles ne sont utilisées que dans le cadre de la vente en ligne par BENU Village Esch asbl jusqu'à conclusion de la transaction et sont conservées pendant la durée légale au sens de la législation sur la protection des données.",
+    "en": "Personal data such as surname, first name, e-mail address and phone number are treated confidentially. They are only used within the framework of the online sale by BENU Village Esch asbl. The data will be used until the transaction is completed and be stored for the legal period as defined by data protection law.",
+    "lu": "Perséinlech Daten ewéi den Numm, de Virnumm, d'E-Mail-Adress an d'Telefonsnummer, gi vertraulech behandelt. Se ginn exklusiv am Kader vum Online-Verkaf, a bis zum Ofschloss vun der Transaktioun, duerch BENU Village Esch asbl traitéiert a ginn der gesetzlecher Frist zum Dateschutz entspriechend gespäichert."
   },
   {
     "page": "Confidentialité",
     "key": "footer.policy-txt-2",
-    "de": "BENU VILLAGE Esch asbl anerkennt und verpflichtet sich zur Einhaltung der Gesetze und Vorschriften Schutz personenbezogener Daten einzuhalten, einschließlich, aber nicht beschränkt auf die Verordnung (EU) 2016/679 des Parlaments und des Rates vom 27. April 2016 zum Schutz von Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr (die \"DSGVO\") und alle anderen anwendbaren nationalen Gesetze oder Vorschriften, die die Verarbeitung dieser personenbezogenen Daten regeln.",
-    "fr": "BENU VILLAGE Esch asbl reconnaît et s'engage à respecter les lois et règlements régissant la protection des données personnelles, y compris, mais sans s’y limiter, le règlement (UE) 2016/679 du Parlement et du Conseil du 27 avril 2016 sur la protection des personnes en ce qui concerne le traitement des données personnelles et sur la libre circulation de ces données (le « RGPD ») et toute autre loi ou réglementation nationale applicable régissant le traitement de ces données personnelles.",
-    "en": "BENU VILLAGE Esch asbl acknowledges and agrees to comply with laws and regulations governing the protection of personal data, including, but not limited to, the Regulation (EU) 2016/679 of the Parliament and Council from 27th of april 2016 regarding the protection of individuals concerning the processing of personal data and the free movement of such data (the \"GDPR\") and any other applicable national laws or regulations governing the processing of such personal data.",
-    "lu": ""
+    "de": "BENU Village Esch asbl anerkennt und verpflichtet sich, die Gesetze und Vorschriften zum Schutz personenbezogener Daten einzuhalten, einschließlich, aber nicht beschränkt auf die Verordnung (EU) 2016/679 des Parlaments und des Rates vom 27. April 2016 zum Schutz von Personen in Bezug auf die Verarbeitung personenbezogener Daten und den freien Datenverkehr (die \"DSGVO“) und alle anderen anwendbaren nationalen Gesetze oder Verordnungen, die die Verarbeitung dieser personenbezogenen Daten regeln.",
+    "fr": "BENU Village Esch asbl reconnaît et s'engage à respecter les lois et règlements régissant la protection des données personnelles, y compris, mais sans s’y limiter, le règlement (UE) 2016/679 du Parlement et du Conseil du 27 avril 2016 sur la protection des personnes en ce qui concerne le traitement des données personnelles et sur la libre circulation de ces données (le \"RGPD\") et toute autre loi ou réglementation nationale applicable régissant le traitement de ces données personnelles.",
+    "en": "BENU Village Esch asbl acknowledges and agrees to comply with laws and regulations governing the protection of personal data, including, but not limited to, the Regulation (EU) 2016/679 of the Parliament and Council from 27th of april 2016 regarding the protection of individuals concerning the processing of personal data and the free movement of such data (the \"GDPR\") and any other applicable national laws or regulations governing the processing of such personal data.",
+    "lu": "BENU Village Esch asbl erkennt un a verflicht sech, d'Gesetzer a Reglementer ze respektéieren, déi de Schutz vu perséinlechen Donnéeë regéieren, dorënner, awer net beschränkt op, d'Reglement (EU) 2016/679 vum Parlament a vum Conseil vum 27. Abrëll 2016 iwwer de Schutz vun de Persoune bezüglech der Veraarbechtung an dem fräie Verkéier vu perséinlechen Donnéeën (\"GDPR\") an all aner uwennbar nationaalt Gesetz oder Reglement fir d'Veraarbechtung vun dëse perséinlechen Donnéeën."
   },
   {
     "page": "Confidentialité",
     "key": "footer.policy-txt-3",
     "de": "Wir erheben und verarbeiten insbesondere Deinen Namen, Vornamen, E-Mail-Adresse, Telefonnummer, IP-Adresse, historische Verbindungsdaten für Verkäufe ausschließlich im Rahmen und für den Zeitraum, der für den Online-Verkauf unbedingt erforderlich ist. Der obligatorische oder optionale Charakter der Datenerhebung wird Dir bei der Erhebung durch ein Sternchen angezeigt.",
-    "fr": "Nous collectons et traitons en particulier vos nom, prénom, adresse e-mail, numéro de téléphone, adresse IP, données de connexion historique pour les ventes uniquement dans le cadre et pour la période strictement nécessaires la vente. Le caractère obligatoire ou facultatif de la collecte des données t’ est signalé lors de la collecte par un astérisque.",
-    "en": "We collect and process in particular your name, first name, e-mail address, telephone number, IP address and historical connection data within the framework online purchase and for a period limited to the processing thereof. The compulsory or optional nature of data collection is indicated by an asterisk at the time of collection.",
-    "lu": ""
+    "fr": "Nous collectons et traitons plus particulièrement tes nom, prénom, adresse e-mail, numéro de téléphone, adresse IP ainsi que l'historique des données de connexion dans le cadre exclusif de la vente en ligne et pour une période limitée au traitement de celles-ci. Le caractère obligatoire ou facultatif de la collecte des données est signalé lors de la collecte par un astérisque.",
+    "en": "We collect and process in particular your name, first name, e-mail address, phone number, IP address and historical connection data within the exclusive framework of online sale and for a period limited to the processing thereof. The compulsory or optional nature of data collection is indicated by an asterisk at the time of collection.",
+    "lu": "Mir sammelen a veraarbechte besonnesch Däin Numm, Virnumm, E-Mail-Adress, Telefonsnummer, IP-Adress a Verbindungsverlaf fir Verkeef, exklusiv am Kader vum Online-Verkaf a fir de strikt noutwendegen Zäitraum. Déi obligatoresch oder fakultativ Natur vun der Datesammlung gëtt wärend der Sammlung mat engem Stärchen ugewisen."
   },
   {
     "page": "Confidentialité",
     "key": "footer.policy-txt-4",
     "de": "Die für die Anmeldung zum BENU Newsletter erhobenen Daten (Vorname, Name und E-Mail-Adresse) werden ausschließlich genutzt, um Dir BENU Informations-E-Mails zuzuschicken. Die Daten tauschen wir mit niemandem, demnach auch mit keiner beliebigen Organisation, Verwaltung, Unternehmen, Interessensgruppe oder anderen. Ebenso werden die Daten, die bei der Einrichtung eines Kontos erhoben werden, nur gespeichert und nicht an Dritte weitergegeben.",
-    "fr": "Les données collectées pour l’inscription à la newsletter BENU (prénom, nom et adresse e-mail) sont exclusivement utilisées pour vous envoyer des e-mails d’information BENU. Nous ne partageons les données avec personne, et donc avec aucune organisation, administration, entreprise, groupe d’intérêt ou autre.",
-    "en": "The data collected for the registration to the BENU newsletter (first name, surname and e-mail address) are exclusively intended for the sending of information e-mails concerning BENU. We do not share the data with any third party, including any organisation, administration, company, group of interest or others. Likewise, the data collected when creating an account is only stored and not passed on to third parties.",
-    "lu": ""
+    "fr": "Les données collectées pour l’inscription à la newsletter BENU (prénom, nom et adresse e-mail) sont destinées exclusivement à l'envoi d'e-mails d’informations concernant BENU. Nous ne partageons les données avec aucun tiers, ce qui inclut toute organisation, administration, entreprise, tout groupe d’intérêt ou autre. De la même manière, les données collectées lors de la création d'un compte client·e ne sont pas partagées mais uniquement sauvegardées.",
+    "en": "The data collected for the registration to the BENU newsletter (first name, surname and e-mail address) are exclusively intended for the sending of information e-mails concerning BENU. We do not share the data with any third party, including any organisation, administration, company, group of interest or others. Likewise, the data collected when setting up an account is only stored and not shared with any third party.",
+    "lu": "D'Daten déi bei der Umeldung fir d'Newsletter gesammelt ginn (Numm, Virnumm an E-Mail-Adress), ginn nëmme benotzt fir Dir BENU Informatiouns-E-Mailen ze schécken. Dës Date ginn u kee weider, deemno och u keng aner Organisatioun, Verwaltung, Entreprise, Interessegrupp oder anerwäerts. Och D'Donnéeën déi beim Opmaache vun engem Kont gesammelt ginn, ginn ausschliisslech gespäichert an net gedeelt."
   },
   {
     "page": "Confidentialité",
     "key": "footer.policy-txt-5",
-    "de": "Die Internetseite verwendet nur Cookies, die für den Betrieb der Internetseite notwendig sind. Es werden keine Cookies von Drittanbietern auf dem Gerät des/der Nutzers/in abgelegt",
-    "fr": "Le site web utilise uniquement des cookies nécessaires à son fonctionnement. Aucun cookie tiers n'est déposé sur l'appareil de l'utilisateur.",
-    "en": "The website only uses cookies that are necessary for the operation of the website. No cookies from third-party providers are stored on the user's device.",
-    "lu": ""
+    "de": "Die Internetseite verwendet nur Cookies, die für den Betrieb der Internetseite notwendig sind. Es werden keine Cookies von Drittanbietern auf dem Gerät des/der Nutzers/in abgelegt.",
+    "fr": "Le site Internet utilise uniquement des cookies nécessaires à son fonctionnement. Aucun cookie d'un prestataire tiers n'est stocké sur l'appareil de l'utilisateur·rice.",
+    "en": "The website only uses cookies that are necessary for the operation of the website. No cookies from third party providers are stored on the user's device.",
+    "lu": "D'Internetsäit benotzt ausschliisslech Cookies, déi fir säin eegent Fonctionnement néideg sinn. Et gëtt kee Cookie vun aneren Déngschtleeschter"
   },
   {
     "page": "Version mobile",
     "key": "welcome.nav-home",
     "de": "Startseite",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Accueil",
+    "en": "Homepage",
+    "lu": "Startsäit"
   },
   {
     "page": "Version mobile",
@@ -10356,16 +10524,16 @@
     "key": "welcome.nav-cart",
     "de": "Warenkorb",
     "fr": "Panier",
-    "en": "",
-    "lu": ""
+    "en": "Basket",
+    "lu": "Akafskierfchen"
   },
   {
     "page": "Version mobile",
     "key": "welcome.side-menu-home",
     "de": "Startseite",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Accueil",
+    "en": "Homepage",
+    "lu": "Startsäit"
   },
   {
     "page": "Version mobile",
