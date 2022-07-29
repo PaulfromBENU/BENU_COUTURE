@@ -21,7 +21,7 @@
 @endsection
 
 @section('main-content')
-<section class="w-3/5 m-auto full-story mb-10 pb-10 benu-container">
+<section class="w-full m-auto full-story mb-10 pb-10">
 	<h2 class="full-story__subtitle">{{ __('about.subtitle-top') }}</h2>
 	<h1 class="full-story__title">{{ __('about.title-top') }}</h1>
 
@@ -50,38 +50,40 @@
 		</div>
 
 		<div class="full-story__general__content">
-			<div class="full-story__general__content__slider">	
-				<div class="full-story__general__content__slider__cards flex justify-start">
-					@for($i = 1; $i <= 11; $i++)
-					<div class="full-story__general__content__slider__cards__card" @if($i == 1) id="slider-card-1" @endif>
-						<img src="{{ asset('images/pictures/about/about-slider-'.$i.'.jpg') }}" />
-						<div class="full-story__general__content__slider__cards__card__footer flex justify-start">
-							<div class="flex flex-col justify-center">
-								<p class="full-story__general__content__slider__cards__card__footer--number">
-									{{ $i }}
-								</p>
-							</div>
-							<div class="full-story__general__content__slider__cards__card__footer--txt flex flex-col justify-center">
-								<p>
-									{{ __('about.card-txt-'.$i) }}
-								</p>
+			<div class="benu-container">
+				<div class="full-story__general__content__slider">	
+					<div class="full-story__general__content__slider__cards flex justify-start">
+						@for($i = 1; $i <= 11; $i++)
+						<div class="full-story__general__content__slider__cards__card" @if($i == 1) id="slider-card-1" @endif>
+							<img src="{{ asset('images/pictures/about/about-slider-'.$i.'.jpg') }}" />
+							<div class="full-story__general__content__slider__cards__card__footer flex justify-start">
+								<div class="flex flex-col justify-center">
+									<p class="full-story__general__content__slider__cards__card__footer--number">
+										{{ $i }}
+									</p>
+								</div>
+								<div class="full-story__general__content__slider__cards__card__footer--txt flex flex-col justify-center">
+									<p>
+										{{ __('about.card-txt-'.$i) }}
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					@endfor
-				</div>
-			</div>
-			<div class="full-story__general__content__slider__bar flex justify-between">
-				<div class="flex justify-start w-1/5">
-					<div class="full-story__general__content__slider__bar__btn full-story__general__content__slider__bar__btn--left">
-						@svg('chevron-down', 'full-story__general__content__slider__bar__svg')
-					</div>
-					<div class="full-story__general__content__slider__bar__btn full-story__general__content__slider__bar__btn--right">
-						@svg('chevron-down', 'full-story__general__content__slider__bar__svg')
+						@endfor
 					</div>
 				</div>
-				<div class="full-story__general__content__slider__bar__scroll w-4/5">
-					<div class="absolute full-story__general__content__slider__bar__scroll--red"></div>
+				<div class="full-story__general__content__slider__bar flex justify-between">
+					<div class="flex justify-start w-1/5">
+						<div class="full-story__general__content__slider__bar__btn full-story__general__content__slider__bar__btn--left">
+							@svg('chevron-down', 'full-story__general__content__slider__bar__svg')
+						</div>
+						<div class="full-story__general__content__slider__bar__btn full-story__general__content__slider__bar__btn--right">
+							@svg('chevron-down', 'full-story__general__content__slider__bar__svg')
+						</div>
+					</div>
+					<div class="full-story__general__content__slider__bar__scroll w-4/5">
+						<div class="absolute full-story__general__content__slider__bar__scroll--red"></div>
+					</div>
 				</div>
 			</div>
 

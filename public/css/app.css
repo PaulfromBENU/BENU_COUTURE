@@ -7007,10 +7007,10 @@ input[type=checkbox]:focus {
 }
 .full-story__general__menu-container {
   position: absolute;
-  width: 15%;
+  width: 10%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 5%;
 }
 .full-story__general__menu-container__menu {
   position: -webkit-sticky;
@@ -7145,7 +7145,7 @@ input[type=checkbox]:focus {
   margin-top: 10px;
   margin-bottom: 50px;
   width: 100%;
-  height: 600px;
+  min-height: 700px;
   overflow: hidden;
 }
 .full-story__general__content__info-section__transition img {
@@ -7154,7 +7154,7 @@ input[type=checkbox]:focus {
 }
 .full-story__general__content__info-section__txt {
   padding: 50px 70px;
-  width: 70%;
+  width: 60%;
   margin: auto;
   margin-top: -40px;
   background: #FFFFFF;
