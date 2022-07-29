@@ -257,6 +257,90 @@
 					</p>
 				</div>
 			</div>
+
+
+
+			<h3 id="about-chapter-materials" class="full-story__section-title">
+				{{ __('about.section-title-4') }}
+			</h3>
+
+
+			<div class="full-story__general__content__info-section">
+				<div class="full-story__general__content__info-section__picture">
+					<img src="{{ asset('images/pictures/about/about-transition-4.png') }}" style="width: 100%;">
+				</div>
+
+				<div class="full-story__general__content__info-section__txt">
+					<p class="full-story__general__content__info-section__txt__paragraph">
+						{{ __('about.section-4-txt-1') }}
+					</p>
+					<p class="full-story__general__content__info-section__txt__paragraph">
+						{{ __('about.section-4-txt-2') }}
+					</p>
+				</div>
+				<div class="full-story__general__content__info-section__txt">
+					<!-- <p class="full-story__general__content__info-section__txt__paragraph">
+						{{ __('about.section-4-txt-3') }}
+					</p> -->
+
+					<div class="flex justify-between flex-wrap mb-10">
+						<div class="w-2/5">
+							<img src="{{ asset('images/pictures/about/about-content-7.png') }}">
+						</div>
+						<div class="w-3/5 pl-5">
+							<h5>
+								{{ __('about.section-4-lowtitle-1') }}
+							</h5>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-1-1') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-1') }}</a>)
+							</p>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-1-2') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-2') }}</a>)
+							</p>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-1-3') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>)
+							</p>
+						</div>
+					</div>
+
+					<div class="flex justify-between flex-wrap pt-10 mb-10">
+						<div class="w-1/2 pr-5">
+							<h5>
+								{{ __('about.section-4-lowtitle-2') }}
+							</h5>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-2-1') }}
+							</p>
+						</div>
+						<div class="w-1/2">
+							<img src="{{ asset('images/pictures/about/about-content-8.png') }}">
+						</div>
+					</div>
+
+					<div class="flex justify-between flex-wrap mb-10">
+						<div class="w-2/5">
+							<img src="{{ asset('images/pictures/about/about-content-9.png') }}">
+						</div>
+						<div class="w-3/5 pl-5">
+							<h5>
+								{{ __('about.section-4-lowtitle-3') }}
+							</h5>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-3-1') }}
+							</p>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-3-2') }}
+							</p>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-3-3') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-4') }}</a>)
+							</p>
+							<p class="full-story__general__content__info-section__txt__paragraph">
+								{{ __('about.section-4-txt-3-4') }}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
