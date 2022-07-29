@@ -1,14 +1,14 @@
 <div id="side-mobile" class="side-mobile mobile-only benu-container">
     <div class="flex justify-around flex-wrap">
         <div id="mobile-general-menu-toggle" class="side-mobile__toggler side-mobile__toggler--general">
-            <!-- {{ __('welcome.mobile-menu-btn-menu') }} -->
-            Menu
+            {{ __('welcome.mobile-menu-btn-menu') }}
+            <!-- Menu -->
         </div>
         <div id="mobile-creations-menu-toggle" class="side-mobile__toggler side-mobile__toggler--creation flex justify-start">
             @svg('benu-icon-squares-categories', 'side-mobile__toggler__svg')
-            <p>
-                <!-- {{ __('welcome.mobile-menu-btn-creations') }} -->
-                Creations
+            <p style="width: calc(100% - 38px);">
+                {{ __('welcome.mobile-menu-btn-creations') }}
+                <!-- Creations -->
             </p>
         </div>
     </div>
