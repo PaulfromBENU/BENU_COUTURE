@@ -243,14 +243,14 @@
 					font-weight: 500;
 					@include tablet {
 						bottom: 24px;
-						right: 30%;
+						right: calc(50% - 25px);
 						width: 19px;
 						height: 19px;
 						font-size: 0.8rem;
 					}
 					@include mobile {
 						bottom: 24px;
-						right: 30%;
+						right: calc(50% - 25px);
 						width: 19px;
 						height: 19px;
 						font-size: 0.8rem;

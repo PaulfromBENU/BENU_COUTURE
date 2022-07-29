@@ -2055,7 +2055,7 @@ input[type=checkbox]:focus {
 @media (min-width: 768px) and (max-width: 1023px) {
   .header__main-menu__icons__btn__cart-counter {
     bottom: 24px;
-    right: 30%;
+    right: calc(50% - 25px);
     width: 19px;
     height: 19px;
     font-size: 0.8rem;
@@ -2064,7 +2064,7 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .header__main-menu__icons__btn__cart-counter {
     bottom: 24px;
-    right: 30%;
+    right: calc(50% - 25px);
     width: 19px;
     height: 19px;
     font-size: 0.8rem;
