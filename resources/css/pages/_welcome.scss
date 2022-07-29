@@ -1,14 +1,16 @@
 .welcome-presentation {
 	// min-height: max(800px, 80vh);
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 	width: 100vw;
 	overflow: hidden;
 	position: relative;
-	height: min(85vh, 900px);
+	min-height: min(85vh, 900px);
 	@include tablet {
+		min-height: 0;
 		height: auto;
 	}
 	@include mobile {
+		min-height: 0;
 		height: auto;
 		margin-bottom: 20px;
 	}
@@ -80,7 +82,7 @@
 			}
 		}
 		&__text {
-			width: 32vw;
+			width: 42vw;
 			text-align: left;
 			font: normal normal 500 18px/33px 'Barlow';
 			letter-spacing: 0px;
@@ -97,6 +99,9 @@
 				margin-bottom: 20px;
 				font: normal normal 500 15px/26px 'Barlow';
 				// min-height: 300px;
+			}
+			li {
+				margin-left: 25px;
 			}
 			li::before {
 			  content: "\2022";  /* CSS Code/unicode for a bullet */
