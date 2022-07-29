@@ -9,7 +9,7 @@
 </div>
 @else
 <div class="cart-content__articles">
-    <div class="grid grid-cols-8 cart-content__articles__header mobile-hidden">
+    <div class="grid grid-cols-8 cart-content__articles__header mobile-hidden tablet-hidden">
         <div class="col-span-1">
             {{ __('cart.title-article') }}
         </div>
