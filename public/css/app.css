@@ -7027,6 +7027,10 @@ input[type=checkbox]:focus {
   z-index: 5;
   background: #FFFFFF;
 }
+.full-story__general__menu-container__menu button {
+  width: 90%;
+  text-align: left;
+}
 .full-story__general__content {
   width: 100%;
   position: relative;

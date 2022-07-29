@@ -219,10 +219,10 @@
 					</p>
 
 					<div class="flex justify-between flex-wrap mb-10">
-						<div class="w-2/5">
+						<div class="w-1/3">
 							<img src="{{ asset('images/pictures/about/about-content-5.jpg') }}">
 						</div>
-						<div class="w-3/5 pl-5">
+						<div class="w-2/3 pl-5">
 							<h5>
 								{{ __('about.section-3-lowtitle-0') }}
 							</h5>
