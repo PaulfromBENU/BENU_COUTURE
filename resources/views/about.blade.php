@@ -294,13 +294,13 @@
 								{{ __('about.section-4-lowtitle-1') }}
 							</h5>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-1') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-1') }}</a>)
+								{{ __('about.section-4-txt-1-1') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-1') }}</a> {{ __('about.section-4-txt-1-1-end') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-2') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-2') }}</a>)
+								{{ __('about.section-4-txt-1-2') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-2') }}</a> {{ __('about.section-4-txt-1-2-end') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-3') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>)
+								{{ __('about.section-4-txt-1-3') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>
 							</p>
 						</div>
 					</div>
@@ -334,7 +334,7 @@
 								{{ __('about.section-4-txt-3-2') }}
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-3-3') }} (<a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-4') }}</a>)
+								{{ __('about.section-4-txt-3-3') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-4') }}</a>
 							</p>
 							<p class="full-story__general__content__info-section__txt__paragraph">
 								{{ __('about.section-4-txt-3-4') }}
