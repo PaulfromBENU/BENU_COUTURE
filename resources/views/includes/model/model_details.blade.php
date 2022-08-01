@@ -1,4 +1,4 @@
-<section class="flex justify-between flex-wrap model-pres benu-container">
+<section class="flex justify-between flex-wrap lg:flex-nowrap model-pres benu-container">
 	<div class="model-pres__img-container">
 		@foreach($model_pictures as $picture)
             <img src="{{ asset('images/pictures/articles/'.$picture) }}" @if($loop->index > 0) style="display: none;" @endif>

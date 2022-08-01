@@ -418,7 +418,7 @@
   {
     "page": "Home",
     "key": "welcome.campaign-title-1",
-    "de": "BENU COUTURE's Politische Kampage",
+    "de": "BENU COUTURE's  Politische Kampage",
     "fr": "Campagne politique de BENU COUTURE",
     "en": "BENU COUTURE's Political Campaign",
     "lu": "Politesch Campagne vu BENU COUTURE"
@@ -434,18 +434,10 @@
   {
     "page": "Home",
     "key": "welcome.campaign-link-1",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Home",
-    "key": "welcome.campaign-link-2",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Mehr erfahren",
+    "fr": "En savoir plus",
+    "en": "Learn more",
+    "lu": "Méi Infoen"
   },
   {
     "page": "Home",
@@ -659,7 +651,7 @@
     "page": "Home",
     "key": "footer.more-txt-2",
     "de": "Wir entwerfen und produzieren einzigartige UpCycling-Mode aus lokalen Kleiderspenden. Nach Deinen individuellen Vorstellungen reparieren und verwandeln wir Deine Lieblingsstücke.",
-    "fr": "Nous créons et produisons des vêtements en UpCycling uniques à partir de dons de vêtements locaux. Selon tes propres idées, nous réparons et transformons tes vêtements préférés.",
+    "fr": "Nous créons et produisons des vêtements uniques grâce à l'UpCycling de vêtements offerts par des particuliers. Nous réparons et transformons également tes propres vêtements selon tes souhaits.",
     "en": "We design and produce unique upcycled fashion from local clothing donations. We repair and transform your favourite pieces following your own ideas.",
     "lu": "Mir entwerfen a produzéieren eenzegaarteg UpCycling-Moud aus lokale Kleederdonen. No Dengen individuelle Virstellungen, flécken an transforméiere mir Deng Liblingsstécker."
   },
@@ -1180,7 +1172,7 @@
     "key": "services.faq-group-2-question-title-3",
     "de": "Kann mein altes Lieblingsstück für eine BENU Kreation verarbeitet werden?",
     "fr": "Mon ancien vêtement préféré peut-il être utilisé dans une création BENU ?",
-    "en": "Can my favourite vintage piece be used for a BENU creation?",
+    "en": "Can my former favourite piece be used for a BENU creation?",
     "lu": "Ka mäin aalt Liblingsstéck fir eng BENU Kreatioun benotzt ginn?"
   },
   {
@@ -1228,7 +1220,7 @@
     "key": "services.faq-group-2-question-title-6",
     "de": "Gibt es eine Garantie?",
     "fr": "Y a-t-il une garantie ?",
-    "en": "Is there a guarantee?",
+    "en": "Is there a warranty?",
     "lu": "Gëtt et eng Garantie?"
   },
   {
@@ -1245,7 +1237,7 @@
     "de": "Wie pflege ich die Kreationen von BENU COUTURE?",
     "fr": "Comment entretenir les créations de BENU COUTURE ?",
     "en": "How do I care for BENU COUTURE creations?",
-    "lu": "Wéi fleegen ech d'BENU COUTURE-Kreatiounen?"
+    "lu": "Wéi fleegen ech d'BENU COUTURE Kreatiounen?"
   },
   {
     "page": "Service Client",
@@ -1500,7 +1492,7 @@
     "key": "services.faq-group-5-question-title-6",
     "de": "Kann ich meine Bestellung auch im BENU Shop abholen?",
     "fr": "Puis-je également récupérer ma commande au BENU Shop ?",
-    "en": "Can I also collect my order from the BENU shop?",
+    "en": "Can I also collect my order from the BENU Shop?",
     "lu": "Kann ech meng Bestellung och am BENU Shop ofhuelen?"
   },
   {
@@ -1731,8 +1723,8 @@
     "page": "Service Client",
     "key": "services.delivery-costs",
     "de": "Die Versandkosten richten sich nach Deinem Land und dem Gesamtgewicht Deiner Bestellung. \n\nDünne und leichte Artikel bis 500 g, wie z.B. Gutscheine, verschicken wir als Briefsendung, alle größeren Waren werden in Kartons versendet. \n\nDie Tabelle gibt Dir einen Überblick über die anfallenden Kosten. Der jeweilige Betrag enthält die Kosten für die Versendung mit Post Luxembourg und zusätzlich 2 Euro pro Paket bzw. 1 Euro pro Briefsendung für unsere Arbeitszeit zum Verpacken der bestellten Artikel. Das Verpackungsmaterial ist gratis.",
-    "fr": "Les frais d'expédition dépendent de ton pays et du poids total de ta commande. \n\nLes articles fins et légers, jusqu'à 500 g, comme les bons d'achat, sont envoyés par courrier et les articles plus volumineux, par colis. \n\nLe tableau te donne un aperçu des frais encourus. Les montants respectifs comprennent les frais d'expédition par Post Luxembourg, augmentés de 2 euros par colis et de 1 euro par courrier pour le temps de travail dédié à l'emballage des articles commandés. Le matériel d'emballage est gratuit.",
-    "en": "The shipping costs depend on your country and the total weight of your order. \n\nThin and light items up to 500 g, such as vouchers, are sent as letter mail, all larger goods are sent in boxes. \n\nThe table gives you an overview of the costs. The respective amounts include the costs for shipping with Post Luxembourg and additional 2 Euro per package or 1 Euro per letter for the working time devoted to pack the ordered items. The packing material is free of charge.",
+    "fr": "Les frais d'expédition dépendent de ton pays et du poids total de ta commande. \n\nLes articles fins et légers, jusqu'à 500 g, comme les bons d'achat, sont envoyés par courrier et les articles plus volumineux, par colis. \n\nLe tableau te donne un aperçu des frais encourus. Les montants respectifs comprennent les frais d'expédition par Post Luxembourg, augmentés de 2 euros par colis et de 1 euro par courrier pour le temps de travail dédié à l'emballage des articles commandés. L'emballage (lettre/colis) est gratuit.",
+    "en": "The shipping costs depend on your country and the total weight of your order. \n\nThin and light items up to 500 g, such as vouchers, are sent as letter mail, all larger goods are sent in boxes. \n\nThe table gives you an overview of the costs. The respective amounts include the costs for shipping with Post Luxembourg and additional 2 euros per package and 1 euro per letter for the working time devoted to pack the ordered items. The packing material is free of charge.",
     "lu": "D'Expeditiounskäschten hänke vun Dengem Land an dem Gesamtgewiicht vun Denger Bestellung of.\n\nDënn a liicht Artikele bis 500 g, ewéi z. B. Bongen, verschécke mir als Bréif. Méi grouss Artikele ginn a Këschte verschéckt.\n\nD'Tabell gëtt Dir en Iwwerbléck iwwer d'Fraisen, déi ufalen. Am jeeweilege Montant abegraff sinn d'Expeditiounskäschte vun der Post an zousätzlech 2 Euro pro Pak resp. 1 Euro pro Bréif fir d'Apake vun den Artikelen. D'Vepackungsmaterial ass gratis."
   },
   {
@@ -1757,7 +1749,7 @@
     "de": "Um Rohstoffe zu sparen, werden alle Waren in gebrauchten, wieder verwendeten Kartons verschickt. Wir verzichten außerdem auf Plastikverpackungen und benutzen plastikfreie, umweltschonende Paketbänder.",
     "fr": "Afin d'économiser les matières premières, tous nos articles sont expédiés dans des emballages en carton réutilisés. Nous renonçons également aux emballages plastiques ; le ruban adhésif lui-même est exempt de plastique et respectueux de l'environnement.",
     "en": "To save raw materials, all goods are shipped in reused cardboard boxes. Besides, we don't use plastic packaging and use plastic-free, environmentally friendly parcel tapes.",
-    "lu": "Fir Rostoffer ze spueren, ginn all d'Artikelen a gebrauchten, recuperéierte Këschte verschéckt. Mir verzichten ausserdem op Plastikverpackungen a benotzen ëmweltfrëndlechen, plastikfräie Pechpabeier."
+    "lu": "Fir Rostoffer ze spueren, ginn all d'Artikelen a gebrauchten, recuperéierte Këschte verschéckt. Mir verzichten ausserdeem op Plastikverpackungen a benotzen ëmweltfrëndlechen, plastikfräie Pechpabeier."
   },
   {
     "page": "Service Client",
@@ -1771,9 +1763,9 @@
     "page": "Service Client",
     "key": "services.delivery-planning",
     "de": "Sobald die Zahlung für Deine Bestellung bei uns eingegangen ist, können wir Deine Artikel für den Versand vorbereiten. Wir bemühen uns, Deine Bestellung innerhalb eines Arbeitstages versandfertig zu machen und bei Post Luxembourg abzugeben.\n\nWenn in Deiner Bestellung ein oder mehrere Artikel aus einem PopUp-Store enthalten sind, kann die Vorbereitung zum Versand aus logistischen Gründen allerdings länger dauern.",
-    "fr": "Nous préparons tes articles pour la livraison dès réception du paiement. Nous nous efforçons de préparer et de remettre ta commande à Post Luxembourg endéans un jour ouvrable.\n\nPour des raisons logistiques, si ta commande contient un ou plusieurs articles provenant d'un PopUp-Store, il se peut que la préparation soit plus longue.",
+    "fr": "Nous préparons tes articles pour l'expédition dès réception du paiement. Nous nous efforçons de préparer et de remettre ta commande à Post Luxembourg endéans un jour ouvrable.\n\nPour des raisons logistiques, si ta commande contient un ou plusieurs articles provenant d'un PopUp-Store, il se peut que la préparation soit plus longue.",
     "en": "Once we receive the payment for your order, we can prepare your items for shipment. We aim to have your order ready for shipment and delivered to Post Luxembourg within one business day.\n\nHowever, if your order includes one or more items from a PopUp store, preparation for shipment may take longer for logistical reasons.",
-    "lu": "Esoubal Deng Bestellung bezuelt ass, bereede mir Deng Artikele fir d'Expeditioun vir. Mir beméien eis, Deng Bestellung an engem Aarbechtsdag expeditiounsbereet ze maachen a bei der Post ofzeginn. \n\nWann an Denger Bestellung allerdéngs op d'mannst een Artikel vun engem PopUp-Store kënnt, kann d'Virbereedung aus logistesche Grënn méi laang daueren."
+    "lu": "Esoubal Deng Bestellung bezuelt ass, bereede mir Deng Artikele fir d'Expeditioun vir. Mir beméien eis, Deng Bestellung an engem Aarbechtsdag expeditiounsbereet ze maachen a bei der Post ofzeginn. \n\nWann an Denger Bestellung allerdéngs op d'mannst een Artikel aus engem PopUp-Store kënnt, kann d'Virbereedung aus logistesche Grënn méi laang daueren."
   },
   {
     "page": "Service Client",
@@ -1796,23 +1788,23 @@
     "key": "services.sizes-title",
     "de": "Hier findest du Deine richtige Größe",
     "fr": "Ici, tu trouveras la bonne taille",
-    "en": "Here you'ill find your right size",
+    "en": "Here you'll find your right size",
     "lu": "Hei fënns Du Deng richteg Gréisst"
   },
   {
     "page": "Service Client",
     "key": "services.general-description",
-    "de": "Damit Du Dich in Deiner BENU Kreation wohlfühlst, soll diese natürlich auch gut passen. Hierfür bieten wir eine Größentabelle an, die Dir helfen soll, Deine Maße zu nehmen und Dich für die richtige Kleidergröße zu entscheiden. Um exakte Maße zu erhalten, solltest Du beim Messen Deine Unterwäsche anbehalten. \n\nDie in der Tabelle angegebenen Maße dienen als Richtwerte für die Ermittlung Deiner Kleidergröße. Eine Garantie für die perfekte Passform können wir allerdings nicht übernehmen.\nNatürlich kannst Du die BENU Kreationen auch jederzeit vor Ort in unserem Shop in Esch-sur-Alzette anprobieren.  Unseren Mitarbeiter:innen beraten Dich gerne!\n\nDu hast noch Fragen?",
-    "fr": "Pour te sentir à l'aise dans ta création BENU, celle-ci doit bien entendu t'aller. Pour ce faire, nous proposons un guide des tailles qui t'aidera à prendre tes mesures et à choisir la bonne taille. Prend les mesures en gardant tes sous-vêtements sur toi pour obtenir des résultats plus précis.\n\nLes mesures indiquées dans le tableau servent de valeurs indicatives pour déterminer ta taille. Nous ne pouvons toutefois pas garantir une coupe parfaite.\nTu peux évidemment essayer les créations BENU directement dans notre boutique à Esch-sur-Alzette.  Nos collaborateurs·trices se feront un plaisir de te conseiller ! \n\nTu as encore des questions ?",
+    "de": "Damit Du Dich in Deiner BENU Kreation wohlfühlst, soll diese natürlich auch gut passen. Hierfür bieten wir eine Größentabelle an, die Dir helfen soll, Deine Maße zu nehmen und Dich für die richtige Kleidergröße zu entscheiden. Um exakte Maße zu erhalten, solltest Du beim Messen Deine Unterwäsche anbehalten. \n\nDie in der Tabelle angegebenen Maße dienen als Richtwerte für die Ermittlung Deiner Kleidergröße. Eine Garantie für die perfekte Passform können wir allerdings nicht übernehmen.\nNatürlich kannst Du die BENU Kreationen auch jederzeit vor Ort in unserem Shop in Esch-sur-Alzette anprobieren. Unsere Mitarbeiter:innen beraten Dich gerne!\n\nDu hast noch Fragen?",
+    "fr": "Afin de te sentir à l'aise dans ta création BENU, celle-ci doit bien entendu être à ta taille. Pour ce faire, nous proposons un guide des tailles qui t'aidera à prendre tes mesures et à choisir la bonne taille. Prend les mesures en portant des sous-vêtements afin d'obtenir des résultats plus précis.\n\nLes mesures indiquées dans le tableau servent de valeurs indicatives pour déterminer ta taille. Nous ne pouvons pas garantir une coupe parfaite.\nTu peux évidemment essayer les créations BENU directement dans notre boutique à Esch-sur-Alzette.  Nos collaborateurs·rices se feront un plaisir de te conseiller ! \n\nTu as encore des questions ?",
     "en": "To feel comfortable in your BENU creation, it should of course fit well. For this purpose, we offer a size chart to help you take your measurements and decide on the right size. To get exact measurements, you should keep your underwear on when measuring. \n\nThe measurements given in the table serve as a guideline for determining your size. However, we cannot guarantee a perfect fit.\nYou can of course try the BENU creations on at any time in our store in Esch-sur-Alzette. Our staff will be pleased to advise you!\n\nDo you have any questions?",
-    "lu": "Fir Dech an Denger BENU Kreatioun wuel ze fillen, soll se natierlech och gutt passen. Dofir bidde mir e Gréisste-Guide un, deen Dir hëllefe soll, Deng Moossen ze huelen an Dech fir déi richteg Gréisst z'entscheeden. Hal deng Ënnerwäsch beim Moossen un, fir en exakt Resultat ze kréien. \n\nD'Moossen, déi an der Tabell stinn, déngen als Unhaltspunkt bei der Ermëttlung vun Denger Kleedergréisst. Eng Garantie fir eng perfekt Passform kënne mir allerdéngs net iwwerhuelen. Du kanns natierlech d'BENU Kreatiounen och zu jidderzäit bei eis am Shop zu Esch/Uelzecht uprobéieren. Mat Freed beroden Dech eis Mataarbechter:innen!\n\nHues Du nach Froen?"
+    "lu": "Fir Dech an Denger BENU Kreatioun wuel ze fillen, soll se natierlech och gutt passen. Dofir bidde mir e Gréisste-Guide un, deen Dir hëllefe soll, Deng Moossen ze huelen an Dech fir déi richteg Gréisst z'entscheeden. Hal Deng Ënnerwäsch beim Moossen un, fir en exakt Resultat ze kréien. \n\nD'Moossen, déi an der Tabell stinn, déngen als Unhaltspunkt bei der Ermëttlung vun Denger Kleedergréisst. Eng Garantie fir eng perfekt Passform kënne mir allerdéngs net iwwerhuelen. Du kanns natierlech d'BENU Kreatiounen och zu jidderzäit bei eis am Shop zu Esch/Uelzecht uprobéieren. Mat Freed beroden Dech eis Mataarbechter:innen!\n\nHues Du nach Froen?"
   },
   {
     "page": "Service Client",
     "key": "services.general-description-link",
     "de": "Melde Dich bei uns",
-    "fr": "N'hésite pas à nous contacter",
-    "en": "Feel free to contact us",
+    "fr": "Contacte-nous",
+    "en": "Contact us",
     "lu": "Kontaktéier eis"
   },
   {
@@ -1851,7 +1843,7 @@
     "page": "Service Client",
     "key": "services.sizes-unisex-desc-b",
     "de": "Umrunde die weiteste Stelle Deiner Brust mit dem Maßband und lese Deinen Brustumfang ab.",
-    "fr": "Fais le tour de la partie la plus large de ta poitrine avec le mètre ruban et lis ton tour de poitrine.",
+    "fr": "Encercle la partie la plus large de ta poitrine avec le mètre ruban et note ton tour de poitrine.",
     "en": "Round the widest part of your chest with the tape measure and read your chest circumference.",
     "lu": "Lee d'Moossband op der breetster Plaz ronderëm Deng Broscht a lies Däi Broschtëmfang of."
   },
@@ -1923,7 +1915,7 @@
     "page": "Service Client",
     "key": "services.sizes-ladies-desc-b",
     "de": "Umrunde die weiteste Stelle Deiner Brust mit dem Maßband und lese Deinen Brustumfang ab.",
-    "fr": "Fais le tour de la partie la plus large de ta poitrine avec le mètre ruban et lis ton tour de poitrine.",
+    "fr": "Encercle la partie la plus large de ta poitrine avec le mètre ruban et note ton tour de poitrine.",
     "en": "Round the widest part of your chest with the tape measure and read your chest circumference.",
     "lu": "Lee d'Moossband op der breetster Plaz ronderëm Deng Broscht a lies Däi Broschtëmfang of."
   },
@@ -2323,7 +2315,7 @@
     "page": "Service Client",
     "key": "services.sizes-gentlemen-desc-b",
     "de": "Umrunde die weiteste Stelle Deiner Brust mit dem Maßband und lese Deinen Brustumfang ab.",
-    "fr": "Fais le tour de la partie la plus large de ta poitrine avec le mètre ruban et lis ton tour de poitrine.",
+    "fr": "Encercle la partie la plus large de ta poitrine avec le mètre ruban et note ton tour de poitrine.",
     "en": "Round the widest part of your chest with the tape measure and read your chest circumference.",
     "lu": "Lee d'Moossband op der breetster Plaz ronderëm Deng Broscht a lies Däi Broschtëmfang of."
   },
@@ -2731,7 +2723,7 @@
     "page": "Service Client",
     "key": "services.sizes-kids-desc-c",
     "de": "Umrunde die weiteste Stelle Deiner Brust mit dem Maßband und lese Deinen Brustumfang ab.",
-    "fr": "Fais le tour de la partie la plus large de ta poitrine avec le mètre ruban et lis ton tour de poitrine.",
+    "fr": "Encercle la partie la plus large de ta poitrine avec le mètre ruban et note ton tour de poitrine.",
     "en": "Round the widest part of your chest with the tape measure and read your chest circumference.",
     "lu": "Lee d'Moossband op der breetster Plaz ronderëm Deng Broscht a lies Däi Broschtëmfang of."
   },
@@ -2781,7 +2773,7 @@
     "de": "Lege das Maßband seitlich an Dein Bein und messe den Abstand zwischen Deinem Fußknöchel und Deinem Hüftknochen.",
     "fr": "Place le mètre ruban sur le côté de ta jambe et mesure la distance entre ta cheville et l'os de ta hanche.",
     "en": "Place the tape measure on the side of your leg and measure the distance between your ankle and your hip bone.",
-    "lu": "Lee d'Moossband säitlech un Däi Been a moos den Ofstand tëschent Dengem Enkel an Denger Hëft."
+    "lu": "Lee d'Moossband säitlech un Däi Been a mooss den Ofstand tëschent Dengem Enkel an Denger Hëft."
   },
   {
     "page": "Service Client",
@@ -3491,9 +3483,9 @@
     "page": "Service Client",
     "key": "services.return-info-1",
     "de": "Einen Artikel, der Dir nicht gefällt oder passt, kannst Du innerhalb von 28 Tagen nach Versand der Ware an uns zurücksenden. \nBitte achte darauf, dass der Artikel, den Du zurücksendest, in einwandfreiem Original-Zustand, ungewaschen und unbenutzt ist. Ein vorsichtiges, sorgfältiges Anprobieren von Kleidung ist aber natürlich möglich.\n\nBitte frankiere Deine Rücksendung ausreichend und schicke sie an:",
-    "fr": "Tu peux nous renvoyer un article qui ne te plaît pas ou qui ne te convient pas dans les 28 jours suivant l'expédition de la marchandise. \nVeille à ce que l'article renvoyé soit en parfait état d'origine, non lavé et non utilisé. Un essayage précautionneux est bien entendu possible.\n\nMerci d'affranchir suffisamment ton retour et de l'envoyer à :",
-    "en": "You can return an item that you don't like or that doesn't fit within 28 days following our delivery. \nPlease make sure that the item you are returning is in perfect original condition, unwashed and unused. A careful trying on of the clothes is of course possible.\n\nPlease stamp your return sufficiently and send it to:",
-    "lu": "En Artikel, deen Dir net gefält oder net passt, kanns Du bannent 28 Deeg no der Expeditioun un eis zeréckschécken. \nWgl. kuck, datt den Artikel, deen s Du zeréckschécks am Orginal-Zoustand, ongewäsch an ongedroen, ass. E virsiichtegt Umoossen ass awer natierlech méiglech.\n\nWgl. frankéier Däi Retour adequat a schéck en un:"
+    "fr": "Tu peux nous renvoyer un article qui ne te plaît ou ne te convient pas dans les 28 jours suivant l'expédition de la marchandise. \nVeille à ce que l'article renvoyé soit en parfait état d'origine, non lavé et non utilisé. Un essayage précautionneux est bien entendu possible.\n\nMerci d'affranchir suffisamment ton retour et de l'envoyer à :",
+    "en": "You can return an item that you don't like or that doesn't fit within 28 days following the shipping. \nPlease make sure that the item you are returning is in perfect original condition, unwashed and unused. A careful trying on of the clothes is of course possible.\n\nPlease stamp your return sufficiently and send it to:",
+    "lu": "En Artikel, deen Dir net gefält oder net passt, kanns Du bannent 28 Deeg no der Expeditioun un eis zeréckschécken. \nWgl. kuck, datt den Artikel, deen s Du zeréckschécks, am Orginal-Zoustand, ongewäsch an ongedroen ass. E virsiichtegt Umoossen ass awer natierlech méiglech.\n\nWgl. pass op, datt Däi Retour adequat frankéiert ass a schéck en un:"
   },
   {
     "page": "Service Client",
@@ -3531,9 +3523,9 @@
     "page": "Service Client",
     "key": "services.return-info-2",
     "de": "Damit wir Deine Rücksendung zügig und unkompliziert bearbeiten können, bitten wir Dich einen Rücksendeschein beizulegen. \n\nWenn Du Deine Bestellung mit Deinem BENU Konto aufgegeben hast, findest Du den Rücksendeschein in Deinem Konto unter \"Meine Bestellungen\". Wähle die Bestellung aus, von der Du einen oder mehrere Artikel zurücksenden möchtest. Du kannst dann den Rücksendeschein herunterladen, ausdrucken und Deiner Rücksendung beilegen. Vergiss bitte nicht die Kontonummer und den/die Kontoinhaber:in einzutragen, sodass wir Dir den Kaufpreis erstatten können!\n\nKannst Du Deinen Rücksendeschein nicht finden? Oder hast Du als Besucher:in ohne BENU Konto bestellt? Dann findest Du hier einen Blanko-Rücksendeschein. Bitte fülle die leeren Felder manuell aus und lege den Schein Deiner Rücksendung bei.",
-    "fr": "Afin de traiter ton retour rapidement et simplement, nous te prions d'y joindre un bon de retour. \n\nSi tu as passé commande avec ton compte BENU, tu trouveras le bon de retour dans ton compte sous \"mes commandes\". Sélectionne la commande dont tu souhaites renvoyer un ou plusieurs articles. Tu peux ensuite télécharger le bon, l'imprimer et le joindre à ton retour. N'oublie pas d'indiquer le numéro de compte et le·la titulaire du compte, afin que nous puissions rembourser ton/tes achat(s) !\n\nTu ne trouves pas ton bon de retour ? Ou tu as commandé en tant que visiteur·euse sans compte BENU ? Alors utilise le bon de retour vierge. Merci de remplir manuellement les champs vides et de joindre le bon à ton retour.",
+    "fr": "Afin de traiter ton retour rapidement et simplement, nous te prions d'y joindre un bon de retour. \n\nSi tu as passé commande avec ton compte BENU, tu trouveras le bon de retour dans ton compte sous \"mes commandes\". Sélectionne la commande dont tu souhaites renvoyer un ou plusieurs articles. Tu peux ensuite télécharger le bon, l'imprimer et le joindre à ton retour. N'oublie pas d'indiquer le numéro de compte et le·la titulaire du compte, afin que nous puissions rembourser ton/tes achat(s) !\n\nTu ne trouves pas ton bon de retour ? Ou tu as commandé en tant que visiteur·se sans compte BENU ? Alors utilise le bon de retour vierge. Merci de compléter les champs vides manuellement et de joindre le bon à ton retour.",
     "en": "To process your return quickly and easily, we need you to enclose a return form. \n\nIf you have placed your order with your BENU account, you will find the return form in your account under \"my orders\". Select the order from which you want to return one or more items. You can then download the return form, print it out and enclose it with your return. Please do not forget to fill in the account number and the account holder, so that we can refund you!\n\nCan't find your return form? Or did you order as a visitor without a BENU account? Then you can find a blank return form here. Please fill in the empty fields manually and attach the form to your return.",
-    "lu": "Fir Däi Retour schnell an einfach beaarbechten ze kënnen, biede mir Dech, e Retourschäin dobäizeleeën. \n\nWann s Du Deng Bestellung mat Dengem BENU Kont opginn hues, fënns Du Däi Retourschäin an Dengem Kont ënner \"Meng Bestellungen\". Wiel déi concernéiert Bestellung aus a luet Dir de Schäin erof. Dee kanns Du elo printen a bei Däi Retour dobäileeën. Vergiess wgl. net, d'Kontosnummer an de/d'Kontbesëtzer:in anzedroen, fir datt mir Dech zeréckbezuele kënnen!\n\nFënns Du Däi Retourschäin net? Oder hues du als Gaascht:in ouni BENU Kont bestallt? Da fënns Du hei e Blanko-Retourschäin. Fëll wgl. déi eidel Felder manuell aus a lee dëse Schäi bei Däi Retour dobäi."
+    "lu": "Fir Däi Retour schnell an einfach beaarbechten ze kënnen, biede mir Dech, e Retourschäin dobäizeleeën. \n\nWann s Du Deng Bestellung mat Dengem BENU Kont opginn hues, fënns Du Däi Retourschäin an Dengem Kont ënner \"Meng Bestellungen\". Wiel déi concernéiert Bestellung aus a luet Dir de Schäin erof. Dee kanns Du elo printen a bei Däi Retour dobäileeën. Vergiess wgl. net, d'Kontosnummer an de/d'Kontbesëtzer:in anzedroen, fir datt mir Dech zeréckbezuele kënnen!\n\nFënns Du Däi Retourschäin net? Oder hues Du als Gaascht:in ouni BENU Kont bestallt? Da fënns Du hei e Blanko-Retourschäin. Fëll wgl. déi eidel Felder manuell aus a lee dëse Schäi bei Däi Retour dobäi."
   },
   {
     "page": "Service Client",
@@ -3603,7 +3595,7 @@
     "page": "Service Client",
     "key": "services.return-info-3",
     "de": "Wir bearbeiten Deine Rücksendung umgehend nach Eingang bei uns. Den Kaufpreis überweisen wir Dir dann so schnell wie möglich auf Dein Konto.\n\nBei einer Reklamation (fehlerhafte Ware, falsche Lieferung o.ä.) übernehmen wir natürlich auch die Kosten für den Rücktransport. In diesem Fall benötigen wir neben der Kontonummer und dem Namen der/des Kontoinhabers/in auch eine Quittung über die Versandkosten.",
-    "fr": "Nous traitons ton retour immédiatement après sa réception. Le prix d'achat sera viré sur ton compte dans les plus brefs délais.\n\nEn cas de réclamation (marchandise présentant des défauts, livraison erronée, etc.), nous prenons bien entendu en charge les frais de retour. Dans ce cas, outre le numéro de compte et le nom du·de la titulaire du compte, nous nécessitons une quittance reprenant les frais d'envoi.",
+    "fr": "Nous traitons ton retour immédiatement après sa réception. La somme correspondant au prix d'achat sera viré sur ton compte dans les plus brefs délais.\n\nEn cas de réclamation (marchandise présentant des défauts, livraison erronée, etc.), nous prenons bien entendu en charge les frais de retour. Dans ce cas, outre le numéro de compte et le nom du·de la titulaire du compte, nous nécessitons une quittance reprenant les frais d'expédition.",
     "en": "We process your return immediately after receipt. We will then transfer the purchase price to your account as soon as possible.\n\nIn the case of a complaint (defective goods, wrong delivery, etc.), we will of course cover the costs for the return. In this case we need the account number and the name of the account holder as well as a receipt for the shipping costs.",
     "lu": "Mir beaarbechten Däi Retour esoubal e bei eis ukënnt. Den Akafspräis iwwerweise mir Dir esou schnell ewéi méiglech op Däi Kont.\n\nBei enger Reklamatioun (Artikel mat Mängel, falsch Liwwerung  o.ä.) iwwerhuele mir natierlech d'Retourkäschten. An dësem Fall brauche mir niewent der Kontosnummer an dem Numm vum/vun der Kontbesëtzer:in och eng Quittung vum bezuelte Porto."
   },
@@ -3685,7 +3677,7 @@
     "de": "Zu Abwicklung von Zahlungen mit Kreditkarte arbeiten wir mit dem Online-Bezahldienst Stripe zusammen. Du kannst daher bei BENU COUTURE mit allen, aktuell von Stripe akzeptierten Kreditkarten bezahlen. Im Moment sind dies:",
     "fr": "Nous travaillons avec le service de paiement en ligne Stripe pour le traitement des paiements par carte de crédit. Ainsi, chez BENU COUTURE, tu peux payer avec toutes les cartes de crédit actuellement acceptées par Stripe. A l'heure actuelle, il s'agit des cartes suivantes :",
     "en": "We work with the online payment service Stripe to process credit card payments. At BENU COUTURE you can pay with all credit cards that are currently accepted by Stripe. At the moment these are:",
-    "lu": "Mir schaffe mam Online-Bezuelservice Stripe fir Kreditkaartebezuelungen ze traitéieren. Bei BENU COUTURE kanns Du mat alle Kreditkaarte bezuelen, déi momentan vu Stripe ugeholl ginn. Am Moment sinn dës:"
+    "lu": "Wat d'Kreditkaartebezuelungen uginn, schaffe mir mam Online-Bezuelservice Stripe zesummen. Bei BENU COUTURE kanns Du mat alle Kreditkaarte bezuelen, déi momentan vu Stripe ugeholl ginn. Am Moment sinn dës:"
   },
   {
     "page": "Service Client",
@@ -3739,9 +3731,9 @@
     "page": "Service Client",
     "key": "services.payment-option-1-desc-2",
     "de": "Du kannst mit oder ohne BENU Konto mit Kreditkarte bezahlen. Die Belastung Deiner Kreditkarte erfolgt mit Abschluss der Bestellung.\nNach Eingang der Bestellung erhältst Du eine Bestellbestätigung per E-Mail und die Ware wird für den Versand vorbereitet.",
-    "fr": "Tu peux payer par carte de crédit avec ou sans compte BENU. Ta carte de crédit sera débitée suite à la finalisation de la commande.\nUne fois la commande réalisée, tu recevras une confirmation par e-mail et tes articles seront préparés pour l'expédition.",
+    "fr": "Tu peux payer par carte de crédit avec ou sans compte BENU. Ta carte de crédit ne sera débitée qu'après finalisation de la commande.\nUne fois la commande réalisée, tu recevras une confirmation par e-mail et tes articles seront préparés pour l'expédition.",
     "en": "You can pay by credit card both as a guest and via your BENU account. Your credit card will be charged after the order has been completed.\nUpon receipt of your order, you will receive an order confirmation by e-mail and the goods will be prepared for shipment.",
-    "lu": "Du kanns mat Kreditkaart bezuelen mat oder ouni BENU Kont. Deng Kreditkaart gëtt no Ofschloss vun der Bestellung belaascht.\nNom Empfang vun der Bestellung kriss Du eng Bestellungsbestätegung per E-Mail an d'Wuer gëtt fir d'Expeditioun virbereet."
+    "lu": "Du kanns per Kreditkaart bezuelen mat oder ouni BENU Kont. Deng Kreditkaart gëtt eréischt no Ofschloss vun der Bestellung belaascht.\nWann d'Bestellung bei eis agaang ass, kriss Du eng Bestätegung per E-Mail an d'Wuer gëtt fir d'Expeditioun virbereet."
   },
   {
     "page": "Service Client",
@@ -3754,10 +3746,10 @@
   {
     "page": "Service Client",
     "key": "services.payment-option-2-desc",
-    "de": "Wenn Du mit PayPal zahlen möchtest, leiten wir Dich während des Bestellvorgangs direkt auf die Seite von PayPal weiter. Als PayPal-Kunde/in kannst Du dich dort mit Deinen Benutzerdaten anmelden und die Zahlung in Auftrag geben. Wenn Du noch kein PayPal-Konto haben solltest, kannst Du nun eines eröffnen oder alternativ als Gast mit Bankeinzug oder Kreditkarte die Zahlung bestätigen.\nMit PayPal bezahlen kannst Du sowohl mit als auch ohne BENU Konto. Sobald der Zahlungseingang bei uns verbucht ist, wird Deine Lieferung für den Versand vorbereitet.",
-    "fr": "Si tu souhaites payer avec PayPal, nous te redirigerons directement vers la page PayPal lors du processus de commande. En tant que client·e PayPal, il te suffira de te connecter et de donner l'ordre de paiement. Si tu n'as pas encore de compte PayPal, tu peux choisir d'en créer un ou confirmer le paiement en tant que visiteur·euse par prélèvement automatique ou carte de crédit.\nLe paiement par PayPal est possible avec ou sans compte BENU. Nous préparons tes articles pour l'expédition dès réception du paiement.",
-    "en": "If you would like to pay with PayPal, we will redirect you straight to the PayPal page during the order process. As a PayPal customer, you can log in there with your user data and place the payment order. If you don't have a PayPal account yet, you can create one or confirm the payment as a guest via direct debit or via credit card.\nYou can pay with PayPal with or without a BENU account. As soon as we have received your payment, your order will be prepared for shipping.",
-    "lu": "Wann s Du mat PayPal bezuele wëlls, leede mir Dech wärend dem Bestellprozess op d'PayPal-Säit weider. Als PayPal-Client:e kanns Du Dech aloggen an d'Bezuelung an Optrag ginn. Wann s Du nach kee PayPal-Kont hues, kanns Du elo een opmaachen oder alternativ d'Bezuelung als Gaascht:in mat Direktdebit oder Kreditkaart duerchféieren.\nDu kanns mat PayPal bezuelen  esouwuel mat ewéi och ouni BENU Kont. Esoubal mir d'Bezuelung kritt hunn, gëtt Deng Bestellung fir d'Expeditioun virbereet."
+    "de": "Wenn Du mit PayPal zahlen möchtest, leiten wir Dich während des Bestellvorgangs direkt auf die Seite von PayPal weiter. Als PayPal-Kunde/in kannst Du dich dort anmelden und die Zahlung in Auftrag geben. Wenn Du noch kein PayPal-Konto haben solltest, kannst Du nun eines eröffnen oder alternativ als Gast/Gästin mit Bankeinzug oder Kreditkarte die Zahlung bestätigen.\nMit PayPal bezahlen kannst Du sowohl mit als auch ohne BENU Konto. Sobald der Zahlungseingang bei uns verbucht ist, wird Deine Lieferung für den Versand vorbereitet.",
+    "fr": "Si tu souhaites payer avec PayPal, nous te redirigerons directement vers la page PayPal lors du processus de commande. En tant que client·e PayPal, il te suffira de te connecter et de donner l'ordre de paiement. Si tu n'as pas encore de compte PayPal, tu peux choisir d'en créer un ou confirmer le paiement en tant que visiteur·se par prélèvement automatique ou carte de crédit.\nLe paiement par PayPal est possible avec ou sans compte BENU. Nous préparons tes articles pour l'expédition dès réception du paiement.",
+    "en": "If you would like to pay with PayPal, we will redirect you straight to the PayPal page during the order process. As a PayPal customer, you can log in there and place the payment order. If you don't have a PayPal account yet, you can create one or confirm the payment as a guest via direct debit or credit card.\nYou can pay with PayPal with or without a BENU account. As soon as we have received your payment, your order will be prepared for shipping.",
+    "lu": "Wann s Du mat PayPal bezuele wëlls, leede mir Dech wärend dem Bestellprozess op d'PayPal-Säit weider. Als PayPal-Client:e kanns Du Dech aloggen an d'Bezuelung an Optrag ginn. Wann s Du nach kee PayPal-Kont hues, kanns Du elo een opmaachen oder d'Bezuelung als Gaascht:in mat Direktdebit oder Kreditkaart duerchféieren.\nDu kanns mat PayPal bezuelen  esouwuel mat ewéi och ouni BENU Kont. Esoubal mir d'Bezuelung kritt hunn, gëtt Deng Bestellung fir d'Expeditioun virbereet."
   },
   {
     "page": "Service Client",
@@ -3771,9 +3763,9 @@
     "page": "Service Client",
     "key": "services.payment-option-3-desc",
     "de": "Mit Payconiq/Digicash bezahlen kannst Du sowohl mit als auch ohne BENU Konto.\nBezahle hierzu bitte die Gesamtsumme innerhalb von 5 Kalendertagen an folgende Telefonnummer:\n00352 621 763 609.\nSobald die Zahlungsbestätigung bei uns eingeht, bereiten wir Deine Artikel für den Versand vor.",
-    "fr": "Le paiement par Payconiq/Digicash est possible avec ou sans compte BENU.\nPour cela, transfert le montant total de ta commande endéans 5 jours calendrier au numéro de téléphone suivant :\n00352 621 763 609.\nNous préparons tes articles pour l'expédition dès réception de la confirmation de paiement.",
+    "fr": "Le paiement par Payconiq/Digicash est possible avec ou sans compte BENU.\nPour cela, transfère le montant total de ta commande endéans 5 jours calendrier au numéro de téléphone suivant :\n00352 621 763 609.\nNous préparons tes articles pour l'expédition dès réception de la confirmation de paiement.",
     "en": "Payment by Payconiq/Digicash is possible with or without a BENU account.\nTo do so, please transfer the total amount of your order within 5 calendar days to the following phone number:\n00352 621 763 609.\nAs soon as we receive the payment confirmation, we will prepare your items for shipping.",
-    "lu": "Bezuelung mat Payconiq/Digicash ass méiglech esouwuel mat ewéi och ouni BENU Kont.\nBezuel wgl. d'Gesamtzomm bannent 5 Kalennerdeeg op folgend Telefonsnummer:\n00352 621 763 609. \nEsoubal mir d'Bezuelungsbestätegung kréien, preparéiere mir Deng Artikele fir d'Expeditioun."
+    "lu": "Bezuelung mat Payconiq/Digicash ass méiglech esouwuel mat ewéi och ouni BENU Kont.\nBezuel wgl. d'Gesamtzomm bannent 5 Kalennerdeeg op folgend Telefonsnummer:\n00352 621 763 609. \nEsoubal mir d'Bezuelungsbestätegung kréien, ginn Deng Artikele fir d'Expeditioun virbereet."
   },
   {
     "page": "Service Client",
@@ -3786,32 +3778,32 @@
   {
     "page": "Service Client",
     "key": "services.payment-option-4-desc",
-    "de": "Eine Bezahlung per Überweisung ist nur möglich, wenn Du vorher ein Konto bei BENU eingerichtet und Dich eingeloggt hast. Überweise bitte die Gesamtsumme innerhalb von 5 Kalendertagen an unsere Bankverbindung:\nKontoinhaber: BENU Village Esch asbl. Kontonummer: BCEELULL LU63 0019 5055 5248 0000. \nNachdem der Gesamtbetrag auf unserem Konto eingegangen ist, wird Deine Ware schnellstmöglich versendet.",
-    "fr": "Le paiement par virement bancaire n'est possible qu'une fois connecté·e à ton compte client·e BENU préalablement créé. Procède au virement de la somme totale de ta commande endéans 5 jours calendrier aux coordonnées bancaires suivantes :\nTitulaire du compte : BENU Village Esch asbl. Numéro de compte : BCEELULL LU63 0019 5055 5248 0000. \nTes articles seront expédiés dans les plus brefs délais suite à la réception du paiement sur notre compte.",
-    "en": "Payment by bank transfer is only possible if you are logged in your previously set up BENU account. Please transfer the total amount to our bank account within 5 calendar days:\nAccount holder: BENU Village Esch asbl. Account number: BCEELULL LU63 0019 5055 5248 0000.\nAfter the total amount has been credited to our account, your goods will be shipped as soon as possible.",
+    "de": "Eine Bezahlung per Überweisung ist nur möglich, wenn Du vorher ein Konto bei BENU eingerichtet und Dich eingeloggt hast. Überweise bitte die Gesamtsumme innerhalb von 5 Kalendertagen an unsere Bankverbindung:\nKontoinhaber: BENU Village Esch asbl. \nKontonummer: BCEELULL LU63 0019 5055 5248 0000. \nNachdem der Gesamtbetrag auf unserem Konto eingegangen ist, wird Deine Ware schnellstmöglich versendet.",
+    "fr": "Le paiement par virement bancaire n'est possible qu'une fois connecté·e à ton compte client·e BENU préalablement créé. Procède au virement de la somme totale de ta commande endéans 5 jours calendrier aux coordonnées bancaires suivantes :\nTitulaire du compte : BENU Village Esch asbl. \nNuméro de compte : BCEELULL LU63 0019 5055 5248 0000. \nTes articles seront expédiés dans les plus brefs délais suite à la réception du paiement sur notre compte.",
+    "en": "Payment by bank transfer is only possible if you are logged in your previously set up BENU account. Please transfer the total amount to our bank account within 5 calendar days:\nAccount holder: BENU Village Esch asbl. \nAccount number: BCEELULL LU63 0019 5055 5248 0000.\nAfter the total amount has been credited to our account, your goods will be shipped as soon as possible.",
     "lu": "Bezuelung per Bankiwwerweisung ass nëmme méiglech wann s Du e Kont bei BENU ageriicht hues an ageloggt bass. Iwwerweis wgl. d'Gesamtzomm op eise Bankkont bannent 5 Kalennerdeeg:\nKontbesëtzer: BENU Village Esch asbl.\nKontosnummer: BCEELULL LU63 0019 5055 5248 0000.\nNodeems d'Gesamtzomm op eisem Kont ukomm ass, ginn Deng Wueren esou séier ewéi méiglech verschéckt."
   },
   {
     "page": "Service Client",
     "key": "services.nav-care",
     "de": "Pflegehinweise",
-    "fr": "Entretien des vêtements",
-    "en": "Clothing maintenance",
+    "fr": "Conseils d'entretien",
+    "en": "Care instructions",
     "lu": "Fleeg vun de Kleeder"
   },
   {
     "page": "Service Client",
     "key": "breadcrumbs.care",
     "de": "Pflegehinweise",
-    "fr": "Entretien des vêtements",
-    "en": "Clothing maintenance",
+    "fr": "Conseils d'entretien",
+    "en": "Care instructions",
     "lu": "Fleeg vun de Kleeder"
   },
   {
     "page": "Service Client",
     "key": "services.care-title",
     "de": "So bleibt Dein Kleidungsstück schön",
-    "fr": "Pour que ton vêtement reste beau",
+    "fr": "Bien prendre soin de tes vêtements",
     "en": "How to keep your garment beautiful",
     "lu": "Esou bleift Däi Kleedungsstéck schéin"
   },
@@ -3819,9 +3811,9 @@
     "page": "Service Client",
     "key": "services.care-subtitle",
     "de": "Die Pflegesymbole zeigen Dir, wie Du Dein Kleidungsstück waschen, trocknen und bügeln kannst, ohne dass es Schäden nimmt. Die Pflegeempfehlungen berücksichtigen hierbei den empfindlichsten Teil des Textilartikels (z.B. den Reißverschluss). Allerdings können wir nicht garantieren, dass Flecken und Verschmutzungen vollständig verschwinden. Für einen schonenderen Umgang mit Umwelt und Kleidung empfehlen wir Dir, Deine Kleidungsstücke bei möglichst niedrigen Temperaturen zu waschen und zu bügeln. Heutige Waschmittel sind in der Regel so gut, dass eine 30 bis 40 Grad-Wäsche für ein optimales Ergebnis völlig ausreichen. Weitere Tipps zur nachhaltigen und umweltfreundlichen Pflege findest Du",
-    "fr": "Les symboles d'entretien  t'indiquent comment laver, sécher et repasser ton vêtement sans l'abîmer. Les recommandations d'entretien se basent sur les éléments les plus fragiles du vêtement (p. ex. la fermeture éclair). Toutefois, nous ne pouvons pas garantir que taches et salissures disparaîtront complètement. Pour une approche plus respectueuse envers l'environnement et les vêtements, nous te recommandons de laver et de repasser tes vêtements en utilisant la température la plus basse possible. Les lessives actuelles sont suffisamment efficaces pour offrir de bons résultats à des températures de 30 à 40 degrés. Tu trouveras davantage de conseils pour un entretien durable et respectueux de l'environnement",
+    "fr": "Les symboles d'entretien  t'indiquent comment laver, sécher et repasser ton vêtement sans l'abîmer. Les recommandations d'entretien se basent sur les éléments les plus fragiles du vêtement (p. ex. la fermeture éclair). Toutefois, nous ne pouvons pas garantir que taches et salissures disparaîtront complètement. Pour une approche plus respectueuse de l'environnement et des vêtements, nous recommandons un lavage et un repassage utilisant la température la plus basse possible. Les lessives actuelles sont suffisamment efficaces pour offrir de bons résultats à des températures de 30 à 40 degrés. Tu trouveras davantage de conseils pour un entretien durable et respectueux de l'environnement",
     "en": "The care symbols show you how the garment can be washed, dried and ironed without damaging it. The care recommendations take into account the most sensitive part of the item (e.g. zip). However we cannot guarantee that stains and impurities will disappear completely. For a gentler approach to both environment and clothing, we recommend that you wash your garments at the lowest possible temperatures. Today's detergents are usually so effective that 30 to 40 degrees is sufficient for an optimal result. You can find more tips on sustainable and environmentally friendly care",
-    "lu": "D'Fleegesymboler weisen Dir ewéi d'Kleedung gewäsch, gedréchent a gestreckt ka ginn ouni se ze beschiedegen. D'Fleegerecommandatioune berécksiichtegen de sensibelsten Deel vum Textilartikel (z.B. d'Tiretten). Allerdéngs kënne mir net garantéieren, datt Flecken a Knascht komplett verschwannen. Fir e méi schounenden Ëmgang mat der Ëmwelt a de Kleeder, empfeele mir, Deng Kleeder bei méiglechst niddereger Temperatur ze wäschen an ze strecken. D'Wäschmëttele vun haut si meeschtens esou gutt, datt 30 bis 40 Grad duergi fir optimal Resultater. Weider Tipps fir nohalteg an ëmweltfrëndlech Fleeg fënns Du"
+    "lu": "D'Fleegesymboler weisen Dir ewéi d'Kleedung gewäsch, gedréchent a gestreckt ka ginn ouni se ze beschiedegen. D'Fleegerecommandatioune berécksiichtegen de sensibelsten Deel vum Textilartikel (z.B. d'Tirett). Allerdéngs kënne mir net garantéieren, datt Flecken a Knascht komplett verschwannen. Fir e méi schounenden Ëmgang mat der Ëmwelt a de Kleeder, empfeele mir, Deng Kleeder bei méiglechst niddereger Temperatur ze wäschen an ze strecken. D'Wäschmëttele vun haut si meeschtens esou gutt, datt 30 bis 40 Grad duergi fir optimal Resultater. Weider Tipps fir nohalteg an ëmweltfrëndlech Fleeg fënns Du"
   },
   {
     "page": "Service Client",
@@ -3885,15 +3877,15 @@
     "de": "Alle Artikel ansehen",
     "fr": "Voir tous les articles",
     "en": "View all items",
-    "lu": "All d'Artikele gesinn"
+    "lu": "All d'Artikelen uweisen"
   },
   {
     "page": "Service Client",
     "key": "shops.description-benu-village",
     "de": "Im Shop findest Du\nunsere Kreationen. Hier kannst Du Dich inspirieren und persönlich beraten lassen. Unsere\nSchneider:innen und Designer:innen stehen Dir unter der Woche jederzeit für Maßanfertigungen und Änderungen zur Verfügung. Bitte mache hierfür im Vorfeld einen Termin aus.",
-    "fr": "Tu trouveras nos créations dans la boutique. Inspire-toi et laisse-toi conseiller personnellement. Nos\ncouturiers·ières et designers sont à ta disposition en semaine pour des confections sur mesure et des modifications. Nous te prions de prendre rendez-vous à l'avance.",
+    "fr": "Tu trouveras nos créations dans notre boutique. Ici, tu pourras trouver de l'inspiration et des conseils. Nos\ncouturiers·e et designers sont à ta disposition en semaine pour des confections sur mesure et des modifications. Pour cela, nous te prions de prendre rendez-vous à l'avance.",
     "en": "In the shop you'll find\nour creations. Here you can receive inspiration and personal advice. Our tailors and designers are available at any time during the week to make customised garments and modifications. Please arrange an appointment in advance.",
-    "lu": "Am Shop fënns Du \neis Kreatiounen. Hei kanns Du Dech inspiréieren a perséinlech berode loossen. Eis Schneider:innen a Designer:inne stinn Dir an der Woch jidderzäit zur Verfügung fir Kleeder op Mooss oder Ännerungen ze maachen. Huel wgl. dofir e Rendez-vous am Viraus."
+    "lu": "Am Shop fënns Du \neis Kreatiounen. Hei kanns Du Dech inspiréieren a perséinlech berode loossen. Eis Schneider:innen an Designer:inne stinn Dir an der Woch jidderzäit zur Verfügung fir Kleeder op Mooss oder Ännerungen ze maachen. Huel wgl. dofir e Rendez-vous am Viraus."
   },
   {
     "page": "Service Client",
@@ -3995,7 +3987,7 @@
     "page": "Service Client",
     "key": "services.shops-website",
     "de": "Webseite",
-    "fr": "Site web",
+    "fr": "Site Internet",
     "en": "Website",
     "lu": "Internetsäit"
   },
@@ -4029,7 +4021,7 @@
     "de": "Hier findest Du die Kontaktdaten von BENU COUTURE",
     "fr": "Voici les coordonnées de BENU COUTURE",
     "en": "Here you can find the contact details of BENU COUTURE",
-    "lu": "Hei sinn d'Kontaktdonnéeë vum BENU COUTURE"
+    "lu": "Hei sinn d'Kontaktdonnéeë vu BENU COUTURE"
   },
   {
     "page": "Service Client",
@@ -4043,25 +4035,25 @@
     "page": "Service Client",
     "key": "services.contact-opening-2",
     "de": "Montag und Samstag von 11:00 bis 17:30 Uhr",
-    "fr": "Lundi et samedi de 11h à 17h30",
-    "en": "Monday and saturday from 11am to 5:30pm",
+    "fr": "Lundi et samedi de 11h00 à 17h30",
+    "en": "Monday and saturday from 11:00 am to 5:30 pm",
     "lu": "Méindes a Samschdes vun 11:00 bis 17:30 Auer"
   },
   {
     "page": "Service Client",
     "key": "services.contact-opening-3",
     "de": "Dienstag bis Freitag von 10:00 bis 18:00 Uhr",
-    "fr": "Mardi à vendredi de 10h à 18h",
-    "en": "Tuesday to friday from 10am to 6pm",
+    "fr": "Mardi à vendredi de 10h00 à 18h00",
+    "en": "Tuesday to friday from 10:00 am to 6:00 pm",
     "lu": "Dënschdes bis Freides vun 10:00 bis 18:00 Auer"
   },
   {
     "page": "Service Client",
     "key": "services.contact-extra-txt",
     "de": "Hast Du eine Frage zu Deiner Bestellung? Möchtest Du Deine Kreationen als Partner über BENU COUTURE verkaufen? Hast Du Deinen Wunschartikel nicht gefunden und wünschst eine bestimmte Kreation? Oder willst Du einfach mehr über BENU COUTURE erfahren?",
-    "fr": "Tu as une question concernant ta commande ? Tu souhaites vendre tes créations en tant que partenaire via BENU COUTURE ? Tu ne trouves pas ton bonheur et souhaites une création en particulier ? Ou tu veux en savoir plus sur BENU COUTURE ?",
+    "fr": "Tu as une question concernant ta commande ? Tu souhaites vendre tes créations en tant que partenaire via BENU COUTURE ? Tu ne trouves pas ton bonheur et désires une création en particulier ? Ou tu veux simplement en savoir plus sur BENU COUTURE ?",
     "en": "Do you have a question about your order? Would you like to sell your creations as a partner through BENU COUTURE? Haven't you found your desired item and would like a specific creation? Or do you simply want to know more about BENU COUTURE?",
-    "lu": "Hues Du eng Fro zu Denger Bestellung? Wëlls Du Deng Kreatiounen als Partner iwwer BENU COUTURE verkafen? Hues Du Däi Wonschartikel net fonnt a wënschs Dir eng bestëmmte Kreatioun? Oder wëlls Du méi iwwer BENU COUTURE wëssen?"
+    "lu": "Hues Du eng Fro zu Denger Bestellung? Wëlls Du Deng Kreatiounen als Partner iwwer BENU COUTURE verkafen? Hues Du Däi Wonschartikel net fonnt a wënschs Dir eng bestëmmte Kreatioun? Oder wëlls Du einfach méi iwwer BENU COUTURE wëssen?"
   },
   {
     "page": "Service Client",
@@ -4163,9 +4155,9 @@
     "page": "Service Client",
     "key": "forms.personal-data-agreement",
     "de": "Mit der Nutzung dieses Formulars erkläre ich mich mit der Speicherung \nund Verarbeitung meiner Daten durch diese Website einverstanden",
-    "fr": "En utilisant ce formulaire, je confirme la sauvegarde et le traitement de mes données par ce site",
-    "en": "By using this form, I confirm that my data will be saved and processed by this site",
-    "lu": "Mat dësem Formulaire stëmmen ech der Späicherung an der Veraarbechtung vu mengen Donnéeën duerch dëse Site zou"
+    "fr": "En utilisant ce formulaire, j'accepte la sauvegarde et le traitement de mes données par ce site",
+    "en": "By using this form, I accept that my data will be saved and processed by this site",
+    "lu": "Mam Benotze vun dësem Formulaire stëmmen ech dem Späicheren an der Veraarbechtung vu mengen Donnéeën duerch dëse Site zou"
   },
   {
     "page": "Service Client",
@@ -4197,7 +4189,7 @@
     "de": "Abschicken",
     "fr": "Envoyer",
     "en": "Send",
-    "lu": "Ofschécken"
+    "lu": "Schécken"
   },
   {
     "page": "Créations",
@@ -4363,7 +4355,7 @@
     "page": "Créations",
     "key": "header.see-all-home-creations",
     "de": "Alles für zu Hause ansehen",
-    "fr": "Voir tout pour la maison",
+    "fr": "Voir tous les articles pour la maison",
     "en": "View everything for the home",
     "lu": "Alles fir Doheem uweisen"
   },
@@ -4517,7 +4509,7 @@
     "de": "Taschen & Beutel",
     "fr": "Sacs & Trousses",
     "en": "Bags & Cases",
-    "lu": "Täschen & Säck"
+    "lu": "Poschen & Troussen"
   },
   {
     "page": "Créations",
@@ -4565,7 +4557,7 @@
     "de": "Tops",
     "fr": "Tops",
     "en": "Tops",
-    "lu": "Topen"
+    "lu": "Toppen"
   },
   {
     "page": "Créations",
@@ -4628,7 +4620,7 @@
     "key": "type.accessories",
     "de": "Accessoires",
     "fr": "Accessoires",
-    "en": "Accessoires",
+    "en": "Accessories",
     "lu": "Accessoiren"
   },
   {
@@ -4795,7 +4787,7 @@
     "page": "Créations",
     "key": "models.filter-order-by",
     "de": "Sortieren nach",
-    "fr": "Classer par",
+    "fr": "Trier par",
     "en": "Sort by",
     "lu": "Sortéieren no"
   },
@@ -4819,9 +4811,9 @@
     "page": "Créations",
     "key": "components.models-header",
     "de": "verfügbare Variation|verfügbare Variationen",
-    "fr": "variation disponible|variations disponibles",
+    "fr": "variante disponible|variantes disponibles",
     "en": "available variation|available variations",
-    "lu": "verfügbar Variatioun|verfügbar Variatiounen"
+    "lu": "verfügbar Variant|verfügbar Varianten"
   },
   {
     "page": "Créations",
@@ -4866,26 +4858,26 @@
   {
     "page": "Model",
     "key": "models.link-explanation",
-    "de": "Wir \"retten“ Kleidung. Gleichzeitig wollen wir an all die bedrohten Tiere und Pflanzen erinnern, die unseren Schutz brauchen. Daher trägt jede Kreation einen Namen, der von einer gefährdeten Art inspiriert ist.",
-    "fr": "Nous \"sauvons“ des vêtements. Par la même occasion, nous voulons attirer l'attention sur les plantes et animaux menacés qui nécessitent notre protection. C'est pourquoi chaque création porte un nom inspiré d'une espèce menacée.",
-    "en": "We \"save\" clothes. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation carries a name inspired by an endangered species.",
-    "lu": "Mir \"rette\" Gezei. Gläichzäiteg wëlle mir un all déi bedroten Déieren a Planzen erënneren, déi eise Schutz brauchen. Dofir sinn d'Nimm vun de Kreatioune vu vulnerabelen Aarten inspiréiert."
+    "de": "Wir \"retten“ Kleidung. Gleichzeitig wollen wir an all die bedrohten Tiere und Pflanzen erinnern, die unseren Schutz brauchen. Daher trägt jede Kreation einen Namen, der von einer gefährdeten oder bereits ausgestorbenen Art inspiriert ist.",
+    "fr": "Nous \"sauvons“ des vêtements. Et par la même occasion, nous voulons attirer l'attention sur les espèces animales et végétales menacées et qui nécessitent notre protection. Ainsi, chaque création porte un nom inspiré d'une espèce menacée d'extinction ou d'ores et déjà éteinte.",
+    "en": "We \"save\" clothes. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation carries a name inspired by an endangered or already extinct species.",
+    "lu": "Mir \"rette\" Gezei. Gläichzäiteg wëlle mir un all déi bedroten Déieren a Planzen erënneren, déi eise Schutz brauchen. Dofir sinn d'Nimm vun de Kreatioune vu gefäerdeten oder ewell ausgestuerwen Aarten inspiréiert."
   },
   {
     "page": "Model",
     "key": "models.model-origins",
     "de": "Die Bedeutung des Wortes",
-    "fr": "L'origine du mot",
-    "en": "The meaning of the word",
-    "lu": "D'Bedeitung vum Wuert"
+    "fr": "L'origine du nom",
+    "en": "The meaning of the name",
+    "lu": "D'Bedeitung vum Numm"
   },
   {
     "page": "Model",
     "key": "models.model-link-articles",
     "de": "Entdecke alle Variationen",
-    "fr": "Découvre toutes les variations",
+    "fr": "Découvre toutes les variantes",
     "en": "Discover all the variations",
-    "lu": "Entdeck all d'Variatiounen"
+    "lu": "Entdeck all d'Varianten"
   },
   {
     "page": "Model",
@@ -4915,9 +4907,9 @@
     "page": "Model",
     "key": "models.articles-title",
     "de": "Dies sind unsere Variationen",
-    "fr": "Voici nos variations",
+    "fr": "Voici nos variantes",
     "en": "These are our variations",
-    "lu": "Dëst sinn eis Variatiounen"
+    "lu": "Dëst sinn eis Varianten"
   },
   {
     "page": "Model",
@@ -4971,7 +4963,7 @@
     "page": "Model",
     "key": "models.masks-kid",
     "de": "Kinder",
-    "fr": "Enfant",
+    "fr": "Enfants",
     "en": "Kids",
     "lu": "Kanner"
   },
@@ -4979,15 +4971,15 @@
     "page": "Model",
     "key": "models.masks-adult",
     "de": "Erwachsene",
-    "fr": "Adulte",
-    "en": "Adult",
+    "fr": "Adultes",
+    "en": "Adults",
     "lu": "Erwuessener"
   },
   {
     "page": "Model",
     "key": "models.model-specific-order-btn",
     "de": "Ich habe einen speziellen Wunsch",
-    "fr": "Je souhaite faire une demande spécifique",
+    "fr": "J'ai une demande spéciale",
     "en": "I have a special request",
     "lu": "Ech hunn e spezielle Wonsch"
   },
@@ -5019,7 +5011,7 @@
     "page": "Model",
     "key": "sidebar.masks-demand",
     "de": "Bitte beschreibe hier Deinen Wunsch",
-    "fr": "Décris-nous ta demande",
+    "fr": "Décris-nous ta demande ici",
     "en": "Please describe your request here",
     "lu": "Beschreif Däi Wonsch wgl. hei"
   },
@@ -5045,7 +5037,7 @@
     "de": "Anfrage abschicken",
     "fr": "Envoyer ta demande",
     "en": "Send request",
-    "lu": "Ufro verschécken"
+    "lu": "Ufro schécken"
   },
   {
     "page": "Model",
@@ -5115,15 +5107,15 @@
     "page": "Model",
     "key": "models.sold-title",
     "de": "Entdecke die verkauften Variationen des Modells",
-    "fr": "Découvre les variations vendues du modèle",
+    "fr": "Découvre les variantes déjà vendues du modèle",
     "en": "Discover the sold variations of the model",
-    "lu": "Entdeck déi verkaafte Variatioune vum Modell"
+    "lu": "Entdeck déi verkaafte Variante vum Modell"
   },
   {
     "page": "Model",
     "key": "models.sold-txt-1",
     "de": "Diese Artikel sind leider nicht mehr verfügbar, denn alle BENU Kreationen sind Einzelstücke. Sollte Dir aber ein Stück besonders gut gefallen, können wir vielleicht etwas Ähnliches für Dich kreieren.",
-    "fr": "Ces articles ne sont malheureusement plus disponibles, car toutes les créations BENU sont uniques. Si une pièce te plaît particulièrement, nous pouvons créer une pièce similaire pour toi.",
+    "fr": "Ces articles ne sont malheureusement plus disponibles, car toutes les créations BENU sont uniques. Si un article te plaît particulièrement, nous pouvons créer une pièce similaire pour toi.",
     "en": "Unfortunately, these items are no longer available because all BENU creations are unique. However, if you particularly like a piece, we might be able to create something similar for you.",
     "lu": "Dës Artikele si leider net méi disponibel, well all d'BENU Kreatioune sinn Eenzelstécker. Falls Dir e Stéck awer besonnesch gutt gefält, kënne mir eppes Änleches fir Dech kreéieren."
   },
@@ -5141,15 +5133,15 @@
     "de": "Verkauft",
     "fr": "Vendu",
     "en": "Sold",
-    "lu": "Verkaaft"
+    "lu": "Verkaf"
   },
   {
     "page": "Model",
     "key": "models.sold-link",
     "de": "Alle verkauften Variationen ansehen",
-    "fr": "Voir toutes les variations vendues",
+    "fr": "Voir toutes les variantes déjà vendues",
     "en": "See all sold variations",
-    "lu": "All verkaafte Variatiounen ukucken"
+    "lu": "All verkaafte Varianten uweisen"
   },
   {
     "page": "Model",
@@ -5179,8 +5171,8 @@
     "page": "Model",
     "key": "models.request-txt-1",
     "de": "BENU COUTURE bietet Dir an, eine neue und nur für Dich bestimmte Kreation herzustellen! Wir reparieren oder verwandeln Dein altes Lieblingsstück oder Deinen Stoffrest nach Deinen individuellen Vorstellungen.",
-    "fr": "BENU COUTURE peut réaliser une nouvelle création rien que pour toi ! Nous réparons ou transformons ton ancien vêtement préféré ou ton tissu selon tes idées.",
-    "en": "BENU COUTURE offers to make a new creation just for you! We repair or transform your old favourite piece or your fabric based on your own ideas.",
+    "fr": "BENU COUTURE peut réaliser une nouvelle création rien que pour toi ! Nous réparons ou transformons ton ancien vêtement préféré ou tes chutes de tissu selon tes envies.",
+    "en": "BENU COUTURE offers to make a new creation just for you! We repair or transform your old favourite piece or your fabric remnants based on your own ideas.",
     "lu": "BENU COUTURE bitt Dir un, eng nei Kreatioun just fir Dech hierzestellen! Mir flécken oder transforméieren Däin aalt Liblingsstéck oder Deng Stoffreschter no Denge Virstellungen."
   },
   {
@@ -5194,18 +5186,18 @@
   {
     "page": "Partenaires",
     "key": "breadcrumbs.partners",
-    "de": "Partner",
+    "de": "Partner:innen",
     "fr": "Partenaires",
     "en": "Partners",
-    "lu": "Partner"
+    "lu": "Partner:innen"
   },
   {
     "page": "Partenaires",
     "key": "partners.title",
-    "de": "Unsere Partner",
+    "de": "Unsere Partner:innen",
     "fr": "Nos partenaires",
     "en": "Our partners",
-    "lu": "Eis Partner"
+    "lu": "Eis Partner:innen"
   },
   {
     "page": "Partenaires",
@@ -5221,7 +5213,7 @@
     "de": "Alle Artikel ansehen",
     "fr": "Voir tous les articles",
     "en": "View all items",
-    "lu": "All d'Artikele gesinn"
+    "lu": "All d'Artikelen uweisen"
   },
   {
     "page": "Partenaires",
@@ -5259,7 +5251,7 @@
     "page": "Partenaires",
     "key": "partners.website",
     "de": "Webseite",
-    "fr": "Site web",
+    "fr": "Site Internet",
     "en": "Website",
     "lu": "Internetsäit"
   },
@@ -5282,42 +5274,42 @@
   {
     "page": "Bons d'achat",
     "key": "vouchers.desc-txt-1",
-    "de": "Du kannst Dich nicht entscheiden, was Du Deinen Liebsten schenken willst? Das können wir gut verstehen, bei einer so großen Auswahl! Deshalb ist es eine exzellente Idee, einen BILBY, also einen unserer Geschenkgutscheine zu  schenken!",
-    "fr": "Tu n'arrives pas à choisir, quoi offrir à tes proches ? C'est bien normal avec un tel choix ! C'est donc une excellente idée d'offrir un BILBY, un de nos bons d'achat !",
+    "de": "Du kannst Dich nicht entscheiden, was Du Deinen Liebsten schenken willst? Das können wir gut verstehen, bei einer so großen Auswahl! Deshalb ist es eine exzellente Idee, einen BILBY, also einen unserer Geschenkgutscheine zu schenken!",
+    "fr": "Tu n'arrives pas à choisir quel article offrir à tes proches ? C'est compréhensible avec une telle variété de possibilités ! C'est donc une excellente idée d'offrir un BILBY, l'un de nos bons d'achat !",
     "en": "You can't decide what to offer to your beloved? We can truly understand, with such a various choice! That's why it is an excellent idea to offer a BILBY, one of our gift vouchers!",
-    "lu": "Du kanns Dech net entscheeden, wat Denge Léifste schenken? Dat versti mir gutt, bei esou engem grousse Choix! Dofir ass et eng exzellent Iddi, hinnen e BILBY ze ginn, ee vun eise Geschenkbongen!"
+    "lu": "Du kanns Dech net entscheeden, wat Denge Léifsten offréieren? Dat versti mir gutt, bei esou engem grousse Choix! Dofir ass et eng exzellent Iddi, hinnen e BILBY, also ee vun eise Geschenkbongen ze schenken!"
   },
   {
     "page": "Bons d'achat",
     "key": "vouchers.desc-txt-2",
-    "de": "Gutscheine gibt es im Wert von 1 Arbeitsstunde (30€) bis 6 Arbeitsstunden (180€). Du hast die Möglichkeit einen Gutschein aus Stoffresten zu kaufen, aber hier berechnen wir 5€ für die Produktion. Gemäß dem Motto Zero Waste möchtest du Verschwendung vermeiden? Dann bieten wir Dir einen digitalen Gutschein im PDF-Format an.",
-    "fr": "La valeur des bons d'achat est calculée en heures de travail. Les bons disponibles vont d'1 heure de travail (30€) à 6 heures de travail (180€). Tu as la possibilité d'acheter un bon réalisé en chutes de tissus, dont nous facturons la production 5€. Alternativement, si tu es adepte du ZeroWaste et que tu veux éviter le gaspillage, nous te proposons un bon digital au format PDF.",
-    "en": "Vouchers are available from 1 working hour (30€) to 6 working hours (180€). You have the possibility to buy a voucher in leftover fabric, but we charge 5€ for production. Following the Zero Waste motto, you want to avoid waste? Then consider our digital voucher in PDF format.",
-    "lu": "Bonge ginn et fir de Wäert vun 1 Aarbechtsstonn (30€) bis 6 Aarbechtsstonnen (180€). Mir bidden e flotte Bong aus Stoffreschter un, dee mir 5€ facturéiere fir d'Produktioun. Ganz nom Motto Zero Waste, wëlls Du Offall vermeiden? Da bidde mir och en digitale Bong am PDF-Format un."
+    "de": "Gutscheine gibt es im Wert von 1 Arbeitsstunde (30€) bis 6 Arbeitsstunden (180€). Du hast die Möglichkeit einen Gutschein aus Stoffresten zu kaufen, aber hier berechnen wir 5€ für die Produktion. Gemäß dem Motto ZeroWaste möchtest du Verschwendung vermeiden? Dann bieten wir Dir einen digitalen Gutschein im PDF-Format an.",
+    "fr": "La valeur des bons d'achat est calculée en heures de travail. Les bons disponibles vont d'1 heure de travail (30€) à 6 heures de travail (180€). Tu as la possibilité d'acheter un bon réalisé en chutes de tissus, dont nous facturons la production 5€. Si tu es adepte du ZeroWaste et que tu veux éviter le gaspillage, nous pouvons également te proposer un bon digital au format PDF.",
+    "en": "Vouchers are available from 1 working hour (30€) to 6 working hours (180€). You have the possibility to buy a voucher in leftover fabric, but we charge 5€ for production. Following the ZeroWaste motto, you want to avoid waste? Then consider our digital voucher in PDF format.",
+    "lu": "Bonge ginn et fir de Wäert vun 1 Aarbechtsstonn (30€) bis 6 Aarbechtsstonnen (180€). Mir bidden e flotte Bong aus Stoffreschter un, dee mir 5€ facturéiere fir d'Produktioun. Ganz nom Motto ZeroWaste, wëlls Du Offall vermeiden? Da bidde mir och en digitale Bong am PDF-Format un."
   },
   {
     "page": "Bons d'achat",
     "key": "vouchers.desc-txt-3",
     "de": "Die Gutscheine können auf jeder Internetseite von BENU oder beim BENU in Esch-sur-Alzette für alle Aktivitäten des BENU eingelöst werden.",
-    "fr": "Les bons peuvent être utilisés sur tous les sites Internet de BENU ainsi que directement chez BENU à Esch-sur-Alzette et ce, pour toutes les activités que nous proposons.",
-    "en": "The vouchers can be redeemed on any BENU website or directly at BENU in Esch-sur-Alzette for all our activities.",
+    "fr": "Les bons peuvent être utilisés sur tous les sites Internet de BENU ainsi que directement chez BENU à Esch-sur-Alzette et ce, pour toutes les activités proposées.",
+    "en": "The vouchers can be redeemed on any BENU website or directly at BENU in Esch-sur-Alzette for all offered activities.",
     "lu": "D’Bonge kënne bequeem op all eisen Internetsäiten oder direkt bei BENU zu Esch/Uelzecht fir all eis Aktivitéiten ageléist ginn."
   },
   {
     "page": "Bons d'achat",
     "key": "vouchers.link-explanation",
-    "de": "Wir \"retten“ Kleidung. Gleichzeitig wollen wir an all die bedrohten Tiere und Pflanzen erinnern, die unseren Schutz brauchen. Daher trägt jede Kreation einen Namen, der von einer gefährdeten Art inspiriert ist.",
-    "fr": "Nous \"sauvons“ des vêtements. Par la même occasion, nous voulons attirer l'attention sur les plantes et animaux menacés qui nécessitent notre protection. C'est pourquoi chaque création porte un nom inspiré d'une espèce menacée.",
-    "en": "We \"save\" clothes. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation carries a name inspired by an endangered species.",
-    "lu": "Mir \"rette\" Gezei. Gläichzäiteg wëlle mir un all déi bedroten Déieren a Planzen erënneren, déi eise Schutz brauchen. Dofir sinn d'Nimm vun de Kreatioune vu vulnerabelen Aarten inspiréiert."
+    "de": "Wir \"retten“ Kleidung. Gleichzeitig wollen wir an all die bedrohten Tiere und Pflanzen erinnern, die unseren Schutz brauchen. Daher trägt jede Kreation einen Namen, der von einer gefährdeten oder bereits ausgestorbenen Art inspiriert ist.",
+    "fr": "Nous \"sauvons“ des vêtements. Et par la même occasion, nous voulons attirer l'attention sur les espèces animales et végétales menacées et qui nécessitent notre protection. Ainsi, chaque création porte un nom inspiré d'une espèce menacée d'extinction ou d'ores et déjà éteinte.",
+    "en": "We \"save\" clothes. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation carries a name inspired by an endangered or already extinct species.",
+    "lu": "Mir \"rette\" Gezei. Gläichzäiteg wëlle mir un all déi bedroten Déieren a Planzen erënneren, déi eise Schutz brauchen. Dofir sinn d'Nimm vun de Kreatioune vu gefäerdeten oder ewell ausgestuerwen Aarten inspiréiert."
   },
   {
     "page": "Bons d'achat",
     "key": "vouchers.model-origins",
     "de": "Die Bedeutung des Wortes",
-    "fr": "L'origine du mot",
-    "en": "The meaning of the word",
-    "lu": "D'Bedeitung vum Wuert"
+    "fr": "L'origine du nom",
+    "en": "The meaning of the name",
+    "lu": "D'Bedeitung vum Numm"
   },
   {
     "page": "Bons d'achat",
@@ -5365,7 +5357,7 @@
     "de": "In Schritten von",
     "fr": "Par tranches de",
     "en": "In increments of",
-    "lu": "A Schrëtt vun"
+    "lu": "An Tranchë vun"
   },
   {
     "page": "Bons d'achat",
@@ -5443,8 +5435,8 @@
     "page": "Bons d'achat",
     "key": "sidebar.delivery-costs-vouchers-info-1",
     "de": "Für den digitalen Gutschein fallen natürlich keine Versandkosten an. Die Versandkosten des Gutscheins in Stoffformat sind abhängig vom Gewicht der Bestellung. Weitere Informationen zu den Versandkosten findest Du",
-    "fr": "Bien entendu, il n'y a pas de frais de livraison liés à l'envoi du bon digital. Les frais d'expédition du bon en format tissu dépendent du poids total de la commande. Tu trouveras davantage d'informations au sujet des frais d'expédition",
-    "en": "Of course, there are no shipping costs for the digital voucher. The shipping costs for the voucher in fabric format depend on the weight of the order. You can find more information about the shipping costs",
+    "fr": "Bien entendu, il n'y a pas de frais liés à l'envoi du bon digital. Les frais d'expédition du bon en tissu dépendent du poids total de la commande. Tu trouveras davantage d'informations au sujet des frais d'expédition",
+    "en": "Of course, there are no shipping costs for the digital voucher. The shipping costs for the fabric voucher depend on the weight of the order. You can find more information about the shipping costs",
     "lu": "Natierlech gi fir d'Bongen am digitale Format keng Expeditiounskäschte berechent. D'Käschte fir d'Stoff-Bongen hänke vum Gesamtgewiicht vun der Bestellung of. Weider Informatiounen zu den Expeditiounskäschte fënns Du"
   },
   {
@@ -5467,9 +5459,9 @@
     "page": "Bons d'achat",
     "key": "sidebar.returns-vouchers-info-1",
     "de": "Gutscheine sind vom Umtausch ausgeschlossen und können nicht zurückerstattet werden.",
-    "fr": "Les bons d'achat ne sont ni échangés ni remboursés.",
+    "fr": "Les bons d'achat ne peuvent pas être échangés ou remboursés.",
     "en": "Vouchers cannot be exchanged nor refunded.",
-    "lu": "D'Geschenkbonge kënne weder ëmgetosch nach rembourséiert ginn."
+    "lu": "D'Geschenkbonge kënne weder ëmgetosch nach zeréckbezuelt ginn."
   },
   {
     "page": "Bons d'achat",
@@ -5496,6 +5488,30 @@
     "lu": "Zum Akafskierfchen"
   },
   {
+    "page": "",
+    "key": "cart.voucher",
+    "de": "Gutschein",
+    "fr": "Bon d'achat",
+    "en": "Voucher",
+    "lu": "Bong"
+  },
+  {
+    "page": "",
+    "key": "cart.voucher-value",
+    "de": "Wert",
+    "fr": "Valeur",
+    "en": "Value",
+    "lu": "Wäert"
+  },
+  {
+    "page": "",
+    "key": "cart.payment-unit-value",
+    "de": "Wert",
+    "fr": "Valeur",
+    "en": "Value",
+    "lu": "Wäert"
+  },
+  {
     "page": "Newsletter",
     "key": "breadcrumbs.newsletter-subscribe",
     "de": "Newsletter",
@@ -5517,7 +5533,7 @@
     "de": "Der BENU Newsletter",
     "fr": "La newsletter BENU",
     "en": "The BENU newsletter",
-    "lu": "De BENU Newsletter"
+    "lu": "D'BENU Newsletter"
   },
   {
     "page": "Newsletter",
@@ -5595,7 +5611,7 @@
     "page": "Newsletter",
     "key": "auth.newsletter-unsubscribe-title-2",
     "de": "Du bist jederzeit wieder Willkommen!",
-    "fr": "Tu seras à nouveau le bienvenu à tout moment !",
+    "fr": "Tu seras à nouveau le·la bienvenu·e à tout moment !",
     "en": "You are welcome back at any time!",
     "lu": "Du bass ëmmer nees wëllkomm!"
   },
@@ -5747,9 +5763,9 @@
     "page": "Compte",
     "key": "forms.password-details",
     "de": "Das Passwort muss mindestens 8 alphanumerische Zeichen enthalten, darunter mindestens einen Klein- und einen Großbuchstaben",
-    "fr": "Le mot de passe doit contenir au moins 8 caractères alphanumériques, dont au moins une minuscule et une majuscule",
-    "en": "The password must contain at least 8 alphanumeric characters, including at least one lower case and one upper case",
-    "lu": "D'Passwuert muss mindestens 8 alphanumeresch Zeechen enthalen, dorënner mindestens e klengen an e grousse Buschtaf"
+    "fr": "Le mot de passe doit contenir au moins 8 caractères alphanumériques, dont au moins une lettre minuscule et une lettre majuscule",
+    "en": "The password must contain at least 8 alphanumeric characters, including at least one lower case and one upper case letter",
+    "lu": "D'Passwuert muss mindestens aus 8 alphanumereschen Zeechen, dorënner mindestens e klengen an e grousse Buschtaf, zesummegesat sinn"
   },
   {
     "page": "Compte",
@@ -5795,7 +5811,7 @@
     "page": "Compte",
     "key": "forms.register-address-street-number",
     "de": "Hausnummer",
-    "fr": "Numéro de maison",
+    "fr": "Numéro de rue",
     "en": "House number",
     "lu": "Hausnummer"
   },
@@ -5851,17 +5867,17 @@
     "page": "Compte",
     "key": "forms.register-address-other",
     "de": "Spezifische Bemerkungen oder Informationen",
-    "fr": "Remarques ou informations spécifiques",
+    "fr": "Remarques ou informations particulières",
     "en": "Specific comments or information",
     "lu": "Spezifesch Remarken oder Informatiounen"
   },
   {
     "page": "Compte",
     "key": "forms.mandatory-fields-long",
-    "de": "Die mit einem Stern gekennzeichneten Felder sind Pflichtfelder. Die übrigen sind optional.",
+    "de": "Die mit einem Sternchen gekennzeichneten Felder sind Pflichtfelder. Die übrigen sind optional.",
     "fr": "Les champs marqués d'un astérisque sont obligatoires. Les autres sont optionnels.",
-    "en": "Fields marked with a star are mandatory. The others are optional.",
-    "lu": "D'Felder, déi mat engem Stär markéiert sinn, sinn néideg. Déi aner si fakultativ."
+    "en": "Fields marked with an asterisk are mandatory. The others are optional.",
+    "lu": "D'Flichtfelder si mat engem Stärche gekennzeechent. Déi aner si fakultativ."
   },
   {
     "page": "Compte",
@@ -5874,16 +5890,16 @@
   {
     "page": "Compte",
     "key": "forms.register-conditions-conf",
-    "de": "Ich stimme den allgemeinen Geschäftsbedingungen und der Datenschutzrichtlinien von BENU COUTURE zu",
+    "de": "Ich stimme den allgemeinen Geschäftsbedingungen und den Datenschutzrichtlinien von BENU COUTURE zu",
     "fr": "J’accepte les conditions générales et la politique de confidentialité de BENU COUTURE",
     "en": "I accept the general conditions and the privacy policy of BENU COUTURE",
-    "lu": "Ech stëmmen den allgemenge Geschäftskonditiounen an den Dateschutzrichtlinne vu BENU COUTURE zou"
+    "lu": "Ech stëmmen den allgemenge Geschäftsbedéngungen an den Dateschutzrichtlinne vu BENU COUTURE zou"
   },
   {
     "page": "Compte",
     "key": "auth.register-error",
     "de": "Es ist ein Fehler aufgetreten. Bitte überprüfe, ob alle Felder korrekt ausgefüllt sind.",
-    "fr": "Une erreur s'est produite. Merci de vérifier que tous les champs sont correctement remplis.",
+    "fr": "Une erreur s'est produite. Merci de vérifier que tous les champs sont correctement complétés.",
     "en": "An error has occurred. Please check if all fields are filled in correctly.",
     "lu": "E Feeler ass opgetrueden. Kontrolléier wgl. ob all d'Felder richteg ausgefëllt sinn."
   },
@@ -6066,10 +6082,10 @@
   {
     "page": "Connexion",
     "key": "auth.password-forgotten-email-info-3",
-    "de": "In dieser E-Mail findest du einen sicheren Link, der eine Stunde lang gültig ist. Mit diesem kannst Du ein neues Passwort wählen. Wenn Du die E-Mail nicht in deinem Posteingang findest, überprüfe, ob sie nicht versehentlich in Deinem Spam-Ordner gelandet ist!",
+    "de": "In dieser E-Mail findest du einen sicheren Link, der eine Stunde lang gültig ist. Mit diesem kannst Du ein neues Passwort wählen. Wenn Du die E-Mail nicht in Deinem Posteingang findest, überprüfe, ob sie nicht versehentlich in Deinem Spam-Ordner gelandet ist!",
     "fr": "Dans cet e-mail, tu trouveras un lien sécurisé, valable une heure, te permettant de choisir un nouveau mot de passe. Si tu ne trouves pas l'e-mail dans ta boite de réception, vérifie qu'il n'a pas atterri dans le courrier indésirable !",
     "en": "In this e-mail you'll find a secure link, valid for one hour, that will allow you to choose a new password. If you don't see the e-mail in your inbox, check if it hasn't landed in your spam folder by mistake!",
-    "lu": "An dëser E-Mail fënns Du e séchere Link deen eng Stonn gülteg ass. Mat deem kanns Du en neit Passwuert wielen. Wann s Du d'E-Mail an dengem Postagang net fënns, dann iwwerpréif Däi Spam-Dossier!"
+    "lu": "An dëser E-Mail fënns Du e séchere Link deen eng Stonn gülteg ass. Mat deem kanns Du en neit Passwuert wielen. Wann s Du d'E-Mail an Dengem Postagang net fënns, dann iwwerpréif Däi Spam-Dossier!"
   },
   {
     "page": "Connexion",
@@ -6195,7 +6211,7 @@
     "page": "Mon compte",
     "key": "dashboard.client-number",
     "de": "Kundennummer",
-    "fr": "Numéro client",
+    "fr": "Numéro client·e",
     "en": "Customer number",
     "lu": "Clientsnummer"
   },
@@ -6718,6 +6734,30 @@
     "fr": "Articles",
     "en": "Items",
     "lu": "Artikel"
+  },
+  {
+    "page": "order facture",
+    "key": "pdf.invoice-voucher",
+    "de": "Gutschein",
+    "fr": "Bon d'achat",
+    "en": "Voucher",
+    "lu": "Bong"
+  },
+  {
+    "page": "order facture",
+    "key": "pdf.invoice-voucher-type",
+    "de": "Ausführung:",
+    "fr": "Version :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "order facture",
+    "key": "pdf.invoice-voucher-type-clothe",
+    "de": "Stoff",
+    "fr": "Tissu",
+    "en": "Fabric",
+    "lu": "Stoff"
   },
   {
     "page": "Mon compte",
@@ -10504,6 +10544,54 @@
     "lu": "D'Internetsäit benotzt ausschliisslech Cookies, déi fir säin eegent Fonctionnement néideg sinn. Et gëtt kee Cookie vun aneren Déngschtleeschter"
   },
   {
+    "page": "Informations",
+    "key": "breadcrumbs.general-infos",
+    "de": "Allgemeine Informationen",
+    "fr": "Informations générales",
+    "en": "General information",
+    "lu": "Allgemeng Informatiounen"
+  },
+  {
+    "page": "Informations",
+    "key": "footer.general-info-subtitle",
+    "de": "Allgemeine Informationen",
+    "fr": "Informations générales",
+    "en": "General information",
+    "lu": "Allgemeng Informatiounen"
+  },
+  {
+    "page": "Informations",
+    "key": "footer.general-info-title",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Informations",
+    "key": "footer.general-info-txt-1",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Version mobile",
+    "key": "WELCOME.MOBILE-MENU-BTN-MENU",
+    "de": "Kreationen",
+    "fr": "Créations",
+    "en": "Creations",
+    "lu": "Kreatiounen"
+  },
+  {
+    "page": "Version mobile",
+    "key": "welcome.mobile-menu-btn-creations",
+    "de": "Menü",
+    "fr": "Menu",
+    "en": "Menu",
+    "lu": "Menü"
+  },
+  {
     "page": "Version mobile",
     "key": "welcome.nav-home",
     "de": "Startseite",
@@ -10614,5 +10702,21 @@
     "fr": "Newsletter",
     "en": "Newsletter",
     "lu": "Newsletter"
+  },
+  {
+    "page": "Version mobile",
+    "key": "models.filter-mobile-filter",
+    "de": "Filter",
+    "fr": "Filtres",
+    "en": "Filters",
+    "lu": "Filter"
+  },
+  {
+    "page": "Version mobile",
+    "key": "models.filter-mobile-order-by",
+    "de": "Sortieren nach",
+    "fr": "Trier par",
+    "en": "Sort by",
+    "lu": "Sortéieren no"
   }
 ]
