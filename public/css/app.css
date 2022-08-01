@@ -5396,6 +5396,27 @@ input[type=checkbox]:focus {
   padding-top: 60px;
   margin-bottom: 90px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .delivery__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .delivery__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .delivery__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
 .delivery__title {
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
@@ -5444,6 +5465,7 @@ input[type=checkbox]:focus {
 .delivery__chapter {
   text-align: left;
   margin-bottom: 40px;
+  line-height: 28px;
 }
 .delivery__chapter h3 {
   font: normal normal 700 28px/36px "Barlow Condensed";
@@ -5534,6 +5556,27 @@ input[type=checkbox]:focus {
 .sizes {
   padding-top: 60px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .sizes__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sizes__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .sizes__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
 .sizes__title {
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
@@ -5620,6 +5663,7 @@ input[type=checkbox]:focus {
 }
 .sizes__chapters {
   width: 75%;
+  line-height: 28px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .sizes__chapters {
@@ -5630,6 +5674,9 @@ input[type=checkbox]:focus {
   .sizes__chapters {
     width: 100%;
   }
+}
+.sizes__chapter {
+  line-height: 28px;
 }
 .sizes__chapter h3 {
   font: normal normal 700 28px/36px "Barlow Condensed";
@@ -5752,6 +5799,27 @@ input[type=checkbox]:focus {
   text-align: left;
   margin-bottom: 40px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .return__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .return__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .return__container {
+    width: 91.6667%;
+    padding: 0;
+    margin: auto;
+  }
+}
 .return__title {
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
@@ -5819,6 +5887,7 @@ input[type=checkbox]:focus {
 }
 .return__chapter {
   margin-bottom: 40px;
+  line-height: 28px;
 }
 .return__chapter h3 {
   font: normal normal 700 28px/36px "Barlow Condensed";
@@ -6222,6 +6291,7 @@ input[type=checkbox]:focus {
 }
 .contact__moreinfo {
   font-size: 1rem;
+  line-height: 28px;
   color: #2E1414;
   font-family: "Barlow";
   font-weight: 500;

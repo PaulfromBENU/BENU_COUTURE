@@ -252,6 +252,23 @@
 .delivery {
 	padding-top: 60px;
 	margin-bottom: 90px;
+	&__container {
+		@include intermediate {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+		@include tablet {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+		@include mobile {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+	}
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
@@ -291,6 +308,7 @@
 	&__chapter {
 		text-align: left;
 		margin-bottom: 40px;
+		line-height: 28px;
 		h3 {
 			font: normal normal 700 28px/36px 'Barlow Condensed';
 			color: $primary-color;
@@ -379,6 +397,23 @@
 
 .sizes {
 	padding-top: 60px;
+	&__container {
+		@include intermediate {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+		@include tablet {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+		@include mobile {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+	}
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
@@ -450,6 +485,7 @@
 	}
 	&__chapters {
 		width: 75%;
+		line-height: 28px;
 		@include tablet {
 			width: 100%;
 		}
@@ -458,6 +494,7 @@
 		}
 	}
 	&__chapter {
+		line-height: 28px;
 		h3 {
 			font: normal normal 700 28px/36px 'Barlow Condensed';
 			color: $primary-color;
@@ -566,6 +603,23 @@
 	padding-top: 60px;
 	text-align: left;
 	margin-bottom: 40px;
+	&__container {
+		@include intermediate {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+		@include tablet {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+		@include mobile {
+			width: 91.6667%;
+			padding: 0;
+			margin: auto;
+		}
+	}
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';
@@ -624,6 +678,7 @@
 	}
 	&__chapter {
 		margin-bottom: 40px;
+		line-height: 28px;
 		h3 {
 			font: normal normal 700 28px/36px 'Barlow Condensed';
 			color: $primary-color;
@@ -977,6 +1032,7 @@
 	}
 	&__moreinfo {
 		font-size: 1rem;
+		line-height: 28px;
 		color: $dark-text;
 		font-family: 'Barlow';
 		font-weight: 500;

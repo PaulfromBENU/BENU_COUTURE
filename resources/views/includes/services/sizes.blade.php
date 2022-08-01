@@ -2,7 +2,7 @@
 	<h2 class="sizes__title">{{ __('services.sizes-title') }}</h2>
 
 	
-	<div class="flex justify-between benu-container">
+	<div class="flex justify-between benu-container sizes__container">
 		<div class="sizes__index relative mobile-hidden tablet-hidden">
 			<ul class="sizes__index__menu">
 				<li>
