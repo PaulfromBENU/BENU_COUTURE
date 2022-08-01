@@ -254,6 +254,12 @@ class GeneralController extends Controller
     }
 
 
+    public function showGeneralInfo()
+    {
+        return view('footer.pages.general-info');
+    }
+
+
 
     public function startImport()
     {

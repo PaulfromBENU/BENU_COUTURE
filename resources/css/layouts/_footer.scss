@@ -372,6 +372,11 @@
 		margin-bottom: 58px;
 		width: 50%;
 		margin-left: 25%;
+		@include mobile {
+			font: normal normal 700 36px/46px 'Barlow Condensed';
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 	&__subtitle {
 		text-align: center;

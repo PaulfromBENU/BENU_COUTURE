@@ -223,8 +223,9 @@
 				cursor: pointer;
 				display: block;
 				@include intermediate {
-					height: 45px;
-					width: 45px;
+					height: 35px;
+					width: 35px;
+					padding: 12px 5px;
 				}
 				img {
 					max-height: 100%;
@@ -322,6 +323,9 @@
 			font-family: 'Barlow Condensed';
 			border-radius: 5px;
 			transition: $transition-base;
+			@include intermediate {
+				width: 150px;
+			}
 			&--active {
 				color: white;
 				background-color: $primary-color;
@@ -336,12 +340,18 @@
 				transform: rotate(0deg);
 				transition: all 0.2s;
 				margin-top: 5px;
+				@include intermediate {
+					margin-right: 1rem;
+				}
 			}
 			&--logo-2 {
 				height: 15px;
 				width: 20px;
 				margin-left: 1.875rem;
 				margin-top: 6px;
+				@include intermediate {
+					margin-left: 1rem;
+				}
 			}
 			&:hover {
 				color: white;
@@ -421,6 +431,9 @@
             left: 0;
             z-index: 10;
             transition: $transition-village;
+            @include intermediate {
+            	padding: 5px 0;
+            }
         }
 
         &::before {

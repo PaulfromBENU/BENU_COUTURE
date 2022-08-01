@@ -178,13 +178,16 @@
 }
 
 .side-modal {
-	width: 60vw;
+	width: 68vw;
 	top: 0;
 	right: -60vw;
 	height: 100vh;
 	border-radius: 0;
 	transition: right 0.8s;
 	padding: 0;
+	@include intermediate {
+		width: 80vw;
+	}
 	@include tablet {
 		width: 70%;
 		right: -70%;
@@ -271,12 +274,15 @@
 		}
 	}
 	&__content {
-		padding: 40px 80px;
+		padding: 40px 70px;
 		position: relative;
 		width: 45%;
 		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
+		@include intermediate {
+			padding: 50px;
+		}
 		@include tablet {
 			width: 100%;
 			padding: 20px 30px;
@@ -302,6 +308,10 @@
 			transition: all 0.5s;
 			background: $primary-color;
 			// background: $light-grey;
+			@include intermediate {
+				top : 20px;
+				right: 30px;
+			}
 			@include tablet {
 				top: 25px;
 				right: 35px;
@@ -579,7 +589,8 @@
 		}
 		&__cart-btn {
 			width: 100%;
-			height: 50px;
+			min-height: 50px;
+			height: fit-content;
 			margin-top: 10px;
 			margin-left: 0;
 			margin-right: 0;

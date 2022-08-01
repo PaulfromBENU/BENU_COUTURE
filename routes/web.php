@@ -100,6 +100,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.header-download-drop-off", [], "lu"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-lu');
 
 		Route::get('/'.trans("slugs.footer-policy", [], "lu"), 'GeneralController@showPolicy')->name('footer.policy-lu');
+		Route::get('/'.trans("slugs.footer-general-info", [], "lu"), 'GeneralController@showGeneralInfo')->name('footer.general-info-lu');
 	});
 
 	Route::group([
@@ -151,6 +152,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.header-download-drop-off", [], "fr"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-fr');
 
 		Route::get('/'.trans("slugs.footer-policy", [], "fr"), 'GeneralController@showPolicy')->name('footer.policy-fr');
+		Route::get('/'.trans("slugs.footer-general-info", [], "fr"), 'GeneralController@showGeneralInfo')->name('footer.general-info-fr');
 	});
 
 	Route::group([
@@ -194,6 +196,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.header-download-drop-off", [], "en"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-en');
 
 		Route::get('/'.trans("slugs.footer-policy", [], "en"), 'GeneralController@showPolicy')->name('footer.policy-en');
+		Route::get('/'.trans("slugs.footer-general-info", [], "en"), 'GeneralController@showGeneralInfo')->name('footer.general-info-en');
 	});
 
 	Route::group([
@@ -237,6 +240,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.header-download-drop-off", [], "de"), 'GeneralController@downloadDropOff')->name('header.download-dropoff-de');
 
 		Route::get('/'.trans("slugs.footer-policy", [], "de"), 'GeneralController@showPolicy')->name('footer.policy-de');
+		Route::get('/'.trans("slugs.footer-general-info", [], "de"), 'GeneralController@showGeneralInfo')->name('footer.general-info-de');
 	});
 
 	Route::group([

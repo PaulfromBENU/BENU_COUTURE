@@ -282,7 +282,7 @@
   {
     "page": "Home",
     "key": "welcome.pres-link-1",
-    "de": "So arbeiten wir! \n\t\t\n\t\t\n\t\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tSo arbeiten wir! > link zu page à poropos",
+    "de": "So arbeiten wir!",
     "fr": "Voici comment nous travaillons !",
     "en": "Here is how we work!",
     "lu": "Esou schaffe mir!"
@@ -4573,7 +4573,7 @@
     "de": "Anderes",
     "fr": "Autres",
     "en": "Others",
-    "lu": ""
+    "lu": "Aneres"
   },
   {
     "page": "Créations",
