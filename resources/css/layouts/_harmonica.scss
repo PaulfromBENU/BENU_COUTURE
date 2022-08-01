@@ -85,6 +85,7 @@
 	display: none;
 	@include tablet {
 		padding: 40px;
+		padding-top: 50px;
 	}
 	@include mobile {
 		padding: 40px;

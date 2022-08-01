@@ -1,4 +1,4 @@
-<section class="w-11/12 lg:w-1/2 m-auto text-center faq service-panel" id="services-faq">
+<section class="w-11/12 lg:w-1/2 m-auto text-center faq service-panel service-column" id="services-faq">
 	<h2 class="faq__title">{!! __('services.faq-title') !!}</h2>
 	<ul class="faq__accordion">
 		@for($index = 1; $index <= $faq_titles_count; $index ++)

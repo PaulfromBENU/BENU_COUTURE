@@ -7,7 +7,7 @@
 		<p>
 			{{ __('footer.more-txt-1') }}
 		</p>
-		<div class="text-center">
+		<div class="text-center footer-learnmore__block__btn">
 			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="btn-couture">{{ __('footer.more-learn') }}</a>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 		<p>
 			{{ __('footer.more-txt-2') }}
 		</p>
-		<div class="text-center">
+		<div class="text-center footer-learnmore__block__btn">
 			<a href="{{ route('about-'.app()->getLocale()) }}" class="btn-couture">{{ __('footer.more-learn-2') }}</a>
 		</div>
 	</div>
