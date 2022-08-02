@@ -2412,7 +2412,7 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-simplified__logo--desktop {
-    display: block;
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -2452,7 +2452,7 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-simplified__logo--mobile {
-    display: none;
+    display: block;
   }
 }
 @media (max-width: 767px) {
@@ -2580,6 +2580,7 @@ input[type=checkbox]:focus {
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-simplified__main-menu__icons li {
     padding-left: 0;
+    padding-right: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -8008,6 +8009,13 @@ input[type=checkbox]:focus {
   background: #D0D0D033 0% 0% no-repeat padding-box;
   padding: 36px 135px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .register__address {
+    margin-top: 45px;
+    padding: 20px 15px;
+    margin-bottom: 15px;
+  }
+}
 @media (max-width: 767px) {
   .register__address {
     margin-top: 45px;
@@ -11325,6 +11333,11 @@ input[type=checkbox]:focus {
 .payment-tunnel {
   width: 72%;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel {
     width: 100%;
@@ -11344,6 +11357,20 @@ input[type=checkbox]:focus {
   padding: 10px 40px;
   cursor: pointer;
   height: 75px;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__block__title {
+    font: normal normal 700 38px/46px "Barlow Condensed";
+    padding: 10px 20px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__block__title {
+    font: normal normal 700 34px/38px "Barlow Condensed";
+    padding: 10px 20px;
+    height: auto;
+  }
 }
 @media (max-width: 767px) {
   .payment-tunnel__block__title {
@@ -11368,6 +11395,16 @@ input[type=checkbox]:focus {
 .payment-tunnel__block__content {
   padding: 40px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__block__content {
+    padding: 35px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__block__content {
+    padding: 30px;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__block__content {
     padding: 20px;
@@ -11381,12 +11418,52 @@ input[type=checkbox]:focus {
   top: 0;
   right: 20px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__identification__modify {
+    position: relative;
+    top: auto;
+    right: auto;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__identification__modify {
+    position: relative;
+    top: auto;
+    right: auto;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .payment-tunnel__identification__modify {
+    position: relative;
+    top: auto;
+    right: auto;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
 .payment-tunnel__identification__field {
   font: normal normal 500 16px/36px "Barlow";
   background: #FFFFFF;
   border-radius: 10px;
   padding: 20px 30px;
   position: relative;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__identification__field {
+    padding: 15px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__identification__field {
+    padding: 15px 20px;
+  }
 }
 @media (max-width: 767px) {
   .payment-tunnel__identification__field {
@@ -11399,6 +11476,16 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 10px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__identification__field h4 {
+    font: normal normal 700 34px/40px "Barlow Condensed";
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__identification__field h4 {
+    font: normal normal 700 34px/40px "Barlow Condensed";
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__identification__field h4 {
     font: normal normal 700 28px/34px "Barlow Condensed";
@@ -11410,9 +11497,24 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   width: 50%;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__identification__field p {
+    width: calc(100% - 2.5rem - 16px);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__identification__field p {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__identification__field p {
     width: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__identification__field__col {
+    width: 48%;
   }
 }
 .payment-tunnel__identification__field__btn-container {
@@ -11420,6 +11522,26 @@ input[type=checkbox]:focus {
   top: 0;
   right: 20px;
   height: 100%;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__identification__field__btn-container {
+    position: relative;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    right: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__identification__field__btn-container {
+    position: relative;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    right: 0;
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .payment-tunnel__identification__field__btn-container {
@@ -11447,6 +11569,18 @@ input[type=checkbox]:focus {
   border-radius: 10px;
   padding: 20px 30px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__field {
+    padding: 10px 20px;
+    font: normal normal 500 16px/34px "Barlow";
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__field {
+    padding: 10px 20px;
+    font: normal normal 500 16px/34px "Barlow";
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__delivery__field {
     padding: 10px 20px;
@@ -11459,6 +11593,16 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 30px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__field h4 {
+    font: normal normal 700 40px/48px "Barlow Condensed";
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__field h4 {
+    font: normal normal 700 34px/40px "Barlow Condensed";
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__delivery__field h4 {
     font: normal normal 700 28px/34px "Barlow Condensed";
@@ -11470,9 +11614,29 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   width: 50%;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__field p {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__field p {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__delivery__field p {
     width: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__field__radio-block {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__field__radio-block {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -11487,6 +11651,24 @@ input[type=checkbox]:focus {
   padding-top: 0;
   padding-bottom: 0;
   width: 340px;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__field__btn {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    margin: 10px 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__field__btn {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    margin: 10px 0px;
+  }
 }
 @media (max-width: 767px) {
   .payment-tunnel__delivery__field__btn {
@@ -11516,6 +11698,16 @@ input[type=checkbox]:focus {
   width: fit-content;
   margin-bottom: 15px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__address__name {
+    max-width: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__address__name {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__delivery__address__name {
     width: 100%;
@@ -11533,6 +11725,24 @@ input[type=checkbox]:focus {
   padding-bottom: 0;
   width: 340px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__address__btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__address__btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__delivery__address__btn {
     position: relative;
@@ -11545,6 +11755,18 @@ input[type=checkbox]:focus {
 .payment-tunnel__delivery__address__btn--1 {
   top: 14px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__address__btn--1 {
+    top: 0;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__address__btn--1 {
+    top: 0;
+    margin-top: 15px;
+  }
+}
 @media (max-width: 767px) {
   .payment-tunnel__delivery__address__btn--1 {
     top: 0;
@@ -11553,6 +11775,24 @@ input[type=checkbox]:focus {
 }
 .payment-tunnel__delivery__address__btn--2 {
   top: 54px;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__delivery__address__btn--2 {
+    top: 0;
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-tunnel__delivery__address__btn--2 {
+    top: 0;
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 1.3rem;
+    padding: 5px;
+  }
 }
 @media (max-width: 767px) {
   .payment-tunnel__delivery__address__btn--2 {
@@ -11585,6 +11825,14 @@ input[type=checkbox]:focus {
   border-radius: 10px;
   padding: 20px 30px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-tunnel__payment__field button {
+    max-width: 80%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .payment-tunnel__payment img {
   max-height: 55px;
 }
@@ -11614,6 +11862,11 @@ input[type=checkbox]:focus {
   width: 25%;
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-summary {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .payment-summary {
     width: 100%;
@@ -11622,7 +11875,7 @@ input[type=checkbox]:focus {
 .payment-summary__title {
   background: #2E1414;
   color: #FFFFFF;
-  height: 75px;
+  min-height: 75px;
   padding: 8px 20px 8px 30px;
   font: normal normal 500 24px/28px "Barlow Condensed";
   letter-spacing: 0px;
@@ -11630,6 +11883,18 @@ input[type=checkbox]:focus {
   border-radius: 10px;
   position: relative;
   z-index: 2;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-summary__title {
+    padding: 8px 20px;
+    font: normal normal 500 24px/28px "Barlow Condensed";
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-summary__title {
+    padding: 8px 20px;
+    font: normal normal 500 24px/28px "Barlow Condensed";
+  }
 }
 @media (max-width: 767px) {
   .payment-summary__title {
@@ -11662,6 +11927,11 @@ input[type=checkbox]:focus {
   border-radius: 8px;
   font: normal normal 500 16px/32px "Barlow";
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-summary__cart-content__article {
+    flex-direction: column;
+  }
+}
 .payment-summary__cart-content__article__name {
   color: #D41C1B;
   font: normal normal 600 26px/28px "Barlow Condensed";
@@ -11686,6 +11956,12 @@ input[type=checkbox]:focus {
   border-radius: 8px;
   margin-right: 15px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-summary__cart-content__article img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
 
 .payment-process__form {
   border: solid 2px #D41C1B;
@@ -11693,6 +11969,11 @@ input[type=checkbox]:focus {
   width: 70%;
   margin: auto;
   margin-bottom: 40px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-process__form {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .payment-process__form {
@@ -11736,6 +12017,20 @@ input[type=checkbox]:focus {
   color: #2E1414;
   margin-bottom: 70px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-confirmation__title {
+    width: 100%;
+    margin-left: 0%;
+    font: normal normal 700 40px/48px "Barlow Condensed";
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-confirmation__title {
+    width: 100%;
+    margin-left: 0%;
+    font: normal normal 700 34px/40px "Barlow Condensed";
+  }
+}
 @media (max-width: 767px) {
   .payment-confirmation__title {
     width: 100%;
@@ -11761,6 +12056,16 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 35px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-confirmation__txt-details {
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-confirmation__txt-details {
+    margin-bottom: 5px;
+  }
+}
 @media (max-width: 767px) {
   .payment-confirmation__txt-details {
     margin-bottom: 5px;
@@ -11771,6 +12076,18 @@ input[type=checkbox]:focus {
   width: 60%;
   margin-left: 20%;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-confirmation__links {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-confirmation__links {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
 @media (max-width: 767px) {
   .payment-confirmation__links {
     width: 100%;
@@ -11780,6 +12097,20 @@ input[type=checkbox]:focus {
 .payment-confirmation__links a {
   display: inline-block;
   margin-bottom: 30px;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .payment-confirmation__links a {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .payment-confirmation__links a {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media (max-width: 767px) {
   .payment-confirmation__links a {

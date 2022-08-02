@@ -1,5 +1,8 @@
 .payment-tunnel {
 	width: 72%;
+	@include tablet {
+		width: 100%;
+	}
 	@include mobile {
 		width: 100%;
 	}
@@ -16,6 +19,16 @@
 			padding: 10px 40px;
 			cursor: pointer;
 			height: 75px;
+			@include intermediate {
+				font: normal normal 700 38px/46px 'Barlow Condensed';
+				padding: 10px 20px;
+				height: auto;
+			}
+			@include tablet {
+				font: normal normal 700 34px/38px 'Barlow Condensed';
+				padding: 10px 20px;
+				height: auto;
+			}
 			@include mobile {
 				font: normal normal 700 28px/34px 'Barlow Condensed';
 				padding: 10px 20px;
@@ -37,6 +50,12 @@
 		}
 		&__content {
 			padding: 40px;
+			@include intermediate {
+				padding: 35px;
+			}
+			@include tablet {
+				padding: 30px;
+			}
 			@include mobile {
 				padding: 20px;
 			}
@@ -50,6 +69,30 @@
 			position: absolute;
 			top: 0;
 			right: 20px;
+			@include intermediate {
+				position: relative;
+				top: auto;
+				right: auto;
+				max-width: 350px;
+				margin: auto;
+				margin-top: 20px;
+			}
+			@include tablet {
+				position: relative;
+				top: auto;
+				right: auto;
+				max-width: 350px;
+				margin: auto;
+				margin-top: 20px;
+			}
+			@include mobile {
+				position: relative;
+				top: auto;
+				right: auto;
+				max-width: 350px;
+				margin: auto;
+				margin-top: 20px;
+			}
 		}
 		&__field {
 			font: normal normal 500 16px/36px 'Barlow';
@@ -57,6 +100,12 @@
 			border-radius: 10px;
 			padding: 20px 30px;
 			position: relative;
+			@include intermediate {
+				padding: 15px 20px;
+			}
+			@include tablet {
+				padding: 15px 20px;
+			}
 			@include mobile {
 				padding: 10px 20px;
 			}
@@ -65,6 +114,12 @@
 				font: normal normal 700 44px/53px 'Barlow Condensed';
 				letter-spacing: 0px;
 				margin-bottom: 10px;
+				@include intermediate {
+					font: normal normal 700 34px/40px 'Barlow Condensed';
+				}
+				@include tablet {
+					font: normal normal 700 34px/40px 'Barlow Condensed';
+				}
 				@include mobile {
 					font: normal normal 700 28px/34px 'Barlow Condensed';
 				}
@@ -74,8 +129,19 @@
 				font: normal normal 500 16px/26px 'Barlow';
 				letter-spacing: 0px;
 				width: 50%;
+				@include intermediate {
+					width: calc(100% - 2.5rem - 16px);
+				}
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
+				}
+			}
+			&__col {
+				@include intermediate {
+					width: 48%;
 				}
 			}
 			&__btn-container {
@@ -83,6 +149,22 @@
 				top: 0;
 				right: 20px;
 				height: 100%;
+				@include intermediate {
+					position: relative;
+					margin: 0;
+					margin-top: 15px;
+					margin-bottom: 10px;
+					right: 0;
+					width: 100%;
+				}
+				@include tablet {
+					position: relative;
+					margin: 0;
+					margin-top: 15px;
+					margin-bottom: 10px;
+					right: 0;
+					width: 100%;
+				}
 				@include mobile {
 					position: relative;
 					margin: 0;
@@ -110,6 +192,14 @@
 			background: $white;
 			border-radius: 10px;
 			padding: 20px 30px;
+			@include intermediate {
+				padding: 10px 20px;
+				font: normal normal 500 16px/34px 'Barlow';
+			}
+			@include tablet {
+				padding: 10px 20px;
+				font: normal normal 500 16px/34px 'Barlow';
+			}
 			@include mobile {
 				padding: 10px 20px;
 				font: normal normal 500 16px/28px 'Barlow';
@@ -119,6 +209,12 @@
 				font: normal normal 700 44px/53px 'Barlow Condensed';
 				letter-spacing: 0px;
 				margin-bottom: 30px;
+				@include intermediate {
+					font: normal normal 700 40px/48px 'Barlow Condensed';
+				}
+				@include tablet {
+					font: normal normal 700 34px/40px 'Barlow Condensed';
+				}
 				@include mobile {
 					font: normal normal 700 28px/34px 'Barlow Condensed';
 				}
@@ -128,11 +224,23 @@
 				font: normal normal 500 16px/26px 'Barlow';
 				letter-spacing: 0px;
 				width: 50%;
+				@include intermediate {
+					width: 100%;
+				}
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
 				}
 			}
 			&__radio-block {
+				@include intermediate {
+					margin-bottom: 10px;
+				}
+				@include tablet {
+					margin-bottom: 10px;
+				}
 				@include mobile {
 					margin-bottom: 10px;
 				}
@@ -144,6 +252,20 @@
 				padding-top: 0; 
 				padding-bottom: 0; 
 				width: 340px;
+				@include intermediate {
+					position: relative;
+					width: 100%;
+					top: 0px; 
+					right: 0px; 
+					margin: 10px 0px;
+				}
+				@include tablet {
+					position: relative;
+					width: 100%;
+					top: 0px; 
+					right: 0px; 
+					margin: 10px 0px;
+				}
 				@include mobile {
 					position: relative;
 					width: 100%;
@@ -170,6 +292,12 @@
 				padding: 4px 10px;
 				width: fit-content;
 				margin-bottom: 15px;
+				@include intermediate {
+					max-width: 250px;
+				}
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
 				}
@@ -185,6 +313,20 @@
 				padding-top: 0; 
 				padding-bottom: 0; 
 				width: 340px;
+				@include intermediate {
+					position: relative;
+					top: 0;
+					right: 0;
+					width: 100%;
+					margin: 0;
+				}
+				@include tablet {
+					position: relative;
+					top: 0;
+					right: 0;
+					width: 100%;
+					margin: 0;
+				}
 				@include mobile {
 					position: relative;
 					top: 0;
@@ -194,6 +336,14 @@
 				}
 				&--1 {
 					top: 14px;
+					@include intermediate {
+						top: 0;
+						margin-top: 0px;
+					}
+					@include tablet {
+						top: 0;
+						margin-top: 15px;
+					}
 					@include mobile {
 						top: 0;
 						margin-top: 15px;
@@ -201,6 +351,20 @@
 				}
 				&--2 {
 					top: 54px;
+					@include intermediate {
+						top: 0;
+						display: inline-block;
+						margin-top: 12px;
+						font-size: 1.3rem;
+						padding: 5px;
+					}
+					@include tablet {
+						top: 0;
+						display: inline-block;
+						margin-top: 12px;
+						font-size: 1.3rem;
+						padding: 5px;
+					}
 					@include mobile {
 						top: 0;
 						display: inline-block;
@@ -234,6 +398,14 @@
 			background: $white;
 			border-radius: 10px;
 			padding: 20px 30px;
+			button {
+				@include intermediate {
+					max-width: 80%;
+					text-align: center;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
 		}
 		img {
 			max-height: 55px;
@@ -267,13 +439,16 @@
 .payment-summary {
 	width: 25%;
 	position: relative;
+	@include tablet {
+		width: 100%;
+	}
 	@include mobile {
 		width: 100%;
 	}
 	&__title {
 		background: #2E1414;
 		color: $white;
-		height: 75px;
+		min-height: 75px;
 		padding: 8px 20px 8px 30px;
 		font: normal normal 500 24px/28px 'Barlow Condensed';
 		letter-spacing: 0px;
@@ -281,6 +456,14 @@
 		border-radius: 10px;
 		position: relative;
 		z-index: 2;
+		@include intermediate {
+			padding: 8px 20px;
+			font: normal normal 500 24px/28px 'Barlow Condensed';
+		}
+		@include tablet {
+			padding: 8px 20px;
+			font: normal normal 500 24px/28px 'Barlow Condensed';
+		}
 		@include mobile {
 			padding: 8px 20px;
 			font: normal normal 500 24px/28px 'Barlow Condensed';
@@ -309,6 +492,9 @@
 			background: $white;
 			border-radius: 8px;
 			font: normal normal 500 16px/32px 'Barlow';
+			@include intermediate {
+				flex-direction: column;
+			}
 			&__name {
 				color: $primary-color;
 				font: normal normal 600 26px/28px 'Barlow Condensed';
@@ -330,6 +516,10 @@
 				max-height: 150px;
 				border-radius: 8px;
 				margin-right: 15px;
+				@include intermediate {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
 			}
 		}
 	}
@@ -342,6 +532,9 @@
 		width: 70%;
 		margin: auto;
 		margin-bottom: 40px;
+		@include tablet {
+			width: 100%;
+		}
 		@include mobile {
 			width: 100%;
 		}
@@ -382,6 +575,16 @@
 		letter-spacing: 0px;
 		color: #2E1414;
 		margin-bottom: 70px;
+		@include intermediate {
+			width: 100%;
+			margin-left: 0%;
+			font: normal normal 700 40px/48px 'Barlow Condensed';
+		}
+		@include tablet {
+			width: 100%;
+			margin-left: 0%;
+			font: normal normal 700 34px/40px 'Barlow Condensed';
+		}
 		@include mobile {
 			width: 100%;
 			margin-left: 0%;
@@ -405,6 +608,12 @@
 		font: normal normal 500 16px/28px 'Barlow';
 		letter-spacing: 0px;
 		margin-bottom: 35px;
+		@include intermediate {
+			margin-bottom: 5px;
+		}
+		@include tablet {
+			margin-bottom: 5px;
+		}
 		@include mobile {
 			margin-bottom: 5px;
 		}
@@ -413,6 +622,14 @@
 		padding-top: 35px;
 		width: 60%;
 		margin-left: 20%;
+		@include intermediate {
+			width: 100%;
+			margin-left: 0%;
+		}
+		@include tablet {
+			width: 100%;
+			margin-left: 0%;
+		}
 		@include mobile {
 			width: 100%;
 			margin-left: 0%;
@@ -420,6 +637,16 @@
 		a {
 			display: inline-block;
 			margin-bottom: 30px;
+			@include intermediate {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@include tablet {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
 			@include mobile {
 				width: 100%;
 				margin-left: 0;

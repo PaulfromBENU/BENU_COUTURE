@@ -3,7 +3,7 @@
     <h4>{{ __('cart.info-required') }}</h4>
     <div class="mb-5">
         <div class="flex justify-between">
-            <div class="w-full lg:w-5/12">
+            <div class="w-full lg:w-5/12 payment-tunnel__identification__field__col">
                 <div class="flex justify-start input-group register__form__radio-group">
                     <div class="mr-4">
                         <input type="radio" id="register_gender_male" name="register_gender" value="male" wire:model="gender">
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="w-full lg:w-5/12">
+            <div class="w-full lg:w-5/12 payment-tunnel__identification__field__col">
                 <div class="input-group reactive-label-input">
                     
                 </div>
@@ -48,16 +48,16 @@
         </div>
     </div>
 
-    <div>
-        <label for="register_age" style="color: #2E1414;">
-            <input id="register_age" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_age" value="1" tabindex="5" wire:model="is_over_18" required>
-            <span class="ml-10">{{ __('forms.register-major-conf') }} *</span>
+    <div class="mb-1">
+        <label for="register_age" class="flex w-full" style="color: #2E1414; transform: scale(1);">
+            <input id="register_age" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_age" value="1" tabindex="5" wire:model="is_over_18" required style="margin-top: 6px;">
+            <p class="ml-10">{{ __('forms.register-major-conf') }} *</p>
         </label>
     </div>
     <div class="mb-3">
-        <label for="register_legal" style="color: #2E1414;">
-            <input id="register_legal" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_legal" value="1" tabindex="6" wire:model="accepts_conditions" required>
-            <span class="ml-10">{!! __('forms.register-conditions-conf') !!} *</span>
+        <label for="register_legal" class="flex w-full" style="color: #2E1414; transform: scale(1);">
+            <input id="register_legal" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_legal" value="1" tabindex="6" wire:model="accepts_conditions" required style="margin-top: 6px;">
+            <p class="ml-10">{!! __('forms.register-conditions-conf') !!} *</p>
         </label>
     </div>
 

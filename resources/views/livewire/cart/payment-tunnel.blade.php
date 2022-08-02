@@ -1,5 +1,6 @@
 <section class="payment-tunnel">
     @inshop
+    <!-- Case administrator selling items in shop -->
     <div class="payment-tunnel__in-shop">
         <h2>
             {{ __('cart.payment-in-shop-title') }}
@@ -54,7 +55,10 @@
             </div>
         </form>
     </div>
+
+
     @else
+    <!-- Case standard user on website -->
     <div class="payment-tunnel__identification payment-tunnel__block">
         <h2 class="payment-tunnel__block__title @if($step == 1) payment-tunnel__block__title--current @else payment-tunnel__block__title--finished @endif" wire:click="changeStep(1)" id="payment-tunnel-block-1">
             1. {{ __('cart.payment-id') }}
@@ -198,14 +202,15 @@
                             </div>
                             @endif
                         @else
-                            @if($address_chosen == 0)
+                            @if(1 == 1)
+                            <!--  -->
                             <div class="text-center mt-10">
                                 <button class="btn-couture" wire:click="addAddress">
                                     + {{ __('cart.payment-delivery-add-new') }}
                                 </button>
                             </div>
                             @else
-                            <p>
+                            <!-- <p>
                                 {!! __('cart.payment-delivery-wish') !!}:
                             </p>
                             <div class="flex justify-between payment-tunnel__delivery__address-container">
@@ -220,7 +225,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             @endif
                         @endauth
                     @endif
@@ -440,11 +445,11 @@
                         </p>
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 flex flex-col justify-center">
                         <img src="{{ asset('images/pictures/services_payment_cards.png') }}" alt="Payment with Visa, Mastercard, AmEx" class="m-auto" />
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1 flex flex-col justify-center">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('card')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
@@ -452,17 +457,17 @@
 
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
                 <div class="grid grid-cols-1 lg:grid-cols-8">
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-left">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-paypal') }}
                         </p>
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 flex flex-col justify-center">
                         <img src="{{ asset('images/pictures/services_payment_paypal.png') }}" alt="Payment with Paypal" class="m-auto" />
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1 flex flex-col justify-center">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('paypal')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
@@ -470,17 +475,17 @@
 
             <div class="payment-tunnel__payment__field flex flex-col justify-center mb-7">
                 <div class="grid grid-cols-1 lg:grid-cols-8">
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-left">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-payconiq') }}
                         </p>
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 flex flex-col justify-center">
                         <img src="{{ asset('images/pictures/services_payment_digicash.png') }}" alt="Payment with Payconiq" class="m-auto" />
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1 flex flex-col justify-center">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('payconiq')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>
@@ -489,17 +494,17 @@
             @auth
             <div class="payment-tunnel__payment__field flex flex-col justify-center">
                 <div class="grid grid-cols-1 lg:grid-cols-8">
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-left">
                         <p style="padding-top: 7px;">
                             {{ __('cart.payment-pay-with-transfer') }}
                         </p>
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 lg:col-span-2 flex flex-col justify-center">
                         <img src="{{ asset('images/pictures/services_payment_transfer.png') }}" alt="Payment with bank transfer" class="m-auto" />
                     </div>
                     <div class="col-span-1 mobile-hidden"></div>
-                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1">
+                    <div class="col-span-1 lg:col-span-2 text-center lg:text-right pt-3 lg:pt-1 flex flex-col justify-center">
                         <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateOrder('transfer')">{{ __('cart.payment-confirm') }}</button>
                     </div>
                 </div>

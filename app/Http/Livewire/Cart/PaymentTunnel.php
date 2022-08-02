@@ -84,6 +84,8 @@ class PaymentTunnel extends Component
         $this->order_address_id = 0;
         $this->order_invoice_address_id = 0;
 
+        $this->total_price = -100;
+
         if (auth()->check()) {
             $this->user_id = auth()->user()->id;
             $this->step = 2;
@@ -163,7 +165,7 @@ class PaymentTunnel extends Component
         }
 
         if ($step == 3) {
-            if ($this->info_valid == 1 && $this->address_valid == 1) {
+            if ($this->info_valid == 1 && $this->address_valid == 1 && $this->delivery_address_chosen && $this->invoice_address_chosen && $this->total_price !== -100) {
                 $this->step = $step;
                 $this->emit('goToPaymentStep3');
             }

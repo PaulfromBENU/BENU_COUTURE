@@ -19,7 +19,7 @@
 						{{ __('cart.payment-your-order-contains') }}<br/><strong>{{ $cart->couture_variations->count() }} <span class="uppercase">{{ trans_choice('cart.payment-products', $cart->couture_variations->count()) }}</span></strong>
 					</h3>
 					<div class="payment-summary__title__plus" id="payment-cart-plus">
-						+
+						<p>+</p>
 					</div>
 					<div class="payment-summary__title__plus" id="payment-cart-minus" style="display: none;">
 						-
