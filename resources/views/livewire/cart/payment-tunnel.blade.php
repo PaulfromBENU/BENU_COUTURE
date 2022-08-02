@@ -144,7 +144,9 @@
                                 @endif
                             </p>
                             <div class="text-right">
+                                @if(!$pdf_voucher_only)
                                 <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover payment-tunnel__delivery__field__btn" wire:click="updateDeliveryMethod">{{ __('cart.payment-btn-modify') }}</button>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -241,7 +243,9 @@
                                 @endif
                             </p>
                             <div class="text-right">
+                                @if(!$pdf_voucher_only)
                                 <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover payment-tunnel__delivery__field__btn" wire:click="updateDeliveryMethod">{{ __('cart.payment-btn-modify') }}</button>
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -33,6 +33,7 @@ class PaymentTunnel extends Component
     public $delivery_chosen;
     public $delivery_method;// 0: collect at shop, 1: home delivery
     public $total_price;
+    public $pdf_voucher_only;
 
     // Info data
     public $order_gender;
@@ -86,6 +87,8 @@ class PaymentTunnel extends Component
 
         $this->total_price = -100;
 
+        $this->pdf_voucher_only = 0;
+
         if (auth()->check()) {
             $this->user_id = auth()->user()->id;
             $this->step = 2;
@@ -94,18 +97,26 @@ class PaymentTunnel extends Component
             $this->step = 1;
         }
 
+        $this->fill_info = 0;
+        $this->fill_address = 0;
+        $this->fill_invoice_address = 0;
+        $this->require_invoice_address = 0;
+
         $this->order_id  = 0;
         if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
             $cart = Cart::where('cart_id', $this->cart_id)->first();
             if ($cart->order()->count() >  0) {
                 $this->order_id = $cart->order->id;
             }
+            if ($cart->couture_variations()->count() == 1 
+                && $cart->couture_variations()->first()->name == 'voucher' 
+                && $cart->couture_variations()->first()->voucher_type == 'pdf') {
+                $this->delivery_chosen = 1;
+                $this->delivery_address_chosen = 1;
+                $this->require_invoice_address = 1;
+                $this->pdf_voucher_only = 1;
+            }
         }
-
-        $this->fill_info = 0;
-        $this->fill_address = 0;
-        $this->fill_invoice_address = 0;
-        $this->require_invoice_address = 0;
 
         $this->address_name = "";
         $this->invoice_address_name = "";
