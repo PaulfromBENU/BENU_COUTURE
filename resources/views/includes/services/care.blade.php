@@ -1,7 +1,7 @@
 <section class="w-11/12 lg:w-1/2 m-auto text-center care service-panel service-column" id="services-care">
 	<h2 class="care__title">{{ __('services.care-title') }}</h2>
 	<p class="care__subtitle">
-		{{ __('services.care-subtitle') }} <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('services.care-subtitle-link') }}</a>
+		{{ __('services.care-subtitle') }} <!-- <a href="#" class="primary-color hover:text-gray-800 transition">{{ __('services.care-subtitle-link') }}</a> -->
 	</p>
 
 	@php $desc_query = "description_".app()->getLocale(); @endphp

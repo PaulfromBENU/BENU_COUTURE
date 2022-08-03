@@ -37,7 +37,7 @@
 		</div>
 	</div>
 
-	<h2 class="participate-give__title pt-10 mt-10">{{ __('participate.give-title-2') }}</h2>
+	<h2 class="participate-give__title pt-10 mt-10" id="collect-points">{{ __('participate.give-title-2') }}</h2>
 	<div class="participate-give__content">
 		<p class="participate-give__content__txt">
 			{!! __('participate.give-content-3-1') !!}
