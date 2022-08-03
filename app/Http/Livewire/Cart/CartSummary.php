@@ -156,6 +156,12 @@ class CartSummary extends Component
         $this->articles_sum = $this->computeArticlesSum($this->cart_id);
         $this->with_extra = $this->computeExtraSum($this->cart_id);
         $this->delivery_sum = $this->computeDeliverySum($this->cart_id, $this->country_code);
+        if (Cart::where('cart_id', $this->cart_id)->count() > 0) {
+            $cart = Cart::where('cart_id', $this->cart_id)->first();
+            if ($cart->couture_variations()->count() == 1 && $cart->couture_variations()->first()->name == 'voucher' && $cart->couture_variations()->first()->voucher_type == 'pdf') {
+                $this->delivery_sum = 0;
+            }
+        }
         $this->gift_sum = $this->computeGiftSum($this->cart_id);
         $this->computeTotalWithVoucher();
     }

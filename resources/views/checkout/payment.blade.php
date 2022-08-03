@@ -35,7 +35,7 @@
 									{{ __('cart.payment-voucher') }}
 								</p>
 								<div class="payment-summary__cart-content__article__size">
-									@if($variation->voucher_value == 'pdf') PDF @else {{ __('vouchers.format-clothe') }} @endif
+									@if($variation->voucher_type == 'pdf') PDF @else {{ __('vouchers.format-clothe') }} @endif
 								</div>
 								<div class="flex">
 									<p class="payment-summary__cart-content__article__info">

@@ -137,7 +137,9 @@
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-method') }}</strong></h5>
                         <div class="flex flex-col lg:flex-row justify-start lg:justify-between">
                             <p class="mb-1">
-                                @if($delivery_method == '0')
+                                @if($pdf_voucher_only)
+                                {{ __('cart.payment-delivery-pdf-voucher') }}
+                                @elseif($delivery_method == '0')
                                 {{ __('cart.payment-delivery-in-shop') }}
                                 @else
                                 {{ __('cart.payment-delivery-at-home') }}
@@ -236,7 +238,9 @@
                         <h5 class="mb-2"><strong>{{ __('cart.payment-chosen-delivery-method') }}</strong></h5>
                         <div class="flex flex-col lg:flex-row jsutify-start lg:justify-between">
                             <p class="mb-1">
-                                @if($delivery_method == '0')
+                                @if($pdf_voucher_only)
+                                {{ __('cart.payment-delivery-pdf-voucher') }}
+                                @elseif($delivery_method == '0')
                                 {{ __('cart.payment-delivery-in-shop') }}
                                 @else
                                 {{ __('cart.payment-delivery-at-home') }}

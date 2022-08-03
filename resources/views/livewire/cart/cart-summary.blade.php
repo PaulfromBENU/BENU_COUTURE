@@ -92,14 +92,16 @@
     </div>
 
     @else
-    <div class="flex justify-between cart-summary__price">
-        <p>
-            {{ __('cart.voucher-reduction') }}
-        </p>
-        <p>
-            -{{ $voucher_current_value - $voucher_remaining_value }}&euro;
-        </p>
-    </div>
+        @if($voucher_current_value !== $voucher_remaining_value)
+            <div class="flex justify-between cart-summary__price">
+                <p>
+                    {{ __('cart.voucher-reduction') }}
+                </p>
+                <p>
+                    - {{ $voucher_current_value - $voucher_remaining_value }}&euro;
+                </p>
+            </div>
+        @endif
     @endif
 
     <div class="flex justify-between cart-summary__price">
