@@ -10,31 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-	<title>Bienvenue sur BENU</title>
+	<title>{{ __('emails.register-welcome-to-benu') }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
-		<img src="{{ $message->embed(asset('images/pictures/logo_benu_couture.png')) }}" style="height: 180px; margin: auto;" />
+		<img src="{{ $message->embed(asset('images/pictures/logo_benu_green.png')) }}" style="height: 180px; margin: auto;" />
 	</div>
 	<div>
 		<p>
-			<strong>Bonjour {{ $user->first_name }},</strong>
+			<strong>{{ __('emails.register-hello') }} {{ ucfirst($user->first_name) }},</strong>
 		</p>
 		<p>
-			Bienvenue sur BENU ! Nous confirmons ton inscription sur nos plates-formes. Ton compte est désormais disponible sur tous les sites web BENU (sauf BENU REUSE). Ton e-mail de connexion est le suivant :
+			{{ __('emails.register-txt-1') }}
 		</p>
-		<p style="text-align: center;">
+		<p style="text-align: center; color: #27955B;">
 			<strong>{{ $user->email }}</strong>
 		</p>
 		<p>
-			Tu peux également suivre tes activités sur BENU depuis ton <a href="{{ route('dashboard', ['locale' => $locale]) }}">espace personnel</a>.
-			Pour toute question, tu peux nous contacter grâce à notre <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">formulaire de contact</a>.
+			{{ __('emails.register-txt-2') }} <a href="{{ route('dashboard', ['locale' => $locale]) }}">{{ __('emails.register-dashboard') }}</a> {{ __('emails.register-txt-3') }}.
+			{{ __('emails.register-txt-4') }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ __('emails.register-txt-5') }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">{{ __('emails.register-contact') }}</a>.
 		</p>
 		<p>
-			À bientôt sur nos plates-formes ou dans notre magasin !
+			{{ __('emails.register-txt-6') }}
 		</p>
 		<p>
-			<em><strong>L'équipe BENU</strong></em>
+			<em><strong>{{ __('emails.register-benu-team-signature') }}</strong></em>
 		</p>
 	</div>
 </body>
