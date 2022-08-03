@@ -4355,6 +4355,52 @@ input[type=checkbox]:focus {
   margin-bottom: 35px;
 }
 
+.footer-info {
+  padding-top: 66px;
+  margin-bottom: 100px;
+}
+.footer-info__title {
+  text-align: center;
+  font: normal normal 700 38px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+  width: 100%;
+  margin-left: 0%;
+}
+@media (max-width: 767px) {
+  .footer-info__title {
+    font: normal normal 700 32px/46px "Barlow Condensed";
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.footer-info__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.footer-info__paragraph {
+  font: normal normal 500 16px/36px "Barlow";
+  margin-bottom: 35px;
+}
+.footer-info__paragraph a {
+  color: #D41C1B;
+  transition: color 0.2s;
+}
+.footer-info__paragraph a:hover {
+  color: #2E1414;
+}
+.footer-info__highlight {
+  padding: 30px;
+  background: #F9E2E2;
+  border-radius: 12px;
+  font: normal normal 700 22px/36px "Barlow";
+  text-align: center;
+  margin-bottom: 35px;
+}
+
 .welcome-presentation {
   margin-bottom: 60px;
   width: 100vw;

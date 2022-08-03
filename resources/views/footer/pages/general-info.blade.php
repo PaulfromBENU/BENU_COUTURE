@@ -21,10 +21,10 @@
 @endsection
 
 @section('main-content')
-	<section class="footer-legal w-4/5 lg:w-1/2 m-auto">
-		<h3 class="footer-legal__subtitle">{{ __('footer.general-info-subtitle') }}</h3>
-		<h1 class="footer-legal__title">{{ __('footer.general-info-title') }}</h1>
-		<p class="footer-legal__paragraph">
+	<section class="footer-info w-4/5 lg:w-1/2 m-auto">
+		<h3 class="footer-info__subtitle">{{ __('footer.general-info-subtitle') }}</h3>
+		<h1 class="footer-info__title">{{ __('footer.general-info-title') }}</h1>
+		<p class="footer-info__paragraph">
 			{{ __('footer.general-info-txt-1') }}
 		</p>
 		
