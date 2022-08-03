@@ -406,7 +406,11 @@
         </div>
         @if($address_valid)
         <div class="payment-tunnel__block__content" @if($step == 2 || !$address_valid) style="display:none;" @endif>
-            @if($delivery_method == 0)
+            @if($pdf_voucher_only)
+            <div class="payment-tunnel__delivery__summary">
+                {{ __('cart.payment-delivery-address-summary') }}&nbsp;: {{ __('cart.payment-delivery-by-email') }}
+            </div>
+            @elseif($delivery_method == 0)
             <div class="payment-tunnel__delivery__summary">
                 {{ __('cart.payment-delivery-address-summary') }}&nbsp;: {{ __('cart.payment-delivery-in-shop') }}
             </div>

@@ -33,6 +33,11 @@
 						{{ __('services.return-refund') }}
 					</button>
 				</li>
+				<li>
+					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-reclamations').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+						{{ __('services.return-reclamations') }}
+					</button>
+				</li>
 			</ul>
 		</div>
 
@@ -69,6 +74,22 @@
 				
 				<p class="mb-2">
 					{!! __('services.return-info-3') !!}
+				</p>
+			</div>
+
+			<div class="return__chapter" id="return-chapter-reclamations">
+				<h3>{{ __('services.return-reclamations') }}</h3>
+				
+				<p class="mb-2">
+					{!! __('services.return-reclamations-txt-1') !!}
+				</p>
+
+				<p class="mb-2">
+					{!! __('services.return-reclamations-txt-2') !!}
+				</p>
+
+				<p class="mb-2">
+					{!! __('services.return-reclamations-txt-3') !!}
 				</p>
 			</div>
 		</div>
