@@ -6,7 +6,7 @@
         </div>
         <div id="mobile-creations-menu-toggle" class="side-mobile__toggler side-mobile__toggler--creation flex justify-start">
             @svg('benu-icon-squares-categories', 'side-mobile__toggler__svg')
-            <p style="width: calc(100% - 38px);">
+            <p class="uppercase" style="width: calc(100% - 38px);">
                 {{ __('welcome.mobile-menu-btn-creations') }}
                 <!-- Creations -->
             </p>
@@ -21,17 +21,17 @@
         </li>
         <li>
             <a href="{{ route('news-'.app()->getLocale()) }}" class="side-mobile-link uppercase">
-                {!! __('welcome.side-menu-news') !!}
+                <strong>{!! __('welcome.side-menu-news') !!}</strong>
             </a>
         </li>
         <li>
             <a href="{{ route('about-'.app()->getLocale()) }}" class="side-mobile-link uppercase">
-                {!! __('welcome.side-menu-about') !!}
+                <strong>{!! __('welcome.side-menu-about') !!}</strong>
             </a>
         </li>
         <li>
             <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="side-mobile-link uppercase">
-                {!! __('welcome.side-menu-shops') !!}
+                <strong>{!! __('welcome.side-menu-shops') !!}</strong>
             </a>
         </li>
         <li>

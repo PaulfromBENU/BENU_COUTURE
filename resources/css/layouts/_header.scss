@@ -317,12 +317,13 @@
 			color: $dark-text;
 			font-size: 1.05rem;
 			font-weight: 500;
-			padding: .6rem 1rem;
+			padding: .65rem 1rem;
 			cursor: pointer;
 			background-color: $primary-color-light;
 			font-family: 'Barlow Condensed';
 			border-radius: 5px;
 			transition: $transition-base;
+			text-transform: uppercase;
 			@include intermediate {
 				width: 150px;
 			}
@@ -339,7 +340,7 @@
 				margin-right: 1.875rem;
 				transform: rotate(0deg);
 				transition: all 0.2s;
-				margin-top: 5px;
+				margin-top: 4px;
 				@include intermediate {
 					margin-right: 1rem;
 				}
@@ -348,7 +349,7 @@
 				height: 15px;
 				width: 20px;
 				margin-left: 1.875rem;
-				margin-top: 6px;
+				margin-top: 4px;
 				@include intermediate {
 					margin-left: 1rem;
 				}
