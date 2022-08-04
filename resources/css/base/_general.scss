@@ -1,3 +1,11 @@
+html, body {
+	height: 100%;
+}
+
+::selection {
+	background: $primary-color-light;
+}
+
 @font-face {
 	font-family: "Barlow";
 	src:  url('/fonts/Barlow/Barlow-ExtraLight.ttf');
@@ -279,6 +287,9 @@ body, html {
 	left: 0;
 	width: 100vw;
 	z-index: 1;
+	@include tablet {
+		padding-top: 100px;
+	}
 	@include mobile {
 		padding-top: 90px;
 	}
@@ -537,7 +548,7 @@ input[type="checkbox"] {
 				left: 50%;
 				margin-left: -5px;
 				border: 5px solid transparent;
-				border-top-color: $primary-color
+				border-top-color: $primary-color;
 			}
 		}
 	}
@@ -577,8 +588,8 @@ input[type="checkbox"] {
 		visibility: hidden;
 		display: none;
 	}
-	@include tablet {
-		visibility: hidden;
-		display: none;
-	}
+	// @include tablet {
+	// 	visibility: hidden;
+	// 	display: none;
+	// }
 }

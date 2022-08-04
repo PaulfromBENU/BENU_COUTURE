@@ -2,6 +2,7 @@
     @php
     $localized_tag_1 = "tag_1_".app()->getLocale();
     $localized_tag_2 = "tag_2_".app()->getLocale();
+    $localized_tag_3 = "tag_3_".app()->getLocale();
     $localized_title = "title_".app()->getLocale();
     $localized_slug = "slug_".app()->getLocale();
     $localized_summary = "summary_".app()->getLocale();
@@ -25,6 +26,11 @@
             @if($news->$localized_tag_2 !== '' && $news->$localized_tag_2 !== null)
             <div class="all-news__link__tags__tag">
                 {{ $news->$localized_tag_2 }}
+            </div>
+            @endif
+            @if($news->$localized_tag_3 !== '' && $news->$localized_tag_3 !== null)
+            <div class="all-news__link__tags__tag">
+                {{ $news->$localized_tag_3 }}
             </div>
             @endif
         </div>

@@ -85,10 +85,37 @@
 
     @if(!$message_sent)
         @if(!$safety_check)
-        <div class="contact__form__form__security flex flex-wrap w-5/6 lg:w-2/3 m-auto justify-between">
-            <p>{!! __('forms.security-question') !!} <span class="mobile-only"><br/></span> {{ $checksum_number_1 }} + {{ $checksum_number_2 }}&nbsp;?</p>
-            <input type="text" minlength="1" maxlength="2" class="ml-8 input-underline" required wire:model.defer="user_sum" style="height: 40px;">
-            <div wire:click="checkSum" class="contact__form__form__security__btn btn-couture-plain" style="height: 50px; margin-left: 30px;">{{ __('forms.check') }}</div>
+        <div class="contact__form__form__security w-5/6 lg:w-2/3 m-auto justify-between">
+            <div class="w-full text-center mb-3 md:mb-5">
+                <p class="mb-3 md:mb-4">{!! __('forms.security-question') !!}</p>
+                <div class="flex justify-center m-auto">
+                    <p class="text-center mr-1" >
+                        {{ $checksum_number_1 }} + {{ $checksum_number_2 }} =&nbsp;
+                    </p>
+                    <div class="text-center">
+                        <input type="text" minlength="1" maxlength="2" class="ml-2 mr-2 input-underline rounded" required wire:model.defer="user_sum" style="height: 40px; border: solid 1px lightgrey; width: 50px; margin-top: 4px;">
+                    </div>
+                    <p class="ml-1">
+                        &nbsp;?
+                    </p>
+                </div>
+            </div>
+            <!-- <p>{{ $checksum_number_1 }} + {{ $checksum_number_2 }}&nbsp;= </p> -->
+            <!-- <input type="text" minlength="1" maxlength="2" class="ml-8 input-underline tablet-hidden rounded" required wire:model.defer="user_sum" style="height: 40px; border: solid 1px lightgrey;"> -->
+
+            <!-- <div class="mobile-only w-1/2 mb-3 md:mb-5">
+                <p class="mb-3">{!! __('forms.security-question-mobile') !!}</p> 
+                <div class="flex justify-center w-3/4 md:w-1/2 m-auto">
+                    <p class="w-1/2 md:w-1/4" style="font-size: 18px;">
+                        {{ $checksum_number_1 }} + {{ $checksum_number_2 }} =&nbsp;?
+                    </p>
+                    <div class="w-1/2 md:w-1/4">
+                        <input type="text" minlength="1" maxlength="2" class="ml-2 input-underline mobile-only rounded" required wire:model.defer="user_sum" style="height: 40px; border: solid 1px lightgrey;">
+                    </div>
+                </div>
+            </div> -->
+
+            <div wire:click="checkSum" class="contact__form__form__security__btn btn-couture-plain" style="max-width: 250px;">{{ __('forms.check') }}</div>
         </div>
         @elseif($safety_check == 1)
         <input type="submit" name="contact_submit" value="{{ __('forms.send-message') }}" class="btn-couture-plain" style="height: 50px;">

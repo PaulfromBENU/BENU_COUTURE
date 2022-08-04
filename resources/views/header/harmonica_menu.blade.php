@@ -33,7 +33,8 @@
 							{!! __('header.village-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.village-desc-mobile') !!}
+							<!-- {!! __('header.village-desc-mobile') !!} -->
+							{!! __('header.village-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-village">
@@ -62,7 +63,8 @@
 							{!! __('header.sis-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.sis-desc-mobile') !!}
+							<!-- {!! __('header.sis-desc-mobile') !!} -->
+							{!! __('header.sis-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sis">{!! __('header.discover-sis') !!}</a>
@@ -90,7 +92,8 @@
 							{!! __('header.sloow-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.sloow-desc-mobile') !!}
+							<!-- {!! __('header.sloow-desc-mobile') !!} -->
+							{!! __('header.sloow-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://sloow.benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-sloow">{!! __('header.discover-sloow') !!}</a>
@@ -118,7 +121,8 @@
 							{!! __('header.couture-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.couture-desc-mobile') !!}
+							<!-- {!! __('header.couture-desc-mobile') !!} -->
+							{!! __('header.couture-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://couture.benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-couture">{!! __('header.discover-couture') !!}</a>
@@ -146,7 +150,8 @@
 							{!! __('header.reuse-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.reuse-desc-mobile') !!}
+							<!-- {!! __('header.reuse-desc-mobile') !!} -->
+							{!! __('header.reuse-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://www.benureuse.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-reuse">{!! __('header.discover-reuse') !!}</a>
@@ -174,7 +179,8 @@
 							{!! __('header.lasa-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.lasa-desc-mobile') !!}
+							<!-- {!! __('header.lasa-desc-mobile') !!} -->
+							{!! __('header.lasa-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-lasa">{!! __('header.discover-lasa') !!}</a>
@@ -202,7 +208,8 @@
 							{!! __('header.design-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.design-desc-mobile') !!}
+							<!-- {!! __('header.design-desc-mobile') !!} -->
+							{!! __('header.design-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-design">{!! __('header.discover-design') !!}</a>
@@ -230,7 +237,8 @@
 							{!! __('header.break-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							{!! __('header.break-desc-mobile') !!}
+							<!-- {!! __('header.break-desc-mobile') !!} -->
+							{!! __('header.break-desc') !!}
 						</div>
 						<div class="text-center">
 							<a href="https://benu.lu" target="_blank" class="btn-trans btn-trans--b-white btn-hover-break">{!! __('header.discover-break') !!}</a>

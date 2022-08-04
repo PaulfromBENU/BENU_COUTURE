@@ -29,7 +29,7 @@ class UserRegistered extends Mailable
     public function __construct(User $user)
     {
         $this->user = $user;
-        $this->locale = session('locale');
+        $this->locale = strtolower($user->favorite_language);
     }
 
     /**
@@ -39,6 +39,6 @@ class UserRegistered extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject('Bienvenue sur BENU')->view('emails.registered-user');
+        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.new-user-subject", [], $this->locale))->view('emails.registered-user');
     }
 }

@@ -30,6 +30,7 @@ $unnamed-color-f9941d: #F9941D;
 $unnamed-color-262544: #262544;
 $bg-light-grey: #F4F4F4;
 $sold-grey: #867576;
+$success-green: #E6F1EFFF;
 
 // Colors for BENU COUTURE
 $primary-color: $benu_couture_couleur_principale;
@@ -45,6 +46,7 @@ $light-grey-transparent: #D0D0D033;
 //Media queries breakpoints - inherited from TailwindCSS native breakpoints
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$intermediate-width: 1200px;
 $max-display-width: 1720px;
 
 //Transitions

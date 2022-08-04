@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-@if(app()->getLocale() == 'lu')
-<html lang="lb">
-@else
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@endif
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -111,34 +107,7 @@
                 </div>
 
                 <!-- Side menu for mobile -->
-                <div id="side-mobile" class="side-mobile mobile-only benu-container">
-                    <ul class="side-mobile__links">
-                        <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{!! __('welcome.side-menu-home') !!}</a></li>
-                        <li>
-                            <a onclick="document.getElementById('host-anchor').scrollIntoView({ behavior: 'smooth', block: 'center' });" style="cursor: pointer;" class="side-mobile-link">
-                                {!! __('welcome.side-menu-link-1') !!}
-                            </a>
-                        </li>
-                        <li>
-                            <a onclick="document.getElementById('reservation-anchor').scrollIntoView({ behavior: 'smooth', block: 'center' });" style="cursor: pointer;" class="side-mobile-link">
-                                {!! __('welcome.side-menu-link-2') !!}
-                            </a>
-                        </li>
-                        <li>
-                            <a onclick="document.getElementById('faq-anchor').scrollIntoView({ behavior: 'smooth', block: 'center' });" style="cursor: pointer;" class="side-mobile-link">
-                                {!! __('welcome.side-menu-link-3') !!}
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="mb-5">
-                        <a href="{{ route('newsletter-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit inline-block" style="margin-left: 0px; width: 100%; border-radius: 8px;">{!! __('welcome.side-menu-newsletter-register') !!}</a>
-                    </div>
-                    <div class="flex justify-start pt-5">
-                        <a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="footer__social"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+                @include('includes.layout.side_mobile')
             </div>
         </div>
 

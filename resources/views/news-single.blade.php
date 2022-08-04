@@ -5,6 +5,7 @@ $localized_seo_title = "seo_title_".app()->getLocale();
 $localized_seo_desc = "seo_desc_".app()->getLocale();
 $localized_tag_1 = "tag_1_".app()->getLocale();
 $localized_tag_2 = "tag_2_".app()->getLocale();
+$localized_tag_3 = "tag_3_".app()->getLocale();
 $localized_title = "title_".app()->getLocale();
 $localized_slug = "slug_".app()->getLocale();
 $localized_summary = "summary_".app()->getLocale();
@@ -37,10 +38,28 @@ $localized_label = "link_label_".app()->getLocale();
 @endsection
 
 @section('main-content')
-	<div class="text-center all-news w-1/2 m-auto">
+	<div class="text-center all-news md:w-4/5 lg:w-1/2 m-auto">
 		<h4 class="single-news__subtitle">{{ __('news.news-small-title') }}</h4>
 		<h1 class="single-news__title">{{ $news->$localized_title }}</h1>
 		<h5 class="single-news__date">{{ $news->created_at->format('d\/m\/Y') }}</h5>
+
+		<div class="mb-10 flex justify-center flex-wrap">
+			@if($news->$localized_tag_1 !== null && $news->$localized_tag_1 !== "")
+			<div class="all-news__link__tags__tag m-2">
+				{{ $news->$localized_tag_1 }}
+			</div>
+			@endif
+			@if($news->$localized_tag_2 !== null && $news->$localized_tag_2 !== "")
+			<div class="all-news__link__tags__tag m-2">
+				{{ $news->$localized_tag_2 }}
+			</div>
+			@endif
+			@if($news->$localized_tag_3 !== null && $news->$localized_tag_3 !== "")
+			<div class="all-news__link__tags__tag m-2">
+				{{ $news->$localized_tag_3 }}
+			</div>
+			@endif
+		</div>
 
 		<p class="single-news__img-container">
 			<img src="{{ asset('images/pictures/news/'.$news->main_photo) }}">
@@ -80,20 +99,7 @@ $localized_label = "link_label_".app()->getLocale();
 			@endswitch
 		@endforeach
 
-		<div class="mt-10 flex justify-center flex-wrap">
-			@if($news->$localized_tag_1 !== null && $news->$localized_tag_1 !== "")
-			<div class="all-news__link__tags__tag m-2">
-				{{ $news->$localized_tag_1 }}
-			</div>
-			@endif
-			@if($news->$localized_tag_2 !== null && $news->$localized_tag_2 !== "")
-			<div class="all-news__link__tags__tag m-2">
-				{{ $news->$localized_tag_2 }}
-			</div>
-			@endif
-		</div>
-
-		<div class="single-news__prev-next flex justify-between">
+		<div class="single-news__prev-next flex justify-between flex-wrap">
 			@if($previous_news !== null)
 			<a class="single-news__prev-next__block justify-start" href="{{ route('news-'.app()->getLocale(), ['slug' => $previous_news->$localized_slug]) }}">
 				<div class="single-news__prev-next__block__img-container">
@@ -118,11 +124,11 @@ $localized_label = "link_label_".app()->getLocale();
 			@endif
 			
 			@if($next_news !== null)
-			<a class="single-news__prev-next__block justify-end" href="{{ route('news-'.app()->getLocale(), ['slug' => $next_news->$localized_slug]) }}">
-				<div class="pr-4">
+			<a class="single-news__prev-next__block justify-end flex-row-reverse lg:flex-row" href="{{ route('news-'.app()->getLocale(), ['slug' => $next_news->$localized_slug]) }}">
+				<div class="pr-0 pl-4 lg:pr-4 lg:pl-0">
 					<div class="flex justify-start mb-3">
 						<p class="single-news__prev-next__block__text">
-							{{ __('news.previous-article') }}
+							{{ __('news.next-article') }}
 						</p>
 						<p class="primary-color text-2xl font-light ml-3 single-news__prev-next__block__chevron single-news__prev-next__block__chevron--left">
 							>

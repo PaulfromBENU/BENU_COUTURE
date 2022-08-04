@@ -83,7 +83,7 @@
 	background-color: white;
 	max-height: 150px;
 	@include tablet {
-		top: 40px;	
+		top: 50px;	
 	}
 	@include mobile {
 		top: 40px;	
@@ -98,6 +98,12 @@
 	border-bottom: solid 1px $light-grey;
 	background-color: white;
 	height: 150px;
+	@include tablet {
+		height: 50px;
+	}
+	@include mobile {
+		height: 50px;
+	}
 }
 
 .header {
@@ -137,6 +143,11 @@
 		display: block;
 		min-width: 55px;
 		background-color: $primary-color;
+		@include tablet {
+			width: 50px;
+			height: 50px;
+			min-width: 0px;
+		}
 		@include mobile {
 			width: 50px;
 			height: 50px;
@@ -154,7 +165,7 @@
 				display: block;
 			}
 			@include tablet {
-				display: block;
+				display: none;
 			}
 			@include mobile {
 				display: none;
@@ -182,7 +193,7 @@
 				display: none;
 			}
 			@include tablet {
-				display: none;
+				display: block;
 			}
 			@include mobile {
 				display: block;
@@ -196,6 +207,10 @@
 				height: 50px;
 				width: 50px;
 				cursor: pointer;
+				@include tablet {
+					height: 42px;
+					width: 42px;
+				}
 				@include mobile {
 					height: 42px;
 					width: 42px;
@@ -207,6 +222,11 @@
 				width: 50px;
 				cursor: pointer;
 				display: block;
+				@include intermediate {
+					height: 35px;
+					width: 35px;
+					padding: 12px 5px;
+				}
 				img {
 					max-height: 100%;
 					max-width: 100%;
@@ -226,9 +246,28 @@
 					font-size: 0.85rem;
 					text-align: center;
 					font-weight: 500;
+					@include tablet {
+						bottom: 24px;
+						right: calc(50% - 25px);
+						width: 19px;
+						height: 19px;
+						font-size: 0.8rem;
+					}
+					@include mobile {
+						bottom: 24px;
+						right: calc(50% - 25px);
+						width: 19px;
+						height: 19px;
+						font-size: 0.8rem;
+					}
 				}
 			}
 			&__lang-container {
+				@include tablet {
+					position: absolute;
+					right: 10px;
+					top: 4px;
+				}
 				@include mobile {
 					position: absolute;
 					right: 10px;
@@ -244,6 +283,9 @@
 				font: normal normal 500 20px/24px 'Barlow Condensed';
 				letter-spacing: 0px;
 				transition: all 0.2s ease-in-out;
+				@include tablet {
+					margin-right: 0px;
+				}
 				@include mobile {
 					margin-right: 0px;
 				}
@@ -254,6 +296,10 @@
 			}
 			li {
 				padding-left: 1.1rem;
+			}
+			@include tablet {
+				margin-top: -10px;
+				margin-bottom: 1px;
 			}
 			@include mobile {
 				margin-top: -10px;
@@ -271,12 +317,16 @@
 			color: $dark-text;
 			font-size: 1.05rem;
 			font-weight: 500;
-			padding: .6rem 1rem;
+			padding: .65rem 1rem;
 			cursor: pointer;
 			background-color: $primary-color-light;
 			font-family: 'Barlow Condensed';
 			border-radius: 5px;
 			transition: $transition-base;
+			text-transform: uppercase;
+			@include intermediate {
+				width: 150px;
+			}
 			&--active {
 				color: white;
 				background-color: $primary-color;
@@ -290,13 +340,19 @@
 				margin-right: 1.875rem;
 				transform: rotate(0deg);
 				transition: all 0.2s;
-				margin-top: 5px;
+				margin-top: 4px;
+				@include intermediate {
+					margin-right: 1rem;
+				}
 			}
 			&--logo-2 {
 				height: 15px;
 				width: 20px;
 				margin-left: 1.875rem;
-				margin-top: 6px;
+				margin-top: 4px;
+				@include intermediate {
+					margin-left: 1rem;
+				}
 			}
 			&:hover {
 				color: white;
@@ -318,6 +374,12 @@
 			font: normal normal 600 18px/22px 'Barlow Condensed';
 			letter-spacing: 0.36px;
 			transition: color 0.3s ease-in-out;
+			@include intermediate {
+				padding-top: 14px;
+				font: normal normal 600 16px/20px 'Barlow Condensed';
+				letter-spacing: 0px;
+				margin-left: 18px;
+			}
 			&::before {
 				background-color: $primary-color;
 				color: $primary-color;
@@ -344,6 +406,10 @@
 		padding-left: 4vw;
 		padding-top: 20px;
 		width: 100%;
+		@include tablet {
+			padding-top: 10px;
+			width: auto;
+		}
 		@include mobile {
 			padding-top: 10px;
 			width: auto;
@@ -366,6 +432,9 @@
             left: 0;
             z-index: 10;
             transition: $transition-village;
+            @include intermediate {
+            	padding: 5px 0;
+            }
         }
 
         &::before {
@@ -409,9 +478,13 @@
 				a {
 					color: $dark-text;
 					padding: 0.5rem;
-					font: normal normal normal 18px/22px Barlow Condensed;
+					font: normal normal normal 18px/22px 'Barlow Condensed';
 					letter-spacing: 0.36px;
 					transition: color 0.3s ease-in-out;
+					@include intermediate {
+						padding: 0.5rem 0.2rem;
+						font: normal normal normal 17px/20px 'Barlow Condensed';
+					}
 					&:hover {
 						color: $primary-color;
 					}
@@ -435,10 +508,24 @@
 	background-color: white;
 	height: 100%;
 	&__backlink {
+		@include tablet {
+			min-width: fit-content;
+			padding-top: 10px;
+		}
+		@include mobile {
+			min-width: fit-content;
+			padding-top: 10px;
+		}
 		a {
 			text-align: left;
 			font: normal normal 600 26px/31px 'Barlow Condensed';
 			letter-spacing: 0px;
+			@include tablet {
+				font: normal normal 500 16px/21px 'Barlow Condensed';
+			}
+			@include mobile {
+				font: normal normal 500 16px/21px 'Barlow Condensed';
+			}
 		}
 	}
 	&__arrow-left {
@@ -451,6 +538,18 @@
 		display: block;
 		min-width: 55px;
 		background-color: transparent;
+		@include tablet {
+			background-color: $primary-color;
+			min-width: 50px;
+			width: 50px;
+			text-align: center;
+		}
+		@include mobile {
+			background-color: $primary-color;
+			min-width: 50px;
+			width: 50px;
+			text-align: center;
+		}
 	}
 	&__logo {
 		position: absolute;
@@ -458,12 +557,20 @@
 		height: 175px;
 		left: 0;
 		top: 0;
+		@include tablet {
+			position: relative;
+			margin: auto;
+		}
+		@include mobile {
+			position: relative;
+			margin: auto;
+		}
 		&--desktop {
 			@include desktop {
 				display: block;
 			}
 			@include tablet {
-				display: block;
+				display: none;
 			}
 			@include mobile {
 				display: none;
@@ -491,7 +598,7 @@
 				display: none;
 			}
 			@include tablet {
-				display: none;
+				display: block;
 			}
 			@include mobile {
 				display: block;
@@ -500,18 +607,43 @@
 	}
 	&__main-menu {
 		padding-top: 0px;
+		@include tablet {
+			max-height: 50px;
+			overflow: hidden;
+		}
+		@include mobile {
+			max-height: 50px;
+			overflow: hidden;
+		}
 		&__icons {
 			padding-top: 2px;
+			@include tablet {
+				margin-top: 10px;
+				margin-bottom: 0px;
+			}
+			@include mobile {
+				margin-top: 10px;
+				margin-bottom: 0px;
+			}
 			button {
 				height: 50px;
 				width: 50px;
 				cursor: pointer;
+				@include tablet {
+					height: 42px;
+					width: 42px;
+				}
 				@include mobile {
 					height: 42px;
 					width: 42px;
 				}
 			}
 			&__lang-container {
+				@include tablet {
+					position: absolute;
+					right: 10px;
+					top: 4px;
+				}
 				@include mobile {
 					position: absolute;
 					right: 10px;
@@ -537,12 +669,41 @@
 				font: normal normal 700 20px/24px 'Barlow';
 				letter-spacing: 0px;
 			}
+			&__connect {
+				margin-top: -12px;
+				@include tablet {
+					margin-right: 10px;
+				}
+				@include mobile {
+					margin-right: 10px;
+				}
+			}
+			&__locale {
+				margin-top: -12px;
+				@include tablet {
+					margin-top: -8px;
+					svg {
+						height: 35px;
+						width: 35px;
+					}
+				}
+				@include mobile {
+					margin-top: -8px;
+					svg {
+						height: 35px;
+						width: 35px;
+					}
+				}
+			}
 			li {
 				padding-left: 1.1rem;
-			}
-			@include mobile {
-				margin-top: -11px;
-				margin-bottom: 1px;
+				@include tablet {
+					padding-left: 0;
+					padding-right: 20px;
+				}
+				@include mobile {
+					padding-left: 0;
+				}
 			}
 		}
 	}

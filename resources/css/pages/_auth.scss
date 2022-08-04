@@ -61,6 +61,11 @@
 		margin-bottom: 30px;
 		background: $light-grey-transparent 0% 0% no-repeat padding-box;
 		padding: 36px 135px;
+		@include intermediate {
+			margin-top: 45px;
+			padding: 20px 15px;
+			margin-bottom: 15px;
+		}
 		@include mobile {
 			margin-top: 45px;
 			padding: 20px 15px;

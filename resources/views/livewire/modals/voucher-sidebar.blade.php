@@ -1,19 +1,46 @@
-<div class="voucher-sidebar flex justify-right">
+<div class="voucher-sidebar flex flex-col lg:flex-row justify-start lg:justify-right relative">
     @if($voucher_id != '0')
-        <div class="article-sidebar__img-container">
+        <!-- Hidden on mobile -->
+        <div class="article-sidebar__img-container tablet-hidden">
             <div style="height: 100%;">
                 <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
             </div>
         </div>
-        <div class="article-sidebar__content">
-            @if(in_array(app()->getLocale(), ['lu', 'de']))
-            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large" wire:click="closeVoucherSideBar">
+
+        @if(in_array(app()->getLocale(), ['lu', 'de']))
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-only" wire:click="closeSideBar">
                 <div class="article-sidebar__content__close article-sidebar__content__close--large">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>
             </div>
             @else
-            <div class="article-sidebar__content__close-container" wire:click="closeVoucherSideBar">
+            <div class="article-sidebar__content__close-container mobile-only" wire:click="closeSideBar">
+                <div class="article-sidebar__content__close">
+                    {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+                </div>
+            </div>
+        @endif
+
+        <!-- Mobile only -->
+        <div class="article-sidebar__img-container-mobile relative mobile-only">
+            @if($content == 'overview')
+                <div class="flex justify-start article-sidebar__img-container-mobile__images">
+                    <div style="height: 100%;">
+                        <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
+                    </div>
+                </div>
+            @endif
+        </div>
+
+        <div class="article-sidebar__content">
+            @if(in_array(app()->getLocale(), ['lu', 'de']))
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large tablet-hidden" wire:click="closeVoucherSideBar">
+                <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                    {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+                </div>
+            </div>
+            @else
+            <div class="article-sidebar__content__close-container tablet-hidden" wire:click="closeVoucherSideBar">
                 <div class="article-sidebar__content__close">
                     {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
                 </div>

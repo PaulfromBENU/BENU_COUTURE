@@ -7,6 +7,8 @@ use Filament\Resources\Pages\CreateRecord;
 
 use App\Models\User;
 
+use App\Jobs\SendUpdatedConditionsEmail;
+
 class CreateGeneralCondition extends CreateRecord
 {
     protected static string $resource = GeneralConditionResource::class;
@@ -17,6 +19,6 @@ class CreateGeneralCondition extends CreateRecord
             'last_conditions_agreed' => '0',
         ]);
 
-        // Add e-mail sending to all registered users here?
+        SendUpdatedConditionsEmail::dispatchAfterResponse();
     }
 }

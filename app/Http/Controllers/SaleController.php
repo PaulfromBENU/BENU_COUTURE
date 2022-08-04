@@ -47,6 +47,13 @@ class SaleController extends Controller
             $cart_id = session('cart_id');
             $cart = Cart::where('cart_id', $cart_id)->first();
             session(['payment-ongoing' => 'active']);
+
+            if (auth()->check() && auth()->user()->last_conditions_agreed) {
+                return view('checkout.payment', ['cart_id' => $cart_id, 'cart' => $cart]);
+            } elseif (auth()->check()) {
+                return redirect()->route('cart-'.app()->getLocale());
+            }
+
             return view('checkout.payment', ['cart_id' => $cart_id, 'cart' => $cart]);
         } else {
             return redirect()->route('cart-'.app()->getLocale());
@@ -173,7 +180,11 @@ class SaleController extends Controller
                 $pdf = $this->generateInvoicePdf($current_order->unique_id);
 
                 // Send e-mail with purchase confirmation, with pdf invoice
-                Mail::to($current_order->user->email)->send(new NewOrder($current_order, $pdf));
+                if ($current_order->user_id > 0) {
+                    Mail::to($current_order->user->email)->send(new NewOrder($current_order, $pdf));
+                } elseif (auth()->check() && auth()->user()->role == 'vendor') {
+                    Mail::to(auth()->user()->email)->send(new NewOrder($current_order, $pdf));
+                }
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
@@ -185,17 +196,21 @@ class SaleController extends Controller
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
+                } elseif ($current_order->payment_type == '5') { // Case Paid in shop
+                    $current_order->payment_status = 2;
                 }
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher) if already paid
-                if ($current_order->payment_status == 2) {
+                if ($current_order->payment_status == 2 && $current_order->user_id > 0) {
                     foreach ($current_order->pdf_vouchers as $voucher) {
                         $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
                         Mail::to($current_order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
                     }
                 }
 
-                if ($current_order->cart->couture_variations->count() == 1 
+                if($current_order->payment_type == '5') {
+                    $current_order->delivery_status = 10; //10 -> bought in shop
+                } elseif ($current_order->cart->couture_variations->count() == 1 
                     && $current_order->pdf_vouchers->count() > 0
                     && $current_order->payment_status == 2) {
                     // Case order is paid and only contains pdf vouchers
@@ -222,6 +237,10 @@ class SaleController extends Controller
     {
         if (strlen($order) < 6 || Order::where('unique_id', substr($order, 0, 6))->count() == 0) {
             return redirect()->route('home', ['locale' => app()->getLocale()]);
+        }
+
+        if (auth()->check() && auth()->user()->role == 'vendor') {
+            session(['has_kulturpass' => null]);
         }
 
         return view('checkout.payment-complete', ['order' => Order::where('unique_id', substr($order, 0, 6))->first(), 'url_order' => $order]);

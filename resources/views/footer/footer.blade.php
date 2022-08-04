@@ -7,7 +7,7 @@
 					<li><a href="{{ route('model-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-1') }}</a></li>
 					<li><a href="{{ route('vouchers-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-2') }}</a></li>
 					<li><a href="{{ route('dashboard', ['locale' => app()->getLocale()]) }}">{{ __('footer.footer-list-1-3') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-list-1-4') }}</a></li>
+					<li><a href="{{ route('footer.general-info-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-4') }}</a></li>
 					<li><a href="{{ route('partners-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-5') }}</a></li>
 					<li><a href="{{ route('header.participate-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-6') }}</a></li>
 					<!-- <li><a href="#">{{ __('footer.footer-list-1-7') }}</a></li> -->
@@ -22,7 +22,7 @@
 					<li><a href="{{ route('about-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-4') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-list-2-5') }}</a></li>
 					<li><a href="#">{{ __('footer.footer-list-2-6') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-list-2-7') }}</a></li>
+					<li><a href="{{ route('footer.policy-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-7') }}</a></li>
 					<li><a href="{{ route('footer.legal-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-8') }}</a></li>
 				</ul>
 			</div>
@@ -53,9 +53,9 @@
 				</ul>
 				<h4>{{ __('footer.footer-title-5') }}</h4>
 				<div class="flex justify-start">
-					<a href="#" class="footer__social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="footer__social"><i class="fab fa-instagram"></i></a>
-					<a href="#" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://www.facebook.com/benuvillageesch/" target="_blank" class="footer__social"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/benu_village/" target="_blank" class="footer__social"><i class="fab fa-instagram"></i></a>
+					<a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 			</div>
 		</div>

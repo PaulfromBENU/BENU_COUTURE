@@ -9,23 +9,23 @@
 </div>
 @else
 <div class="cart-content__articles">
-    <div class="grid grid-cols-8 cart-content__articles__header">
+    <div class="grid grid-cols-8 cart-content__articles__header mobile-hidden tablet-hidden">
         <div class="col-span-1">
             {{ __('cart.title-article') }}
         </div>
         <div class="col-span-2">
             
         </div>
-        <div>
+        <div class="text-center">
             {{ __('cart.title-size') }}
         </div>
-        <div>
+        <div class="text-center">
             {{ __('cart.title-color') }}
         </div>
-        <div>
+        <div class="text-center">
             {{ __('cart.title-number') }}
         </div>
-        <div class="pl-1">
+        <div class="pl-1 text-center">
             {{ __('cart.title-price') }}
         </div>
         <div>
@@ -37,7 +37,7 @@
         @livewire('components.cart-article', ['article_id' => $article->id], key($article->id))
     @endforeach
 
-    <div class="w-full cart-info-box flex justify-between">
+    <div class="w-full cart-info-box flex justify-between mobile-hidden">
         <div class="cart-info-box__block">
             <h5>
                 {{ __('cart.delivery-method') }}

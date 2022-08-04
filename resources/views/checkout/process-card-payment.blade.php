@@ -9,7 +9,7 @@
 @endsection
 
 @section('main-content')
-	<section class="w-2/3 m-auto text-center">
+	<section class="w-11/12 lg:w-2/3 m-auto text-center">
 		<h1 class="text-3xl primary-color mb-5 font-bold">{{ __('payment.process-payment-by-card') }}</h1>
 		<div class="mb-5">
 			<h3 class="text-lg text-bold">{{ __('payment.process-accepted-cards') }}</h3>

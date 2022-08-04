@@ -1,4 +1,4 @@
-<section class="w-5/6 lg:w-1/2 m-auto text-center contact service-panel" id="services-contact">
+<section class="w-5/6 lg:w-1/2 m-auto text-center contact service-panel service-column" id="services-contact">
 	<div class="contact__subtitle">
 		{!! __('services.contact-subtitle') !!}
 	</div>

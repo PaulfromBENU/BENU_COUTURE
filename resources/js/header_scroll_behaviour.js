@@ -18,7 +18,7 @@ $(function() {
             } else {
                 $('.header__logo--scroll').hide();
                 $('.header-group').css('max-height', '150px');
-                if ($(window).width() > 768) {
+                if ($(window).width() > 1024) {
                     $('.header__logo--desktop').show();
                     $('.header__top-menu').show();
                 } else {

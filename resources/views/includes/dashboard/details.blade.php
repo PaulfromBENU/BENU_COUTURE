@@ -113,7 +113,7 @@
             </div>
 
             @if($show_confirmation == 1)
-            <div class="mt-10 text-green-700 p-5" style="background: #E6F1EF;">
+            <div class="mt-10 contact__form__valid">
             	{!! __('dashboard.details-update-confirm') !!}
             </div>
             @else

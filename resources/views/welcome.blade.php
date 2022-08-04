@@ -26,10 +26,11 @@
                 } else {
                     newSentence = " " + sentence + '</li><li>';
                 }
+
                 newText += newSentence;
             }
         });
-        $('#welcome-bullet-presentation').html(newText);
+        $('#welcome-bullet-presentation').html('<li>' + newText + '</li>');
     });
 </script>
 @endsection

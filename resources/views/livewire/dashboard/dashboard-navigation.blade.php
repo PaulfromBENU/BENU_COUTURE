@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="dashboard flex justify-start">
-        <div class="dashboard__nav mobile-hidden">
+        <div class="dashboard__nav tablet-hidden">
             <div style="position: sticky; top: 150px;">
                 <h2 class="dashboard__nav__title">{{ __('dashboard.nav-hello') }}, <strong>{{ Auth::user()->first_name }}</strong></h2>
                 <!-- <h2 class="dashboard__nav__title">@if(date('H') > 22 || date('H') < 6) {{ __('dashboard.nav-hello-evening') }}, @else {{ __('dashboard.nav-hello-day') }}, @endif <strong>{{ Auth::user()->first_name }}</strong></h2> -->
@@ -39,11 +39,11 @@
                             {{ __('dashboard.nav-demands') }}
                         </a>
                     </li>
-                    <li>
+<!--                     <li>
                         <a wire:click="changeSection('returns')" class="btn-slider-left dashboard__nav__link @if($section == 'returns') dashboard__nav__link--active @endif">
                             {{ __('dashboard.nav-returns') }}
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a wire:click="changeSection('wishlist')" class="btn-slider-left dashboard__nav__link @if($section == 'wishlist') dashboard__nav__link--active @endif">
                             {{ __('dashboard.nav-wishlist') }}
@@ -101,9 +101,9 @@
                     @livewire('dashboard.communications')
                     @break
 
-                @case('returns')
+                <!-- @case('returns')
                     @include('includes.dashboard.returns')
-                    @break
+                    @break -->
 
                 @case('wishlist')
                     @include('includes.dashboard.wishlist')

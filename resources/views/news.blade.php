@@ -21,7 +21,7 @@
 @endsection
 
 @section('main-content')
-	<div class="text-center all-news w-2/3 m-auto">
+	<div class="text-center all-news w-2/3 md:w-3/4 lg:w-2/3 m-auto">
 		<h4 class="all-news__subtitle">{{ __('news.all-subtitle') }}</h4>
 		<h2 class="all-news__title">{{ __('news.all-title') }}</h2>
 

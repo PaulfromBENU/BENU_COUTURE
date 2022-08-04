@@ -1,4 +1,4 @@
-<section class="flex justify-between model-pres benu-container">
+<section class="flex justify-between flex-wrap lg:flex-nowrap model-pres benu-container">
 	<div class="model-pres__img-container">
 		@foreach($model_pictures as $picture)
             <img src="{{ asset('images/pictures/articles/'.$picture) }}" @if($loop->index > 0) style="display: none;" @endif>
@@ -12,30 +12,43 @@
             </div>
         @endif
 	</div>
+
+	<div class="model-pres__mobile-anchors mobile-only flex flex-col md:flex-row justify-start md:justify-center">
+		<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex justify-start md:justify-center">
+			{{ __('models.model-link-articles') }} @svg('model_arrow_down')
+		</a>
+		
+		@if($model->creation_accessories()->count() > 0)
+		<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex justify-start md:justify-center model-pres__mobile-anchors--with-border">
+			{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+		</a>
+		@endif
+	</div>
+
 	<div class="model-pres__desc">
 		@if($model->product_type == 0)
 			<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
 		@elseif($model->product_type == 1)
 		<!-- Case mask for kids -->
-			<div class="flex justify-start">
+			<div class="flex flex-col lg:flex-row justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
-				<div class="model-pres__desc__age ml-5">
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto">
 					{{ strtoupper(__('models.masks-kid')) }}
 				</div>
 			</div>
 		@elseif($model->product_type == 2)
 		<!-- Case mask for adults -->
-			<div class="flex justify-start">
+			<div class="flex flex-col lg:flex-row justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
-				<div class="model-pres__desc__age ml-5">
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto">
 					{{ strtoupper(__('models.masks-adult')) }}
 				</div>
 			</div>
 		@elseif($model->product_type == 3)
 		<!-- Case small item -->
-			<div class="flex justify-start">
+			<div class="flex flex-col lg:flex-row justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
-				<div class="model-pres__desc__age ml-5">
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto">
 					{{ strtoupper(__('models.is-small-item')) }}
 				</div>
 			</div>
@@ -48,19 +61,19 @@
 			{{ $localized_description }}
 		</p>
 		<div class="flex justify-start model-pres__desc__keywords">
-			<ul>
+			<ul class="w-full lg:w-1/2">
 				@for($i = 0; $i < 4; $i++)
 					@if(isset($keywords[$i]))
-					<li>@svg('list_cintre') {{ $keywords[$i] }}</li>
+					<li class="flex">@svg('list_cintre', 'w-1/5') <p class="w-4/5">{{ $keywords[$i] }}</p></li>
 					@endif
 				@endfor
 			</ul>
 			
 			@if(sizeof($keywords) > 4)
-			<ul>
+			<ul class="w-full lg:w-1/2">
 				@for($i = 4; $i < 8; $i++)
 					@if(isset($keywords[$i]))
-					<li>@svg('list_cintre') {{ $keywords[$i] }}</li>
+					<li class="flex">@svg('list_cintre', 'w-1/5') <p class="w-4/5">{{ $keywords[$i] }}</p></li>
 					@endif
 				@endfor
 			</ul>
@@ -69,13 +82,13 @@
 
 		@if($model->product_type == 1 || $model->product_type == 2)
 		<div class="model-pres__desc__link">
-			<button id="mask-specific-order-btn" class="btn-couture-plain btn-couture-plain--dark-hover mb-5" style="height: 45px; margin-left: 0;">
+			<button id="mask-specific-order-btn" class="btn-couture-plain btn-couture-plain--dark-hover mb-5" style="">
 				{{ __('models.model-specific-order-btn') }}
 			</button>
 		</div>
 		@elseif($model->product_type == 3)
 		<div class="model-pres__desc__link">
-			<button id="items-specific-order-btn" class="btn-couture-plain btn-couture-plain--dark-hover mb-5" style="height: 45px; margin-left: 0;">
+			<button id="items-specific-order-btn" class="btn-couture-plain btn-couture-plain--dark-hover mb-5" style="">
 				{{ __('models.items-specific-order-btn') }}
 			</button>
 		</div>
@@ -93,7 +106,7 @@
 					</p>
 				</div>
 
-				<div class="flex">
+				<div class="flex tablet-hidden">
 					<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
 						{{ __('models.model-link-articles') }} @svg('model_arrow_down')
 					</a>

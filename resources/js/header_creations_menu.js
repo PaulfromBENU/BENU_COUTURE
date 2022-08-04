@@ -40,11 +40,21 @@ function showMenu(id)
     $(menuClass).show();
 }
 
+function resetMobileMenu()
+{
+    $('#mobile-creations-menu-toggle').removeClass('side-mobile__toggler--creation--active');
+    $('#side-mobile-creations-links').hide();
+    $('#side-mobile-general-links').show();
+}
+
 $(function() {
     let creationsBarStatus = 'off';
     let fullMenuStatus = 'off';
     // let lastMenu = '';
     $('#creations-nav-toggle').on('click', function() {
+
+        Livewire.emit('loadCreations');
+
         $(this).toggleClass('header__main-nav__btn--active');
         //$('#creations-nav-toggle path').toggleClass('svg-primary-white--active');
         if (creationsBarStatus == 'off') {
@@ -169,6 +179,40 @@ $(function() {
             });
             creationsBarStatus = 'off';
             fullMenuStatus = 'off';
+        }
+    });
+
+
+
+    // Mobile menu handle
+    resetMobileMenu();    
+
+    $('#mobile-creations-menu-toggle').on('click', function() {
+        Livewire.emit('loadCreationsMobile');
+        // $('.side-mobile__creations__list').hide();
+        $(this).addClass('side-mobile__toggler--creation--active');
+        $('#side-mobile-general-links').hide();
+        $('#side-mobile-creations-links').show();
+    });
+
+    $('#mobile-general-menu-toggle').on('click', function() {
+        resetMobileMenu();
+    });
+
+    $('.side-mobile__creations__title').on('click', function() {
+        if (!$(this).is("a")) {
+            let menuList = $(this).parent().find('.side-mobile__creations__list');
+            if (menuList.hasClass('side-mobile__creations__list--hidden')) {
+                menuList.removeClass('side-mobile__creations__list--hidden');
+                menuList.addClass('side-mobile__creations__list--visible');
+                $(this).parent().find('.side-mobile__creations__title__svg').addClass('side-mobile__creations__title__svg--open');
+                $(this).addClass('side-mobile__creations__title--active');
+            } else {
+                menuList.removeClass('side-mobile__creations__list--visible');
+                menuList.addClass('side-mobile__creations__list--hidden');
+                $(this).parent().find('.side-mobile__creations__title__svg').removeClass('side-mobile__creations__title__svg--open');
+                $(this).removeClass('side-mobile__creations__title--active');
+            }
         }
     });
 });

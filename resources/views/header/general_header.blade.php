@@ -12,12 +12,12 @@
             <img src="{{ asset('images/svg/benu-icon-menu-scroll.svg') }}" class="header__logo header__logo--mobile">
         </a>
         <div class="header__menus-container">
-            <div class="flex justify-between header__top-menu mobile-hidden">
+            <div class="flex justify-between header__top-menu tablet-hidden">
                 <nav class="header__top-nav flex justify-start">
                     <div>
                         <a href="{{ route('home', [app()->getLocale()]) }}" class="header__home-title">BENU COUTURE</a>
                     </div>
-                    <ul class="flex justify-start header__top-nav__links mobile-hidden">
+                    <ul class="flex justify-start header__top-nav__links tablet-hidden">
                         <li>
                             @if(Route::has('client-service-'.app()->getLocale()))
                             <a href="{{ route('client-service-'.app()->getLocale()) }}">{{ __('header.support') }}</a>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="flex justify-between header__main-menu">
-                <nav class="header__main-nav flex justify-start mobile-hidden">
+                <nav class="header__main-nav flex justify-start tablet-hidden">
                     <div>
                         <button class="header__main-nav__btn" type="button" id="creations-nav-toggle">
                             @svg('benu-icon-squares-categories', 'header__main-nav__btn--logo-1')
@@ -109,26 +109,26 @@
                     </li>
                     @endif
                     @auth
-                        <li class="mobile-hidden">
+                        <li class="tablet-hidden">
                             <a href="{{ route('dashboard', ['locale' => app()->getLocale(), 'section' => 'wishlist']) }}" class="header__main-menu__icons__btn">
                                 @svg('benu-icon-heart-favorites', '')
                             </a>
                         </li>
                     @endauth
                     @guest
-                        <li class="mobile-hidden">
+                        <li class="tablet-hidden">
                             <a class="header__main-menu__icons__btn" id="connect-btn">
                                 @svg('benu-icon-silhouette-connect')
                             </a>
                         </li>
                     @else
-                        <li class="mobile-hidden">
+                        <li class="tablet-hidden">
                             <a href="{{ route('dashboard', ['section' => 'overview']) }}" class="header__main-menu__icons__btn" id="dashboard-btn">
                                 @svg('benu-icon-silhouette-disconnect')
                             </a>
                         </li>
                     @endguest
-                    <li class="mobile-hidden">
+                    <li class="tablet-hidden">
                         @if(Route::has('client-service-'.app()->getLocale()))
                         <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="header__main-menu__icons__btn">
                             @svg('benu-icon-mail-contact')
@@ -139,7 +139,7 @@
                         </a>
                         @endif
                     </li>
-                    <li class="mobile-hidden">
+                    <li class="tablet-hidden">
                         @livewire('components.cart-header-icon')
                     </li>
                     <li class="header__main-menu__icons__lang-container">

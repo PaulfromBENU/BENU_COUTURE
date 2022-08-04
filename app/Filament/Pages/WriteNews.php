@@ -321,20 +321,75 @@ class WriteNews extends Page
         $news->slug_lu = $this->article_slug_lu;
         $news->slug_en = $this->article_slug_en;
 
+        if ($this->article_tag_1_en == ucfirst(strtolower(__('news.tag-events', [], 'en')))) {
+            $this->article_tag_1_fr = ucfirst(strtolower(__('news.tag-events', [], 'fr')));
+            $this->article_tag_1_de = ucfirst(strtolower(__('news.tag-events', [], 'de')));
+            $this->article_tag_1_lu = ucfirst(strtolower(__('news.tag-events', [], 'lu')));
+        } elseif ($this->article_tag_1_en == ucfirst(strtolower(__('news.tag-what-s-new', [], 'en')))) {
+            $this->article_tag_1_fr = ucfirst(strtolower(__('news.tag-what-s-new', [], 'fr')));
+            $this->article_tag_1_de = ucfirst(strtolower(__('news.tag-what-s-new', [], 'de')));
+            $this->article_tag_1_lu = ucfirst(strtolower(__('news.tag-what-s-new', [], 'lu')));
+        } elseif ($this->article_tag_1_en == ucfirst(strtolower(__('news.tag-environment', [], 'en')))) {
+            $this->article_tag_1_fr = ucfirst(strtolower(__('news.tag-environment', [], 'fr')));
+            $this->article_tag_1_de = ucfirst(strtolower(__('news.tag-environment', [], 'de')));
+            $this->article_tag_1_lu = ucfirst(strtolower(__('news.tag-environment', [], 'lu')));
+        } else {
+            $this->article_tag_1_en = "";
+            $this->article_tag_1_fr = "";
+            $this->article_tag_1_de = "";
+            $this->article_tag_1_lu = "";
+        }
+        $news->tag_1_en = $this->article_tag_1_en;
         $news->tag_1_fr = $this->article_tag_1_fr;
         $news->tag_1_de = $this->article_tag_1_de;
         $news->tag_1_lu = $this->article_tag_1_lu;
-        $news->tag_1_en = $this->article_tag_1_en;
 
+        if ($this->article_tag_2_en == ucfirst(strtolower(__('news.tag-events', [], 'en')))) {
+            $this->article_tag_2_fr = ucfirst(strtolower(__('news.tag-events', [], 'fr')));
+            $this->article_tag_2_de = ucfirst(strtolower(__('news.tag-events', [], 'de')));
+            $this->article_tag_2_lu = ucfirst(strtolower(__('news.tag-events', [], 'lu')));
+        } elseif ($this->article_tag_2_en == ucfirst(strtolower(__('news.tag-what-s-new', [], 'en')))) {
+            $this->article_tag_2_fr = ucfirst(strtolower(__('news.tag-what-s-new', [], 'fr')));
+            $this->article_tag_2_de = ucfirst(strtolower(__('news.tag-what-s-new', [], 'de')));
+            $this->article_tag_2_lu = ucfirst(strtolower(__('news.tag-what-s-new', [], 'lu')));
+        } elseif ($this->article_tag_2_en == ucfirst(strtolower(__('news.tag-environment', [], 'en')))) {
+            $this->article_tag_2_fr = ucfirst(strtolower(__('news.tag-environment', [], 'fr')));
+            $this->article_tag_2_de = ucfirst(strtolower(__('news.tag-environment', [], 'de')));
+            $this->article_tag_2_lu = ucfirst(strtolower(__('news.tag-environment', [], 'lu')));
+        } else {
+            $this->article_tag_2_en = "";
+            $this->article_tag_2_fr = "";
+            $this->article_tag_2_de = "";
+            $this->article_tag_2_lu = "";
+        }
+        $news->tag_2_en = $this->article_tag_2_en;
         $news->tag_2_fr = $this->article_tag_2_fr;
         $news->tag_2_de = $this->article_tag_2_de;
         $news->tag_2_lu = $this->article_tag_2_lu;
-        $news->tag_2_en = $this->article_tag_2_en;
 
-        // $news->tag_3_fr = $this->article_tag_3_fr;
-        // $news->tag_3_de = $this->article_tag_3_de;
-        // $news->tag_3_lu = $this->article_tag_3_lu;
-        // $news->tag_3_en = $this->article_tag_3_en;
+        if ($this->article_tag_3_en == ucfirst(strtolower(__('news.tag-events', [], 'en')))) {
+            $this->article_tag_3_fr = ucfirst(strtolower(__('news.tag-events', [], 'fr')));
+            $this->article_tag_3_de = ucfirst(strtolower(__('news.tag-events', [], 'de')));
+            $this->article_tag_3_lu = ucfirst(strtolower(__('news.tag-events', [], 'lu')));
+        } elseif ($this->article_tag_3_en == ucfirst(strtolower(__('news.tag-what-s-new', [], 'en')))) {
+            $this->article_tag_3_fr = ucfirst(strtolower(__('news.tag-what-s-new', [], 'fr')));
+            $this->article_tag_3_de = ucfirst(strtolower(__('news.tag-what-s-new', [], 'de')));
+            $this->article_tag_3_lu = ucfirst(strtolower(__('news.tag-what-s-new', [], 'lu')));
+        } elseif ($this->article_tag_3_en == ucfirst(strtolower(__('news.tag-environment', [], 'en')))) {
+            $this->article_tag_3_fr = ucfirst(strtolower(__('news.tag-environment', [], 'fr')));
+            $this->article_tag_3_de = ucfirst(strtolower(__('news.tag-environment', [], 'de')));
+            $this->article_tag_3_lu = ucfirst(strtolower(__('news.tag-environment', [], 'lu')));
+        } else {
+            $this->article_tag_3_en = "";
+            $this->article_tag_3_fr = "";
+            $this->article_tag_3_de = "";
+            $this->article_tag_3_lu = "";
+        }
+        $news->tag_3_en = $this->article_tag_3_en;
+        $news->tag_3_fr = $this->article_tag_3_fr;
+        $news->tag_3_de = $this->article_tag_3_de;
+        $news->tag_3_lu = $this->article_tag_3_lu;
+        
 
         $news->summary_fr = $this->article_summary_fr;
         $news->summary_de = $this->article_summary_de;

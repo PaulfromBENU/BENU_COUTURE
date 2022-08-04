@@ -165,6 +165,8 @@ class RegisteredUserController extends Controller
                 'phone' => $request->register_phone,
                 'is_over_18' => $request->register_age,
                 'legal_ok' => $request->register_legal,
+                'last_conditions_agreed' => 1,
+                'favorite_language' => session('locale'),
                 'newsletter' => $request->register_newsletter,
                 'origin' => 'couture',
                 'client_number' => $client_number,
@@ -184,6 +186,8 @@ class RegisteredUserController extends Controller
                 'phone' => $request->register_phone,
                 'is_over_18' => $request->register_age,
                 'legal_ok' => $request->register_legal,
+                'last_conditions_agreed' => 1,
+                'favorite_language' => session('locale'),
                 'newsletter' => $request->register_newsletter,
                 'origin' => 'couture',
             ]);

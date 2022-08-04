@@ -5,9 +5,9 @@
 	<p class="footer-all__txt footer-all__txt--right" id="footer-all-right" style="visibility: hidden;">
 		{{ __('footer.all-txt-2-1') }} <strong>BENU COUTURE</strong>
 	</p>
-	<div class="flex justify-center flex-col lg:flex-row w-full lg:w-1/2 m-auto">
+	<div class="flex justify-center flex-col md:flex-row w-full md:w-3/4 lg:w-1/2 m-auto">
 		<a href="{{ route('full-story-'.app()->getLocale()) }}" class="btn-couture btn-couture--transparent" style="min-width: fit-content;">{{ __('footer.all-story') }}</a>
-		<a href="#" class="btn-couture btn-couture--transparent">{{ __('footer.all-chart') }}</a>
+		<a href="{{ route('header.participate-'.app()->getLocale()) }}" class="btn-couture btn-couture--transparent">{{ __('footer.all-chart') }}</a>
 		<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'faq']) }}" class="btn-couture btn-couture--transparent">{{ __('footer.all-faq') }}</a>
 	</div>
 </section>

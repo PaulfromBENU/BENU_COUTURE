@@ -33,10 +33,16 @@ class PaymentTunnelInfoForm extends Component
         $this->duplicate_email_info = 0;
     }
 
+    public function updatedEmail()
+    {
+        $this->duplicate_email_info = 0;
+    }
+
     public function validateInfo()
     {
-        if (User::where('email', $this->email)->count() == 0 || (User::where('email', $this->email)->count() > 0 && $this->duplicate_email_info == 1)) {
-
+        if (User::where('email', $this->email)->count() == 0 
+            || User::where('email', $this->email)->where('role', 'guest_client')->count() == 1) {
+            // || (User::where('email', $this->email)->count() > 0 && $this->duplicate_email_info == 1)
             $this->validate();
             
             $info = [];
@@ -48,6 +54,8 @@ class PaymentTunnelInfoForm extends Component
             $info['last_name'] = $this->last_name;
             $info['email'] = $this->email;
             $info['phone'] = $this->phone;
+
+            $this->email_unchanged = 1;
 
             $this->emit('infoValidated', $info);
 

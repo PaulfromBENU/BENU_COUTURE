@@ -92,14 +92,16 @@
     </div>
 
     @else
-    <div class="flex justify-between cart-summary__price">
-        <p>
-            {{ __('cart.voucher-reduction') }}
-        </p>
-        <p>
-            -{{ $voucher_current_value - $voucher_remaining_value }}&euro;
-        </p>
-    </div>
+        @if($voucher_current_value !== $voucher_remaining_value)
+            <div class="flex justify-between cart-summary__price">
+                <p>
+                    {{ __('cart.voucher-reduction') }}
+                </p>
+                <p>
+                    - {{ $voucher_current_value - $voucher_remaining_value }}&euro;
+                </p>
+            </div>
+        @endif
     @endif
 
     <div class="flex justify-between cart-summary__price">
@@ -115,9 +117,22 @@
         </p>
     </div>
 
+    @if(auth()->check() && !auth()->user()->last_conditions_agreed)
+        <div class="flex cart-summary__validate-conditions">
+            <input type="checkbox" name="validate_conditions" id="validate-conditions" wire:model="conditions_validated" wire:click="acceptConditions">
+            <label for="validate-conditions">{{ __('cart.validate-conditions') }} <a href="{{ route('footer.legal-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('cart.validate-conditions-link') }}</a></label>
+        </div>
+    @endif
+
     @if($show_payment_btn)
     <div>
-        <a href="{{ route('payment-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
+        <a wire:key="valid-payment-button" wire:click.prevent.stop="goToPaymentTunnel" class="block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0; cursor: pointer;">
+            {{ __('cart.make-order') }}
+        </a>
+    </div>
+    @elseif(!$conditions_validated)
+    <div>
+        <a class="block btn-couture-plain btn-couture-plain--disabled btn-couture-plain--fit btn-couture-plain--dark-hover w-full" style="margin: 0;">
             {{ __('cart.make-order') }}
         </a>
     </div>

@@ -1,4 +1,4 @@
-<section class="benu-container footer-learnmore flex flex-col lg:flex-row flex-wrap justify-around">
+<section class="benu-container footer-learnmore flex flex-col md:flex-row flex-wrap justify-around">
 	<div class="footer-learnmore__block">
 		<img src="{{ asset('images/pictures/footer-img-1.png') }}">
 		<h3>
@@ -7,8 +7,8 @@
 		<p>
 			{{ __('footer.more-txt-1') }}
 		</p>
-		<div class="text-center">
-			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="btn-couture">{{ __('footer.more-learn') }}</a>
+		<div class="text-center footer-learnmore__block__btn">
+			<a href="{{ route('footer.general-info-'.app()->getLocale()) }}" class="btn-couture">{{ __('footer.more-learn') }}</a>
 		</div>
 	</div>
 	<div class="footer-learnmore__block">
@@ -19,7 +19,7 @@
 		<p>
 			{{ __('footer.more-txt-2') }}
 		</p>
-		<div class="text-center">
+		<div class="text-center footer-learnmore__block__btn">
 			<a href="{{ route('about-'.app()->getLocale()) }}" class="btn-couture">{{ __('footer.more-learn-2') }}</a>
 		</div>
 	</div>

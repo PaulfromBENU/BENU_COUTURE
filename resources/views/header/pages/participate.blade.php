@@ -52,7 +52,7 @@
 	<div class="benu-container text-center participate">
 		<h4 class="participate__subtitle">BENU COUTURE</h4>
 		<h2 class="participate__title">{{ __('participate.main-title') }}</h2>
-		<div class="participate__nav flex justify-start lg:justify-center">
+		<div class="participate__nav flex justify-start md:justify-center">
 			<div class="participate__nav__arrow participate__nav__arrow--left mobile-only">
 				@svg('chevron-down')
 			</div>

@@ -129,66 +129,11 @@ class VoucherSidebar extends Component
         }
     }
 
-    // public function updateMasksNumber($direction = "up")
-    // {
-    //     if ($direction == "up") {
-    //         $this->masks_number ++;
-    //     } else {
-    //         if ($this->masks_number > 1) {
-    //             $this->masks_number --;
-    //         }
-    //     }
-    //     $this->emit('sidebarChange');
-    // }
-
-    // public function submitMasksRequest()
-    // {
-    //     $this->validate();
-
-    //     $new_mask_order = new MaskOrder();
-    //     $new_mask_order->creation_id = $this->creation_id;
-    //     if ($this->with_filter != null && in_array($this->with_filter, ['0', '1'])) {
-    //         $new_mask_order->with_filter = $this->with_filter;
-    //     } else {
-    //         $new_mask_order->with_filter = '0';
-    //     }
-
-    //     if ($this->with_cotton != null && in_array($this->with_cotton, ['0', '1'])) {
-    //         $new_mask_order->with_cotton = $this->with_cotton;
-    //     } else {
-    //         $new_mask_order->with_cotton = '0';
-    //     }
-
-    //     if ($this->size != null && in_array($this->size, ['small', 'large'])) {
-    //         $new_mask_order->size = $this->size;
-    //     } else {
-    //         $new_mask_order->size = 'small';
-    //     }
-
-    //     if ($this->masks_number >= 1) {
-    //         $new_mask_order->requested_number = $this->masks_number;
-    //     } else {
-    //         $new_mask_order->requested_number = '1';
-    //     }
-
-    //     if ($this->text_demand != null) {
-    //         $new_mask_order->text_demand = $this->text_demand;
-    //     } else {
-    //         $new_mask_order->text_demand = "";
-    //     }
-
-    //     $new_mask_order->email = $this->email;
-
-    //     if ($this->with_pictures != null) {
-    //         $new_mask_order->with_pictures = '1';
-    //     } else {
-    //         $new_mask_order->with_pictures = '0';
-    //     }
-
-    //     if ($new_mask_order->save()) {
-    //         $this->status = 'sent';
-    //     }
-    // }
+    public function closeSideBar()
+    {
+        $this->emit('closeSideBar');
+        $this->closeVoucherSideBar();
+    }
 
     public function toggleWishlist()
     {

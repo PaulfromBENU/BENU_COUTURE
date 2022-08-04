@@ -6,6 +6,9 @@
 	z-index: 102;
 	border-radius: 20px;
 	padding: 30px;
+	@include mobile {
+		padding: 20px;
+	}
 }
 
 .lang-modal {
@@ -175,13 +178,27 @@
 }
 
 .side-modal {
-	width: 60vw;
+	width: 68vw;
 	top: 0;
 	right: -60vw;
 	height: 100vh;
 	border-radius: 0;
 	transition: right 0.8s;
 	padding: 0;
+	@include intermediate {
+		width: 80vw;
+	}
+	@include tablet {
+		width: 70%;
+		right: -70%;
+		overflow-y: auto;
+	}
+	@include mobile {
+		height: 100%;
+		width: 100%;
+		right: -100%;
+		overflow-y: auto;
+	}
 }
 
 .article-sidebar {
@@ -206,15 +223,79 @@
 			opacity: 1;
 		}
 	}
+	&__img-container-mobile {
+		width: 100%;
+		overflow: hidden; 
+		position: relative;
+		&__arrow {
+			height: 50px;
+			width: 50px;
+			margin: 10px;
+			border: solid 2px white;
+			background: $primary-color;
+			border-radius: 50%;
+			cursor: pointer;
+			padding-top: 8px;
+			text-align: center;
+			svg {
+				height: 30px;
+				width: 30px;
+				path {
+					fill: $white;
+				}
+			}
+			&--left {
+				padding-left: 5px;
+				svg {
+					transform: rotate(90deg);
+				}
+			}
+			&--right {
+				padding-left: 10px;
+				svg {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+		&__images {
+			// width: 100%;
+			overflow-x: scroll;
+			transition: all 0.3s;
+			scroll-snap-type: x mandatory;
+			img {
+				min-width: 100vw;
+				width: 100vw;
+				scroll-snap-align: start;
+				@include tablet {
+					min-width: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
 	&__content {
-		padding: 40px 80px;
+		padding: 40px 70px;
 		position: relative;
 		width: 45%;
 		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
+		@include intermediate {
+			padding: 50px;
+		}
+		@include tablet {
+			width: 100%;
+			padding: 20px 30px;
+			height: auto;
+		}
+		@include mobile {
+			width: 100%;
+			padding: 20px 30px;
+			height: auto;
+			padding-bottom: 60px;
+		}
 		&__close-container {
-			position: absolute;
+			position: fixed;
 			top: 30px;
 			right: 40px;
 			overflow: hidden;
@@ -225,11 +306,34 @@
 			border-radius: 30px;
 			cursor: pointer;
 			transition: all 0.5s;
-			background: $light-grey;
+			background: $primary-color;
+			// background: $light-grey;
+			@include intermediate {
+				top : 20px;
+				right: 30px;
+			}
+			@include tablet {
+				top: 25px;
+				right: 35px;
+				background: $primary-color;
+				z-index: 5;
+			}
+			@include mobile {
+				top: 15px;
+				right: 25px;
+				background: $primary-color;
+				z-index: 5;
+			}
 			&:hover {
 				width: 85px;
 				max-width: 120px;
 				background: $dark-bg;
+				@include tablet {
+					width: 30px;
+				}
+				@include mobile {
+					width: 30px;
+				}
 			}
 			&--large {
 				&:hover {
@@ -263,6 +367,12 @@
 			font: normal normal 500 20px/34px 'Barlow Condensed';
 			letter-spacing: 0px;
 			color: #2E1414;
+			@include tablet {
+				// padding-top: 9px;
+			}
+			@include mobile {
+				// padding-top: 9px;
+			}
 		}
 		&__radio-option {
 			font: normal normal 500 14px/28px 'Barlow';
@@ -282,6 +392,14 @@
 			color: #2E1414;
 			width: 45px;
 			margin-top: -13px;
+			@include tablet {
+				font: normal normal 600 30px/40px 'Barlow Condensed';
+				padding-top: 9px;
+			}
+			@include mobile {
+				font: normal normal 600 28px/36px 'Barlow Condensed';
+				padding-top: 9px;
+			}
 		}
 		&__mask-btn {
 			width: 30px;
@@ -295,6 +413,16 @@
 			position: relative;
 			cursor: pointer;
 			transition: all 0.2s;
+			@include tablet {
+				height: 30px;
+				margin-right: 15px;
+				// margin-top: 8px;
+			}
+			@include mobile {
+				height: 30px;
+				margin-right: 15px;
+				// margin-top: 8px;
+			}
 			i {
 				position: absolute;
 				top: 2px;
@@ -302,6 +430,14 @@
 				width: 100%;
 				text-align: center;
 				left: 0;
+				@include tablet {
+					top: 20%;
+					font-size: 1.2rem;
+				}
+				@include mobile {
+					top: 20%;
+					font-size: 1.2rem;
+				}
 			}
 			&:hover {
 				color: white;
@@ -415,6 +551,14 @@
 		&__color {
 			margin: auto;
 			margin-bottom: 20px;
+			@include tablet {
+				height: 50px;
+				width: 50px;
+			}
+			@include mobile {
+				height: 50px;
+				width: 50px;
+			}
 		}
 		&__desc {
 			font: normal normal 500 16px/28px 'Barlow';
@@ -445,11 +589,34 @@
 		}
 		&__cart-btn {
 			width: 100%;
-			height: 50px;
+			min-height: 50px;
+			height: fit-content;
 			margin-top: 10px;
 			margin-left: 0;
 			margin-right: 0;
 			margin-bottom: 25px;
+			@include tablet {
+				// position: fixed;
+				// bottom: 60px;
+				// margin: 0;
+				// left: 10%;
+				// width: 80%;
+			}
+			@include mobile {
+				position: fixed;
+				bottom: 10px;
+				margin: 0;
+				left: 10%;
+				width: 80%;
+				background: $primary-color;
+				border-radius: 8px;
+				padding: 4px 30px;
+				font: normal normal 600 20px/28px "Barlow Condensed";
+				height: fit-content;
+				border: none;
+				width: calc(100% - 60px);
+				left: 30px;
+			}
 			&:hover {
 				color: $white;
 				background: $dark-bg;
@@ -499,6 +666,9 @@
 				font: normal normal 700 26px/31px 'Barlow Condensed';
 				letter-spacing: 0px;
 				margin-bottom: 40px;
+				@include mobile {
+					margin-top: 55px;
+				}
 			}
 			&__subtitle {
 				text-align: left;
@@ -508,6 +678,17 @@
 				cursor: pointer;
 				margin-bottom: 20px;
 				transition: color 0.2s;
+				@include mobile {
+					font: normal normal 500 14px/20px 'Barlow';
+					padding-bottom: 20px;
+					border-bottom: solid 1px lightgrey;
+					position: absolute;
+					width: 100%;
+					left: 0;
+					top: 0;
+					padding-left: 30px;
+					padding-top: 20px;
+				}
 				&:hover {
 					color: $primary-color;
 				}
@@ -661,6 +842,12 @@
 		&:hover {
 			width: 85px;
 			background: $dark-bg;
+			@include tablet {
+				width: 30px;
+			}
+			@include mobile {
+				width: 30px;
+			}
 		}
 	}
 	&__close {
@@ -692,4 +879,18 @@
 	left: 20vw;
 	top: max(50px, calc(50vh - 310px));
 	min-height: 20vh;
+	@include tablet {
+		width: 90vw;
+		left: 5vw;
+		top: 40px;
+		overflow-y: auto;
+		max-height: calc(100vh - 80px);
+	}
+	@include mobile {
+		width: 96vw;
+		left: 2vw;
+		top: 40px;
+		overflow-y: auto;
+		max-height: calc(100vh - 80px);
+	}
 }

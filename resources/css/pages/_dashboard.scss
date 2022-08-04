@@ -1,6 +1,10 @@
 .dashboard {
 	padding-top: 60px;
 	margin-bottom: 60px;
+	@include tablet {
+		padding: 10px 0px;
+		margin-bottom: 10px;
+	}
 	@include mobile {
 		padding: 10px 0px;
 		margin-bottom: 10px;
@@ -11,11 +15,19 @@
 		margin-right: 20px;
 		width: 27vw;
 		position: relative;
+		min-width: 310px;
+		@include intermediate {
+			padding: 29px 0px 29px 30px;
+		}
 		&__title {
 			text-align: left;
 			font: normal normal 300 44px/53px 'Barlow Condensed';
 			letter-spacing: 0px;
 			margin-bottom: 45px;
+			@include tablet {
+				font: normal normal 300 28px/34px 'Barlow Condensed';
+				margin-bottom: 25px;
+			}
 			@include mobile {
 				font: normal normal 300 28px/34px 'Barlow Condensed';
 				margin-bottom: 25px;
@@ -28,6 +40,23 @@
 			margin-bottom: 80px;
 		}
 		&__link-mobile {
+			@include tablet {
+				width: 100%;
+				display: block;
+				padding: 10px 30px;
+				background: $primary-color;
+				border-radius: 5px;
+				text-align: center;
+				color: white;
+				height: fit-content;
+				cursor: pointer;
+				font: normal normal 700 18px/22px 'Barlow Condensed';
+				letter-spacing: 0.32px;
+				margin-bottom: 15px;
+				&:hover {
+					background: $dark-bg;
+				}
+			}
 			@include mobile {
 				width: 100%;
 				display: block;
@@ -73,6 +102,9 @@
 	}
 	&__content {
 		width: calc(73vw - 20px);
+		@include tablet {
+			width: 100%;
+		}
 		@include mobile {
 			width: 100%;
 		}
@@ -84,6 +116,12 @@
 			min-height: 215px;
 			margin-bottom: 60px;
 			position: relative;
+			@include tablet {
+				padding: 8px 15px;
+				min-height: 20px;
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
 			@include mobile {
 				padding: 8px 15px;
 				min-height: 20px;
@@ -92,9 +130,18 @@
 			}
 			&--normal {
 				width: calc(22vw - 10px);
+				@include intermediate {
+					width: calc(50% - 20px);
+				}
 			}
 			&--large {
 				width: 44vw;
+				@include intermediate {
+					width: 100%;
+				}
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
 				}
@@ -143,6 +190,12 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -154,6 +207,12 @@
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 20px;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -172,6 +231,10 @@
 		padding-top: 9px;
 		padding-bottom: 9px;
 		margin-bottom: 50px;
+		@include tablet {
+			width: 100%;
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+		}
 		@include mobile {
 			width: 100%;
 			font: normal normal 700 28px/34px 'Barlow Condensed';
@@ -204,6 +267,12 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -214,6 +283,12 @@
 		font: normal normal 700 44px/53px 'Barlow Condensed';
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -239,6 +314,12 @@
 		font-family: 'Barlow Condensed';
 		border-radius: 5px;
 		transition: $transition-base;
+		@include tablet {
+			position: relative;
+			width: 100%;
+			right: 0;
+			text-align: center;
+		}
 		@include mobile {
 			position: relative;
 			width: 100%;
@@ -260,6 +341,10 @@
 		margin-right: 3%;
 		padding: 20px 0px;
 		border-bottom: solid 1px lightgrey;
+		@include tablet {
+			min-width: 300px;
+			width: 100%;
+		}
 		@include mobile {
 			min-width: 300px;
 			width: 100%;
@@ -280,6 +365,12 @@
 			position: absolute;
 			right: 0;
 			top: 0;
+			@include tablet {
+				position: relative;
+				margin-bottom: 10px;
+				width: 100%;
+				height: fit-content;
+			}
 			@include mobile {
 				position: relative;
 				margin-bottom: 10px;
@@ -295,6 +386,12 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -306,6 +403,12 @@
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 20px;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -320,6 +423,12 @@
 	padding-right: 5vw;
 	width: 100%;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -332,6 +441,12 @@
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 40px;
 		width: 100%;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -344,6 +459,10 @@
 		margin-bottom: 40px;
 	}
 	button {
+		@include tablet {
+			width: 100% !important;
+			margin: 0 !important;
+		}
 		@include mobile {
 			width: 100% !important;
 			margin: 0 !important;
@@ -357,6 +476,12 @@
 	padding-right: 5vw;
 	width: 100%;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -369,6 +494,12 @@
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 40px;
 		width: 100%;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -384,6 +515,9 @@
 		font: normal normal 700 22px/26px 'Barlow Condensed';
 		margin-bottom: 15px;
 		margin-top: 20px;
+		@include tablet {
+			margin-bottom: 5px;
+		}
 		@include mobile {
 			margin-bottom: 5px;
 		}
@@ -396,6 +530,12 @@
 	padding-right: 5vw;
 	width: 100%;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -408,6 +548,12 @@
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 40px;
 		width: 100%;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -436,6 +582,10 @@
 		}
 	}
 	button {
+		@include tablet {
+			width: 100% !important;
+			margin: 0 !important;
+		}
 		@include mobile {
 			width: 100% !important;
 			margin: 0 !important;
@@ -449,6 +599,12 @@
 	padding-right: 5vw;
 	width: 100%;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -461,6 +617,12 @@
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 40px;
 		width: 100%;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -490,6 +652,9 @@
 				letter-spacing: 0px;
 				border: none;
 				border-bottom: solid 1px lightgrey;
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
 				}
@@ -505,6 +670,10 @@
 			}
 		}
 		button {
+			@include tablet {
+				width: 100% !important;
+				margin: 0 !important;
+			}
 			@include mobile {
 				width: 100% !important;
 				margin: 0 !important;
@@ -516,6 +685,9 @@
 		padding: 10px 0px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 20px;
+		@include tablet {
+			width: 100%;
+		}
 		@include mobile {
 			width: 100%;
 		}
@@ -547,6 +719,12 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	position: relative;
+	@include tablet {
+		width: 83.3333333%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 40px;
+	}
 	@include mobile {
 		width: 83.3333333%;
 		margin: auto;
@@ -558,6 +736,12 @@
 		padding-bottom: 20px;
 		border-bottom: solid 1px lightgrey;
 		margin-bottom: 20px;
+		@include tablet {
+			font: normal normal 700 28px/34px 'Barlow Condensed';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
 		@include mobile {
 			font: normal normal 700 28px/34px 'Barlow Condensed';
 			margin-bottom: 30px;
@@ -572,6 +756,12 @@
 		padding: 25px 15px;
 		box-shadow: lightgrey 0 5px 10px;
 		button, a {
+			@include tablet {
+				width: 100% !important;
+				margin: 0 !important;
+				font-size: 18px;
+				// margin-bottom: 10px !important;
+			}
 			@include mobile {
 				width: 100% !important;
 				margin: 0 !important;
@@ -583,6 +773,9 @@
 			background: lighten(lightgrey, 12);
 			border-radius: 10px;
 			padding: 15px;
+			@include tablet {
+				width: 100%;
+			}
 			@include mobile {
 				width: 100%;
 			}
@@ -599,6 +792,12 @@
 				}
 			}
 			button, a {
+				@include tablet {
+					width: 100% !important;
+					margin: 10px 0px !important;
+					font-size: 18px;
+					// margin-bottom: 10px !important;
+				}
 				@include mobile {
 					width: 100% !important;
 					margin: 10px 0px !important;
@@ -614,12 +813,18 @@
 				width: 45%;
 				padding-bottom: 20px;
 				border-bottom: solid 1px lightgrey;
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
 				}
 				h3 {
 					font: normal normal 700 26px/30px 'Barlow Condensed';
 					margin-bottom: 18px;
+					@include tablet {
+						font: normal normal 700 22px/28px 'Barlow Condensed';
+					}
 					@include mobile {
 						font: normal normal 700 22px/28px 'Barlow Condensed';
 					}
@@ -636,6 +841,9 @@
 				box-shadow: lightgrey 0 0 10px;
 				height: 200px;
 				width: 45%;
+				@include tablet {
+					width: 100%;
+				}
 				@include mobile {
 					width: 100%;
 				}
@@ -655,6 +863,9 @@
 						color: $primary-color;
 						font: normal normal 700 26px/30px 'Barlow Condensed';
 						margin-bottom: 15px;
+						@include tablet {
+							font: normal normal 600 24px/28px 'Barlow Condensed';
+						}
 						@include mobile {
 							font: normal normal 600 24px/28px 'Barlow Condensed';
 						}
@@ -670,6 +881,11 @@
 						font: normal normal 600 21px/20px 'Barlow Condensed';
 						margin-bottom: 25px;
 						font-weight: 500;
+						@include tablet {
+							padding: 0px 22px;
+							font: normal normal 600 16px/28px 'Barlow Condensed';
+							margin-bottom: 20px;
+						}
 						@include mobile {
 							padding: 0px 22px;
 							font: normal normal 600 16px/28px 'Barlow Condensed';
@@ -689,6 +905,11 @@
 						bottom: 5px;
 						right: 5px;
 						font: normal normal 600 30px/30px 'Barlow Condensed';
+						@include tablet {
+							bottom: 0px;
+							left: 0px;
+							right: auto;
+						}
 						@include mobile {
 							bottom: 0px;
 							left: 0px;

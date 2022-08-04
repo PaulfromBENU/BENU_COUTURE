@@ -5,7 +5,7 @@
 			<p class="welcome-campaign__left__title-2">{{ __('welcome.campaign-title-2') }}</p>
 			<div class="flex flex-col-reverse lg:flex-col">
 				<div class="welcome-campaign__left__img-container">
-					<img src="{{ asset('images/pictures/campaigns/welcome-campaign-1.jpg') }}" class="m-auto">
+					<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" class="m-auto">
 				</div>
 				<div class="flex justify-center flex-wrap welcome-campaign__left__links">
 					<a href="#" class="block btn-couture">{{ __('welcome.campaign-link-1') }}</a>
@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="welcome-campaign__right">
-			<img src="{{ asset('images/pictures/campaigns/welcome-campaign-2.jpg') }}" class="m-auto">
+			<img src="{{ asset('images/pictures/campaigns/DSC09291007-1.jpg') }}" class="m-auto">
 		</div>
 	</div>
 </section>

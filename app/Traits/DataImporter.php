@@ -1175,6 +1175,7 @@ trait DataImporter {
         $care_40deg_id = CareRecommendation::where('name', 'wash_40C')->first()->id;
         $care_60deg_id = CareRecommendation::where('name', 'wash_60C')->first()->id;
         $care_delicate_id = CareRecommendation::where('name', 'delicate_wash')->first()->id;
+        // $care_hand_id = CareRecommendation::where('name', 'hand_wash')->first()->id;
         $care_no_spinning_id = CareRecommendation::where('name', 'avoid_spinning')->first()->id;
         $care_no_drying_id = CareRecommendation::where('name', 'not_tumble_dry')->first()->id;
         $care_low_drying_id = CareRecommendation::where('name', 'dry_low_temp')->first()->id;
@@ -1504,6 +1505,9 @@ trait DataImporter {
                 if ($article_sophie['delicate_wash'] == "VRAI") {
                     $article->care_recommendations()->attach($care_delicate_id);
                 }
+                // if ($article_sophie['hand_wash'] == "VRAI") {
+                //     $article->care_recommendations()->attach($care_hand_id);
+                // }
                 if ($article_sophie['avoid_spinning'] == "VRAI") {
                     $article->care_recommendations()->attach($care_no_spinning_id);
                 }

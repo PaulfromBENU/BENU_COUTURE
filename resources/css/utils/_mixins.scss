@@ -10,6 +10,12 @@
   }
 }
 
+@mixin intermediate {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$intermediate-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
