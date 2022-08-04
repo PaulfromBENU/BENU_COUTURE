@@ -71,6 +71,7 @@ class GeneralController extends Controller
 
     public function showPartners()
     {
+        return redirect()->route('home', ['locale' => app()->getLocale()]);
         $partners = Partner::orderBy('created_at', 'desc')->get();
         $localized_desc_query = "description_".app()->getLocale();
         return view('partners', ['partners' => $partners, 'desc_query' => $localized_desc_query]);
