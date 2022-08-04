@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="welcome-campaign__right">
-			<img src="{{ asset('images/pictures/campaigns/DSC09291007-1.jpg') }}" class="m-auto">
+			<img src="{{ asset('images/pictures/campaigns/couture_campaign_02.jpeg') }}" class="m-auto">
 		</div>
 	</div>
 </section>

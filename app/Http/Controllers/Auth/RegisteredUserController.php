@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(config('mail.mailers.smtp_admin.sender'), config('mail.mailers.smtp_admin.admin_receiver'));
         app()->setLocale(session('locale'));
 
         $user_exists = 0;
