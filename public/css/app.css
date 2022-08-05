@@ -4538,6 +4538,11 @@ input[type=checkbox]:focus {
   color: #2E1739;
   margin-bottom: 30px;
 }
+@media (min-width: 1720px) {
+  .welcome-presentation__desc__text {
+    width: 760px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1199px) {
   .welcome-presentation__desc__text {
     font: normal normal 500 16px/28px "Barlow";
