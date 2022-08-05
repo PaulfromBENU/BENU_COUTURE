@@ -49,13 +49,13 @@
 
     <div class="article-sidebar__content">
         @if(in_array(app()->getLocale(), ['lu', 'de']))
-        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large tablet-hidden" wire:click="closeVoucherSideBar">
+        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large tablet-hidden" wire:click="closeMaskSideBar">
             <div class="article-sidebar__content__close article-sidebar__content__close--large">
                 {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
             </div>
         </div>
         @else
-        <div class="article-sidebar__content__close-container tablet-hidden" wire:click="closeVoucherSideBar">
+        <div class="article-sidebar__content__close-container tablet-hidden" wire:click="closeMaskSideBar">
             <div class="article-sidebar__content__close">
                 {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
             </div>

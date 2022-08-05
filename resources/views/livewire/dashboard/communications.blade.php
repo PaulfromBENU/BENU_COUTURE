@@ -90,7 +90,8 @@
                                 <strong>{!! __('dashboard.com-options') !!} :</strong>
                             </p>
                             <ul>
-                                @if($mask_request->creation->product_type == 2)
+                                @if(0 == 1 && $mask_request->creation->product_type == 2)
+                                <!-- Not required anymore -->
                                 <li><em>
                                     @if($mask_request->with_filter == 0)
                                         {!! __('dashboard.com-with-filter') !!}
