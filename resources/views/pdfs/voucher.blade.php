@@ -72,7 +72,7 @@
 		</p>
 	</div>
 	<div>
-		<p style="text-align: center; font-size: 2rem;">
+		<p style="text-align: center; font-size: 1.2rem;">
 			{{ __('pdf.voucher-available-in-all-shops') }}
 			<br/>
 			{{ __('pdf.voucher-no-time-limit') }}
