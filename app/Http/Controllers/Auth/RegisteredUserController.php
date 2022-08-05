@@ -218,7 +218,7 @@ class RegisteredUserController extends Controller
 
         if ($user->newsletter) {
             // Mail::to($user->email)->send(new NewsletterConfirmation());
-            Mail::to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
+            Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
         }
 
         event(new Registered($user));
