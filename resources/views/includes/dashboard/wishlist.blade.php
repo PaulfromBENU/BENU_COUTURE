@@ -3,7 +3,7 @@
         {!! __('dashboard.my-wishlist') !!}
     </h2>
 	<h3 class="dashboard-wishlist__title dashboard-wishlist__title--couture">BENU COUTURE</h3>
-	<div class="flex justify-between flex-wrap mb-10 w-full lg:w-4/5 m-auto">
+	<div class="flex justify-between flex-wrap mb-10 w-full m-auto">
 		@foreach($couture_wishlisted_vouchers as $voucher)
 			@livewire('components.voucher-overview', ['voucher' =>  $voucher], key($voucher->id))
 		@endforeach
