@@ -58,6 +58,10 @@
 			font-family: 'Barlow Condensed';
 			cursor: pointer;
 			transition: $transition-base;
+			@include intermediate {
+				font-size: 0.95rem;
+				padding: 7px 16px 7px 16px;
+			}
 			svg {
 				height: 26px;
 				margin-left: 15px;
