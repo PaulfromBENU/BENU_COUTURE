@@ -98,18 +98,10 @@
     <div class="tablet-hidden">
         <div class="cart-content__article__price">
             @if($article->name == 'voucher')
-                @if(session('has_kulturpass') !== null)
-                    @if($article->voucher_type == 'pdf')
-                    {{ round($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value / 2, 2) }}&euro;
-                    @else
-                    {{ round(($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5) / 2, 2) }}&euro;
-                    @endif
+                @if($article->voucher_type == 'pdf')
+                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
                 @else
-                    @if($article->voucher_type == 'pdf')
-                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
-                    @else
-                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
-                    @endif
+                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
                 @endif
             @else
                 @if($article->is_extra_accessory)
@@ -254,18 +246,10 @@
 
         <div class="cart-content__article__price">
             @if($article->name == 'voucher')
-                @if(session('has_kulturpass') !== null)
-                    @if($article->voucher_type == 'pdf')
-                    {{ round($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value / 2, 2) }}&euro;
-                    @else
-                    {{ round(($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5) / 2, 2) }}&euro;
-                    @endif
+                @if($article->voucher_type == 'pdf')
+                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
                 @else
-                    @if($article->voucher_type == 'pdf')
-                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
-                    @else
-                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
-                    @endif
+                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
                 @endif
             @else
                 @if($article->is_extra_accessory)
