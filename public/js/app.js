@@ -5641,7 +5641,7 @@ function closeHarmonica() {
     $('.harmonica-menu__content__col__open').fadeOut();
     $('.harmonica-menu__content__col__closed').fadeIn();
 
-    if ($(window).width() < 1024) {
+    if ($(window).width() < 1081) {
       $('.harmonica-menu__content__col').css('height', '12.5%');
     } else {
       $('.harmonica-menu__content__col').css('width', '12.5%');
@@ -5677,7 +5677,7 @@ $(function () {
   $('.harmonica-menu__content__col').on('click', function () {
     if (currentCol != this) {
       if (columnClicked == 'on') {
-        if ($(window).width() < 1024) {
+        if ($(window).width() < 1081) {
           $('.harmonica-menu__content__col__open').hide();
           $('.harmonica-menu__content__col__closed').show();
           $('.harmonica-menu__content__col').css('height', '12.5%');
@@ -5690,7 +5690,7 @@ $(function () {
 
       currentCol = this;
 
-      if ($(window).width() < 1024) {
+      if ($(window).width() < 1081) {
         $('.harmonica-menu__content__col__closed', currentCol).hide();
         $('.harmonica-menu__content__col__open', currentCol).show();
         columnClicked = 'on';
@@ -5706,7 +5706,7 @@ $(function () {
     } else if (columnClicked == 'off') {
       currentCol = this;
 
-      if ($(window).width() < 1024) {
+      if ($(window).width() < 1081) {
         $('.harmonica-menu__content__col__closed', currentCol).hide();
         $('.harmonica-menu__content__col__open', currentCol).show();
         columnClicked = 'on';
@@ -5722,7 +5722,7 @@ $(function () {
         });
       }
     } else {
-      if ($(window).width() < 1024) {
+      if ($(window).width() < 1081) {
         $('.harmonica-menu__content__col__open').hide();
         $('.harmonica-menu__content__col__closed').show();
         $('.harmonica-menu__content__col').css('height', '12.5%');
@@ -5979,7 +5979,7 @@ $(function () {
         $('.header__logo--scroll').hide();
         $('.header-group').css('max-height', '150px');
 
-        if ($(window).width() > 1024) {
+        if ($(window).width() > 1081) {
           $('.header__logo--desktop').show();
           $('.header__top-menu').show();
         } else {

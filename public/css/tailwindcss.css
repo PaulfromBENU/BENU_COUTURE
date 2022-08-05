@@ -605,10 +605,10 @@ select {
     max-width: 768px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1081px) {
 
   .container {
-    max-width: 1024px;
+    max-width: 1081px;
   }
 }
 @media (min-width: 1280px) {
@@ -2928,7 +2928,7 @@ select {
     line-height: 2.25rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1081px) {
 
   .lg\:z-0 {
     z-index: 0;
@@ -3060,10 +3060,6 @@ select {
 
   .lg\:w-9\/12 {
     width: 75%;
-  }
-
-  .lg\:w-4\/5 {
-    width: 80%;
   }
 
   .lg\:max-w-\[20em\] {

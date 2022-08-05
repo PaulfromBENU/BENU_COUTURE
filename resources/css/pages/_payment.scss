@@ -252,6 +252,7 @@
 				padding-top: 0; 
 				padding-bottom: 0; 
 				width: 340px;
+				min-width: 175px;
 				@include intermediate {
 					position: relative;
 					width: 100%;

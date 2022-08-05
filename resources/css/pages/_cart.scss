@@ -102,6 +102,10 @@
 				letter-spacing: 0px;
 				color: $primary-color;
 				padding-top: 30px;
+				@include intermediate {
+					padding-top: 38px;
+					font: normal normal 600 calc(14px + 1.2vw)/34px 'Barlow Condensed';
+				}
 				@include tablet {
 					padding-top: 0px;
 					font: normal normal 600 28px/34px 'Barlow Condensed';
@@ -238,6 +242,10 @@
 			margin-top: 30px;
 			margin-left: 10px;
 			margin-right: 10px;
+			@include intermediate {
+				padding-top: 5px;
+				font: normal normal 500 calc(14px + 1.2vw)/40px 'Barlow Condensed';
+			}
 			@include tablet {
 				text-align: left;
 				margin-left: 0px;
@@ -275,6 +283,10 @@
 			letter-spacing: 0px;
 			margin-top: 30px;
 			padding-left: 10px;
+			@include intermediate {
+				padding-top: 5px;
+				font: normal normal 500 calc(12px + 1.2vw)/40px 'Barlow Condensed';
+			}
 			@include tablet {
 				text-align: left;
 				padding-left: 0;
@@ -310,6 +322,10 @@
 					right: 0px;
 					top: 6px;
 					cursor: pointer;
+					@include intermediate {
+						font-size: 1.4rem;
+						top: 8px;
+					}
 					@include mobile {
 						top: 9px;
 					}
@@ -356,6 +372,11 @@
 					right: 7px;
 					top: 21%;
 					font-size: 2.5rem;
+				}
+				svg {
+					@include intermediate {
+						width: 22px;
+					}
 				}
 				&:hover {
 					svg {
@@ -520,6 +541,11 @@
 .cart-gift-modal {
 	position: relative;
 	padding: 40px;
+	@include intermediate {
+		padding: 10px;
+		padding-top: 30px;
+		// overflow-y: auto;
+	}
 	@include tablet {
 		padding: 10px;
 		padding-top: 30px;
@@ -535,6 +561,11 @@
 		font: normal normal 700 38px/53px 'Barlow Condensed';
 		letter-spacing: 0px;
 		margin-bottom: 10px;
+		@include intermediate {
+			text-align: center;
+			font: normal normal 700 30px/38px 'Barlow Condensed';
+			margin-bottom: 20px;
+		}
 		@include tablet {
 			text-align: center;
 			font: normal normal 700 30px/38px 'Barlow Condensed';
@@ -558,6 +589,12 @@
 		transition: all 0.2s;
 		margin: 5px 20px;
 		margin-bottom: 25px;
+		@include intermediate {
+			min-width: 175px;
+			margin: 5px 10px 25px 10px;
+			padding: 4px;
+			font: normal normal 600 18px/24px 'Barlow Condensed';
+		}
 		@include tablet {
 			font: normal normal 600 19px/26px 'Barlow Condensed';
 		}
@@ -598,6 +635,14 @@
 		}
 	}
 	&__card-container {
+		@include intermediate {
+			overflow-y: hidden;
+			overflow-x: scroll;
+			justify-content: flex-start;
+			max-width: 100%;
+			transition: all 0.3s;
+			scroll-snap-type: x mandatory;
+		}
 		@include tablet {
 			overflow-y: hidden;
 			overflow-x: scroll;
@@ -630,6 +675,11 @@
 			padding: 20px;
 			margin-bottom: 20px;
 			cursor: pointer;
+			@include intermediate {
+				min-width: fit-content;
+				width: 100%;
+				scroll-snap-align: center;
+			}
 			@include tablet {
 				min-width: fit-content;
 				width: 100%;

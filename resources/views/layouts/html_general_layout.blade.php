@@ -65,7 +65,7 @@
     </head>
 
     <body class="antialiased overflow-x-hidden">
-        <div class="min-h-screen">
+        <div class="min-h-screen relative">
             <!-- Page header -->
             @yield('header')
 
