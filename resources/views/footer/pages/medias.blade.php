@@ -24,7 +24,7 @@
 	<section class="footer-medias w-4/5 lg:w-1/2 m-auto">
 		<h3 class="footer-medias__subtitle">{{ __('footer.medias-subtitle') }}</h3>
 		<h1 class="footer-medias__title">{{ __('footer.medias-title') }}</h1>
-		<p class="footer-medias__paragraph">
+		<p class="footer-medias__paragraph pl-10 pr-10">
 			{{ __('footer.medias-txt-1') }}
 		</p>
 		<ul class="faq__accordion">
@@ -82,6 +82,13 @@
 				</div>
 			</li>
 		</ul>
+
+		<p class="footer-medias__paragraph text-center">
+			{{ __('footer.medias-txt-final') }}
+		</p>
+		<div class="text-center">
+			<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="btn-couture btn-couture-plain--fit m-auto">{{ __('footer.medias-contact') }}</a>
+		</div>
 	</section>
 @endsection
 

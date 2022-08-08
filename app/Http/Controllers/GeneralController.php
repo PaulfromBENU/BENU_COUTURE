@@ -12,6 +12,7 @@ use App\Models\CreationCategory;
 use App\Models\NewsArticle;
 use App\Models\Partner;
 use App\Models\User;
+use App\Models\Media;
 use App\Mail\NewsletterConfirmation;
 use App\Mail\NewsletterConfirmationForAdmin;
 use App\Mail\NewsletterCancelConfirmationForAdmin;
@@ -263,7 +264,17 @@ class GeneralController extends Controller
 
     public function showMedias()
     {
-        return view('footer.pages.medias');
+        $articles = Media::where('family', 'article')->orderBy('publication_date', 'desc')->get();
+        $podcasts = Media::where('family', 'radio')->orderBy('publication_date', 'desc')->get();
+        $videos = Media::where('family', 'video')->orderBy('publication_date', 'desc')->get();
+        $web_publications = Media::where('family', 'web')->orderBy('publication_date', 'desc')->get();
+
+        return view('footer.pages.medias', [
+            'articles' => $articles,
+            'podcasts' => $podcasts,
+            'videos' => $videos,
+            'web_publications' => $web_publications,
+        ]);
     }
 
 

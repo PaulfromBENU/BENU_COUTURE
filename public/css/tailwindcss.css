@@ -1730,6 +1730,12 @@ select {
 .pr-4 {
   padding-right: 1rem;
 }
+.pl-10 {
+  padding-left: 2.5rem;
+}
+.pr-10 {
+  padding-right: 2.5rem;
+}
 .text-left {
   text-align: left;
 }
