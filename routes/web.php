@@ -101,6 +101,7 @@ if (app('env') == 'landing') {
 
 		Route::get('/'.trans("slugs.footer-policy", [], "lu"), 'GeneralController@showPolicy')->name('footer.policy-lu');
 		Route::get('/'.trans("slugs.footer-general-info", [], "lu"), 'GeneralController@showGeneralInfo')->name('footer.general-info-lu');
+		Route::get('/'.trans("slugs.footer-medias", [], "lu"), 'GeneralController@showMedias')->name('footer.medias-lu');
 	});
 
 	Route::group([
@@ -153,6 +154,7 @@ if (app('env') == 'landing') {
 
 		Route::get('/'.trans("slugs.footer-policy", [], "fr"), 'GeneralController@showPolicy')->name('footer.policy-fr');
 		Route::get('/'.trans("slugs.footer-general-info", [], "fr"), 'GeneralController@showGeneralInfo')->name('footer.general-info-fr');
+		Route::get('/'.trans("slugs.footer-medias", [], "fr"), 'GeneralController@showMedias')->name('footer.medias-fr');
 	});
 
 	Route::group([
@@ -197,6 +199,7 @@ if (app('env') == 'landing') {
 
 		Route::get('/'.trans("slugs.footer-policy", [], "en"), 'GeneralController@showPolicy')->name('footer.policy-en');
 		Route::get('/'.trans("slugs.footer-general-info", [], "en"), 'GeneralController@showGeneralInfo')->name('footer.general-info-en');
+		Route::get('/'.trans("slugs.footer-medias", [], "en"), 'GeneralController@showMedias')->name('footer.medias-en');
 	});
 
 	Route::group([
@@ -241,6 +244,7 @@ if (app('env') == 'landing') {
 
 		Route::get('/'.trans("slugs.footer-policy", [], "de"), 'GeneralController@showPolicy')->name('footer.policy-de');
 		Route::get('/'.trans("slugs.footer-general-info", [], "de"), 'GeneralController@showGeneralInfo')->name('footer.general-info-de');
+		Route::get('/'.trans("slugs.footer-medias", [], "de"), 'GeneralController@showMedias')->name('footer.medias-de');
 	});
 
 	Route::group([

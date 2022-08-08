@@ -261,6 +261,12 @@ class GeneralController extends Controller
     }
 
 
+    public function showMedias()
+    {
+        return view('footer.pages.medias');
+    }
+
+
 
     public function startImport()
     {

@@ -3908,6 +3908,150 @@ input[type=checkbox]:focus {
   }
 }
 
+.footer {
+  padding-top: 102px;
+  background: white;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 50px;
+  }
+}
+.footer__contact {
+  font: normal normal 500 22px/46px "Barlow Condensed";
+  letter-spacing: 0px;
+  line-height: 1.9rem;
+  transition: all 0.2s ease-in-out;
+}
+.footer__copyright {
+  border-top: solid 1px #D9D9D9;
+  padding: 23px 0px;
+  text-align: left;
+  font: normal normal 500 16px/36px "Barlow";
+  letter-spacing: 0px;
+  color: #2E1414;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .footer__copyright {
+    padding: 70px 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .footer__copyright {
+    padding: 70px 0px;
+    text-align: center;
+  }
+}
+.footer__lists {
+  margin-bottom: 110px;
+}
+@media (max-width: 767px) {
+  .footer__lists {
+    padding-left: 20px;
+  }
+}
+.footer__lists__col {
+  width: 25%;
+}
+@media (max-width: 767px) {
+  .footer__lists__col {
+    width: 100%;
+  }
+}
+.footer__logo-container {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 22px);
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .footer__logo-container {
+    bottom: 123px;
+    left: calc(50% - 15px);
+  }
+}
+@media (max-width: 767px) {
+  .footer__logo-container {
+    bottom: 140px;
+    left: calc(50% - 15px);
+  }
+}
+.footer__logo-container__logo {
+  width: 44px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .footer__logo-container__logo {
+    width: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__logo-container__logo {
+    width: 30px;
+  }
+}
+.footer__social {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 6px;
+  background: #F9E2E2;
+  color: #D41C1B;
+  font-size: 2rem;
+  padding-top: 6px;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.footer__social:hover {
+  background: #D41C1B;
+  color: #FFFFFF;
+}
+.footer h4 {
+  width: 100%;
+  text-align: left;
+  font: normal normal 600 28px/34px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+  margin-bottom: 45px;
+}
+@media (max-width: 767px) {
+  .footer h4 {
+    margin-bottom: 20px;
+  }
+}
+.footer ul {
+  min-width: 120px;
+  text-align: left;
+  font: normal normal 500 22px/46px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E1414;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .footer ul {
+    font: normal normal 500 19px/35px "Barlow Condensed";
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .footer ul {
+    font: normal normal 500 19px/35px "Barlow Condensed";
+    margin-bottom: 40px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .footer ul {
+    font: normal normal 500 20px/40px "Barlow Condensed";
+    margin-bottom: 40px;
+  }
+}
+.footer ul a {
+  transition: all 0.2s ease-in-out;
+}
+.footer ul a:hover {
+  color: #D41C1B;
+}
+
 .footer-connect {
   text-align: center;
   font: normal normal 300 44px/53px "Barlow Condensed";
@@ -4198,150 +4342,6 @@ input[type=checkbox]:focus {
   font-weight: 600;
 }
 
-.footer {
-  padding-top: 102px;
-  background: white;
-  position: relative;
-}
-@media (max-width: 767px) {
-  .footer {
-    padding-top: 50px;
-  }
-}
-.footer__contact {
-  font: normal normal 500 22px/46px "Barlow Condensed";
-  letter-spacing: 0px;
-  line-height: 1.9rem;
-  transition: all 0.2s ease-in-out;
-}
-.footer__copyright {
-  border-top: solid 1px #D9D9D9;
-  padding: 23px 0px;
-  text-align: left;
-  font: normal normal 500 16px/36px "Barlow";
-  letter-spacing: 0px;
-  color: #2E1414;
-}
-@media (min-width: 768px) and (max-width: 1080px) {
-  .footer__copyright {
-    padding: 70px 0px;
-    text-align: center;
-  }
-}
-@media (max-width: 767px) {
-  .footer__copyright {
-    padding: 70px 0px;
-    text-align: center;
-  }
-}
-.footer__lists {
-  margin-bottom: 110px;
-}
-@media (max-width: 767px) {
-  .footer__lists {
-    padding-left: 20px;
-  }
-}
-.footer__lists__col {
-  width: 25%;
-}
-@media (max-width: 767px) {
-  .footer__lists__col {
-    width: 100%;
-  }
-}
-.footer__logo-container {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 22px);
-}
-@media (min-width: 768px) and (max-width: 1080px) {
-  .footer__logo-container {
-    bottom: 123px;
-    left: calc(50% - 15px);
-  }
-}
-@media (max-width: 767px) {
-  .footer__logo-container {
-    bottom: 140px;
-    left: calc(50% - 15px);
-  }
-}
-.footer__logo-container__logo {
-  width: 44px;
-}
-@media (min-width: 768px) and (max-width: 1080px) {
-  .footer__logo-container__logo {
-    width: 35px;
-  }
-}
-@media (max-width: 767px) {
-  .footer__logo-container__logo {
-    width: 30px;
-  }
-}
-.footer__social {
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  border-radius: 6px;
-  background: #F9E2E2;
-  color: #D41C1B;
-  font-size: 2rem;
-  padding-top: 6px;
-  margin-right: 10px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-}
-.footer__social:hover {
-  background: #D41C1B;
-  color: #FFFFFF;
-}
-.footer h4 {
-  width: 100%;
-  text-align: left;
-  font: normal normal 600 28px/34px "Barlow Condensed";
-  letter-spacing: 0px;
-  color: #2E1414;
-  margin-bottom: 45px;
-}
-@media (max-width: 767px) {
-  .footer h4 {
-    margin-bottom: 20px;
-  }
-}
-.footer ul {
-  min-width: 120px;
-  text-align: left;
-  font: normal normal 500 22px/46px "Barlow Condensed";
-  letter-spacing: 0px;
-  color: #2E1414;
-}
-@media (min-width: 1081px) and (max-width: 1249px) {
-  .footer ul {
-    font: normal normal 500 19px/35px "Barlow Condensed";
-  }
-}
-@media (min-width: 768px) and (max-width: 1080px) {
-  .footer ul {
-    font: normal normal 500 19px/35px "Barlow Condensed";
-    margin-bottom: 40px;
-    padding-right: 10px;
-  }
-}
-@media (max-width: 767px) {
-  .footer ul {
-    font: normal normal 500 20px/40px "Barlow Condensed";
-    margin-bottom: 40px;
-  }
-}
-.footer ul a {
-  transition: all 0.2s ease-in-out;
-}
-.footer ul a:hover {
-  color: #D41C1B;
-}
-
 .footer-legal {
   padding-top: 66px;
   margin-bottom: 100px;
@@ -4380,6 +4380,52 @@ input[type=checkbox]:focus {
   color: #2E1414;
 }
 .footer-legal__highlight {
+  padding: 30px;
+  background: #F9E2E2;
+  border-radius: 12px;
+  font: normal normal 700 22px/36px "Barlow";
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.footer-medias {
+  padding-top: 66px;
+  margin-bottom: 100px;
+}
+.footer-medias__title {
+  text-align: center;
+  font: normal normal 700 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+  width: 50%;
+  margin-left: 25%;
+}
+@media (max-width: 767px) {
+  .footer-medias__title {
+    font: normal normal 700 36px/46px "Barlow Condensed";
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.footer-medias__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.footer-medias__paragraph {
+  font: normal normal 500 16px/36px "Barlow";
+  margin-bottom: 35px;
+}
+.footer-medias__paragraph a {
+  color: #D41C1B;
+  transition: color 0.2s;
+}
+.footer-medias__paragraph a:hover {
+  color: #2E1414;
+}
+.footer-medias__highlight {
   padding: 30px;
   background: #F9E2E2;
   border-radius: 12px;
