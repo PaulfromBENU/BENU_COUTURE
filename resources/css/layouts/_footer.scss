@@ -343,6 +343,9 @@
 		font: normal normal 500 22px/46px 'Barlow Condensed';
 		letter-spacing: 0px;
 		color: $dark-text;
+		@include intermediate {
+			font: normal normal 500 19px/35px 'Barlow Condensed';
+		}
 		@include tablet {
 			font: normal normal 500 19px/35px 'Barlow Condensed';
 			margin-bottom: 40px;
