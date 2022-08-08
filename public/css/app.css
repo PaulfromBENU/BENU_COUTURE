@@ -3312,8 +3312,8 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 1081px) and (max-width: 1249px) {
   .article-sidebar__content__close-container {
-    top: 20px;
-    right: 30px;
+    top: 18px;
+    right: 18px;
   }
 }
 @media (min-width: 768px) and (max-width: 1080px) {
