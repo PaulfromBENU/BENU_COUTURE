@@ -142,7 +142,8 @@ class DashboardNavigation extends Component
     public function fillUserInfo()
     {
         $this->show_confirmation = 0;
-        $this->emit('activateInputs'); // Used to reload JS for accordeon behaviour
+        $this->emit('activateInputs'); // Used to reload JS inputs behaviour
+
         // Prefill user info in form
         if (strtolower(auth()->user()->gender) == 'male') {
             $this->gender = "male";
@@ -264,8 +265,15 @@ class DashboardNavigation extends Component
         return redirect()->route('home', ['locale' => app()->getLocale()])->with('account-deleted', __('dashboard.delete-confirmation'));
     }
 
+    public function keepInputsActivated()
+    {
+        $this->emit('activateInputs');
+    }
+
     public function render()
     {
+        // Maintain dynamic inputs activated
+        $this->keepInputsActivated();
         // In case the wishlist is requested, reload  the data to make sure it is loaded asobjects (necessary for overview component)
         if ($this->section == 'wishlist') {
             $this->getWishlistArticles();
