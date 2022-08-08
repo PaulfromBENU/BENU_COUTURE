@@ -74,7 +74,7 @@
 
             <div class="content-wrapper">
                 <!-- Page Content -->
-                <main class="overflow-x-hidden">
+                <main>
                     @yield('main-content-top')
                 </main>
 

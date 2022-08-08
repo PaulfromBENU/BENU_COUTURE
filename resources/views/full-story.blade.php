@@ -21,7 +21,7 @@
 @endsection
 
 @section('main-content')
-<section class="w-3/5 m-auto full-story">
+<section class="w-11/12 xl:w-3/5 m-auto full-story">
 	<h2 class="full-story__subtitle">L'histoire de BENU</h2>
 	<h1 class="full-story__title">L'unique plate-forme luxembourgeoise de seconde main</h1>
 

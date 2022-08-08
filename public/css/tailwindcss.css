@@ -3066,6 +3066,10 @@ select {
     width: 75%;
   }
 
+  .lg\:w-4\/5 {
+    width: 80%;
+  }
+
   .lg\:max-w-\[20em\] {
     max-width: 20em;
   }
@@ -3322,6 +3326,10 @@ select {
 
   .xl\:hidden {
     display: none;
+  }
+
+  .xl\:w-3\/5 {
+    width: 60%;
   }
 
   .xl\:grid-cols-4 {
