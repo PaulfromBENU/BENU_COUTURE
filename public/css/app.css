@@ -12588,6 +12588,11 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
 }
 
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .participate-smart {
+    width: 92%;
+  }
+}
 .participate-smart__title {
   text-align: center;
   font: normal normal 700 44px/53px "Barlow Condensed";
