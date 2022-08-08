@@ -356,6 +356,9 @@
 		border-radius: 25px;
 		padding: 33px 71px; //2.5% 3%;
 		position: relative;
+		@include intermediate {
+			padding: 25px 45px;
+		}
 		@include tablet {
 			width: 100%;
 			margin-top: 0px;
@@ -486,6 +489,11 @@
 			bottom: 33px;
 			left: 70px;
 			width: calc(100% - 140px);
+			@include intermediate {
+				left: 45px;
+				width: calc(100% - 90px);
+				// padding: 25px 45px;
+			}
 			@include tablet {
 				position: relative;
 				width: 100%;
@@ -504,6 +512,10 @@
 				cursor: pointer;
 				margin-right: 10px;
 				transition: all 0.2s;
+				@include intermediate {
+					width: calc(50% - 10px);
+					font-size: 0.95rem;
+				}
 				@include mobile {
 					width: 100%;
 				}

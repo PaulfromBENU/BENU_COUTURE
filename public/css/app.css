@@ -6916,6 +6916,11 @@ input[type=checkbox]:focus {
   padding: 33px 71px;
   position: relative;
 }
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .model-pres__desc {
+    padding: 25px 45px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1080px) {
   .model-pres__desc {
     width: 100%;
@@ -7078,6 +7083,12 @@ input[type=checkbox]:focus {
   left: 70px;
   width: calc(100% - 140px);
 }
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .model-pres__desc__seemore {
+    left: 45px;
+    width: calc(100% - 90px);
+  }
+}
 @media (min-width: 768px) and (max-width: 1080px) {
   .model-pres__desc__seemore {
     position: relative;
@@ -7100,6 +7111,12 @@ input[type=checkbox]:focus {
   cursor: pointer;
   margin-right: 10px;
   transition: all 0.2s;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .model-pres__desc__seemore a {
+    width: calc(50% - 10px);
+    font-size: 0.95rem;
+  }
 }
 @media (max-width: 767px) {
   .model-pres__desc__seemore a {
