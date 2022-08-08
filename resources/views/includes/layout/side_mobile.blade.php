@@ -44,11 +44,11 @@
                 {!! __('welcome.side-menu-client-history') !!}
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="{{ route('partners-'.app()->getLocale()) }}" class="side-mobile-link">
                 {!! __('welcome.side-menu-client-partners') !!}
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="{{ route('header.participate-'.app()->getLocale()) }}" class="side-mobile-link">
                 {!! __('welcome.side-menu-client-participate') !!}

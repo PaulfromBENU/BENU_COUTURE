@@ -110,7 +110,7 @@
 				font: normal normal 500 16px/28px 'Barlow';
 			}
 			@include tablet {
-				width: 100%;
+				width: 60%;
 				margin-bottom: 20px;
 				font: normal normal 500 16px/28px 'Barlow';
 				// min-height: 300px;
@@ -156,6 +156,9 @@
 		z-index: 1;
 		height: 80vh;
 		//background: lightgrey;
+		@include tablet {
+			right: 0;
+		}
 		@include mobile {
 			position: relative;
 			right: 40%;

@@ -7,8 +7,8 @@ $(function() {
     }
 
     $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
         if ($('.header__logo').length > 0) {
-            var scrollTop = $(window).scrollTop();
             if ( scrollTop > 40 ) { 
                 $('.header__logo').hide();
                 $('.header__logo--scroll').show();

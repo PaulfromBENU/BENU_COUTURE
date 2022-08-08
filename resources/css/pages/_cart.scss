@@ -63,7 +63,7 @@
 			padding-top: 30px;
 		}
 		@include mobile {
-			padding-top: 30px;
+			padding-top: 20px;
 			padding-bottom: 0;
 			border-bottom: none;
 		}
@@ -80,6 +80,7 @@
 				margin-bottom: 30px;
 			}
 			@include mobile {
+				margin-top: 15px;
 				margin-bottom: 20px;
 			}
 			img {
@@ -195,7 +196,7 @@
 				margin-top: 5px;
 				width: 100px;
 				border-radius: 20px;
-				margin-bottom: 5px;
+				margin-bottom: 15px;
 			}
 			@include mobile {
 				margin: 0;
@@ -203,7 +204,7 @@
 				width: 50%;
 				max-width: 100px;
 				border-radius: 20px;
-				margin-bottom: 5px;
+				margin-bottom: 15px;
 				font: normal normal 600 16px/28px 'Barlow Condensed';
 				padding: 1px 2px;
 			}
@@ -250,8 +251,12 @@
 				text-align: left;
 				margin-left: 0px;
 				padding-left: 0;
-				margin-top: 0px;
+				margin-top: 20px;
 				font: normal normal 500 16px/28px 'Barlow Condensed';
+				padding-top: 12px;
+				border-top: solid 1px $primary-color;
+				padding-bottom: 12px;
+				border-bottom: solid 1px $primary-color;
 			}
 			@include mobile {
 				text-align: left;
@@ -259,6 +264,7 @@
 				padding-left: 0;
 				margin-top: 0px;
 				font: normal normal 500 16px/28px 'Barlow Condensed';
+				margin-bottom: 15px;
 			}
 			&__counter {
 				margin-right: 15px;
@@ -293,6 +299,7 @@
 				margin-top: 5px;
 			}
 			@include mobile {
+				font: normal normal 500 26px/30px 'Barlow Condensed';
 				text-align: left;
 				padding-left: 0;
 				margin-top: 5px;
@@ -308,14 +315,21 @@
 				font-size: 1.6rem;
 				color: $primary-color;
 				@include tablet {
-					right: 7px;
-					top: 72%;
-					font-size: 1.8rem;
+					// right: 7px;
+					// top: 72%;
+					// font-size: 1.8rem;
+					position: relative;
+					right: auto;
+					top: 0;
+					font-size: 1.7rem;
+					margin-right: 12px;
 				}
 				@include mobile {
-					right: 7px;
-					top: 72%;
-					font-size: 1.8rem;
+					position: relative;
+					right: auto;
+					top: 0;
+					font-size: 1.7rem;
+					margin-right: 12px;
 				}
 				&__icon {
 					position: absolute;
@@ -326,8 +340,11 @@
 						font-size: 1.4rem;
 						top: 8px;
 					}
+					@include tablet {
+						top: -2px;
+					}
 					@include mobile {
-						top: 9px;
+						top: -2px;
 					}
 					&--hovered {
 						transform: scale(0);
@@ -343,7 +360,8 @@
 				.tooltiptext--top {
 					left: calc(50% - 103px);
 					@include mobile {
-						left: -180px;
+						left: -176px;
+						top: -48px;
 						&::before {
 							@include mobile {
 								left: 90%;
@@ -364,13 +382,18 @@
 				font-size: 1.6rem;
 				cursor: pointer;
 				@include tablet {
-					right: 7px;
-					top: 21%;
+					// right: 7px;
+					// top: 21%;
+					// font-size: 2.5rem;
+					position: relative;
+					right: auto;
+					top: 20%;
 					font-size: 2.5rem;
 				}
 				@include mobile {
-					right: 7px;
-					top: 21%;
+					position: relative;
+					right: auto;
+					top: 0%;
 					font-size: 2.5rem;
 				}
 				svg {

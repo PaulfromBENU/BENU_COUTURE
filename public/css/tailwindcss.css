@@ -3002,6 +3002,10 @@ select {
     margin-left: 1.25rem;
   }
 
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3306,6 +3310,10 @@ select {
 
   .xl\:col-span-full {
     grid-column: 1 / -1;
+  }
+
+  .xl\:mt-3 {
+    margin-top: 0.75rem;
   }
 
   .xl\:table-cell {

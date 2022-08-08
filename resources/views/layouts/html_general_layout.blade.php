@@ -65,7 +65,7 @@
     </head>
 
     <body class="antialiased overflow-x-hidden">
-        <div class="min-h-screen relative">
+        <div class="min-h-screen">
             <!-- Page header -->
             @yield('header')
 
@@ -74,7 +74,7 @@
 
             <div class="content-wrapper">
                 <!-- Page Content -->
-                <main>
+                <main class="overflow-x-hidden">
                     @yield('main-content-top')
                 </main>
 

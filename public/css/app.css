@@ -4556,7 +4556,7 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .welcome-presentation__desc__text {
-    width: 100%;
+    width: 60%;
     margin-bottom: 20px;
     font: normal normal 500 16px/28px "Barlow";
   }
@@ -4607,6 +4607,11 @@ input[type=checkbox]:focus {
   overflow: hidden;
   z-index: 1;
   height: 80vh;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .welcome-presentation__illustration {
+    right: 0;
+  }
 }
 @media (max-width: 767px) {
   .welcome-presentation__illustration {
@@ -6173,7 +6178,7 @@ input[type=checkbox]:focus {
 @media (min-width: 768px) and (max-width: 1080px) {
   .shops__card__img-container {
     width: 100%;
-    height: 180px;
+    height: 250px;
     margin-bottom: 20px;
   }
 }
@@ -10642,7 +10647,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .cart-content__article {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 0;
     border-bottom: none;
   }
@@ -10663,6 +10668,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .cart-content__article__img-container {
+    margin-top: 15px;
     margin-bottom: 20px;
   }
 }
@@ -10806,7 +10812,7 @@ input[type=checkbox]:focus {
     margin-top: 5px;
     width: 100px;
     border-radius: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -10816,7 +10822,7 @@ input[type=checkbox]:focus {
     width: 50%;
     max-width: 100px;
     border-radius: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font: normal normal 600 16px/28px "Barlow Condensed";
     padding: 1px 2px;
   }
@@ -10869,8 +10875,12 @@ input[type=checkbox]:focus {
     text-align: left;
     margin-left: 0px;
     padding-left: 0;
-    margin-top: 0px;
+    margin-top: 20px;
     font: normal normal 500 16px/28px "Barlow Condensed";
+    padding-top: 12px;
+    border-top: solid 1px #D41C1B;
+    padding-bottom: 12px;
+    border-bottom: solid 1px #D41C1B;
   }
 }
 @media (max-width: 767px) {
@@ -10880,6 +10890,7 @@ input[type=checkbox]:focus {
     padding-left: 0;
     margin-top: 0px;
     font: normal normal 500 16px/28px "Barlow Condensed";
+    margin-bottom: 15px;
   }
 }
 .cart-content__article__number__counter {
@@ -10920,6 +10931,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .cart-content__article__price {
+    font: normal normal 500 26px/30px "Barlow Condensed";
     text-align: left;
     padding-left: 0;
     margin-top: 5px;
@@ -10938,16 +10950,20 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .cart-content__article__icons__heart {
-    right: 7px;
-    top: 72%;
-    font-size: 1.8rem;
+    position: relative;
+    right: auto;
+    top: 0;
+    font-size: 1.7rem;
+    margin-right: 12px;
   }
 }
 @media (max-width: 767px) {
   .cart-content__article__icons__heart {
-    right: 7px;
-    top: 72%;
-    font-size: 1.8rem;
+    position: relative;
+    right: auto;
+    top: 0;
+    font-size: 1.7rem;
+    margin-right: 12px;
   }
 }
 .cart-content__article__icons__heart__icon {
@@ -10962,9 +10978,14 @@ input[type=checkbox]:focus {
     top: 8px;
   }
 }
+@media (min-width: 768px) and (max-width: 1080px) {
+  .cart-content__article__icons__heart__icon {
+    top: -2px;
+  }
+}
 @media (max-width: 767px) {
   .cart-content__article__icons__heart__icon {
-    top: 9px;
+    top: -2px;
   }
 }
 .cart-content__article__icons__heart__icon--hovered {
@@ -10982,7 +11003,8 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .cart-content__article__icons__heart .tooltiptext--top {
-    left: -180px;
+    left: -176px;
+    top: -48px;
   }
 }
 @media (max-width: 767px) and (max-width: 767px) {
@@ -11002,15 +11024,17 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .cart-content__article__icons__trash {
-    right: 7px;
-    top: 21%;
+    position: relative;
+    right: auto;
+    top: 20%;
     font-size: 2.5rem;
   }
 }
 @media (max-width: 767px) {
   .cart-content__article__icons__trash {
-    right: 7px;
-    top: 21%;
+    position: relative;
+    right: auto;
+    top: 0%;
     font-size: 2.5rem;
   }
 }
