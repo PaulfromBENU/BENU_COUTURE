@@ -24,10 +24,12 @@ class Orders extends Component
         if (auth()->user()->role == 'vendor') {
             if (Order::where('payment_type', '5')->find($order_id)) {
                 $this->detailed_order_id = $order_id;
+                $this->emit('orderSelected');
             }
         }
         if (auth()->user()->orders()->find($order_id)) {
             $this->detailed_order_id = $order_id;
+            $this->emit('orderSelected');
         }
     }
 

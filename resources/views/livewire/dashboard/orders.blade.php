@@ -98,11 +98,13 @@
                     </button>
                 </div>
                 <div class="flex lg:justify-end flex-col lg:flex-row">
+                    @if($order->status >= 2 && $order->status < 4)
                     <div class="text-right">
                         <a target="_blank" href="{{ route('invoice-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
                         </a>
                     </div>
+                    @endif
                     @if($order->delivery_status > 1 
                             && $order->cart->couture_variations()->where('name', 'voucher')->count() !== $order->cart->couture_variations()->count()
                             && Carbon\Carbon::parse($order->delivery_date) > Carbon\Carbon::now()->subdays(28))

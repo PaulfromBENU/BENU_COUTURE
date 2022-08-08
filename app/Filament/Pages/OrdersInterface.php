@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\File;
 
 use App\Traits\PDFGenerator;
 
+use App\Jobs\SendOrderReadyConfirmationEmail;
+
 class OrdersInterface extends Page
 {
     use PDFGenerator;
@@ -128,6 +130,7 @@ class OrdersInterface extends Page
         $order->delivery_date = Carbon::now()->format('Y-m-d');
         if($order->save()) {
             $this->initializeOrders();
+            SendOrderReadyConfirmationEmail::dispatchAfterResponse($order);
         }
     }
 
@@ -143,6 +146,7 @@ class OrdersInterface extends Page
         }
         if($order->save()) {
             $this->initializeOrders();
+            SendOrderReadyConfirmationEmail::dispatchAfterResponse($order);
         }
     }
 
