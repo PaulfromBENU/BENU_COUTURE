@@ -225,7 +225,7 @@
                     </a>
                     @endif
                 @else
-                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="inline-block btn-couture-plain article-sidebar__content__cart-btn" style="height: auto;">
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn" style="height: auto;">
                         {{ __('sidebar.order-other') }}
                     </a>
                 @endif
