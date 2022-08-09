@@ -11,8 +11,9 @@ use App\Models\Cart;
 use App\Models\DeliveryCountry;
 use App\Models\Order;
 use App\Models\Voucher;
-use App\Mail\NewOrder;
 use App\Mail\VoucherPdf;
+
+use App\Jobs\SendNewOrderEmails;
 
 use Illuminate\Support\Str;
 
@@ -181,9 +182,10 @@ class SaleController extends Controller
 
                 // Send e-mail with purchase confirmation, with pdf invoice
                 if ($current_order->user_id > 0) {
-                    Mail::to($current_order->user->email)->send(new NewOrder($current_order, $pdf));
+                    SendNewOrderEmails::dispatchAfterResponse($current_order->user->email, $current_order, $pdf);
                 } elseif (auth()->check() && auth()->user()->role == 'vendor') {
-                    Mail::to(auth()->user()->email)->send(new NewOrder($current_order, $pdf));
+                    SendNewOrderEmails::dispatchAfterResponse(auth()->user()->email, $current_order, $pdf);
+                    // Mail::to(auth()->user()->email)->send(new NewOrder($current_order, $pdf));
                 }
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card

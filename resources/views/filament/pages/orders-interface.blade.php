@@ -24,11 +24,9 @@
 						<label>Delivery follow-up link:</label><br/>
 						<input type="text" name="delivery_link" wire:model="delivery_link.{{ $new_order->id }}" placeholder="https://...">
 					</div>
-					<div>
-						<button wire:click="markAsSentByPost({{ $new_order->id }})" style="margin-top: 23px;">
-							Mark as 'Sent to customer'
-						</button>
-					</div>
+					<button wire:click="markAsSentByPost({{ $new_order->id }})" style="margin-top: 23px;">
+						Mark as 'Sent to customer'
+					</button>
 				@endif
 			</div>
 
@@ -41,8 +39,11 @@
 				@endif
 			</p>
 			<p class="text-xl">
-				Total: {{ $new_order->total_price }}&euro; - Paid on {{ $new_order->created_at->format('d\/m\/Y') }} - 
+				Total: {{ $new_order->total_price }}&euro; - Paid on {{ $new_order->created_at->format('d\/m\/Y') }} 
+				@if($new_order->payment_type >= 2)
+				- 
 				<button wire:click="markAsUnpaid({{ $new_order->id }})" class="new-orders__btn-1">Mark as unpaid</button>
+				@endif
 			</p>
 
 			<div class="text-lg" style="margin-top: 30px; border-left: solid 1px lightgrey; padding-left: 10px;">
@@ -186,7 +187,7 @@
 
 	<section class="new-orders">
 		<h2 style="padding-top: 100px;">
-			Unpaid orders - Waiting for payment - Bank account to be verified for payment confirmation
+			Unpaid orders - Waiting for payment - Bank account/Payconiq to be verified for payment confirmation
 		</h2>
 		@if($orders_waiting_for_payment->count() == 0)
 		<p>
@@ -199,6 +200,12 @@
 				@if($unpaid_order->created_at < Carbon\Carbon::now()->subDays(5))
 					<div style="margin-right: 10px;">
 						<span style="margin-right: 5px;">Unpaid for more than 5 days!</span>
+						<button wire:click="cancelCart({{ $unpaid_order->id }})" style="margin-top: 23px;">
+							Cancel and restore cart
+						</button>
+					</div>
+				@else
+					<div style="margin-right: 10px;">
 						<button wire:click="cancelCart({{ $unpaid_order->id }})" style="margin-top: 23px;">
 							Cancel and restore cart
 						</button>
