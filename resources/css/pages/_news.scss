@@ -104,6 +104,8 @@
 				font: normal normal 500 14px/24px 'Barlow Condensed';
 				text-align: center;
 				transition: all 0.2s;
+				min-width: fit-content;
+				margin-bottom: 5px;
 				&:hover {
 					background: $primary-color;
 					color: $white;

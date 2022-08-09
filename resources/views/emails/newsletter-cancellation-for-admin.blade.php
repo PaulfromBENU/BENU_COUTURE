@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-    <title>Newsletter BENU - nouvelle inscription</title>
+    <title>Newsletter BENU - nouvelle désinscription</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
     <div style="width: 100%; margin-bottom: 50px; text-align: center;">

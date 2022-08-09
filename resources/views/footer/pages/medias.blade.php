@@ -83,7 +83,7 @@
 			</li>
 		</ul>
 
-		<p class="footer-medias__paragraph text-center">
+		<p class="footer-medias__paragraph text-center pl-10 pr-10">
 			{{ __('footer.medias-txt-final') }}
 		</p>
 		<div class="text-center">

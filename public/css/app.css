@@ -7926,6 +7926,10 @@ input[type=checkbox]:focus {
   font: normal normal 500 14px/24px "Barlow Condensed";
   text-align: center;
   transition: all 0.2s;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin-bottom: 5px;
 }
 .all-news__link__tags__tag:hover {
   background: #D41C1B;

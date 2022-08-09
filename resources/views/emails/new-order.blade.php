@@ -47,7 +47,7 @@
 			Prix total de votre commande : <strong>{{ $order->total_price }}&euro;</strong>
 		</p>
 		<p>
-			Adresse de livraison : @if($order->address_id == 0) Retrait en magasin @endif
+			Adresse de livraison : @if($order->address_id == 0) Retrait en magasin (ajouter lien BENU SHOP) @endif
 		</p>
 		@if($order->address_id > 0)
 		<ul>
