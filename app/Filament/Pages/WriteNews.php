@@ -493,6 +493,22 @@ class WriteNews extends Page
             ]);
             $this->refreshData();
             $this->notify('success', 'The news was successfully created :)');
+            $this->show_pending_articles = 1;
         }
+    }
+
+    public function removeNews($article_id)
+    {
+        $news = NewsArticle::find($article_id);
+        $news->is_ready = 0;
+        $news->save();
+        $this->refreshData();
+    }
+
+    public function deleteNews($article_id)
+    {
+        $news = NewsArticle::find($article_id);
+        $news->delete();
+        $this->refreshData();
     }
 }
