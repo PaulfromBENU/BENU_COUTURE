@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-	<title>Votre bon d'achat BENU</title>
+	<title>{{ trans('emails.pdf-voucher-title', [], $locale) }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
@@ -18,27 +18,38 @@
 	</div>
 	<div>
 		<p>
-			<strong>Bonjour,</strong>
+			<strong>{{ trans('emails.pdf-voucher-hello', [], $locale) }} {{ ucfirst($buyer->first_name) }},</strong>
 		</p>
 		<p>
-			Nous te remercions pour ta commande. Tu trouveras en pièce jointe de cet e-mail le bon d'achat que tu as acheté, au format pdf. 
+			{{ trans('emails.pdf-voucher-txt-1', [], $locale) }}
 		</p>
 		<p>
-			Ce bon d'achat a une valeur de <strong>{{ $voucher->initial_value }}&euro;</strong>
-		</p>
-		<p>
-			Le bon d'achat n'est pas nominatif, et peut être utilisé soit en magasin, soit en ligne, avec le code <strong>{{ $voucher->unique_code }}</strong>
+			{{ trans('emails.pdf-voucher-txt-2', [], $locale) }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => trans('slugs.services-shops', [], $locale)]) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-txt-3', [], $locale) }}</a> {{ trans('emails.pdf-voucher-txt-4', [], $locale) }}
 		</p>
 		
+		@if($buyer->role == 'guest_client')
+			<p>
+				{{ trans('emails.pdf-voucher-no-account-1', [], $locale) }} <a href="{{ route('register-'.$locale) }}">{{ trans('emails.pdf-voucher-no-account-link', [], $locale) }}</a> {{ trans('emails.pdf-voucher-no-account-2', [], $locale) }}
+			</p>
+		@else
+			<p>
+				{{ trans('emails.pdf-voucher-with-account-1', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}">{{ trans('emails.pdf-voucher-with-account-link', [], $locale) }}</a> {{ trans('emails.pdf-voucher-with-account-2', [], $locale) }}
+			</p>
+		@endif
+
 		<p>
-			Pour toute question, n'hésite pas à <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">nous contacter</a>.
+			{{ trans('emails.pdf-voucher-txt-5', [], $locale) }} <a href="{{ route('footer.policy-'.$locale) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-txt-6', [], $locale) }}</a>.
 		</p>
 
 		<p>
-			À bientôt sur nos plates-formes ou dans notre magasin !
+			{{ trans('emails.pdf-voucher-txt-7', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.pdf-voucher-txt-8', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-txt-9', [], $locale) }}</a> {{ trans('emails.pdf-voucher-txt-10', [], $locale) }}
+		</p>
+
+		<p>
+			{{ trans('emails.pdf-voucher-txt-11', [], $locale) }}
 		</p>
 		<p>
-			<em><strong>L'équipe BENU</strong></em>
+			<em><strong>{{ trans('emails.pdf-voucher-signature', [], $locale) }}</strong></em>
 		</p>
 	</div>
 </body>

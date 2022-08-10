@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ $locale }}">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-	<title>{{ __('emails.register-welcome-to-benu') }}</title>
+	<title>{{ trans('emails.register-welcome-to-benu', [], $locale) }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
@@ -18,23 +18,23 @@
 	</div>
 	<div>
 		<p>
-			<strong>{{ __('emails.register-hello') }} {{ ucfirst($user->first_name) }},</strong>
+			<strong>{{ trans('emails.register-hello', [], $locale) }} {{ ucfirst($user->first_name) }},</strong>
 		</p>
 		<p>
-			{{ __('emails.register-txt-1') }}
+			{{ trans('emails.register-txt-1', [], $locale) }}
 		</p>
 		<p style="text-align: center; color: #27955B;">
 			<strong>{{ $user->email }}</strong>
 		</p>
 		<p>
-			{{ __('emails.register-txt-2') }} <a href="{{ route('dashboard', ['locale' => $locale]) }}">{{ __('emails.register-dashboard') }}</a> {{ __('emails.register-txt-3') }}.
-			{{ __('emails.register-txt-4') }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ __('emails.register-txt-5') }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">{{ __('emails.register-contact') }}</a>.
+			{{ trans('emails.register-txt-2', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}">{{ __('emails.register-dashboard') }}</a> {{ trans('emails.register-txt-3', [], $locale) }}
+			{{ trans('emails.register-txt-4', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.register-txt-5', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">{{ trans('emails.register-contact', [], $locale) }}</a>.
 		</p>
 		<p>
-			{{ __('emails.register-txt-6') }}
+			{{ trans('emails.register-txt-6', [], $locale) }}
 		</p>
 		<p>
-			<em><strong>{{ __('emails.register-benu-team-signature') }}</strong></em>
+			<em><strong>{{ trans('emails.register-benu-team-signature', [], $locale) }}</strong></em>
 		</p>
 	</div>
 </body>

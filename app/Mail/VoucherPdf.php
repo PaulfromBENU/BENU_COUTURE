@@ -7,12 +7,14 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+use App\Models\User;
 use App\Models\Voucher;
 
 class VoucherPdf extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $buyer;
     public $voucher;
     public $locale;
     public $pdf_voucher;
@@ -22,11 +24,12 @@ class VoucherPdf extends Mailable
      *
      * @return void
      */
-    public function __construct(Voucher $voucher, $pdf_voucher)
+    public function __construct(User $buyer, Voucher $voucher, $pdf_voucher)
     {
+        $this->buyer = $buyer;
         $this->voucher = $voucher;
         $this->pdf_voucher = $pdf_voucher;
-        $this->locale = session('locale');
+        $this->locale = $this->buyer->favorite_language;
     }
 
     /**
@@ -37,7 +40,7 @@ class VoucherPdf extends Mailable
     public function build()
     {
         return $this->from(config('mail.mailers.smtp.sender'), 'BENU')
-                    ->subject('Votre bon cadeau BENU')
+                    ->subject(trans('email.pdf-voucher-subject', [], $this->locale).' ('.$this->voucher->unique_code.')')
                     ->view('emails.voucher-pdf')
                     ->attachData($this->pdf_voucher->output(), 'BENU_Voucher_'.$this->voucher->unique_code.'.pdf', [
                     'mime' => 'application/pdf',

@@ -37,6 +37,6 @@ class OrderReadyConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.order-ready-subject", [], $this->locale))->view('emails.order-ready');
+        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.order-ready-subject-1", [], $this->locale).' ('.$this->order->unique_id.') '.trans("emails.order-ready-subject-2", [], $this->locale))->view('emails.order-ready');
     }
 }

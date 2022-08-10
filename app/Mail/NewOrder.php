@@ -42,7 +42,7 @@ class NewOrder extends Mailable
     public function build()
     {
         return $this->from(config('mail.mailers.smtp.sender'), 'BENU')
-                    ->subject(__('emails.new-order-subject').' '.$this->order->unique_id)
+                    ->subject(trans('emails.new-order-subject', [], $this->locale).' '.$this->order->unique_id)
                     ->view('emails.new-order')
                     ->attachData($this->invoice->output(), 'BENU_Invoice_'.$this->order->unique_id.'.pdf', [
                     'mime' => 'application/pdf',
