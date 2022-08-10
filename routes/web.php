@@ -102,6 +102,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "lu"), 'GeneralController@showPolicy')->name('footer.policy-lu');
 		Route::get('/'.trans("slugs.footer-general-info", [], "lu"), 'GeneralController@showGeneralInfo')->name('footer.general-info-lu');
 		Route::get('/'.trans("slugs.footer-medias", [], "lu"), 'GeneralController@showMedias')->name('footer.medias-lu');
+
+		Route::get('/'.trans("slugs.campaigns", [], "lu"), 'GeneralController@showAllCampaigns')->name('campaigns-lu');
+		Route::get('/'.trans("slugs.campaigns", [], "lu").'/{slug}', 'GeneralController@showSingleCampaign')->name('campaign-single-lu');
 	});
 
 	Route::group([
@@ -155,6 +158,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "fr"), 'GeneralController@showPolicy')->name('footer.policy-fr');
 		Route::get('/'.trans("slugs.footer-general-info", [], "fr"), 'GeneralController@showGeneralInfo')->name('footer.general-info-fr');
 		Route::get('/'.trans("slugs.footer-medias", [], "fr"), 'GeneralController@showMedias')->name('footer.medias-fr');
+
+		Route::get('/'.trans("slugs.campaigns", [], "fr"), 'GeneralController@showAllCampaigns')->name('campaigns-fr');
+		Route::get('/'.trans("slugs.campaigns", [], "fr").'/{slug}', 'GeneralController@showSingleCampaign')->name('campaign-single-fr');
 	});
 
 	Route::group([
@@ -200,6 +206,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "en"), 'GeneralController@showPolicy')->name('footer.policy-en');
 		Route::get('/'.trans("slugs.footer-general-info", [], "en"), 'GeneralController@showGeneralInfo')->name('footer.general-info-en');
 		Route::get('/'.trans("slugs.footer-medias", [], "en"), 'GeneralController@showMedias')->name('footer.medias-en');
+
+		Route::get('/'.trans("slugs.campaigns", [], "en"), 'GeneralController@showAllCampaigns')->name('campaigns-en');
+		Route::get('/'.trans("slugs.campaigns", [], "en").'/{slug}', 'GeneralController@showSingleCampaign')->name('campaign-single-en');
 	});
 
 	Route::group([
@@ -245,6 +254,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "de"), 'GeneralController@showPolicy')->name('footer.policy-de');
 		Route::get('/'.trans("slugs.footer-general-info", [], "de"), 'GeneralController@showGeneralInfo')->name('footer.general-info-de');
 		Route::get('/'.trans("slugs.footer-medias", [], "de"), 'GeneralController@showMedias')->name('footer.medias-de');
+
+		Route::get('/'.trans("slugs.campaigns", [], "de"), 'GeneralController@showAllCampaigns')->name('campaigns-de');
+		Route::get('/'.trans("slugs.campaigns", [], "de").'/{slug}', 'GeneralController@showSingleCampaign')->name('campaign-single-de');
 	});
 
 	Route::group([

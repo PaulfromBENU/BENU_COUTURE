@@ -278,6 +278,22 @@ class GeneralController extends Controller
     }
 
 
+    public function showAllCampaigns()
+    {
+        return view('campaigns');
+    }
+
+    public function showSingleCampaign(string $slug)
+    {
+        $campaign_slugs = [
+            'carte-blanche',
+        ];
+
+        if (in_array($slug, $campaign_slugs)) {
+            return view('campaigns.campaign-white-card');
+        }
+    }
+
 
     public function startImport()
     {

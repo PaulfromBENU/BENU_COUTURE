@@ -12820,3 +12820,79 @@ input[type=checkbox]:focus {
   margin-top: 6px;
   margin-right: 10px;
 }
+
+.all-campaigns {
+  padding-top: 60px;
+}
+@media (max-width: 767px) {
+  .all-campaigns {
+    width: 92%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+.all-campaigns__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .all-campaigns__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+}
+.all-campaigns__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .all-campaigns__subtitle {
+    margin-bottom: 20px;
+  }
+}
+
+.single-campaign {
+  padding-top: 60px;
+}
+@media (max-width: 767px) {
+  .single-campaign {
+    width: 92%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+.single-campaign__title {
+  text-align: center;
+  font: normal normal 600 44px/53px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .single-campaign__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+}
+.single-campaign__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .single-campaign__subtitle {
+    margin-bottom: 20px;
+  }
+}
