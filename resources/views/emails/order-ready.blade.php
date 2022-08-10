@@ -25,7 +25,7 @@
 		@else
 			{{ trans('emails.order-ready-delivery-1', [], $locale) }}
 		@endif
-		@if($user->role == 'guest_client')
+		@if($user->role !== 'guest_client')
 			<p>
 				{{ trans('emails.order-ready-with-account-1', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}" style="color: #27955B;">{{ trans('emails.order-ready-with-account-link', [], $locale) }}</a>.
 			</p>

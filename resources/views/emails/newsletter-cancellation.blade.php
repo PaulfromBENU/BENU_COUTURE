@@ -31,7 +31,7 @@
             {{ trans('emails.newsletter-cancellation-regards', [], $locale) }}
         </p>
         <p>
-            <em><strong>{{ trans('emails.newsletter-cancellation-your-team', [], $locale) }}</strong></em>
+            <em><strong>{{ trans('emails.newsletter-cancellation-signature', [], $locale) }}</strong></em>
         </p>
     </div>
 </body>

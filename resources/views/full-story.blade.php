@@ -1,7 +1,7 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	{{ __('models.seo-title', ['name' => 'Caretta']) }}
+	{{ __('models.seo-title') }}
 @endsection
 
 @section('description')
