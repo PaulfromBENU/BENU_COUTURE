@@ -1,11 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-	{{ __('models.seo-title') }}
+	{{ __('about.full-story-seo-title') }}
 @endsection
 
 @section('description')
-	{{ __('models.seo-description') }}
+	{{ __('about.full-story-seo-description') }}
 @endsection
 
 @section('breadcrumbs')

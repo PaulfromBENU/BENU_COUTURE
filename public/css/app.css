@@ -4480,6 +4480,42 @@ input[type=checkbox]:focus {
   margin-bottom: 35px;
 }
 
+.sitemap {
+  padding-top: 66px;
+  margin-bottom: 100px;
+}
+.sitemap__title {
+  text-align: center;
+  font: normal normal 700 38px/50px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 58px;
+  width: 100%;
+  margin-left: 0%;
+}
+@media (max-width: 767px) {
+  .sitemap__title {
+    font: normal normal 700 32px/46px "Barlow Condensed";
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.sitemap a {
+  color: #D41C1B;
+  transition: color 0.2s;
+}
+.sitemap a:hover {
+  color: #2E1414;
+}
+.sitemap__list--large {
+  font: normal normal 600 22px/30px "Barlow";
+  margin-top: 30px;
+}
+.sitemap__list--small {
+  font: normal normal 500 18px/25px "Barlow";
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
 .welcome-presentation {
   margin-bottom: 60px;
   width: 100vw;

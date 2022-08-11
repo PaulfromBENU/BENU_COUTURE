@@ -295,6 +295,21 @@ class GeneralController extends Controller
     }
 
 
+    public function showSiteMap()
+    {
+        $clothes = $this->getAvailableCreations('clothes');
+        $accessories = $this->getAvailableCreations('accessories');
+        $home_items = $this->getAvailableCreations('home');
+        $news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
+        return view('footer.pages.sitemap', [
+            'clothes' => $clothes, 
+            'accessories' => $accessories, 
+            'home_items' => $home_items, 
+            'news' => $news,
+        ]);
+    }
+
+
     public function startImport()
     {
         if(auth::check() && auth::user()->role == 'admin') {
