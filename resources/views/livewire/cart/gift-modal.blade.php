@@ -47,7 +47,7 @@
 
         </span></h5>
         <div class="flex justify-start lg:justify-center cart-gift-modal__card-container">
-            <div class="cart-gift-modal__card__type @if($card_type == 1) cart-gift-modal__card__type--active @endif" wire:click="updateCard(1)">
+            <!-- <div class="cart-gift-modal__card__type @if($card_type == 1) cart-gift-modal__card__type--active @endif" wire:click="updateCard(1)">
                 <div class="cart-gift-modal__card__type__svg-container">
                     <img src="{{ asset('images/pictures/gift_card_1.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
@@ -55,14 +55,14 @@
                     <input type="radio" name="cart_add_card" value="1" wire:model="card_type" wire:click="updateCard(1)" id="cart-add-card-1">
                     <label for="cart-add-card-1">{{ __('cart.add-specific-card') }} #1</label>
                 </div>
-            </div>
+            </div> -->
             <div class="cart-gift-modal__card__type @if($card_type == 2) cart-gift-modal__card__type--active @endif" wire:click="updateCard(2)">
                 <div class="cart-gift-modal__card__type__svg-container">
                     <img src="{{ asset('images/pictures/gift_card_2.png') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="2" wire:model="card_type" wire:click="updateCard(2)" id="cart-add-card-2">
-                    <label for="cart-add-card-2">{{ __('cart.add-specific-card') }} #2</label>
+                    <label for="cart-add-card-2">{{ __('cart.add-specific-card') }} #1</label>
                 </div>
             </div>
             <div class="cart-gift-modal__card__type @if($card_type == 3) cart-gift-modal__card__type--active @endif" wire:click="updateCard(3)">
@@ -71,7 +71,7 @@
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="3" wire:model="card_type" wire:click="updateCard(3)" id="cart-add-card-3">
-                    <label for="cart-add-card-3">{{ __('cart.add-specific-card') }} #3</label>
+                    <label for="cart-add-card-3">{{ __('cart.add-specific-card') }} #2</label>
                 </div>
             </div>
         </div>
