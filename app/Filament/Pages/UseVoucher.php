@@ -61,7 +61,7 @@ class UseVoucher extends Page
     public function findAllCodes()
     {
         $this->all_codes = [];
-        foreach (Voucher::all() as $voucher) {
+        foreach (Voucher::where('remaining_value', '>', '0')->get() as $voucher) {
             $this->all_codes[$voucher->unique_code] = $voucher->remaining_value;
         }
     }
