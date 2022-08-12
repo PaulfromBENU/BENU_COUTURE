@@ -600,6 +600,9 @@
 				height: 100%;
 				font: normal normal 500 15px/19px 'Barlow Condensed';
 				letter-spacing: 0.32px;
+				&:hover, &:focus, &:active {
+					color: $white;
+				}
 			}
 		}
 	}

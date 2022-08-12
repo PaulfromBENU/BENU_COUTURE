@@ -5287,6 +5287,9 @@ input[type=checkbox]:focus {
   font: normal normal 500 15px/19px "Barlow Condensed";
   letter-spacing: 0.32px;
 }
+.side-mobile__links li a:hover, .side-mobile__links li a:focus, .side-mobile__links li a:active {
+  color: #FFFFFF;
+}
 .side-mobile__creations {
   margin-bottom: 35px;
   margin-left: 5px;
