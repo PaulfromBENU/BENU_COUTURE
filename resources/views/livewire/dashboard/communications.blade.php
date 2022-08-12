@@ -19,7 +19,7 @@
             </div>
 
             <div class="faq__accordion__answer pb-10" @if(!isset($showForm[$thread]) || $showForm[$thread] == 0) style="display: none;" @endif>
-                @foreach($thread_messages as $message)
+                @foreach($thread_messages->sortBy('created_at') as $message)
                     <div wire:key="{{ $message->id }}">
                         <p class="faq__accordion__answer__txt">
                             <span style="color: gray; padding-right: 10px;"><em>[{{ $message->created_at->format('d\/m\/Y\,\ H\hi') }}]</em></span> <br/> {{ $message->message }}
@@ -91,21 +91,21 @@
                             </p>
                             <ul>
                                 @if(0 == 1 && $mask_request->creation->product_type == 2)
-                                <!-- Not required anymore -->
-                                <li><em>
-                                    @if($mask_request->with_filter == 0)
-                                        {!! __('dashboard.com-with-filter') !!}
-                                    @else
-                                        {!! __('dashboard.com-without-filter') !!}
-                                    @endif
-                                </em></li>
-                                <li><em>
-                                    @if($mask_request->with_cotton == 0)
-                                        {!! __('dashboard.com-elastic-cords') !!}
-                                    @else
-                                        {!! __('dashboard.com-cotton-cords') !!}
-                                    @endif
-                                </em></li>
+                                    <!-- Not required anymore -->
+                                    <li><em>
+                                        @if($mask_request->with_filter == 0)
+                                            {!! __('dashboard.com-with-filter') !!}
+                                        @else
+                                            {!! __('dashboard.com-without-filter') !!}
+                                        @endif
+                                    </em></li>
+                                    <li><em>
+                                        @if($mask_request->with_cotton == 0)
+                                            {!! __('dashboard.com-elastic-cords') !!}
+                                        @else
+                                            {!! __('dashboard.com-cotton-cords') !!}
+                                        @endif
+                                    </em></li>
                                 @endif
                                 @if($mask_request->creation->product_type == 1)
                                 <li><em>

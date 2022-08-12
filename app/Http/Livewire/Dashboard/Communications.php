@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Dashboard;
 
 use Livewire\Component;
 
+use App\Models\BenuAnswer;
 use App\Models\ContactMessage;
 use App\Models\ItemOrder;
 use App\Models\MaskOrder;
@@ -17,6 +18,7 @@ class Communications extends Component
     public function mount()
     {
         $this->showForm = [];//[thread => 0/1]
+        $this->markAnswersAsSeen();
     }
 
     public function closeThread($thread)
@@ -72,10 +74,21 @@ class Communications extends Component
         }
     }
 
+    public function markAnswersAsSeen()
+    {
+        foreach (auth()->user()->openContactMessages()->get() as $open_message) {
+            foreach ($open_message->benuAnswers()->where('seen_by_user', '0')->get() as $benu_answer) {
+                $benu_answer->seen_by_user = 1;
+                $benu_answer->save();
+            }
+        }
+        // $this->emit('seenCommunicationsUpdated');
+    }
+
     public function render()
     {
         return view('livewire.dashboard.communications', [
-            'contact_messages' => auth()->user()->contactMessages()->orderBy('created_at', 'asc')->get(),
+            'contact_messages' => auth()->user()->contactMessages()->orderBy('created_at', 'desc')->get(),
             'mask_requests' => MaskOrder::where('email', auth()->user()->email)->orderBy('created_at', 'desc')->get(),
             'item_requests' => ItemOrder::where('email', auth()->user()->email)->orderBy('created_at', 'desc')->get(),
         ]);

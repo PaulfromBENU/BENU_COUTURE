@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 use Livewire\WithFileUploads;
 use App\Traits\ArticleAnalyzer;
+use App\Models\ContactMessage;
 use App\Models\GeneralCondition;
 use App\Models\Kulturpass;
 
@@ -40,6 +41,9 @@ class DashboardNavigation extends Component
     public $show_confirmation;
     public $kulturpass_status;
     public $new_kulturpass;
+
+    // New messages counter
+    public $counter;
 
     // Delete User
     public $delete_confirm;
@@ -82,6 +86,23 @@ class DashboardNavigation extends Component
             $this->kulturpass_status = 2;
         } else {
             $this->kulturpass_status = 1;
+        }
+
+        $this->updateCommunicationsCount();
+    }
+
+    public function updateCommunicationsCount()
+    {
+        $this->counter = 0;
+        if (auth()->check()) {
+            $email = auth()->user()->email;
+            $unread_messages_count = 0;
+            foreach (ContactMessage::where('email', $email)->where('closed', '0')->where('is_answered', '1')->get() as $message) {
+                if ($message->benuAnswers()->where('seen_by_user', '0')->count() > 0) {
+                    $unread_messages_count += $message->benuAnswers()->where('seen_by_user', '0')->count();
+                }
+            }
+            $this->counter = $unread_messages_count;
         }
     }
 

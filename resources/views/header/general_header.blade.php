@@ -122,11 +122,7 @@
                             </a>
                         </li>
                     @else
-                        <li class="tablet-hidden">
-                            <a href="{{ route('dashboard', ['section' => 'overview']) }}" class="header__main-menu__icons__btn" id="dashboard-btn">
-                                @svg('benu-icon-silhouette-disconnect')
-                            </a>
-                        </li>
+                        @livewire('components.dashboard-icon')
                     @endguest
                     <li class="tablet-hidden">
                         @if(Route::has('client-service-'.app()->getLocale()))
