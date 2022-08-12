@@ -33,10 +33,12 @@
 
 .single-campaign {
 	// padding-top: 60px;
+	// background: $white;
 	@include mobile {
 		margin: auto;
 		// padding-top: 30px;
 		padding-bottom: 40px;
+		overflow-x: hidden;
 	}
 	&__header {
 		position: relative;
@@ -44,6 +46,10 @@
 		padding-top: 15vh;
 		padding-bottom: 25px;
 		color: $white;
+		// background: transparent;
+		@include mobile {
+			height: calc(100vh - 120px);
+		}
 		img {
 			position: absolute;
 			top: 0;
@@ -68,35 +74,54 @@
 		&__txt-container {
 			height: 100%;
 			overflow-y: auto;
+			overflow-x: hidden;
 			// z-index: 1;
 		}
 		&__toptitle {
 			text-align: center;
 			font: normal normal 500 16px/28px 'Barlow Condensed';
 			margin-bottom: 6vh;
+			@include mobile {
+				font: normal normal 500 15px/24px 'Barlow Condensed';
+			}
 		}
 		&__title {
 			text-align: center;
 			margin-bottom: 6vh;
 			font: normal normal 700 90px/104px 'Barlow Condensed';
+			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 700 120px/144px 'Barlow Condensed';
+			}
+			@include tablet {
+				font: normal normal 700 74px/84px 'Barlow Condensed';
+			}
+			@include mobile {
+				font: normal normal 700 50px/64px 'Barlow Condensed';
 			}
 		}
 		&__subtitle {
 			text-align: left;
 			margin-bottom: 6vh;
 			font: normal normal 700 24px/32px 'Barlow';
+			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 700 28px/38px 'Barlow';
+			}
+			@include mobile {
+				font: normal normal 700 20px/28px 'Barlow';
 			}
 		}
 		&__txt {
 			text-align: left;
 			margin-bottom: 3vh;
 			font: normal normal 500 18px/30px 'Barlow';
+			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 500 20px/38px 'Barlow';
+			}
+			@include mobile {
+				font: normal normal 500 16px/26px 'Barlow';
 			}
 		}
 	}
@@ -206,6 +231,7 @@
 		// padding-top: 15vh;
 		// padding-bottom: 25px;
 		color: $white;
+		overflow: hidden;
 		img {
 			position: absolute;
 			top: 0;
@@ -233,8 +259,15 @@
 		&__title {
 			text-align: center;
 			font: normal normal 600 80px/90px 'Barlow Condensed';
+			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 600 110px/124px 'Barlow Condensed';
+			}
+			@include mobile {
+				font: normal normal 600 68px/74px 'Barlow Condensed';
+			}
+			@include mobile {
+				font: normal normal 600 48px/54px 'Barlow Condensed';
 			}
 		}
 	}
@@ -273,6 +306,9 @@
 				@include large {
 					font: normal normal 700 72px/76px 'Barlow';
 				}
+				@include mobile {
+					font: normal normal 700 32px/36px 'Barlow';
+				}
 			}
 			p {
 				margin-bottom: 25px;
@@ -290,8 +326,9 @@
 				margin-bottom: 5%;
 			}
 			@include mobile {
-				width: 100%;
+				width: 80%;
 				margin-bottom: 5%;
+				margin-left: 10%;
 			}
 			&__img {
 				border-radius: 20px;
@@ -343,8 +380,15 @@
 			text-align: center;
 			margin-bottom: 6vh;
 			font: normal normal 700 90px/104px 'Barlow Condensed';
+			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 700 120px/144px 'Barlow Condensed';
+			}
+			@include tablet {
+				font: normal normal 700 70px/84px 'Barlow Condensed';
+			}
+			@include mobile {
+				font: normal normal 700 50px/64px 'Barlow Condensed';
 			}
 		}
 		&__txt {
@@ -364,8 +408,12 @@
 			color: $primary-color;
 			text-align: center;
 			margin-bottom: 40px;
+			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 700 72px/76px 'Barlow';
+			}
+			@include mobile {
+				font: normal normal 700 30px/42px 'Barlow';
 			}
 			&--highlight {
 				color: $dark-text;
@@ -379,9 +427,12 @@
 			margin-bottom: 40px;
 		}
 		&__signature {
-			font: normal normal 500 42px/28px 'Barlow';
+			font: normal normal 500 42px/48px 'Barlow';
 			text-align: center;
 			margin-bottom: 60px;
+			@include mobile {
+				font: normal normal 500 32px/38px 'Barlow';
+			}
 		}
 		&__quote-2 {
 			background: rgb(240, 240, 240);

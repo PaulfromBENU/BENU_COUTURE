@@ -29,7 +29,7 @@
 		<section class="single-campaign__header">
 			<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" />
 			<div class="single-campaign__header__opacifier"></div>
-			<div class="w-4/5 lg:w-1/2 m-auto single-campaign__header__txt-container">
+			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__header__txt-container">
 				<h3 class="single-campaign__header__toptitle">{{ __('campaigns.carte-blanche-main-picture-top-title') }}</h3>
 				<h2 class="single-campaign__header__title">{{ __('campaigns.carte-blanche-main-picture-title') }}</h2>
 				<h1 class="single-campaign__header__subtitle">{{ __('campaigns.carte-blanche-main-picture-subtitle') }}</h1>
@@ -108,7 +108,7 @@
 		<section class="single-campaign__section-3">
 			<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" />
 			<div class="single-campaign__section-3__opacifier"></div>
-			<div class="w-4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container">
+			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container">
 				<h2 class="single-campaign__section-3__title">{{ __('campaigns.carte-blanche-section-3-title') }}</h2>
 
 				<p class="single-campaign__section-3__txt">
@@ -122,7 +122,7 @@
 		</section>
 
 		<section class="single-campaign__section-4">
-			<blockquote class="single-campaign__section-4__quote w-4/5 lg:w-1/2 m-auto">
+			<blockquote class="single-campaign__section-4__quote w-11/12 md:4/5 lg:w-1/2 m-auto">
 				{{ __('campaigns.carte-blanche-quote-1') }} <span class="single-campaign__section-4__quote--highlight">{{ __('campaigns.carte-blanche-quote-2') }}</span> {{ __('campaigns.carte-blanche-quote-3') }}
 			</blockquote>
 			<div class="single-campaign__section-4__separator"></div>
