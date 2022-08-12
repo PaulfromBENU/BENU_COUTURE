@@ -6,7 +6,7 @@
     <ul class="faq__accordion">
         @foreach($contact_messages->groupBy('thread')->all() as $thread => $thread_messages)
         <li wire:key="{{ $thread }}">
-            <div class="faq__accordion__header flex justify-between">
+            <div class="faq__accordion__header flex justify-between" @if($thread_messages->first()->closed == '1') style="background: grey;" @endif>
                 <p class="w-5/6">
                     {!! __('dashboard.com-message-from') !!} {{ auth()->user()->first_name }} - {!! __('dashboard.com-sent-on') !!} {{ $thread_messages->first()->created_at->format('d\/m\/Y') }}
                     @if($thread_messages->first()->closed == '1')
