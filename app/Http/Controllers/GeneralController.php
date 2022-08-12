@@ -278,6 +278,12 @@ class GeneralController extends Controller
     }
 
 
+    public function showGeneralConditions()
+    {
+        return view('footer.pages.general-conditions');
+    }
+
+
     public function showAllCampaigns()
     {
         return view('campaigns');

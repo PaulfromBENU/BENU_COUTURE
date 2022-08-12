@@ -5,9 +5,9 @@
 		<p class="mt-3 mb-3">
 			<a href="{{ route('footer.legal-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('dashboard.new-conditions-link') }}</a>
 		</p>
-		<p>
+		<!-- <p>
 			{{ $general_conditions_content }}
-		</p>
+		</p> -->
 		@if(auth()->user()->last_conditions_agreed == '0')
 			<div class="text-left mt-10">
 				<button class="btn-couture-plain" style="padding-bottom: 7px; padding-top: 7px; height: fit-content;" wire:click="acceptNewConditions">
@@ -15,7 +15,7 @@
 				</button>
 			</div>
 		@else
-			<div class="primary-color mt-10">
+			<div class="mt-10 text-lg font-semibold">
 				{!! __('dashboard.new-conditions-accepted') !!}
 			</div>
 		@endif

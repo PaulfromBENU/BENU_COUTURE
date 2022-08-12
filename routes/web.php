@@ -119,6 +119,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "lu"), 'GeneralController@showPolicy')->name('footer.policy-lu');
 		Route::get('/'.trans("slugs.footer-general-info", [], "lu"), 'GeneralController@showGeneralInfo')->name('footer.general-info-lu');
 		Route::get('/'.trans("slugs.footer-medias", [], "lu"), 'GeneralController@showMedias')->name('footer.medias-lu');
+		Route::get('/'.trans("slugs.general-conditions", [], "lu"), 'GeneralController@showGeneralConditions')->name('footer.general-conditions-lu');
 		Route::get('/'.trans("slugs.sitemap", [], "lu"), 'GeneralController@showSiteMap')->name('footer.sitemap-lu');
 
 		// Campaigns
@@ -182,6 +183,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "fr"), 'GeneralController@showPolicy')->name('footer.policy-fr');
 		Route::get('/'.trans("slugs.footer-general-info", [], "fr"), 'GeneralController@showGeneralInfo')->name('footer.general-info-fr');
 		Route::get('/'.trans("slugs.footer-medias", [], "fr"), 'GeneralController@showMedias')->name('footer.medias-fr');
+		Route::get('/'.trans("slugs.general-conditions", [], "fr"), 'GeneralController@showGeneralConditions')->name('footer.general-conditions-fr');
 		Route::get('/'.trans("slugs.sitemap", [], "fr"), 'GeneralController@showSiteMap')->name('footer.sitemap-fr');
 
 		// Campaigns
@@ -250,6 +252,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "en"), 'GeneralController@showPolicy')->name('footer.policy-en');
 		Route::get('/'.trans("slugs.footer-general-info", [], "en"), 'GeneralController@showGeneralInfo')->name('footer.general-info-en');
 		Route::get('/'.trans("slugs.footer-medias", [], "en"), 'GeneralController@showMedias')->name('footer.medias-en');
+		Route::get('/'.trans("slugs.general-conditions", [], "en"), 'GeneralController@showGeneralConditions')->name('footer.general-conditions-en');
 		Route::get('/'.trans("slugs.sitemap", [], "en"), 'GeneralController@showSiteMap')->name('footer.sitemap-en');
 
 		// Campaigns
@@ -312,6 +315,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.footer-policy", [], "de"), 'GeneralController@showPolicy')->name('footer.policy-de');
 		Route::get('/'.trans("slugs.footer-general-info", [], "de"), 'GeneralController@showGeneralInfo')->name('footer.general-info-de');
 		Route::get('/'.trans("slugs.footer-medias", [], "de"), 'GeneralController@showMedias')->name('footer.medias-de');
+		Route::get('/'.trans("slugs.general-conditions", [], "de"), 'GeneralController@showGeneralConditions')->name('footer.general-conditions-de');
 		Route::get('/'.trans("slugs.sitemap", [], "de"), 'GeneralController@showSiteMap')->name('footer.sitemap-de');
 
 		// Campaigns
