@@ -24,6 +24,10 @@
 	<div class="text-center all-campaigns w-2/3 md:w-3/4 lg:w-2/3 m-auto">
 		<h4 class="all-campaigns__subtitle">{{ __('campaigns.all-subtitle') }}</h4>
 		<h2 class="all-campaigns__title">{{ __('campaigns.all-title') }}</h2>
+
+		<div class="mt-10 mb-10 text-center">
+			<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">Campagne Carte Blanche</a>
+		</div>
 	</div>
 @endsection
 
