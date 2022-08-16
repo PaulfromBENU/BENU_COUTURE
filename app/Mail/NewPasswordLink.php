@@ -12,14 +12,16 @@ class NewPasswordLink extends Mailable
     use Queueable, SerializesModels;
 
     public $locale;
+    public $url;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $url)
     {
+        $this->url = $url;
         $this->locale = session('locale');
     }
 
@@ -30,8 +32,9 @@ class NewPasswordLink extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')
-                    ->subject("Test password reset")
+        return $this->mailer('smtp')
+                    ->from(config('mail.mailers.smtp.sender'), 'BENU')
+                    ->subject("test reset pwd BENU")
                     ->view('emails.password-reset-link');
     }
 }
