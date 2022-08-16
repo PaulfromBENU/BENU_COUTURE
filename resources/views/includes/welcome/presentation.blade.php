@@ -1,10 +1,10 @@
 <section class="benu-container welcome-presentation">
     <div class="welcome-presentation__illustration">
-        <img src="{{ asset('images/pictures/benu-reuse-illustration1-echange.png') }}" class="welcome-illustration-1 welcome-presentation__img">
-        <img src="{{ asset('images/pictures/benu-reuse-illustration2-environnement.png') }}" class="welcome-illustration-2 welcome-presentation__img">
-        <img src="{{ asset('images/pictures/benu-reuse-illustration3-conseils.png') }}" class="welcome-illustration-3 welcome-presentation__img">
-        <img src="{{ asset('images/pictures/benu-reuse-illustration4-services.png') }}" class="welcome-illustration-4 welcome-presentation__img">
-        <img src="{{ asset('images/pictures/benu-reuse-illustration5-utiles.png') }}" class="welcome-illustration-5 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/couture_illustrations_pattern_slide1_v1.jpg') }}" class="welcome-illustration-1 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/couture_illustrations_pattern_slide2_v1.jpg') }}" class="welcome-illustration-2 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/couture_illustrations_pattern_slide3_v1.jpg') }}" class="welcome-illustration-3 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/couture_illustrations_pattern_slide4_v1.jpg') }}" class="welcome-illustration-4 welcome-presentation__img">
+        <img src="{{ asset('images/pictures/couture_illustrations_pattern_slide5_v1.jpg') }}" class="welcome-illustration-5 welcome-presentation__img">
     </div>
     <div class="welcome-presentation__desc">
         <div class="flex justify-start welcome-presentation__desc__bar">

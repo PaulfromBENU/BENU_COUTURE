@@ -1,6 +1,6 @@
 <section class="benu-container footer-learnmore flex flex-col md:flex-row flex-wrap justify-around">
 	<div class="footer-learnmore__block">
-		<img src="{{ asset('images/pictures/footer-img-1.png') }}">
+		<img src="{{ asset('images/pictures/benu-couture-illustration-footer1.png') }}">
 		<h3>
 			<span class="primary-color">BENU COUTURE</span> {{ __('footer.more-title-1') }}
 		</h3>
@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class="footer-learnmore__block">
-		<img src="{{ asset('images/pictures/footer-img-2.png') }}">
+		<img src="{{ asset('images/pictures/benu-couture-illustration-footer2.png') }}">
 		<h3>
 			{{ __('footer.more-title-2') }} <span class="primary-color">BENU COUTURE</span>
 		</h3>
