@@ -121,13 +121,15 @@
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container">
 				<h2 class="single-campaign__section-3__title">{{ __('campaigns.carte-blanche-section-3-title') }}</h2>
 
-				<p class="single-campaign__section-3__txt">
-					{{ __('campaigns.carte-blanche-txt-11') }}
-				</p>
+				<div class="scroll-appearing-3">
+					<p class="single-campaign__section-3__txt">
+						{{ __('campaigns.carte-blanche-txt-11') }}
+					</p>
 
-				<p class="single-campaign__section-3__txt">
-					{{ __('campaigns.carte-blanche-txt-12') }}
-				</p>
+					<p class="single-campaign__section-3__txt">
+						{{ __('campaigns.carte-blanche-txt-12') }}
+					</p>
+				</div>
 			</div>
 		</section>
 
@@ -243,7 +245,7 @@
 				$('.scroll-grow-3').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
 				$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005));
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
-				// $('.scroll-appearing-1').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
+				$('.scroll-appearing-3').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}
 			if ($(document).scrollTop() > ($('#transition-2-end').offset().top - $(window).height())) {
 				$('.scroll-grow-3').css('background-attachment', 'scroll');

@@ -13202,6 +13202,8 @@ input[type=checkbox]:focus {
 .single-campaign__transition-1 {
   position: relative;
   min-height: calc(100vh - 160px);
+  padding-top: 25vh;
+  padding-bottom: 25px;
   color: #FFFFFF;
   overflow: hidden;
   background: url("/images/pictures/campaigns/DSC09261006.png");
