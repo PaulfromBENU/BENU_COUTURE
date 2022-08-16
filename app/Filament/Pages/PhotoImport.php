@@ -66,7 +66,7 @@ class PhotoImport extends Page
 
     public function mount()
     {
-        $this->all_creations = $this->getAvailableCreations()->sortBy('name');
+        $this->all_creations = Creation::all()->sortBy('name');//$this->getAvailableCreations()->sortBy('name');
         $this->existing_variations = collect([]);
         $this->is_new_article = 1;
         $this->all_sizes = [];
