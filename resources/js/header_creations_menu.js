@@ -50,6 +50,7 @@ function resetMobileMenu()
 $(function() {
     let creationsBarStatus = 'off';
     let fullMenuStatus = 'off';
+    let keepBtnColor = 'off';
     // let lastMenu = '';
     $('#creations-nav-toggle').on('click', function() {
 
@@ -64,17 +65,19 @@ $(function() {
             $('.creations-navbar').fadeOut();
             creationsBarStatus = 'off';
         }
+
+        keepBtnColor = 'on';
     })
 
     $('#creations-nav-toggle').on('mouseenter', function() {
         $('#creations-nav-toggle path').addClass('svg-primary-white--active');
     });
 
-    // $('#creations-nav-toggle').on('mouseleave', function() {
-    //     // if (creationsBarStatus == 'off') {
-    //         $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
-    //     // }
-    // });
+    $('#creations-nav-toggle').on('mouseleave', function() {
+        if (keepBtnColor == 'off') {
+            $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
+        }
+    });
 
     $(window).on('scroll', function() {
         var scrollTop = $(window).scrollTop();
@@ -87,6 +90,7 @@ $(function() {
             });
             creationsBarStatus = 'off';
             fullMenuStatus = 'off';
+            keepBtnColor = 'off';
         }
     });
 
@@ -180,6 +184,7 @@ $(function() {
             });
             creationsBarStatus = 'off';
             fullMenuStatus = 'off';
+            keepBtnColor = 'off';
         }
     });
 
