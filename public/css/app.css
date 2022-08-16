@@ -4789,7 +4789,7 @@ input[type=checkbox]:focus {
   width: 70%;
   overflow: hidden;
   z-index: 1;
-  height: 80vh;
+  height: 100%;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .welcome-presentation__illustration {
