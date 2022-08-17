@@ -12980,6 +12980,14 @@ input[type=checkbox]:focus {
     overflow-x: hidden;
   }
 }
+.single-campaign a {
+  font-weight: 600;
+  color: inherit;
+  transition: color 0.2s;
+}
+.single-campaign a:hover {
+  color: #D41C1B;
+}
 .single-campaign__header {
   position: relative;
   padding-top: 15vh;
@@ -12988,7 +12996,7 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
-  z-index: -2;
+  z-index: 1;
   border: solid white 60px;
 }
 @media (max-width: 767px) {
@@ -13019,6 +13027,17 @@ input[type=checkbox]:focus {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  width: 50vw;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__header__txt-container {
+    width: 80vw;
+  }
+}
+@media (max-width: 767px) {
+  .single-campaign__header__txt-container {
+    width: 91.66667vw;
+  }
 }
 .single-campaign__header__toptitle {
   text-align: center;
@@ -13033,7 +13052,7 @@ input[type=checkbox]:focus {
 .single-campaign__header__title {
   text-align: center;
   margin-bottom: 6vh;
-  font: normal normal 700 90px/104px "Barlow Condensed";
+  font: normal normal 700 84px/98px "Barlow Condensed";
   overflow-wrap: break-word;
 }
 @media (min-width: 1720px) {
@@ -13066,6 +13085,12 @@ input[type=checkbox]:focus {
   .single-campaign__header__subtitle {
     font: normal normal 700 20px/28px "Barlow";
   }
+}
+.single-campaign__header__subtitle__scroller {
+  max-height: 40px;
+  max-width: 40px;
+  margin: auto;
+  margin-top: 20px;
 }
 .single-campaign__header__txt {
   text-align: left;
@@ -13364,7 +13389,7 @@ input[type=checkbox]:focus {
   background-position: bottom;
   background-attachment: fixed;
   border: solid #FFFFFF 60px;
-  z-index: -2;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .single-campaign__section-3 {
@@ -13475,6 +13500,10 @@ input[type=checkbox]:focus {
 }
 .single-campaign__section-4__quote-2__symbols {
   font: normal normal 700 82px/108px "Barlow";
+  max-height: 70px;
+  max-width: 70px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 .single-campaign__section-4__quote-2__txt {
   font: normal normal 600 22px/40px "Barlow";

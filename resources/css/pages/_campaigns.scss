@@ -40,6 +40,14 @@
 		padding-bottom: 40px;
 		overflow-x: hidden;
 	}
+	a {
+		font-weight: 600;
+		color: inherit;
+		transition: color 0.2s;
+		&:hover {
+			color: $primary-color;
+		}
+	}
 	&__header {
 		position: relative;
 		// height: calc(100vh - 160px);
@@ -49,7 +57,7 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
-		z-index: -2;
+		z-index: 1;
 		border: solid white 60px;
 		@include mobile {
 			// height: calc(100vh - 120px);
@@ -80,6 +88,13 @@
 			height: 100%;
 			overflow-y: auto;
 			overflow-x: hidden;
+			width: 50vw;
+			@include tablet {
+				width: 80vw;
+			}
+			@include mobile {
+				width: 91.66667vw;
+			}
 			// z-index: 1;
 		}
 		&__toptitle {
@@ -93,7 +108,7 @@
 		&__title {
 			text-align: center;
 			margin-bottom: 6vh;
-			font: normal normal 700 90px/104px 'Barlow Condensed';
+			font: normal normal 700 84px/98px 'Barlow Condensed';
 			overflow-wrap: break-word;
 			@include large {
 				font: normal normal 700 120px/144px 'Barlow Condensed';
@@ -115,6 +130,12 @@
 			}
 			@include mobile {
 				font: normal normal 700 20px/28px 'Barlow';
+			}
+			&__scroller {
+				max-height: 40px;
+				max-width: 40px;
+				margin: auto;
+				margin-top: 20px;
 			}
 		}
 		&__txt {
@@ -368,7 +389,7 @@
 		background-position: bottom;
 		background-attachment: fixed;
 		border: solid $white 60px;
-		z-index: -2;
+		z-index: 1;
 		@include mobile {
 			border: solid $white 20px;
 		}
@@ -463,6 +484,10 @@
 			padding: 40px 0px;
 			&__symbols {
 				font: normal normal 700 82px/108px 'Barlow';
+				max-height: 70px;
+				max-width: 70px;
+				margin: auto;
+				margin-bottom: 20px;
 			}
 			&__txt {
 				font: normal normal 600 22px/40px 'Barlow';

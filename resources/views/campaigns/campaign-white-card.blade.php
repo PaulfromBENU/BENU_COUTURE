@@ -35,8 +35,8 @@
 
 				<div class="single-campaign__header__subtitle text-center scroll-fading-1" style="opacity: 1; text-align: center; margin-bottom: 0;">
 					<p>{{ __('campaigns.carte-blanche-scroll-to-see') }}</p>
-					<p>
-						arrows down
+					<p class="single-campaign__header__subtitle__scroller">
+						@svg('icon_benu_couture_scroll_OK')
 					</p>
 				</div>
 
@@ -44,7 +44,7 @@
 					<h1 class="single-campaign__header__subtitle">{{ __('campaigns.carte-blanche-main-picture-subtitle') }}</h1>
 
 					<p class="single-campaign__header__txt">
-						{{ __('campaigns.carte-blanche-txt-1') }}
+						{{ __('campaigns.carte-blanche-txt-1-1') }} <a href="#">{{ __('campaigns.carte-blanche-link-0') }}</a> {{ __('campaigns.carte-blanche-txt-1-2') }}
 					</p>
 
 					<p class="single-campaign__header__txt">
@@ -96,12 +96,12 @@
 					<img src="{{ asset('images/pictures/campaigns/couture_campaign_02.jpeg') }}" class="single-campaign__section-2__picture__img" />
 				</div>
 				<div class="single-campaign__section-2__txt flex flex-col lg:justify-end">
-					<h4>
-						{{ __('campaigns.carte-blanche-section-2-title') }}
-					</h4>
 					<p>
 						{{ __('campaigns.carte-blanche-txt-7') }}
 					</p>
+					<h4>
+						{{ __('campaigns.carte-blanche-section-2-title') }}
+					</h4>
 					<p>
 						{{ __('campaigns.carte-blanche-txt-8') }}
 					</p>
@@ -110,6 +110,9 @@
 					</p>
 					<p>
 						{{ __('campaigns.carte-blanche-txt-10') }}
+					</p>
+					<p>
+						{{ __('campaigns.carte-blanche-txt-10-2') }}
 					</p>
 				</div>
 			</div>
@@ -129,6 +132,10 @@
 					<p class="single-campaign__section-3__txt">
 						{{ __('campaigns.carte-blanche-txt-12') }}
 					</p>
+
+					<p class="single-campaign__section-3__txt">
+						<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}">{{ __('campaigns.carte-blanche-link-3') }}</a>
+					</p>
 				</div>
 			</div>
 		</section>
@@ -144,7 +151,7 @@
 
 			<div class="single-campaign__section-4__quote-2">
 				<p class="single-campaign__section-4__quote-2__symbols">
-					&bdquo;&bdquo;
+					@svg('icon_benu_couture_quotes_OK')
 				</p>
 				<p class="single-campaign__section-4__quote-2__txt">
 					{{ __('campaigns.carte-blanche-quote-2-txt') }}
