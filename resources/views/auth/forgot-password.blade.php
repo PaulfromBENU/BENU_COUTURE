@@ -55,7 +55,7 @@ noindex, nofollow
         @else
         <h1 class="login__title">{{ __('auth.password-forgotten-email-info-1') }} <br/>{{ __('auth.password-forgotten-email-info-2') }}</h1>
 
-        <p class="font-medium w-1/2 m-auto">
+        <p class="font-medium w-5/6 md:w-4/5 lg:w-1/2 m-auto">
             <!-- Dans cet e-mail, tu trouveras un lien sécurisé, valable une heure, qui te permettra de choisir un nouveau mot de passe. Si tu ne voies pas l'e-mail dans ta boite de réception, vérifie qu'il n'a pas atterri par erreur dans ton courrier indésirable&nbsp;! -->
             {{ __('auth.password-forgotten-email-info-3') }}
         </p>
