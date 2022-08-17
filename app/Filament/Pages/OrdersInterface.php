@@ -41,6 +41,8 @@ class OrdersInterface extends Page
     public $new_orders;
     public $orders_waiting_for_payment;
     public $orders_sent;
+    public $orders_ready_for_collect;
+    public $orders_collected;
 
     public $delivery_link;
 
@@ -80,7 +82,9 @@ class OrdersInterface extends Page
                                             ->where('delivery_status', '<', '2')
                                             ->orderBy('updated_at', 'desc')
                                             ->get();
-        $this->orders_sent = Order::where('delivery_status', '>=', '2')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_sent = Order::where('delivery_status', '>=', '2')->where('address_id', '>', '0')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_ready_for_collect = Order::where('delivery_status', '4')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_collected = Order::where('delivery_status', '5')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
     }
 
     public function cleanUnsoldArticles()
@@ -144,6 +148,16 @@ class OrdersInterface extends Page
         if($order->save()) {
             $this->initializeOrders();
             SendOrderReadyConfirmationEmail::dispatchAfterResponse($order);
+        }
+    }
+
+    public function markAsCollected($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->delivery_status = 5;// Collected
+        $order->delivery_date = Carbon::now()->format('Y-m-d');
+        if($order->save()) {
+            $this->initializeOrders();
         }
     }
 

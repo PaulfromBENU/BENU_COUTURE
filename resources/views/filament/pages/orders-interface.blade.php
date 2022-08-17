@@ -31,11 +31,19 @@
 			</div>
 
 			<div class="text-3xl font-medium">
-				Order #{{ $new_order->unique_id }}
+				Order 
+				<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$new_order->unique_id.\Illuminate\Support\Str::random(12)]) }}" style="color: orange;">
+                    #{{ $new_order->unique_id }}
+                </a>
 			</div>
 			<p style="margin-bottom: 5px;">
 				@if($new_order->user !== null)
 				Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
+				@endif
+			</p>
+			<p style="margin-bottom: 5px;">
+				@if($new_order->user !== null)
+				E-mail: {{ $new_order->user->email }} - Phone: {{ $new_order->user->phone }}
 				@endif
 			</p>
 			<p class="text-xl">
@@ -219,7 +227,10 @@
 			</div>
 
 			<div class="text-3xl font-medium">
-				Order #{{ $unpaid_order->unique_id }}
+				Order 
+				<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$unpaid_order->unique_id.\Illuminate\Support\Str::random(12)]) }}" style="color: orange;">
+                    #{{ $unpaid_order->unique_id }}
+                </a>
 			</div>
 			<p class="text-xl">
 				Total: {{ $unpaid_order->total_price }}&euro; - Not paid - Created on {{ $unpaid_order->created_at->format('d\/m\/Y') }}
@@ -250,6 +261,11 @@
 			<div style="border-left: solid 1px lightgrey; padding-left: 10px;">
 				<p class="text-lg">
 					Ordered by: {{ ucfirst($unpaid_order->user->first_name) }} {{ ucfirst($unpaid_order->user->last_name) }}
+				</p>
+				<p style="margin-bottom: 5px;">
+					@if($unpaid_order->user !== null)
+					E-mail: {{ $unpaid_order->user->email }} - Phone: {{ $unpaid_order->user->phone }}
+					@endif
 				</p>
 				<div class="text-lg" style="margin-top: 30px;">
 					<p class="text-lg">
@@ -397,11 +413,11 @@
 
 	<section class="new-orders">
 		<h2 style="padding-top: 100px;">
-			Sent/collected orders
+			Sent orders
 		</h2>
 		@if($orders_sent->count() == 0)
 		<p>
-			<em>No sent or collected orders for the moment...</em>
+			<em>No sent orders for the moment...</em>
 		</p>
 		@endif
 		@foreach($orders_sent as $sent_order)
@@ -415,15 +431,133 @@
 			</div>
 
 			<div class="text-3xl font-medium">
-				Order #{{ $sent_order->unique_id }}
+				Order 
+				<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$sent_order->unique_id.\Illuminate\Support\Str::random(12)]) }}" style="color: orange;">
+                    #{{ $sent_order->unique_id }}
+                </a>
 			</div>
 			<p style="margin-bottom: 5px;">
 				@if($sent_order->user !== null)
 				Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }}
 				@endif
 			</p>
+			<p style="margin-bottom: 5px;">
+				@if($sent_order->user !== null)
+				E-mail: {{ $sent_order->user->email }} - Phone: {{ $sent_order->user->phone }}
+				@endif
+			</p>
 			<p class="text-xl">
-				Total: {{ $sent_order->total_price }}&euro; - Paid - Sent/Ready for collect on {{ $sent_order->delivery_date }}
+				Total: {{ $sent_order->total_price }}&euro; - Paid - Sent on {{ Carbon\Carbon::parse($collected_order->delivery_date)->format('d\/m\/Y') }}
+			</p>
+			<p>
+				Return possible:
+				@if(Carbon\Carbon::now()->subDays(30) > Carbon\Carbon::parse($collected_order->delivery_date))
+					<span style="color: #D41C1B;">No</span>
+				@else
+					<span style="color: green;">Yes</span>
+				@endif
+			</p>
+		</div>
+		@endforeach
+	</section>
+
+	<section class="new-orders">
+		<h2 style="padding-top: 100px;">
+			Orders ready for collect
+		</h2>
+		@if($orders_ready_for_collect->count() == 0)
+		<p>
+			<em>No collected orders for the moment...</em>
+		</p>
+		@endif
+		@foreach($orders_ready_for_collect as $ready_order)
+		<div class="new-orders__order relative" wire:key="unpaid-{{ $ready_order->id }}">
+			<div class="new-orders__order__confirm-ready flex">
+				<div>
+					<button wire:click="markAsUndelivered({{ $ready_order->id }})" style="margin-top: 23px; margin-right: 20px;">
+						Cancel Readiness
+					</button>
+				</div>
+				<div>
+					<button wire:click="markAsCollected({{ $ready_order->id }})" style="margin-top: 23px;">
+						Mark as 'Collected'
+					</button>
+				</div>
+			</div>
+
+			<div class="text-3xl font-medium">
+				Order 
+				<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$ready_order->unique_id.\Illuminate\Support\Str::random(12)]) }}" style="color: orange;">
+                    #{{ $ready_order->unique_id }}
+                </a>
+			</div>
+			<p style="margin-bottom: 5px;">
+				@if($ready_order->user !== null)
+				Ordered by: {{ $ready_order->user->first_name }} {{ $ready_order->user->last_name }}, on {{ Carbon\Carbon::parse($ready_order->created_at)->format('d\/m\/Y') }}
+				@endif
+			</p>
+			<p style="margin-bottom: 5px;">
+				@if($ready_order->user !== null)
+				E-mail: {{ $ready_order->user->email }} - Phone: {{ $ready_order->user->phone }}
+				@endif
+			</p>
+			<p class="text-xl" style="margin-bottom: 5px;">
+				Total: {{ $ready_order->total_price }}&euro; - Paid - Ready for collect on {{ Carbon\Carbon::parse($ready_order->delivery_date)->format('d\/m\/Y') }}
+			</p>
+			@if(Carbon\Carbon::now()->subDays(28) > Carbon\Carbon::parse($ready_order->delivery_date))
+			<p style="color: #D41C1B;">
+				NOT COLLECTED AFTER 30 DAYS
+			</p>
+			@endif
+		</div>
+		@endforeach
+	</section>
+
+	<section class="new-orders">
+		<h2 style="padding-top: 100px;">
+			Orders collected
+		</h2>
+		@if($orders_collected->count() == 0)
+		<p>
+			<em>No collected orders for the moment...</em>
+		</p>
+		@endif
+		@foreach($orders_collected as $collected_order)
+		<div class="new-orders__order relative" wire:key="unpaid-{{ $collected_order->id }}">
+			<div class="new-orders__order__confirm-ready flex">
+					<div>
+						<button wire:click="markAsUndelivered({{ $collected_order->id }})" style="margin-top: 23px;">
+							Mark as 'Not collected'
+						</button>
+					</div>
+			</div>
+
+			<div class="text-3xl font-medium">
+				Order 
+				<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$collected_order->unique_id.\Illuminate\Support\Str::random(12)]) }}" style="color: orange;">
+                    #{{ $collected_order->unique_id }}
+                </a>
+			</div>
+			<p style="margin-bottom: 5px;">
+				@if($collected_order->user !== null)
+				Ordered by: {{ $collected_order->user->first_name }} {{ $collected_order->user->last_name }}, on {{ Carbon\Carbon::parse($collected_order->created_at)->format('d\/m\/Y') }}
+				@endif
+			</p>
+			<p style="margin-bottom: 5px;">
+				@if($collected_order->user !== null)
+				E-mail: {{ $collected_order->user->email }} - Phone: {{ $collected_order->user->phone }}
+				@endif
+			</p>
+			<p class="text-xl">
+				Total: {{ $collected_order->total_price }}&euro; - Paid - Collected on {{ Carbon\Carbon::parse($collected_order->delivery_date)->format('d\/m\/Y') }}
+			</p>
+			<p>
+				Return possible:
+				@if(Carbon\Carbon::now()->subDays(28) > Carbon\Carbon::parse($collected_order->delivery_date))
+					<span style="color: #D41C1B;">No</span>
+				@else
+					<span style="color: green;">Yes</span>
+				@endif
 			</p>
 		</div>
 		@endforeach
