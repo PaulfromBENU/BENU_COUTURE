@@ -190,11 +190,13 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.campaigns", [], "fr"), 'GeneralController@showAllCampaigns')->name('campaigns-fr');
 		Route::get('/'.trans("slugs.campaigns", [], "fr").'/{slug}', 'GeneralController@showSingleCampaign')->name('campaign-single-fr');
 
+		// Test and data importation pages - for admin only
 		Route::get('/test-mail', function() {
 			$user = User::find(2);
 
 			return new UserRegistered($user);
 		});
+		Route::get('/import-data', 'GeneralController@startImport');
 	});
 
 	Route::group([

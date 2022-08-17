@@ -44,7 +44,7 @@
 			</div>
 			<div class="text-left shops__card__highlight">
 				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
-					<p class="mb-2 w-full lg:w-7/12" style="min-width: fit-content;">
+					<p class="mb-2 w-full lg:w-7/12 pr-3" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-address') !!}:</strong> <span class="font-medium">{{ $shop->address }}</span>
 					</p>
 					<p class="mb-2 w-full lg:w-5/12" style="min-width: fit-content;">
@@ -73,7 +73,7 @@
 			<div class="flex flex-col lg:flex-row justify-between">
 				<h3 class="shops__card__title">{{ $shop->name }}</h3>
 				<p>
-					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="btn-couture-plain shops__card__txt-container__link">{{ __('services.shops-articles-link') }}</a>
+					<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'shops' => $shop->filter_key]) }}" class="inline-block btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('services.shops-articles-link') }}</a>
 				</p>
 			</div>
 			<p class="shops__card__desc">
@@ -107,7 +107,7 @@
 			</div>
 			<div class="text-left shops__card__highlight">
 				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
-					<p class="mb-2 w-full lg:w-7/12" style="min-width: fit-content;">
+					<p class="mb-2 w-full lg:w-7/12 pr-3" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-address') !!}:</strong> <span class="font-medium">{{ $shop->address }}</span>
 					</p>
 					<p class="mb-2 w-full lg:w-5/12" style="min-width: fit-content;">
