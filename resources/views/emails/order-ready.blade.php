@@ -49,7 +49,12 @@
 		@endif
 		
 		@if($order->address_id > 0 && $order->delivery_link !== null && $order->delivery_link !== "")
-			{{ trans('emails.order-ready-follow-delivery', [], $locale) }} <a href="{{ $order->delivery_link }}" style="color: #27955B;">{{ trans('emails.order-ready-follow-delivery-link', [], $locale) }}</a>
+		<p>
+			{{ trans('emails.order-ready-follow-delivery', [], $locale) }} <a href="https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search" style="color: #27955B;">{{ trans('emails.order-ready-follow-delivery-link', [], $locale) }}</a>
+		</p>
+		<p>
+			{{ trans('emails.order-ready-follow-up-number', [], $locale) }} {{ $order->delivery_link }}
+		</p>
 		@endif
 
 		<p>

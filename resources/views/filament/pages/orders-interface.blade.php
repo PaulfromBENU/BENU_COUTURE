@@ -21,7 +21,7 @@
 					</button>
 				@else
 					<div>
-						<label>Delivery follow-up link:</label><br/>
+						<label>Delivery tracking number:</label><br/>
 						<input type="text" name="delivery_link" wire:model="delivery_link.{{ $new_order->id }}" placeholder="https://...">
 					</div>
 					<button wire:click="markAsSentByPost({{ $new_order->id }})" style="margin-top: 23px;">
