@@ -180,7 +180,7 @@
 		@for($i = 1; $i <= 4; $i ++)
 			@if($i == 1)
 			<p class="footer-conditions__paragraph">
-				{!! __('footer.general-conditions-txt-1-13-'.$i) !!} <a href="https://www.benureuse.lu">{{ __('footer.general-conditions-link-6') }}</a> {!! __('footer.general-conditions-txt-1-13-'.($i + 1)) !!}
+				{!! __('footer.general-conditions-txt-1-13-'.$i) !!} <a href="https://kulturpass.lu/">{{ __('footer.general-conditions-link-6') }}</a> {!! __('footer.general-conditions-txt-1-13-'.($i + 1)) !!}
 			</p>
 			@php $i++ @endphp
 			@else

@@ -38,6 +38,15 @@
 		<p style="text-align: center; color: #27955B;">
 			{{ trans('emails.order-ready-txt-1', [], $locale) }} <strong>{{ $order->unique_id }}</strong>
 		</p>
+
+		@if($order->address_id == 0)
+		<p>
+			{{ trans('emails.order-ready-txt-collect-1', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => trans('slugs.services-shops', [], $locale)]) }}" style="color: #27955B;">{{ trans('emails.order-ready-txt-collect-2', [], $locale) }}</a> {{ trans('emails.order-ready-txt-collect-3', [], $locale) }}
+		</p>
+		<p>
+			{{ trans('emails.order-ready-txt-collect-4', [], $locale) }}
+		</p>
+		@endif
 		
 		@if($order->address_id > 0 && $order->delivery_link !== null && $order->delivery_link !== "")
 			{{ trans('emails.order-ready-follow-delivery', [], $locale) }} <a href="{{ $order->delivery_link }}" style="color: #27955B;">{{ trans('emails.order-ready-follow-delivery-link', [], $locale) }}</a>
@@ -45,6 +54,14 @@
 
 		<p>
 			{{ trans('emails.order-ready-txt-2', [], $locale) }}
+		</p>
+
+		<p>
+			{{ trans('emails.order-ready-contact-1', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.order-ready-contact-2', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.order-ready-contact-3', [], $locale) }}</a> {{ trans('emails.order-ready-contact-4', [], $locale) }}
+		</p>
+
+		<p>
+			{{ trans('emails.order-ready-conclusion', [], $locale) }}
 		</p>
 
 		<p>
