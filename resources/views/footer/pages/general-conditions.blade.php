@@ -178,14 +178,17 @@
 			{{ __('footer.general-conditions-lowtitle-1-13') }}
 		</h3>
 		@for($i = 1; $i <= 4; $i ++)
-			@if($i == 2)
+			@if($i == 1)
 			<p class="footer-conditions__paragraph">
-				<a href="https://www.benureuse.lu">{{ __('footer.general-conditions-link-6') }}</a>
+				{!! __('footer.general-conditions-txt-1-13-'.$i) !!} <a href="https://www.benureuse.lu">{{ __('footer.general-conditions-link-6') }}</a> {!! __('footer.general-conditions-txt-1-13-'.($i + 1)) !!}
 			</p>
-			@endif
+			@php $i++ @endphp
+			@else
 			<p class="footer-conditions__paragraph">
 				{!! __('footer.general-conditions-txt-1-13-'.$i) !!}
 			</p>
+			@endif
+
 		@endfor
 
 		<h3 class="footer-conditions__lowtitle">
