@@ -43,19 +43,19 @@
 				</div>
 			</div>
 			<div class="text-left shops__card__highlight">
-				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
-					<p class="mb-2 w-full lg:w-7/12 pr-3" style="min-width: fit-content;">
+				<div class="flex flex-col justify-start flex-wrap">
+					<p class="mb-2 w-full pr-3" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-address') !!}:</strong> <span class="font-medium">{{ $shop->address }}</span>
 					</p>
-					<p class="mb-2 w-full lg:w-5/12" style="min-width: fit-content;">
+					<p class="mb-2 w-full" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-phone') !!}:</strong> <span class="font-medium">{{ $shop->phone }}</span>
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row justify-start">
-					<p class="mb-2 w-full lg:w-7/12" style="min-width: fit-content;">
+				<div class="flex flex-col justify-start">
+					<p class="mb-2 w-full" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-email') !!}:</strong> <a href="mailto:{{ $shop->email }}" class="primary-color shops__card__link">{{ $shop->email }}</a>
 					</p>
-					<p class="mb-2 w-full lg:w-5/12" style="min-width: fit-content;">
+					<p class="mb-2 w-full" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-website') !!}:</strong> <span class="primary-color shops__card__link"><a href="https://{{ $shop->website }}" target="_blank">{{ $shop->website }}</a></span>
 					</p>
 				</div>
@@ -106,19 +106,19 @@
 				</div>
 			</div>
 			<div class="text-left shops__card__highlight">
-				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
-					<p class="mb-2 w-full lg:w-7/12 pr-3" style="min-width: fit-content;">
+				<div class="flex flex-col justify-start flex-wrap">
+					<p class="mb-2 w-full pr-3" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-address') !!}:</strong> <span class="font-medium">{{ $shop->address }}</span>
 					</p>
-					<p class="mb-2 w-full lg:w-5/12" style="min-width: fit-content;">
+					<p class="mb-2 w-full" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-phone') !!}:</strong> <span class="font-medium">{{ $shop->phone }}</span>
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row justify-start flex-wrap">
-					<p class="mb-2 w-full lg:w-7/12" style="min-width: fit-content;">
+				<div class="flex flex-col justify-start flex-wrap">
+					<p class="mb-2 w-full" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-email') !!}:</strong> <a href="mailto:{{ $shop->email }}" class="primary-color shops__card__link">{{ $shop->email }}</a>
 					</p>
-					<p class="mb-2 w-full lg:w-5/12" style="min-width: fit-content;">
+					<p class="mb-2 w-full" style="min-width: fit-content;">
 						<strong>{!! __('services.shops-website') !!}:</strong> <a href="https://{{ $shop->website }}" class="shops__card__link primary-color" target="_blank">{{ $shop->website }}</a>
 					</p>
 				</div>
