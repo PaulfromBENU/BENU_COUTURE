@@ -447,11 +447,11 @@
 				@endif
 			</p>
 			<p class="text-xl">
-				Total: {{ $sent_order->total_price }}&euro; - Paid - Sent on {{ Carbon\Carbon::parse($collected_order->delivery_date)->format('d\/m\/Y') }}
+				Total: {{ $sent_order->total_price }}&euro; - Paid - Sent on {{ Carbon\Carbon::parse($sent_order->delivery_date)->format('d\/m\/Y') }}
 			</p>
 			<p>
 				Return possible:
-				@if(Carbon\Carbon::now()->subDays(30) > Carbon\Carbon::parse($collected_order->delivery_date))
+				@if(Carbon\Carbon::now()->subDays(30) > Carbon\Carbon::parse($sent_order->delivery_date))
 					<span style="color: #D41C1B;">No</span>
 				@else
 					<span style="color: green;">Yes</span>
