@@ -8,7 +8,14 @@
         <li wire:key="{{ $thread }}">
             <div class="faq__accordion__header flex justify-between" @if($thread_messages->first()->closed == '1') style="background: grey;" @endif>
                 <p class="w-5/6">
-                    {!! __('dashboard.com-message-from') !!} {{ auth()->user()->first_name }} - {!! __('dashboard.com-sent-on') !!} {{ $thread_messages->first()->created_at->format('d\/m\/Y') }}
+                    @if(in_array($thread, $unread_threads))
+                    <i class="fas fa-star pr-2"></i>
+                    @endif
+                    @if($thread_messages->sortBy('created_at')->first()->origin == 'return')
+                        {!! __('dashboard.com-return-received-on') !!} {{ $thread_messages->sortBy('created_at')->first()->created_at->format('d\/m\/Y') }}
+                    @else
+                        {!! __('dashboard.com-message-from') !!} {{ auth()->user()->first_name }} - {!! __('dashboard.com-sent-on') !!} {{ $thread_messages->first()->created_at->format('d\/m\/Y') }}
+                    @endif
                     @if($thread_messages->first()->closed == '1')
                     <em> - {!! __('dashboard.com-thread-closed') !!}</em>
                     @endif

@@ -14,6 +14,7 @@ class Communications extends Component
     public $showForm;
     public $message_thread;
     public $message;
+    public $unread_threads = [];
 
     public function mount()
     {
@@ -78,6 +79,9 @@ class Communications extends Component
     {
         foreach (auth()->user()->openContactMessages()->get() as $open_message) {
             foreach ($open_message->benuAnswers()->where('seen_by_user', '0')->get() as $benu_answer) {
+                if (!in_array($open_message->thread, $this->unread_threads)) {
+                    array_push($this->unread_threads, $open_message->thread);
+                }
                 $benu_answer->seen_by_user = 1;
                 $benu_answer->save();
             }

@@ -68,7 +68,7 @@ class ConfirmReturn extends Page
         $new_contact_message->email = $email;
         $new_contact_message->phone = $phone;
         $new_contact_message->message = __('dashboard.return-requested-message');
-        $new_contact_message->origin = "admin";
+        $new_contact_message->origin = "return";
         $new_contact_message->conditions_ok = 1;
         $new_thread = rand(10000, 99999);
         while (ContactMessage::where('thread', $new_thread)->count() > 0) {
