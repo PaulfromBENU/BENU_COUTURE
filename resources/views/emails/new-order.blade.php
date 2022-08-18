@@ -70,9 +70,15 @@
 		<p>
 			{{ trans('emails.new-order-txt-3', [], $locale) }} <strong>{{ $order->total_price }}&euro;</strong>
 		</p>
+		@if($order->cart->couture_variations()->count() == $order->pdf_vouchers()->count())
+		<p>
+			{{ trans('emails.new-order-txt-voucher-pdf', [], $locale) }}
+		</p>
+		@else
 		<p>
 			{{ trans('emails.new-order-txt-4', [], $locale) }} @if($order->address_id == 0) {{ trans('emails.new-order-benu-shop-1', [], $locale) }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => trans('slugs.services-shops', [], $locale)]) }}" style="color: #27955B;">{{ trans('emails.new-order-benu-shop-2', [], $locale) }}</a> @endif
 		</p>
+		@endif
 		@if($order->address_id > 0)
 		<ul>
 			<li><strong>{{ $order->address->address_name }}</strong></li>
