@@ -54,13 +54,13 @@
 		padding-top: 15vh;
 		padding-bottom: 25px;
 		color: $white;
-		background: url('/images/pictures/campaigns/DSC09261006.png');
+		background: url('/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_1.jpg');
 		background-position: bottom;
 		background-attachment: fixed;
 		@include large {
 			background-size: cover;
 		}
-		background-size: auto;
+		background-size: cover;
 		z-index: 1;
 		border: solid white 60px;
 		@include mobile {
@@ -245,8 +245,8 @@
 					opacity: 0;
 					display: none;
 					color: transparent;
-					background: url('/images/pictures/campaigns/couture_campaign_02.jpeg');
-					background-size: auto;
+					background: url('/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_8.jpg');
+					background-size: cover;
 					@include large {
 						background-size: cover;
 					}
@@ -265,10 +265,10 @@
 		padding-bottom: 25px;
 		color: $white;
 		overflow: hidden;
-		background: url('/images/pictures/campaigns/DSC09261006.png');
+		background: url('/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_6.jpg');
 		background-position: bottom;
 		background-attachment: fixed;
-		background-size: auto;
+		background-size: cover;
 		border: solid $white 60px;
 		z-index: -2;
 		@include large {
@@ -396,10 +396,10 @@
 		padding-top: 20vh;
 		padding-bottom: 55px;
 		color: $white;
-		background: url('/images/pictures/campaigns/DSC09261006.png');
+		background: url('/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_7.jpg');
 		background-position: bottom;
 		background-attachment: fixed;
-		background-size: auto;
+		background-size: cover;
 		@include large {
 			background-size: cover;
 		}

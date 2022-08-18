@@ -69,7 +69,7 @@
 					</p>
 				</div>
 				<div class="single-campaign__section-1__picture">
-					<img src="{{ asset('images/pictures/campaigns/couture_campaign_02.jpeg') }}" class="single-campaign__section-1__picture__img" />
+					<img src="{{ asset('images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_8.jpg') }}" class="single-campaign__section-1__picture__img" />
 					<div class="single-campaign__section-1__picture__txt-container flex flex-col justify-center">
 						<p class="single-campaign__section-1__picture__txt single-campaign__section-1__picture__txt--base">
 							{{ __('campaigns.carte-blanche-txt-6') }}
@@ -93,7 +93,7 @@
 		<section class="single-campaign__section-2 benu-container" id="transition-1-end">
 			<div class="flex justify-start flex-wrap">
 				<div class="single-campaign__section-2__picture">
-					<img src="{{ asset('images/pictures/campaigns/couture_campaign_02.jpeg') }}" class="single-campaign__section-2__picture__img" />
+					<img src="{{ asset('images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_3.jpg') }}" class="single-campaign__section-2__picture__img" />
 				</div>
 				<div class="single-campaign__section-2__txt flex flex-col lg:justify-end">
 					<p>
