@@ -82,8 +82,8 @@ class OrdersInterface extends Page
                                             ->where('delivery_status', '<', '2')
                                             ->orderBy('updated_at', 'desc')
                                             ->get();
-        $this->orders_sent = Order::where('delivery_status', '>=', '2')->where('address_id', '>', '0')->orderBy('delivery_date', 'desc')->get();
-        $this->orders_ready_for_collect = Order::where('delivery_status', '4')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_sent = Order::where('delivery_status', '2')->orWhere('delivery_status', '4')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_ready_for_collect = Order::where('delivery_status', '3')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
         $this->orders_collected = Order::where('delivery_status', '5')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
     }
 
@@ -129,12 +129,13 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 3;// Sent or available for collect
         $order->payment_status = 2;// Payment received
-        $order->delivery_status = 4;// Available for collect
+        $order->delivery_status = 4;// Delivery not required
         if($order->save()) {
             foreach ($order->pdf_vouchers as $voucher) {
                 $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
                 Mail::to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
             }
+            $this->initializeOrders();
         }
     }
 
@@ -143,7 +144,7 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 3;// Sent or available for collect
         $order->payment_status = 2;// Payment received
-        $order->delivery_status = 4;// Available for collect
+        $order->delivery_status = 3;// Available for collect
         $order->delivery_date = Carbon::now()->format('Y-m-d');
         if($order->save()) {
             $this->initializeOrders();
@@ -166,7 +167,7 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 3;// Sent or available for collect
         $order->payment_status = 2;// Payment received
-        $order->delivery_status = 3;// Available for collect
+        $order->delivery_status = 2;// Sent by Post
         $order->delivery_date = Carbon::now()->format('Y-m-d');
         if (isset($this->delivery_link[$order_id]) && $this->delivery_link[$order_id] !== "") {
             $order->delivery_link = $this->delivery_link[$order_id];
