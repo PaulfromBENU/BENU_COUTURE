@@ -7790,6 +7790,413 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
 }
 
+.about {
+  padding-top: 66px;
+  color: #2E1414;
+  line-height: 2rem;
+}
+.about__title {
+  text-align: center;
+  font: normal normal 700 38px/45px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 55px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__title {
+    font: normal normal 700 32px/38px "Barlow Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .about__title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+  }
+}
+.about__subtitle {
+  text-align: center;
+  font: normal normal 500 16px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #2E141480;
+  margin-bottom: 35px;
+}
+.about__lowtitle {
+  text-align: center;
+  font: normal normal 700 33px/40px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-top: 65px;
+  margin-bottom: 32px;
+}
+.about__section-title {
+  text-align: center;
+  font: normal normal 700 38px/45px "Barlow Condensed";
+  letter-spacing: 0px;
+  margin-bottom: 75px;
+  color: #D41C1B;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__section-title {
+    font: normal normal 700 32px/38px "Barlow Condensed";
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .about__section-title {
+    font: normal normal 700 28px/34px "Barlow Condensed";
+    margin-bottom: 50px;
+  }
+}
+.about__txt {
+  margin-bottom: 45px;
+  font: normal normal 400 1.05rem "Barlow";
+  line-height: 2rem;
+}
+.about__txt a {
+  color: #D41C1B;
+  font-weight: 500;
+}
+.about__txt a:hover {
+  text-decoration: underline;
+}
+.about__highlight {
+  background: #F9E2E2;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.75rem;
+  margin-bottom: 45px;
+}
+.about__highlight a {
+  color: #D41C1B;
+  font-weight: 500;
+}
+.about__highlight a:hover {
+  text-decoration: underline;
+}
+.about__bullets {
+  margin-bottom: 45px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.about__bullets li::before {
+  content: "•";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #D41C1B;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+.about__general {
+  position: relative;
+}
+.about__general__menu-container {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  top: 0;
+  left: 5%;
+}
+.about__general__menu-container__menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 5;
+  background: #FFFFFF;
+}
+.about__general__menu-container__menu button {
+  width: 90%;
+  text-align: left;
+}
+.about__general__content {
+  width: 100%;
+  position: relative;
+}
+.about__general__content__slider {
+  overflow-x: auto;
+  width: 85%;
+  margin-left: 15%;
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__slider {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__slider {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.about__general__content__slider__cards {
+  position: relative;
+  width: 100%;
+}
+.about__general__content__slider__cards__card {
+  width: 300px;
+  min-width: 300px;
+  height: 320px;
+  border-radius: 8px;
+  box-shadow: lightgrey 0 0 10px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.about__general__content__slider__cards__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about__general__content__slider__cards__card__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #D41C1B;
+  color: #FFFFFF;
+  padding: 12px 10px;
+}
+.about__general__content__slider__cards__card__footer--number {
+  height: 50px;
+  width: 50px;
+  padding-top: 7px;
+  text-align: center;
+  color: #D41C1B;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin-right: 20px;
+  font: normal normal 700 26px/34px "Barlow Condensed";
+}
+.about__general__content__slider__cards__card__footer--txt {
+  width: calc(100% - 70px);
+  font: normal normal 700 16px/24px "Barlow Condensed";
+}
+.about__general__content__slider__bar {
+  margin-top: 25px;
+  margin-left: 15%;
+  width: 85%;
+  margin-bottom: 80px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__slider__bar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__slider__bar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.about__general__content__slider__bar__btn {
+  height: 80px;
+  width: 80px;
+  background: #FFFFFF;
+  border: 2px solid #D41C1B;
+  border-radius: 50%;
+  padding-top: 23px;
+  padding-left: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 12px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__slider__bar__btn {
+    border: 2px solid #D41C1B;
+    height: 80px;
+    width: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__slider__bar__btn {
+    border: 2px solid #D41C1B;
+    height: 80px;
+    width: 80px;
+  }
+}
+.about__general__content__slider__bar__btn:hover {
+  background: #D41C1B;
+}
+.about__general__content__slider__bar__btn:hover .about__general__content__slider__bar__svg path {
+  fill: #FFFFFF;
+}
+.about__general__content__slider__bar__btn--left {
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+.about__general__content__slider__bar__btn--right {
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+.about__general__content__slider__bar__svg {
+  height: 35px;
+  width: 35px;
+}
+.about__general__content__slider__bar__svg path {
+  fill: #D41C1B;
+}
+.about__general__content__slider__bar__scroll {
+  position: relative;
+  height: 2px;
+  background: lightgrey;
+  align-self: center;
+  right: 0;
+  margin-right: 10px;
+}
+.about__general__content__slider__bar__scroll--red {
+  left: 0;
+  top: -1px;
+  height: 4px;
+  border-radius: 2px;
+  background: #D41C1B;
+  width: 25%;
+  -webkit-animation: left 0.2s;
+          animation: left 0.2s;
+}
+.about__general__content__info-section__picture {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__info-section__picture {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__info-section__picture {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.about__general__content__info-section__picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.about__general__content__info-section__transition {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__info-section__transition {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__info-section__transition {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 100px;
+  }
+}
+.about__general__content__info-section__transition img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.about__general__content__info-section__txt {
+  padding: 50px 70px;
+  width: 60%;
+  margin: auto;
+  margin-top: -40px;
+  background: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  border-radius: 12px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__info-section__txt {
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__info-section__txt {
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+}
+.about__general__content__info-section__txt h4 {
+  color: #D41C1B;
+  font: normal normal 700 25px/32px "Barlow Condensed";
+  margin-bottom: 30px;
+  text-align: left;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__info-section__txt h4 {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__info-section__txt h4 {
+    margin-bottom: 20px;
+  }
+}
+.about__general__content__info-section__txt h5 {
+  font: normal normal 700 25px/32px "Barlow Condensed";
+  margin-bottom: 30px;
+  text-align: left;
+}
+.about__general__content__info-section__txt__paragraph {
+  font: normal normal 500 16px/22px "Barlow";
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__info-section__txt__paragraph {
+    margin-bottom: 40px;
+    font: normal normal 500 16px/28px "Barlow";
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__info-section__txt__paragraph {
+    margin-bottom: 40px;
+    font: normal normal 500 16px/28px "Barlow";
+  }
+}
+.about__general__content__info-section__txt__highlight {
+  font: normal normal 600 19px/24px "Barlow";
+  text-align: center;
+  background: #F9E2E2;
+  padding: 20px 40px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+.about__general__content__info-section__txt__section-3-img {
+  margin-left: 0;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .about__general__content__info-section__txt__section-3-img {
+    margin-left: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .about__general__content__info-section__txt__section-3-img {
+    margin-left: 0;
+  }
+}
+
 .partners {
   padding-top: 65px;
   margin-bottom: 60px;
