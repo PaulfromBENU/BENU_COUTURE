@@ -6969,6 +6969,38 @@
   },
   {
     "page": "Mon compte",
+    "key": "dashboard.order-delivery-ready-for-collect-since",
+    "de": "Bestellung bereit zur Abholung im BENU Shop seit",
+    "fr": "Commande prêt pour la collecte en Shop BENU depuis le",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "dashboard.order-delivery-collected-on",
+    "de": "Bestellung im BENU Shop abgeholt am",
+    "fr": "Commande retirée au Shop BENU le",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "dashboard.order-follow-order-link",
+    "de": "Link zur Sendungsverfolgung:",
+    "fr": "Lien pour le suivi de la livraison :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
+    "key": "dashboard.order-delivery-tracking-number",
+    "de": "Sendungsnummer:",
+    "fr": "Numéro de suivi :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
     "key": "dashboard.order-articles",
     "de": "Artikel",
     "fr": "Articles",
@@ -7643,9 +7675,9 @@
     "page": "Mon compte",
     "key": "dashboard.com-wish-reply",
     "de": "Antworten",
-    "fr": "Réponses",
-    "en": "Replies",
-    "lu": "Äntwerten"
+    "fr": "Répondre",
+    "en": "Reply",
+    "lu": "Äntweren"
   },
   {
     "page": "Mon compte",
@@ -7675,7 +7707,7 @@
     "page": "Mon compte",
     "key": "dashboard.com-mask-demands-from",
     "de": "Anfrage zu Masken von",
-    "fr": "Demande pour masques de",
+    "fr": "Demande de masques de",
     "en": "Request for masks from",
     "lu": "Ufro zu Maske vun"
   },
@@ -7898,7 +7930,7 @@
   {
     "page": "Mon compte",
     "key": "pdf.voucher-code",
-    "de": "Code",
+    "de": "Nummer",
     "fr": "Code",
     "en": "Code",
     "lu": "Code"
@@ -9714,7 +9746,7 @@
   {
     "page": "Panier",
     "key": "cart.payment-in-shop-pay-before-validate",
-    "de": "Sobald die Bestellung bestätigt wurde, werden die Artikel aus dem Lager entfernt. Die Bestellung muss also VOR der Freigabe von dem/der Kunde/in bezahlt werden!",
+    "de": "Sobald die Bestellung bestätigt wurde, werden die Artikel aus dem Lager entfernt. Die Bestellung muss also VOR der Bestätigung von dem/der Kunde/in bezahlt werden!",
     "fr": "Une fois la commande validée, les articles sont retirés du stock. La commande doit donc être payée par le·la client·e AVANT validation !",
     "en": "As soon as the order has been confirmed, the items will be removed from stock. The order must therefore be paid by the customer BEFORE confirmation!",
     "lu": "Esoubal d'Bestellung bestätegt gouf, ginn d'Artikelen aus dem Stock erausgeholl. D'Bestellung muss also vum/vun der Client·e bezuelt gi virun der Bes"
@@ -9755,7 +9787,7 @@
     "page": "Panier",
     "key": "payment.confirmation-inshop-do-not-forget-to-receive-payment",
     "de": "Nicht vergessen, die Bezahlung zu erhalten!",
-    "fr": "",
+    "fr": "Ne pas oublier d'obtenir réception du paiement !",
     "en": "",
     "lu": ""
   },
@@ -10378,7 +10410,7 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-5-title",
-    "de": "Kaufe Second-Hand Kleidung!",
+    "de": "Kaufe second-hand Kleidung!",
     "fr": "Achète des vêtements de seconde main !",
     "en": "Buy second-hand clothes!",
     "lu": "Kaf Second-Hand Kleeder!"
@@ -10474,10 +10506,10 @@
   {
     "page": "Participer",
     "key": "participate.smart-card-8-message",
-    "de": "Secondhand ist en vogue...",
-    "fr": "La seconde main est en vogue...",
-    "en": "Secondhand is en vogue...",
-    "lu": "Secondhand ass en vogue..."
+    "de": "Second-Hand ist in!",
+    "fr": "La seconde main est à la mode !",
+    "en": "Second-hand is in!",
+    "lu": "Second-Hand ass in!"
   },
   {
     "page": "Participer",
@@ -11330,7 +11362,7 @@
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-1-3",
-    "de": "muss der/die Nutzer:in den vorliegenden Nutzungsbedingungen ohne Einschränkungen oder Vorbehalte zustimmen. Diese Zustimmung erfolgt durch einen Bestätigungsklick bei der Anmeldung auf der jeweiligen Internetseite.",
+    "de": "Um Serviceleistungen der Internetseiten von BENU Village Esch asbl nutzen zu können, muss der/die Nutzer:in den vorliegenden Nutzungsbedingungen ohne Einschränkungen oder Vorbehalte zustimmen. Diese Zustimmung erfolgt durch einen Bestätigungsklick bei der Anmeldung auf der jeweiligen Internetseite.",
     "fr": "l'utilisateur·rice doit accepter les présentes conditions d'utilisation sans restriction ni réserve. Ceci se fait par un clic de confirmation lors de l'inscription sur le site Internet concerné.",
     "en": "the users must agree to the present terms of use without any restrictions or reservations. This consent is given by a confirmation click when registering on the respective website.",
     "lu": ""
@@ -11531,120 +11563,120 @@
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-4",
     "de": "Überprüfung der in den Warenkorb gelegten Artikel und der ausgewählten Geschenkoptionen. Durch Klicken auf das Symbol \"Abfalleimer\" kann ein Artikel aus dem Warenkorb entfernt werden. Die Geschenkoptionen können durch Anklicken beliebig ausgewählt und wieder entfernt werden. Bei den im Warenkorb angegebenen Versandkosten handelt es sich um einen Schätzwert. Die definitiven Versandkosten werden im weiteren Bestellvorgang ermittelt.",
-    "fr": "Vérification des articles ajoutés au panier et des options cadeaux sélectionnées. Cliquer sur l'icône \"Poubelle\", permet de supprimer un article du panier. Les options cadeaux peuvent être sélectionnées et supprimées à volonté par simple clic. Les frais de livraison indiqués dans le panier sont une estimation. Les frais d'expédition définitifs seront déterminés lors de la suite du processus de commande.",
+    "fr": "Vérification des articles ajoutés au panier et des options cadeaux sélectionnées. Cliquer sur l'icône \"Poubelle\", permet de supprimer un article du panier. Les options cadeaux peuvent être sélectionnées et supprimées à volonté par simple clic. Les frais d'expédition indiqués dans le panier correspondent à une estimation. Les frais d'expédition définitifs seront déterminés lors de la suite du processus de commande.",
     "en": "Checking the items placed in the shopping basket and the selected gift options. An item can be removed from the shopping basket by clicking on the \"Waste bin\" icon. The gift options can be selected and removed again as desired by clicking on them. The shipping costs shown in the shopping basket are an estimate. The definitive shipping costs will be determined in the further ordering process.",
-    "lu": ""
+    "lu": "Iwwerpréiwe vun den Artikelen an den ausgewielte Kaddosoptiounen am Akafskierfchen. Duerch Klicken op d'Symbol \"Poubelle\" kann en Artikel aus dem Akafskierfchen erausgeholl ginn. D'Kaddosoptioune kënnen op Wonsch bäigesat oder suppriméiert ginn duerch einfacht Uklicken. D'Expeditiounskäschten déi am Akafskierfche matgedeelt ginn, entspriechen enger Estimatioun. Déi definitiv Expeditiounskäschte ginn am weidere Bestellprozess berechent."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-5",
-    "de": "Möglichkeit einen Gutschein einzulösen durch Auswählen der Option „Ich nutze meinen Gutschein“. Nach Eingabe des Gutschein-Codes und Bestätigung durch Klicken auf den Button „Gutschein einlösen“ wird das Guthaben angezeigt und der verbleibende Kaufpreis in der Kostenaufstellung aktualisiert.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Möglichkeit einen Gutschein einzulösen durch Auswählen der Option \"Ich nutze meinen Gutschein\". Nach Eingabe des Gutschein-Codes und Bestätigung durch Klicken auf den Button \"Gutschein einlösen\" wird das Guthaben angezeigt und der verbleibende Kaufpreis in der Kostenaufstellung aktualisiert.",
+    "fr": "Possibilité d'utiliser un bon d'achat en sélectionnant l'option \"J'utilise mon bon d'achat\". Après avoir saisi le code du bon et confirmé en cliquant sur le bouton \"Utiliser mon bon d'achat\", le crédit disponible s'affiche et le prix d'achat restant à payer est mis à jour dans le récapitulatif des frais.",
+    "en": "Possibility to redeem a voucher by selecting the option \"I use my voucher\". After entering the voucher code and confirming by clicking on the \"Redeem voucher\" button, the credit is displayed and the remaining purchase price is updated in the cost statement.",
+    "lu": "Méiglechkeet e Bong anzeléisen duerch Auswielen vun der Optioun \"Ech benotze mäi Bong\". Nodeems de Code vum Bong agedroen an duerch Klicken op de Knäppchen \"Bong aléisen\" bestätegt ginn ass, gëtt den disponible Betrag um Bong ugewisen an den iwweregbliwwene Kafspräis deen nach ze bezuelen ass, gëtt aktualiséiert an affichéiert."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-6",
-    "de": "Bestätigung der ausgewählten Artikel und Optionen durch Klicken auf den Button „Bestellen\".",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Bestätigung der ausgewählten Artikel und Optionen durch Klicken auf den Button \"Bestellen\".",
+    "fr": "Confirmation des articles et options sélectionnés en cliquant sur le bouton \"Commander\".",
+    "en": "Confirmation of the selected items and options by clicking the \"Order\" button.",
+    "lu": "Bestätegung vun den ausgewielten Artikelen an Optiounen duerch Klicken op de Knäppche \"Bestellen\"."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-7",
     "de": "Anmeldung im BENU Konto oder Angabe der persönlichen Daten (Vor- und Nachname, E-Mail-Adresse und Telefonnummer) bei Bestellung ohne BENU Konto.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Connexion au compte BENU ou indication des données personnelles (nom, prénom, adresse e-mail et numéro de téléphone) en cas de commande sans compte BENU.",
+    "en": "Logging in to the BENU account or indication of personal data (first name, surname, e-mail address and phone number) when ordering without a BENU account.",
+    "lu": "Aloggen an de BENU Kont oder Matdeele vu perséinlechen Donnéeën (Numm, Virnumm, E-Mail-Adress an Telefonsnummer) am Fall vun enger Bestellung ouni BENU Kont."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-8",
-    "de": "Auswahl der Versandart, entweder gratis Selbstabholung in einem BENU Shop oder kostenpflichtiger Versand zu einer Lieferadresse. Nach Auswahl der Versandart und Angabe der Lieferadresse werden in der Kostenaufstellung die definitiven Versandkosten angezeigt.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Auswahl der Versandart, entweder gratis Selbstabholung im BENU Shop oder kostenpflichtiger Versand zu einer Lieferadresse. Nach Auswahl der Versandart und Angabe der Lieferadresse werden in der Kostenaufstellung die definitiven Versandkosten angezeigt.",
+    "fr": "Choix du mode d'expédition, soit retrait gratuit au BENU Shop, soit expédition à une adresse de livraison moyennant paiement. Après avoir choisi le mode d'expédition et indiqué l'adresse de livraison, les frais d'expédition définitifs s'affichent dans le récapitulatif des frais.",
+    "en": "Selection of the shipping method, either free self pickup at BENU Shop or chargeable shipping to a delivery address. After selecting the shipping method and specifying the delivery address, the definitive shipping costs are displayed in the cost statement.",
+    "lu": "Auswiel vun der Expeditiounsoptioun, entweder gratis Ofhuelen an engem BENU Shop oder käschteflichteg Expeditioun op Deng Liwweradress. No Auswiel vun der Expeditiounsoptioun an Androe vun der Liwweradress, ginn déi definitiv Expeditiounskäschten ugewisen."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-9",
     "de": "Auswahl bzw. Angabe der Rechnungsadresse.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Sélection ou indication de l'adresse de facturation.",
+    "en": "Selection or specification of the billing address.",
+    "lu": "Auswiel oder Androe vun der Rechnungsadress."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-10",
     "de": "Auswahl und Bestätigen der gewünschten Zahlungsmethode (Kreditkarte, PayPal, Payconiq/Digicash, Banküberweisung).",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "Sélection et confirmation du mode de paiement souhaité (carte de crédit, PayPal, Payconiq/Digicash, virement bancaire).",
+    "en": "Select and confirm the desired payment method (credit card, PayPal, Payconiq/Digicash, bank transfer).",
+    "lu": "Auswiel a Bestätegung vun der gewënschter Bezuelmethod (Kreditkaart, PayPal, Payconiq/Digicash, Bankiwwerweisung)."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-11",
-    "de": "Bei Zahlung mit Paypal und Kreditkarte: Eingabe der persönlichen Angaben und unwiderrufliches Bezahlen der Bestellung durch Klicken auf den Button „Zahlung bestätigen“.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Bei Zahlung mit PayPal und Kreditkarte: Eingabe der persönlichen Angaben und unwiderrufliches Bezahlen der Bestellung durch Klicken auf den Button \"Zahlung bestätigen\".",
+    "fr": "En cas de paiement par PayPal et carte de crédit : saisie des données personnelles et paiement irrévocable de la commande en cliquant sur le bouton \"Confirmer le paiement\".",
+    "en": "When paying with Paypal and credit card: specification of personal details and irrevocable payment of the order by clicking on the \"Confirm payment\" button.",
+    "lu": "Bei Bezuelung mat PayPal oder Kreditkaart: Androe vu perséinlechen Donnéeën an irreversibel Bezuelung vun der Bestellung duerch Klicken op de Knäppche \"Bezuelung bestätegen\"."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-12",
-    "de": "Durch Anklicken des Links „Meinen Warenkorb ändern“ oder des \"Zurück\"-Buttons im Webbrowser kann der/die Käufer:in zu seinem/ihrem Warenkorb zurückkehren. Der Bestellvorgang wird hiermit abgebrochen.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Durch Anklicken des Links \"Meinen Warenkorb ändern\" oder des \"Zurück\"-Buttons im Webbrowser kann der/die Käufer:in zu seinem/ihrem Warenkorb zurückkehren. Der Bestellvorgang wird hiermit abgebrochen.",
+    "fr": "En cliquant sur le lien \"Modifier mon panier\" ou sur le bouton \"Retour\" du navigateur Internet, l'acheteur·se peut revenir à son panier. Le processus de commande est ainsi interrompu.",
+    "en": "By clicking on the link \"Change my basket\" or the \"Back\" button in the web browser, the buyer can return to his/her basket. The ordering process is hereby interrupted.",
+    "lu": "Duerch Uklicke vum Link \"Mäin Akafskierfchen änneren\" oder vum \"Zeréck\"-Knäppchen am Internetbrowser, kann de/d'Client:e zeréck a säin Akafskierfche goen. De Bestellprozess gëtt domat ënnerbrach."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-13",
-    "de": "Ein Artikel, der in den Warenkorb gelegt wurde, ist 30 Minuten für den/die Nutzer:in reserviert und erscheint auf der Internetseite als „verkauft“. Wenn nach diesem Zeitraum der Bestellvorgang nicht abgeschlossen ist, wird der Artikel automatisch aus dem Warenkorb entfernt und ist auf der Internetseite wieder verfügbar.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Ein Artikel, der in den Warenkorb gelegt wurde, ist 30 Minuten für den/die Nutzer:in reserviert und erscheint auf der Internetseite als \"verkauft\". Wenn nach diesem Zeitraum der Bestellvorgang nicht abgeschlossen ist, wird der Artikel automatisch aus dem Warenkorb entfernt und ist auf der Internetseite wieder verfügbar.",
+    "fr": "Un article ajouté au panier est réservé à l'utilisateur·rice pendant 30 minutes et apparaît comme \"vendu\" sur le site Internet. Si, passé ce délai, le processus de commande n'a pas été finalisé, l'article est automatiquement retiré du panier et redevient disponible sur le site Internet.",
+    "en": "An item placed in the basket is reserved for the user for 30 minutes and appears on the website as \"sold\". If the order process is not completed after this period, the item is automatically removed from the basket and is available again on the website.",
+    "lu": "En Artikel, deen am Akafskierfche geluecht gouf, ass fir 30 Minutte fir de/d'Benotzer:in reservéiert a gëtt als \"verkaf\" um Internetsite ugewisen. Wann de Bestellprozess no deem Zäitraum nach net ofgeschloss ass, gëtt den Artikel automatesch aus dem Akafskierfchen erausgeholl an ass um Internetsite nees verfügbar."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-14",
-    "de": "Die während des Bestellvorgangs angegebenen personenbezogenen Daten können nach dem Anklicken des Buttons „Bestätigen“ (Payconiq/Digicash, Überweisung) bzw. „Zahlung bestätigen\" (Kreditkarte, PayPal) nicht mehr geändert oder korrigiert werden. Wenn die Bestellung erfolgreich übermittelt wurde, erhält der/die Kunde/in eine automatische Bestätigungs-E-Mail. Diese Nachricht bestätigt, dass die Bestellung bei BENU COUTURE eingegangen ist. Ein Kaufvertrag zwischen BENU Village Esch asbl und dem/der Kunde/in kommt erst mit dem Zahlungseingang zustande.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Die während des Bestellvorgangs angegebenen personenbezogenen Daten können nach dem Anklicken des Buttons \"Bestätigen\" (Payconiq/Digicash, Überweisung) bzw. \"Zahlung bestätigen\" (Kreditkarte, PayPal) nicht mehr geändert oder korrigiert werden. Wenn die Bestellung erfolgreich übermittelt wurde, erhält der/die Kunde/in eine automatische Bestätigungs-E-Mail. Diese Nachricht bestätigt, dass die Bestellung bei BENU COUTURE eingegangen ist. Ein Kaufvertrag zwischen BENU Village Esch asbl und dem/der Kunde/in kommt erst mit dem Zahlungseingang zustande.",
+    "fr": "Les données personnelles fournies lors du processus de commande ne peuvent plus être ni modifiées ni corrigées après avoir cliqué sur le bouton \"Confirmer\" (Payconiq/Digicash, virement) ou \"Confirmer le paiement\" (carte de crédit, PayPal). Si la commande a été transmise avec succès, le·la client·e reçoit un e-mail de confirmation automatique. Ce message confirme que la commande a bien été reçue par BENU COUTURE. Un contrat de vente entre BENU Village Esch asbl et le·la client·e n'est conclu qu'après réception du paiement.",
+    "en": "The personal data provided during the ordering process can no longer be changed or corrected after clicking the button \"Confirm\" (Payconiq/Digicash, bank transfer) or \"Confirm payment\" (credit card, PayPal). If the order has been successfully submitted, the customer will receive an automatic confirmation e-mail. This message confirms that the order has been received by BENU COUTURE. A purchase contract between BENU Village Esch asbl and the customer is only concluded upon receipt of payment.",
+    "lu": "Déi perséinlech Donnéeën déi wärend dem Bestellprozess matgedeelt gi sinn, kënnen no Uklicke vum Knäppche \"Bestätegen\" (Payconiq/Digicash, Iwwerweisung) oder \"Bezuelung bestätegen\" (Kreditkaart, PayPal), net méi geännert oder verbessert ginn. Wann d'Bestellung erfollegräich iwwermëttelt gouf, kritt de/d'Client:e eng automatesch Bestätegungs-E-Mail. Dës Noriicht bestätegt, datt d'Bestellung bei BENU COUTURE ukomm ass. E Kafvertrag tëschent BENU Village Esch asbl an dem/der Client:e gëtt eréischt dann ofgeschloss, wann d'Bezuelung ukomm ass."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-lowtitle-1-6",
     "de": "1.6 Bestellung von Artikeln aus anderen Verkaufsstellen",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "fr": "1.6 Commande d'articles provenant d'autres points de vente",
+    "en": "1.6 Ordering items from other points of sale",
+    "lu": "1.6 Bestellung vun Artikelen aus anere Verkafsplazen"
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-6-1",
-    "de": "Artikel, die zum Zeitpunkt der Bestellung nicht im BENU Shop in Esch-sur-Alzette, sondern in einer anderen Verkaufsstelle (z.B. PopUp-Store) ausgestellt sind, werden auf der jeweiligen Internetseite mit einem Vogel-Symbol gekennzeichnet.",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Artikel, die zum Zeitpunkt der Bestellung nicht im BENU Shop in Esch-sur-Alzette, sondern in einer anderen Verkaufsstelle (z.B. Pop-Up Store) ausgestellt sind, werden auf der jeweiligen Internetseite mit einem Vogel-Symbol gekennzeichnet.",
+    "fr": "Les articles qui, au moment de la commande, ne sont pas disponibles au BENU Shop d'Esch-sur-Alzette mais exposés dans un autre point de vente (p.ex. Pop-Up Store), sont symbolisés par un oiseau sur la page Internet correspondante.",
+    "en": "Articles which are not available at the time of the order in the BENU Shop in Esch-sur-Alzette but are displayed in another point of sale (e.g. Pop-Up Store), are marked with a bird symbol on the corresponding Internet page.",
+    "lu": "Artikelen, déi zum Zäitpunkt vun der Bestellung net am BENU Shop zu Esch/Uelzecht disponibel sinn mee op enger anerer Verkafsplaz (z.B. Pop-Up Store) ausgestallt sinn, ginn op deene jeeweilegen Internetsäite mat engem Villche-Symbol gekennzeechent."
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-6-2",
-    "de": "Im Falle der Online-Bestellung eines solchen Artikels können wir aus logistischen Gründen nicht garantieren, dass dieser noch verfügbar ist. Sollte sich nach einer Bestellung herausstellen, dass der Artikel im PopUp-Store bereits verkauft wurde, wird der/die Kunde/in schnellst möglich von BENU informiert und bereits erfolgte Zahlungen erstattet.",
-    "fr": "",
-    "en": "",
+    "de": "Im Falle der Online-Bestellung eines solchen Artikels können wir aus logistischen Gründen nicht garantieren, dass dieser noch verfügbar ist. Sollte sich nach einer Bestellung herausstellen, dass der Artikel im Pop-Up Store bereits verkauft wurde, wird der/die Kunde/in schnellstmöglich von BENU informiert und bereits erfolgte Zahlungen erstattet.",
+    "fr": "Si un tel article fait l'objet d'une commande en ligne, nous ne pouvons, pour des raisons logistiques, pas garantir sa disponibilité. S'il s'avère que l'article commandé a déjà été vendu au Pop-Up Store, le·la client·e en est informé·e le plus rapidement possible par BENU et les paiements déjà effectués lui seront remboursés.",
+    "en": "In the case of an online order for such an item, we cannot, for logistical reasons, guarantee that it is still available. If it turns out that the ordered article has already been sold at the Pop-Up Store, the customer will be informed as soon as possible by BENU and the payments already made will be refunded.",
     "lu": ""
   },
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-lowtitle-1-7",
     "de": "1.7 Preise",
-    "fr": "",
-    "en": "",
+    "fr": "1.7 Prix",
+    "en": "1.7 Prices",
     "lu": ""
   },
   {
@@ -11985,14 +12017,6 @@
   },
   {
     "page": "conditions générales",
-    "key": "footer.general-conditions-link-6",
-    "de": "www.kulturpass.lu",
-    "fr": "www.kulturpass.lu",
-    "en": "www.kulturpass.lu",
-    "lu": "www.kulturpass.lu"
-  },
-  {
-    "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-13-2",
     "de": ") ausgestellt.",
     "fr": "",
@@ -12026,7 +12050,7 @@
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-14-1",
-    "de": "Die Internetseiten von BENU Village Esch asbl werden  in verschiedenen Websprachen (HTML, HTML5, Javascript, CSS, usw.) angeboten, um einen besseren Benutzerkomfort und ein angenehmeres visuelles Erlebnis zu ermöglichen. Um die Interneseiten optimal nutzen zu können, empfehlen wir Dir, moderne Browser wie Edge, Firefox, Google Chrome, Safari usw. zu verwenden. Die Verwendung von wenig genutzten, zu alten oder nicht aktualisierten Browsern kann zu Funktionsstörungen der Internetseiten führen. Wir empfehlen aus Gründen der Sicherheit und des reibungslosen Funktionierens, Deinen Webbrowser regelmäßig zu aktualisieren.",
+    "de": "Die Internetseiten von BENU Village Esch asbl werden  in verschiedenen Websprachen (HTML, HTML5, Javascript, CSS, usw.) angeboten, um einen besseren Benutzerkomfort und ein angenehmeres visuelles Erlebnis zu ermöglichen. Um die Internetseiten optimal nutzen zu können, empfehlen wir Dir, moderne Browser wie Edge, Firefox, Google Chrome, Safari usw. zu verwenden. Die Verwendung von wenig genutzten, zu alten oder nicht aktualisierten Browsern kann zu Funktionsstörungen der Internetseiten führen. Wir empfehlen aus Gründen der Sicherheit und des reibungslosen Funktionierens, Deinen Webbrowser regelmäßig zu aktualisieren.",
     "fr": "Ce site web est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…) pour un meilleur confort d’utilisation et une expérience visuelle plus agréable. Afin d'en profiter au maximum, nous vous recommandons de recourir à des navigateurs modernes comme Edge, Firefox, Google Chrome, Safari, etc… L'utilisation de navigateurs peu utilisés, trop anciens ou non mis à jour peut entrainer des dysfonctionnements du site web. Nous recommandons, pour des raisons de sécurité et de bon fonctionnement, de régulièrement mettre à jour votre navigateur web.",
     "en": "",
     "lu": ""
@@ -12106,7 +12130,7 @@
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-2-1-1",
-    "de": "Die Artikel von BENU COUTURE werden ausschließlich im Schneideratelier in 51, rue d'Audun L-4018 Esch-sur-Alzette hergestellt, das auch die Adresse des physischen BENU Shops ist.",
+    "de": "Die Kreationen von BENU COUTURE werden ausschließlich im Schneideratelier in 51, rue d'Audun L-4018 Esch-sur-Alzette hergestellt, das auch die Adresse des physischen BENU Shops ist.",
     "fr": "",
     "en": "",
     "lu": ""
@@ -12457,19 +12481,11 @@
   },
   {
     "page": "sitemap",
-    "key": "footer.sitemap-single-news Test 111",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "sitemap",
-    "key": "footer.sitemap-single-news Nouveau test de",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "key": "footer.sitemap-single-news",
+    "de": "Aktualität",
+    "fr": "Actualité",
+    "en": "New",
+    "lu": "Neiegkeet"
   },
   {
     "page": "sitemap",
@@ -12482,10 +12498,10 @@
   {
     "page": "sitemap",
     "key": "footer.sitemap-newsletter-subscribe",
-    "de": "Abonniere unseren Newsletter",
-    "fr": "S'inscrire à notre newsletter",
-    "en": "Subscribe to our newsletter",
-    "lu": "Eis Newsletter abonéieren"
+    "de": "Newsletter",
+    "fr": "Newsletter",
+    "en": "Newsletter",
+    "lu": "Newsletter"
   },
   {
     "page": "sitemap",
@@ -12570,10 +12586,10 @@
   {
     "page": "sitemap",
     "key": "footer.sitemap-campaign-carte-blanche",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Persilschein",
+    "fr": "Carte blanche",
+    "en": "Free hand",
+    "lu": "Fräischäin"
   },
   {
     "page": "sitemap",
@@ -13126,5 +13142,901 @@
     "fr": "Ton équipe BENU",
     "en": "Your BENU team",
     "lu": "Deng BENU Ekipp"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-subject",
+    "de": "Danke für Deine Bestellung bei BENU!",
+    "fr": "Merci pour ta commande chez BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-hell",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-1",
+    "de": "Vielen Dank für Deine Bestellung bei BENU!",
+    "fr": "Merci pour ton achat chez BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-account",
+    "de": "Alle Details zu Deiner Bestellung findest du in",
+    "fr": "Tu trouveras tous les détails de ta commande dans",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-account-link",
+    "de": "Deinem Konto.",
+    "fr": "ton compte.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-no-account-1",
+    "de": "Du kannst",
+    "fr": "Tu peux ouvrir un compte BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-no-account-link",
+    "de": "hier",
+    "fr": "ici",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-no-account-2",
+    "de": "ein BENU Konto eröffnen um alle Details zu Deiner Bestellung einzusehen.",
+    "fr": "pour voir tous les détails de ta commande.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-not-paid-1",
+    "de": "Wir werden in Kürze die bestellten Artikel vorbereiten, so dass Du so schnell wie möglich Deinen Einkauf genießen kannst. Wir bitten wir Dich, den Gesamtpreis innerhalb von 5 Tagen zu bezahlen.",
+    "fr": "Nous allons bientôt préparer les articles commandés pour que tu puisses profiter de ton achat lau plus vite. Nous te prions de virer le montant total dans les 5 prochains jours.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-transfer-1",
+    "de": "Si Payement par virementDu hast die Bezahlung per Banküberweisung ausgewählt. Unsere Bankverbindung lautet folgendermaßen:",
+    "fr": "Tu as choisi de payer par virement bancaire. Nos coordonnées bancaires sont les suivantes :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-digicash-1",
+    "de": "Du hast die Bezahlung per Payconiq/Digicash ausgewählt. Unsere Payconiq/Digicash Angaben lauten folgendermaßen:",
+    "fr": "Tu as choisi de payer par Payconiq/Digicash. Nos coordonnées Payconiq/Digicash sont les suivantes :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-reference",
+    "de": "Damit wir die Zahlung eindeutig zuordnen können, bitten wir Dich folgende Zahlungsreferenz anzugeben:",
+    "fr": "Merci de mentionner la référence suivante pour que nous puissons l’identifier facilement :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-paid-1",
+    "de": "Wir werden in Kürze die bestellten Artikel vorbereiten, so dass Du so schnell wie möglich Deinen Einkauf genießen kannst.",
+    "fr": "Nous allons bientôt préparer les articles commandés pour que tu puisses profiter de ton achat lau plus vite.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-2",
+    "de": "Bestellnummer:",
+    "fr": "Numéro de commande :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-3",
+    "de": "Gesamtpreis Deiner Bestellung:",
+    "fr": "Prix total de ta commande :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-4",
+    "de": "Lieferadresse:",
+    "fr": "Adresse de livraison :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-benu-shop-1",
+    "de": "Selbstabholung:",
+    "fr": "Retrait en magasin :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-benu-shop-2",
+    "de": "BENU Shop Esch-sur-Alzette",
+    "fr": "BENU Shop Esch-sur-Alzette",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-5",
+    "de": "Falls Du noch Fragen hast oder eine der Angaben nicht korrekt ist, melde Dich bitte bei uns per E-Mail auf",
+    "fr": "Si tu as encore des questions ou si l'une des données n'est pas correcte, n'hésite pas à nous contacter par e-mail à",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-6",
+    "de": "oder über",
+    "fr": "ou via notre",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-7",
+    "de": "unser Kontaktformular",
+    "fr": "formulaire de contact",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-8",
+    "de": "!",
+    "fr": "!",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-9",
+    "de": "Bis bald auf unseren BENU Internetseiten oder im BENU VILLAGE in Esch-sur-Alzette!",
+    "fr": "À bientôt sur nos pages internet BENU ou au BENU VILLAGE à Esch-sur-Alzette !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-collect-subject-1",
+    "de": "Deine Bestellung",
+    "fr": "Ta commande",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-collect-subject-2",
+    "de": "bei BENU ist abholbereit!",
+    "fr": "chez BENU est prête !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-delivery-subject-1",
+    "de": "Deine Bestellung",
+    "fr": "Ta commande",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-delivery-subject-2",
+    "de": "bei BENU wurde versendet!",
+    "fr": "chez BENU a été expédiée !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-hello",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-shop-1",
+    "de": "Deine Bestellung bei BENU ist vorbereitet und kann im BENU Shop in Esch-sur-Alzette abgeholt werden!",
+    "fr": "Ta commande chez BENU est préparée et peut à être retirée au BENU Shop à Esch-sur-Alzette !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-delivery-1",
+    "de": "Deine Bestellung bei BENU wurde versendet und wird Dir in Kürze zugestellt!",
+    "fr": "Ta commande chez BENU a été expédiée et te sera livrée sous peu !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-no-account-1",
+    "de": "Du kannst",
+    "fr": "Tu peux ouvrir un compte BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-no-account-link",
+    "de": "hier",
+    "fr": "ici",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-no-account-2",
+    "de": "ein BENU Konto eröffnen um alle Details zu Deiner Bestellung einzusehen.",
+    "fr": "pour voir tous les détails de ta commande.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-with-account-1",
+    "de": "Alle Details zu Deiner Bestellung findest du in",
+    "fr": "Tu trouveras tous les détails de ta commande dans",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-with-account-link",
+    "de": "Deinem Konto.",
+    "fr": "ton compte.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-txt-1",
+    "de": "Bestellnummer:",
+    "fr": "Numéro de commande :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-follow-delivery",
+    "de": "Unter dem folgendem Link  kannst Du Deine Sendung bei Track and Trace von post.lu:",
+    "fr": "En cliquant sur le lien suivant, tu peux suivre ton envoi sur Track and Trace de post.lu :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-follow-delivery-link",
+    "de": "https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search",
+    "fr": "https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-follow-up-number",
+    "de": "Deine Sendungsnummer lautet:",
+    "fr": "Ton numéro de suivi est :",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-txt-collect-1",
+    "de": "Adresse und Öffnungszeiten unseres BENU Shops findest Du",
+    "fr": "Tu trouveras l'adresse et les heures d'ouverture de notre boutique BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-txt-collect-2",
+    "de": "hier",
+    "fr": "ici",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-txt-collect-3",
+    "de": "Bitte bringe diese Bestätigungs-E-Mail in digitaler oder ausgedruckter Form mit, damit wir Dir Deine Bestellung eindeutig zuweisen können.",
+    "fr": "Veuillez apporter cet e-mail de confirmation sous forme numérique ou imprimée afin que nous puissions t'attribuer clairement ta commande.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-txt-collect-4",
+    "de": "Da wir begrenzte Lagerkapazitäten haben, bitten wird Dich Deine Artikel innerhalb von einem Monat im BENU Shop abzuholen. Vielen Dank!",
+    "fr": "Comme nous avons des capacités de stockage limitées, nous te prions de venir chercher tes articles à la boutique BENU dans un délai d'un mois. Merci beaucoup !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-txt-2",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-contact-1",
+    "de": "Falls Du noch Fragen hast, melde Dich bei uns per E-Mail auf",
+    "fr": "Si tu as encore des questions, n'hésite pas à nous contacter par e-mail à",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-contact-2",
+    "de": "oder über",
+    "fr": "ou via notre",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-contact-3",
+    "de": "unser Kontaktformular",
+    "fr": "formulaire de contact",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-contact-4",
+    "de": "!",
+    "fr": "!",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-conclusion",
+    "de": "Bis bald auf unseren BENU Internetseiten oder im BENU VILLAGE in Esch-sur-Alzette!",
+    "fr": "À bientôt sur nos pages internet BENU ou au BENU VILLAGE à Esch-sur-Alzette !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.order-ready-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "email.pdf-voucher-subject",
+    "de": "Dein BENU Gutschein ist da",
+    "fr": "Ton bon d’achat BENU est arrivé !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-hello",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-1",
+    "de": "Vielen Dank für Deine Bestellung eines BENU Gutscheins !",
+    "fr": "Merci d'avoir commandé un bon d'achat chez BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-2",
+    "de": "Vielen Dank für Deine Bestellung eines BENU Gutscheins !\nAvec compte Du findest Deinen Gutschein als PDF im Anhang dieser E-Mail. Den Gutschein kannst Du für alle Serviceleistungen von BENU Village Esch asbl einlösen, dies sowohl online auf jeder Internetseite von BENU Village Esch asbl (außer benureuse.lu) als auch vor Ort im",
+    "fr": "Tu trouveras ton bon d’achat au format PDF en annexe de cet e-mail. Tu peux utiliser le\nAvec compte bon d’achat pour tous les services de BENU Village Esch asbl, aussi bien en ligne sur chaque site Internet de BENU Village Esch asbl (sauf benureuse.lu) que sur place au",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-3",
+    "de": "BENU Shop BENU",
+    "fr": "Shop BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-4",
+    "de": "in Esch-sur-Alzette.",
+    "fr": "à Esch-sur-Alzette.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-with-account-1",
+    "de": "Damit Du immer den Überblick behältst, kannst Du Deinen Gutschein in Deinem",
+    "fr": "Pour que tu puisses toujours garder une vue d'ensemble, tu peux enregistrer ton bon d'achat dans ton",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-with-account-link",
+    "de": "BENU Konto",
+    "fr": "compte BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-with-account-2",
+    "de": "registrieren.",
+    "fr": ".",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-no-account-1",
+    "de": "Du hast die Möglichkeit Deinen Gutschein online zu registrieren. Eröffne dazu",
+    "fr": "Tu as la possibilité d'enregistrer ton bon d'achat en ligne. Pour cela, ouvre",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-no-account-link",
+    "de": "ein BENU Konto",
+    "fr": "un compte BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-no-account-2",
+    "de": "!",
+    "fr": "!",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-5",
+    "de": "Sobald Dein registrierter Gutschein ganz oder teilweise eingelöst wird, wird das verbleibende Guthaben automatisch im BENU Konto angepasst. Alles Weitere  Informationen zur Verwendung Deines Gutscheins findest Du in unseren",
+    "fr": "Dès que ton bon enregistré est utilisé en tout ou en partie, le crédit restant est automatiquement ajusté dans ton compte BENU. Tu trouveras de plus amples informations sur l'utilisation de ton bon d'achat dans nos",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-6",
+    "de": "Nutzungsbedingungen.",
+    "fr": "conditions générales.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-7",
+    "de": "Falls Du noch Fragen hast, melde Dich bitte bei uns per E-Mail auf",
+    "fr": "Si tu as encore des questions ou si l'une des données n'est pas correcte, n'hésite pas à nous contacter par e-mail à",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-8",
+    "de": "oder über",
+    "fr": "ou via notre",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-9",
+    "de": "unser Kontaktformular",
+    "fr": "formulaire de contact",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-10",
+    "de": "!",
+    "fr": "!",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-txt-11",
+    "de": "Bis bald auf unseren BENU Internetseiten oder im BENU VILLAGE in Esch-sur-Alzette!",
+    "fr": "À bientôt sur nos pages internet BENU ou au BENU VILLAGE à Esch-sur-Alzette !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pdf-voucher-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.conditions-subject",
+    "de": "Die BENU Nutzungsbedingungen wurden geändert!",
+    "fr": "Les conditions d'utilisation de BENU ont été modifiées !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-hello",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-1",
+    "de": "Wir freuen uns, dass Du Dich für BENU interessierst und ein Konto bei BENU eröffnet hast!",
+    "fr": "Nous sommes heureux que tu t'intéresses à BENU et que tu aies ouvert un compte chez BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-2",
+    "de": "Fortlaufend arbeiten wir daran unsere Aktivitäten auszubauen, zu verbessern und uns weiterzuentwickeln. Dabei mussten wir auch Änderungen in unseren Nutzungsbedingungen vornehmen. Die BENU Nutzungsbedingungen gelten für alle Internetseiten von BENU Village Esch asbl (außer benureuse.lu).",
+    "fr": "Nous travaillons continuellement à l'extension, à l'amélioration et au développement de nos activités. Dans ce cadre, nous avons dû apporter des modifications à nos conditions d'utilisation. Les conditions d'utilisation de BENU s'appliquent à tous les sites Internet de BENU Village Esch asbl (sauf benureuse.lu).",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-3",
+    "de": "Die letzten Änderungen der Nutzungsbedingungen kannst Du in Deinem",
+    "fr": "Tu peux consulter les dernières modifications des conditions d'utilisation dans",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-4",
+    "de": "BENU Konto",
+    "fr": "ton compte BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-5",
+    "de": "einsehen. Gleichzeitig hast Du dort auch die Möglichkeit die neuen Nutzungsbedingungen zu akzeptieren.",
+    "fr": ".  Tu as également la possibilité d'accepter les nouvelles conditions d'utilisation.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-6",
+    "de": "Du kannst dies aber auch zu jedem späteren Zeitpunkt, während Deiner nächsten Bestellung oder Reservierung auf einer der BENU Plattformen nachholen!",
+    "fr": "Tu peux également le faire ultérieurement, lors de ta prochaine commande ou réservation sur l'une des plates-formes BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-7",
+    "de": "Falls Du noch Fragen hast, melde Dich bitte bei uns per E-Mail auf",
+    "fr": "Si tu as encore des questions, n'hésite pas à nous contacter par e-mail à",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-8",
+    "de": "oder über",
+    "fr": "ou via notre",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-9",
+    "de": "unser Kontaktformular",
+    "fr": "formulaire de contact",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-10",
+    "de": "!",
+    "fr": "!",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-txt-11",
+    "de": "Bis bald auf unseren BENU Internetseiten oder im BENU VILLAGE in Esch-sur-Alzette!",
+    "fr": "A bientôt sur nos pages internet BENU ou au BENU VILLAGE à Esch-sur-Alzette !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-conditions-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-registration-subject",
+    "de": "Herzlich Willkommen beim BENU Newsletter!",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-hello",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-1",
+    "de": "Vielen Dank für Deine Anmeldung zum BENU Newsletter!",
+    "fr": "Nous te remercions de ton inscription à la newsletter BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-2",
+    "de": "Hiermit bestätigen wir Dir, dass wir Deine E-Mailadresse in den Verteiler der künftigen BENU Nachrichten aufgenommen haben. Diese Nachrichten erhältst Du in deutscher Sprache. Falls Du den Newsletter lieber in einer anderen Sprache lesen möchtest, wie französisch, luxemburgisch oder englisch, dann teile uns dies bitte in einer E-Mail an",
+    "fr": "Par la présente, nous te confirmons que ton adresse e-mail a été ajoutée à la liste de distribution des futures nouvelles de BENU. Tu recevras ces messages en français. Si tu préfères lire la newsletter dans une autre langue, comme l'allemand, le luxembourgeois ou l'anglais, merci de nous le faire savoir par e-mail à",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-3",
+    "de": "benu@benu.lu",
+    "fr": "benu@benu.lu",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-4",
+    "de": "mit. Vielen Dank!",
+    "fr": ".",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-5",
+    "de": "Die für die Anmeldung zum BENU Newsletter erhobenen Daten (Vorname, Name und E-Mail-Adresse) werden ausschließlich genutzt, um Dir BENU Informations-E-Mails zuzuschicken. Die Daten tauschen wir mit niemandem, demnach auch mit keiner beliebigen Organisation, Verwaltung, Unternehmen, Interessensgruppe oder anderen.",
+    "fr": "Les données collectées pour l'inscription à la newsletter BENU (prénom, nom et adresse e-mail) sont exclusivement utilisées pour t'envoyer des e-mails d'information BENU. Nous n'échangeons ces données avec personne, et par conséquent avec aucune organisation, administration, entreprise, groupe d'intérêt ou autre.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-6",
+    "de": "Diese Abonnement kannst Du jederzeit formlos kündigen, indem Du uns eine E-Mail mit dem Zusatz ‚NEWSLETTER ABMELDEN' auf",
+    "fr": "Tu peux résilier cet abonnement à tout moment et sans formalité en nous envoyant un e-mail avec la mention 'ANNULER NEWSLETTER' sur",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-7",
+    "de": "benu@benu.lu",
+    "fr": "benu@benu.lu",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-8",
+    "de": "zusendest oder",
+    "fr": "ou de klicker",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-9",
+    "de": "hier",
+    "fr": "ici",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-10",
+    "de": "klickst.",
+    "fr": ".",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-txt-11",
+    "de": "Mit besten BENU Grüßen",
+    "fr": "Avec nos meilleures salutations BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-confirmation-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newlsetter-cancellation-subject",
+    "de": "Du hast dich beim BENU Newsletter abgemeldet!",
+    "fr": "Tu t'es désabonné de la newsletter BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-cancellation-hello",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-cancellation-txt-1",
+    "de": "wir bestätigen Deine Abmeldung vom BENU Newsletter. Vielen Dank dass Du uns und unsere Aktivitäten über unseren Newsletter begleitet hast!",
+    "fr": "nous confirmons ton désabonnement de la newsletter BENU. Nous te remercions de nous avoir suivis et d'avoir participé à nos activités via notre newsletter !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-cancellation-info-1",
+    "de": "Du bist jederzeit wieder herzlich Willkommen!",
+    "fr": "Tu seras à nouveau le bienvenu à tout moment !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-cancellation-regards",
+    "de": "Mit besten BENU Grüßen",
+    "fr": "Cordialement",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.newsletter-cancellation-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.reset-password-subject",
+    "de": "Du kannst ein neues Passwort für Dein BENU Konto anlegen !",
+    "fr": "Tu peux créer un nouveau mot de passe pour ton compte BENU !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pwd-reset-hello",
+    "de": "Hallo!",
+    "fr": "Bonjour !",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pwd-reset-introduction",
+    "de": "Mit dem folgenden Link kannst Du das Passwort für Dein BENU Konto zurücksetzen und ein neues Passwort anlegen.",
+    "fr": "Avec le lien suivant, tu peux réinitialiser le mot de passe de ton compte BENU et en créer un nouveau.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pwd-reset-reset-pwd-button",
+    "de": "Passwort zurücksetzen",
+    "fr": "Réinitialiser le mot de passe",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pwd-reset-valid-for-60-min",
+    "de": "Der Link ist für einen Zeitraum von 60 Minuten gültig.",
+    "fr": "Le lien est valable pour une période de 60 minutes.",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pwd-reset-conclusion",
+    "de": "Mit besten BENU Grüßen",
+    "fr": "Cordialement",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.pwd-reset-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "",
+    "lu": ""
   }
 ]
