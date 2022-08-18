@@ -300,7 +300,7 @@
 								{{ __('about.section-4-txt-1-2') }} <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-give')]) }}#collect-points" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-2') }}</a> {{ __('about.section-4-txt-1-2-end') }}
 							</p>
 							<p class="about__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-3') }} <a href="#" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>
+								{{ __('about.section-4-txt-1-3') }} <a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>
 							</p>
 						</div>
 					</div>
