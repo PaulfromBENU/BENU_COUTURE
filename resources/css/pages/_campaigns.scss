@@ -57,7 +57,10 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
-		background-size: cover;
+		@include large {
+			background-size: cover;
+		}
+		background-size: auto;
 		z-index: 1;
 		border: solid white 60px;
 		@include mobile {
@@ -243,7 +246,10 @@
 					display: none;
 					color: transparent;
 					background: url('/images/pictures/campaigns/couture_campaign_02.jpeg');
-					background-size: cover;
+					background-size: auto;
+					@include large {
+						background-size: cover;
+					}
 					background-clip: text;
 					background-position: center;
 					padding: 0 20px;
@@ -262,9 +268,12 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
-		background-size: cover;
+		background-size: auto;
 		border: solid $white 60px;
 		z-index: -2;
+		@include large {
+			background-size: cover;
+		}
 		@include mobile {
 			border: solid $white 20px;
 		}
@@ -390,7 +399,10 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
-		background-size: cover;
+		background-size: auto;
+		@include large {
+			background-size: cover;
+		}
 		border: solid $white 60px;
 		z-index: 1;
 		@include mobile {

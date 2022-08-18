@@ -13002,9 +13002,14 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: auto;
   z-index: 1;
   border: solid white 60px;
+}
+@media (min-width: 1720px) {
+  .single-campaign__header {
+    background-size: cover;
+  }
 }
 @media (max-width: 767px) {
   .single-campaign__header {
@@ -13225,11 +13230,16 @@ input[type=checkbox]:focus {
   display: none;
   color: transparent;
   background: url("/images/pictures/campaigns/couture_campaign_02.jpeg");
-  background-size: cover;
+  background-size: auto;
   -webkit-background-clip: text;
           background-clip: text;
   background-position: center;
   padding: 0 20px;
+}
+@media (min-width: 1720px) {
+  .single-campaign__section-1__picture__txt--hover {
+    background-size: cover;
+  }
 }
 .single-campaign__transition-1 {
   position: relative;
@@ -13241,9 +13251,14 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: auto;
   border: solid #FFFFFF 60px;
   z-index: -2;
+}
+@media (min-width: 1720px) {
+  .single-campaign__transition-1 {
+    background-size: cover;
+  }
 }
 @media (max-width: 767px) {
   .single-campaign__transition-1 {
@@ -13396,9 +13411,14 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: auto;
   border: solid #FFFFFF 60px;
   z-index: 1;
+}
+@media (min-width: 1720px) {
+  .single-campaign__section-3 {
+    background-size: cover;
+  }
 }
 @media (max-width: 767px) {
   .single-campaign__section-3 {
