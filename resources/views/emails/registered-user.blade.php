@@ -27,10 +27,10 @@
 			<strong>{{ $user->email }}</strong>
 		</p>
 		<p>
-			{{ trans('emails.register-txt-2', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}">{{ __('emails.register-dashboard') }}</a> {{ trans('emails.register-txt-3', [], $locale) }}
+			{{ trans('emails.register-txt-2', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}" style="color: #27955B;">{{ __('emails.register-dashboard') }}</a> {{ trans('emails.register-txt-3', [], $locale) }}
 		</p>
 		<p>
-			{{ trans('emails.register-txt-4', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.register-txt-5', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">{{ trans('emails.register-contact', [], $locale) }}</a>.
+			{{ trans('emails.register-txt-4', [], $locale) }} <a href="mailto:info@benucouture.lu" style="color: #27955B;">info@benucouture.lu</a> {{ trans('emails.register-txt-5', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.register-contact', [], $locale) }}</a>.
 		</p>
 		<p>
 			{{ trans('emails.register-txt-6', [], $locale) }}

@@ -14,7 +14,7 @@
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
-		<img src="{{ $message->embed(asset('images/pictures/logo_benu_couture.png')) }}" style="height: 180px; margin: auto;" />
+		<img src="{{ $message->embed(asset('images/pictures/logo_benu_green.png')) }}" style="height: 180px; margin: auto;" />
 	</div>
 	<div>
 		<p>
@@ -90,7 +90,7 @@
 		@endif
 		
 		<p>
-			{{ trans('emails.new-order-txt-5', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.new-order-txt-6', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.new-order-txt-7', [], $locale) }}</a> {{ trans('emails.new-order-txt-8', [], $locale) }}
+			{{ trans('emails.new-order-txt-5', [], $locale) }} <a href="mailto:info@benucouture.lu" style="color: #27955B;">info@benucouture.lu</a> {{ trans('emails.new-order-txt-6', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.new-order-txt-7', [], $locale) }}</a> {{ trans('emails.new-order-txt-8', [], $locale) }}
 		</p>
 
 		<p>

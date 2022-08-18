@@ -14,7 +14,7 @@
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
-		<img src="{{ $message->embed(asset('images/pictures/logo_benu_couture.png')) }}" style="height: 180px; margin: auto;" />
+		<img src="{{ $message->embed(asset('images/pictures/logo_benu_green.png')) }}" style="height: 180px; margin: auto;" />
 	</div>
 	<div>
 		<p>
@@ -29,11 +29,11 @@
 		
 		@if($buyer->role == 'guest_client')
 			<p>
-				{{ trans('emails.pdf-voucher-no-account-1', [], $locale) }} <a href="{{ route('register-'.$locale) }}">{{ trans('emails.pdf-voucher-no-account-link', [], $locale) }}</a> {{ trans('emails.pdf-voucher-no-account-2', [], $locale) }}
+				{{ trans('emails.pdf-voucher-no-account-1', [], $locale) }} <a href="{{ route('register-'.$locale) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-no-account-link', [], $locale) }}</a> {{ trans('emails.pdf-voucher-no-account-2', [], $locale) }}
 			</p>
 		@else
 			<p>
-				{{ trans('emails.pdf-voucher-with-account-1', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}">{{ trans('emails.pdf-voucher-with-account-link', [], $locale) }}</a> {{ trans('emails.pdf-voucher-with-account-2', [], $locale) }}
+				{{ trans('emails.pdf-voucher-with-account-1', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-with-account-link', [], $locale) }}</a> {{ trans('emails.pdf-voucher-with-account-2', [], $locale) }}
 			</p>
 		@endif
 
@@ -42,7 +42,7 @@
 		</p>
 
 		<p>
-			{{ trans('emails.pdf-voucher-txt-7', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.pdf-voucher-txt-8', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-txt-9', [], $locale) }}</a> {{ trans('emails.pdf-voucher-txt-10', [], $locale) }}
+			{{ trans('emails.pdf-voucher-txt-7', [], $locale) }} <a href="mailto:info@benucouture.lu" style="color: #27955B;">info@benucouture.lu</a> {{ trans('emails.pdf-voucher-txt-8', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.pdf-voucher-txt-9', [], $locale) }}</a> {{ trans('emails.pdf-voucher-txt-10', [], $locale) }}
 		</p>
 
 		<p>

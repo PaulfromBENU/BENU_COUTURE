@@ -29,7 +29,18 @@ trait PDFGenerator {
             $countries['Luxembourg'] = 'Luxembourg';
             $countries['France'] = 'France';
             $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
+
+            if (auth()->check()) {
+                $current_locale = app()->getLocale();
+                app()->setLocale(auth()->user()->favorite_language);
+            }
+
             $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+
+            if (auth()->check()) {
+                app()->setLocale($current_locale);
+            }
+
             return $pdf;
         }
     }
@@ -38,7 +49,17 @@ trait PDFGenerator {
     {
         if (strlen($voucher_code) == 12 && Voucher::where('unique_code', $voucher_code)->count() > 0) {
             $voucher = Voucher::where('unique_code', $voucher_code)->first();
+
+            if (auth()->check()) {
+                $current_locale = app()->getLocale();
+                app()->setLocale(auth()->user()->favorite_language);
+            }
+
             $pdf = PDF::loadView('pdfs.voucher', compact('voucher'));
+
+            if (auth()->check()) {
+                app()->setLocale($current_locale);
+            }
 
             return $pdf;
         }
@@ -49,13 +70,34 @@ trait PDFGenerator {
         if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
             $order = Order::where('unique_id', $order_code)->first();
 
+            if (auth()->check()) {
+                $current_locale = app()->getLocale();
+                app()->setLocale(auth()->user()->favorite_language);
+            }
+
             $pdf = PDF::loadView('pdfs.return', compact('order'));
             $pdf->setPaper('A4', 'landscape');
+
+            if (auth()->check()) {
+                app()->setLocale($current_locale);
+            }
+
             return $pdf;
         } elseif ($order_code == '0') {
             $order = null;
+
+            if (auth()->check()) {
+                $current_locale = app()->getLocale();
+                app()->setLocale(auth()->user()->favorite_language);
+            }
+            
             $pdf = PDF::loadView('pdfs.return', compact('order'));
             $pdf->setPaper('A4', 'landscape');
+
+            if (auth()->check()) {
+                app()->setLocale($current_locale);
+            }
+
             return $pdf;
         }
     }
