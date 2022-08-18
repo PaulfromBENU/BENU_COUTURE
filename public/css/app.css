@@ -13002,6 +13002,7 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
+  background-size: cover;
   z-index: 1;
   border: solid white 60px;
 }
@@ -13240,6 +13241,7 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
+  background-size: cover;
   border: solid #FFFFFF 60px;
   z-index: -2;
 }
@@ -13353,7 +13355,7 @@ input[type=checkbox]:focus {
   min-height: fit-content;
   margin-bottom: 200px;
   position: relative;
-  margin-top: -200px;
+  margin-top: 10px;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .single-campaign__section-2__picture {
@@ -13394,6 +13396,7 @@ input[type=checkbox]:focus {
   background: url("/images/pictures/campaigns/DSC09261006.png");
   background-position: bottom;
   background-attachment: fixed;
+  background-size: cover;
   border: solid #FFFFFF 60px;
   z-index: 1;
 }

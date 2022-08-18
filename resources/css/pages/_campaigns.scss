@@ -57,6 +57,7 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
+		background-size: cover;
 		z-index: 1;
 		border: solid white 60px;
 		@include mobile {
@@ -261,6 +262,7 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
+		background-size: cover;
 		border: solid $white 60px;
 		z-index: -2;
 		@include mobile {
@@ -353,7 +355,7 @@
 			min-height: fit-content;
 			margin-bottom: 200px;
 			position: relative;
-			margin-top: -200px;
+			margin-top: 10px;
 			@include tablet {
 				width: 60%;
 				margin: auto;
@@ -388,6 +390,7 @@
 		background: url('/images/pictures/campaigns/DSC09261006.png');
 		background-position: bottom;
 		background-attachment: fixed;
+		background-size: cover;
 		border: solid $white 60px;
 		z-index: 1;
 		@include mobile {

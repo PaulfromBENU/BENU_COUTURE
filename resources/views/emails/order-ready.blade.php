@@ -56,10 +56,10 @@
 			{{ trans('emails.order-ready-follow-up-number', [], $locale) }} {{ $order->delivery_link }}
 		</p>
 		@endif
-
+<!-- 
 		<p>
 			{{ trans('emails.order-ready-txt-2', [], $locale) }}
-		</p>
+		</p> -->
 
 		<p>
 			{{ trans('emails.order-ready-contact-1', [], $locale) }} <a href="mailto:info@benucouture.lu">info@benucouture.lu</a> {{ trans('emails.order-ready-contact-2', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.order-ready-contact-3', [], $locale) }}</a> {{ trans('emails.order-ready-contact-4', [], $locale) }}
