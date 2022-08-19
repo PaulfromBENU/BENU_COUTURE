@@ -3,7 +3,7 @@
 	<div>
 		<h3>{!! __('dashboard.general-conditions-updated-on') !!}: <span class="primary-color">{{ $general_conditions_date }}</span></h3>
 		<p class="mt-3 mb-3">
-			<a href="{{ route('footer.legal-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('dashboard.new-conditions-link') }}</a>
+			<a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('dashboard.new-conditions-link') }}</a>
 		</p>
 		<!-- <p>
 			{{ $general_conditions_content }}

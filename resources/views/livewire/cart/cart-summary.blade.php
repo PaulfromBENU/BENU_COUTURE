@@ -120,7 +120,7 @@
     @if(auth()->check() && !auth()->user()->last_conditions_agreed)
         <div class="flex cart-summary__validate-conditions">
             <input type="checkbox" name="validate_conditions" id="validate-conditions" wire:model="conditions_validated" wire:click="acceptConditions">
-            <label for="validate-conditions">{{ __('cart.validate-conditions') }} <a href="{{ route('footer.legal-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('cart.validate-conditions-link') }}</a></label>
+            <label for="validate-conditions">{{ __('cart.validate-conditions') }} <a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('cart.validate-conditions-link') }}</a></label>
         </div>
     @endif
 
