@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div class="footer__copyright">
-			&copy; 2022&nbsp;- Kamoo Studio&nbsp;- BENU Village Esch Asbl
+			&copy; 2022&nbsp;- Kamoo Studio&nbsp;- BENU Village Esch asbl
 		</div>
 	</div>
 	<div class="footer__logo-container">
