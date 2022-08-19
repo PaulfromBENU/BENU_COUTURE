@@ -7,8 +7,8 @@ $(function() {
     }
 
     $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
         if ($('.header__logo').length > 0) {
-            var scrollTop = $(window).scrollTop();
             if ( scrollTop > 40 ) { 
                 $('.header__logo').hide();
                 $('.header__logo--scroll').show();
@@ -18,7 +18,7 @@ $(function() {
             } else {
                 $('.header__logo--scroll').hide();
                 $('.header-group').css('max-height', '150px');
-                if ($(window).width() > 1024) {
+                if ($(window).width() > 1081) {
                     $('.header__logo--desktop').show();
                     $('.header__top-menu').show();
                 } else {

@@ -4,9 +4,9 @@
             {{ __('welcome.mobile-menu-btn-menu') }}
             <!-- Menu -->
         </div>
-        <div id="mobile-creations-menu-toggle" class="side-mobile__toggler side-mobile__toggler--creation flex justify-start">
+        <div id="mobile-creations-menu-toggle" class="side-mobile__toggler side-mobile__toggler--creation flex justify-center">
             @svg('benu-icon-squares-categories', 'side-mobile__toggler__svg')
-            <p class="uppercase" style="width: calc(100% - 38px);">
+            <p class="uppercase">
                 {{ __('welcome.mobile-menu-btn-creations') }}
                 <!-- Creations -->
             </p>
@@ -44,11 +44,11 @@
                 {!! __('welcome.side-menu-client-history') !!}
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="{{ route('partners-'.app()->getLocale()) }}" class="side-mobile-link">
                 {!! __('welcome.side-menu-client-partners') !!}
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="{{ route('header.participate-'.app()->getLocale()) }}" class="side-mobile-link">
                 {!! __('welcome.side-menu-client-participate') !!}

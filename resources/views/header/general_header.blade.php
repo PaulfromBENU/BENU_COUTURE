@@ -30,14 +30,14 @@
                             <a href="{{ route('full-story-'.app()->getLocale()) }}">{{ __('header.story') }}</a>
                         </li>
                         <li>|</li>
-                        <li>
+                        <!-- <li>
                             @if(Route::has('partners-'.app()->getLocale()))
                             <a href="{{ route('partners-'.app()->getLocale()) }}">{{ __('header.partners') }}</a>
                             @else
                             <a href="{{ route('partners', ['locale' => app()->getLocale()]) }}">{{ __('header.partners') }}</a>
                             @endif
                         </li>
-                        <li>|</li>
+                        <li>|</li> -->
                         <li>
                             <a href="{{ route('header.participate-'.app()->getLocale()) }}">{{ __('header.participate') }}</a>
                         </li>
@@ -122,11 +122,7 @@
                             </a>
                         </li>
                     @else
-                        <li class="tablet-hidden">
-                            <a href="{{ route('dashboard', ['section' => 'overview']) }}" class="header__main-menu__icons__btn" id="dashboard-btn">
-                                @svg('benu-icon-silhouette-disconnect')
-                            </a>
-                        </li>
+                        @livewire('components.dashboard-icon')
                     @endguest
                     <li class="tablet-hidden">
                         @if(Route::has('client-service-'.app()->getLocale()))

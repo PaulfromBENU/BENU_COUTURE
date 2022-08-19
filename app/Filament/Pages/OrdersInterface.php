@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\File;
 
 use App\Traits\PDFGenerator;
 
+use App\Jobs\SendOrderReadyConfirmationEmail;
+
 class OrdersInterface extends Page
 {
     use PDFGenerator;
@@ -39,6 +41,8 @@ class OrdersInterface extends Page
     public $new_orders;
     public $orders_waiting_for_payment;
     public $orders_sent;
+    public $orders_ready_for_collect;
+    public $orders_collected;
 
     public $delivery_link;
 
@@ -62,15 +66,15 @@ class OrdersInterface extends Page
                             ->get();
 
         // Automatically clear unpaid orders after 8 days
-        $unpaid_orders_to_be_deleted = Order::where('status', '2')
-                                            ->where('payment_status', '<', '2')
-                                            ->where('delivery_status', '<', '2')
-                                            ->where('created_at', '<', Carbon::now()->subDays(9))
-                                            ->select('id')
-                                            ->get();
-        foreach ($unpaid_orders_to_be_deleted as $unpaid_order_to_be_deleted) {
-            $this->cancelCart($unpaid_order_to_be_deleted->id);
-        }
+        // $unpaid_orders_to_be_deleted = Order::where('status', '2')
+        //                                     ->where('payment_status', '<', '2')
+        //                                     ->where('delivery_status', '<', '2')
+        //                                     ->where('updated_at', '<', Carbon::now()->subDays(9))
+        //                                     ->select('id')
+        //                                     ->get();
+        // foreach ($unpaid_orders_to_be_deleted as $unpaid_order_to_be_deleted) {
+        //     $this->cancelCart($unpaid_order_to_be_deleted->id);
+        // }
 
         // Display other unpaid orders, with warning and manual delete option if > 5 days
         $this->orders_waiting_for_payment = Order::where('status', '2')
@@ -78,29 +82,44 @@ class OrdersInterface extends Page
                                             ->where('delivery_status', '<', '2')
                                             ->orderBy('updated_at', 'desc')
                                             ->get();
-        $this->orders_sent = Order::where('delivery_status', '>=', '2')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_sent = Order::where('delivery_status', '2')->orWhere('delivery_status', '4')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_ready_for_collect = Order::where('delivery_status', '3')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_collected = Order::where('delivery_status', '5')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
     }
 
     public function cleanUnsoldArticles()
     {
+        // Automatically delete unfinished orders and carts older than 9 days, and restore items
+        $unfinished_carts_to_be_deleted = Cart::where('status', '<', '3')
+                                            ->where('is_active', '1')
+                                            ->where('updated_at', '<', Carbon::now()->subDays(9))
+                                            ->select('id')
+                                            ->get();
+        foreach ($unfinished_carts_to_be_deleted as $unfinished_cart_to_be_deleted) {
+            $this->deleteUnfinishedCart($unfinished_cart_to_be_deleted->id);
+        }
+
+        // Restore articles which are in pending state while cart is no longer used (no deletion)
         foreach (Article::has('pending_shops')->get() as $article) {
             $reinsert_article = 1;
             foreach ($article->carts as $cart) {
-                // Keep in cart if at least one cart with this article has been updated in the last 24h
-                if ($cart->order !== null && ($cart->updated_at >= Carbon::now()->subDays(1) || $cart->order->status >= 2)) {
+                // Keep in cart if at least one cart with this article has been updated in the last 24h, or cart has been ordered and confirmed
+                // if ($cart->order !== null && ($cart->updated_at >= Carbon::now()->subDays(1) || $cart->order->status >= 2)) {
+                if ($cart->updated_at >= Carbon::now()->subDays(1) || ($cart->order !== null && $cart->order->status >= 2)) {
                     $reinsert_article = 0;
                 }
             }
+
             if ($reinsert_article == 1) {
                 $pivot = $article->pending_shops()->first()->pivot;
                 $pivot->decrement('stock_in_cart');
                 $pivot->increment('stock');
-                foreach ($article->carts as $cart) {
-                    // Delete cart if no order and older than 1 day with status unpaid
-                    if ($cart->updated_at < Carbon::now()->subDays(1) && $cart->order()->count() == 0 && $cart->is_active == 1 && $cart->status < 3) {
-                        $cart->delete();
-                    }
-                }
+                // foreach ($article->carts as $cart) {
+                //     // Delete cart if no order and older than 1 day with status unpaid
+                //     if ($cart->updated_at < Carbon::now()->subDays(1) && $cart->order()->count() == 0 && $cart->is_active == 1 && $cart->status < 3) {
+                //         $cart->delete();
+                //     }
+                // }
             }
         }
     }
@@ -110,12 +129,13 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 3;// Sent or available for collect
         $order->payment_status = 2;// Payment received
-        $order->delivery_status = 4;// Available for collect
+        $order->delivery_status = 4;// Delivery not required
         if($order->save()) {
             foreach ($order->pdf_vouchers as $voucher) {
                 $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
-                Mail::to($order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
+                Mail::to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
             }
+            $this->initializeOrders();
         }
     }
 
@@ -124,7 +144,18 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 3;// Sent or available for collect
         $order->payment_status = 2;// Payment received
-        $order->delivery_status = 4;// Available for collect
+        $order->delivery_status = 3;// Available for collect
+        $order->delivery_date = Carbon::now()->format('Y-m-d');
+        if($order->save()) {
+            $this->initializeOrders();
+            SendOrderReadyConfirmationEmail::dispatchAfterResponse($order);
+        }
+    }
+
+    public function markAsCollected($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->delivery_status = 5;// Collected
         $order->delivery_date = Carbon::now()->format('Y-m-d');
         if($order->save()) {
             $this->initializeOrders();
@@ -136,13 +167,14 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 3;// Sent or available for collect
         $order->payment_status = 2;// Payment received
-        $order->delivery_status = 3;// Available for collect
+        $order->delivery_status = 2;// Sent by Post
         $order->delivery_date = Carbon::now()->format('Y-m-d');
         if (isset($this->delivery_link[$order_id]) && $this->delivery_link[$order_id] !== "") {
             $order->delivery_link = $this->delivery_link[$order_id];
         }
         if($order->save()) {
             $this->initializeOrders();
+            SendOrderReadyConfirmationEmail::dispatchAfterResponse($order);
         }
     }
 
@@ -184,6 +216,22 @@ class OrdersInterface extends Page
         }
     }
 
+    public function deleteUnfinishedCart($cart_id)
+    {
+        $cart = Cart::find($cart_id);
+        foreach ($cart->couture_variations as $variation) {
+            if ($variation->pending_shops()->count() > 0) {
+                $pivot = $variation->pending_shops()->first()->pivot;
+                $pivot->decrement('stock_in_cart');
+                $pivot->increment('stock');
+            }
+        }
+        if ($cart->order !== null) {
+            $cart->order->delete();
+        }
+        $cart->delete();
+    }
+
     public function markAsPaid($order_id)
     {
         $order = Order::find($order_id);
@@ -194,7 +242,7 @@ class OrdersInterface extends Page
             if ($order->pdf_vouchers->count() > 0) {
                 foreach ($order->pdf_vouchers as $voucher) {
                     $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
-                    Mail::to($order->user->email)->send(new VoucherPdf($voucher, $voucher_pdf));
+                    Mail::to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
                 }
                 if ($order->cart->couture_variations->count() == 1) {
                     $order->delivery_status = 4;

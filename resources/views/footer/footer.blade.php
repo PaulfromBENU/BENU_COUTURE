@@ -8,7 +8,7 @@
 					<li><a href="{{ route('vouchers-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-2') }}</a></li>
 					<li><a href="{{ route('dashboard', ['locale' => app()->getLocale()]) }}">{{ __('footer.footer-list-1-3') }}</a></li>
 					<li><a href="{{ route('footer.general-info-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-4') }}</a></li>
-					<li><a href="{{ route('partners-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-5') }}</a></li>
+					<!-- <li><a href="{{ route('partners-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-5') }}</a></li> -->
 					<li><a href="{{ route('header.participate-'.app()->getLocale()) }}">{{ __('footer.footer-list-1-6') }}</a></li>
 					<!-- <li><a href="#">{{ __('footer.footer-list-1-7') }}</a></li> -->
 				</ul>
@@ -17,11 +17,11 @@
 				<h4>{{ __('footer.footer-title-2') }}</h4>
 				<ul>
 					<li><a href="{{ route('news-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-1') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-list-2-2') }}</a></li>
+					<li><a href="{{ route('campaigns-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-2') }}</a></li>
 					<li><a href="{{ route('full-story-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-3') }}</a></li>
 					<li><a href="{{ route('about-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-4') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-list-2-5') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-list-2-6') }}</a></li>
+					<li><a href="{{ route('footer.medias-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-5') }}</a></li>
+					<li><a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-6') }}</a></li>
 					<li><a href="{{ route('footer.policy-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-7') }}</a></li>
 					<li><a href="{{ route('footer.legal-'.app()->getLocale()) }}">{{ __('footer.footer-list-2-8') }}</a></li>
 				</ul>
@@ -36,7 +36,7 @@
 					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-payment')]) }}">{{ __('footer.footer-service-5') }}</a></li>
 					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-care')]) }}">{{ __('footer.footer-service-6') }}</a></li>
 					<li><a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}">{{ __('footer.footer-service-7') }}</a></li>
-					<li><a href="#">{{ __('footer.footer-sitemap') }}</a></li>
+					<li><a href="{{ route('footer.sitemap-'.app()->getLocale()) }}">{{ __('footer.footer-sitemap') }}</a></li>
 				</ul>
 			</div>
 			<div class="footer__lists__col">
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div class="footer__copyright">
-			&copy; 2022&nbsp;- Kamoo Studio&nbsp;- BENU Village Esch Asbl
+			&copy; 2022&nbsp;- Kamoo Studio&nbsp;- BENU Village Esch asbl
 		</div>
 	</div>
 	<div class="footer__logo-container">

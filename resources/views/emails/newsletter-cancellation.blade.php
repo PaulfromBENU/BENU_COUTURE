@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-    <title>Newsletter BENU - confirmation d'annulation</title>
+    <title>{{ trans('emails.newsletter-cancellation-title', [], $locale) }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
     <div style="width: 100%; margin-bottom: 50px; text-align: center;">
@@ -18,23 +18,20 @@
     </div>
     <div>
         <p>
-            <strong>{{ __('emails.newsletter-cancellation-hello') }} {{ ucfirst($user->first_name) }},</strong>
+            <strong>{{ trans('emails.newsletter-cancellation-hello', [], $locale) }} {{ ucfirst($user->first_name) }},</strong>
         </p>
         <p>
-            {{ __('emails.newsletter-cancellation-txt-1') }}
+            {{ trans('emails.newsletter-cancellation-txt-1', [], $locale) }}
         </p>
         <p>
-            {{ __('emails.newsletter-cancellation-info-1') }}
+            {{ trans('emails.newsletter-cancellation-info-1', [], $locale) }}
         </p>
 
         <p>
-            {{ __('emails.newsletter-cancellation-conclusion') }}
+            {{ trans('emails.newsletter-cancellation-regards', [], $locale) }}
         </p>
         <p>
-            {{ __('emails.newsletter-cancellation-regards') }}
-        </p>
-        <p>
-            <em><strong>{{ __('emails.newsletter-cancellation-your-team') }} BENU</strong></em>
+            <em><strong>{{ trans('emails.newsletter-cancellation-signature', [], $locale) }}</strong></em>
         </p>
     </div>
 </body>

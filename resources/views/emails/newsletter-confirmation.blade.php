@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-    <title>Newsletter BENU - confirmation d'inscription</title>
+    <title>{{ trans('emails.newsletter-confirmation-title', [], $locale) }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
     <div style="width: 100%; margin-bottom: 50px; text-align: center;">
@@ -18,29 +18,29 @@
     </div>
     <div>
         <p>
-            <strong>{{ __('emails.newsletter-confirmation-hello') }} {{ ucfirst($user->first_name) }},</strong>
+            <strong>{{ trans('emails.newsletter-confirmation-hello', [], $locale) }} {{ ucfirst($user->first_name) }},</strong>
         </p>
         <p>
-            {{ __('emails.newsletter-confirmation-txt-1') }} : {{ strtoupper($user->favorite_language) }}. {{ __('emails.newsletter-confirmation-txt-2') }}
+            {{ trans('emails.newsletter-confirmation-txt-1', [], $locale) }}
         </p>
         <p>
-            {{ __('emails.newsletter-confirmation-info-1') }}
+            {{ trans('emails.newsletter-confirmation-txt-2', [], $locale) }} <a href="mailto:benu@benuvillageesch.lu" style="color: #27955B;">{{ trans('emails.newsletter-confirmation-txt-3', [], $locale) }}</a> {{ trans('emails.newsletter-confirmation-txt-4', [], $locale) }}
         </p>
         <p>
-            {{ __('emails.newsletter-confirmation-cancellation') }}
+            {{ trans('emails.newsletter-confirmation-txt-5', [], $locale) }}
         </p>
         <p>
-            Si tu souhaites te désinscrire, tu peux cliquer <a href="{{ route('newsletter-stop-'.$locale, ['id' => rand(10, 99).rand(10, 99).rand(10, 99).$user->id]) }}" style="color: #27955B">ici</a>.
+            {{ trans('emails.newsletter-confirmation-txt-6', [], $locale) }} <a href="mailto:benu@benuvillageesch.lu" style="color: #27955B;">benu@benuvillageesch.lu</a> {{ trans('emails.newsletter-confirmation-txt-8', [], $locale) }} <a href="{{ route('newsletter-stop-'.$locale, ['id' => rand(10, 99).rand(10, 99).rand(10, 99).$user->id]) }}" style="color: #27955B">{{ trans('emails.newsletter-confirmation-txt-9', [], $locale) }}</a>.
         </p>
 
         <p>
-            {{ __('emails.newsletter-confirmation-conclusion') }}
+            {{ trans('emails.newsletter-confirmation-txt-10', [], $locale) }}
         </p>
         <p>
-            {{ __('emails.newsletter-confirmation-regards') }}
+            {{ trans('emails.newsletter-confirmation-txt-11', [], $locale) }}
         </p>
         <p>
-            <em><strong>{{ __('emails.newsletter-confirmation-your-team') }} BENU</strong></em>
+            <em><strong>{{ trans('emails.newsletter-confirmation-signature', [], $locale) }}</strong></em>
         </p>
     </div>
 </body>

@@ -58,6 +58,10 @@
 			font-family: 'Barlow Condensed';
 			cursor: pointer;
 			transition: $transition-base;
+			@include intermediate {
+				font-size: 0.95rem;
+				padding: 7px 16px 7px 16px;
+			}
 			svg {
 				height: 26px;
 				margin-left: 15px;
@@ -246,6 +250,13 @@
 					font-size: 0.85rem;
 					text-align: center;
 					font-weight: 500;
+					@include intermediate {
+						width: 18px;
+						height: 18px;
+						bottom: -10px;
+						right: -4px;
+						font-size: 0.75rem;
+					}
 					@include tablet {
 						bottom: 24px;
 						right: calc(50% - 25px);

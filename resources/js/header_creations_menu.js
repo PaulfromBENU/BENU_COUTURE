@@ -50,6 +50,7 @@ function resetMobileMenu()
 $(function() {
     let creationsBarStatus = 'off';
     let fullMenuStatus = 'off';
+    let keepBtnColor = 'off';
     // let lastMenu = '';
     $('#creations-nav-toggle').on('click', function() {
 
@@ -64,6 +65,8 @@ $(function() {
             $('.creations-navbar').fadeOut();
             creationsBarStatus = 'off';
         }
+
+        keepBtnColor = 'on';
     })
 
     $('#creations-nav-toggle').on('mouseenter', function() {
@@ -71,9 +74,9 @@ $(function() {
     });
 
     $('#creations-nav-toggle').on('mouseleave', function() {
-        // if (creationsBarStatus == 'off') {
+        if (keepBtnColor == 'off') {
             $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
-        // }
+        }
     });
 
     $(window).on('scroll', function() {
@@ -87,6 +90,7 @@ $(function() {
             });
             creationsBarStatus = 'off';
             fullMenuStatus = 'off';
+            keepBtnColor = 'off';
         }
     });
 
@@ -173,12 +177,14 @@ $(function() {
         if (creationsBarStatus == 'on') {
             $('#creations-nav-toggle').removeClass('header__main-nav__btn--active');
             $('.creations-navbar__menu').css('max-height', '0px');
+            $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
             $('.creations-navbar').fadeOut(400, function() {
                 $('#creations-nav-toggle path').removeClass('svg-primary-white--active');
                 $('.creations-navbar__nav__toggle').removeClass('creations-navbar__nav__toggle--active');
             });
             creationsBarStatus = 'off';
             fullMenuStatus = 'off';
+            keepBtnColor = 'off';
         }
     });
 

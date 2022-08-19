@@ -40,7 +40,7 @@
 		<!-- Case mask for adults -->
 			<div class="flex flex-col lg:flex-row justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
-				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto">
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
 					{{ strtoupper(__('models.masks-adult')) }}
 				</div>
 			</div>
@@ -48,7 +48,7 @@
 		<!-- Case small item -->
 			<div class="flex flex-col lg:flex-row justify-start">
 				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
-				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto">
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
 					{{ strtoupper(__('models.is-small-item')) }}
 				</div>
 			</div>

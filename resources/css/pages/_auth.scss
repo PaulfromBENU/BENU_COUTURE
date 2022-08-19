@@ -192,5 +192,9 @@
 	&__forgotten-form {
 		width: 30%;
 		min-width: 450px;
+		@include mobile {
+			width: 100%;
+			min-width: 200px;
+		}
 	}
 }

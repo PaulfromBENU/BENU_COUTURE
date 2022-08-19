@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\NewPasswordLink;
+
 class PasswordResetLinkController extends Controller
 {
     /**
@@ -38,6 +42,8 @@ class PasswordResetLinkController extends Controller
         $status = Password::sendResetLink(
             $request->only('email')
         );
+
+        // $status = Mail::mailer('smtp')->to($request->email)->send(new NewPasswordLink);
 
         return $status == Password::RESET_LINK_SENT
                     ? back()->with('status', __($status))

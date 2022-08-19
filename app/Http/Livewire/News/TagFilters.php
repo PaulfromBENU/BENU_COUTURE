@@ -20,18 +20,29 @@ class TagFilters extends Component
 
         $this->localized_tag_1 = 'tag_1_'.session('locale');
         $this->localized_tag_2 = 'tag_2_'.session('locale');
+        $this->localized_tag_3 = 'tag_3_'.session('locale');
 
         $localized_tag_1 = $this->localized_tag_1;
         $localized_tag_2 = $this->localized_tag_2;
+        $localized_tag_3 = $this->localized_tag_3;
 
         $this->all_tags = [];
 
         foreach ($all_news as $news) {
             if (!in_array($news->$localized_tag_1, $this->all_tags)) {
-                array_push($this->all_tags, $news->$localized_tag_1);
+                if ($news->$localized_tag_1 !== "") {
+                    array_push($this->all_tags, $news->$localized_tag_1);
+                }
             }
             if (!in_array($news->$localized_tag_2, $this->all_tags)) {
-                array_push($this->all_tags, $news->$localized_tag_2);
+                if ($news->$localized_tag_2 !== "") {
+                    array_push($this->all_tags, $news->$localized_tag_2);
+                }
+            }
+            if (!in_array($news->$localized_tag_3, $this->all_tags)) {
+                if ($news->$localized_tag_3 !== "") {
+                    array_push($this->all_tags, $news->$localized_tag_3);
+                }
             }
         }
 

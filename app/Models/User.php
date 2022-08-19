@@ -13,9 +13,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasName;
 
+use App\Notifications\BenuResetPasswordNotification;
+
 use App\Models\ContactMessage;
 
 use Laravel\Cashier\Billable;
+
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\NewPasswordLink;
 
 class User extends Authenticatable implements HasName, FilamentUser
 {
@@ -126,5 +132,28 @@ class User extends Authenticatable implements HasName, FilamentUser
     public function badges() 
     {
         return $this->belongsToMany(Badge::class)->withTimestamps();
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        // For customized password reset e-mail, bypass framework process
+        $email = $this->getEmailForPasswordReset();
+        $route = url(route('password.reset-'.session('locale'), [
+            'locale' => session('locale'),
+            'token' => $token,
+            'email' => $email,
+        ], false));
+
+        Mail::mailer('smtp')->to($email)->send(new NewPasswordLink($route));
+
+        return true;
+
+        // $this->notify(new BenuResetPasswordNotification($token));
     }
 }

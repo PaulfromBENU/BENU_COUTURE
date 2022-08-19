@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(config('mail.mailers.smtp_admin.admin_receiver'), config('mail.mailers.smtp_admin.sender'), config('mail.mailers.smtp_admin.username'), config('mail.mailers.smtp_admin.password'));
         app()->setLocale(session('locale'));
 
         $user_exists = 0;
@@ -87,7 +88,7 @@ class RegisteredUserController extends Controller
                 'email' => ['required', 'string', 'email', 'max:255', $email_rule],
                 'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
                 'register_company' => ['nullable', 'string', 'max:255'],
-                'register_phone' => ['required', 'string', 'max:30'],
+                'register_phone' => ['required', 'string', 'min:6', 'max:30', 'regex:/^([0-9\s\-\+\(\)]*)$/'],
                 'register_gender' => ['nullable', 'string', 'max:7', Rule::in(['male', 'female', 'neutral'])],
                 'register_first_name' => ['required', 'string', 'max:255'],
                 'register_last_name' => ['required', 'string', 'max:255'],
@@ -102,7 +103,7 @@ class RegisteredUserController extends Controller
                 'register_address_floor' => ['nullable', 'string', 'max:255'],
                 'register_address_city' => ['required', 'string', 'max:150'],
                 'register_address_zip' => ['required', 'string', 'max:10'],
-                'register_address_phone' => ['required', 'string', 'max:30'],
+                'register_address_phone' => ['required', 'string', 'min:6', 'max:30', 'regex:/^([0-9\s\-\+\(\)]*)$/'],
                 'register_address_country' => ['required', 'string', 'max:50'],
                 'register_address_other' => ['nullable', 'string', 'max:255'],
                 'register_kulturpass' => ['nullable', 'mimes:pdf,jpg,jpeg,png,bmp,doc,docx', 'max:6144'],
@@ -130,7 +131,7 @@ class RegisteredUserController extends Controller
                 'email' => ['required', 'string', 'email', 'max:255', $email_rule],
                 'register_password' => ['required', 'confirmed', Rules\Password::defaults()],
                 'register_company' => ['nullable', 'string', 'max:255'],
-                'register_phone' => ['required', 'string', 'max:30'],
+                'register_phone' => ['required', 'string', 'min:6', 'max:30', 'regex:/^([0-9\s\-\+\(\)]*)$/'],
                 'register_gender' => ['nullable', 'string', 'max:7', Rule::in(['male', 'female', 'neutral'])],
                 'register_first_name' => ['required', 'string', 'max:255'],
                 'register_last_name' => ['required', 'string', 'max:255'],
@@ -145,7 +146,7 @@ class RegisteredUserController extends Controller
                 'register_address_floor' => ['nullable', 'string', 'max:255'],
                 'register_address_city' => ['nullable', 'string', 'max:150'],
                 'register_address_zip' => ['nullable', 'string', 'max:10'],
-                'register_address_phone' => ['nullable', 'string', 'max:30'],
+                'register_address_phone' => ['nullable', 'string', 'min:6', 'max:30', 'regex:/^([0-9\s\-\+\(\)]*)$/'],
                 'register_address_country' => ['nullable', 'string', 'max:50'],
                 'register_address_other' => ['nullable', 'string', 'max:255'],
                 'register_kulturpass' => ['nullable', 'mimes:pdf,jpg,jpeg,png,bmp,doc,docx', 'max:6144'],
@@ -217,7 +218,7 @@ class RegisteredUserController extends Controller
 
         if ($user->newsletter) {
             // Mail::to($user->email)->send(new NewsletterConfirmation());
-            Mail::to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
+            Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
         }
 
         event(new Registered($user));

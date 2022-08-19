@@ -8,13 +8,13 @@
 					<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" class="m-auto">
 				</div>
 				<div class="flex justify-center flex-wrap welcome-campaign__left__links">
-					<a href="#" class="block btn-couture">{{ __('welcome.campaign-link-1') }}</a>
-					<a href="#" class="block btn-couture">{{ __('welcome.campaign-link-2') }}</a>
+					<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" class="block btn-couture">{{ __('welcome.campaign-link-1') }}</a>
+					<!-- <a href="#" class="block btn-couture">{{ __('welcome.campaign-link-2') }}</a> -->
 				</div>
 			</div>
 		</div>
 		<div class="welcome-campaign__right">
-			<img src="{{ asset('images/pictures/campaigns/DSC09291007-1.jpg') }}" class="m-auto">
+			<img src="{{ asset('images/pictures/campaigns/couture_campaign_02.jpeg') }}" class="m-auto">
 		</div>
 	</div>
 </section>

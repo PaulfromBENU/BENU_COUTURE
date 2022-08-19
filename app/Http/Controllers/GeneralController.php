@@ -12,6 +12,7 @@ use App\Models\CreationCategory;
 use App\Models\NewsArticle;
 use App\Models\Partner;
 use App\Models\User;
+use App\Models\Media;
 use App\Mail\NewsletterConfirmation;
 use App\Mail\NewsletterConfirmationForAdmin;
 use App\Mail\NewsletterCancelConfirmationForAdmin;
@@ -61,7 +62,7 @@ class GeneralController extends Controller
 
     public function showFullStory()
     {
-        return view('full-story');
+        return view('header.pages.full-story');
     }
 
     public function showAbout()
@@ -71,6 +72,7 @@ class GeneralController extends Controller
 
     public function showPartners()
     {
+        return redirect()->route('home', ['locale' => app()->getLocale()]);
         $partners = Partner::orderBy('created_at', 'desc')->get();
         $localized_desc_query = "description_".app()->getLocale();
         return view('partners', ['partners' => $partners, 'desc_query' => $localized_desc_query]);
@@ -259,6 +261,59 @@ class GeneralController extends Controller
         return view('footer.pages.general-info');
     }
 
+
+    public function showMedias()
+    {
+        $articles = Media::where('family', 'article')->orderBy('publication_date', 'desc')->get();
+        $podcasts = Media::where('family', 'radio')->orderBy('publication_date', 'desc')->get();
+        $videos = Media::where('family', 'video')->orderBy('publication_date', 'desc')->get();
+        $web_publications = Media::where('family', 'web')->orderBy('publication_date', 'desc')->get();
+
+        return view('footer.pages.medias', [
+            'articles' => $articles,
+            'podcasts' => $podcasts,
+            'videos' => $videos,
+            'web_publications' => $web_publications,
+        ]);
+    }
+
+
+    public function showGeneralConditions()
+    {
+        return view('footer.pages.general-conditions');
+    }
+
+
+    public function showAllCampaigns()
+    {
+        return view('campaigns');
+    }
+
+    public function showSingleCampaign(string $slug)
+    {
+        $campaign_slugs = [
+            'carte-blanche',
+        ];
+
+        if (in_array($slug, $campaign_slugs)) {
+            return view('campaigns.campaign-white-card');
+        }
+    }
+
+
+    public function showSiteMap()
+    {
+        $clothes = $this->getAvailableCreations('clothes');
+        $accessories = $this->getAvailableCreations('accessories');
+        $home_items = $this->getAvailableCreations('home');
+        $news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
+        return view('footer.pages.sitemap', [
+            'clothes' => $clothes, 
+            'accessories' => $accessories, 
+            'home_items' => $home_items, 
+            'news' => $news,
+        ]);
+    }
 
 
     public function startImport()

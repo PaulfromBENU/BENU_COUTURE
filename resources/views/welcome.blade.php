@@ -1,7 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('title')
-    Bienvenue sur BENU COUTURE
+    {{ __('welcome.seo-title') }}
+@endsection
+
+@section('description')
+    {{ __('welcome.seo-description') }}
 @endsection
 
 @section('main-content')

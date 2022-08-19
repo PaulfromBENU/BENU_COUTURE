@@ -183,7 +183,7 @@
                 </div>
             </div>
             <div class="text-center landing-footer__copyright">
-                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> & Entwécklung&nbsp;: BENU Village ASBL
+                &#169; 2022 - Design&nbsp;: Kamoo Studio <br/> & Entwécklung&nbsp;: BENU Village Esch asbl
             </div>
         </footer>
     </main>

@@ -36,7 +36,7 @@
                     </li>
                     <li>
                         <a wire:click="changeSection('communications')" class="btn-slider-left dashboard__nav__link @if($section == 'communications') dashboard__nav__link--active @endif">
-                            {{ __('dashboard.nav-demands') }}
+                            {{ __('dashboard.nav-demands') }} @if($counter > 0) ({{ $counter }}) @endif
                         </a>
                     </li>
 <!--                     <li>

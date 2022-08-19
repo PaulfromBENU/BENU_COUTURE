@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-	<title>{{ __('emails.new-conditions-title') }}</title>
+	<title>{{ trans('emails.new-conditions-title', [], $locale) }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
@@ -18,13 +18,28 @@
 	</div>
 	<div>
 		<p>
-			<strong>{{ __('emails.new-conditions-hello') }} {{ ucfirst($user->first_name) }},</strong>
+			<strong>{{ trans('emails.new-conditions-hello', [], $locale) }} {{ ucfirst($user->first_name) }},</strong>
 		</p>
 		<p>
-			{{ __('emails.new-conditions-txt-1') }}
+			{{ trans('emails.new-conditions-txt-1', [], $locale) }}
 		</p>
 		<p>
-			<em><strong>{{ __('emails.new-conditions-benu-team-signature') }}</strong></em>
+			{{ trans('emails.new-conditions-txt-2', [], $locale) }}
+		</p>
+		<p>
+			{{ trans('emails.new-conditions-txt-3', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}" style="color: #27955B;">{{ trans('emails.new-conditions-txt-4', [], $locale) }}</a> {{ trans('emails.new-conditions-txt-5', [], $locale) }}
+		</p>
+		<p>
+			{{ trans('emails.new-conditions-txt-6', [], $locale) }}
+		</p>
+		<p>
+			{{ trans('emails.new-conditions-txt-7', [], $locale) }} <a href="mailto:info@benucouture.lu" style="color: #27955B;">info@benucouture.lu</a> {{ trans('emails.new-conditions-txt-8', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.new-conditions-txt-9', [], $locale) }}</a> {{ trans('emails.new-conditions-txt-10', [], $locale) }}
+		</p>
+		<p>
+			{{ trans('emails.new-conditions-txt-11', [], $locale) }}
+		</p>
+		<p>
+			<em><strong>{{ trans('emails.new-conditions-signature', [], $locale) }}</strong></em>
 		</p>
 	</div>
 </body>

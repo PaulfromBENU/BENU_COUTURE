@@ -2,6 +2,12 @@ html, body {
 	height: 100%;
 }
 
+main {
+	@include tablet {
+		overflow-x: hidden;
+	}
+}
+
 ::selection {
 	background: $primary-color-light;
 }
@@ -195,6 +201,10 @@ html, body {
 	padding-right: 5%;
 	margin: auto;
 	max-width: $max-display-width;
+	@include intermediate {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 	@include tablet {
 		padding-left: 2%;
 		padding-right: 2%;

@@ -6,9 +6,16 @@
     <ul class="faq__accordion">
         @foreach($contact_messages->groupBy('thread')->all() as $thread => $thread_messages)
         <li wire:key="{{ $thread }}">
-            <div class="faq__accordion__header flex justify-between">
+            <div class="faq__accordion__header flex justify-between" @if($thread_messages->first()->closed == '1') style="background: grey;" @endif>
                 <p class="w-5/6">
-                    {!! __('dashboard.com-message-from') !!} {{ auth()->user()->first_name }} - {!! __('dashboard.com-sent-on') !!} {{ $thread_messages->first()->created_at->format('d\/m\/Y') }}
+                    @if(in_array($thread, $unread_threads))
+                    <i class="fas fa-star pr-2"></i>
+                    @endif
+                    @if($thread_messages->sortBy('created_at')->first()->origin == 'return')
+                        {!! __('dashboard.com-return-received-on') !!} {{ $thread_messages->sortBy('created_at')->first()->created_at->format('d\/m\/Y') }}
+                    @else
+                        {!! __('dashboard.com-message-from') !!} {{ auth()->user()->first_name }} - {!! __('dashboard.com-sent-on') !!} {{ $thread_messages->first()->created_at->format('d\/m\/Y') }}
+                    @endif
                     @if($thread_messages->first()->closed == '1')
                     <em> - {!! __('dashboard.com-thread-closed') !!}</em>
                     @endif
@@ -19,7 +26,7 @@
             </div>
 
             <div class="faq__accordion__answer pb-10" @if(!isset($showForm[$thread]) || $showForm[$thread] == 0) style="display: none;" @endif>
-                @foreach($thread_messages as $message)
+                @foreach($thread_messages->sortBy('created_at') as $message)
                     <div wire:key="{{ $message->id }}">
                         <p class="faq__accordion__answer__txt">
                             <span style="color: gray; padding-right: 10px;"><em>[{{ $message->created_at->format('d\/m\/Y\,\ H\hi') }}]</em></span> <br/> {{ $message->message }}
@@ -90,21 +97,22 @@
                                 <strong>{!! __('dashboard.com-options') !!} :</strong>
                             </p>
                             <ul>
-                                @if($mask_request->creation->product_type == 2)
-                                <li><em>
-                                    @if($mask_request->with_filter == 0)
-                                        {!! __('dashboard.com-with-filter') !!}
-                                    @else
-                                        {!! __('dashboard.com-without-filter') !!}
-                                    @endif
-                                </em></li>
-                                <li><em>
-                                    @if($mask_request->with_cotton == 0)
-                                        {!! __('dashboard.com-elastic-cords') !!}
-                                    @else
-                                        {!! __('dashboard.com-cotton-cords') !!}
-                                    @endif
-                                </em></li>
+                                @if(0 == 1 && $mask_request->creation->product_type == 2)
+                                    <!-- Not required anymore -->
+                                    <li><em>
+                                        @if($mask_request->with_filter == 0)
+                                            {!! __('dashboard.com-with-filter') !!}
+                                        @else
+                                            {!! __('dashboard.com-without-filter') !!}
+                                        @endif
+                                    </em></li>
+                                    <li><em>
+                                        @if($mask_request->with_cotton == 0)
+                                            {!! __('dashboard.com-elastic-cords') !!}
+                                        @else
+                                            {!! __('dashboard.com-cotton-cords') !!}
+                                        @endif
+                                    </em></li>
                                 @endif
                                 @if($mask_request->creation->product_type == 1)
                                 <li><em>

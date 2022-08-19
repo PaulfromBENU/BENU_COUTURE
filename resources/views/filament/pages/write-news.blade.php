@@ -1,55 +1,5 @@
 <x-filament::page>
 	<div class="create-news">
-		@if($show_pending_articles)
-		<h1 wire:click="togglePendingArticles(0)">News waiting for validation <span class="text-2xl"><strong>-</strong></span></h1>
-		<div style="padding-left: 5px; margin-bottom: 40px;">
-		@else
-		<h1 wire:click="togglePendingArticles(1)" style="margin-bottom: 20px;">News waiting for validation <span class="text-2xl"><strong>+</strong></span></h1>
-		<div style="display: none;">
-		@endif
-			@if($pending_articles->count() == 0)
-				<p>No pending news for the moment...</p>
-			@endif
-			@foreach($pending_articles as $pending_article)
-			<div wire:key="pending-{{ $pending_article->id }}" class="flex create-news__pending">
-				<p>
-					{{ $pending_article->title_en }}
-				</p>
-				<p>
-					Creation date: {{ $pending_article->created_at->format('d\/m\/Y') }}
-				</p>
-				<p class="text-right">
-					<button wire:click="fillArticleData({{ $pending_article->id }})">Modify</button>
-					<button wire:click="sendOnline({{ $pending_article->id }})">Validate</button>
-				</p>
-			</div>
-			@endforeach
-		</div>
-
-		@if($show_online_articles)
-		<h1 wire:click="toggleOnlineArticles(0)">News already online <span class="text-2xl"><strong>-</strong></span></h1>
-		<div style="padding-left: 5px; margin-bottom: 40px;">
-		@else
-		<h1 wire:click="toggleOnlineArticles(1)" style="margin-bottom: 20px;">News already online <span class="text-2xl"><strong>+</strong></span></h1>
-		<div style="display: none;">
-		@endif
-			@if($online_articles->count() == 0)
-				<p>No online news for the moment...</p>
-			@endif
-			@foreach($online_articles as $online_article)
-			<div wire:key="online-{{ $online_article->id }}" class="flex create-news__pending">
-				<p>
-					{{ $online_article->title_en }}
-				</p>
-				<p>
-					Creation date: {{ $online_article->created_at->format('d\/m\/Y') }}
-				</p>
-				<p class="text-right">
-					<button wire:click="fillArticleData({{ $online_article->id }})">Modify</button>
-				</p>
-			</div>
-			@endforeach
-		</div>
 
 		@if($show_general_info)
 		<h1 wire:click="toggleGeneralInfo(0)">Create or Update News <span class="text-2xl"><strong>-</strong></span></h1>
@@ -465,5 +415,59 @@
 				</button>
 			</div>
 		</form>
+
+
+		@if($show_pending_articles)
+		<h1 wire:click="togglePendingArticles(0)">News waiting for validation <span class="text-2xl"><strong>-</strong></span></h1>
+		<div style="padding-left: 5px; margin-bottom: 40px;">
+		@else
+		<h1 wire:click="togglePendingArticles(1)" style="margin-bottom: 20px;">News waiting for validation <span class="text-2xl"><strong>+</strong></span></h1>
+		<div style="display: none;">
+		@endif
+			@if($pending_articles->count() == 0)
+				<p>No pending news for the moment...</p>
+			@endif
+			@foreach($pending_articles as $pending_article)
+			<div wire:key="pending-{{ $pending_article->id }}" class="flex create-news__pending">
+				<p>
+					{{ $pending_article->title_en }}
+				</p>
+				<p>
+					Creation date: {{ $pending_article->created_at->format('d\/m\/Y') }}
+				</p>
+				<p class="text-right">
+					<button wire:click="fillArticleData({{ $pending_article->id }})">Modify</button>
+					<button wire:click="sendOnline({{ $pending_article->id }})">Validate</button>
+				</p>
+			</div>
+			@endforeach
+		</div>
+
+
+		@if($show_online_articles)
+		<h1 wire:click="toggleOnlineArticles(0)">News already online <span class="text-2xl"><strong>-</strong></span></h1>
+		<div style="padding-left: 5px; margin-bottom: 40px;">
+		@else
+		<h1 wire:click="toggleOnlineArticles(1)" style="margin-bottom: 20px;">News already online <span class="text-2xl"><strong>+</strong></span></h1>
+		<div style="display: none;">
+		@endif
+			@if($online_articles->count() == 0)
+				<p>No online news for the moment...</p>
+			@endif
+			@foreach($online_articles as $online_article)
+			<div wire:key="online-{{ $online_article->id }}" class="flex create-news__pending" style="padding-top: 5px;">
+				<p>
+					{{ $online_article->title_en }}
+				</p>
+				<p>
+					Creation date: {{ $online_article->created_at->format('d\/m\/Y') }}
+				</p>
+				<div class="text-right flex">
+					<button wire:click="removeNews({{ $online_article->id }})" style="margin-right: 5px;">Remove</button>
+					<button wire:click="fillArticleData({{ $online_article->id }})">Modify</button>
+				</div>
+			</div>
+			@endforeach
+		</div>
 	</div>
 </x-filament::page>

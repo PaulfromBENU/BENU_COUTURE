@@ -1,3 +1,125 @@
+.footer {
+	padding-top: 102px;
+	background: white;
+	position: relative;
+	@include mobile {
+		padding-top: 50px;
+	}
+	&__contact {
+		font: normal normal 500 22px/46px 'Barlow Condensed';
+		letter-spacing: 0px;
+		line-height: 1.9rem;
+		transition: $transition-base;
+		// &:hover {
+		// 	color: $primary-color;
+		// }
+	}
+	&__copyright {
+		border-top: solid 1px $light-grey;
+		padding: 23px 0px;
+		text-align: left;
+		font: normal normal 500 16px/36px 'Barlow';
+		letter-spacing: 0px;
+		color: $dark-text;
+		@include tablet {
+			padding: 70px 0px;
+			text-align: center;
+		}
+		@include mobile {
+			padding: 70px 0px;
+			text-align: center;
+		}
+	}
+	&__lists {
+		margin-bottom: 110px;
+		@include mobile {
+			padding-left: 20px;
+		}
+		&__col {
+			width: 25%;
+			@include mobile {
+				width: 100%;
+			}
+		}
+	}
+	&__logo-container {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 22px);
+		@include tablet {
+			bottom: 123px;
+			left: calc(50% - 15px);
+		}
+		@include mobile {
+			bottom: 140px;
+			left: calc(50% - 15px);
+		}
+		&__logo {
+			width: 44px;
+			@include tablet {
+				width: 35px;
+			}
+			@include mobile {
+				width: 30px;
+			}
+		}
+	}
+	&__social {
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		border-radius: 6px;
+		background: $primary-color-light;
+		color: $primary-color;
+		font-size: 2rem;
+		padding-top: 6px;
+		margin-right: 10px;
+		text-align: center;
+		transition: $transition-base;
+		&:hover {
+			background: $primary-color;
+			color: $white;
+		}
+	}
+	h4 {
+		width: 100%;
+		text-align: left;
+		font: normal normal 600 28px/34px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		margin-bottom: 45px;
+		@include mobile {
+			margin-bottom: 20px;
+		}
+	}
+	ul {
+		min-width: 120px;
+		text-align: left;
+		font: normal normal 500 22px/46px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: $dark-text;
+		@include intermediate {
+			font: normal normal 500 19px/35px 'Barlow Condensed';
+		}
+		@include tablet {
+			font: normal normal 500 19px/35px 'Barlow Condensed';
+			margin-bottom: 40px;
+			padding-right: 10px;
+		}
+		@include mobile {
+			font: normal normal 500 20px/40px 'Barlow Condensed';
+			margin-bottom: 40px;
+		}
+		a {
+			transition: $transition-base;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+
 .footer-connect {
 	text-align: center;
 	font: normal normal 300 44px/53px 'Barlow Condensed';
@@ -243,126 +365,53 @@
 	}
 }
 
-.footer {
-	padding-top: 102px;
-	background: white;
-	position: relative;
-	@include mobile {
-		padding-top: 50px;
-	}
-	&__contact {
-		font: normal normal 500 22px/46px 'Barlow Condensed';
-		letter-spacing: 0px;
-		line-height: 1.9rem;
-		transition: $transition-base;
-		// &:hover {
-		// 	color: $primary-color;
-		// }
-	}
-	&__copyright {
-		border-top: solid 1px $light-grey;
-		padding: 23px 0px;
-		text-align: left;
-		font: normal normal 500 16px/36px 'Barlow';
-		letter-spacing: 0px;
-		color: $dark-text;
-		@include tablet {
-			padding: 70px 0px;
-			text-align: center;
-		}
-		@include mobile {
-			padding: 70px 0px;
-			text-align: center;
-		}
-	}
-	&__lists {
-		margin-bottom: 110px;
-		@include mobile {
-			padding-left: 20px;
-		}
-		&__col {
-			width: 25%;
-			@include mobile {
-				width: 100%;
-			}
-		}
-	}
-	&__logo-container {
-		position: absolute;
-		bottom: 0;
-		left: calc(50% - 22px);
-		@include tablet {
-			bottom: 123px;
-			left: calc(50% - 15px);
-		}
-		@include mobile {
-			bottom: 140px;
-			left: calc(50% - 15px);
-		}
-		&__logo {
-			width: 44px;
-			@include tablet {
-				width: 35px;
-			}
-			@include mobile {
-				width: 30px;
-			}
-		}
-	}
-	&__social {
-		display: inline-block;
-		height: 60px;
-		width: 60px;
-		border-radius: 6px;
-		background: $primary-color-light;
-		color: $primary-color;
-		font-size: 2rem;
-		padding-top: 6px;
-		margin-right: 10px;
+
+.footer-legal {
+	padding-top: 66px;
+	margin-bottom: 100px;
+	&__title {
 		text-align: center;
-		transition: $transition-base;
-		&:hover {
-			background: $primary-color;
-			color: $white;
+		font: normal normal 700 44px/53px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+		width: 50%;
+		margin-left: 25%;
+		@include mobile {
+			font: normal normal 700 36px/46px 'Barlow Condensed';
+			width: 100%;
+			margin-left: 0;
 		}
 	}
-	h4 {
-		width: 100%;
-		text-align: left;
-		font: normal normal 600 28px/34px 'Barlow Condensed';
+	&__subtitle {
+		text-align: center;
+		font: normal normal 500 16px/28px 'Barlow Condensed';
 		letter-spacing: 0px;
-		color: $dark-text;
-		margin-bottom: 45px;
-		@include mobile {
-			margin-bottom: 20px;
-		}
+		color: #2E141480;
+		margin-bottom: 35px;
 	}
-	ul {
-		min-width: 120px;
-		text-align: left;
-		font: normal normal 500 22px/46px 'Barlow Condensed';
-		letter-spacing: 0px;
-		color: $dark-text;
-		@include tablet {
-			font: normal normal 500 19px/35px 'Barlow Condensed';
-			margin-bottom: 40px;
-			padding-right: 10px;
-		}
-		@include mobile {
-			font: normal normal 500 20px/40px 'Barlow Condensed';
-			margin-bottom: 40px;
-		}
+	&__paragraph {
+		font: normal normal 500 16px/36px 'Barlow';
+		margin-bottom: 35px;
 		a {
-			transition: $transition-base;
+			color: $primary-color;
+			transition: color 0.2s;
 			&:hover {
-				color: $primary-color;
+				color: $dark-text;
 			}
 		}
+	}
+	&__highlight {
+		padding: 30px;
+		background: $primary-color-light;
+		border-radius: 12px;
+		font: normal normal 700 22px/36px 'Barlow';
+		text-align: center;
+		margin-bottom: 35px;
 	}
 }
 
 
-.footer-legal {
+.footer-medias {
 	padding-top: 66px;
 	margin-bottom: 100px;
 	&__title {
@@ -448,5 +497,116 @@
 		font: normal normal 700 22px/36px 'Barlow';
 		text-align: center;
 		margin-bottom: 35px;
+	}
+}
+
+
+.sitemap {
+	padding-top: 66px;
+	margin-bottom: 100px;
+	&__title {
+		text-align: center;
+		font: normal normal 700 38px/50px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+		width: 100%;
+		margin-left: 0%;
+		@include mobile {
+			font: normal normal 700 32px/46px 'Barlow Condensed';
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	a {
+		color: $primary-color;
+		transition: color 0.2s;
+		&:hover {
+			color: $dark-text;
+		}
+	}
+	&__list {
+		&--large {
+			font: normal normal 600 22px/30px 'Barlow';
+			margin-top: 30px;
+		}
+		&--small {
+			font: normal normal 500 18px/25px 'Barlow';
+			margin-top: 8px;
+			padding-left: 20px;
+		}
+	}
+}
+
+
+.footer-conditions {
+	padding-top: 66px;
+	margin-bottom: 100px;
+	a {
+		color: $primary-color;
+		transition: color 0.2s;
+		&:hover {
+			color: $dark-text;
+		}
+	}
+	li {
+		&::before {
+			content: "> ";
+		}
+		margin-left: 10px;
+		margin-bottom: 5px;
+	}
+	ul {
+		margin-bottom: 20px;
+	}
+	&__title {
+		text-align: center;
+		font: normal normal 700 38px/50px 'Barlow Condensed';
+		letter-spacing: 0px;
+		margin-bottom: 58px;
+		width: 100%;
+		margin-left: 0%;
+		@include mobile {
+			font: normal normal 700 32px/46px 'Barlow Condensed';
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	&__subtitle {
+		text-align: left;
+		font: normal normal 500 30px/36px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 25px;
+		margin-top: 50px;
+	}
+	&__lowtitle {
+		text-align: left;
+		font: normal normal 500 20px/28px 'Barlow Condensed';
+		letter-spacing: 0px;
+		color: #2E141480;
+		margin-bottom: 15px;
+		color: $primary-color;
+		margin-top: 45px;
+		padding-left: 5px;
+	}
+	&__paragraph {
+		font: normal normal 500 16px/28px 'Barlow';
+		margin-bottom: 20px;
+		padding-left: 10px;
+	}
+	&__highlight {
+		padding: 30px;
+		background: $primary-color-light;
+		border-radius: 12px;
+		font: normal normal 700 22px/36px 'Barlow';
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	&--update {
+		font-size: 600;
+		color: $primary-color;
+		&::before {
+			content: "[Update ##/##/####] ";
+		}
 	}
 }

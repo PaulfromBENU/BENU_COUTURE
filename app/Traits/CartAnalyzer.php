@@ -35,15 +35,14 @@ trait CartAnalyzer {
                     // if ($variation->pivot->with_extra_article == '1') {
                     //     $article_amount += $variation->pivot->articles_number * $this->extra_pillow_price;
                     // }
+                    if(session('has_kulturpass') !== null) {
+                        $article_amount = round($article_amount / 2, 2);
+                    }
                 }
                 $sum += $article_amount;
             }
 
-            if(session('has_kulturpass') !== null) {
-                return round($sum / 2, 2);
-            } else {
-                return $sum;
-            }
+            return $sum;
 
         }
         return 0;

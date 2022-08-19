@@ -255,6 +255,9 @@
 
 
 .participate-smart {
+	@include intermediate {
+		width: 92%;
+	}
 	&__title {
 		text-align: center;
 		font: normal normal 700 44px/53px 'Barlow Condensed';

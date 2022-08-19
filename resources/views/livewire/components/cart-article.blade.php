@@ -84,7 +84,7 @@
                 x{{ $number }}
             </p>
             @if($max_number > 1)
-            <div class="ml-3 mt-3">
+            <div class="ml-3 mt-2 xl:mt-3">
                 <p class="article-sidebar__content__mask-btn" wire:click="updateNumber('up')">
                     <i class="fas fa-plus"></i>
                 </p>
@@ -98,18 +98,10 @@
     <div class="tablet-hidden">
         <div class="cart-content__article__price">
             @if($article->name == 'voucher')
-                @if(session('has_kulturpass') !== null)
-                    @if($article->voucher_type == 'pdf')
-                    {{ round($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value / 2, 2) }}&euro;
-                    @else
-                    {{ round(($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5) / 2, 2) }}&euro;
-                    @endif
+                @if($article->voucher_type == 'pdf')
+                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
                 @else
-                    @if($article->voucher_type == 'pdf')
-                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
-                    @else
-                    {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
-                    @endif
+                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
                 @endif
             @else
                 @if($article->is_extra_accessory)
@@ -179,10 +171,12 @@
 
     <div class="col-span-6 cart-content__article__name relative mobile-only">
         @if($article->name == 'voucher')
-        <h4>{{ __('cart.voucher') }}</h4>
-        <p class="mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3 absolute">
-            {{ __('cart.voucher-value') }} : {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
-        </p>
+        <div class="flex justify-start flex-wrap">
+            <h4 class="mr-3" style="min-width: fit-content;">{{ __('cart.voucher') }}</h4>
+            <p class="mt-1 rounded-2xl bg-red-100 primary-color text-md pt-1 pb-1 pl-3 pr-3 mb-2" style="width: fit-content;">
+                {{ __('cart.voucher-value') }} : {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
+            </p>
+        </div>
         @else
         <h4>{{ strtoupper($article->name) }}</h4>
         @endif
@@ -209,9 +203,10 @@
         </div>
 
         @if($article->name == 'voucher')
-        <div class="cart-content__article__color">
+        <!-- <div class="cart-content__article__color">
             
-        </div>
+        </div> -->
+        <div style="height: 1px;"></div>
         @elseif($article->color->name == 'multicolored')
         <div class="cart-content__article__color-mobile flex">
             <p class="mr-2">
@@ -236,9 +231,9 @@
         </div>
         @endif
 
-        <div class="cart-content__article__number">
+        <div class="cart-content__article__number flex justify-start flex-wrap mt-2">
             @if($max_number > 1)
-            <div class="mt-2 flex">
+            <div class="mt-1 flex">
                 <p class="cart-content__article__number__counter" wire:click="updateNumber('down')">
                     <i class="fas fa-minus"></i>
                 </p>
@@ -252,80 +247,77 @@
             </p>
         </div>
 
-        <div class="cart-content__article__price">
-            @if($article->name == 'voucher')
-                @if(session('has_kulturpass') !== null)
-                    @if($article->voucher_type == 'pdf')
-                    {{ round($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value / 2, 2) }}&euro;
-                    @else
-                    {{ round(($article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5) / 2, 2) }}&euro;
-                    @endif
-                @else
+        <div class="cart-content__article__price flex justify-between flex-wrap">
+            <div>
+                @if($article->name == 'voucher')
                     @if($article->voucher_type == 'pdf')
                     {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
                     @else
                     {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
                     @endif
-                @endif
-            @else
-                @if($article->is_extra_accessory)
-                    @if(session('has_kulturpass') !== null)
-                        {{ round($article->specific_price / 2, 2) }}&euro;
-                    @else
-                        {{ $article->specific_price }}&euro;
-                    @endif
                 @else
-                    @if(session('has_kulturpass') !== null)
-                        {{ round($article->creation->price / 2, 2) }}&euro;
+                    @if($article->is_extra_accessory)
+                        @if(session('has_kulturpass') !== null)
+                            {{ round($article->specific_price / 2, 2) }}&euro;
+                        @else
+                            {{ $article->specific_price }}&euro;
+                        @endif
                     @else
-                        {{ $article->creation->price }}&euro;
+                        @if(session('has_kulturpass') !== null)
+                            {{ round($article->creation->price / 2, 2) }}&euro;
+                        @else
+                            {{ $article->creation->price }}&euro;
+                        @endif
                     @endif
                 @endif
-            @endif
 
-            @if($gift_price > 0)
-            <p class="primary-color text-left lg:text-right" style="margin-top: 5px;">
-                @if(session('has_kulturpass') !== null)
-                + {{ $gift_price / 2 }}&euro;
-                @else
-                + {{ $gift_price }}&euro;
+                @if($gift_price > 0)
+                <p class="primary-color text-left lg:text-right" style="margin-top: 5px;">
+                    @if(session('has_kulturpass') !== null)
+                    + {{ $gift_price / 2 }}&euro;
+                    @else
+                    + {{ $gift_price }}&euro;
+                    @endif
+                </p>
                 @endif
-            </p>
-            @endif
+            </div>
+            <div class="flex pr-2">
+                @auth
+                <div class="cart-content__article__icons__heart" wire:click.prevent.stop="toggleWishlist">
+                    @if(!$is_wishlisted)
+                    <div class="cart-content__article__icons__heart__icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="cart-content__article__icons__heart__icon cart-content__article__icons__heart__icon--hovered">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    @else
+                    <div class="cart-content__article__icons__heart__icon cart-content__article__icons__heart__icon--active">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    @endif
+                </div>
+                @else
+                <div class="cart-content__article__icons__heart tooltip" wire:click.prevent.stop="toggleWishlist">
+                    <div class="cart-content__article__icons__heart__icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="cart-content__article__icons__heart__icon cart-content__article__icons__heart__icon--hovered">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="tooltiptext tooltiptext--top">
+                        {!! __('models.please-login') !!}
+                    </span>
+                </div>
+                @endauth
+                <div class="cart-content__article__icons__trash" wire:click="removeItem">
+                    @svg('icon_trash')
+                </div>
+            </div>
         </div>
 
 <!--         <div class="flex justify-end cart-content__article__icons"> -->
-        @auth
-        <div class="cart-content__article__icons__heart" wire:click.prevent.stop="toggleWishlist">
-            @if(!$is_wishlisted)
-            <div class="cart-content__article__icons__heart__icon">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="cart-content__article__icons__heart__icon cart-content__article__icons__heart__icon--hovered">
-                <i class="fas fa-heart"></i>
-            </div>
-            @else
-            <div class="cart-content__article__icons__heart__icon cart-content__article__icons__heart__icon--active">
-                <i class="fas fa-heart"></i>
-            </div>
-            @endif
-        </div>
-        @else
-        <div class="cart-content__article__icons__heart tooltip" wire:click.prevent.stop="toggleWishlist">
-            <div class="cart-content__article__icons__heart__icon">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="cart-content__article__icons__heart__icon cart-content__article__icons__heart__icon--hovered">
-                <i class="fas fa-heart"></i>
-            </div>
-            <span class="tooltiptext tooltiptext--top">
-                {!! __('models.please-login') !!}
-            </span>
-        </div>
-        @endauth
-        <div class="cart-content__article__icons__trash" wire:click="removeItem">
-            @svg('icon_trash')
-        </div>
+        
         <!-- </div> -->
     </div>
     <div class="col-span-10 pl-1 mobile-only">

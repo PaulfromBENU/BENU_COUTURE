@@ -17,7 +17,7 @@
         <div class="all-news__link__img-container">
             <img src="{{ asset('images/pictures/news/'.$news->main_photo) }}" alt="Photo news" title="Photo news">
         </div>
-        <div class="all-news__link__tags flex justify-start">
+        <div class="all-news__link__tags flex justify-start flex-wrap">
             @if($news->$localized_tag_1 !== '' && $news->$localized_tag_1 !== null)
             <div class="all-news__link__tags__tag">
                 {{ $news->$localized_tag_1 }}

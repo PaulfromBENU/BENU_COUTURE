@@ -14,6 +14,7 @@ class ConditionsUpdated extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
+    public $locale;
 
     /**
      * Create a new message instance.

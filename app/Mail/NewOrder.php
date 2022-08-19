@@ -31,7 +31,7 @@ class NewOrder extends Mailable
     {
         $this->order = $order;
         $this->invoice = $pdf_invoice;
-        $this->locale = session('locale');
+        $this->locale = $this->order->user->favorite_language;
     }
 
     /**
@@ -42,7 +42,7 @@ class NewOrder extends Mailable
     public function build()
     {
         return $this->from(config('mail.mailers.smtp.sender'), 'BENU')
-                    ->subject('Merci pour votre achat sur BENU')
+                    ->subject(trans('emails.new-order-subject', [], $this->locale).' '.$this->order->unique_id)
                     ->view('emails.new-order')
                     ->attachData($this->invoice->output(), 'BENU_Invoice_'.$this->order->unique_id.'.pdf', [
                     'mime' => 'application/pdf',

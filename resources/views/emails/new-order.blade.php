@@ -10,45 +10,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-	<title>Bienvenue sur BENU</title>
+	<title>{{ trans('emails.new-order-title', [], $locale) }}</title>
 </head>
 <body style="width: 80%; margin-left: 10%; font-family: 'Barlow';">
 	<div style="width: 100%; margin-bottom: 50px; text-align: center;">
-		<img src="{{ $message->embed(asset('images/pictures/logo_benu_couture.png')) }}" style="height: 180px; margin: auto;" />
+		<img src="{{ $message->embed(asset('images/pictures/logo_benu_green.png')) }}" style="height: 180px; margin: auto;" />
 	</div>
 	<div>
 		<p>
-			<strong>Bonjour,</strong>
+			<strong>{{ trans('emails.new-order-hello', [], $locale) }} {{ ucfirst($order->user->first_name) }} !</strong>
 		</p>
 		<p>
-			Merci pour votre achat sur notre plate-forme ! Nous allons maintenant préparer votre commande pour que vous puissiez en profiter au plus vite.
+			{{ trans('emails.new-order-txt-1', [], $locale) }}
 		</p>
-		@if($order->payment_type == 3)
+		@if($order->user->role !== 'guest_client')
+			<p>
+				{{ trans('emails.new-order-txt-account', [], $locale) }} <a href="{{ route('dashboard', ['locale' => $locale]) }}" style="color: #27955B;">{{ trans('emails.new-order-txt-account-link', [], $locale) }}</a>.
+			</p>
+		@else
+			<p>
+				{{ trans('emails.new-order-txt-no-account-1', [], $locale) }} <a href="{{ route('register-'.$locale) }}" style="color: #27955B;">{{ trans('emails.new-order-txt-no-account-link', [], $locale) }}</a> {{ trans('emails.new-order-txt-no-account-2', [], $locale) }}
+			</p>
+		@endif
+
+		@if($order->payment_type == 2 || $order->payment_type == 3)
+			<p>
+				{{ trans('emails.new-order-not-paid-1', [], $locale) }}
+			</p>
+			@if($order->payment_type == 2)
+			<p>
+				{{ trans('emails.new-order-digicash-1', [], $locale) }}
+			</p>
+			<p style="text-align: center; margin: 20px; font-weight: 600;">
+				<em>{{ trans('emails.new-order-digicash-phone', [], $locale) }}</em>
+			</p>
+			@elseif($order->payment_type == 3)
+			<p>
+				{{ trans('emails.new-order-transfer-1', [], $locale) }}
+			</p>
+			<p style="text-align: center; margin: 20px; font-weight: 600;">
+				<em>{{ trans('emails.new-order-transfer-1', [], $locale) }}</em><br/>
+				<em>{{ trans('emails.new-order-transfer-2', [], $locale) }}</em><br/>
+				<em>{{ trans('emails.new-order-transfer-3', [], $locale) }}</em>
+			</p>
+			@endif
+			<p>
+				{{ trans('emails.new-order-reference', [], $locale) }}
+			</p>
+			<p style="text-align: center; margin: 20px; font-weight: 600;">
+				BENU{{ $order->unique_id }}
+			</p>
+		@else
+			<p>
+				{{ trans('emails.new-order-paid-1', [], $locale) }}
+			</p>
+		@endif
+
 		<p>
-			Avant de préparer ta commande, nous aurons besoin que tu effectues le paiement par virement bancaire dans les 5 prochains jours.
+			{{ trans('emails.new-order-txt-2', [], $locale) }} <strong>{{ $order->unique_id }}</strong>
 		</p>
 		<p>
-			Nos coordonnées bancaires sont les suivantes :
+			{{ trans('emails.new-order-txt-3', [], $locale) }} <strong>{{ $order->total_price }}&euro;</strong>
 		</p>
-		<p style="text-align: center; margin: 20px; font-weight: 600;">
-			Données bancaires à inclure ici
-		</p>
+		@if($order->cart->couture_variations()->count() == $order->pdf_vouchers()->count())
 		<p>
-			Merci de mentionner la référence suivante lors de ton virement, pour que nous puissions l'identifier facilement :
+			{{ trans('emails.new-order-txt-voucher-pdf', [], $locale) }}
 		</p>
-		<p style="text-align: center; margin: 20px; font-weight: 600;">
-			BENU{{ $order->unique_id }}
+		@else
+		<p>
+			{{ trans('emails.new-order-txt-4', [], $locale) }} @if($order->address_id == 0) {{ trans('emails.new-order-benu-shop-1', [], $locale) }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => trans('slugs.services-shops', [], $locale)]) }}" style="color: #27955B;">{{ trans('emails.new-order-benu-shop-2', [], $locale) }}</a> @endif
 		</p>
 		@endif
-		<p>
-			Numéro de commande : <strong>{{ $order->unique_id }}</strong>
-		</p>
-		<p>
-			Prix total de votre commande : <strong>{{ $order->total_price }}&euro;</strong>
-		</p>
-		<p>
-			Adresse de livraison : @if($order->address_id == 0) Retrait en magasin @endif
-		</p>
 		@if($order->address_id > 0)
 		<ul>
 			<li><strong>{{ $order->address->address_name }}</strong></li>
@@ -58,15 +90,16 @@
 			<li>{{ $order->address->phone }}</li>
 		</ul>
 		@endif
+		
 		<p>
-			Si une de ces données n'est pas correcte, n'hésitez pas à <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}">nous contacter</a> en n'oubliant pas de mentionner votre numéro de commande ci-dessus.
+			{{ trans('emails.new-order-txt-5', [], $locale) }} <a href="mailto:info@benucouture.lu" style="color: #27955B;">info@benucouture.lu</a> {{ trans('emails.new-order-txt-6', [], $locale) }} <a href="{{ route('client-service-'.$locale, ['page' => __('slugs.services-contact')]) }}" style="color: #27955B;">{{ trans('emails.new-order-txt-7', [], $locale) }}</a> {{ trans('emails.new-order-txt-8', [], $locale) }}
 		</p>
 
 		<p>
-			À bientôt sur nos plates-formes ou dans notre magasin !
+			{{ trans('emails.new-order-txt-9', [], $locale) }}
 		</p>
 		<p>
-			<em><strong>L'équipe BENU</strong></em>
+			<em><strong>{{ trans('emails.new-order-signature', [], $locale) }}</strong></em>
 		</p>
 	</div>
 </body>

@@ -7,7 +7,7 @@
 			<select name="creation-0" id="creation-0" class="sell-form__select" wire:model="creation_id">
 				<option value="0" wire:click="adaptVariations(0)">Select a creation</option>
 				@foreach($all_creations as $creation)
-					<option value="{{ $creation->id }}" wire:key="{{ $creation->id }}" wire:click="adaptVariations({{ $creation->id }})">{{ $creation->name }} - {{ $creation->creation_category->name_en }}</option>
+					<option value="{{ $creation->id }}" wire:key="{{ $creation->id }}" wire:click="adaptVariations({{ $creation->id }})">{{ $creation->name }}@if($creation->creation_category()->count() > 0) - {{ $creation->creation_category->name_en }}@endif</option>
 				@endforeach
 			</select> 
 		</div>

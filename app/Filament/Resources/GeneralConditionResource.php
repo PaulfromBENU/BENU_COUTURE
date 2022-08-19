@@ -10,6 +10,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\Hidden;
 
 class GeneralConditionResource extends Resource
 {
@@ -26,18 +27,38 @@ class GeneralConditionResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('content_lu')
-                    ->required()
-                    ->maxLength(65535),
-                Forms\Components\Textarea::make('content_fr')
-                    ->required()
-                    ->maxLength(65535),
-                Forms\Components\Textarea::make('content_de')
-                    ->required()
-                    ->maxLength(65535),
-                Forms\Components\Textarea::make('content_en')
-                    ->required()
-                    ->maxLength(65535),
+                Hidden::make('content_lu')
+                    ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                    ->nullable(),
+                Hidden::make('content_fr')
+                    ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                    ->nullable(),
+                Hidden::make('content_de')
+                    ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                    ->nullable(),
+                Hidden::make('content_en')
+                    ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                    ->nullable(),
+                // Forms\Components\TextInput::make('content_lu')
+                //     ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                //     ->nullable()
+                //     ->hidden()
+                //     ->maxLength(65535),
+                // Forms\Components\TextInput::make('content_fr')
+                //     ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                //     ->nullable()
+                //     ->hidden()
+                //     ->maxLength(65535),
+                // Forms\Components\TextInput::make('content_de')
+                //     ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                //     ->nullable()
+                //     ->hidden()
+                //     ->maxLength(65535),
+                // Forms\Components\TextInput::make('content_en')
+                //     ->default(auth()->user()->email.' - '.date("d/m/Y"))
+                //     ->nullable()
+                //     ->hidden()
+                //     ->maxLength(65535),
             ]);
     }
 

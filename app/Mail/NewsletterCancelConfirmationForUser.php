@@ -24,7 +24,7 @@ class NewsletterCancelConfirmationForUser extends Mailable
     public function __construct(User $user, string $locale)
     {
         $this->user = $user;
-        $this->locale = $locale;
+        $this->locale = strtolower($this->user->favorite_language);
     }
 
     /**
@@ -34,6 +34,6 @@ class NewsletterCancelConfirmationForUser extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject("Newsletter BENU - Confirmation d'annulation")->view('emails.newsletter-cancellation');
+        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans('emails.newlsetter-cancellation-subject', [], $this->locale))->view('emails.newsletter-cancellation');
     }
 }

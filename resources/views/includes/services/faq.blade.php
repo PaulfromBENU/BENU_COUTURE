@@ -11,9 +11,9 @@
 				</div>
 
 				<div class="faq__accordion__answer" style="display: none;">
-					<p class="faq__accordion__answer__txt">
+					<!-- <p class="faq__accordion__answer__txt">
 						{!! __('services.faq-group-desc-'.$index) !!}
-					</p>
+					</p> -->
 					<ul class="mb-10">
 						@for($sub_index = 1; $sub_index <= $faq_subtitles_count[$index]; $sub_index ++)
 							<li>

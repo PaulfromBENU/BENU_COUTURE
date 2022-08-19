@@ -26,12 +26,20 @@
                                 @if($order->payment_status <= 1)
                                 {{ __('dashboard.order-payment-pending') }}
                                 @else
-                                {{ __('dashboard.order-payment-paid') }} - 
+                                {{ __('dashboard.order-payment-paid') }} @if($order->delivery_status !== 4)- @endif
                                     @if($order->delivery_status <= 1)
                                     {{ __('dashboard.order-delivery-under-preparation') }}
                                     @else
-                                    {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
-                                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
+                                        @if($order->address_id == 0)
+                                            @if($order->delivery_status == '3')
+                                                {{ __('dashboard.order-delivery-ready-for-collect-since') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                                            @elseif($order->delivery_status == '5')
+                                                {{ __('dashboard.order-delivery-collected-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                                            @endif
+                                        @else
+                                        {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                                            @if($order->delivery_link !== null) - <a href="https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a> - {{ __('dashboard.order-delivery-tracking-number') }} {{ $order->delivery_link }}@endif
+                                        @endif
                                     @endif
                                 @endif
                             @elseif($order->status == 4)
@@ -61,7 +69,7 @@
                             {{ __('dashboard.order-invoice') }}
                         </a>
                     </div>
-                        @if($order->delivery_status > 1 
+                        @if(($order->delivery_status == 2 || $order->delivery_status == 5)
                             && $order->cart->couture_variations()->where('name', 'voucher')->count() !== $order->cart->couture_variations()->count()
                             && Carbon\Carbon::parse($order->delivery_date) > Carbon\Carbon::now()->subdays(28))
                         <div class="mb-5 text-right">
@@ -98,12 +106,14 @@
                     </button>
                 </div>
                 <div class="flex lg:justify-end flex-col lg:flex-row">
+                    @if($order->status >= 2 && $order->status < 4)
                     <div class="text-right">
                         <a target="_blank" href="{{ route('invoice-'.app()->getLocale(), ['order_code' => \Illuminate\Support\Str::random(4).$order->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover inline-block w-4/5" style="padding-top: 1px; padding-bottom: 1px;">
                             {{ __('dashboard.order-invoice') }}
                         </a>
                     </div>
-                    @if($order->delivery_status > 1 
+                    @endif
+                    @if(($order->delivery_status == 2 || $order->delivery_status == 5)
                             && $order->cart->couture_variations()->where('name', 'voucher')->count() !== $order->cart->couture_variations()->count()
                             && Carbon\Carbon::parse($order->delivery_date) > Carbon\Carbon::now()->subdays(28))
                     <div class="text-right">
@@ -220,8 +230,16 @@
                     @if($order->delivery_status <= '1')
                     {{ __('dashboard.order-delivery-under-preparation') }}
                     @else
-                    {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
-                        @if($order->delivery_link !== null) - <a href="{{ $order->delivery_link }}" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a>@endif
+                        @if($order->address_id == 0)
+                            @if($order->delivery_status == '3')
+                                {{ __('dashboard.order-delivery-ready-for-collect-since') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                            @elseif($order->delivery_status == '5')
+                                {{ __('dashboard.order-delivery-collected-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                            @endif
+                        @else
+                        {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
+                            @if($order->delivery_link !== null) - <a href="https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a> - {{ __('dashboard.order-delivery-tracking-number') }} {{ $order->delivery_link }}@endif
+                        @endif
                     @endif
                 @endif
             @elseif($order->status == 4)
