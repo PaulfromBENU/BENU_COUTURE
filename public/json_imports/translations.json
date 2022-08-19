@@ -6080,12 +6080,36 @@
     "lu": "Du bass ëmmer nees wëllkomm!"
   },
   {
-    "page": "",
+    "page": "Newsletter",
     "key": "auth.newsletter-cancellation-pending",
     "de": "Deine Anfrage, den BENU Newsletters zu kündigen, ist eingegangen und wird schnellstmöglich bearbeitet. Du erhältst eine Bestätigung per E-Mail, sobald die Kündigung des Newsletter abgeschlossen ist.",
     "fr": "Ta demande de désabonnement à la newsletter BENU a été reçue et sera traitée dans les plus brefs délais. Tu recevras un e-mail de confirmation dès que le désabonnement sera effectif.",
     "en": "Your request to unsubscribe the BENU newsletter has been received and will be processed as soon as possible. You will receive a confirmation by e-mail as soon as the unsubscription has been completed.",
     "lu": "Deng Ufro, d'BENU Newsletter ze kënnegen, ass bei eis ukomm a gëtt schnellstméiglech traitéiert. Du kriss eng Bestätegung per E-Mail, esoubal ewéi d'Kënnegung effektiv ass."
+  },
+  {
+    "page": "Newsletter",
+    "key": "auth.newsletter-unsubscribe-newsletter",
+    "de": "Newsletter kündigen",
+    "fr": "Se désabonner de la newsletter",
+    "en": "Unsubscribe from the newsletter",
+    "lu": "D'Newsletter kënnegen"
+  },
+  {
+    "page": "Newsletter",
+    "key": "auth.newsletter-unsubscribe-pending",
+    "de": "Deine Anfrage, den BENU Newsletters zu kündigen, ist eingegangen.",
+    "fr": "Ta demande de désabonnement à la newsletter BENU a été reçue.",
+    "en": "Your request to unsubscribe the BENU newsletter has been received.",
+    "lu": "Deng Ufro, d'BENU Newsletter ze kënnegen, ass bei eis ukomm."
+  },
+  {
+    "page": "Newsletter",
+    "key": "auth.newsletter-unsubscribe-details",
+    "de": "Du erhältst eine Bestätigung per E-Mail, sobald die Kündigung des Newsletter abgeschlossen ist.",
+    "fr": "Tu recevras un e-mail de confirmation dès que le désabonnement sera effectif.",
+    "en": "You will receive a confirmation by e-mail as soon as the unsubscription has been completed.",
+    "lu": "Du kriss eng Bestätegung per E-Mail, esoubal ewéi d'Kënnegung effektiv ass."
   },
   {
     "page": "Newsletter",
@@ -7657,9 +7681,17 @@
   },
   {
     "page": "Mon compte",
+    "key": "dashboard.com-return-received-on",
+    "de": "Antrag auf Rücksendung eingegangen am",
+    "fr": "Demande de retour reçue le",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Mon compte",
     "key": "dashboard.return-requested-message",
     "de": "Du hast eine Bestellung an BENU zurückgesendet und eine Rückerstattung beantragt.",
-    "fr": "",
+    "fr": "Tu as renvoyé une commande à BENU et demandé un remboursement.",
     "en": "",
     "lu": ""
   },
@@ -7667,7 +7699,7 @@
     "page": "Mon compte",
     "key": "dashboard.com-answer-by-benu-sent-on",
     "de": "Antwort von BENU gesendet am",
-    "fr": "",
+    "fr": "Réponse de BENU envoyée le",
     "en": "",
     "lu": ""
   },
@@ -8846,6 +8878,22 @@
     "fr": "Total estimé",
     "en": "Estimated total costs",
     "lu": "Estiméierte Gesamtbetrag"
+  },
+  {
+    "page": "Panier",
+    "key": "cart.validate-conditions",
+    "de": "Ich akzeptiere BENU's",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Panier",
+    "key": "cart.validate-conditions-link",
+    "de": "Allgemeine Nutzungsbedingungen",
+    "fr": "",
+    "en": "",
+    "lu": ""
   },
   {
     "page": "Panier",
@@ -12987,7 +13035,7 @@
     "page": "Campaign",
     "key": "campaigns.carte-blanche-quote-3",
     "de": ".",
-    "fr": "es choses.",
+    "fr": "les choses.",
     "en": "things.",
     "lu": "."
   },
@@ -13034,7 +13082,7 @@
   {
     "page": "Campaign",
     "key": "campaigns.all-subtitle",
-    "de": "",
+    "de": "Alle BENU COUTURE Kampagnen",
     "fr": "",
     "en": "",
     "lu": ""
@@ -13153,7 +13201,7 @@
   },
   {
     "page": "E-Mail automatique",
-    "key": "emails.new-order-hell",
+    "key": "emails.new-order-hello",
     "de": "Hallo",
     "fr": "Bonjour",
     "en": "",
@@ -13178,8 +13226,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.new-order-txt-account-link",
-    "de": "Deinem Konto.",
-    "fr": "ton compte.",
+    "de": "Deinem Konto",
+    "fr": "ton compte",
     "en": "",
     "lu": ""
   },
@@ -13218,10 +13266,34 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.new-order-transfer-1",
-    "de": "Si Payement par virementDu hast die Bezahlung per Banküberweisung ausgewählt. Unsere Bankverbindung lautet folgendermaßen:",
+    "de": "Du hast die Bezahlung per Banküberweisung ausgewählt. Unsere Bankverbindung lautet folgendermaßen:",
     "fr": "Tu as choisi de payer par virement bancaire. Nos coordonnées bancaires sont les suivantes :",
     "en": "",
     "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-transfer-1",
+    "de": "BENU Village Esch asbl.",
+    "fr": "BENU Village Esch asbl.",
+    "en": "BENU Village Esch asbl.",
+    "lu": "BENU Village Esch asbl."
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-transfer-2",
+    "de": "LU63 0019 5055 5248 0000",
+    "fr": "LU63 0019 5055 5248 0000",
+    "en": "LU63 0019 5055 5248 0000",
+    "lu": "LU63 0019 5055 5248 0000"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-transfer-3",
+    "de": "BCEELULL",
+    "fr": "BCEELULL",
+    "en": "BCEELULL",
+    "lu": "BCEELULL"
   },
   {
     "page": "E-Mail automatique",
@@ -13230,6 +13302,14 @@
     "fr": "Tu as choisi de payer par Payconiq/Digicash. Nos coordonnées Payconiq/Digicash sont les suivantes :",
     "en": "",
     "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-digicash-phone",
+    "de": "Telefonnummer : 00352 621 763 609",
+    "fr": "Telefonnummer : 00352 621 763 609",
+    "en": "Telefonnummer : 00352 621 763 609",
+    "lu": "Telefonnummer : 00352 621 763 609"
   },
   {
     "page": "E-Mail automatique",
@@ -13274,8 +13354,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.new-order-benu-shop-1",
-    "de": "Selbstabholung:",
-    "fr": "Retrait en magasin :",
+    "de": "Selbstabholung im",
+    "fr": "Retrait dans le",
     "en": "",
     "lu": ""
   },
@@ -13286,6 +13366,14 @@
     "fr": "BENU Shop Esch-sur-Alzette",
     "en": "",
     "lu": ""
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.new-order-txt-voucher-pdf",
+    "de": "Der Gutschein wird Dir als PDF per E-Mail zugeschickt.",
+    "fr": "Le bon te sera envoyé par e-mail au format PDF.",
+    "en": "The voucher will be sent to you by e-mail in PDF format.",
+    "lu": "De Bong gëtt Dir als PDF per E-Mail geschéckt."
   },
   {
     "page": "E-Mail automatique",
@@ -13426,8 +13514,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.order-ready-with-account-link",
-    "de": "Deinem Konto.",
-    "fr": "ton compte.",
+    "de": "Deinem Konto",
+    "fr": "ton compte",
     "en": "",
     "lu": ""
   },
@@ -13442,8 +13530,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.order-ready-follow-delivery",
-    "de": "Unter dem folgendem Link  kannst Du Deine Sendung bei Track and Trace von post.lu:",
-    "fr": "En cliquant sur le lien suivant, tu peux suivre ton envoi sur Track and Trace de post.lu :",
+    "de": "Unter dem folgendem Link  kannst Du Deine Sendung bei Track and Trace der Post Luxembourg verfolgen:",
+    "fr": "En cliquant sur le lien suivant, tu peux suivre ton envoi sur Track and Trace de Post Luxembourg :",
     "en": "",
     "lu": ""
   },
@@ -13474,8 +13562,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.order-ready-txt-collect-2",
-    "de": "hier",
-    "fr": "ici",
+    "de": "hier.",
+    "fr": "ici.",
     "en": "",
     "lu": ""
   },
@@ -13490,16 +13578,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.order-ready-txt-collect-4",
-    "de": "Da wir begrenzte Lagerkapazitäten haben, bitten wird Dich Deine Artikel innerhalb von einem Monat im BENU Shop abzuholen. Vielen Dank!",
-    "fr": "Comme nous avons des capacités de stockage limitées, nous te prions de venir chercher tes articles à la boutique BENU dans un délai d'un mois. Merci beaucoup !",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "E-Mail automatique",
-    "key": "emails.order-ready-txt-2",
-    "de": "",
-    "fr": "",
+    "de": "Da wir begrenzte Lagerkapazitäten haben, bitten wird Dich Deine Bestellung innerhalb von einem Monat im BENU Shop abzuholen. Vielen Dank!",
+    "fr": "Comme nous avons des capacités de stockage limitées, nous te prions de venir chercher ta commande au Shop BENU dans un délai d'un mois. Merci beaucoup !",
     "en": "",
     "lu": ""
   },
@@ -13561,7 +13641,7 @@
   },
   {
     "page": "E-Mail automatique",
-    "key": "emails.pdf-voucher-hello",
+    "key": "email.pdf-voucher-hello",
     "de": "Hallo",
     "fr": "Bonjour",
     "en": "",
@@ -13578,7 +13658,7 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.pdf-voucher-txt-2",
-    "de": "Vielen Dank für Deine Bestellung eines BENU Gutscheins !\nAvec compte Du findest Deinen Gutschein als PDF im Anhang dieser E-Mail. Den Gutschein kannst Du für alle Serviceleistungen von BENU Village Esch asbl einlösen, dies sowohl online auf jeder Internetseite von BENU Village Esch asbl (außer benureuse.lu) als auch vor Ort im",
+    "de": "Du findest Deinen Gutschein als PDF im Anhang dieser E-Mail. Den Gutschein kannst Du für alle Serviceleistungen von BENU Village Esch asbl einlösen, dies sowohl online auf jeder Internetseite von BENU Village Esch asbl (außer benureuse.lu) als auch vor Ort im",
     "fr": "Tu trouveras ton bon d’achat au format PDF en annexe de cet e-mail. Tu peux utiliser le\nAvec compte bon d’achat pour tous les services de BENU Village Esch asbl, aussi bien en ligne sur chaque site Internet de BENU Village Esch asbl (sauf benureuse.lu) que sur place au",
     "en": "",
     "lu": ""
@@ -13650,7 +13730,7 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.pdf-voucher-txt-5",
-    "de": "Sobald Dein registrierter Gutschein ganz oder teilweise eingelöst wird, wird das verbleibende Guthaben automatisch im BENU Konto angepasst. Alles Weitere  Informationen zur Verwendung Deines Gutscheins findest Du in unseren",
+    "de": "Sobald Dein registrierter Gutschein ganz oder teilweise eingelöst wird, wird das verbleibende Guthaben automatisch im BENU Konto angepasst. Alle weiteren  Informationen zur Verwendung Deines Gutscheins findest Du in unseren",
     "fr": "Dès que ton bon enregistré est utilisé en tout ou en partie, le crédit restant est automatiquement ajusté dans ton compte BENU. Tu trouveras de plus amples informations sur l'utilisation de ton bon d'achat dans nos",
     "en": "",
     "lu": ""
@@ -13658,8 +13738,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.pdf-voucher-txt-6",
-    "de": "Nutzungsbedingungen.",
-    "fr": "conditions générales.",
+    "de": "Nutzungsbedingungen",
+    "fr": "conditions générales",
     "en": "",
     "lu": ""
   },
@@ -13786,7 +13866,7 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.new-conditions-txt-8",
-    "de": "oder über",
+    "de": "oder über unser",
     "fr": "ou via notre",
     "en": "",
     "lu": ""
@@ -13794,7 +13874,7 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.new-conditions-txt-9",
-    "de": "unser Kontaktformular",
+    "de": "Kontaktformular",
     "fr": "formulaire de contact",
     "en": "",
     "lu": ""
@@ -13850,7 +13930,7 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.newsletter-confirmation-txt-2",
-    "de": "Hiermit bestätigen wir Dir, dass wir Deine E-Mailadresse in den Verteiler der künftigen BENU Nachrichten aufgenommen haben. Diese Nachrichten erhältst Du in deutscher Sprache. Falls Du den Newsletter lieber in einer anderen Sprache lesen möchtest, wie französisch, luxemburgisch oder englisch, dann teile uns dies bitte in einer E-Mail an",
+    "de": "Hiermit bestätigen wir, dass wir Deine E-Mailadresse in den Verteiler der künftigen BENU Nachrichten aufgenommen haben. Diese Nachrichten erhältst Du in deutscher Sprache. Falls Du den Newsletter lieber in einer anderen Sprache lesen möchtest, wie französisch, luxemburgisch oder englisch, dann teile uns dies bitte in einer E-Mail an",
     "fr": "Par la présente, nous te confirmons que ton adresse e-mail a été ajoutée à la liste de distribution des futures nouvelles de BENU. Tu recevras ces messages en français. Si tu préfères lire la newsletter dans une autre langue, comme l'allemand, le luxembourgeois ou l'anglais, merci de nous le faire savoir par e-mail à",
     "en": "",
     "lu": ""
@@ -13882,7 +13962,7 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.newsletter-confirmation-txt-6",
-    "de": "Diese Abonnement kannst Du jederzeit formlos kündigen, indem Du uns eine E-Mail mit dem Zusatz ‚NEWSLETTER ABMELDEN' auf",
+    "de": "Diese Abonnement kannst Du jederzeit formlos kündigen, indem Du uns eine E-Mail mit dem Zusatz \"NEWSLETTER ABMELDEN\" auf",
     "fr": "Tu peux résilier cet abonnement à tout moment et sans formalité en nous envoyant un e-mail avec la mention 'ANNULER NEWSLETTER' sur",
     "en": "",
     "lu": ""
@@ -13898,24 +13978,24 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.newsletter-confirmation-txt-8",
-    "de": "zusendest oder",
-    "fr": "ou de klicker",
+    "de": "zusendest oder den folgenden Link anklickst:",
+    "fr": "",
     "en": "",
     "lu": ""
   },
   {
     "page": "E-Mail automatique",
     "key": "emails.newsletter-confirmation-txt-9",
-    "de": "hier",
-    "fr": "ici",
+    "de": "Newsletter abmelden",
+    "fr": "",
     "en": "",
     "lu": ""
   },
   {
     "page": "E-Mail automatique",
     "key": "emails.newsletter-confirmation-txt-10",
-    "de": "klickst.",
-    "fr": ".",
+    "de": "Bis bald auf unseren BENU Internetseiten oder im BENU VILLAGE in Esch-sur-Alzette!",
+    "fr": "A bientôt sur nos pages internet BENU ou au BENU VILLAGE à Esch-sur-Alzette !",
     "en": "",
     "lu": ""
   },
@@ -13954,8 +14034,8 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.newsletter-cancellation-txt-1",
-    "de": "wir bestätigen Deine Abmeldung vom BENU Newsletter. Vielen Dank dass Du uns und unsere Aktivitäten über unseren Newsletter begleitet hast!",
-    "fr": "nous confirmons ton désabonnement de la newsletter BENU. Nous te remercions de nous avoir suivis et d'avoir participé à nos activités via notre newsletter !",
+    "de": "wir bestätigen Deine Abmeldung vom BENU Newsletter. Vielen Dank, dass Du uns und unsere Aktivitäten über unseren Newsletter begleitet hast.",
+    "fr": "nous confirmons ton désabonnement de la newsletter BENU. Nous te remercions de nous avoir suivis et d'avoir participé à nos activités via notre newsletter.",
     "en": "",
     "lu": ""
   },
