@@ -42,14 +42,16 @@
 				{{ trans('emails.new-order-digicash-1', [], $locale) }}
 			</p>
 			<p style="text-align: center; margin: 20px; font-weight: 600;">
-				<em>Infos Digicash à inclure ici</em>
+				<em>{{ trans('emails.new-order-digicash-phone', [], $locale) }}</em>
 			</p>
 			@elseif($order->payment_type == 3)
 			<p>
 				{{ trans('emails.new-order-transfer-1', [], $locale) }}
 			</p>
 			<p style="text-align: center; margin: 20px; font-weight: 600;">
-				<em>Infos bancaires à inclure ici</em>
+				<em>{{ trans('emails.new-order-transfer-1', [], $locale) }}</em><br/>
+				<em>{{ trans('emails.new-order-transfer-2', [], $locale) }}</em><br/>
+				<em>{{ trans('emails.new-order-transfer-3', [], $locale) }}</em>
 			</p>
 			@endif
 			<p>
