@@ -7524,6 +7524,7 @@ input[type=checkbox]:focus {
 
 .full-story {
   padding-top: 66px;
+  padding-bottom: 80px;
   color: #2E1414;
   line-height: 2rem;
 }
@@ -7541,11 +7542,12 @@ input[type=checkbox]:focus {
   margin-bottom: 35px;
 }
 .full-story__lowtitle {
-  text-align: center;
-  font: normal normal 700 33px/40px "Barlow Condensed";
+  text-align: left;
+  font: normal normal 700 26px/34px "Barlow Condensed";
   letter-spacing: 0px;
   margin-top: 65px;
   margin-bottom: 32px;
+  color: #D41C1B;
 }
 .full-story__section-title {
   text-align: center;

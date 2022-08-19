@@ -62,7 +62,7 @@ class GeneralController extends Controller
 
     public function showFullStory()
     {
-        return view('full-story');
+        return view('header.pages.full-story');
     }
 
     public function showAbout()
