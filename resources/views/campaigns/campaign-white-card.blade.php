@@ -121,10 +121,18 @@
 		<section class="single-campaign__section-3 scroll-grow-3" id="transition-2">
 			<!-- <img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
 			<div class="single-campaign__section-3__opacifier scroll-opacity-3" style="opacity: 0;"></div>
-			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container">
+			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container flex flex-col justify-center">
 				<h2 class="single-campaign__section-3__title">{{ __('campaigns.carte-blanche-section-3-title') }}</h2>
 
-				<div class="scroll-appearing-3">
+				<!-- <div class="scroll-appearing-3">
+					
+				</div> -->
+			</div>
+		</section>
+
+		<section class="single-campaign__section-3bis benu-container" id="transition-2-end">
+			<div class="flex justify-start flex-wrap">
+				<div class="single-campaign__section-3bis__txt flex flex-col lg:justify-end">
 					<p class="single-campaign__section-3__txt">
 						{{ __('campaigns.carte-blanche-txt-11') }}
 					</p>
@@ -137,10 +145,21 @@
 						<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}">{{ __('campaigns.carte-blanche-link-3') }}</a>
 					</p>
 				</div>
+				<div class="single-campaign__section-3bis__picture">
+					<img src="{{ asset('images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_4.jpg') }}" class="single-campaign__section-3bis__picture__img" />
+					<!-- <div class="single-campaign__section-3bis__picture__txt-container flex flex-col justify-center">
+						<p class="single-campaign__section-3bis__picture__txt single-campaign__section-3bis__picture__txt--base">
+							{{ __('campaigns.carte-blanche-txt-6') }}
+						</p>
+						<p class="single-campaign__section-3bis__picture__txt single-campaign__section-3bis__picture__txt--hover">
+							{{ __('campaigns.carte-blanche-txt-6') }}
+						</p>
+					</div> -->
+				</div>
 			</div>
 		</section>
 
-		<section class="single-campaign__section-4" id="transition-2-end">
+		<section class="single-campaign__section-4" id="section-3bis-end">
 			<blockquote class="single-campaign__section-4__quote w-11/12 md:4/5 lg:w-1/2 m-auto">
 				{{ __('campaigns.carte-blanche-quote-1') }} <span class="single-campaign__section-4__quote--highlight">{{ __('campaigns.carte-blanche-quote-2') }}</span> {{ __('campaigns.carte-blanche-quote-3') }}
 			</blockquote>
@@ -233,6 +252,11 @@
 			}
 			if ($(document).scrollTop() > ($('#header-end').offset().top - $(window).height())) {
 				$('.scroll-grow-1').css('background-attachment', 'scroll');
+
+				if($(window).width() > 768) {
+					relativeScroll = $(document).scrollTop() - $('#header-end').offset().top + $(window).height();
+					$('.single-campaign__section-1__txt').css('padding-bottom', relativeScroll / 4);
+				}
 			} else {
 				$('.scroll-grow-1').css('background-attachment', 'fixed');
 			}
@@ -268,6 +292,12 @@
 				$('.scroll-grow-3').css('background-attachment', 'scroll');
 			} else {
 				$('.scroll-grow-3').css('background-attachment', 'fixed');
+			}
+
+			// Last section text scroll
+			if ($(window).width() > 768 && $(document).scrollTop() > ($('#transition-2-end').offset().top) - $(window).height()) {
+				relativeScroll = $(document).scrollTop() - $('#transition-2-end').offset().top + $(window).height();
+				$('.single-campaign__section-3bis__txt').css('padding-bottom', relativeScroll / 4);
 			}
 		});
 	});

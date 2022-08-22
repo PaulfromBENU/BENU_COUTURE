@@ -13573,7 +13573,6 @@ input[type=checkbox]:focus {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  margin-bottom: 220px;
   position: relative;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -13814,6 +13813,7 @@ input[type=checkbox]:focus {
 }
 .single-campaign__section-3 {
   position: relative;
+  height: calc(100vh - 160px);
   padding-top: 20vh;
   padding-bottom: 55px;
   color: #FFFFFF;
@@ -13887,6 +13887,130 @@ input[type=checkbox]:focus {
 @media (min-width: 1720px) {
   .single-campaign__section-3__txt {
     font: normal normal 500 20px/38px "Barlow";
+  }
+}
+.single-campaign__section-3bis {
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1720px) {
+  .single-campaign__section-3bis {
+    padding-top: 150px;
+  }
+}
+.single-campaign__section-3bis__txt {
+  width: 55%;
+  margin-right: 5%;
+  text-align: left;
+  font: normal normal 500 18px/30px "Barlow";
+}
+@media (min-width: 1720px) {
+  .single-campaign__section-3bis__txt {
+    font: normal normal 500 20px/38px "Barlow";
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__section-3bis__txt {
+    font: normal normal 500 17px/26px "Barlow";
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 767px) {
+  .single-campaign__section-3bis__txt {
+    font: normal normal 500 16px/20px "Barlow";
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+}
+.single-campaign__section-3bis__txt p {
+  margin-bottom: 25px;
+}
+.single-campaign__section-3bis__picture {
+  width: 30%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  margin-top: -80px;
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__section-3bis__picture {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: -60px;
+  }
+}
+@media (max-width: 767px) {
+  .single-campaign__section-3bis__picture {
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: -40px;
+  }
+}
+.single-campaign__section-3bis__picture:hover .single-campaign__section-1__picture__img {
+  opacity: 0;
+}
+.single-campaign__section-3bis__picture:hover .single-campaign__section-1__picture__txt--base {
+  opacity: 0;
+  display: none;
+}
+.single-campaign__section-3bis__picture:hover .single-campaign__section-1__picture__txt--hover {
+  opacity: 1;
+  display: block;
+}
+.single-campaign__section-3bis__picture__img {
+  border-radius: 20px;
+  width: 100%;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__section-3bis__picture__img {
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .single-campaign__section-3bis__picture__img {
+    margin: auto;
+  }
+}
+.single-campaign__section-3bis__picture__txt-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 0px;
+  width: 100%;
+}
+.single-campaign__section-3bis__picture__txt {
+  font: normal normal 700 48px/64px "Barlow";
+  text-align: center;
+  transition: opacity 0.3s;
+}
+.single-campaign__section-3bis__picture__txt--base {
+  opacity: 1;
+  display: block;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+.single-campaign__section-3bis__picture__txt--hover {
+  opacity: 0;
+  display: none;
+  color: transparent;
+  background: url("/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_8.jpg");
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-position: center;
+  padding: 0 20px;
+}
+@media (min-width: 1720px) {
+  .single-campaign__section-3bis__picture__txt--hover {
+    background-size: cover;
   }
 }
 .single-campaign__section-4 {

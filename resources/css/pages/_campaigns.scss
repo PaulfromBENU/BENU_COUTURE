@@ -188,7 +188,7 @@
 		&__picture {
 			width: 40%;
 			min-height: fit-content;
-			margin-bottom: 220px;
+			// margin-bottom: 220px;
 			position: relative;
 			@include tablet {
 				width: 60%;
@@ -392,7 +392,7 @@
 	}
 	&__section-3 {
 		position: relative;
-		// height: calc(100vh - 160px);
+		height: calc(100vh - 160px);
 		padding-top: 20vh;
 		padding-bottom: 55px;
 		color: $white;
@@ -455,6 +455,114 @@
 			font: normal normal 500 18px/30px 'Barlow';
 			@include large {
 				font: normal normal 500 20px/38px 'Barlow';
+			}
+		}
+	}
+	&__section-3bis {
+		// padding-top: 80px;
+		padding-bottom: 50px;
+		position: relative;
+		z-index: 2;
+		@include large {
+			padding-top: 150px;
+		}
+		&__txt {
+			width: 55%;
+			margin-right: 5%;
+			text-align: left;
+			font: normal normal 500 18px/30px 'Barlow';
+			@include large {
+				font: normal normal 500 20px/38px 'Barlow';
+			}
+			@include tablet {
+				font: normal normal 500 17px/26px 'Barlow';
+				width: 100%;
+				margin: auto;
+				margin-bottom: 5%;
+			}
+			@include mobile {
+				font: normal normal 500 16px/20px 'Barlow';
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 5%;
+			}
+			p {
+				margin-bottom: 25px;
+			}
+		}
+		&__picture {
+			width: 30%;
+			min-height: fit-content;
+			margin-top: -80px;
+			// margin-bottom: 220px;
+			position: relative;
+			@include tablet {
+				width: 60%;
+				margin: auto;
+				margin-bottom: 5%;
+				margin-top: -60px;
+			}
+			@include mobile {
+				width: 100%;
+				margin-bottom: 5%;
+				margin-top: -40px;
+			}
+			&:hover {
+				.single-campaign__section-1__picture__img {
+					opacity: 0;
+				}
+				.single-campaign__section-1__picture__txt--base {
+					opacity: 0;
+					display: none;
+				}
+				.single-campaign__section-1__picture__txt--hover {
+					opacity: 1;
+					display: block;
+				}
+			}
+			&__img {
+				border-radius: 20px;
+				width: 100%;
+				transition: opacity 0.2s;
+				opacity: 1;
+				@include tablet {
+					margin: auto;
+				}
+				@include mobile {
+					margin: auto;
+				}
+			}
+			&__txt-container {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				padding: 0px;
+				width: 100%;
+			}
+			&__txt {
+				font: normal normal 700 48px/64px 'Barlow';
+				text-align: center;
+				transition: opacity 0.3s;
+				&--base {
+					opacity: 1;
+					display: block;
+					color: $white;
+					padding: 0 20px;
+				}
+				&--hover {
+					opacity: 0;
+					display: none;
+					color: transparent;
+					background: url('/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_8.jpg');
+					background-size: cover;
+					@include large {
+						background-size: cover;
+					}
+					background-clip: text;
+					background-position: center;
+					padding: 0 20px;
+					// -webkit-text-fill-color: transparent;
+				}
 			}
 		}
 	}
