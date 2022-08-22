@@ -359,16 +359,26 @@
 			if (!$('.about__general__content__slider').is(':animated')) {
 				let leftPos = $('.about__general__content__slider').scrollLeft();
 				let fullSliderWidth = $('.about__general__content__slider').get(0).scrollWidth - $('.about__general__content__slider').width();
-	  			$('.about__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 4}, 'fast');
+				if ($(window).width() > 768) {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 4}, 'fast');
+	  			} else {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 10}, 'fast');
+	  			}
 
 	  			let leftPosScroll = parseInt($('.about__general__content__slider__bar__scroll--red').css('left'));
 	  			let fullBarWidth = $('.about__general__content__slider__bar__scroll').width();
 	  			let redBarWidth = fullBarWidth / 4;
-	  			if (leftPosScroll < (3 * redBarWidth - 20)) {//Margin to avoid bugs
-	  				// $('.about__general__content__slider__bar__scroll--red').animate({left: leftPosScroll + redBarWidth}, 'fast');
-	  			} else {
-	  				$('.about__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
-	  			}
+	  			if ($(window).width() > 768) {
+		  			if (leftPosScroll >= (3 * redBarWidth - 20)) {//Margin to avoid bugs
+		  				$('.about__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
+		  			}
+		  		} //else {
+		  		// 	if (leftPosScroll >= (5 / 2 * redBarWidth - 20)) {//Margin to avoid bugs
+		  		// 		$('.about__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
+		  		// 	} else {
+		  		// 		$('.about__general__content__slider__bar__scroll--red').css('left', leftPosScroll + fullBarWidth / 9);
+		  		// 	}
+		  		// }
 	  		}
 	 	});
 
@@ -376,7 +386,12 @@
 	 		if (!$('.about__general__content__slider').is(':animated')) {
 				let leftPos = $('.about__general__content__slider').scrollLeft();
 	  			let fullSliderWidth = $('.about__general__content__slider').get(0).scrollWidth - $('.about__general__content__slider').width();
-	  			$('.about__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 4}, 'fast');
+
+	  			if ($(window).width() > 768) {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 4}, 'fast');
+	  			} else {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 10}, 'fast');
+	  			}
 
 	  			let leftPosScroll = $('.about__general__content__slider__bar__scroll--red').position().left;
 	  			let fullBarWidth = $('.about__general__content__slider__bar__scroll').width();
@@ -395,9 +410,9 @@
 			let fullSliderWidth = $('.about__general__content__slider').get(0).scrollWidth - $('.about__general__content__slider').width();
 			let ratio = leftPos / fullSliderWidth;
 
- 			console.log(ratio);
- 			$('.about__general__content__slider__bar__scroll--red').css('left', $('.about__general__content__slider__bar__scroll').width() * ratio * 0.75);
- 			console.log($('.about__general__content__slider__bar__scroll--red').css('left'));
+			if ($(window).width() > 768) {
+ 				$('.about__general__content__slider__bar__scroll--red').css('left', $('.about__general__content__slider__bar__scroll').width() * ratio * 0.75);
+ 			}
 
 	 	})
 	});
