@@ -13694,6 +13694,10 @@ input[type=checkbox]:focus {
 }
 .single-campaign__transition-1__txt-container {
   height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .single-campaign__transition-1__title {
   text-align: center;
