@@ -4,7 +4,7 @@
     @else
         @foreach($medias as $media)
             @if($media->doc_name !== null && $media->doc_name !== "")
-                <a href="{{ asset('storage/'.$media->doc_name) }}" class="media-links__card" download>
+                <a href="{{ asset($media->doc_name) }}" class="media-links__card" download>
             @else
                 <a href="{{ $media->link }}" target="_blank" class="media-links__card">
             @endif
