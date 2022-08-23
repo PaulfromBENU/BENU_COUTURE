@@ -14088,3 +14088,190 @@ input[type=checkbox]:focus {
   border-top: solid 1px lightgrey;
   padding-top: 15px;
 }
+
+.media-links__card {
+  display: block;
+  width: 30%;
+  margin: 40px 1.666665%;
+  min-height: 200px;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px #CFCFCF80;
+  transition: all 0.2s;
+}
+@media (max-width: 767px) {
+  .media-links__card {
+    width: 100%;
+    margin: 40px 0px;
+  }
+}
+.media-links__card:hover {
+  box-shadow: 0px 0px 60px #CFCFCFF0;
+}
+.media-links__card__icon {
+  text-align: center;
+  height: 75px;
+  margin-bottom: 40px;
+}
+.media-links__card h3 {
+  font: normal normal 700 28px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .media-links__card h3 {
+    font: normal normal 700 24px/26px "Barlow Condensed";
+  }
+}
+@media (max-width: 767px) {
+  .media-links__card h3 {
+    font: normal normal 700 20px/22px "Barlow Condensed";
+  }
+}
+.media-links__card__subtxt {
+  text-align: center;
+  font: normal normal 500 12px/28px "Barlow";
+  letter-spacing: 0px;
+  margin-bottom: 20px;
+}
+.media-links__card__language {
+  width: 50px;
+  margin: auto;
+  background: #D41C1B;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  text-align: center;
+  font: normal normal 500 20px/24px "Barlow Condensed";
+  letter-spacing: 0px;
+}
+.media-links__accordion__header {
+  margin-bottom: 30px;
+  background: #D41C1B 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  color: #FFFFFF;
+  padding: 34px 50px 34px 50px;
+  text-align: left;
+  font: normal normal 700 28px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__header {
+    font: normal normal 700 18px/28px "Barlow Condensed";
+    padding: 14px 20px;
+    margin-bottom: 10px;
+  }
+}
+.media-links__accordion__header:hover {
+  background: #2E1414;
+}
+.media-links__accordion__header__title {
+  margin-right: 15px;
+}
+.media-links__accordion__header__arrow {
+  margin-right: 15px;
+  width: 30px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__header__arrow {
+    margin-right: 0;
+  }
+}
+.media-links__accordion__header__chevron {
+  margin-top: 7px;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+  right: 0px;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__header__chevron {
+    right: 0px;
+    width: 25px;
+  }
+}
+.media-links__accordion__header__chevron--active {
+  transform: rotate(180deg);
+}
+.media-links__accordion__answer {
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__answer {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .media-links__accordion__answer button {
+    width: 100% !important;
+    margin: 0 !important;
+    margin-bottom: 10px !important;
+  }
+}
+.media-links__accordion__answer li {
+  border-bottom: 1px solid #D9D9D9;
+}
+.media-links__accordion__answer__txt {
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__answer__txt {
+    font: normal normal 500 15px/25px "Barlow";
+  }
+}
+.media-links__accordion__answer__subanswer {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: left;
+  font: normal normal 500 16px/28px "Barlow";
+  letter-spacing: 0px;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__answer__subanswer {
+    font: normal normal 500 15px/25px "Barlow";
+  }
+}
+.media-links__accordion__answer__header {
+  text-align: left;
+  font: normal normal 700 22px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  border-bottom: 2px solid transparent;
+  margin-top: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  min-height: 40px;
+}
+@media (max-width: 767px) {
+  .media-links__accordion__answer__header {
+    font: normal normal 700 16px/24px "Barlow Condensed";
+  }
+}
+.media-links__accordion__answer__header--active {
+  border-bottom: 2px solid #D41C1B;
+  color: #D41C1B;
+}
+.media-links__accordion__answer__header__plus {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.media-links__accordion__answer__header__minus {
+  font-size: 3.1rem;
+  font-weight: 500;
+}
+.media-links__more {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
