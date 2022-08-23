@@ -202,6 +202,7 @@ class PhotoImport extends Page
 
             if ($all_clear == 1) {
                 $updated_article = Article::find($this->article_id);
+                $updated_article->update(['checked' => '0']);
                 if (!($updated_article->available_shops()->get()->contains($this->shop_id))) {
                     $updated_article->shops()->attach($this->shop_id, [
                         'stock' => 1,

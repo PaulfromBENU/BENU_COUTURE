@@ -22,6 +22,8 @@ class CreationResource extends Resource
 
     protected static ?string $navigationGroup = 'Creations & Variations';
 
+    protected static ?int $navigationSort = 1;
+
     protected static function shouldRegisterNavigation(): bool
     {
         return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');

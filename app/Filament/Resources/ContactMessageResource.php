@@ -58,13 +58,13 @@ class ContactMessageResource extends Resource
         self::$pluralLabel = "User messages (".ContactMessage::where('is_read', '0')->count().")";
         return $table
             ->columns([
-                Tables\Columns\BooleanColumn::make('is_read'),
-                Tables\Columns\BooleanColumn::make('is_answered'),
-                Tables\Columns\TextColumn::make('message'),
+                Tables\Columns\BooleanColumn::make('is_read')->sortable(),
+                Tables\Columns\BooleanColumn::make('is_answered')->sortable(),
+                Tables\Columns\TextColumn::make('message')->limit(50),
                 Tables\Columns\TextColumn::make('first_name'),
-                Tables\Columns\TextColumn::make('last_name'),
+                Tables\Columns\TextColumn::make('last_name')->searchable(),
                 Tables\Columns\TextColumn::make('gender'),
-                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
