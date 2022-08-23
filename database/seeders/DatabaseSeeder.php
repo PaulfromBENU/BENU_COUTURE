@@ -21,12 +21,14 @@ class DatabaseSeeder extends Seeder
             // Required before importation, to clear updated tables and relationship tables
             ArticlePhotoSeeder::class,
             ArticleShopSeeder::class,
-            ArticleCareRecommendationSeeder::class,
-            ArticleCompositionSeeder::class,
-            CreationCreationGroupSeeder::class,
             DeliveryCountrySeeder::class,
             TranslationSeeder::class,
             ArticleSeeder::class,
+            CreationCreationGroupSeeder::class,
+
+            // Not required anymore
+            // ArticleCareRecommendationSeeder::class,
+            // ArticleCompositionSeeder::class,
 
             // Required before importation only in case of common DB update
             // UserSeeder::class,

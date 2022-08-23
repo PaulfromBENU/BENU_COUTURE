@@ -9,6 +9,7 @@
 @endsection
 
 @section('main-content')
+<!-- https://developer.paypal.com/integration-builder -->
 	<section class="w-2/3 m-auto text-center">
 		<h1 class="text-3xl primary-color mb-5 font-bold">{{ __('payment.process-payment-by-paypal') }}</h1>
 		<div class="mb-5">

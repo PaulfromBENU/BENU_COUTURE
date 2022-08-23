@@ -14,20 +14,6 @@
     "translation_key_explanation": "fabric.explanation-coton"
   },
   {
-    "name": "cotton_crepe",
-    "fabric_fr": "Crêpe de coton",
-    "fabric_lu": "Kottengs Krepp",
-    "fabric_de": "Baumwollen Krepp",
-    "fabric_en": "Cotton crepe",
-    "translation_key_fabric": "fabric.cotton_crepe",
-    "explanation_lu": "Naturfaser",
-    "explanation_de": "Naturfaser",
-    "explanation_en": "Natural fibre",
-    "explanation_fr": "Fibre naturelle",
-    "picture": "crepe_coton.jpg",
-    "translation_key_explanation": "fabric.explanation-cotton-crepe"
-  },
-  {
     "name": "jersey",
     "fabric_fr": "Jersey de coton",
     "fabric_lu": "Jersey aus Kotteng",

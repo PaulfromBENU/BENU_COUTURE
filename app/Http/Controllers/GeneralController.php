@@ -320,18 +320,27 @@ class GeneralController extends Controller
     {
         if(auth::check() && auth::user()->role == 'admin') {
         // if(1 == 1) {
+            echo "*** Time limit set to 3600s ***<br/>";
             set_time_limit(3600);
+            // echo "*** Creating folders with creations names in 'to_be_processed' folder' ***<br/>";
             // $this->createModelsFolders();
             // Article::query()->update(['checked' => '1']);
 
-            // Run db:seed before executing the following, to fully clear and reset data before import
-            echo "*** Importation started...<br/>";
+            // !!! Run db:seed before executing the following, to fully clear and reset data before import
+
+            echo "*** Data importation started ***<br/>";
             // $this->importDataFromSophie();
             // $this->importCreationsFromLou();
             // $this->importCreationsFromSabine();
+
+            // echo "*** Pictures and articles importation started ***<br/>";
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
-            $this->importTranslations();
+
+            // echo "*** Translations importation started ***<br/>";
+            // $this->importTranslations();
+
+            echo "*** Importation process complete! :) ***<br/>";
         } else {
             return redirect()->route('login-fr');
         }
