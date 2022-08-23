@@ -88,11 +88,26 @@ class GeneralController extends Controller
     public function showNews(string $slug = '')
     {
         if ($slug == '') {
-            $all_news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
+            if (app('env') == 'stage' || app('env') == 'local') {
+                $all_news = NewsArticle::orderBy('updated_at', 'desc')->get();
+            } else {
+                $all_news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
+            }
             return view('news', ['all_news' => $all_news]);
         }
 
-        if (NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
+        if (NewsArticle::where('slug_'.app()->getLocale(), $slug)->where('is_ready', '1')->count() > 0) {
+            $news = NewsArticle::where('slug_'.app()->getLocale(), $slug)->first();
+            $previous_news = NewsArticle::where('created_at', '>', $news->created_at)
+                                          ->where('is_ready', '1')
+                                          ->orderBy('created_at', 'asc')
+                                          ->first();
+            $next_news = NewsArticle::where('created_at', '<', $news->created_at)
+                                      ->where('is_ready', '1')
+                                      ->orderBy('created_at', 'desc')
+                                      ->first();
+            return view('news-single', ['news' => $news, 'previous_news' => $previous_news, 'next_news' => $next_news]);
+        } elseif ((app('env') == 'stage' || app('env') == 'local') && NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
             $news = NewsArticle::where('slug_'.app()->getLocale(), $slug)->first();
             $previous_news = NewsArticle::where('created_at', '>', $news->created_at)
                                           ->where('is_ready', '1')
