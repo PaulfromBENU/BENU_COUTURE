@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
+use Carbon\Carbon;
+
 use App\Models\Article;
 use App\Models\Cart;
 use App\Models\DeliveryCountry;
@@ -190,16 +192,20 @@ class SaleController extends Controller
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 } elseif ($current_order->payment_type == '1') { // Case PayPal
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 } elseif ($current_order->payment_type == '2') { // Case Payconiq
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '3') { // Case bank transfer
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 } elseif ($current_order->payment_type == '5') { // Case Paid in shop
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 }
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher) if already paid

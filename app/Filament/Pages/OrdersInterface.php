@@ -195,6 +195,7 @@ class OrdersInterface extends Page
         $order->status = 2;// Order confirmed
         $order->payment_status = 1;// Payment not received
         $order->delivery_status = 1;// Not ready for delivery or collect
+        $order->transaction_date = null;//Transaction date for accountability
         if($order->save()) {
             $this->initializeOrders();
         }
@@ -238,6 +239,7 @@ class OrdersInterface extends Page
         $order->status = 2;// Paid
         $order->payment_status = 2;// Payment received
         $order->delivery_status = 1;// Not ready for delivery or collect
+        $order->transaction_date = Carbon::now()->toDateTimeString();//Transaction date for accountability
         if($order->save()) {
             if ($order->pdf_vouchers->count() > 0) {
                 foreach ($order->pdf_vouchers as $voucher) {

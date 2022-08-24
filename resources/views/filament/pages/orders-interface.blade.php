@@ -22,7 +22,7 @@
 				@else
 					<div>
 						<label>Delivery tracking number:</label><br/>
-						<input type="text" name="delivery_link" wire:model="delivery_link.{{ $new_order->id }}" placeholder="https://...">
+						<input type="text" name="delivery_link" wire:model="delivery_link.{{ $new_order->id }}" placeholder="P&T tracking number">
 					</div>
 					<button wire:click="markAsSentByPost({{ $new_order->id }})" style="margin-top: 23px;">
 						Mark as 'Sent to customer'
@@ -118,9 +118,9 @@
 								<h4 class="text-xl font-bold">
 									<strong>{{ strtoupper($article->name) }}</strong>
 								</h4>
-								<p>
+								<!-- <p>
 									Price: <strong class="text-xl">{{ $article->creation->price }}&euro;</strong>
-								</p>
+								</p> -->
 								<p>
 									Color: <strong class="text-xl">{{ $article->color->name }}</strong>
 								</p>
@@ -334,9 +334,9 @@
 									<h4 class="text-xl font-bold">
 										<strong>{{ strtoupper($article->name) }}</strong>
 									</h4>
-									<p>
+									<!-- <p>
 										Price: <strong class="text-xl">{{ $article->creation->price }}&euro;</strong>
-									</p>
+									</p> -->
 									<p>
 										Color: <strong class="text-xl">{{ $article->color->name }}</strong>
 									</p>
