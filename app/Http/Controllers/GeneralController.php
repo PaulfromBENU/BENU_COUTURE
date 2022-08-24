@@ -108,6 +108,7 @@ class GeneralController extends Controller
                                       ->first();
             return view('news-single', ['news' => $news, 'previous_news' => $previous_news, 'next_news' => $next_news]);
         } elseif ((app('env') == 'stage' || app('env') == 'local') && NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
+            // In stage or local, articles can be displayed for test even if not validated.
             $news = NewsArticle::where('slug_'.app()->getLocale(), $slug)->first();
             $previous_news = NewsArticle::where('created_at', '>', $news->created_at)
                                           ->where('is_ready', '1')

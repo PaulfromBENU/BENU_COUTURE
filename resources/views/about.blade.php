@@ -25,6 +25,27 @@
 	<h2 class="w-11/12 lg:w-full m-auto about__subtitle">{{ __('about.subtitle-top') }}</h2>
 	<h1 class="w-11/12 lg:w-full m-auto about__title">{{ __('about.title-top') }}</h1>
 
+	<ul class="service__nav flex justify-between mobile-only" style="border-bottom: solid 1px lightgrey; overflow: hidden; max-width: min(90vw, 380px); margin: auto; margin-bottom: 40px;">
+		<!-- <li class="service__nav__arrow service__nav__arrow--left">
+			@svg('chevron-down')
+		</li> -->
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-creations').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-1') }}</button>
+		</li>
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-services').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-2') }}</button>
+		</li>
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-team').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-3') }}</button>
+		</li>
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-materials').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-4') }}</button>
+		</li>
+		<!-- <div class="service__nav__arrow service__nav__arrow--right mobile-only">
+			@svg('chevron-down')
+		</div> -->
+	</ul>
+
 	<h3 id="about-chapter-creations" class="about__section-title w-11/12 lg:w-full m-auto">
 		{{ __('about.section-title-1') }}
 	</h3>
