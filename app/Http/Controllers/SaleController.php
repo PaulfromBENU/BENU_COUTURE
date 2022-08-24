@@ -265,6 +265,16 @@ class SaleController extends Controller
         }
     }
 
+    public function downloadInvoice($order_code)
+    {
+        if (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
+            $clean_order_code = substr($order_code, 4, 6);
+            $order = Order::where('unique_id', substr($order_code, 4, 6))->first();
+            $pdf = $this->downloadInvoicePdf($clean_order_code);
+            return $pdf->download('benu-invoice-'.$order->unique_id.'.pdf');
+        }
+    }
+
     public function displayReturn($order_code)
     {
         if (strlen($order_code) == 28) {

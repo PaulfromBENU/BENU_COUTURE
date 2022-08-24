@@ -30,10 +30,10 @@
 		</form>
 		@if($invoices->count() > 0)
 			<h3>
-				All orders - click to open invoice
+				All orders - click to display and download invoice
 			</h3>
 			@foreach($invoices as $invoice)
-				<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$invoice->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="accounting-invoices__invoice">
+				<a target="_blank" href="{{ route('invoice-download-en', ['order_code' => \Illuminate\Support\Str::random(4).$invoice->unique_id.\Illuminate\Support\Str::random(12)]) }}" class="accounting-invoices__invoice">
 					{{ $invoice->unique_id }} - Paid on {{ Carbon\Carbon::parse($invoice->transaction_date)->format('d\/m\/Y') }} - Total {{ $invoice->total_price }}&euro;
 				</a>
 			@endforeach

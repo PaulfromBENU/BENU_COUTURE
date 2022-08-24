@@ -112,6 +112,7 @@ if (app('env') == 'landing') {
 		// Display PDF documents
 		Route::get('/'.trans("slugs.return", [], "lu").'/{order_code}', 'SaleController@displayReturn')->name('return-lu');
 		Route::get('/'.trans("slugs.invoice", [], "lu").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-lu');
+		Route::get('/'.trans("slugs.invoice-download", [], "lu").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-lu');
 		Route::get('/'.trans("slugs.show-voucher", [], "lu").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-lu');
 
 		// Footer Pages
@@ -176,6 +177,7 @@ if (app('env') == 'landing') {
 		// Display PDF documents
 		Route::get('/'.trans("slugs.return", [], "fr").'/{order_code}', 'SaleController@displayReturn')->name('return-fr');
 		Route::get('/'.trans("slugs.invoice", [], "fr").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
+		Route::get('/'.trans("slugs.invoice-download", [], "fr").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-fr');
 		Route::get('/'.trans("slugs.show-voucher", [], "fr").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-fr');
 
 		// Footer Pages
@@ -247,6 +249,7 @@ if (app('env') == 'landing') {
 		// Display PDF documents
 		Route::get('/'.trans("slugs.return", [], "en").'/{order_code}', 'SaleController@displayReturn')->name('return-en');
 		Route::get('/'.trans("slugs.invoice", [], "en").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-en');
+		Route::get('/'.trans("slugs.invoice-download", [], "en").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-en');
 		Route::get('/'.trans("slugs.show-voucher", [], "en").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-en');
 
 		// Footer Pages
@@ -310,6 +313,7 @@ if (app('env') == 'landing') {
 		// Display PDF documents
 		Route::get('/'.trans("slugs.return", [], "de").'/{order_code}', 'SaleController@displayReturn')->name('return-de');
 		Route::get('/'.trans("slugs.invoice", [], "de").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-de');
+		Route::get('/'.trans("slugs.invoice-download", [], "de").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-de');
 		Route::get('/'.trans("slugs.show-voucher", [], "de").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-de');
 
 		// Footer Pages

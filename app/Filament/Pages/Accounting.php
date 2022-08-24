@@ -9,8 +9,12 @@ use Carbon\Carbon;
 
 use App\Models\Order;
 
+use App\Traits\PDFGenerator;
+
 class Accounting extends Page
 {
+    use PDFGenerator;
+
     protected static ?string $navigationIcon = 'heroicon-o-currency-euro';
 
     protected static string $view = 'filament.pages.accounting';

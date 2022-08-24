@@ -10547,6 +10547,7 @@ input[type=checkbox]:focus {
   padding: 10px 0px;
   margin-left: 10px;
   border-bottom: solid 1px lightgrey;
+  cursor: pointer;
   transition: all 0.2s;
 }
 .accounting-invoices__invoice:hover {
