@@ -115,6 +115,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice-download", [], "lu").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-lu');
 		Route::get('/'.trans("slugs.show-voucher", [], "lu").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-lu');
 
+		// CSV export for admin
+		Route::get('/invoice-export-csv/{year}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-lu');
+
 		// Footer Pages
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "lu"), 'GeneralController@footerLegal')->name('footer.legal-lu');
 		Route::get('/'.trans("slugs.footer-policy", [], "lu"), 'GeneralController@showPolicy')->name('footer.policy-lu');
@@ -179,6 +182,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "fr").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
 		Route::get('/'.trans("slugs.invoice-download", [], "fr").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-fr');
 		Route::get('/'.trans("slugs.show-voucher", [], "fr").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-fr');
+
+		// CSV export for admin
+		Route::get('/invoice-export-csv/{year}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-fr');
 
 		// Footer Pages
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "fr"), 'GeneralController@footerLegal')->name('footer.legal-fr');
@@ -252,6 +258,9 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice-download", [], "en").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-en');
 		Route::get('/'.trans("slugs.show-voucher", [], "en").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-en');
 
+		// CSV export for admin
+		Route::get('/invoice-export-csv/{year}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-en');
+
 		// Footer Pages
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "en"), 'GeneralController@footerLegal')->name('footer.legal-en');
 		Route::get('/'.trans("slugs.footer-policy", [], "en"), 'GeneralController@showPolicy')->name('footer.policy-en');
@@ -315,6 +324,8 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "de").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-de');
 		Route::get('/'.trans("slugs.invoice-download", [], "de").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-de');
 		Route::get('/'.trans("slugs.show-voucher", [], "de").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-de');
+		// CSV export for admin
+		Route::get('/invoice-export-csv/{year}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-de');
 
 		// Footer Pages
 		Route::get('/'.trans("slugs.footer-legal-mentions", [], "de"), 'GeneralController@footerLegal')->name('footer.legal-de');

@@ -16,6 +16,7 @@ use App\Models\Media;
 use App\Mail\NewsletterConfirmation;
 use App\Mail\NewsletterConfirmationForAdmin;
 use App\Mail\NewsletterCancelConfirmationForAdmin;
+use App\Exports\OrdersExport;
 
 use App\Traits\ArticleAnalyzer;
 use App\Traits\DataImporter;
@@ -23,6 +24,7 @@ use App\Traits\DataImporter;
 use App\Http\Requests\NewsletterRequest;
 
 use JeroenDesloovere\VCard\VCard;
+use Maatwebsite\Excel\Facades\Excel;
 
 class GeneralController extends Controller
 {
@@ -329,6 +331,14 @@ class GeneralController extends Controller
             'home_items' => $home_items, 
             'news' => $news,
         ]);
+    }
+
+
+    public function exportOrdersData(int $year) 
+    {
+        if (auth()->check() && auth()->user()->role == 'admin') {
+            return Excel::download(new OrdersExport($year), 'orders-'.$year.'.csv');
+        }
     }
 
 

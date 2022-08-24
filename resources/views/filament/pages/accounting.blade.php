@@ -39,4 +39,11 @@
 			@endforeach
 		@endif
 	</div>
+
+	<h2>
+		Full orders export in CSV
+	</h2>
+	<div>
+		<a href="{{ route('export-invoice-csv-en', ['year' => 2022]) }}">Download full export 2022</a>
+	</div>
 </x-filament::page>
