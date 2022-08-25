@@ -13474,6 +13474,16 @@ input[type=checkbox]:focus {
     background-size: cover;
   }
 }
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .single-campaign__header {
+    border: solid white 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__header {
+    border: solid white 20px;
+  }
+}
 @media (max-width: 767px) {
   .single-campaign__header {
     border: solid white 20px;
@@ -13722,6 +13732,16 @@ input[type=checkbox]:focus {
     background-size: cover;
   }
 }
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .single-campaign__transition-1 {
+    border: solid #FFFFFF 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__transition-1 {
+    border: solid #FFFFFF 20px;
+  }
+}
 @media (max-width: 767px) {
   .single-campaign__transition-1 {
     border: solid #FFFFFF 20px;
@@ -13881,6 +13901,17 @@ input[type=checkbox]:focus {
   background-size: cover;
   border: solid #FFFFFF 60px;
   z-index: 1;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .single-campaign__section-3 {
+    border: solid #FFFFFF 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__section-3 {
+    border: solid #FFFFFF 20px;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 767px) {
   .single-campaign__section-3 {

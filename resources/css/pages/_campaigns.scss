@@ -63,6 +63,12 @@
 		background-size: cover;
 		z-index: 1;
 		border: solid white 60px;
+		@include intermediate {
+			border: solid white 20px;
+		}
+		@include tablet {
+			border: solid white 20px;
+		}
 		@include mobile {
 			// height: calc(100vh - 120px);
 			border: solid white 20px;
@@ -274,6 +280,12 @@
 		@include large {
 			background-size: cover;
 		}
+		@include intermediate {
+			border: solid $white 20px;
+		}
+		@include tablet {
+			border: solid $white 20px;
+		}
 		@include mobile {
 			border: solid $white 20px;
 		}
@@ -406,6 +418,13 @@
 		background-size: cover;
 		border: solid $white 60px;
 		z-index: 1;
+		@include intermediate {
+			border: solid $white 20px;
+		}
+		@include tablet {
+			border: solid $white 20px;
+			margin-bottom: 30px;
+		}
 		@include mobile {
 			border: solid $white 20px;
 			height: 30vh;
