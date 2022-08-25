@@ -26,6 +26,7 @@
                     </h3>
                     <p class="media-links__card__subtxt">
                         {{ Carbon\Carbon::parse($media->publication_date)->format('m.Y') }}
+                        @if($media->editor !== null) | {{ ucfirst($media->editor) }}@endif
                     </p>
                     <div class="media-links__card__language">
                         {{ $media->language }}

@@ -55,6 +55,8 @@ class MediaResource extends Resource
                         'fr' => 'French',
                     ])
                     ->required(),
+                Forms\Components\TextInput::make('editor')
+                    ->maxLength(255),
                 Forms\Components\DatePicker::make('publication_date'),
                 // Forms\Components\TextInput::make('doc_name')
                 //     ->maxLength(255),
@@ -79,6 +81,7 @@ class MediaResource extends Resource
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('family'),
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('editor'),
                 Tables\Columns\TextColumn::make('language'),
                 Tables\Columns\TextColumn::make('publication_date')
                     ->date(),

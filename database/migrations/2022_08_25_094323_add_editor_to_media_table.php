@@ -14,7 +14,7 @@ class AddEditorToMediaTable extends Migration
     public function up()
     {
         Schema::table('media', function (Blueprint $table) {
-            //
+            $table->string('editor')->after('title')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddEditorToMediaTable extends Migration
     public function down()
     {
         Schema::table('media', function (Blueprint $table) {
-            //
+            $table->dropColumn('editor');
         });
     }
 }
