@@ -251,13 +251,12 @@
 				$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
 			}
 			if ($(document).scrollTop() > ($('#header-end').offset().top - $(window).height())) {
-				$('.scroll-grow-1').css('background-attachment', 'scroll');
-
 				if($(window).width() > 768) {
+					$('.scroll-grow-1').css('background-attachment', 'scroll');
 					relativeScroll = $(document).scrollTop() - $('#header-end').offset().top + $(window).height();
 					$('.single-campaign__section-1__txt').css('padding-bottom', relativeScroll / 4);
 				}
-			} else {
+			} else if ($(window).width() > 768) {
 				$('.scroll-grow-1').css('background-attachment', 'fixed');
 			}
 
@@ -270,13 +269,15 @@
 				// $('.scroll-appearing-1').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}
 			if ($(document).scrollTop() > ($('#transition-1-end').offset().top - $(window).height())) {
-				$('.scroll-grow-2').css('background-attachment', 'scroll');
+				if ($(window).width() > 768) {
+					$('.scroll-grow-2').css('background-attachment', 'scroll');
+				}
 
 				if($(window).width() > 768) {
 					relativeScroll = $(document).scrollTop() - $('#transition-1-end').offset().top + $(window).height();
 					$('.single-campaign__section-2__picture').css('margin-top', 10 - relativeScroll / 4);
 				}
-			} else {
+			} else if ($(window).width() > 768) {
 				$('.scroll-grow-2').css('background-attachment', 'fixed');
 			}
 
@@ -288,10 +289,12 @@
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
 				$('.scroll-appearing-3').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}
-			if ($(document).scrollTop() > ($('#transition-2-end').offset().top - $(window).height())) {
-				$('.scroll-grow-3').css('background-attachment', 'scroll');
-			} else {
-				$('.scroll-grow-3').css('background-attachment', 'fixed');
+			if ($(window).width() > 768) {
+				if ($(document).scrollTop() > ($('#transition-2-end').offset().top - $(window).height())) {
+					$('.scroll-grow-3').css('background-attachment', 'scroll');
+				} else {
+					$('.scroll-grow-3').css('background-attachment', 'fixed');
+				}
 			}
 
 			// Last section text scroll

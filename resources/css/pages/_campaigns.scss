@@ -404,13 +404,16 @@
 		background-position: bottom;
 		background-attachment: fixed;
 		background-size: cover;
-		@include large {
-			background-size: cover;
-		}
 		border: solid $white 60px;
 		z-index: 1;
 		@include mobile {
 			border: solid $white 20px;
+			height: 30vh;
+			padding-top: 4vh;
+			padding-bottom: 0;
+			margin-bottom: 30px;
+			background-attachment: scroll;
+			background-size: cover;
 		}
 		img {
 			position: absolute;
@@ -450,7 +453,7 @@
 				font: normal normal 700 70px/84px 'Barlow Condensed';
 			}
 			@include mobile {
-				font: normal normal 700 50px/64px 'Barlow Condensed';
+				font: normal normal 700 45px/64px 'Barlow Condensed';
 			}
 		}
 		&__txt {
@@ -504,12 +507,12 @@
 				width: 60%;
 				margin: auto;
 				margin-bottom: 5%;
-				margin-top: -60px;
+				margin-top: -40px;
 			}
 			@include mobile {
 				width: 100%;
 				margin-bottom: 5%;
-				margin-top: -40px;
+				margin-top: 0px;
 			}
 			&:hover {
 				.single-campaign__section-1__picture__img {
@@ -620,6 +623,10 @@
 				font: normal normal 600 22px/40px 'Barlow';
 				width: 60%;
 				margin: auto;
+				@include mobile {
+					width: 90%;
+					font: normal normal 600 18px/30px 'Barlow';
+				}
 			}
 			&__signature {
 				font: normal normal 500 16px/28px 'Barlow';

@@ -13882,14 +13882,15 @@ input[type=checkbox]:focus {
   border: solid #FFFFFF 60px;
   z-index: 1;
 }
-@media (min-width: 1720px) {
-  .single-campaign__section-3 {
-    background-size: cover;
-  }
-}
 @media (max-width: 767px) {
   .single-campaign__section-3 {
     border: solid #FFFFFF 20px;
+    height: 30vh;
+    padding-top: 4vh;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    background-attachment: scroll;
+    background-size: cover;
   }
 }
 .single-campaign__section-3 img {
@@ -13934,7 +13935,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .single-campaign__section-3__title {
-    font: normal normal 700 50px/64px "Barlow Condensed";
+    font: normal normal 700 45px/64px "Barlow Condensed";
   }
 }
 .single-campaign__section-3__txt {
@@ -14000,14 +14001,14 @@ input[type=checkbox]:focus {
     width: 60%;
     margin: auto;
     margin-bottom: 5%;
-    margin-top: -60px;
+    margin-top: -40px;
   }
 }
 @media (max-width: 767px) {
   .single-campaign__section-3bis__picture {
     width: 100%;
     margin-bottom: 5%;
-    margin-top: -40px;
+    margin-top: 0px;
   }
 }
 .single-campaign__section-3bis__picture:hover .single-campaign__section-1__picture__img {
@@ -14129,6 +14130,12 @@ input[type=checkbox]:focus {
   font: normal normal 600 22px/40px "Barlow";
   width: 60%;
   margin: auto;
+}
+@media (max-width: 767px) {
+  .single-campaign__section-4__quote-2__txt {
+    width: 90%;
+    font: normal normal 600 18px/30px "Barlow";
+  }
 }
 .single-campaign__section-4__quote-2__signature {
   font: normal normal 500 16px/28px "Barlow";
