@@ -40,6 +40,9 @@ function activateMediasAccordeon()
 		$('.media-links__accordion__answer').hide();
 		if (status == 'none') {
 			$(this).parent().children('.media-links__accordion__answer').fadeIn('slow');
+			$('html, body').animate({
+		        scrollTop: $("#medias-title").offset().top
+		    }, 500);
 		}
 	});
 

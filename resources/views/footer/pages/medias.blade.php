@@ -23,7 +23,7 @@
 @section('main-content')
 	<section class="footer-medias w-4/5 lg:w-1/2 m-auto">
 		<h3 class="footer-medias__subtitle">{{ __('footer.medias-subtitle') }}</h3>
-		<h1 class="footer-medias__title">{{ __('footer.medias-title') }}</h1>
+		<h1 class="footer-medias__title" id="medias-title">{{ __('footer.medias-title') }}</h1>
 		<p class="footer-medias__paragraph pl-10 pr-10">
 			{{ __('footer.medias-txt-1') }}
 		</p>
