@@ -9931,7 +9931,6 @@ input[type=checkbox]:focus {
 }
 .sell-form__select {
   background: transparent;
-  color: lightgrey;
   min-width: 15vw;
   border-radius: 3px;
   margin-top: 5px;
@@ -10021,7 +10020,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
 }
 .new-photo-form__btn-container button:hover {
@@ -10138,7 +10136,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
 }
 .message-reply button:hover {
@@ -10152,7 +10149,6 @@ input[type=checkbox]:focus {
 }
 .use-voucher__code-selection select {
   background: transparent;
-  color: lightgrey;
   min-width: 15vw;
   border-radius: 3px;
   margin-top: 5px;
@@ -10186,7 +10182,6 @@ input[type=checkbox]:focus {
   right: 0;
   top: 0;
   cursor: pointer;
-  color: lightgrey;
   border: solid 1px lightgrey;
   padding: 0px 10px;
   font-size: 1.5rem;
@@ -10220,7 +10215,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
   font-size: 1.3rem;
 }
@@ -10263,7 +10257,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
   font-size: 1.3rem;
 }
@@ -10316,7 +10309,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
   font-size: 1.3rem;
 }
@@ -10423,7 +10415,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
   font-size: 1.3rem;
   margin-left: 10px;
@@ -10449,7 +10440,6 @@ input[type=checkbox]:focus {
 }
 .stock-handling__select {
   background: transparent;
-  color: lightgrey;
   min-width: 15vw;
   border-radius: 3px;
   margin-top: 5px;
@@ -10481,7 +10471,6 @@ input[type=checkbox]:focus {
   padding: 5px 15px;
   border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
   transition: all 0.2s;
-  color: lightgrey;
   border-radius: 5px;
   font-size: 1.3rem;
   margin-left: 10px;
