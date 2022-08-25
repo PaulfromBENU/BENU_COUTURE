@@ -1,6 +1,6 @@
 <section class="flex flex-col lg:flex-row jsutify-start lg:justify-between model-pres benu-container">
 	<div class="model-pres__img-container">
-		<img src="{{ asset('images/pictures/vouchers_img.png') }}">
+		<img src="{{ asset('images/pictures/photo_voucher.jpg') }}">
 	</div>
 
 	<div class="model-pres__mobile-anchors mobile-only flex flex-col md:flex-row justify-start md:justify-center">

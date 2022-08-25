@@ -40,10 +40,18 @@
 		@endif
 	</div>
 
-	<h2>
+	<h2 class="accounting-csv__title">
 		Full orders export in CSV
 	</h2>
-	<div>
-		<a href="{{ route('export-invoice-csv-en', ['year' => 2022]) }}">Download full export 2022</a>
+	<div class="accounting-csv">
+		@for($year = 2022; $year <= date('Y'); $year ++)
+			@for($month = 1; $month <= 12; $month ++)
+				@if(!($year == date('Y') && $month > date('m')))
+				<p>
+					<a href="{{ route('export-invoice-csv-en', ['year' => $year, 'month' => $month]) }}">Download full export <strong>{{ str_pad($month, 2, '0', STR_PAD_LEFT).'/'.$year }}</strong></a>
+				</p>
+				@endif
+			@endfor
+		@endfor
 	</div>
 </x-filament::page>

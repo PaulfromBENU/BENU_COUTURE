@@ -29,7 +29,7 @@
 					@foreach($cart->couture_variations as $variation)
 					<div class="payment-summary__cart-content__article mb-7 flex justify-start">
 						@if($variation->name == 'voucher')
-							<img src="{{ asset('images/pictures/vouchers_img.png') }}" />
+							<img src="{{ asset('images/pictures/photo_voucher.jpg') }}" />
 							<div>
 								<p class="payment-summary__cart-content__article__name uppercase">
 									{{ __('cart.payment-voucher') }}

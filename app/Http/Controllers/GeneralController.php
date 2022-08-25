@@ -334,10 +334,10 @@ class GeneralController extends Controller
     }
 
 
-    public function exportOrdersData(int $year) 
+    public function exportOrdersData(int $year, int $month) 
     {
         if (auth()->check() && auth()->user()->role == 'admin') {
-            return Excel::download(new OrdersExport($year), 'orders-'.$year.'.csv');
+            return Excel::download(new OrdersExport($year, $month), 'orders-'.str_pad($month, 2, '0', STR_PAD_LEFT).'-'.$year.'.csv');
         }
     }
 

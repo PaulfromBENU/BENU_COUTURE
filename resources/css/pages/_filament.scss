@@ -605,6 +605,7 @@
 }
 
 .accounting-invoices {
+	margin-bottom: 80px !important;
 	button {
 		background: transparent;
 		padding: 5px 15px;
@@ -648,6 +649,28 @@
 		transition: all 0.2s;
 		&:hover {
 			color: rgb(234 179 8/var(--tw-bg-opacity));
+		}
+	}
+	&__title {
+		width: 100%;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		padding-bottom: 15px;
+		margin-bottom: 30px;
+	}
+}
+
+
+.accounting-csv {
+	a {
+		transition: color 0.2s;
+		font-size: 1.1rem;
+		&:hover {
+			color: rgb(234 179 8/var(--tw-bg-opacity));
+		}
+		&::before {
+			content: ">  ";
 		}
 	}
 	&__title {
