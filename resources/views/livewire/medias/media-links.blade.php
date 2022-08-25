@@ -9,7 +9,17 @@
                 <a href="{{ $media->link }}" target="_blank" class="media-links__card">
             @endif
                     <div class="media-links__card__icon">
-                        
+                        @if($media->family == 'newspapers')
+                            @svg('benu_couture_icon_media_journal', 'media-links__card__icon__svg')
+                        @elseif($media->family == 'radio')
+                            @svg('benu_couture_icon_radio_journal', 'media-links__card__icon__svg')
+                        @elseif($media->family == 'video')
+                            @svg('benu_couture_icon_video_journal', 'media-links__card__icon__svg')
+                        @elseif($media->family == 'web')
+                            @svg('benu_couture_icon_web_journal', 'media-links__card__icon__svg')
+                        @else
+                            @svg('benu_couture_icon_media_journal', 'media-links__card__icon__svg')
+                        @endif
                     </div>
                     <h3>
                         {{ $media->title }}
