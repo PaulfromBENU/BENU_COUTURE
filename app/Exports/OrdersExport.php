@@ -155,23 +155,23 @@ class OrdersExport implements FromCollection
                 // Final price including number of items, but no Kulturpass
                 if ($article->name == 'voucher') {
                     if($article->voucher_type == 'pdf') {
-                        $final_price_before_kulturpass = $article->pivot->articles_number * $article->pivot->value;
+                        $final_price_before_kulturpass = $article->pivot->articles_number * $article->pivot->value + $options_price;
                     } else {
-                        $final_price_before_kulturpass = $article->pivot->articles_number * ($article->pivot->value + 5);
+                        $final_price_before_kulturpass = $article->pivot->articles_number * ($article->pivot->value + 5) + $options_price;
                     }
                 } else {
-                    $final_price_before_kulturpass = $article->pivot->articles_number * $article->creation->price;
+                    $final_price_before_kulturpass = $article->pivot->articles_number * $article->creation->price + $options_price;
                 }
 
                 // Final price including number of items and kulturpass
                 if ($article->name == 'voucher') {
                     if($article->voucher_type == 'pdf') {
-                        $final_price = $article->pivot->articles_number * $article->pivot->value;
+                        $final_price = $article->pivot->articles_number * $article->pivot->value + $options_price * (1 - 0.5 * intval($order->with_kulturpass));
                     } else {
-                        $final_price = $article->pivot->articles_number * ($article->pivot->value + 5 * (1 - 0.5 * intval($order->with_kulturpass)));
+                        $final_price = $article->pivot->articles_number * ($article->pivot->value + 5 * (1 - 0.5 * intval($order->with_kulturpass))) + $options_price * (1 - 0.5 * intval($order->with_kulturpass));
                     }
                 } else {
-                    $final_price = $article->pivot->articles_number * $article->creation->price * (1 - 0.5 * intval($order->with_kulturpass));
+                    $final_price = $article->pivot->articles_number * $article->creation->price * (1 - 0.5 * intval($order->with_kulturpass)) + $options_price * (1 - 0.5 * intval($order->with_kulturpass));
                 }
 
 
