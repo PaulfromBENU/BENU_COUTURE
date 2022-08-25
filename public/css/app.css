@@ -7844,6 +7844,7 @@ input[type=checkbox]:focus {
   .about__section-title {
     font: normal normal 700 28px/34px "Barlow Condensed";
     margin-bottom: 50px;
+    padding: 0px 15px;
   }
 }
 .about__txt {

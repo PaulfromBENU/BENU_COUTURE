@@ -21,7 +21,7 @@
 @endsection
 
 @section('main-content')
-<section class="w-full m-auto about mb-10 pb-10">
+<section class="w-full m-auto about mb-2">
 	<h2 class="w-11/12 lg:w-full m-auto about__subtitle">{{ __('about.subtitle-top') }}</h2>
 	<h1 class="w-11/12 lg:w-full m-auto about__title">{{ __('about.title-top') }}</h1>
 
