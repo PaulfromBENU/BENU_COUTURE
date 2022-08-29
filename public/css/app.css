@@ -13633,7 +13633,7 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .single-campaign__section-1__txt {
-    font: normal normal 500 17px/26px "Barlow";
+    font: normal normal 500 18px/30px "Barlow";
     width: 100%;
     margin: auto;
     margin-bottom: 5%;
@@ -13641,7 +13641,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .single-campaign__section-1__txt {
-    font: normal normal 500 16px/20px "Barlow";
+    font: normal normal 500 18px/30px "Barlow";
     width: 100%;
     margin-right: 0;
     margin-bottom: 5%;
@@ -13834,7 +13834,7 @@ input[type=checkbox]:focus {
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .single-campaign__section-2__txt {
-    font: normal normal 500 17px/26px "Barlow";
+    font: normal normal 500 18px/30px "Barlow";
     width: 100%;
     margin: auto;
     margin-bottom: 5%;
@@ -13842,10 +13842,12 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .single-campaign__section-2__txt {
-    font: normal normal 500 16px/20px "Barlow";
+    font: normal normal 500 18px/30px "Barlow";
     width: 100%;
     margin-right: 0;
     margin-bottom: 5%;
+    margin-left: 0;
+    margin-top: 25px;
   }
 }
 .single-campaign__section-2__txt h4 {
