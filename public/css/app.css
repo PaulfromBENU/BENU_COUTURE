@@ -7031,6 +7031,7 @@ input[type=checkbox]:focus {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    max-width: 400px;
     height: 600px;
     margin: auto;
   }
@@ -7039,8 +7040,9 @@ input[type=checkbox]:focus {
   .model-pres__img-container {
     min-width: 250px;
     width: 100%;
+    max-width: 400px;
     height: 400px;
-    margin-right: 0px;
+    margin: auto;
   }
 }
 .model-pres__img-container img {

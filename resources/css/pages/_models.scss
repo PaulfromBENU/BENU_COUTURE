@@ -305,14 +305,17 @@
 		@include tablet {
 			min-width: 300px;
 			width: fit-content;
+			max-width: 400px;
 			height: 600px;
 			margin: auto;
 		}
 		@include mobile {
 			min-width: 250px;
 			width: 100%;
+			max-width: 400px;
 			height: 400px;
-			margin-right: 0px;
+			margin: auto;
+			// margin-right: 0px;
 		}
 		img {
 			min-height: 100%;
