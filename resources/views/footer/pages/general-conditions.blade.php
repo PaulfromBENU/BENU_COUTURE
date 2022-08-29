@@ -27,8 +27,10 @@
 			{{ __('footer.general-conditions-txt-1') }}
 		</p>
 		<ul>
-			<li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('footer.general-conditions-link-1') }}</a> (<a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('footer.general-conditions-link-2') }}</a>)</li>
-			<li><a href="https://benu.lu">{{ __('footer.general-conditions-link-3') }}</a></li>
+			<li class="flex">@svg('list_cintre') <p><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('footer.general-conditions-link-1') }}</a> (<a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('footer.general-conditions-link-2') }}</a>)</p></li>
+			<li class="flex">@svg('list_cintre') <p><a href="https://benu.lu">{{ __('footer.general-conditions-link-3') }}</a></p></li>
+			<!-- <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('footer.general-conditions-link-1') }}</a> (<a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('footer.general-conditions-link-2') }}</a>)</li> -->
+			<!-- <li><a href="https://benu.lu">{{ __('footer.general-conditions-link-3') }}</a></li> -->
 		</ul>
 		<p class="footer-conditions__paragraph">
 			{{ __('footer.general-conditions-txt-2') }}
@@ -58,9 +60,10 @@
 		</p>
 		<ul>
 			@for($i = 1; $i <= 4; $i ++)
-			<li class="footer-conditions__paragraph">
+			<li class="flex footer-conditions__paragraph">@svg('list_cintre') <p>{{ __('footer.general-conditions-txt-1-2-'.(1 + $i)) }}</p></li>
+			<!-- <li class="footer-conditions__paragraph">
 				{{ __('footer.general-conditions-txt-1-2-'.(1 + $i)) }}
-			</li>
+			</li> -->
 			@endfor
 		</ul>
 
@@ -81,9 +84,10 @@
 		</p>
 		<ul>
 			@for($i = 1; $i <= 2; $i ++)
-			<li class="footer-conditions__paragraph">
+			<li class="flex footer-conditions__paragraph">@svg('list_cintre') <p>{{ __('footer.general-conditions-txt-1-4-'.(1 + $i)) }}</p></li>
+			<!-- <li class="footer-conditions__paragraph">
 				{{ __('footer.general-conditions-txt-1-4-'.(1 + $i)) }}
-			</li>
+			</li> -->
 			@endfor
 		</ul>
 		@for($i = 1; $i <= 4; $i ++)

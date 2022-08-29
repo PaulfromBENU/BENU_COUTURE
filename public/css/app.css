@@ -4266,6 +4266,9 @@ input[type=checkbox]:focus {
     height: 50%;
   }
 }
+.footer-more__txt {
+  font: normal normal 500 16px/28px "Barlow";
+}
 
 .footer-all {
   background: #D0D0D033 0% 0% no-repeat padding-box;
@@ -4523,6 +4526,7 @@ input[type=checkbox]:focus {
 .footer-conditions a {
   color: #D41C1B;
   transition: color 0.2s;
+  font: normal normal 500 16px/28px "Barlow";
 }
 .footer-conditions a:hover {
   color: #2E1414;
@@ -4531,8 +4535,12 @@ input[type=checkbox]:focus {
   margin-left: 10px;
   margin-bottom: 5px;
 }
-.footer-conditions li::before {
-  content: "> ";
+.footer-conditions li svg {
+  width: 15px;
+  min-width: 15px;
+  margin-top: 6px;
+  height: 15px;
+  margin-right: 15px;
 }
 .footer-conditions ul {
   margin-bottom: 20px;
@@ -4568,12 +4576,10 @@ input[type=checkbox]:focus {
   margin-bottom: 15px;
   color: #D41C1B;
   margin-top: 45px;
-  padding-left: 5px;
 }
 .footer-conditions__paragraph {
   font: normal normal 500 16px/28px "Barlow";
   margin-bottom: 20px;
-  padding-left: 10px;
 }
 .footer-conditions__highlight {
   padding: 30px;

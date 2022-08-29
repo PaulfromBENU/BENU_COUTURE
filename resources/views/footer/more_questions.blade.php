@@ -2,7 +2,7 @@
 	<div class="benu-container footer-more__wrapper">
 		<div class="footer-more__block">
 			<h3>{!! __('footer.questions-title') !!}</h3>
-			<p>
+			<p class="footer-more__txt">
 				{!! __('footer.questions-txt-1') !!}
 			</p>
 			<div class="text-center">

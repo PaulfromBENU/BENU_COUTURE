@@ -300,6 +300,9 @@
 			height: 50%;
 		}
 	}
+	&__txt {
+		font: normal normal 500 16px/28px "Barlow";
+	}
 }
 
 .footer-all {
@@ -544,16 +547,24 @@
 	a {
 		color: $primary-color;
 		transition: color 0.2s;
+		font: normal normal 500 16px/28px 'Barlow';
 		&:hover {
 			color: $dark-text;
 		}
 	}
 	li {
-		&::before {
-			content: "> ";
-		}
+		// &::before {
+		// 	content: "> ";
+		// }
 		margin-left: 10px;
 		margin-bottom: 5px;
+		svg {
+			width: 15px;
+			min-width: 15px;
+			margin-top: 6px;
+			height: 15px;
+			margin-right: 15px;
+		}
 	}
 	ul {
 		margin-bottom: 20px;
@@ -587,12 +598,12 @@
 		margin-bottom: 15px;
 		color: $primary-color;
 		margin-top: 45px;
-		padding-left: 5px;
+		// padding-left: 5px;
 	}
 	&__paragraph {
 		font: normal normal 500 16px/28px 'Barlow';
 		margin-bottom: 20px;
-		padding-left: 10px;
+		// padding-left: 10px;
 	}
 	&__highlight {
 		padding: 30px;
