@@ -296,7 +296,7 @@
 	}
 	&__img-container {
 		width: 29%;
-		height: 640px;
+		height: 700px;
 		position: relative;
 		overflow: hidden;
 		border-radius: 25px;
@@ -354,10 +354,10 @@
 	}
 	&__desc {
 		width: 67%;
-		height: 640px;
+		height: 700px;
 		background: $bg-light-grey;
 		border-radius: 25px;
-		padding: 33px 71px; //2.5% 3%;
+		padding: 30px 65px; //2.5% 3%;
 		position: relative;
 		@include intermediate {
 			padding: 25px 45px;
@@ -382,6 +382,9 @@
 			font: normal normal 700 44px/53px 'Barlow Condensed';
 			letter-spacing: 0px;
 			margin-bottom: 35px;
+			@include intermediate {
+				font: normal normal 700 40px/50px 'Barlow Condensed';
+			}
 			@include tablet {
 				text-align: center;
 				font: normal normal 700 36px/46px 'Barlow Condensed';
@@ -410,6 +413,10 @@
 			text-align: left;
 			font: normal normal 500 15px/26px 'Barlow';
 			letter-spacing: 0px;
+			@include intermediate {
+				font: normal normal 500 14px/24px 'Barlow';
+				margin-bottom: 20px;
+			}
 			@include tablet {
 				font: normal normal 500 14px/24px 'Barlow';
 				margin-bottom: 20px;
@@ -442,9 +449,10 @@
 			li {
 				display: flex;
 				justify-content: flex-start;
-				width: 80%;
+				width: 98%;
+				margin-right: 2%;
 				text-align: left;
-				font: normal normal 500 15px/24px 'Barlow';
+				font: normal normal 500 14px/22px 'Barlow';
 				letter-spacing: 0px;
 				@include mobile {
 					width: 90%;
@@ -452,9 +460,9 @@
 					margin-bottom: 5px;
 				}
 				svg {
-					margin-top: 9px;
+					margin-top: 8px;
 					margin-right: 5px;
-					width: 19px;
+					width: 18px;
 					@include mobile {
 						margin-top: 5px;
 					}

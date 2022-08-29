@@ -7024,7 +7024,7 @@ input[type=checkbox]:focus {
 }
 .model-pres__img-container {
   width: 29%;
-  height: 640px;
+  height: 700px;
   position: relative;
   overflow: hidden;
   border-radius: 25px;
@@ -7089,10 +7089,10 @@ input[type=checkbox]:focus {
 }
 .model-pres__desc {
   width: 67%;
-  height: 640px;
+  height: 700px;
   background: #F4F4F4;
   border-radius: 25px;
-  padding: 33px 71px;
+  padding: 30px 65px;
   position: relative;
 }
 @media (min-width: 1081px) and (max-width: 1249px) {
@@ -7129,6 +7129,11 @@ input[type=checkbox]:focus {
   letter-spacing: 0px;
   margin-bottom: 35px;
 }
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .model-pres__desc__title {
+    font: normal normal 700 40px/50px "Barlow Condensed";
+  }
+}
 @media (min-width: 768px) and (max-width: 1080px) {
   .model-pres__desc__title {
     text-align: center;
@@ -7160,6 +7165,12 @@ input[type=checkbox]:focus {
   text-align: left;
   font: normal normal 500 15px/26px "Barlow";
   letter-spacing: 0px;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .model-pres__desc__txt {
+    font: normal normal 500 14px/24px "Barlow";
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .model-pres__desc__txt {
@@ -7201,9 +7212,10 @@ input[type=checkbox]:focus {
 .model-pres__desc__keywords li {
   display: flex;
   justify-content: flex-start;
-  width: 80%;
+  width: 98%;
+  margin-right: 2%;
   text-align: left;
-  font: normal normal 500 15px/24px "Barlow";
+  font: normal normal 500 14px/22px "Barlow";
   letter-spacing: 0px;
 }
 @media (max-width: 767px) {
@@ -7214,9 +7226,9 @@ input[type=checkbox]:focus {
   }
 }
 .model-pres__desc__keywords li svg {
-  margin-top: 9px;
+  margin-top: 8px;
   margin-right: 5px;
-  width: 19px;
+  width: 18px;
 }
 @media (max-width: 767px) {
   .model-pres__desc__keywords li svg {
