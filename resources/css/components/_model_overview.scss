@@ -1,6 +1,6 @@
 .model-overview {
 	width: 32.2%;
-	min-width: 380px;
+	min-width: 300px;
 	background: white;
 	box-shadow: 0px 6px 15px #00000029;
 	border-radius: 25px;
@@ -48,7 +48,7 @@
 	}
 	&__header {
 		padding-left: 30px;
-		padding-right: 30px;
+		padding-right: 0px;
 		transition: $transition-base;
 		@include tablet {
 			padding-left: 20px;
