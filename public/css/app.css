@@ -13279,7 +13279,8 @@ input[type=checkbox]:focus {
 }
 .participate-smart h3 {
   text-align: center;
-  font: normal normal 700 20px/30px "Barlow Condensed";
+  font: normal normal 700 22px/28px "Barlow Condensed";
+  margin-bottom: 30px;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .participate-smart h3 {
@@ -13392,10 +13393,10 @@ input[type=checkbox]:focus {
     bottom: 0;
   }
 }
-.participate-smart__cards__final {
+.participate-smart__final {
   width: 60%;
   margin: auto;
-  font: normal normal 500 14px/17px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   text-align: left;
 }
 

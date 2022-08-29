@@ -275,7 +275,8 @@
 	}
 	h3 {
 		text-align: center;
-		font: normal normal 700 20px/30px 'Barlow Condensed';
+		font: normal normal 700 22px/28px 'Barlow Condensed';
+		margin-bottom: 30px;
 		@include tablet {
 			margin-bottom: 30px;
 		}
@@ -371,12 +372,12 @@
 				}
 			}
 		}
-		&__final {
-			width: 60%;
-			margin: auto;
-			font: normal normal 500 14px/17px 'Barlow';
-			text-align: left;
-		}
+	}
+	&__final {
+		width: 60%;
+		margin: auto;
+		font: normal normal 500 16px/28px 'Barlow';
+		text-align: left;
 	}
 }
 
