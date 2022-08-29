@@ -619,6 +619,14 @@ trait DataImporter {
                             $picture_size = 'XL';
                         }
 
+                        if ($picture_size  == 'uk') {
+                            $picture_size = 'unique-kids';
+                        }
+
+                        if ($picture_size  == 'uy') {
+                            $picture_size = 'unique-youth';
+                        }
+
                         // Default value to M for sold articles of unknown size
                         if (strpos(strtolower($picture->getPath()), 'sold') !== false && $picture_size == '0') {
                             $picture_size = 'M';
