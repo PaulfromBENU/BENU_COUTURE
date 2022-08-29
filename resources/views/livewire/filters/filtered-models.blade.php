@@ -68,9 +68,11 @@
 
     @if($paginate_pages_count > 1)
     <div class="pagination-index flex justify-between">
-        <div class="pagination-index__chevron pagination-index__chevron--left" wire:click="changePage('previous')">
-            @svg('chevron-down')
-        </div>
+        @if($paginate_page > 1)
+            <div class="pagination-index__chevron pagination-index__chevron--left" wire:click="changePage('previous')">
+                @svg('chevron-down')
+            </div>
+        @endif
         @for($index = 1; $index <= $paginate_pages_count; $index ++)
             @if($index == $paginate_page)
                 <div class="pagination-index__index pagination-index__index--active" wire:click="changePage({{ $index }})">{{ $index }}</div>
@@ -78,9 +80,11 @@
                 <div class="pagination-index__index" wire:click="changePage({{ $index }})">{{ $index }}</div>
             @endif
         @endfor
-        <div class="pagination-index__chevron pagination-index__chevron--right" wire:click="changePage('next')">
-            @svg('chevron-down')
-        </div>
+        @if($paginate_page !== $paginate_pages_count)
+            <div class="pagination-index__chevron pagination-index__chevron--right" wire:click="changePage('next')">
+                @svg('chevron-down')
+            </div>
+        @endif
     </div>
     @endif
 </div>
