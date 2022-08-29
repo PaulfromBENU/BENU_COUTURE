@@ -26,7 +26,7 @@
 			</p>
 		</div>
 
-		<script src="https://www.paypal.com/sdk/js?client-id=test&currency=EUR&disable-funding=card"></script>
+		<script src="https://www.paypal.com/sdk/js?client-id=AYs7FoPTTx70LosYM1nycZYyWtB8YlxAZKn0jOcUIHxkzPtilbcqptpih0L0KHTbDsOnnpYKAtCduAaS&currency=EUR&disable-funding=card"></script>
 
 		<div id="paypal-button-container"></div>
 	</section>
@@ -34,6 +34,68 @@
 
 @section('scripts')
 <script>
+  const fundingSources = [
+    paypal.FUNDING.PAYPAL
+    ]
+
+  for (const fundingSource of fundingSources) {
+    const paypalButtonsComponent = paypal.Buttons({
+      fundingSource: fundingSource,
+
+      // optional styling for buttons
+      // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+      style: {
+        shape: 'rect',
+        height: 40,
+      },
+
+      // set up the transaction
+      createOrder: (data, actions) => {
+        // pass in any options from the v2 orders create call:
+        // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
+        const createOrderPayload = {
+          purchase_units: [
+            {
+              amount: {
+                value: {{ $order->total_price }},
+              },
+            },
+          ],
+        }
+
+        return actions.order.create(createOrderPayload)
+      },
+
+      // finalize the transaction
+      onApprove: (data, actions) => {
+        const captureOrderHandler = (details) => {
+          const payerName = details.payer.name.given_name
+          // console.log('Transaction completed!')
+        }
+
+        return actions.order.capture().then(captureOrderHandler)
+      },
+
+      // handle unrecoverable errors
+      onError: (err) => {
+        console.error(
+          'An error prevented the buyer from checking out with PayPal',
+        )
+      },
+    })
+
+    if (paypalButtonsComponent.isEligible()) {
+      paypalButtonsComponent
+        .render('#paypal-button-container')
+        .catch((err) => {
+          console.error('PayPal Buttons failed to render')
+        })
+    } else {
+      console.log('The funding source is ineligible')
+    }
+  }
+</script>
+<!-- <script>
 	paypal.Buttons({
 
 	// Sets up the transaction when a payment button is clicked
@@ -71,5 +133,5 @@
 
 }).render('#paypal-button-container');
 
-</script>
+</script> -->
 @endsection
