@@ -88,10 +88,10 @@
       paypalButtonsComponent
         .render('#paypal-button-container')
         .catch((err) => {
-          console.error('PayPal Buttons failed to render')
+          console.error('PayPal Buttons failed to render');
         })
     } else {
-      console.log('The funding source is ineligible')
+      console.log('The funding source is ineligible');
     }
   }
 </script>
