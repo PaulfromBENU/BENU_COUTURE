@@ -13445,6 +13445,7 @@ input[type=checkbox]:focus {
 
 .all-campaigns {
   padding-top: 60px;
+  padding-bottom: 40px;
 }
 @media (max-width: 767px) {
   .all-campaigns {
@@ -13458,7 +13459,7 @@ input[type=checkbox]:focus {
   text-align: center;
   font: normal normal 600 44px/53px "Barlow Condensed";
   letter-spacing: 0px;
-  margin-bottom: 15px;
+  margin-bottom: 85px;
 }
 @media (max-width: 767px) {
   .all-campaigns__title {
@@ -13479,6 +13480,73 @@ input[type=checkbox]:focus {
   .all-campaigns__subtitle {
     margin-bottom: 20px;
   }
+}
+
+.campaign-overview {
+  width: 100%;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 30px #CFCFCF80;
+  height: 250px;
+  margin-bottom: 40px;
+  transition: all 0.3s;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .campaign-overview {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 767px) {
+  .campaign-overview {
+    height: auto;
+  }
+}
+.campaign-overview:hover {
+  box-shadow: 0px 0px 50px #CFCFCFF0;
+}
+.campaign-overview__picture {
+  width: 48%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media (max-width: 767px) {
+  .campaign-overview__picture {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.campaign-overview__picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.campaign-overview__summary {
+  width: 50%;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .campaign-overview__summary {
+    width: 100%;
+  }
+}
+.campaign-overview__summary h3 {
+  text-align: left;
+  font: normal normal 700 28px/28px "Barlow Condensed";
+  letter-spacing: 0px;
+  color: #D41C1B;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.campaign-overview__summary__date {
+  font: normal normal 500 12px/28px "Barlow";
+  margin-bottom: 12px;
+}
+.campaign-overview__summary__desc {
+  font: normal normal 500 16px/28px "Barlow";
 }
 
 @media (max-width: 767px) {

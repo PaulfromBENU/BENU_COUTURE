@@ -25,9 +25,17 @@
 		<h4 class="all-campaigns__subtitle">{{ __('campaigns.all-subtitle') }}</h4>
 		<h2 class="all-campaigns__title">{{ __('campaigns.all-title') }}</h2>
 
-		<div class="mt-10 mb-10 text-center">
+		@include('includes.campaigns.overview', [
+			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']), 
+			"picture" => "BC_WS_Photos_PoliticalDeclaration_6.jpg", 
+			"title" => __('campaigns.carte-blanche-title'), 
+			"date" => __('campaigns.carte-blanche-date'), 
+			"summary" => __('campaigns.carte-blanche-summary')
+		])
+
+		<!-- <div class="mt-10 mb-10 text-center">
 			<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">Campagne Carte Blanche</a>
-		</div>
+		</div> -->
 	</div>
 @endsection
 
