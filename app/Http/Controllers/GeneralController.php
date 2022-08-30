@@ -354,7 +354,7 @@ class GeneralController extends Controller
 
             // !!! Run db:seed before executing the following, to fully clear and reset data before import
 
-            echo "*** Data importation started ***<br/>";
+            // echo "*** Data importation started ***<br/>";
             // $this->importDataFromSophie();
             // $this->importCreationsFromLou();
             // $this->importCreationsFromSabine();

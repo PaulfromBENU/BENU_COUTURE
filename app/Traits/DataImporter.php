@@ -518,7 +518,7 @@ trait DataImporter {
                     $picture_name = trim($picture->getFilename());
                     $picture_info = explode(" ", $picture_name);
                     $color_options = [
-                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
+                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'Denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
                     ];
 
                     if (in_array(explode("_", $picture_info[2])[0], $color_options)) {
@@ -573,7 +573,7 @@ trait DataImporter {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown'])) {
                             $picture_main_color  = 'brown';
-                        } elseif (in_array($picture_main_color, ['denim', 'jeans', 'jean'])) {
+                        } elseif (in_array($picture_main_color, ['Denim', 'jeans', 'jean'])) {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss'])) {
                             $picture_main_color  = 'green';
@@ -809,7 +809,7 @@ trait DataImporter {
                 foreach ($all_replacement_pictures as $replacement_picture) {
                     $picture_info = explode(" ", trim($replacement_picture->getFilename()));
                     $color_options = [
-                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
+                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'Denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
                     ];
 
                     if (in_array(explode("_", $picture_info[2])[0], $color_options)) {
@@ -854,8 +854,8 @@ trait DataImporter {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown'])) {
                             $picture_main_color  = 'brown';
-                        } elseif (in_array($picture_main_color, ['denim', 'jeans', 'jean'])) {
-                            $picture_main_color  = 'denim';
+                        } elseif (in_array($picture_main_color, ['Denim', 'jeans', 'jean'])) {
+                            $picture_main_color  = 'Denim';
                         } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss'])) {
                             $picture_main_color  = 'green';
                         } elseif (in_array($picture_main_color, ['darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey'])) {
@@ -1203,6 +1203,7 @@ trait DataImporter {
         $compo_smooth_velvet_id = Composition::where('fabric_fr', 'Velours lisse de coton')->first()->id;
         $compo_denim_id = Composition::where('fabric_fr', 'Denim')->first()->id;
         $compo_acrylic_id = Composition::where('fabric_fr', 'Acrylique')->first()->id;
+        $compo_leather_id = Composition::where('fabric_fr', 'Cuir')->first()->id;
 
         // Determination of care recommendation ids for attaching
         $care_no_washing_id = CareRecommendation::where('name', 'no_washing')->first()->id;
@@ -1247,7 +1248,7 @@ trait DataImporter {
                     // if ($creation_lou['Crêpe de coton'] == "x") {
                     //     $article->compositions()->attach($compo_cotton_crepe_id);
                     // }
-                    if ($creation_lou['Jersey'] == "x") {
+                    if ($creation_lou['Jersey de coton'] == "x") {
                         $article->compositions()->attach($compo_jersey_id);
                     }
                     if ($creation_lou['Laine'] == "x") {
@@ -1262,7 +1263,7 @@ trait DataImporter {
                     if ($creation_lou['Fibres synthétiques'] == "x") {
                         $article->compositions()->attach($compo_synthetic_id);
                     }
-                    if ($creation_lou['Crêpe de Polyester'] == "x") {
+                    if ($creation_lou['Polyester'] == "x") {
                         $article->compositions()->attach($compo_poly_crepe_id);
                     }
                     if ($creation_lou['Élasthanne'] == "x") {
@@ -1274,17 +1275,20 @@ trait DataImporter {
                     if ($creation_lou['Nylon'] == "x") {
                         $article->compositions()->attach($compo_nylon_id);
                     }
-                    if ($creation_lou['Velours côtelé'] == "x") {
+                    if ($creation_lou['Velours de coton côtelé'] == "x") {
                         $article->compositions()->attach($compo_velvet_id);
                     }
-                    if ($creation_lou['Velours lisse'] == "x") {
+                    if ($creation_lou['Velours de coton lisse'] == "x") {
                         $article->compositions()->attach($compo_smooth_velvet_id);
                     }
                     if ($creation_lou['Denim'] == "x") {
                         $article->compositions()->attach($compo_denim_id);
                     }
-                    if ($creation_lou['Acrylic'] == "x") {
+                    if ($creation_lou['Acrylique'] == "x") {
                         $article->compositions()->attach($compo_acrylic_id);
+                    }
+                    if ($creation_lou['Cuir'] == "x") {
+                        $article->compositions()->attach($compo_leather_id);
                     }
 
                     echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
@@ -1292,7 +1296,7 @@ trait DataImporter {
                     if ($creation_lou['Pas de lavage recommandé'] == "x") {
                         $article->care_recommendations()->attach($care_no_washing_id);
                     }
-                    if ($creation_lou['Programme laine'] == "x") {
+                    if ($creation_lou['Cold wash (wool program) or hand wash'] == "x") {
                         $article->care_recommendations()->attach($care_wool_id);
                     }
                     if ($creation_lou['30°C max'] == "x") {
@@ -1354,7 +1358,7 @@ trait DataImporter {
                     // if ($creation_lou['Crêpe de coton'] == "x") {
                     //     $article->compositions()->attach($compo_cotton_crepe_id);
                     // }
-                    if ($creation_lou['Jersey'] == "x") {
+                    if ($creation_lou['Jersey de coton'] == "x") {
                         $article->compositions()->attach($compo_jersey_id);
                     }
                     if ($creation_lou['Laine'] == "x") {
@@ -1369,7 +1373,7 @@ trait DataImporter {
                     if ($creation_lou['Fibres synthétiques'] == "x") {
                         $article->compositions()->attach($compo_synthetic_id);
                     }
-                    if ($creation_lou['Crêpe de Polyester'] == "x") {
+                    if ($creation_lou['Polyester'] == "x") {
                         $article->compositions()->attach($compo_poly_crepe_id);
                     }
                     if ($creation_lou['Élasthanne'] == "x") {
@@ -1381,17 +1385,20 @@ trait DataImporter {
                     if ($creation_lou['Nylon'] == "x") {
                         $article->compositions()->attach($compo_nylon_id);
                     }
-                    if ($creation_lou['Velours côtelé'] == "x") {
+                    if ($creation_lou['Velours de coton côtelé'] == "x") {
                         $article->compositions()->attach($compo_velvet_id);
                     }
-                    if ($creation_lou['Velours lisse'] == "x") {
+                    if ($creation_lou['Velours de coton lisse'] == "x") {
                         $article->compositions()->attach($compo_smooth_velvet_id);
                     }
                     if ($creation_lou['Denim'] == "x") {
                         $article->compositions()->attach($compo_denim_id);
                     }
-                    if ($creation_lou['Acrylic'] == "x") {
+                    if ($creation_lou['Acrylique'] == "x") {
                         $article->compositions()->attach($compo_acrylic_id);
+                    }
+                    if ($creation_lou['Cuir'] == "x") {
+                        $article->compositions()->attach($compo_leather_id);
                     }
 
                     echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
@@ -1399,7 +1406,7 @@ trait DataImporter {
                     if ($creation_lou['Pas de lavage recommandé'] == "x") {
                         $article->care_recommendations()->attach($care_no_washing_id);
                     }
-                    if ($creation_lou['Programme laine'] == "x") {
+                    if ($creation_lou['Cold wash (wool program) or hand wash'] == "x") {
                         $article->care_recommendations()->attach($care_wool_id);
                     }
                     if ($creation_lou['30°C max'] == "x") {

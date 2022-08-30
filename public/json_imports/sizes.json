@@ -174,5 +174,13 @@
   {
     "value": "specific",
     "category": "specific"
+  },
+  {
+    "value": "unique-kids",
+    "category": "unique"
+  },
+  {
+    "value": "unique-youth",
+    "category": "unique"
   }
 ]
