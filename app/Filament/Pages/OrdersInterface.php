@@ -48,6 +48,12 @@ class OrdersInterface extends Page
 
     public $show_unpaid = [];
 
+    public $show_new_orders = 0;
+    public $show_unpaid_orders = 0;
+    public $show_sent_orders = 0;
+    public $show_orders_ready_for_collect = 0;
+    public $show_collected_orders = 0;
+
     public function mount()
     {
         $this->cleanUnsoldArticles();
@@ -264,6 +270,71 @@ class OrdersInterface extends Page
     public function hideUnpaidDetails($order_id)
     {
         $this->show_unpaid[$order_id] = 0;
+    }
+
+    public function toggleNewOrders()
+    {
+        if ($this->show_new_orders == 0) {
+            $this->show_new_orders = 1;
+        } else {
+            $this->show_new_orders = 0;
+        }
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
+    }
+
+    public function toggleUnpaidOrders()
+    {
+        if ($this->show_unpaid_orders == 0) {
+            $this->show_unpaid_orders = 1;
+        } else {
+            $this->show_unpaid_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
+    }
+
+    public function toggleSentOrders()
+    {
+        if ($this->show_sent_orders == 0) {
+            $this->show_sent_orders = 1;
+        } else {
+            $this->show_sent_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
+    }
+
+    public function toggleOrdersReadyForCollect()
+    {
+        if ($this->show_orders_ready_for_collect == 0) {
+            $this->show_orders_ready_for_collect = 1;
+        } else {
+            $this->show_orders_ready_for_collect = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_collected_orders = 0;
+    }
+
+    public function toggleCollectedOrders()
+    {
+        if ($this->show_collected_orders == 0) {
+            $this->show_collected_orders = 1;
+        } else {
+            $this->show_collected_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
     }
 
     // Display new orders - paid & not handled

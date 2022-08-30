@@ -312,16 +312,20 @@
 }
 
 
+.orders-title {
+	font-size: 1.4rem;
+	font-weight: 600;
+	padding-bottom: 4px;
+	border-bottom: rgb(234 179 8/var(--tw-bg-opacity)) solid 4px;
+	margin-bottom: 5px;
+	color: rgb(234 179 8/var(--tw-bg-opacity));
+	cursor: pointer;
+	padding-top: 40px;
+}
+
+
 .new-orders {
 	position: relative;
-	h2 {
-		font-size: 1.4rem;
-		font-weight: 600;
-		padding-bottom: 4px;
-		border-bottom: rgb(234 179 8/var(--tw-bg-opacity)) solid 4px;
-		margin-bottom: 5px;
-		color: rgb(234 179 8/var(--tw-bg-opacity));
-	}
 	&__btn-1 {
 		color: rgb(234 179 8/var(--tw-bg-opacity));
 		transition: color 0.2s;
