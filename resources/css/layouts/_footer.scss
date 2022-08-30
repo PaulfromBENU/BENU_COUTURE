@@ -366,6 +366,67 @@
 	strong {
 		font-weight: 600;
 	}
+	&__sponsor {
+		height: 102px;
+		width: 100%;
+		// border-top: $primary-color solid 2px;
+		// border-bottom: $primary-color solid 2px;
+		background: $primary-color;
+		z-index: 5;
+		color: $white;
+		bottom: 0;
+		@include tablet {
+			position: relative;
+			height: fit-content;
+			bottom: -50px;
+			padding-bottom: 40px;
+		}
+		@include mobile {
+			position: relative;
+			height: fit-content;
+			bottom: -50px;
+			padding-bottom: 40px;
+		}
+		p {
+			color: $white;
+			// font: normal normal 500 22px/28px 'Barlow';
+			font: normal normal 700 18px/24px 'Barlow';
+			text-align: center;
+			@include tablet {
+				padding-top: 25px;
+				padding-bottom: 25px;
+				font: normal normal 500 18px/28px 'Barlow';
+			}
+			@include mobile {
+				padding-top: 25px;
+				padding-bottom: 25px;
+				font: normal normal 500 18px/28px 'Barlow';
+			}
+		}
+		&__logo {
+			background: $white;
+			position: relative;
+			z-index: 5;
+			box-shadow: grey 0 0 10px;
+			height: calc(100% + 60px);
+			margin-top: -30px;
+			padding: 20px;
+			border-radius: 10px;
+			@include tablet {
+				max-width: 300px;
+				margin: auto;
+				margin-top: -40px;
+			}
+			@include mobile {
+				max-width: 300px;
+				margin: auto;
+				margin-top: -40px;
+			}
+			img {
+				margin-top: 4px;
+			}
+		}
+	}
 }
 
 
