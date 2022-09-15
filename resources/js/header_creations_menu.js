@@ -26,6 +26,10 @@ function showMenu(id)
             menuClass = '.navbar-list-accessories';
             break;
 
+        case '#nav-toggle-home':
+            menuClass = '.navbar-list-home';
+            break;
+
         default:
             menuClass = '';
     }

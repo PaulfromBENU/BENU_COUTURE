@@ -61,7 +61,7 @@ class CreationsMenu extends Component
             $ladies_id = CreationGroup::where('filter_key', 'ladies')->first()->id;
             $gentlemen_id = CreationGroup::where('filter_key', 'gentlemen')->first()->id;
             $kids_id = CreationGroup::where('filter_key', 'kids')->first()->id;
-            //$home_id = CreationGroup::where('filter_key', 'home')->first()->id;
+            $home_id = CreationGroup::where('filter_key', 'home')->first()->id;
             $accessories_id = CreationGroup::where('filter_key', 'accessories')->first()->id;
 
             foreach ($this->getAvailableCreations() as $creation) {
@@ -124,11 +124,11 @@ class CreationsMenu extends Component
                 }
 
                 // Fill Home creations arrays
-                // if (!isset($this->home_creations[$query])) {
-                //     if ($creation->creation_groups->contains($home_id)) {
-                //         $this->home_creations[$query] = $filter_key;
-                //     }
-                // }
+                if (!isset($this->home_creations[$query])) {
+                    if ($creation->creation_groups->contains($home_id)) {
+                        $this->home_creations[$query] = $filter_key;
+                    }
+                }
             }
 
             $this->adults_clothes = array_merge($this->unisex_clothes, $this->ladies_clothes, $this->gentlemen_clothes);

@@ -5808,6 +5808,10 @@ function showMenu(id) {
       menuClass = '.navbar-list-accessories';
       break;
 
+    case '#nav-toggle-home':
+      menuClass = '.navbar-list-home';
+      break;
+
     default:
       menuClass = '';
   } //Remove all menus to avoid multiple display

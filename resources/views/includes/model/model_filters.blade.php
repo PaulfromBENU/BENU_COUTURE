@@ -15,7 +15,6 @@
 		</div>
 	</div>
 
-	@if($family !== 'home')
 	<div id="filters-category" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['categories'] as $category => $filter)
@@ -32,6 +31,7 @@
 		</div>
 	</div>
 
+	@if($family !== 'home')
 	<div id="filters-gender" style="display: none;">
 		<div class="flex justify-start flex-wrap pt-4 pb-4">
 			@foreach($active_filters['types'] as $type => $filter)

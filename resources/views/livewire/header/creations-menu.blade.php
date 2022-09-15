@@ -134,14 +134,15 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="creations-navbar__menu__list navbar-list-home">
-                <h4>{{ __('header.menu-title-1') }}</h4>
+            <div class="creations-navbar__menu__list navbar-list-home">
+                <h4><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('header.menu-title-2') }}</a></h4>
+                <!-- <h4>{{ __('header.menu-title-1') }}</h4> -->
                 <div class="flex">
                     <ul>
-                        <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home']) }}">{{ __('header.see-all-home-creations') }}</a></li>
+                        <!-- <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home']) }}">{{ __('header.see-all-home-creations') }}</a></li> -->
                         @foreach($home_creations as $category => $link_query)
                             @if($loop->index < 6)
-                                <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home', 'categories' => $link_query]) }}">{{ $category }}</a></li>
+                                <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home', 'categories' => $link_query]) }}">{{ $category }}</a></li>
                             @endif
                         @endforeach
                     </ul>
@@ -149,13 +150,13 @@
                         @if(count($home_creations) > 6)
                             @foreach($home_creations as $category => $link_query)
                                 @if($loop->index >= 6)
-                                    <li><a href="{{ route('model-'.app()->getLocale(), ['types' => 'home', 'categories' => $link_query]) }}">{{ $category }}</a></li>
+                                    <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home', 'categories' => $link_query]) }}">{{ $category }}</a></li>
                                 @endif
                             @endforeach
                         @endif
                     </ul>
                 </div>
-            </div> -->
+            </div>
             
             @if(count($unisex_accessories) > 0)
             <div class="creations-navbar__menu__list navbar-list-unisex">
