@@ -69,6 +69,9 @@ class CreationResource extends Resource
                 Forms\Components\Toggle::make('is_accessory')
                     ->label('Is an accessory?')
                     ->required(),
+                Forms\Components\Toggle::make('pillow_option')
+                    ->label('Extra pillow option?')
+                    ->required(),
                 Forms\Components\Toggle::make('requires_size')
                     ->label('Requires size filter?')
                     ->required(),
@@ -105,6 +108,7 @@ class CreationResource extends Resource
                 Tables\Columns\TextColumn::make('price')->money('eur'),
                 Tables\Columns\TextColumn::make('tva_value')->label('TVA [%]'),
                 Tables\Columns\TextColumn::make('weight')->label('Weight [g]'),
+                Tables\Columns\BooleanColumn::make('pillow_option')->label('Has pillow option?'),
                 Tables\Columns\BooleanColumn::make('requires_size')->label('Requires Size filter?'),
                 Tables\Columns\TextColumn::make('description_lu')->limit('50'),
                 Tables\Columns\TextColumn::make('description_fr')->limit('50'),
