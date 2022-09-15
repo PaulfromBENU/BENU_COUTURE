@@ -44,7 +44,7 @@
 	<h3 class="full-story__lowtitle">{{ __('about.full-subtitle-1') }}</h3>
 
 	<p class="full-story__txt">
-		{{ __('about.full-paragraph-1-1') }} <a href="https://global-standard.org/" target="_blank">global-standard.org</a> {{ __('about.full-paragraph-1-2') }} <a href="https://naturtextil.de/en/home/" target="_blank">naturtextil.de</a> {{ __('about.full-paragraph-1-2') }}
+		{{ __('about.full-paragraph-1-1') }} <a href="https://global-standard.org/" target="_blank">global-standard.org</a> {{ __('about.full-paragraph-1-2') }} <a href="https://naturtextil.de/en/home/" target="_blank">naturtextil.de</a> {{ __('about.full-paragraph-1-3') }}
 	</p>
 
 	<h3 class="full-story__lowtitle">{{ __('about.full-subtitle-2') }}</h3>
@@ -71,7 +71,7 @@
 		{{ __('about.full-paragraph-3-3') }}
 	</p>
 
-	<h3 class="full-story__lowtitle">{{ __('about.full-subtitle-4') }}</h3>
+	<h3 class="full-story__lowtitle--2">{{ __('about.full-subtitle-4') }}</h3>
 
 	<p class="full-story__txt">
 		{{ __('about.full-paragraph-4-1') }}

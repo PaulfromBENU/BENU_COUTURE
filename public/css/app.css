@@ -7643,6 +7643,12 @@ input[type=checkbox]:focus {
   margin-bottom: 32px;
   color: #D41C1B;
 }
+.full-story__lowtitle--2 {
+  font: normal normal 700 25px/32px "Barlow Condensed";
+  margin-bottom: 30px;
+  text-align: left;
+  color: #2E1414;
+}
 .full-story__section-title {
   text-align: center;
   font: normal normal 700 38px/45px "Barlow Condensed";

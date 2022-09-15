@@ -3126,12 +3126,12 @@ select {
     margin-right: 1rem;
   }
 
-  .lg\:ml-5 {
-    margin-left: 1.25rem;
-  }
-
   .lg\:mr-10 {
     margin-right: 2.5rem;
+  }
+
+  .lg\:ml-5 {
+    margin-left: 1.25rem;
   }
 
   .lg\:flex {

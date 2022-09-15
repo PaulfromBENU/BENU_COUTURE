@@ -23,6 +23,12 @@
 		margin-top: 65px;
 		margin-bottom: 32px;
 		color: $primary-color;
+		&--2 {
+			font: normal normal 700 25px/32px 'Barlow Condensed';
+			margin-bottom: 30px;
+			text-align: left;
+			color: $dark-text;
+		}
 	}
 	&__section-title {
 		text-align: center;
