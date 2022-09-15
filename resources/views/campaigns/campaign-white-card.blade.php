@@ -86,7 +86,11 @@
 <!-- 			<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
 			<div class="single-campaign__transition-1__opacifier scroll-opacity-2" style="opacity: 0;"></div>
 			<div class="w-4/5 lg:w-1/2 m-auto single-campaign__transition-1__txt-container flex flex-col justify-center">
-				<h2 class="single-campaign__transition-1__title">{{ __('campaigns.carte-blanche-transition-1-title') }}</h2>
+				<h2 class="single-campaign__transition-1__title">
+					{{ __('campaigns.carte-blanche-transition-1-title') }}
+					<br/>
+					{{ __('campaigns.carte-blanche-transition-1-title-2') }}
+				</h2>
 			</div>
 		</section>
 
@@ -202,7 +206,7 @@
 
 			// Initialization in case of refresh in the middle of the page
 			$('.scroll-grow-1').css('border-width', (Math.max(0, marginWidth - 0.5 * $(document).scrollTop())) + 'px');
-			$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01));
+			$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01 - 1));
 			$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
 			$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
 			if ($(document).scrollTop() > ($('#header-end').offset().top - $(window).height())) {
@@ -213,7 +217,7 @@
 
 			relativeScroll = $(document).scrollTop() - $('#transition-1').offset().top + 0.55 * $(window).height();
 			$('.scroll-grow-2').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-			$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005));
+			$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
 			if ($(document).scrollTop() > ($('#transition-1-end').offset().top - $(window).height())) {
 				$('.scroll-grow-2').css('background-attachment', 'scroll');
 			} else {
@@ -222,7 +226,7 @@
 
 			relativeScroll = $(document).scrollTop() - $('#transition-2').offset().top + 0.55 * $(window).height();
 			$('.scroll-grow-3').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-			$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005));
+			$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
 			if ($(document).scrollTop() > ($('#transition-2-end').offset().top - $(window).height())) {
 				$('.scroll-grow-3').css('background-attachment', 'scroll');
 			} else {
@@ -246,7 +250,7 @@
 			// Header picture with scroll indication
 			if ($(document).scrollTop() < 2 * $(window).height()) {
 				$('.scroll-grow-1').css('border-width', (Math.max(0, marginWidth - 0.5 * $(document).scrollTop())) + 'px');
-				$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01));
+				$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01 - 1));
 				$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
 				$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
 			}
@@ -264,7 +268,7 @@
 			if ($(document).scrollTop() > ($('#transition-1').offset().top - 0.55 * $(window).height())) {
 				relativeScroll = $(document).scrollTop() - $('#transition-1').offset().top + 0.55 * $(window).height();
 				$('.scroll-grow-2').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-				$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005));
+				$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
 				// $('.scroll-appearing-1').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}
@@ -285,7 +289,7 @@
 			if ($(document).scrollTop() > ($('#transition-2').offset().top - 0.55 * $(window).height())) {
 				relativeScroll = $(document).scrollTop() - $('#transition-2').offset().top + 0.55 * $(window).height();
 				$('.scroll-grow-3').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-				$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005));
+				$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
 				$('.scroll-appearing-3').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}
