@@ -2,7 +2,10 @@
 	<form method="POST" wire:submit.prevent="confirmReturn" class="stock-handling">
 		@csrf
 
-		<h2>Enter the e-mail address of the client:</h2>
+		<h2>Select an order number to confirm good reception of the return to the client.</h2>
+		<p style="margin-bottom: 40px;">
+			If the order cannot be found in the list below, it means the return delay of 28 days has expired. When confirmed, the client will be able to see BENU's confirmation and message in his/her BENU dashboard.
+		</p>
 
 		<div class="stock-handling__input-group">
 				<label for="creation-0">Select an order</label><br/>
