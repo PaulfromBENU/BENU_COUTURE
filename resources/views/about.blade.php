@@ -298,6 +298,9 @@
 						{{ __('about.section-4-txt-1') }}
 					</p>
 					<p class="about__general__content__info-section__txt__paragraph">
+						{{ __('about.section-4-txt-1-bis') }}
+					</p>
+					<p class="about__general__content__info-section__txt__paragraph">
 						{{ __('about.section-4-txt-2') }}
 					</p>
 				</div>
