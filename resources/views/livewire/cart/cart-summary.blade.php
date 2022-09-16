@@ -62,7 +62,7 @@
             <label for="cart-use-voucher">{{ __('cart.use-voucher') }}</label>
         </div>
         @if($use_voucher)
-            <input type="text" name="voucher_code" wire:model="voucher_code" class="w-full mt-5">
+            <input type="text" name="voucher_code" wire:model="voucher_code" class="w-full mt-5" placeholder="{{ __('cart.voucher-placeholder') }}">
             @if($voucher_status == 1)
             <p class="primary-color">
                 <em>{{ __('cart.voucher-incorrect') }}</em>
