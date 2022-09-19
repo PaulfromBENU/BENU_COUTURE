@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="creations-navbar__menu__list navbar-list-home">
-                <h4><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('header.menu-title-2') }}</a></h4>
+                <h4><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('header.menu-title-home') }}</a></h4>
                 <!-- <h4>{{ __('header.menu-title-1') }}</h4> -->
                 <div class="flex">
                     <ul>
