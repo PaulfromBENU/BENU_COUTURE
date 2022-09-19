@@ -26,7 +26,8 @@ trait ArticleAnalyzer {
                 ->whereHas('creation_groups', function($query) {
                     $query->where('filter_key', '<>', 'home');
                 })
-                ->has('articles.available_shops')->get();
+                ->has('articles.available_shops')
+                ->get();
                 break;
 
             case 'accessories':

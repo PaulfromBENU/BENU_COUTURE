@@ -733,7 +733,7 @@ trait FiltersGenerator {
                 $shop_filters_applied ++;
                 foreach ($models_filtered_by_partner as $model_checked_for_shop) {
                     $model_ok = 0;
-                    // If model has at elast one article with the requested color, consider it OK for filtering
+                    // If model has at least one article with the requested color, consider it OK for filtering
                     // if (!($model_checked_for_shop instanceof Creation)) {
                     //     $model_checked_for_shop = $model_checked_for_shop->first();
                     // }

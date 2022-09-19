@@ -321,9 +321,9 @@ class GeneralController extends Controller
 
     public function showSiteMap()
     {
-        $clothes = $this->getAvailableCreations('clothes');
-        $accessories = $this->getAvailableCreations('accessories');
-        $home_items = $this->getAvailableCreations('home');
+        $clothes = $this->getAvailableCreations('clothes')->sortBy('name');
+        $accessories = $this->getAvailableCreations('accessories')->sortBy('name');
+        $home_items = $this->getAvailableCreations('home')->sortBy('name');
         $news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
         return view('footer.pages.sitemap', [
             'clothes' => $clothes, 
