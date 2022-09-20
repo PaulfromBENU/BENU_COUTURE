@@ -13672,14 +13672,6 @@ input[type=checkbox]:focus {
     overflow-x: hidden;
   }
 }
-.single-campaign a {
-  font-weight: 600;
-  color: inherit;
-  transition: color 0.2s;
-}
-.single-campaign a:hover {
-  color: #D41C1B;
-}
 .single-campaign__header {
   position: relative;
   padding-top: 15vh;
@@ -13711,6 +13703,15 @@ input[type=checkbox]:focus {
   .single-campaign__header {
     border: solid white 20px;
   }
+}
+.single-campaign__header a {
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.2s;
+}
+.single-campaign__header a:hover {
+  text-decoration: none;
+  color: #F9E2E2;
 }
 .single-campaign__header img {
   position: absolute;
@@ -14000,6 +14001,7 @@ input[type=checkbox]:focus {
   text-align: center;
   font: normal normal 600 80px/90px "Barlow Condensed";
   overflow-wrap: break-word;
+  margin-bottom: 60px;
 }
 @media (min-width: 1720px) {
   .single-campaign__transition-1__title {
@@ -14014,6 +14016,32 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .single-campaign__transition-1__title {
     font: normal normal 600 48px/54px "Barlow Condensed";
+  }
+}
+.single-campaign__transition-1__txt {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 50vw;
+  margin: auto;
+  text-align: left;
+  font: normal normal 500 18px/30px "Barlow";
+  overflow-wrap: break-word;
+}
+@media (min-width: 1720px) {
+  .single-campaign__transition-1__txt {
+    font: normal normal 500 20px/38px "Barlow";
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .single-campaign__transition-1__txt {
+    width: 80vw;
+  }
+}
+@media (max-width: 767px) {
+  .single-campaign__transition-1__txt {
+    width: 91.66667vw;
+    font: normal normal 500 16px/26px "Barlow";
   }
 }
 .single-campaign__section-2 {
@@ -14203,6 +14231,13 @@ input[type=checkbox]:focus {
   .single-campaign__section-3__txt {
     font: normal normal 500 20px/38px "Barlow";
   }
+}
+.single-campaign__section-3__txt__link {
+  color: #D41C1B;
+  transition: color 0.2s;
+}
+.single-campaign__section-3__txt__link:hover {
+  color: #2E1414;
 }
 .single-campaign__section-3bis {
   padding-bottom: 50px;

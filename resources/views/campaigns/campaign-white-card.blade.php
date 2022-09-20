@@ -86,11 +86,14 @@
 <!-- 			<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
 			<div class="single-campaign__transition-1__opacifier scroll-opacity-2" style="opacity: 0;"></div>
 			<div class="w-4/5 lg:w-1/2 m-auto single-campaign__transition-1__txt-container flex flex-col justify-center">
-				<h2 class="single-campaign__transition-1__title">
-					{{ __('campaigns.carte-blanche-transition-1-title') }}
-					<br/>
-					{{ __('campaigns.carte-blanche-transition-1-title-2') }}
-				</h2>
+				<div>
+					<h2 class="single-campaign__transition-1__title">
+						{{ __('campaigns.carte-blanche-transition-1-title') }}
+					</h2>
+					<p class="single-campaign__transition-1__txt">
+						{{ __('campaigns.carte-blanche-txt-7') }}
+					</p>
+				</div>
 			</div>
 		</section>
 
@@ -100,9 +103,6 @@
 					<img src="{{ asset('images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_3.jpg') }}" class="single-campaign__section-2__picture__img" />
 				</div>
 				<div class="single-campaign__section-2__txt flex flex-col lg:justify-end">
-					<p>
-						{{ __('campaigns.carte-blanche-txt-7') }}
-					</p>
 					<h4>
 						{{ __('campaigns.carte-blanche-section-2-title') }}
 					</h4>
@@ -146,7 +146,7 @@
 					</p>
 
 					<p class="single-campaign__section-3__txt">
-						<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}">{{ __('campaigns.carte-blanche-link-3') }}</a>
+						<a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}" class="single-campaign__section-3__txt__link">{{ __('campaigns.carte-blanche-link-3') }}</a>
 					</p>
 				</div>
 				<div class="single-campaign__section-3bis__picture">
