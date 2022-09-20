@@ -1,5 +1,5 @@
 .sold-overview {
-	width: 320px;
+	width: 23%;
 	background: white;
 	box-shadow: 0px 6px 15px #00000029;
 	border-radius: 9px;
@@ -7,8 +7,21 @@
 	margin-bottom: 50px;
 	position: relative;
 	overflow: hidden;
-	margin-right: 1.15%;
+	margin-left: 1%;
+	margin-right: 1%;
 	cursor: pointer;
+	// flex: 1 1 0;
+	@include large {
+		width: 18%;
+	}
+	@include intermediate {
+		width: 31.33333%;
+	}
+	@include tablet {
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+		width: 45%;
+	}
 	@include mobile {
 		width: 100%;
 	}

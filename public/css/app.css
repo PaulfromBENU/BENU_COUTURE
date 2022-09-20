@@ -1384,7 +1384,7 @@ input[type=checkbox]:focus {
 }
 
 .sold-overview {
-  width: 320px;
+  width: 23%;
   background: white;
   box-shadow: 0px 6px 15px #00000029;
   border-radius: 9px;
@@ -1392,8 +1392,26 @@ input[type=checkbox]:focus {
   margin-bottom: 50px;
   position: relative;
   overflow: hidden;
-  margin-right: 1.15%;
+  margin-left: 1%;
+  margin-right: 1%;
   cursor: pointer;
+}
+@media (min-width: 1720px) {
+  .sold-overview {
+    width: 18%;
+  }
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .sold-overview {
+    width: 31.33333%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .sold-overview {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 45%;
+  }
 }
 @media (max-width: 767px) {
   .sold-overview {
