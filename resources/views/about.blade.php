@@ -290,7 +290,7 @@
 
 			<div class="about__general__content__info-section">
 				<div class="about__general__content__info-section__picture">
-					<img src="{{ asset('images/pictures/about/about-transition-4.png') }}" style="width: 100%;">
+					<img src="{{ asset('images/pictures/about/about-transition-4.jpg') }}" style="width: 100%;">
 				</div>
 
 				<div class="about__general__content__info-section__txt">
@@ -314,7 +314,7 @@
 
 					<div class="flex flex-col md:flex-row justify-start md:justify-between flex-wrap mb-10">
 						<div class="w-full md:w-2/5 mb-5 md:mb-0">
-							<img src="{{ asset('images/pictures/about/about-content-7.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-7.jpg') }}">
 						</div>
 						<div class="w-full md:w-3/5 md:pl-5">
 							<h5>
@@ -342,7 +342,7 @@
 							</p>
 						</div>
 						<div class="w-full md:w-1/2 mb-5 md:mb-0">
-							<img src="{{ asset('images/pictures/about/about-content-8.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-8.jpg') }}">
 						</div>
 					</div>
 
