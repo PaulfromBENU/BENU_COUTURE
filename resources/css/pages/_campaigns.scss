@@ -355,6 +355,8 @@
 		}
 		@include mobile {
 			border: solid $white 20px;
+			height: fit-content;
+			padding-top: 15vh;
 		}
 		img {
 			position: absolute;
@@ -383,6 +385,12 @@
 			width: 100%;
 			top: 0;
 			left: 0;
+			@include mobile {
+				height: fit-content;
+				padding-top: 0px;
+				padding-bottom: 50px;
+				position: relative;
+			}
 		}
 		&__title {
 			text-align: center;
@@ -415,7 +423,7 @@
 				width: 80vw;
 			}
 			@include mobile {
-				width: 91.66667vw;
+				width: 85vw;
 				font: normal normal 500 16px/26px 'Barlow';
 			}
 		}
@@ -432,6 +440,7 @@
 			margin-left: 5%;
 			text-align: left;
 			font: normal normal 500 18px/30px 'Barlow';
+			padding-bottom: 150px;
 			@include large {
 				font: normal normal 500 20px/38px 'Barlow';
 			}
@@ -440,6 +449,7 @@
 				width: 100%;
 				margin: auto;
 				margin-bottom: 5%;
+				padding-bottom: 15px;
 			}
 			@include mobile {
 				font: normal normal 500 18px/30px 'Barlow';
@@ -448,6 +458,7 @@
 				margin-bottom: 5%;
 				margin-left: 0;
 				margin-top: 25px;
+				padding-bottom: 0px;
 			}
 			h4 {
 				color: $primary-color;
@@ -468,7 +479,7 @@
 			width: 40%;
 			margin-left: 10%;
 			min-height: fit-content;
-			margin-bottom: 200px;
+			margin-bottom: 50px;
 			position: relative;
 			margin-top: 10px;
 			@include tablet {
@@ -480,7 +491,7 @@
 				width: 80%;
 				margin-bottom: 5%;
 				margin-left: 10%;
-				margin-top: -300px;
+				margin-top: -125px;
 			}
 			&__img {
 				border-radius: 20px;

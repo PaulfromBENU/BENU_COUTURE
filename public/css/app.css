@@ -13969,6 +13969,10 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .single-campaign__transition-1 {
     border: solid #FFFFFF 20px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 15vh;
   }
 }
 .single-campaign__transition-1 img {
@@ -13996,6 +14000,16 @@ input[type=checkbox]:focus {
   width: 100%;
   top: 0;
   left: 0;
+}
+@media (max-width: 767px) {
+  .single-campaign__transition-1__txt-container {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    position: relative;
+  }
 }
 .single-campaign__transition-1__title {
   text-align: center;
@@ -14040,7 +14054,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .single-campaign__transition-1__txt {
-    width: 91.66667vw;
+    width: 85vw;
     font: normal normal 500 16px/26px "Barlow";
   }
 }
@@ -14059,6 +14073,7 @@ input[type=checkbox]:focus {
   margin-left: 5%;
   text-align: left;
   font: normal normal 500 18px/30px "Barlow";
+  padding-bottom: 150px;
 }
 @media (min-width: 1720px) {
   .single-campaign__section-2__txt {
@@ -14071,6 +14086,7 @@ input[type=checkbox]:focus {
     width: 100%;
     margin: auto;
     margin-bottom: 5%;
+    padding-bottom: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -14081,6 +14097,7 @@ input[type=checkbox]:focus {
     margin-bottom: 5%;
     margin-left: 0;
     margin-top: 25px;
+    padding-bottom: 0px;
   }
 }
 .single-campaign__section-2__txt h4 {
@@ -14107,7 +14124,7 @@ input[type=checkbox]:focus {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
   position: relative;
   margin-top: 10px;
 }
@@ -14123,7 +14140,7 @@ input[type=checkbox]:focus {
     width: 80%;
     margin-bottom: 5%;
     margin-left: 10%;
-    margin-top: -300px;
+    margin-top: -125px;
   }
 }
 .single-campaign__section-2__picture__img {
