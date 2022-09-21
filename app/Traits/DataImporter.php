@@ -620,11 +620,11 @@ trait DataImporter {
                         }
 
                         if ($picture_size  == 'uk') {
-                            $picture_size = 'unique-kids';
+                            $picture_size = 'unique';
                         }
 
                         if ($picture_size  == 'uy') {
-                            $picture_size = 'unique-youth';
+                            $picture_size = 'unique';
                         }
 
                         // Default value to M for sold articles of unknown size

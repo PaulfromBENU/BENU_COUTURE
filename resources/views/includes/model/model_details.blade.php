@@ -26,7 +26,31 @@
 	</div>
 
 	<div class="model-pres__desc">
-		@if($model->product_type == 0)
+		@if($model->name == 'PINNA')
+		<!-- Case kid apron -->
+			<div class="flex flex-col lg:flex-row justify-start">
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
+					{{ strtoupper(__('models.apron-kid-info')) }}
+				</div>
+			</div>
+		@elseif($model->name == 'SCIMOR')
+		<!-- Case teen apron -->
+			<div class="flex flex-col lg:flex-row justify-start">
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
+					{{ strtoupper(__('models.apron-teen-info')) }}
+				</div>
+			</div>
+		@elseif($model->name == 'SELACHI')
+		<!-- Case adult apron -->
+			<div class="flex flex-col lg:flex-row justify-start">
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
+					{{ strtoupper(__('models.apron-adult-info')) }}
+				</div>
+			</div>
+		@elseif($model->product_type == 0)
 			<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
 		@elseif($model->product_type == 1)
 		<!-- Case mask for kids -->
