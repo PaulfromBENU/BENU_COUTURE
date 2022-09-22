@@ -24,7 +24,8 @@ class ModelController extends Controller
 
     public function show(Request $request)
     {
-        $model_name = $request->name;
+        // Unslugify creation name
+        $model_name = strtoupper(Str::of($request->name)->replace('-', ' '));
 
         // Case model name is not specified, all models are displayed ---------------------------------------
         if ($model_name == '' || $model_name == null) {

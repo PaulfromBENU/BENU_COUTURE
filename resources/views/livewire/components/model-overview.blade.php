@@ -1,4 +1,4 @@
-<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($model->name)]) }}" class="block model-overview">
+<a href="{{ route('model-'.app()->getLocale(), ['name' => Str::of(strtolower($model->name))->slug('-')]) }}" class="block model-overview">
     <div class="model-overview__header flex justify-between">
         <div>
             <p class="model-overview__header__txt">
