@@ -288,7 +288,7 @@
 			</h3>
 
 
-			<div class="about__general__content__info-section">
+			<div class="about__general__content__info-section" id="materials">
 				<div class="about__general__content__info-section__picture">
 					<img src="{{ asset('images/pictures/about/about-transition-4.jpg') }}" style="width: 100%;">
 				</div>

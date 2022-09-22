@@ -21,7 +21,7 @@
         @endforeach
         
         @if($j == 0 && $sections_number == 2)
-            @switch($paginate_page)
+            @switch(fmod($paginate_page, 5))
                 @case(1)
                 <div class="all-models__list__separator all-models__list__separator--1">
                 @break
@@ -30,11 +30,23 @@
                 <div class="all-models__list__separator all-models__list__separator--2">
                 @break
 
+                @case(3)
+                <div class="all-models__list__separator all-models__list__separator--3">
+                @break
+
+                @case(4)
+                <div class="all-models__list__separator all-models__list__separator--4">
+                @break
+
+                @case(0)
+                <div class="all-models__list__separator all-models__list__separator--5">
+                @break
+
                 @default
                 <div class="all-models__list__separator all-models__list__separator--1">
             @endswitch
                 <p class="all-models__list__separator__title">
-                    @switch($paginate_page)
+                    @switch(fmod($paginate_page, 5))
                         @case(1)
                         {{ __('models.info-1-header') }}
                         @break
@@ -43,18 +55,42 @@
                         {{ __('models.info-2-header') }}
                         @break
 
+                        @case(3)
+                        {{ __('models.info-3-header') }}
+                        @break
+
+                        @case(4)
+                        {{ __('models.info-4-header') }}
+                        @break
+
+                        @case(0)
+                        {{ __('models.info-5-header') }}
+                        @break
+
                         @default
                         {{ __('models.info-1-header') }}
                     @endswitch
                 </p>
                 <p class="all-models__list__separator__subtitle">
-                    @switch($paginate_page)
+                    @switch(fmod($paginate_page, 5))
                         @case(1)
                         {{ __('models.info-1-txt') }}
                         @break
                         
                         @case(2)
                         {{ __('models.info-2-txt') }}
+                        @break
+
+                        @case(3)
+                        {{ __('models.info-3-txt') }}
+                        @break
+
+                        @case(4)
+                        {{ __('models.info-4-txt') }}
+                        @break
+
+                        @case(0)
+                        {{ __('models.info-5-txt') }}
                         @break
 
                         @default

@@ -260,6 +260,33 @@
 					background-size: cover;
 				}
 			}
+			&--3 {
+				background: transparent url('/images/pictures/models_separator_2.png') 0% 0% no-repeat padding-box;
+				@include tablet {
+					background-size: cover;
+				}
+				@include mobile {
+					background-size: cover;
+				}
+			}
+			&--4 {
+				background: transparent url('/images/pictures/models_separator_2.png') 0% 0% no-repeat padding-box;
+				@include tablet {
+					background-size: cover;
+				}
+				@include mobile {
+					background-size: cover;
+				}
+			}
+			&--5 {
+				background: transparent url('/images/pictures/models_separator_2.png') 0% 0% no-repeat padding-box;
+				@include tablet {
+					background-size: cover;
+				}
+				@include mobile {
+					background-size: cover;
+				}
+			}
 			&__title {
 				text-align: left;
 				font: normal normal 600 36px/30px 'Barlow';
