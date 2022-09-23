@@ -48,28 +48,23 @@
                 <p class="all-models__list__separator__title">
                     @switch(fmod($paginate_page, 5))
                         @case(1)
-                        <!-- {{ __('models.info-1-header') }} -->
-                        La fabrication de textiles bio consomme également d'énormes quantités d'eau potable.
+                        {{ __('models.info-1-header') }}
                         @break
                         
                         @case(2)
-                        <!-- <span style="color: white;">{{ __('models.info-2-header') }}</span> -->
-                        <span style="color: white;">Sans travail des enfants = travail avec des personnes âgées d'au moins 12 ans</span>
+                        <span style="color: white;">{{ __('models.info-2-header') }}</span>
                         @break
 
                         @case(3)
-                        <!-- {{ __('models.info-3-header') }} -->
-                        1kg de textile en coton = 1kg de produits chimiques
+                        {{ __('models.info-3-header') }}
                         @break
 
                         @case(4)
-                        <!-- {{ __('models.info-4-header') }} -->
-                        L'achat d'un million de jeans de seconde main permettrait d'économiser 7 millions de tonnes de CO2.
+                        {{ __('models.info-4-header') }}
                         @break
 
                         @case(0)
-                        <!-- {{ __('models.info-5-header') }} -->
-                        16% de tous les insecticides finissent dans les champs de coton
+                        {{ __('models.info-5-header') }}
                         @break
 
                         @default

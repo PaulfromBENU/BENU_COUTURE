@@ -244,8 +244,11 @@
 				padding: 0 75px;
 			}
 			@include mobile {
-				height: 120px;
+				height: 145px;
+				// height: 100px; To show the picture for portrait mobile.
+				min-height: fit-content;
 				padding: 0 45px;
+				// background-position-x: right !important;
 			}
 			&--1 {
 				background: transparent url('/images/pictures/models_separator_1.jpg') 0% 0% no-repeat padding-box;
@@ -294,18 +297,18 @@
 			}
 			&__title {
 				text-align: left;
-				font: normal normal 600 36px/30px 'Barlow';
+				font: normal normal 600 36px/46px 'Barlow';
 				letter-spacing: 0px;
 				padding-bottom: 10px;
-				width: 70%;
+				width: 65%;
 				@include intermediate {
-					font: normal normal 600 30px/26px 'Barlow';
+					font: normal normal 600 30px/38px 'Barlow';
 				}
 				@include tablet {
-					font: normal normal 600 24px/25px 'Barlow';
+					font: normal normal 600 24px/30px 'Barlow';
 				}
 				@include mobile {
-					width: 65%;
+					width: 75%;
 					font: normal normal 600 16px/22px 'Barlow';
 				}
 			}

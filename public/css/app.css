@@ -7065,7 +7065,10 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .all-models__list__separator {
-    height: 120px;
+    height: 145px;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     padding: 0 45px;
   }
 }
@@ -7136,24 +7139,24 @@ input[type=checkbox]:focus {
 }
 .all-models__list__separator__title {
   text-align: left;
-  font: normal normal 600 36px/30px "Barlow";
+  font: normal normal 600 36px/46px "Barlow";
   letter-spacing: 0px;
   padding-bottom: 10px;
-  width: 70%;
+  width: 65%;
 }
 @media (min-width: 1081px) and (max-width: 1249px) {
   .all-models__list__separator__title {
-    font: normal normal 600 30px/26px "Barlow";
+    font: normal normal 600 30px/38px "Barlow";
   }
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator__title {
-    font: normal normal 600 24px/25px "Barlow";
+    font: normal normal 600 24px/30px "Barlow";
   }
 }
 @media (max-width: 767px) {
   .all-models__list__separator__title {
-    width: 65%;
+    width: 75%;
     font: normal normal 600 16px/22px "Barlow";
   }
 }
