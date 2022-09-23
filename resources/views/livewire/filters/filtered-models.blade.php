@@ -23,23 +23,23 @@
         @if($j == 0 && $sections_number == 2)
             @switch(fmod($paginate_page, 5))
                 @case(1)
-                <div class="all-models__list__separator all-models__list__separator--1">
+                <div class="all-models__list__separator all-models__list__separator--1 flex flex-col justify-center">
                 @break
                 
                 @case(2)
-                <div class="all-models__list__separator all-models__list__separator--2">
+                <div class="all-models__list__separator all-models__list__separator--2 flex flex-col justify-center">
                 @break
 
                 @case(3)
-                <div class="all-models__list__separator all-models__list__separator--3">
+                <div class="all-models__list__separator all-models__list__separator--3 flex flex-col justify-center">
                 @break
 
                 @case(4)
-                <div class="all-models__list__separator all-models__list__separator--4">
+                <div class="all-models__list__separator all-models__list__separator--4 flex flex-col justify-center">
                 @break
 
                 @case(0)
-                <div class="all-models__list__separator all-models__list__separator--5">
+                <div class="all-models__list__separator all-models__list__separator--5 flex flex-col justify-center">
                 @break
 
                 @default
@@ -48,30 +48,35 @@
                 <p class="all-models__list__separator__title">
                     @switch(fmod($paginate_page, 5))
                         @case(1)
-                        {{ __('models.info-1-header') }}
+                        <!-- {{ __('models.info-1-header') }} -->
+                        La fabrication de textiles bio consomme également d'énormes quantités d'eau potable.
                         @break
                         
                         @case(2)
-                        {{ __('models.info-2-header') }}
+                        <!-- <span style="color: white;">{{ __('models.info-2-header') }}</span> -->
+                        <span style="color: white;">Sans travail des enfants = travail avec des personnes âgées d'au moins 12 ans</span>
                         @break
 
                         @case(3)
-                        {{ __('models.info-3-header') }}
+                        <!-- {{ __('models.info-3-header') }} -->
+                        1kg de textile en coton = 1kg de produits chimiques
                         @break
 
                         @case(4)
-                        {{ __('models.info-4-header') }}
+                        <!-- {{ __('models.info-4-header') }} -->
+                        L'achat d'un million de jeans de seconde main permettrait d'économiser 7 millions de tonnes de CO2.
                         @break
 
                         @case(0)
-                        {{ __('models.info-5-header') }}
+                        <!-- {{ __('models.info-5-header') }} -->
+                        16% de tous les insecticides finissent dans les champs de coton
                         @break
 
                         @default
                         {{ __('models.info-1-header') }}
                     @endswitch
                 </p>
-                <p class="all-models__list__separator__subtitle">
+                <!-- <p class="all-models__list__separator__subtitle">
                     @switch(fmod($paginate_page, 5))
                         @case(1)
                         {{ __('models.info-1-txt') }}
@@ -96,7 +101,7 @@
                         @default
                         {{ __('models.info-1-txt') }}
                     @endswitch
-                </p>
+                </p> -->
             </div>
         @endif
     @endfor

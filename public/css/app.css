@@ -7049,22 +7049,28 @@ input[type=checkbox]:focus {
   height: 350px;
   width: 100%;
   margin-bottom: 50px;
-  padding: 140px 125px;
+  padding: 0 125px;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .all-models__list__separator {
+    height: 200px;
+    padding: 0 100px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator {
     height: 200px;
-    padding: 70px 75px;
+    padding: 0 75px;
   }
 }
 @media (max-width: 767px) {
   .all-models__list__separator {
-    height: 140px;
-    padding: 40px 45px;
+    height: 120px;
+    padding: 0 45px;
   }
 }
 .all-models__list__separator--1 {
-  background: transparent url("/images/pictures/models_separator_1.png") 0% 0% no-repeat padding-box;
+  background: transparent url("/images/pictures/models_separator_1.jpg") 0% 0% no-repeat padding-box;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator--1 {
@@ -7077,7 +7083,7 @@ input[type=checkbox]:focus {
   }
 }
 .all-models__list__separator--2 {
-  background: transparent url("/images/pictures/models_separator_2.png") 0% 0% no-repeat padding-box;
+  background: transparent url("/images/pictures/models_separator_2.jpg") 0% 0% no-repeat padding-box;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator--2 {
@@ -7090,7 +7096,7 @@ input[type=checkbox]:focus {
   }
 }
 .all-models__list__separator--3 {
-  background: transparent url("/images/pictures/models_separator_2.png") 0% 0% no-repeat padding-box;
+  background: transparent url("/images/pictures/models_separator_3.jpg") 0% 0% no-repeat padding-box;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator--3 {
@@ -7103,7 +7109,7 @@ input[type=checkbox]:focus {
   }
 }
 .all-models__list__separator--4 {
-  background: transparent url("/images/pictures/models_separator_2.png") 0% 0% no-repeat padding-box;
+  background: transparent url("/images/pictures/models_separator_4.png") 0% 0% no-repeat padding-box;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator--4 {
@@ -7116,7 +7122,7 @@ input[type=checkbox]:focus {
   }
 }
 .all-models__list__separator--5 {
-  background: transparent url("/images/pictures/models_separator_2.png") 0% 0% no-repeat padding-box;
+  background: transparent url("/images/pictures/models_separator_5.jpg") 0% 0% no-repeat padding-box;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator--5 {
@@ -7133,15 +7139,22 @@ input[type=checkbox]:focus {
   font: normal normal 600 36px/30px "Barlow";
   letter-spacing: 0px;
   padding-bottom: 10px;
+  width: 70%;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .all-models__list__separator__title {
+    font: normal normal 600 30px/26px "Barlow";
+  }
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .all-models__list__separator__title {
-    font: normal normal 600 32px/26px "Barlow";
+    font: normal normal 600 24px/25px "Barlow";
   }
 }
 @media (max-width: 767px) {
   .all-models__list__separator__title {
-    font: normal normal 600 26px/22px "Barlow";
+    width: 65%;
+    font: normal normal 600 16px/22px "Barlow";
   }
 }
 .all-models__list__separator__subtitle {
