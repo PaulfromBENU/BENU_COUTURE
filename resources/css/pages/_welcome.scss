@@ -2,9 +2,8 @@
 	// min-height: max(800px, 80vh);
 	margin-bottom: 60px;
 	width: 100vw;
-	overflow: hidden;
 	position: relative;
-	min-height: min(85vh, 900px);
+	min-height: min(80vh, 800px);
 	@include intermediate {
 		min-height: 550px;
 		height: 625px;
@@ -12,11 +11,13 @@
 	@include tablet {
 		min-height: 0;
 		height: auto;
+		overflow: hidden;
 	}
 	@include mobile {
 		min-height: 0;
 		height: auto;
 		margin-bottom: 20px;
+		overflow: hidden;
 	}
 	&__desc {
 		padding-top: 139px;
@@ -152,18 +153,20 @@
 		right: 0vw;
 		top: 0;
 		width: 68%;
-		overflow: hidden;
-		z-index: 1;
+		// overflow: hidden;
+		z-index: -1;
 		height: 100%;
 		//background: lightgrey;
 		@include tablet {
 			right: 0;
+			overflow: hidden;
 		}
 		@include mobile {
 			position: relative;
 			right: 40%;
 			width: 150%;
 			height: auto;
+			overflow: hidden;
 		}
 	}
 }
@@ -173,7 +176,7 @@
 }
 
 .welcome-campaign {
-	margin-top: 0px;
+	margin-top: -90px;
 	margin-bottom: 37px;
 	// min-height: 100vh;
 	// height: min(100vh, 900px);
