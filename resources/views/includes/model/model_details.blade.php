@@ -118,31 +118,31 @@
 		</div>
 		@endif
 
-		@if($model->product_type != 3)
-			<div class="model-pres__desc__seemore">
-				<div class="model-pres__wiki-link">
-					<p class="model-pres__desc__txt" style="margin-bottom: 20px;">
-						{!! __('models.link-explanation') !!}
-					</p>
-					<p class="model-pres__desc__link">
-						@php $link_query = "origin_link_".app()->getLocale(); @endphp
-						<a href="{{ $model->$link_query }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" style="margin: 0;">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
-					</p>
-				</div>
-
-				<div class="flex tablet-hidden">
-					<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
-						{{ __('models.model-link-articles') }} @svg('model_arrow_down')
-					</a>
-					
-					@if($model->creation_accessories()->count() > 0)
-					<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
-						{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
-					</a>
-					@endif
-				</div>
-				
+		
+		<div class="model-pres__desc__seemore">
+			<div class="model-pres__wiki-link">
+				<p class="model-pres__desc__txt" style="margin-bottom: 20px;">
+					{!! __('models.link-explanation') !!}
+				</p>
+				<p class="model-pres__desc__link">
+					@php $link_query = "origin_link_".app()->getLocale(); @endphp
+					<a href="{{ $model->$link_query }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" style="margin: 0;">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
+				</p>
 			</div>
-		@endif
+
+			@if($model->product_type != 3)
+			<div class="flex tablet-hidden">
+				<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
+					{{ __('models.model-link-articles') }} @svg('model_arrow_down')
+				</a>
+				
+				@if($model->creation_accessories()->count() > 0)
+				<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
+					{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+				</a>
+				@endif
+			</div>
+			@endif
+		</div>
 	</div>
 </section>
