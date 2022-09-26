@@ -11222,7 +11222,10 @@ input[type=checkbox]:focus {
   position: absolute;
   top: 100px;
   left: calc(50vw - 220px);
-  transition: top 2.5s ease-in-out;
+  transition: top 2.5s ease-in-out, left 6s ease-out;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .header-bckgnd__bird {
@@ -11238,6 +11241,7 @@ input[type=checkbox]:focus {
 }
 .header-bckgnd__bird__img {
   height: 280px;
+  min-width: 498px;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   .header-bckgnd__bird__img {

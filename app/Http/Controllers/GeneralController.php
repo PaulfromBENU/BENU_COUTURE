@@ -342,6 +342,12 @@ class GeneralController extends Controller
     }
 
 
+    public function launchWebsite()
+    {
+        return view('launch-intro');
+    }
+
+
     public function startImport()
     {
         if(auth::check() && auth::user()->role == 'admin') {

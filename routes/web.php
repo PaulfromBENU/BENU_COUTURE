@@ -205,6 +205,9 @@ if (app('env') == 'landing') {
 			return new UserRegistered($user);
 		});
 		Route::get('/import-data', 'GeneralController@startImport');
+
+		// Launch page
+		Route::get('/launch', 'GeneralController@launchWebsite')->name('launch');
 	});
 
 	Route::group([
