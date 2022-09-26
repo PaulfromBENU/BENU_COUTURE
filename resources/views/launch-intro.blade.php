@@ -62,7 +62,7 @@
                 // $('#header-bird-pic').css('top', newTop);
                 setInterval(function() {
                     if(window.innerWidth >= 1024) {
-                        newTop = parseInt(initialTop) + 150*(Math.random() * 2 - 1);
+                        newTop = parseInt(initialTop) + 100*(Math.random() * 2 - 1);
                         newTop += 'px';
                         $('#header-bird-pic').css('top', newTop);
                     } else {
