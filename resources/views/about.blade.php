@@ -275,6 +275,7 @@
 							<img src="{{ asset('images/pictures/about/about-content-6.jpg') }}">
 						</div>
 					</div>
+					<div id="materials"></div>
 					<p class="text-center mt-4 mb-10">
 						<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-3-btn-contact') }}</a>
 					</p>
@@ -288,7 +289,7 @@
 			</h3>
 
 
-			<div class="about__general__content__info-section" id="materials">
+			<div class="about__general__content__info-section">
 				<div class="about__general__content__info-section__picture">
 					<img src="{{ asset('images/pictures/about/about-transition-4.jpg') }}" style="width: 100%;">
 				</div>
