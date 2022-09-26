@@ -108,11 +108,7 @@
 	</p>
 
 	<p class="full-story__txt">
-		{{ __('about.full-paragraph-5-6') }}
-	</p>
-
-	<p class="full-story__txt">
-		{{ __('about.full-paragraph-5-7') }} <a href="https://benu.lu">benu.lu</a> {{ __('about.full-paragraph-5-8') }}
+		{{ __('about.full-paragraph-5-6') }} <a href="{{ route('about-'.app()->getLocale()) }}" target="_blank">{{ __('about.full-paragraph-5-7') }}</a>. {{ __('about.full-paragraph-5-8') }} (<a href="https://benu.lu">benu.lu</a>).
 	</p>
 </section>
 @endsection

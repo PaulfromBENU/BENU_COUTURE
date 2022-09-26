@@ -658,7 +658,7 @@ trait DataImporter {
                                 $new_article->singularity_lu = "";
                                 $new_article->singularity_fr = "";
                                 $new_article->singularity_en = "";
-                                $new_article->singularity_de = "article.singularity-".strtolower($creation->name)."-".$new_article->name;
+                                $new_article->singularity_de = "";
                                 $new_article->translation_key = "article.singularity-".strtolower($new_article->name);
                                 $new_article->creation_date = $picture_info[6];
                                 //$new_article->picture_name = $picture_name;
@@ -925,7 +925,7 @@ trait DataImporter {
                                 $new_replacement->singularity_lu = "";
                                 $new_replacement->singularity_fr = "";
                                 $new_replacement->singularity_en = "";
-                                $new_replacement->singularity_de = "article.singularity-".strtolower($replacement)."-".$new_replacement->name;
+                                $new_replacement->singularity_de = "";
                                 $new_replacement->translation_key = "article.singularity-".strtolower($new_replacement->name);
                                 $new_replacement->creation_date = $picture_info[6];
 
@@ -1523,7 +1523,7 @@ trait DataImporter {
                 if ($article_sophie['singularity_de'] != "") {
                     $article->singularity_de = $article_sophie['singularity_de'];
                 } else {
-                    $article->singularity_fr = $article->translation_key;
+                    $article->singularity_de = "";
                 }
                 if ($article->save()) {
                     echo "<span style='color: green; padding-left: 10px;'>Singularities updated for article ".$article->name."</span><br/>";
