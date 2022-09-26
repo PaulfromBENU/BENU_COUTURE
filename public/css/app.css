@@ -656,6 +656,12 @@ input[type=checkbox]:focus {
 .btn-slider-left:hover::after {
   width: 100%;
 }
+.btn-slider-left--active {
+  color: #D41C1B;
+}
+.btn-slider-left--active::after {
+  width: 100%;
+}
 
 .btn-slider-right {
   position: relative;

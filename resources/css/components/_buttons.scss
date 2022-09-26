@@ -64,6 +64,12 @@
 			width: 100%;
 		}
 	}
+	&--active {
+		color: $primary-color;
+		&::after {
+			width: 100%;
+		}
+	}
 }
 
 .btn-slider-right {
