@@ -5714,8 +5714,8 @@ input[type=checkbox]:focus {
   }
 }
 .faq__accordion__answer__subanswer {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   text-align: left;
   font: normal normal 500 16px/28px "Barlow";
   letter-spacing: 0px;
@@ -7067,6 +7067,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .all-models__list__separator {
+    display: none;
     height: 145px;
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;

@@ -54,7 +54,7 @@
 							</p>
 						</div>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-1-question-content-3-1') !!} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-1-question-content-3-2') !!}</a> {!! __('services.faq-group-1-question-content-3-3') !!}
+							{!! __('services.faq-group-1-question-content-3-1') !!} <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-give')]) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-1-question-content-3-2') !!}</a> {!! __('services.faq-group-1-question-content-3-3') !!}
 						</p>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
 							{!! __('services.faq-group-1-question-content-3-4') !!} <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-smart')]) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-1-question-content-3-5') !!}</a>
@@ -89,12 +89,18 @@
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
 							{!! __('services.faq-group-1-question-content-5-2') !!}
 						</p>
-						<p class="faq__accordion__answer__subanswer" style="display: none;">
+						<div class="faq__accordion__answer__subanswer" style="display: none;">
 							{!! __('services.faq-group-1-question-content-5-3') !!}
-							<br/>> {!! __('services.faq-group-1-question-content-5-4') !!}
-							<br/>> {!! __('services.faq-group-1-question-content-5-5') !!}
-							<br/>> {!! __('services.faq-group-1-question-content-5-6') !!}
-						</p>
+							<div class="flex justify-start">
+								<div style="min-width: 30px; margin-top: 9px;">@svg('list_cintre')</div> <p>{!! __('services.faq-group-1-question-content-5-4') !!}</p>
+							</div>
+							<div class="flex justify-start">
+								<div style="min-width: 30px; margin-top: 9px;">@svg('list_cintre')</div> <p>{!! __('services.faq-group-1-question-content-5-5') !!}</p>
+							</div>
+							<div class="flex justify-start">
+								<div style="min-width: 30px; margin-top: 9px;">@svg('list_cintre')</div> <p>{!! __('services.faq-group-1-question-content-5-6') !!}</p>
+							</div>
+						</div>
 					</li>
 					<li>
 						<div class="flex justify-between faq__accordion__answer__header">
@@ -421,23 +427,8 @@
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
 							{!! __('services.faq-group-5-question-content-2-2') !!} <a href="https://www.benureuse.lu" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-5-question-content-2-3') !!}</a> {!! __('services.faq-group-5-question-content-2-4') !!}
 						</p>
-					</li>
-					<li>
-						<div class="flex justify-between faq__accordion__answer__header">
-							<p>{!! __('services.faq-group-5-question-title-3') !!}</p>
-							<p>
-								<span class="faq__accordion__answer__header__plus">+</span>
-								<span class="faq__accordion__answer__header__minus" style="display: none;">-</span>
-							</p>
-						</div>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-5-question-content-3-1') !!}
-						</p>
-						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-5-question-content-3-2') !!}
-						</p>
-						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-5-question-content-3-3') !!} <a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-5-question-content-3-4') !!}</a>
+							{!! __('services.faq-group-5-question-content-2-5') !!} <a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-5-question-content-2-6') !!}</a>
 						</p>
 					</li>
 				</ul>
