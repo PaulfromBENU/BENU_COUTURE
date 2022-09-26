@@ -627,4 +627,59 @@
 			@endforeach
 		</div>
 	</section>
+
+	<section class="new-orders">
+		<div class="flex justify-between orders-title" wire:click="toggleSoldInShopOrders">
+			<h2>
+				Orders sold in shop
+			</h2>
+			@if($show_sold_in_shop_orders)
+			<p>
+				-
+			</p>
+			@else
+			<p>
+				+
+			</p>
+			@endif
+		</div>
+		<div @if(!$show_sold_in_shop_orders) style="display: none; padding-bottom: 100px;" @endif>
+			@if($orders_sold_in_shop->count() == 0)
+			<p>
+				<em>No articles sold in shop for the moment...</em>
+			</p>
+			@endif
+			@foreach($orders_sold_in_shop as $order_sold_in_shop)
+			<div class="new-orders__order relative" wire:key="unpaid-{{ $order_sold_in_shop->id }}">
+				<div class="text-3xl font-medium">
+					Order 
+					<a target="_blank" href="{{ route('invoice-en', ['order_code' => \Illuminate\Support\Str::random(4).$order_sold_in_shop->unique_id.\Illuminate\Support\Str::random(12)]) }}" style="color: orange;">
+	                    #{{ $order_sold_in_shop->unique_id }}
+	                </a>
+				</div>
+				<p style="margin-bottom: 5px;">
+					@if($order_sold_in_shop->user !== null)
+					Ordered by: {{ $order_sold_in_shop->user->first_name }} {{ $order_sold_in_shop->user->last_name }}, on {{ Carbon\Carbon::parse($order_sold_in_shop->created_at)->format('d\/m\/Y') }}
+					@endif
+				</p>
+				<p style="margin-bottom: 5px;">
+					@if($order_sold_in_shop->user !== null)
+					E-mail: {{ $order_sold_in_shop->user->email }} - Phone: {{ $order_sold_in_shop->user->phone }}
+					@endif
+				</p>
+				<p class="text-xl">
+					Total: {{ $order_sold_in_shop->total_price }}&euro; - Paid - Collected on {{ Carbon\Carbon::parse($order_sold_in_shop->delivery_date)->format('d\/m\/Y') }}
+				</p>
+				<p>
+					Return possible:
+					@if(Carbon\Carbon::now()->subDays(28) > Carbon\Carbon::parse($order_sold_in_shop->delivery_date))
+						<span style="color: #D41C1B;">No</span>
+					@else
+						<span style="color: green;">Yes</span>
+					@endif
+				</p>
+			</div>
+			@endforeach
+		</div>
+	</section>
 </x-filament::page>

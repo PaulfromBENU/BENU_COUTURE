@@ -43,6 +43,7 @@ class OrdersInterface extends Page
     public $orders_sent;
     public $orders_ready_for_collect;
     public $orders_collected;
+    public $orders_sold_in_shop;
 
     public $delivery_link;
 
@@ -53,6 +54,7 @@ class OrdersInterface extends Page
     public $show_sent_orders = 0;
     public $show_orders_ready_for_collect = 0;
     public $show_collected_orders = 0;
+    public $show_sold_in_shop_orders = 0;
 
     public function mount()
     {
@@ -91,6 +93,7 @@ class OrdersInterface extends Page
         $this->orders_sent = Order::where('delivery_status', '2')->orWhere('delivery_status', '4')->orderBy('delivery_date', 'desc')->get();
         $this->orders_ready_for_collect = Order::where('delivery_status', '3')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
         $this->orders_collected = Order::where('delivery_status', '5')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_sold_in_shop = Order::where('delivery_status', '10')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
     }
 
     public function cleanUnsoldArticles()
@@ -283,6 +286,7 @@ class OrdersInterface extends Page
         $this->show_sent_orders = 0;
         $this->show_orders_ready_for_collect = 0;
         $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
     }
 
     public function toggleUnpaidOrders()
@@ -296,6 +300,7 @@ class OrdersInterface extends Page
         $this->show_sent_orders = 0;
         $this->show_orders_ready_for_collect = 0;
         $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
     }
 
     public function toggleSentOrders()
@@ -309,6 +314,7 @@ class OrdersInterface extends Page
         $this->show_unpaid_orders = 0;
         $this->show_orders_ready_for_collect = 0;
         $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
     }
 
     public function toggleOrdersReadyForCollect()
@@ -322,6 +328,7 @@ class OrdersInterface extends Page
         $this->show_unpaid_orders = 0;
         $this->show_sent_orders = 0;
         $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
     }
 
     public function toggleCollectedOrders()
@@ -335,6 +342,21 @@ class OrdersInterface extends Page
         $this->show_unpaid_orders = 0;
         $this->show_sent_orders = 0;
         $this->show_orders_ready_for_collect = 0;
+        $this->show_sold_in_shop_orders = 0;
+    }
+
+    public function toggleSoldInShopOrders()
+    {
+        if ($this->show_sold_in_shop_orders == 0) {
+            $this->show_sold_in_shop_orders = 1;
+        } else {
+            $this->show_sold_in_shop_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
     }
 
     // Display new orders - paid & not handled
