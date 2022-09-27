@@ -83,7 +83,7 @@
                 	$('.landing-header').fadeOut(2000);
                 }, 3500);
                 setTimeout(function() {
-                	window.location.replace('https://couture.benu.lu');
+                	window.location.replace('https://stage.couture.benu.lu');
                 }, 5500);
             }
         }
