@@ -2282,10 +2282,10 @@ input[type=checkbox]:focus {
   bottom: -1px;
   transition: all 0.3s ease-in-out;
 }
-.header__main-nav__link:hover {
+.header__main-nav__link:hover, .header__main-nav__link--active {
   color: #D41C1B;
 }
-.header__main-nav__link:hover::before {
+.header__main-nav__link:hover::before, .header__main-nav__link--active::before {
   left: 0%;
   width: 100%;
 }
@@ -2361,22 +2361,6 @@ input[type=checkbox]:focus {
 .header__top-nav__links li {
   padding-top: 5px;
 }
-.header__top-nav__links li a {
-  color: #2E1414;
-  padding: 0.5rem;
-  font: normal normal normal 18px/22px "Barlow Condensed";
-  letter-spacing: 0.36px;
-  transition: color 0.3s ease-in-out;
-}
-@media (min-width: 1081px) and (max-width: 1249px) {
-  .header__top-nav__links li a {
-    padding: 0.5rem 0.2rem;
-    font: normal normal normal 17px/20px "Barlow Condensed";
-  }
-}
-.header__top-nav__links li a:hover {
-  color: #D41C1B;
-}
 .header__top-nav__links li:nth-child(odd) {
   padding-right: 0.4rem;
   padding-left: 0.4rem;
@@ -2384,6 +2368,22 @@ input[type=checkbox]:focus {
 .header__top-nav__links li:nth-child(even) {
   padding-left: 0;
   padding-right: 0;
+}
+.header__top-nav__links__link {
+  color: #2E1414;
+  padding: 0.5rem;
+  font: normal normal normal 18px/22px "Barlow Condensed";
+  letter-spacing: 0.36px;
+  transition: color 0.3s ease-in-out;
+}
+@media (min-width: 1081px) and (max-width: 1249px) {
+  .header__top-nav__links__link {
+    padding: 0.5rem 0.2rem;
+    font: normal normal normal 17px/20px "Barlow Condensed";
+  }
+}
+.header__top-nav__links__link:hover, .header__top-nav__links__link--active {
+  color: #D41C1B;
 }
 
 .header-simplified {
