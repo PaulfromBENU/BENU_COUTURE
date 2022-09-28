@@ -592,12 +592,260 @@
     "lu": "Geschicht"
   },
   {
-    "page": "Home",
+    "page": "Histoire",
     "key": "breadcrumbs.full-story",
     "de": "Die ganze Geschichte von BENU COUTURE",
     "fr": "Toute l'histoire de BENU COUTURE",
     "en": "The whole story of BENU COUTURE",
     "lu": "Déi ganz Geschicht vu BENU COUTURE"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-toptitle",
+    "de": "BENU COUTURE",
+    "fr": "BENU COUTURE",
+    "en": "BENU COUTURE",
+    "lu": "BENU COUTURE"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-title",
+    "de": "Die ganze Geschichte von BENU COUTURE",
+    "fr": "Toute l'histoire de BENU COUTURE",
+    "en": "The whole story of BENU COUTURE",
+    "lu": "Déi ganz Geschicht vu BENU COUTURE"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-0-1",
+    "de": "Ein Spaziergang in den Wäldern im hohen Norden von Luxemburg. Es ist wunderbar, die Vögel zwitschern, da, ein Reh zwischen den Bäumen. Und dann, ja dann kracht die Hose. Urplötzlich und ohne Vorwarnung. Meine Jeans, noch keine 10 Jahre alt (hehe), reißt nicht etwa an der Naht, sondern mittendrin. Mir ist gleich klar, dass es nicht mit ein, zwei Nahtstichen getan ist.",
+    "fr": "Une promenade dans les forêts du nord du Luxembourg. C'est magnifique, les oiseaux chantent, là, un chevreuil entre les arbres. Et puis soudain, oui soudain, le pantalon craque. Comme ça, sans prévenir. Mon jean, qui n'a pas encore dix ans (héhé), ne se déchire même pas au niveau de la couture, mais bien en plein milieu. Je comprends tout de suite que quelques points de couture ne suffiront pas.",
+    "en": "A walk in the woods in the north of Luxembourg. It's wonderful, the birds are singing, there, a deer between the trees. And then, yes, then the trousers crack. Suddenly and without any warning. My jeans, not yet 10 years old (hehe), tear not at the seam, but of course right in the middle. It is immediately clear to me that it is not done with one or two stitches.",
+    "lu": "E Spadséiergang an de Bëscher am Norde vu Lëtzebuerg. Et ass wonnerbar, d’Villercher zwitscheren, hei, e Réi tëschent de Beem. An dann, jo, da kraacht d’Box. Op eemol, einfach esou an ouni Virwarnung. Meng Jeans, nach keng 10 Joer al (haha), räisst net éieren un der Nout nee nee, mee matzendran. Mir ass direkt kloer, datt et mat een zwee Stéch net gedoen ass."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-0-2",
+    "de": "In diesem Augenblick beginnt die Geschichte von BENU.",
+    "fr": "C'est à ce moment-là que l'histoire de BENU commence.",
+    "en": "This is when the story of BENU begins.",
+    "lu": "An deem Moment fänkt d’Geschicht vu BENU un."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-0-3",
+    "de": "Welche Optionen bieten sich mir? Erst ein paar Tage zuvor hatte ich mir eine verdeckte Reportage von französischen Investigativjournalisten in einer großen Textilproduktionsstätte in Asien angesehen. Ich war fassungslos und musste viel weinen beim Anblick von Schlägen mit dem Holzknüppel, weil die Arbeiterin mit ihrer Nachbarin gesprochen hatte. Zweimal am Tag, innerhalb von 10 Arbeitsstunden, dürfen sie zur Toilette. Sprechen ist nicht erlaubt wegen der dann vermeintlich reduzierten Konzentration und Arbeitsgeschwindigkeit. Alles das, damit wir Hosen im Wühltisch für 15 € finden? Sind wir denn noch alle bei Trost?",
+    "fr": "Quelles options s'offrent à moi ? Quelques jours auparavant, j'avais regardé un reportage sous couverture, réalisé par des journalistes d'investigation français, dans une grande usine de production textile en Asie. J'étais abasourdi et j'ai beaucoup pleuré en voyant les coups de bâtons pleuvoir sur l'ouvrière qui avait osé parler à sa voisine. Elles n’ont le droit d'aller aux toilettes que deux fois sur une journée de travail de dix heures. Et il est interdit de parler car cela réduit prétendument la concentration et la vitesse de travail. Tout ça pour trouver des pantalons à 15 € sur les étals de nos magasins ? \nAvons-nous perdu la tête ?",
+    "en": "What options do I have? Only a few days before, I watched an undercover report by French investigative journalists in a large textile production plant in Asia. I was stunned and cried a lot when I saw the worker being beaten with a wooden club because she dared to talk to her neighbour. Twice a day, within 10 working hours, they are allowed to go to the toilet. Talking is not allowed because of the then supposedly reduced concentration and work speed. All this so we can find trousers for 15 € on the shelves of our shops? \nHave we lost our minds?",
+    "lu": "Wéi eng Optiounen hunn ech? Eréischt e puer Deeg virdrun hat ech eng Undercover-Reportage gekuckt, vu franséiche Journalisten an enger grousser Textilindustrie an Asien. Ech war fassungslos an hu vill misste kräische beim Ubléck vun de Schléi mam Knëppel, well d’Aarbechterin mat hirer Nopesch geschwat huet. Zweemol am Dag, innerhalb vun 10 Aarbechtsstonnen, dierfe si op d’Toilette. Schwätzen ass net erlaabt well et d’Konzentratioun an d’Aarbechtsgeschwindegkeet angeeblech reduzéiert. All dat, fir datt mir um Wulldësch eng Box fir 15 € fannen?\nSi mir nach all bei Trouscht?"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-0-4",
+    "de": "Klar ist, dass eine neue Hose aus dem Laden an der Ecke nicht in Frage kommt. Also dann lieber eine Hose mit Label, Bio, irgendeine vermeintliche Nachhaltigkeit, OekoTex, Fairtrade …?",
+    "fr": "Ok, donc pas question d'acheter un pantalon neuf dans le magasin du coin. Alors peut-être un pantalon labellisé, bio, d’une quelconque durabilité supposée, OekoTex, Fairtrade ... ?",
+    "en": "Thus, it is clear that new trousers coming from the corner shop are out of the question. So maybe trousers with a label, organic, of some supposed sustainability, OekoTex, Fairtrade ...?",
+    "lu": "Et ass also kloer: eng nei Box aus dem Buttek ëm den Eck kënnt net a Fro. Dann also léiwer eng Box mat Label, Bio, iergendeng angeeblech Nohaltegkeet, OekoTex, Fairtrade ...?"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-0-5",
+    "de": "Ich habe in meinem Leben gelernt, keinem Label ohne Analyse zu vertrauen. Sämtliche Textillabels, sogar die besten, können nicht darüber hinwegtäuschen, dass wir insbesondere bei der Produktion von Kleidern, inklusive Anbau und Weiterverarbeitung, weltweit auf dem Holzweg sind.",
+    "fr": "J'ai appris dans ma vie à ne pas faire confiance aux labels sans les analyser. Les labels textiles, même les meilleurs, ne peuvent pas cacher le fait que nous faisons fausse route dans le monde entier, surtout en ce qui concerne la production de vêtements, culture et transformation comprises.",
+    "en": "I’ve learned in my life not to trust any label without analysis. All textile labels, even the best ones, cannot hide the fact that we are on the wrong track worldwide, especially in the production of clothes, including cultivation and processing.",
+    "lu": "Ech hunn a mengem Liewe geléiert, kengem Label ouni Analys ze vertrauen. Sämtlech Textillabelen, esouguer déi bescht, kënnen net ënnerschloen, dass mir, besonnesch an der Produktioun vu Kleeder, inklusiv dem Ubau an der Veraarbechtung, weltwäit um Holzwee sinn."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-subtitle-1",
+    "de": "Kinderarbeit",
+    "fr": "Travail des enfants",
+    "en": "Child labour",
+    "lu": "Kanneraarbecht"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-1-1",
+    "de": "Gute Labels garantieren, dass die jüngsten Kinder nicht mitarbeiten dürfen, die etwas weniger jungen Kinder aber schon. Medienwirksam wird dies angekündigt mit \"Keine Kinderarbeit\". Was aber bedeutet diese Aussage konkret?\nBeispiel Bangladesh: Wenn in Bangladesh Kinder \"erst\" ab 12 Jahren mitarbeiten, kann das Kleidungsstück die höchst angesehenen Labels wie etwa GOTS (Global Organic Textile Standard,",
+    "fr": "Les bons labels garantissent que les plus jeunes enfants ne sont pas autorisés à travailler, or les enfants un peu moins jeunes le sont. Dans les médias, cela est mis en avant par l'expression \"Child labour free\" (sans travail des enfants). Mais que signifie concrètement cette affirmation ?\nExemple du Bangladesh : si au Bangladesh les enfants ne travaillent \"qu'à partir de 12 ans\", le vêtement peut recevoir les labels les plus prestigieux comme GOTS (Global Organic Textile Standard,",
+    "en": "Good labels guarantee that the youngest children are not allowed to work, but the slightly less young children are. This is announced in a media-effective way as \"Child labour free\". But what does this statement actually mean?\nTake Bangladesh, for example: If children in Bangladesh \"only\" work from the age of 12, the garment can receive the most highly respected labels such as GOTS (Global Organic Textile Standard,",
+    "lu": "Gutt Labele garantéieren, datt déi jéngste Kanner net schaffen däerfen, déi e bësse manner jonk awer schonn. Mediewierksam gëtt dat als \"Child labour free\" (Keng Kanneraarbecht) ugekënnegt. Mee wat heescht dës Ausso konkreet?\nBeispill Bangladesch: Wann am Bangladesch Kanner \"eréischt\" ab 12 Joer schaffen, kann dat Kleedungsstéck déi héchst renomméiert Labelen ewéi z.B. GOTS (Global Organic Textile Standard,"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-1-2",
+    "de": ") und IVN (Internationaler Verband der Naturtextilwirtschaft,",
+    "fr": ") et IVN (Internationaler Verband der Naturtextilwirtschaft, www.naturtextil.de",
+    "en": ") and IVN (Internationaler Verband der Naturtextilwirtschaft,",
+    "lu": ") an IVN (Internationaler Verband der Naturtextilwirtschaft,"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-1-3",
+    "de": ") erhalten.",
+    "fr": ").",
+    "en": ").",
+    "lu": ") unerkannt kréien."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-subtitle-2",
+    "de": "Ressource Trinkwasser",
+    "fr": "Ressource eau potable",
+    "en": "Drinking water resource",
+    "lu": "Ressource Drénkwaasser"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-2-1",
+    "de": "Die anderen gewährleisten, dass viel weniger Wasser beim Anbau verbraucht wird. Die optimistischsten und strengsten davon gehen jedoch immer noch von einem Frischwasserverbrauch von knapp 1.000 Litern für ein T-Shirt aus.",
+    "fr": "Les autres labels garantissent une réduction de la consommation d’eau pour la culture. Les plus optimistes et stricts d'entre eux considèrent néanmoins qu’environ 1.000 litres d’eau douce restent nécessaires à la production d’un t-shirt.",
+    "en": "Other labels ensure that much less water is used in cultivation. The most optimistic and strictest of these, however, still assume that a freshwater consumption of about 1,000 litres is still needed for producing a t-shirt.",
+    "lu": "Aner Labele garantéieren, dass vill manner Waasser beim Ubau verbraucht gëtt. Déi optimisteschst a strengste vun deene ginn awer nach ëmmer vun engem Waasserkonsum vun ëm 1.000 Liter pro T-Shirt aus."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-2-2",
+    "de": "Kurzum, neue Ware hinterlässt immer einen großen bis enormen, nicht akzeptablen sozio-ökologischen Abdruck in unserer Welt.",
+    "fr": "En bref, les produits neufs laissent toujours une empreinte socio-environnementale importante, voire énorme, et inacceptable dans notre monde.",
+    "en": "To summarise, new goods always leave a large to enormous, unacceptable socio-ecological footprint on our world.",
+    "lu": "Kuerz gesot, nei Wuer hannerléisst ëmmer e grousse bis enormen, net akzeptabele sozio-ekologeschen Ofdrock an eiser Welt."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-subtitle-3",
+    "de": "Recycling",
+    "fr": "Recyclage",
+    "en": "Recycling",
+    "lu": "Recycling"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-3-1",
+    "de": "Wie sieht es mit Recycling-Kleidern aus, also Kleider, die nicht aus neuem Garn mit neuen Farben hergestellt wurden? Nach intensiver Recherchearbeit habe ich feststellen müssen, dass die Begriffe \"Recycling\" im Allgemeinen und \"Textilrecycling\" im Speziellen doch sehr großzügig und oftmals bewusst wenig präzise benutzt werden.",
+    "fr": "Qu'en est-il des vêtements recyclés, c'est-à-dire des vêtements qui n'ont pas été fabriqués à partir de fil neuf ni avec de nouvelles couleurs ? Après un travail de recherche intensif, j'ai dû constater que les termes \"recyclage\" en général et \"recyclage textile\" en particulier, sont utilisés de manière très généreuse et souvent volontairement peu précise.",
+    "en": "What about recycled clothes, clothes that are not made from new yarn and new colours? After intensive research, I found that the terms \"recycling\" in general and \"textile recycling\" in particular, are used very generously and often deliberately with little precision.",
+    "lu": "Wéi gesäit et mat Recycling-Kleeder aus, also Kleeder, déi net aus neiem Gar an neie Faarwen hiergestallt goufen? No intensive Recherchen hunn ech leider misste feststellen, dass d’Begrëffer \"Recycling“ am Allgemengen an \"Textilrecycling“ am Spezifeschen, ganz generéis an oft bewosst onprezis benotzt ginn."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-3-2",
+    "de": "Trotz langer Recherche und Gesprächen mit Experten/innen und Industriellen war es mir schlicht unmöglich, recycelte Kleider zu finden. Gründe dafür gibt es viele: Europa lässt es zu, das Verbrennen von Kleidern als \"Recycling\" zu bezeichnen (Fachbegriff: thermoenergetisches Recycling). Auch das Schreddern von Kleidern wird als \"Recycling\" bezeichnet, wenn wir beispielsweise Isolationsmatten für die Automobilindustrie produzieren. Obwohl die Qualität der Matten niedriger ist als die der ursprünglichen Kleider und die Matten darüber hinaus nur ein einziges Mal genutzt werden. Danach sind sie Müll.",
+    "fr": "Malgré de longues recherches et des entretiens avec des expert·e·s et des industriel·le·s, il m'a été tout simplement impossible de trouver des vêtements recyclés. Les raisons en sont multiples : l'Europe permet de qualifier de \"recyclage\" le fait de brûler des vêtements (terme technique : recyclage thermoénergétique). Le déchiquetage de vêtements est également considéré comme du \"recyclage\" lorsque nous produisons par exemple des tapis d'isolation pour l'industrie automobile. Bien que la qualité des tapis soit inférieure à celle des vêtements d'origine et que les tapis ne soient utilisés qu'une seule fois. Ensuite, ils deviennent des déchets.",
+    "en": "Despite long research and discussions with experts and industrialists, it was simply impossible for me to find recycled clothes. There are many reasons for this: Europe allows the burning of clothes to be called \"recycling\" (technical term: thermo-energetic recycling). Shredding clothes is also called \"recycling\" when we produce insulation mats for the automotive industry, for example. Although the quality of the mats is lower than that of the original clothes and, moreover, the mats are only used once. After that, they are rubbish.",
+    "lu": "Trotz laanger Recherche a Gespréicher mat Experten/innen an Industrielle war et mir ganz einfach onméiglech, recycelt Kleeder ze fannen. Grënn dofir ginn et der vill: Europa léisst et zou, d’Verbrenne vu Kleeder als \"Recycling\" ze bezeechnen (Fachbegrëff: thermoenergeetesche Recycling). Och d’Schreddere vu Kleeder gëtt als \"Recycling“ bezeechent, wann z.B. Isomatte fir d’Autoindustrie hiergestallt ginn. Obwuel d’Qualitéit vun de Matte méi niddereg ass ewéi déi vun den urspréngleche Kleeder an d’Matten doriwwer eraus nëmmen eemol benotzt ginn. Dono si se Offall."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-3-3",
+    "de": "Die spezialisierte Industrie erklärt mir, dass die Kleider schlicht und ergreifend aus zu vielen unterschiedlichen Stoffqualitäten bestehen, die ein (sorten-)reines Recycling unmöglich machen. Im besten Fall, und das ist der aktuelle Stand der Technik, müsse dem Recyclinggut etwa die 3- bis 4-fache Menge an frischem Polyester (ein aus Öl gewonnener Plastikstoff) zugegeben werden, um es zu stabilisieren. Also noch mehr Mikroplastik im Abwasser, noch mehr Mischfasern, die ein späteres Recycling noch schwerer machen?",
+    "fr": "L'industrie spécialisée m'explique que les vêtements sont tout simplement composés de trop de qualités de tissus différentes, ce qui rend impossible un recyclage (par type) pur. Dans le meilleur des cas, et c'est l'état actuel de la technique, il faudrait ajouter à la matière recyclée environ 3 à 4 fois la quantité en polyester frais (un plastique dérivé du pétrole) pour la stabiliser. Donc encore plus de microplastiques dans les eaux usées, encore plus de fibres mélangées qui rendent le recyclage ultérieur encore plus difficile ?",
+    "en": "The specialised industry explains to me that the clothes are simply made of too many different qualities of fabric, which make it impossible to recycle them (by type). In the best case, and this is the current state of the art, about 3 to 4 times the amount of fresh polyester (a plastic derived from oil) would have to be added to the recycled material to stabilise it. So, even more microplastics in the wastewater, even more mixed fibres that make later recycling even more difficult?",
+    "lu": "Déi spezialiséiert Industrie erkläert mir, dass d’Kleeder einfach aus vill ze villen ënnerschiddleche Stoffqualitéite zesummegesat sinn, an dass doduerch e renge Recycling (no Stoffaart) onméiglech ass. Am beschte Fall, an dat ass den aktuelle Stand vun der Technik, misst een der Matière 3 bis 4 Mol déi selwecht Quantitéit u frëschem Polyester (Plastikstoff duerch Ueleg gewonnen) derbäiginn, fir se ze stabiliséieren. Also nach méi Mikroplastik am Ofwaasser, nach méi Mëschfaseren, déi e spéidere Recycling nach méi schwéier maachen?"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-subtitle-4",
+    "de": "Sieht so die grüne Zukunft der Kleider aus?",
+    "fr": "Est-ce cela l'avenir vert de nos vêtements ?",
+    "en": "Is this what the green future of clothes looks like?",
+    "lu": "Ass dat déi gréng Zukunft vun eise Kleeder?"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-4-1",
+    "de": "Nein. Lasst uns endlich aufhören, uns etwas vorzumachen. Kleiderrecycling existiert de facto nicht. Der Begriff wird konsequent von Politik und Industrie missbraucht, um entweder unsachlich zu argumentieren oder ein gutes Gewissen herbeizureden. Das ist unappetitlich, suggestiv und unehrlich.",
+    "fr": "Non. Arrêtons de nous raconter des histoires. Le recyclage de vêtements n'existe pas de facto. Le terme est systématiquement utilisé à mauvais escient par les politiques et l'industrie, soit pour argumenter de manière non objective, soit pour (se) donner bonne conscience. C'est peu appétissant, suggestif et malhonnête.",
+    "en": "No. Let's stop kidding ourselves. Clothes recycling does not exist de facto. The term is consistently misused by politicians and industry to either argue unobjectively or to conjure up a good conscience. This is unsavoury, suggestive and dishonest.",
+    "lu": "Nee. Kommt mir halen endlech op, eis eppes virzemaachen. Kleederrecycling existéiert de facto net. Dee Begrëff gëtt konsequent vu Politik an Industrie mëssbraucht, fir entweeder onsachlech z’argumentéieren oder fir engem e gutt Gewëssen anzerieden. Datt ass onappetitlech, suggestiv an onéierlech."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-4-2",
+    "de": "Also doch kein Label, kein Recycling. Meine Frage bleibt unbeantwortet: woher nehme ich eine andere Hose, ohne dabei Menschen oder unsere Umwelt leiden zu sehen?",
+    "fr": "Donc finalement pas de label, pas de recyclage. Ma question reste sans réponse : où puis-je trouver un autre pantalon sans voir les gens ou notre environnement souffrir ?",
+    "en": "So no label, no recycling after all. My question remains unanswered: where do I get another pair of trousers without seeing people or our environment suffer?",
+    "lu": "Also awer kee Label, kee Recycling. Meng Fro bleift ouni Äntwert: wou kréien ech eng Box hier, ouni derbäi de Mënschen oder der Ëmwelt ze schueden?"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-4-3",
+    "de": "Ich meine es ernst mit der Nachhaltigkeit. Ich suche nach einer Lösung, die sozial und ökologisch gerecht ist. Eine (vielleicht kleine) Antwort auf die ernstesten Themen unserer Zeit: soziale Gerechtigkeit und Ausweg aus der Klimakrise die uns alle erwartet. Eine Hose also, mit einem sozio-ökologischen Fußabdruck nahe Null.",
+    "fr": "Je suis sérieux au sujet de la durabilité. Je cherche une solution qui soit socialement et écologiquement équitable. (Peut-être) une (petite) réponse aux enjeux les plus sérieux de notre époque : la justice sociale et la sortie de la crise climatique qui nous attend tous. Un pantalon donc, dont l'empreinte socio-environnementale est proche de zéro.",
+    "en": "I am serious about sustainability. I am looking for a solution that is socially and environmentally just. A (perhaps small) answer to the most serious issues of our time: social justice and a way out of the climate crisis that awaits us all. A pair of trousers, then, with a socio-environmental footprint close to zero.",
+    "lu": "Ech mengen et eescht mat der Nohaltegkeet. Ech sichen no enger Léisung, déi sozial an ekologesch gerecht ass. Eng (vläicht kleng) Äntwert op déi seriööst Froe vun eiser Zäit: sozial Gerechtegkeet an en Auswee aus der Klimakris déi eis all erwaart. Eng Box also, mat engem sozio-ekologesche Foussofdrock no un Null."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-subtitle-5",
+    "de": "Altkleider",
+    "fr": "Vêtements usagés",
+    "en": "Old clothes",
+    "lu": "Al Kleeder"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-1",
+    "de": "Wie sieht es mit Altkleidern aus, woher stammen sie und wohin gehen sie, wie werden sie weiter genutzt? Dieser Frage habe ich mich intensiv gewidmet, habe Zahlen aus ganz Europa ausgewertet, Berichte und Analysen aus internationalen Quellen studiert. Das Ergebnis ist so einfach wie ernüchternd:",
+    "fr": "Qu'en est-il des vêtements usagés, d'où proviennent-ils et où vont-ils, comment sont-ils réutilisés ? Je me suis penché sur cette question, j'ai analysé des chiffres provenant de toute l'Europe, j'ai étudié des rapports et des analyses de sources internationales. Le résultat est aussi simple qu’effarant :",
+    "en": "What is it with old clothes, where do they come from and where do they go, how are they further used? I have devoted myself intensively to this question, evaluated figures from all over Europe, studied reports and analyses from international sources. The result is as simple as it is sobering:",
+    "lu": "Wéi gesäit et mam ale Gezei aus, wou kënnt et hier a wou geet et hin, wéi gëtt et weider benotzt? Ech hu mech dëser Fro ganz intensiv gewidmet, hunn Zuelen aus ganz Europa ausgewäert, Berichter an Analysen aus internationale Quelle studéiert. D’Resultat ass esou einfach ewéi erschreckend:"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-2",
+    "de": "Die Welt erstickt in Altkleidern. Luxemburg sammelt jedes Jahr knapp 10.000 Tonnen. Diese Menge entspricht knapp 42 Millionen T-Shirts, gesammelt von einer Bevölkerung von etwa 640.000 Menschen. Allein in der Bundesrepublik Deutschland entsorgen die Menschen 150.000 kg Kleider. Jede einzelne Stunde. 24 Stunden am Tag. 365 Tage im Jahr. Unsere Altkleider landen zu 1,7% bei bedürftigen Menschen. In anderen Worten: nein, wenn wir unsere Kleider in den Container der Wohltätigkeitsorganisation werfen, helfen wir definitiv nicht dem Kind mit den braunen Kulleraugen, das uns dankend auf dem Container anlächelt. 31% der Kleider werden verbrannt, 36% verkauft in Länder, in denen sie die dort heimische Textilindustrie in den Ruin treiben, 20% werden zu Matten verarbeitet und 10% landen auf dem Second Hand Markt.",
+    "fr": "Le monde croule sous les vêtements usagés. Le Luxembourg en collecte près de 10.000 tonnes chaque année. Cette quantité correspond à près de 42 millions de t-shirts, collectés par une population d'environ 640.000 personnes. Rien qu'en Allemagne, les gens se débarrassent de 150.000 kg de vêtements. Chaque heure. 24 heures par jour. 365 jours par an. Nos vêtements usagés finissent à 1,7% chez des personnes dans le besoin. En d'autres termes : non, lorsque nous jetons nos vêtements dans le conteneur d'une organisation caritative, nous n'aidons définitivement pas l'enfant aux grands yeux marrons qui est dessus et qui nous remercie de notre don en souriant. 31% des vêtements sont incinérés, 36% sont vendus dans des pays où ils ruinent l'industrie textile locale, 20% sont transformés en matelas et 10% finissent sur le marché de l'occasion.",
+    "en": "The world is suffocating in old clothes. Luxembourg collects almost 10,000 tonnes per year. This amount corresponds to almost 42 million t-shirts, collected by a population of about 640,000 people. In Germany alone, people dispose of 150,000 kg of clothes. Every single hour. 24 hours a day. 365 days a year. 1.7% of our old clothes end up with needy people. In other words: no, when we throw our clothes into the charity's container, we are definitely not helping the child with the brown googly eyes who is smiling gratefully at us on the container. 31% of the clothes are burnt, 36% are sold to countries where they ruin the local textile industry, 20% are made into mats and 10% end up on the second-hand market.",
+    "lu": "D’Welt geet ënner am ale Gezei. Lëtzebuerg sammelt all Joer knapp 10.000 Tonnen. Dës Quantitéit entsprécht knapp 42 Milliounen T-Shirten, gesammelt vun enger Bevëlkerung vun ongeféier 640.000 Leit. Alleng an Däitschland entsuergen d’Mënschen 150.000 kg Kleeder. All eenzel Stonn. 24 Stonnen am Dag. 365 Deeg am Joer. Eis aalt Gezei lant zu 1,7% bei Leit am Besoin. An anere Wierder: nee, wa mir eis Kleeder an de Container vun enger Hëllefsorganisatioun geheien, hëllefe mir ganz bestëmmt net deem Kand mat de grousse bronge Guckelcher, wat eis um Container schéi laacht a merci seet fir eisen Don. 31% vun de Kleeder gi verbrannt, 36% gi verkaf a Länner, an deene se déi lokal Textilindustrie an de Ruin dreiwen, 20% ginn a Matte veraarbecht an 10% landen um Second Hand Maart."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-3",
+    "de": "Ich lasse das sacken. Fast alle gesammelten Kleider (über 98%) gehen nicht an Arme, an Menschen, die dringend Kleider benötigen. Das ist heftig.",
+    "fr": "Je vous laisse digérer. Presque tous les vêtements collectés (plus de 98%) ne vont pas aux pauvres, aux personnes qui ont un besoin urgent de vêtements. C'est rude.",
+    "en": "I'll let that sink in. Almost all the clothes collected (over 98%) do not go to the poor, to people who desperately need clothes. That's tough.",
+    "lu": "Ech loossen iech emol verdauen. Bal all déi gesammelt Kleeder (iwwer 98%) ginn net un déi Aarm, u Mënschen, déi dringend Kleeder brauchen. Dat ass hefteg."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-4",
+    "de": "Und dann dämmert es mir, dass genau dies der Ansatzpunkt sein muss für BENU COUTURE. Wenn wir also aus den unzähligen Kleidern, die Menschen weggeben (entsorgen), Teile auswählen, die grundsätzlich von guter Qualität sind, kann ich mir eine neue Hose zusammensetzen. Hierfür benötigen wir qualifizierte Modedesigner:innen und Schneider:innen, die lokal unter anständigen Konditionen arbeiten. Jetzt die gesammelten Kleider lostrennen und die so gewonnenen Stoffteile als Rohstoff für neu entwickelte, moderne Kleider nutzen. Alles lokal, keine unendlichen Transportwege (eine durchschnittliche Jeanshose legt 20.000 km hinter sich, bevor sie in unserem Laden landet). Alles hochwertig. Lebenslange Garantie. Stark reduziertes Auswaschen von Chemieprodukten im Vergleich zu Neuware (etwa 2.400 chemische Produkte kommen im Rahmen der industriellen Textilproduktion zum Einsatz, davon gelten rund 250 als ausdrücklich schädlich für Mensch und Umwelt). Schaffung von lokalen Arbeitsplätzen zu sozial korrekten Bedingungen. So schaffen wir lokal Arbeit, bringen wieder Transparenz in eines der ältesten Handwerke der Welt und bieten, neben dem Gebrauchtkleiderverkauf und dem Vermieten von Kleidern (in Vorbereitung bei BENU COUTURE), die wohl einzige Option zur tatsächlich nachhaltigen Nutzung von Kleidern.",
+    "fr": "Et puis je me rends compte que c'est précisément là que doit se situer le point de départ de BENU COUTURE. Ainsi, si nous choisissons parmi les innombrables vêtements que les gens donnent (dont ils se débarrassent) des pièces de bonne qualité, je peux me confectionner un nouveau pantalon. Pour cela, nous avons besoin de stylistes et de couturiers·e qualifié·e·s qui travaillent localement dans des conditions décentes. Détailler les vêtements collectés et utiliser les pièces de tissu ainsi obtenues comme matière première pour des vêtements modernes nouvellement conçus. Tout est local, pas de transports interminables (un pantalon en jean parcourt en moyenne 20.000 km avant d'arriver dans nos magasins). Tout est de haute qualité. Garantie à vie. Un lavage qui libère des quantités de produits chimiques fortement réduites par rapport aux articles neufs (environ 2.400 produits chimiques sont utilisés dans le cadre de la production textile industrielle, dont environ 250 sont considérés comme expressément nocifs pour l'homme et l'environnement). Création d'emplois locaux à des conditions socialement correctes. \nNous créons ainsi du travail localement, réintroduisons de la transparence dans l'un des plus vieux métiers du monde et proposons, outre la vente de vêtements d'occasion et la location de vêtements (en préparation chez BENU COUTURE), probablement la seule option permettant une utilisation réellement durable des vêtements.",
+    "en": "And then it dawns on me that this must be exactly the starting point for BENU COUTURE. So, if we select parts that are basically of good quality from the countless clothes that people give away (dispose of), I can put together a new pair of trousers. For this we need qualified fashion designers and tailors who work locally under decent conditions. Then we can separate the collected clothes and use the resulting fabric parts as raw material for newly produced, modern clothes. Everything local, no endless transport routes (an average pair of jeans travels 20,000 km before it ends up in our shops). All high quality. Lifetime guarantee. Greatly reduced leaching of chemical products compared to new clothes (about 2,400 chemical products are used in industrial textile production, of which about 250 are considered explicitly harmful to humans and the environment). Creating local jobs under socially correct conditions.\nIn this way, we create work locally, bring transparency back into one of the oldest professions in the world and offer, besides selling second-hand clothes and renting clothes (in preparation at BENU COUTURE), probably the only option for a truly sustainable use of clothes.",
+    "lu": "An da stellen ech fest, dass genau do den Usazpunkt fir BENU COUTURE muss sinn. Wa mir also aus all deene Kleeder, déi d’Leit ewechginn (entsuergen), Stécker wielen, déi grondsätzlech aus gudder Qualitéit sinn, kann ech mir eng nei Box zesummesetzen. Dofir brauche mir qualifizéiert Modedesigner:innen a Schneider:innen, déi lokal ënner anstännege Konditioune schaffen. Dann déi gesammelt Kleeder auserneenhuelen an déi doraus récuperéiert Stoffdeeler als Rostoff fir nei entwéckelt, modern Kleeder notzen. Alles lokal, keng onendlech Transportweeër (eng duerchschnëttlech Jeansbox huet ongeféier 20.000 km hannert sech, éier se an eise Geschäfter lant). Alles héichwäerteg. Liewenslaang Garantie. Staark reduzéiert Auswäsche vu cheemesche Produiten am Verglach zu neier Wuer (ongeféier 2.400 cheemesch Produite kommen an der industrieller Textilproduktioun an den Asaz, dovu gëlle ronn 250 als ausdrécklech schiedlech fir de Mënsch an d’Ëmwelt). Schafe vu lokalen Aarbechtsplazen zu sozial korrekte Konditiounen. \nEsou schafe mir lokal Aarbecht, bréngen nees Transparenz an ee vun den eelsten Handwierker vun der Welt a bidden, niewent dem Verkaf vun ale Kleeder an dem Loune vu Kleeder (an der Virbereedung bei BENU COUTURE), déi wuel eenzeg Optioun fir en tatsächlech nohaltege Gebrauch vu Kleeder."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-5",
+    "de": "So schlüpft BENU COUTURE aus dem Ei … und hinein ins erste Ökodorf der Großregion, BENU VILLAGE. Denn natürlich ist es uns wichtig, neben dem nachhaltigen Konzept auch eine nachhaltige Arbeitsweise und eine ebenso nachhaltige Arbeitsumgebung zu haben.",
+    "fr": "Ainsi, BENU COUTURE sort de l'œuf ... et intègre le premier écovillage de la Grande Région, BENU VILLAGE. Car il nous importe d'avoir, outre un concept durable, une méthode de travail durable et un environnement de travail tout aussi durable.",
+    "en": "Thus, BENU COUTURE hatches out of the egg ... and into the first ecovillage of the Greater Region, BENU VILLAGE. Because, of course, it is important to us to have not only a sustainable concept but also a sustainable way of working and an equally sustainable working environment.",
+    "lu": "Esou kënnt BENU COUTURE aus dem Ee eraus … an eran an dat éischt Ekoduerf vun der Groussregioun, BENU VILLAGE. Well eis ass natierlech wichteg, niewent dem nohaltege Konzept, och eng nohalteg Aarbechtsweis an e grad esou nohaltegt Aarbechtsëmfeld ze hunn."
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-6",
+    "de": "Zu unseren Überlegungen und Lösungen sozio-ökologisch nachhaltiger Fragen bei BENU COUTURE findest Du mehr in unserem Kapitel",
+    "fr": "Tu trouveras plus d'informations sur nos réflexions et nos solutions aux questions socio-écologiques durables chez BENU COUTURE dans notre chapitre",
+    "en": "You can find out more about our thoughts and solutions to socio-ecologically sustainable issues at BENU COUTURE in our chapter",
+    "lu": "Zu eisen Iwwerleeungen a Léisungen zu sozio-ekologesche Froe bei BENU COUTURE fënns Du méi an eisem Kapitel"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-7",
+    "de": "ÜBER BENU COUTURE",
+    "fr": "À PROPOS DE BENU COUTURE",
+    "en": "ABOUT BENU COUTURE",
+    "lu": "IWWER BENU COUTURE"
+  },
+  {
+    "page": "Histoire",
+    "key": "about.full-paragraph-5-8",
+    "de": "Entsprechende Erklärungen zum Ökodorf und unserer Arbeitsumgebung findest Du auf der Webseite von BENU",
+    "fr": "Tu trouveras des explications sur l'écovillage et notre environnement de travail sur le site web de BENU",
+    "en": "You can find relevant explanations about the ecovillage and our working environment on the BENU website",
+    "lu": ""
   },
   {
     "page": "Home",
@@ -1666,9 +1914,9 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-6-3",
-    "de": "Et cela symbolise l'idée de BENU !",
+    "de": "Und dies symbolisiert die Gesamt-Idee von BENU!",
     "fr": "Et cela symbolise l'idée de BENU !",
-    "en": "Et cela symbolise l'idée de BENU !",
+    "en": "And this symbolises the idea of BENU!",
     "lu": ""
   },
   {
@@ -1842,7 +2090,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-1-6",
-    "de": "Wir versuchen unser Bestes zu machen, um Deinen Wunsch zu erfüllen.",
+    "de": "Wir bemühen uns, Deinen Wunsch zu erfüllen.",
     "fr": "Nous faisons de notre mieux pour répondre à tes souhaits.",
     "en": "Nous faisons de notre mieux pour répondre à tes souhaits.",
     "lu": ""
@@ -1874,7 +2122,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-3-1",
-    "de": "Wir verwenden für die Produktion ausschließlich Stoffe gebrauchter Kleidungsstücke und Textilien. Dabei werden die Kreationen meist aus mehreren unterschiedlichen Stoffen zusammengesetzt, so das sie i.d.R. auch aus mehreren Farben bestehen.",
+    "de": "Wir verwenden für die Produktion ausschließlich Stoffe gebrauchter Kleidungsstücke und Textilien. Dabei werden die Kreationen meist aus mehreren unterschiedlichen Stoffen zusammengesetzt, so das sie überwiegend auch aus mehreren Farben bestehen.",
     "fr": "Pour la production, nous utilisons exclusivement des tissus provenant de vêtements et de textiles usagés. Les créations sont généralement composées de plusieurs tissus différents, et donc de plusieurs couleurs.",
     "en": "We only use fabrics from used garments and textiles in our production. The creations are usually composed of several different fabrics, so that they usually also consist of several colours.",
     "lu": ""
@@ -1882,9 +2130,9 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-3-2",
-    "de": "Unter jedem Artikel findest du eine Farbangabe. Diese bezeichnet die jeweils dominierende Farbe des Kleidungsstückes. Meist sind aber noch ein oder mehrere andere Farben vorhanden. Da alle BENU Kreationen einzigartig und Einzelstücke sind, sind die verschiedenen Modelle nicht in jeder Farbrichtung vorhanden.",
-    "fr": "Sous chaque article, tu trouveras une indication de couleur. Celle-ci désigne la couleur dominante du vêtement. Mais la plupart du temps, il y a encore une ou plusieurs autres couleurs. Comme toutes les créations BENU sont uniques, les différents modèles ne sont pas disponibles dans toutes les catégories de couleurs.",
-    "en": "Under each article you will find a colour code. This indicates the dominant colour of the garment. However, there are usually one or more other colours included. Since all BENU creations are unique and one-of-a-kind, the different models are not available in every colour category.",
+    "de": "Unter jedem Artikel findest Du eine Farbangabe. Diese bezeichnet die jeweils dominierende Farbe des Kleidungsstückes. Da alle BENU Kreationen einzigartig und Einzelstücke sind, sind die verschiedenen Modelle nicht in jeder Farbrichtung vorhanden.",
+    "fr": "Sous chaque article, tu trouveras une indication de couleur. Celle-ci désigne la couleur dominante du vêtement. Comme toutes les créations BENU sont uniques, les différents modèles ne sont pas disponibles dans toutes les catégories de couleurs.",
+    "en": "Under each article you will find a colour code. This indicates the dominant colour of the garment. Since all BENU creations are unique and one-of-a-kind, the different models are not available in every colour category.",
     "lu": ""
   },
   {
@@ -1938,7 +2186,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-5-1",
-    "de": "Ja! Wenn Dir ein Modell gefällt, Deine Lieblings-Variation aber nicht passt, können wir das Kelidungsstück gerne für Dich individuell anpassen. Vielleicht ist auch ein Modell nicht in Deiner Lieblingsfarbe erhältlich? Oder die Variation, die Dir gefällt ist schon verkauft? Kein Problem! Wir können ein bestehendes Modell nach Deinen Farb-Wünschen realisieren.",
+    "de": "Ja! Wenn Dir ein Modell gefällt, Deine Lieblings-Variation aber nicht passt, können wir das Kleidungsstück gerne für Dich individuell anpassen. Vielleicht ist auch ein Modell nicht in Deiner Lieblingsfarbe erhältlich? Oder die Variation, die Dir gefällt ist schon verkauft? Kein Problem! Wir können ein bestehendes Modell nach Deinen Farb-Wünschen realisieren.",
     "fr": "Oui, si un modèle te plaît mais que ta variante préférée ne te va pas, nous pouvons adapter le vêtement à tes besoins. Peut-être qu'un modèle n'est pas disponible dans ta couleur préférée ? Ou la variante qui te plaît est déjà vendue ? Pas de problème ! Nous pouvons réaliser un modèle existant dans la couleur que tu souhaites.",
     "en": "Yes, if you like a model, but your favourite variation doesn't fit, we can customise the garment for you. Maybe a model is not available in your favourite colour? Or the variation you like is already sold? No problem! We can create an existing model according to your colour wishes.",
     "lu": ""
@@ -1954,7 +2202,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-6-1",
-    "de": "Ja! Gerne reparieren und verwandeln Dein altes Lieblings-Kleidungsstück nach Deinen individuellen Vorstellungen. Auch ein komplett neues Kleidungsstück auf Basis der von Dir zur Verfügung gestellten Kleider und Stoffreste ist möglich. BENU COUTURE bietet Dir an, eine neue und nur für Dich bestimmte Kreation herzustellen!",
+    "de": "Ja! Gerne reparieren und verwandeln wir Dein altes Lieblings-Kleidungsstück nach Deinen individuellen Vorstellungen. Auch ein komplett neues Kleidungsstück auf Basis der von Dir zur Verfügung gestellten Kleider und Stoffreste ist möglich. BENU COUTURE bietet Dir an, eine neue und nur für Dich bestimmte Kreation herzustellen!",
     "fr": "Oui, nous réparons et transformons ton vieux vêtement préféré selon tes idées personnelles. Il est également possible de créer un tout nouveau vêtement à partir des vêtements et des chutes de tissu que tu nous as fournis. BENU COUTURE te propose de réaliser une nouvelle création rien que pour toi !",
     "en": "Yes, we are happy to repair and transform your favourite old garment according to your individual ideas. It is also possible to create a completely new garment based on the clothes and fabric scraps you provide. BENU COUTURE offers to make a new creation just for you!",
     "lu": ""
@@ -2001,7 +2249,7 @@
   },
   {
     "page": "Service Client",
-    "key": "services.faq-group-3-question-content-8",
+    "key": "services.faq-group-3-question-title-8",
     "de": "Gibt es eine Garantie?",
     "fr": "Y a-t-il une garantie ?",
     "en": "Is there a warranty?",
@@ -2042,15 +2290,15 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-1-1",
-    "de": "Du hast die Möglichkeit Deine Bestellung mit Deinem BENU Konto oder als Besucher/in aufzugeben. Wenn Du Dich angemeldet hast, kannst Du den Status Deiner Bestellung jederzeit in Deinem Konto verfolgen.",
-    "fr": "Tu as la possibilité de passer ta commande avec ton compte BENU ou en tant que visiteur/visiteuse. Si tu t'es inscrit, tu peux suivre le statut de ta commande à tout moment dans ton compte.",
-    "en": "You can place your order with your BENU account or as a visitor. Once you have logged in, you can track the status of your order in your account at any time.",
+    "de": "Du hast die Möglichkeit Deine Bestellung mit Deinem BENU Konto oder ohne Konto als Besucher/in aufzugeben. Wenn Du Dich angemeldet hast, kannst Du den Status Deiner Bestellung jederzeit in Deinem Konto verfolgen.",
+    "fr": "Tu as la possibilité de passer ta commande avec ton compte BENU ou sans compte en tant que visiteur/visiteuse. Si tu t'es inscrit, tu peux suivre le statut de ta commande à tout moment dans ton compte.",
+    "en": "You can place your order with your BENU account or without account as a visitor. Once you have logged in, you can track the status of your order in your account at any time.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-1-2",
-    "de": "Für die Bestellung musst Du den Artikel, den Du Dir wünschst, zunächst in den Warenkorb legen. Wenn Du möchtest, kannst du hier verschiedene Geschenkoptionen, wie z.B. eine Verpackung oder eine Geschenkkarte auswählen oder einen Gutschein einlösen.",
+    "de": "Für die Bestellung musst Du den Artikel, den Du Dir wünschst, zunächst in den Warenkorb legen. Wenn Du möchtest, kannst Du hier verschiedene Geschenkoptionen, wie z.B. eine Verpackung oder eine Geschenkkarte auswählen oder einen Gutschein einlösen.",
     "fr": "Pour commander, tu dois d'abord ajouter l'article que tu souhaites dans le panier. Si tu le souhaites, tu peux choisir ici différentes options de cadeaux, comme par exemple un emballage ou une carte cadeau, ou encore utiliser un bon d'achat.",
     "en": "To place an order, you must first place the item you want in the shopping basket. If you wish, you can select different gift options here, such as packaging or a gift card, or redeem a voucher.",
     "lu": ""
@@ -2058,7 +2306,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-1-3",
-    "de": "Im weiteren Bestellvorgang kannst Deine gewünschten Zahlungsmethode auswählen und angeben, ob Du die Ware nach Hause geliefert haben möchtest oder selber bei uns im BENU Shop abholen möchtest.",
+    "de": "Im weiteren Bestellvorgang kannst Du Deine gewünschte Zahlungsmethode auswählen und angeben, ob Du die Ware nach Hause geliefert bekommen oder selbst im BENU Shop abholen möchtest.",
     "fr": "Dans la suite du processus de commande, tu peux choisir le mode de paiement souhaité et indiquer si tu souhaites que la marchandise te soit livrée à domicile ou si tu veux venir la chercher toi-même dans notre boutique BENU.",
     "en": "In the further ordering process, you can select your desired payment method and specify whether you would like to have the goods delivered to your home or collect them yourself from our BENU shop.",
     "lu": ""
@@ -2122,9 +2370,9 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-3-1",
-    "de": "Die BENU Kreationen erhältst Du nicht nur Online sondern auch bei uns vor Ort im BENU Shop im BENU VILLAGE in Esch-sur-Alzette. Hier kannst Du Dich inspirieren und persönlich beraten lassen. Aktuell findest Du auch einige der BENU Kreationen im Lët'z Refashion Pop-Up Store in Luxemburg-Stadt, einer Initiative der Kampagne „Rethink your Clothes“.",
-    "fr": "Les créations BENU ne sont pas seulement disponibles en ligne, mais aussi sur place dans notre BENU Shop au BENU VILLAGE à Esch-sur-Alzette. Tu peux y trouver de l'inspiration et bénéficier de conseils personnalisés. Actuellement, tu peux aussi trouver quelques créations BENU au Lët'z Refashion Pop-Up Store à Luxembourg-Ville, une initiative de la campagne \"Rethink your Clothes\".",
-    "en": "BENU creations are not only available online, but also in our BENU Shop at the BENU VILLAGE in Esch-sur-Alzette. Here you can be inspired and receive personal advice. Currently, you can also find some of the BENU creations at the Lët'z Refashion Pop-Up Store in Luxembourg City, an initiative of the \"Rethink your Clothes\" campaign.",
+    "de": "Ja! Die BENU Kreationen erhältst Du nicht nur Online sondern auch bei uns vor Ort im BENU Shop im BENU VILLAGE in Esch-sur-Alzette. Hier kannst Du Dich inspirieren und persönlich beraten lassen. Aktuell findest Du auch einige der BENU Kreationen im Lët'z Refashion Pop-Up Store in Luxemburg-Stadt, einer Initiative der Kampagne „Rethink your Clothes“.",
+    "fr": "Oui! Les créations BENU ne sont pas seulement disponibles en ligne, mais aussi sur place dans notre BENU Shop au BENU VILLAGE à Esch-sur-Alzette. Tu peux y trouver de l'inspiration et bénéficier de conseils personnalisés. Actuellement, tu peux aussi trouver quelques créations BENU au Lët'z Refashion Pop-Up Store à Luxembourg-Ville, une initiative de la campagne \"Rethink your Clothes\".",
+    "en": "Yes! BENU creations are not only available online, but also in our BENU Shop at the BENU VILLAGE in Esch-sur-Alzette. Here you can be inspired and receive personal advice. Currently, you can also find some of the BENU creations at the Lët'z Refashion Pop-Up Store in Luxembourg City, an initiative of the \"Rethink your Clothes\" campaign.",
     "lu": ""
   },
   {
@@ -2186,7 +2434,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-5-question-content-1-1",
-    "de": "BENU Gutscheine gibt es im Wert von 1 Arbeitsstunde (30€) bis 6 Arbeitsstunden (180€). Du hast die Möglichkeit einen Gutschein aus Stoffresten zu kaufen, aber hier berechnen wir 5€ für die Produktion. Unsere Geschenkgutscheine gibt es aber auch digital im PDF-Format.",
+    "de": "BENU Gutscheine gibt es im Wert von 1 Arbeitsstunde (30€) bis 6 Arbeitsstunden (180€). Du hast die Möglichkeit einen Gutschein aus Stoffresten zu kaufen, hier berechnen wir 5€ für die Produktion. Unsere Geschenkgutscheine gibt es aber auch digital im PDF-Format.",
     "fr": "Les bons BENU sont disponibles pour une valeur allant de 1 heure de travail (30€) à 6 heures de travail (180€). Tu as la possibilité d'acheter un chèque-cadeau à partir de chutes de tissu, mais dans ce cas, nous facturons 5€ pour la production. Nos chèques-cadeaux sont également disponibles sous forme numérique au format PDF.",
     "en": "BENU vouchers are available from 1 working hour (30€) to 6 working hours (180€). You have the option to buy a gift voucher from fabric scraps, but here we charge 5€ for the production. Our gift vouchers are also available digitally in PDF format.",
     "lu": ""
@@ -2330,7 +2578,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-2-3",
-    "de": "Und wenn Du nicht sicher bist, ob das Kleidungsstück passt, dass du Dir wünschst, dann komm bei uns vorbei um es anzuprobieren. Wir freuen uns auf Deinen Besuch!",
+    "de": "Und wenn Du nicht sicher bist, ob das Kleidungsstück passt, dass Du Dir wünschst, dann komm bei uns vorbei um es anzuprobieren. Wir freuen uns auf Deinen Besuch!",
     "fr": "Et si tu n'es pas sûr(e) que le vêtement que tu souhaites convienne, viens nous voir pour l'essayer. Nous nous réjouissons de ta visite !",
     "en": "And if you are not sure whether the garment you want fits, then come and try it on. We look forward to your visit!",
     "lu": ""
@@ -2370,7 +2618,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-3-2",
-    "de": "Wir verrechnen Dir die Kosten für die Versendung mit Post Luxembourg und zusätzlich 2 Euro pro Paket bzw. 1 Euro pro Briefsendung für unsere Arbeitszeit zum Verpacken der bestellten Artikel. Das Verpackungsmaterial ist gratis.",
+    "de": "Wir verrechnen Dir die Kosten für die Versendung mit Post Luxembourg. Hinzu kommen 2 Euro pro Paket bzw. 1 Euro pro Briefsendung für unsere Arbeitszeit zum Verpacken der bestellten Artikel. Das Verpackungsmaterial ist gratis.",
     "fr": "Nous te facturons les frais d'envoi par Post Luxembourg et en plus 2 euros par colis ou 1 euro par envoi postal pour notre temps de travail pour emballer les articles commandés. Le matériel d'emballage est gratuit.",
     "en": "We charge you the costs for the shipment with Post Luxembourg and additionally 2 Euro per parcel or 1 Euro per letter for our working time for packing the ordered items. The packing material is free of charge.",
     "lu": ""
@@ -2426,7 +2674,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-5-2",
-    "de": "Da unsere Lagerkapazitäten begrenzt sind, bitten wir Dich Deine Bestellung innerhalb eines Monats abzuholen und bei der Abholung die Bestätigungs-E-Mail mit der Bestellnummer in digitaler oder gedruckter Form mitzubringen.",
+    "de": "Da unsere Lagerkapazitäten begrenzt sind, bitten wir Dich Deine Bestellung innerhalb eines Monats abzuholen. Bitte bring bei der Abholung die Bestätigungs-E-Mail mit der Bestellnummer in digitaler oder gedruckter Form mit.",
     "fr": "Comme nos capacités de stockage sont limitées, nous te prions de venir chercher ta commande dans un délai d'un mois et de te munir, lors du retrait, de l'e-mail de confirmation avec le numéro de commande sous forme numérique ou imprimée.",
     "en": "As our storage capacity is limited, we ask you to collect your order within one month and to bring the confirmation e-mail with the order number in digital or printed form.",
     "lu": ""
@@ -2474,7 +2722,7 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-1-2",
-    "de": "Sollte dir ein Artikel nicht passen oder gefallen, kannst du ihn aber innerhalb von 28 Tagen ab dem Versanddatum zurücksenden und auf unsere Internetseite einen neuen Artikel bestellen.",
+    "de": "Sollte Dir ein Artikel nicht passen oder gefallen, kannst Du ihn aber innerhalb von 28 Tagen ab dem Versanddatum zurücksenden und auf unserer Internetseite einen neuen Artikel bestellen.",
     "fr": "Si un article ne te convient pas ou ne te plaît pas, tu peux toutefois le renvoyer dans les 28 jours à compter de la date d'envoi et commander un nouvel article sur notre site Internet.",
     "en": "However, if you do not like or like an item, you can return it within 28 days from the date of dispatch and order a new item on our website.",
     "lu": ""
@@ -6046,6 +6294,54 @@
     "fr": "Adultes",
     "en": "Adults",
     "lu": "Erwuessener"
+  },
+  {
+    "page": "Model",
+    "key": "MODELS.IS-SMALL-ITEM",
+    "de": "Kleine Artikel",
+    "fr": "Petits articles",
+    "en": "Small articles",
+    "lu": "Kleng Artikelen"
+  },
+  {
+    "page": "Model",
+    "key": "models.items-specific-order-btn",
+    "de": "Ich habe einen speziellen Wunsch",
+    "fr": "J'ai une demande spéciale",
+    "en": "I have a special request",
+    "lu": "Ech hunn e spezielle Wonsch"
+  },
+  {
+    "page": "Model",
+    "key": "MODELS.UNIQUE-SIZE",
+    "de": "Einheitsgröße",
+    "fr": "Taille unique",
+    "en": "One size",
+    "lu": "Eenheetsgréisst"
+  },
+  {
+    "page": "Model",
+    "key": "sidebar.items-demand",
+    "de": "Bitte beschreibe hier Deinen Wunsch",
+    "fr": "Décris-nous ta demande ici",
+    "en": "Please describe your request here",
+    "lu": "Beschreif Däi Wonsch wgl. hei"
+  },
+  {
+    "page": "Model",
+    "key": "sidebar.items-email",
+    "de": "Deine E-Mail-Adresse",
+    "fr": "Ton adresse e-mail",
+    "en": "Your e-mail address",
+    "lu": "Deng E-Mail-Adress"
+  },
+  {
+    "page": "Model",
+    "key": "sidebar.items-send-request",
+    "de": "Anfrage abschicken",
+    "fr": "Envoyer ta demande",
+    "en": "Send request",
+    "lu": "Ufro schécken"
   },
   {
     "page": "Model",
