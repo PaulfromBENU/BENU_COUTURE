@@ -1,4 +1,16 @@
 <footer class="footer">
+	<div class="footer__sponsors flex justify-center flex-wrap benu-container">
+		<div class="footer__sponsors__sponsor flex flex-col justify-center">
+			<div>
+				<img src="{{ asset('images/pictures/sponsors/ville-esch.png') }}" />
+			</div>
+		</div>
+		<div class="footer__sponsors__sponsor flex flex-col justify-center">
+			<div>
+				<img src="{{ asset('images/pictures/sponsors/ministere-luxembourg.jpg') }}" />
+			</div>
+		</div>
+	</div>
 	<div class="benu-container">
 		<div class="flex flex-start flex-wrap footer__lists">
 			<div class="footer__lists__col">

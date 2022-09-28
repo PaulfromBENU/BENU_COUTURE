@@ -3944,7 +3944,6 @@ input[type=checkbox]:focus {
 }
 
 .footer {
-  padding-top: 102px;
   background: white;
   position: relative;
 }
@@ -4041,6 +4040,42 @@ input[type=checkbox]:focus {
 .footer__social:hover {
   background: #D41C1B;
   color: #FFFFFF;
+}
+.footer__sponsors {
+  min-height: 20vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: lightgrey 1px solid;
+  margin-bottom: 50px;
+}
+.footer__sponsors__sponsor {
+  width: 25%;
+  margin: 10px 40px;
+  box-shadow: 0px 15px 15px #CFCFCF80;
+  border-radius: 8px;
+  padding: 15px;
+  height: 150px;
+  transition: all 0.3s;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .footer__sponsors__sponsor {
+    width: 35%;
+  }
+}
+@media (max-width: 767px) {
+  .footer__sponsors__sponsor {
+    width: 80%;
+  }
+}
+.footer__sponsors__sponsor:hover {
+  box-shadow: 0px 25px 25px #CFCFCF80;
+}
+.footer__sponsors__sponsor div {
+  max-height: 100%;
+}
+.footer__sponsors__sponsor img {
+  max-height: 100%;
+  margin: auto;
 }
 .footer h4 {
   width: 100%;

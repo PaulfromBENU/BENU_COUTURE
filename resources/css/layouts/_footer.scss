@@ -1,5 +1,4 @@
 .footer {
-	padding-top: 102px;
 	background: white;
 	position: relative;
 	@include mobile {
@@ -79,6 +78,38 @@
 		&:hover {
 			background: $primary-color;
 			color: $white;
+		}
+	}
+	&__sponsors {
+		min-height: 20vh;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		border-bottom: lightgrey 1px solid;
+		margin-bottom: 50px;
+		&__sponsor {
+			width: 25%;
+			margin: 10px 40px;
+			box-shadow: 0px 15px 15px #CFCFCF80;
+			border-radius: 8px;
+			padding: 15px;
+			height: 150px;
+			transition: all 0.3s;
+			@include tablet {
+				width: 35%;
+			}
+			@include mobile {
+				width: 80%;
+			}
+			&:hover {
+				box-shadow: 0px 25px 25px #CFCFCF80;
+			}
+			div {
+				max-height: 100%;
+			}
+			img {
+				max-height: 100%;
+				margin: auto;
+			}
 		}
 	}
 	h4 {
