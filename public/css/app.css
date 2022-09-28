@@ -8012,7 +8012,7 @@ input[type=checkbox]:focus {
   text-align: left;
 }
 .full-story__general__content__info-section__txt__paragraph {
-  font: normal normal 500 16px/22px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   margin-bottom: 60px;
 }
 .full-story__general__content__info-section__txt__highlight {
@@ -8395,7 +8395,7 @@ input[type=checkbox]:focus {
   text-align: left;
 }
 .about__general__content__info-section__txt__paragraph {
-  font: normal normal 500 16px/22px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   margin-bottom: 60px;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -13368,7 +13368,7 @@ input[type=checkbox]:focus {
   }
 }
 .participate-badges__content {
-  font: normal normal 400 16px/28px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   letter-spacing: 0;
   margin-bottom: 40px;
   text-align: left;
@@ -13407,7 +13407,7 @@ input[type=checkbox]:focus {
   text-align: left;
 }
 .participate-give__content__txt {
-  font: normal normal 400 16px/28px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
 }
 .participate-give__collect-box {
   width: 80%;
@@ -13474,7 +13474,7 @@ input[type=checkbox]:focus {
   text-align: left;
 }
 .participate-partnership__content {
-  font: normal normal 400 16px/28px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   margin-bottom: 40px;
   text-align: left;
 }
@@ -13645,7 +13645,7 @@ input[type=checkbox]:focus {
   margin-bottom: 60px;
 }
 .participate-sustainable__content {
-  font: normal normal 400 16px/28px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
   margin-bottom: 40px;
   text-align: left;
 }
