@@ -3798,7 +3798,7 @@ input[type=checkbox]:focus {
   height: 42px;
 }
 .article-sidebar__content__more__list {
-  font: normal normal 500 14px/26px "Barlow";
+  font: normal normal 500 16px/28px "Barlow";
 }
 
 .modal-opacifier {

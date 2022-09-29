@@ -318,8 +318,8 @@
 
                 <ul class="article-sidebar__content__more__list">
                     @foreach($article->creation->keywords as $keyword)
-                        <li class="flex mb-5">
-                            <div class="pt-2">
+                        <li class="flex mb-3">
+                            <div class="pt-3">
                                 @svg('list_cintre')
                             </div> 
                             <p class="pl-4">
