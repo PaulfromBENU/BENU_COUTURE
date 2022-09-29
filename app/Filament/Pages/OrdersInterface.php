@@ -216,8 +216,8 @@ class OrdersInterface extends Page
         $order->status = 4;
         foreach ($order->cart->couture_variations as $variation) {
             if ($variation->pending_shops()->count() > 0) {
-                $pivot = $variation->pending_shops()->first()->pivot;
-                $pivot->decrement('stock_in_cart');
+                $pivot = $variation->shops()->first()->pivot;
+                // $pivot->decrement('stock_in_cart');
                 $pivot->increment('stock');
             }
         }

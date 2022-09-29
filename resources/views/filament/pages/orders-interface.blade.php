@@ -2,7 +2,7 @@
 	<section class="new-orders">
 		<div class="flex justify-between orders-title" wire:click="toggleNewOrders">
 			<h2>
-				New orders - Already paid - To be prepared for delivery or collect in shop
+				New orders ({{ $new_orders->count() }}) - Already paid - To be prepared for delivery or collect in shop
 			</h2>
 			@if($show_new_orders)
 			<p>
@@ -180,7 +180,7 @@
 												> Gift card requested, with the following card:
 											</p>
 											<p class="text-center" style="margin-top: 5px; margin-bottom: 5px;">
-												<img src="{{ asset('images/pictures/gift_card_'.$article->pivot->card_type.'.png') }}" style="height: 120px; margin: auto;" />
+												<img src="{{ asset('images/pictures/gift_card_'.$article->pivot->card_type.'.jpg') }}" style="height: 120px; margin: auto;" />
 											</p>
 										</div>
 										@endif
@@ -209,7 +209,7 @@
 	<section class="new-orders">
 		<div class="flex justify-between orders-title" wire:click="toggleUnpaidOrders">
 			<h2>
-				Unpaid orders - Waiting for payment - Bank account/Payconiq to be verified for payment confirmation
+				Unpaid orders ({{ $orders_waiting_for_payment->count() }}) - Waiting for payment - Bank account/Payconiq to be verified for payment confirmation
 			</h2>
 			@if($show_unpaid_orders)
 			<p>
@@ -440,7 +440,7 @@
 	<section class="new-orders">
 		<div class="flex justify-between orders-title" wire:click="toggleSentOrders">
 			<h2>
-				Sent orders
+				Sent orders ({{ $orders_sent->count() }})
 			</h2>
 			@if($show_sent_orders)
 			<p>
@@ -503,7 +503,7 @@
 	<section class="new-orders">
 		<div class="flex justify-between orders-title" wire:click="toggleOrdersReadyForCollect">
 			<h2>
-				Orders ready for collect
+				Orders ready for collect ({{ $orders_ready_for_collect->count() }})
 			</h2>
 			@if($show_orders_ready_for_collect)
 			<p>
@@ -568,7 +568,7 @@
 	<section class="new-orders">
 		<div class="flex justify-between orders-title" wire:click="toggleCollectedOrders">
 			<h2>
-				Orders collected
+				Orders collected ({{ $orders_collected->count() }})
 			</h2>
 			@if($show_collected_orders)
 			<p>
@@ -631,7 +631,7 @@
 	<section class="new-orders">
 		<div class="flex justify-between orders-title" wire:click="toggleSoldInShopOrders">
 			<h2>
-				Orders sold in shop
+				Orders sold in shop ({{ $orders_sold_in_shop->count() }})
 			</h2>
 			@if($show_sold_in_shop_orders)
 			<p>
