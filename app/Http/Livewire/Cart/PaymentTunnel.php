@@ -125,7 +125,7 @@ class PaymentTunnel extends Component
         if ($this->order_id > 0) {
             $order = Order::find($this->order_id);
             if (auth()->check()) {
-                $this->user_id = auh()->user()->id;
+                $this->user_id = auth()->user()->id;
             } else {
                 $this->user_id = $order->user_id;
             }
