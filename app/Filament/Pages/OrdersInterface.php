@@ -215,8 +215,8 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 4;
         foreach ($order->cart->couture_variations as $variation) {
-            if ($variation->pending_shops()->count() > 0) {
-                $pivot = $variation->shops()->first()->pivot;
+            if ($variation->shops()->count() > 0) {
+                $pivot = $variation->shops()->orderBy('updated_at', 'desc')->first()->pivot;
                 // $pivot->decrement('stock_in_cart');
                 $pivot->increment('stock');
             }
