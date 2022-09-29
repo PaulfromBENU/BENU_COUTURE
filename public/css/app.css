@@ -3800,6 +3800,20 @@ input[type=checkbox]:focus {
 .article-sidebar__content__more__list {
   font: normal normal 500 16px/28px "Barlow";
 }
+.article-sidebar__content__valid {
+  border-radius: 10px;
+  padding: 20px 30px;
+  background: #E6F1EFFF;
+  color: #556f6a;
+  margin-top: 20px;
+  border: 1px solid #dce9e8;
+  font: normal normal 500 18px/24px "Barlow Condensed";
+}
+@media (max-width: 767px) {
+  .article-sidebar__content__valid {
+    padding: 15px;
+  }
+}
 
 .modal-opacifier {
   position: fixed;
