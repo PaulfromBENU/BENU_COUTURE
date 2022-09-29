@@ -169,8 +169,6 @@
 		 	let boxesTop = $('#delivery-chapter-boxes').offset().top;
 		 	let delayTop = $('#delivery-chapter-delay').offset().top;
 
-		 	console.log(optionsTop, costTop, boxesTop, delayTop);
-
 		 	let currentScrollPos = $(window).scrollTop();
 		 	activateDeliverySideMenu(currentScrollPos, optionsTop, costTop, boxesTop, delayTop);
 
@@ -212,11 +210,11 @@
 		 	let materialsTop = $('#about-chapter-materials').offset().top;
 
 		 	let currentScrollPos = $(window).scrollTop();
-		 	activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 	activateSizesSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
 
 		 	$(window).on('scroll', function() {
 		 		currentScrollPos = $(window).scrollTop();
-		 		activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 		activateSizesSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
 		 	});
 		});
 
