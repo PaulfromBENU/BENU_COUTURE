@@ -231,6 +231,7 @@ class PaymentTunnel extends Component
                         'origin' => 'couture',
                         'general_comment' => "",
                         'client_number' => $client_number,
+                        'favorite_language' => session('locale'),
                     ]);
                 }
 
