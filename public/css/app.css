@@ -9852,7 +9852,7 @@ input[type=checkbox]:focus {
 }
 .dashboard-vouchers__form__input label {
   text-align: left;
-  font: normal normal 500 12px/28px "Barlow";
+  font: normal normal 500 15px/28px "Barlow";
   letter-spacing: 0px;
   margin-bottom: 10px;
 }
