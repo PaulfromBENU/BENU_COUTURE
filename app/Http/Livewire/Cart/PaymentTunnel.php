@@ -124,7 +124,11 @@ class PaymentTunnel extends Component
         // If order has already been started, use existing data
         if ($this->order_id > 0) {
             $order = Order::find($this->order_id);
-            $this->user_id = $order->user_id;
+            if (auth()->check()) {
+                $this->user_id = auh()->user()->id;
+            } else {
+                $this->user_id = $order->user_id;
+            }
             $this->info_valid = 1;
             $this->order_first_name = User::find($this->user_id)->first_name;
             $this->order_last_name = User::find($this->user_id)->last_name;
