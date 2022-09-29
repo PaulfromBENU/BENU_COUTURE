@@ -33,7 +33,7 @@
 			{{ __('participate.give-content-2-5') }}
 		</p>
 		<div class="text-center lg:text-left mt-5 pt-5">
-			<a href="#" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('participate.give-link-2') }}</a>
+			<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('participate.give-link-2') }}</a>
 		</div>
 	</div>
 
