@@ -1,5 +1,349 @@
 [
   {
+    "page": "slug",
+    "key": "slugs.models",
+    "de": "kreationen",
+    "fr": "creations",
+    "en": "creations",
+    "lu": "kreatiounen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.sold",
+    "de": "verkaufte-variationen",
+    "fr": "variantes-vendues",
+    "en": "sold-variations",
+    "lu": "verkaafte-varianten"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.vouchers",
+    "de": "gutscheine",
+    "fr": "bons-d-achat",
+    "en": "vouchers",
+    "lu": "akafsbongen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.client-support",
+    "de": "service",
+    "fr": "service",
+    "en": "service",
+    "lu": "service"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.full-story",
+    "de": "die-ganze-geschichte",
+    "fr": "toute-l-histoire",
+    "en": "the-whole-story",
+    "lu": "dei-ganz-geschicht"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.about",
+    "de": "ueber",
+    "fr": "a-propos",
+    "en": "about",
+    "lu": "iwwer"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.partners",
+    "de": "partnerinnen",
+    "fr": "partenaires",
+    "en": "partners",
+    "lu": "partnerinnen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.news",
+    "de": "aktualitaeten",
+    "fr": "actualites",
+    "en": "news",
+    "lu": "neiegkeeten"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.cart",
+    "de": "warenkorb",
+    "fr": "panier-d-achat",
+    "en": "basket",
+    "lu": "akafskierfche"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.payment",
+    "de": "bestellung-bezahlen",
+    "fr": "paiement-de-la-commande",
+    "en": "payment-of-order",
+    "lu": "bestellung-bezuelen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.process-payment",
+    "de": "zahlung-in-bearbeitung",
+    "fr": "paiement-en-cours",
+    "en": "payment-in-progress",
+    "lu": "bezuelung-am-prozess"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.process-paypal-payment",
+    "de": "zahlung-per-paypal",
+    "fr": "paiement-par-paypal",
+    "en": "payment-via-paypal",
+    "lu": "bezuelung-mat-paypal"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.payment-by-card",
+    "de": "zahlung-per-kreditkarte",
+    "fr": "paiement-par-carte",
+    "en": "payment-via-credit-card",
+    "lu": "bezuelung-mat-kreditkaart"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.payment-validation",
+    "de": "freigabe-der-zahlung",
+    "fr": "validation-du-paiement",
+    "en": "validation-of-payment",
+    "lu": "validatioun-vun-der-Bezuelung"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.processed-payment",
+    "de": "bestätigung-der-zahlung",
+    "fr": "confirmation-de-paiement",
+    "en": "confirmation-of-payment",
+    "lu": "bestätegung-vun-der-bezuelung"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.newsletter-subscribe",
+    "de": "newsletter-abonnieren",
+    "fr": "inscription-newsletter",
+    "en": "subscribe-to-the-newsletter",
+    "lu": "newsletter-abonéieren"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.newsletter-unsubscribe",
+    "de": "newsletter-kündigen",
+    "fr": "desabonnement-a-la-newsletter",
+    "en": "unsubscribe-from-the-newsletter",
+    "lu": "newsletter-kënnegen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.header-participate",
+    "de": "mitmachen",
+    "fr": "participer",
+    "en": "participate",
+    "lu": "matmaachen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.header-download-drop-off",
+    "de": "kontakt-herunterladen",
+    "fr": "telechargement-du-contact",
+    "en": "download-contact",
+    "lu": "kontakt-eroflueden"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.return",
+    "de": "rückgabe",
+    "fr": "retour",
+    "en": "returns",
+    "lu": "retour"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.invoice",
+    "de": "rechnung",
+    "fr": "facture",
+    "en": "invoice",
+    "lu": "rechnung"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.invoice-download",
+    "de": "rechnung-herunterladen",
+    "fr": "telecharger-facture",
+    "en": "download-invoice",
+    "lu": "rechnung-eroflueden"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.show-voucher",
+    "de": "gutschein-herunterladen",
+    "fr": "telecharger-bon-d-achat",
+    "en": "download-voucher",
+    "lu": "akafsbong-eroflueden"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.footer-legal-mentions",
+    "de": "impressum",
+    "fr": "mentions-legales",
+    "en": "legal-notices",
+    "lu": "legal-informatiounen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.footer-policy",
+    "de": "datenschutz",
+    "fr": "politique-de-confidentialite",
+    "en": "privacy-policy",
+    "lu": "dateschutz"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.footer-general-info",
+    "de": "allgemeine-informationen",
+    "fr": "informations-generales",
+    "en": "general-information",
+    "lu": "allgemeng-informatiounen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.footer-medias",
+    "de": "medien",
+    "fr": "medias",
+    "en": "media",
+    "lu": "medien"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.general-conditions",
+    "de": "nutzungsbedingungen",
+    "fr": "conditions-generales",
+    "en": "terms-of-use",
+    "lu": "gebrauchsbedengungen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.sitemap",
+    "de": "seitenuebersicht",
+    "fr": "plan-du-site",
+    "en": "site-map",
+    "lu": "saeiteniwwersiicht"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.campaigns",
+    "de": "politische-kampagnen",
+    "fr": "campagnes-politiques",
+    "en": "political-campaigns",
+    "lu": "politesch-campagnen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.campaign-carte-blanche",
+    "de": "persilschein",
+    "fr": "carte-blanche",
+    "en": "free-hand",
+    "lu": "fraeischaein"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-faq",
+    "de": "faq",
+    "fr": "faq",
+    "en": "faq",
+    "lu": "faq"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-delivery",
+    "de": "lieferung",
+    "fr": "livraison",
+    "en": "delivery",
+    "lu": "liwwerung"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-sizes",
+    "de": "groessenratgeber",
+    "fr": "guide-des-tailles",
+    "en": "size-guide",
+    "lu": "greisste-guide"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-return",
+    "de": "rueckgaben",
+    "fr": "retours",
+    "en": "returns",
+    "lu": "retouren"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-payment",
+    "de": "zahlungsmethoden",
+    "fr": "methodes-de-paiement",
+    "en": "payment-methods",
+    "lu": "bezuelmethoden"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-care",
+    "de": "pflegehinweise",
+    "fr": "conseils-d-entretien",
+    "en": "care-instructions",
+    "lu": "fleeg-vun-de-kleeder"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-shops",
+    "de": "verkaufsstellen",
+    "fr": "points-de-vente",
+    "en": "sales-points",
+    "lu": "verkafsplazen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.services-contact",
+    "de": "kontakt",
+    "fr": "contact",
+    "en": "contact",
+    "lu": "kontakt"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.participate-badges",
+    "de": "siegel-gewinnen",
+    "fr": "remporter-des-badges",
+    "en": "win-seals",
+    "lu": "badge-gewannen"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.participate-give",
+    "de": "kleider-spenden",
+    "fr": "donner-des-vetements",
+    "en": "donate-clothes",
+    "lu": "kleeder-spenden"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.participate-partnership",
+    "de": "partnerin-werden",
+    "fr": "devenir-partenaire",
+    "en": "become-partner",
+    "lu": "partnerin-ginn"
+  },
+  {
+    "page": "slug",
+    "key": "slugs.participate-smart",
+    "de": "clever-konsumieren",
+    "fr": "consommer-malin",
+    "en": "smart-consumption",
+    "lu": "clever-consommeieren"
+  },
+  {
     "page": "home",
     "key": "welcome.seo-title",
     "de": "",
@@ -338,7 +682,7 @@
   {
     "page": "Informations",
     "key": "footer.general-infos-seo-title",
-    "de": "Hintergrundinformationen zu BENU COUTURE",
+    "de": "Die Auswirkungen der Fast-Fashion",
     "fr": "",
     "en": "",
     "lu": ""
@@ -354,9 +698,9 @@
   {
     "page": "médias",
     "key": "footer.medias-seo-title",
-    "de": "",
-    "fr": "",
-    "en": "",
+    "de": "Medienberichte über BENU COUTURE in Luxemburg und darüber hinaus",
+    "fr": "Reportages médiatiques au Luxembourg et ailleurs sur BENU COUTURE",
+    "en": "Media reports about BENU COUTURE in Luxembourg and beyond",
     "lu": ""
   },
   {
@@ -368,11 +712,27 @@
     "lu": ""
   },
   {
-    "page": "Datenschutz",
-    "key": "footer.policy-seo-title",
-    "de": "Datenschutz bei BENU Village Esch asbl",
+    "page": "cond. générales",
+    "key": "footer.general-conditions-seo-title",
+    "de": "Wie bestelle ich nachhaltige Upcycling-Mode im BENU COUTURE Online-Shop?",
+    "fr": "Comment commander une mode upcycling durable dans la boutique en ligne BENU COUTURE ?",
+    "en": "How do I order sustainable upcycling fashion from the BENU COUTURE online shop?",
+    "lu": ""
+  },
+  {
+    "page": "cond. générales",
+    "key": "ooter.general-conditions-seo-description",
+    "de": "",
     "fr": "",
     "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Datenschutz",
+    "key": "footer.policy-seo-title",
+    "de": "DSGVO BENU COUTURE: Schutz personenbezogener Daten",
+    "fr": "RGPD BENU COUTURE : Traitement des données personnelles",
+    "en": "RGPD BENU COUTURE: Treatment of personal data",
     "lu": ""
   },
   {
@@ -386,9 +746,9 @@
   {
     "page": "Impressum",
     "key": "footer.legal-seo-title",
-    "de": "Impressum von BENU Village Esch asbl",
-    "fr": "",
-    "en": "",
+    "de": "BENU COUTURE : der Online-Shop für verantwortungsvolle Upcycling-Mode in Luxemburg",
+    "fr": "BENU COUTURE : la boutique en ligne de mode éco-esponsable au Luxembourg",
+    "en": "BENU COUTURE : the online shop for sustainable upcycled fashion in Luxembourg",
     "lu": ""
   },
   {
@@ -482,10 +842,10 @@
   {
     "page": "Home",
     "key": "header.discover-sloow",
-    "de": "Entdecke die Website von BENU VILLAGE ESCH ASBL",
-    "fr": "Découvre le site de BENU VILLAGE ESCH ASBL",
-    "en": "Discover the website of BENU VILLAGE ESCH ASBL",
-    "lu": "Entdeck d'Internetsäit vu BENU VILLAGE ESCH ASBL"
+    "de": "Entdecke die Website BENU SLOOW",
+    "fr": "Découvre le site de BENU SLOOW",
+    "en": "Discover the website of BENU SLOOW",
+    "lu": "Entdeck d'Internetsäit vu BENU SLOOW"
   },
   {
     "page": "Home",
@@ -674,10 +1034,10 @@
   {
     "page": "Histoire",
     "key": "about.full-paragraph-1-2",
-    "de": ") und IVN (Internationaler Verband der Naturtextilwirtschaft,",
-    "fr": ") et IVN (Internationaler Verband der Naturtextilwirtschaft, www.naturtextil.de",
-    "en": ") and IVN (Internationaler Verband der Naturtextilwirtschaft,",
-    "lu": ") an IVN (Internationaler Verband der Naturtextilwirtschaft,"
+    "de": ") und IVN (Internationaler Verband der Naturtextilwirtschaft",
+    "fr": ") et IVN (Internationaler Verband der Naturtextilwirtschaft",
+    "en": ") and IVN (Internationaler Verband der Naturtextilwirtschaft",
+    "lu": ") an IVN (Internationaler Verband der Naturtextilwirtschaft"
   },
   {
     "page": "Histoire",
@@ -834,10 +1194,10 @@
   {
     "page": "Histoire",
     "key": "about.full-paragraph-5-7",
-    "de": "ÜBER BENU COUTURE",
-    "fr": "À PROPOS DE BENU COUTURE",
-    "en": "ABOUT BENU COUTURE",
-    "lu": "IWWER BENU COUTURE"
+    "de": "ÜBER BENU COUTURE.",
+    "fr": "À PROPOS DE BENU COUTURE.",
+    "en": "ABOUT BENU COUTURE.",
+    "lu": "IWWER BENU COUTURE."
   },
   {
     "page": "Histoire",
@@ -1707,7 +2067,7 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-1",
     "de": "Wir produzieren lokal! Von der Idee, über den Entwurf, das Design und die Produktion bis hin zur Anpassung und Änderung - alle Arbeitsschritte werden ausschließlich in unserem Schneider-Atelier in Esch-sur-Alzette im Süden Luxemburgs durchgeführt.",
-    "fr": "Nous produisons localement ! De l'idée à l'adaptation et à la modification, en passant par la conception, le design et la production, toutes les étapes sont réalisées exclusivement dans notre atelier de couture à Esch-sur-Alzette, dans le sud du Luxembourg.",
+    "fr": "Nous produisons localement ! De l'idée au projet, la conception, le design et la production, jusqu‘aux modifications et adaptations, toutes les étapes sont réalisées exclusivement dans notre atelier de couture à Esch-sur-Alzette, dans le sud du Luxembourg.",
     "en": "We produce locally! From the idea, to the draft, the design and the production, to the fitting and alteration - all work steps are carried out exclusively in our tailor's atelier in Esch-sur-Alzette in the south of Luxembourg.",
     "lu": "Mir produzéieren lokal! Vun der Iddi, iwwer den Entworf, den Design an d'Produktioun, bis bei de Montage an d'Ännerung - all Aarbechtsschrëtt ginn exklusiv an eisem Schneider-Atelier zu Esch-Uelzecht am Süde gemaach."
   },
@@ -1724,23 +2084,23 @@
     "key": "services.faq-group-1-question-content-2-1",
     "de": "Wir verwenden für unsere Kreationen ausschließlich gebrauchte Stoffe und Textilien, welche wir aus privaten Kleiderspenden beziehen. Pelze, ob künstlich oder echt, werden grundsätzlich abgelehnt.",
     "fr": "Pour nos créations, nous utilisons exclusivement des tissus et des textiles usagés, que nous obtenons de dons de vêtements privés. Les fourrures, qu'elles soient artificielles ou véritables, sont systématiquement refusées.",
-    "en": "We only use used fabrics and textiles for our creations, which we obtain from private clothing donations. Furs, whether artificial or real, are rejected as a matter of principle.",
+    "en": "For our creations, we use exclusively used fabrics and textiles, which we obtain from private clothing donations. Furs, whether artificial or real, are systematically refused.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-2-2",
     "de": "Vor der Verarbeitung macht das BENU COUTURE Team eine qualitative Auswahl der Kleiderspenden. Hierbei werden natürliche Materialien, wie Wolle, Seide, Baumwolle bevorzugt. Es lässt sich allerdings nicht ganz vermeiden, dass Stoffe verwendet werden, die (auch) synthetische Fasern enthalten.",
-    "fr": "Avant le traitement, l'équipe de BENU COUTURE effectue une sélection qualitative des dons de vêtements. La préférence est donnée aux matières naturelles telles que la laine, la soie et le coton. Il n'est toutefois pas possible d'éviter totalement l'utilisation de tissus contenant (également) des fibres synthétiques.",
-    "en": "Before processing, the BENU COUTURE team makes a qualitative selection of the clothing donations. Natural materials such as wool, silk and cotton are preferred. However, it is not entirely possible to avoid using fabrics that (also) contain synthetic fibres.",
+    "fr": "Avant la confection, l'équipe de BENU COUTURE effectue une sélection qualitative des dons de vêtements. La préférence est donnée aux matières naturelles telles que la laine, la soie et le coton. Il n'est toutefois pas possible d'éviter totalement l'utilisation de tissus contenant (également) des fibres synthétiques.",
+    "en": "Before processing, the BENU COUTURE team makes a qualitative selection of the clothing donations. Preference is given to natural materials such as wool, silk and cotton. However, it is not entirely possible to avoid using fabrics that (also) contain synthetic fibres.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-2-3",
     "de": "Nur in Ausnahmefällen kaufen wir Komponenten, wie z.B. Reißverschlüsse neu hinzu. Jeder Neukauf wird kritisch im Hinblick auf eine bestmögliche Nachhaltigkeitsbilanz geprüft. Regionale Produktion, Ökolabel, Freiheit von Schwermetallen, sozialverträgliche Produktion …",
-    "fr": "Nous n'achetons qu'exceptionnellement de nouveaux composants, comme des fermetures à glissière. Chaque nouvel achat fait l'objet d'un examen critique en vue d'obtenir le meilleur bilan de durabilité possible. Production régionale, écolabel, absence de métaux lourds, production socialement responsable ...",
-    "en": "Only in exceptional cases do we buy new components, such as zips. Every new purchase is critically examined with regard to the best possible sustainability balance. Regional production, eco-label, freedom from heavy metals, socially responsible production ...",
+    "fr": "Ce n'est que dans des cas exceptionnels que nous achetons de nouveaux composants, tels que des fermetures éclair. Chaque nouvel achat fait l'objet d'un examen critique par rapport au meilleur bilan possible en matière de durabilité. Production régionale, éco-label, absence de métaux lourds, production socialement responsable ...",
+    "en": "Only in exceptional cases do we purchase new components, such as zips. Every new purchase is critically examined with regard to the best possible sustainability balance. Regional production, eco-label, absence of heavy metals, socially responsible production ...",
     "lu": ""
   },
   {
@@ -1771,32 +2131,32 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-3-1",
     "de": "Ja! Als Privatperson kannst Du Altkleider oder gebrauchte Textilien an BENU COUTURE spenden. Wende Dich bitte an eine der",
-    "fr": "Oui, en tant que particulier, tu peux donner des vêtements ou des textiles usagés à BENU COUTURE. Adresse-toi à l'un des",
-    "en": "Yes, as a private person you can donate old clothes or used textiles to BENU COUTURE. Please contact one of the",
+    "fr": "Oui, en tant que particulier, tu peux donner des vêtements ou des tissus usagés à BENU COUTURE. Adresse-toi à l'un des",
+    "en": "Yes, as a private person you can donate used clothes or fabric to BENU COUTURE. Please contact one of the",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-3-2",
     "de": "BENU Sammelstellen!",
-    "fr": "BENU points de collecte !",
-    "en": "BENU collection points!",
+    "fr": "points de collecte BENU!",
+    "en": "BENU drop-off points!",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-3-3",
     "de": "Zustellungen per Post nehmen wir nicht an, weil alleine der ökologische Fußabdruck der Zusendung bereits zu groß ist.",
-    "fr": "Nous n'acceptons pas les envois par la poste, car l'empreinte écologique de l'envoi est déjà trop importante.",
-    "en": "We do not accept deliveries by post, because the ecological footprint of the delivery alone is already too large.",
+    "fr": "Nous n'acceptons pas les envois par la poste, car rien que la livraison a une empreinte écologique trop importante.",
+    "en": "We do not accept postal shipments, because the ecological footprint of the delivery alone is already too high.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-3-4",
-    "de": "Aber: Anstatt Kleider zu spenden um den Kleiderschrank zu leeren und mit neuen Kleidungsstücken zu füllen, suchen wir bei BENU nach anderen, nachhaltigeren Möglichkeiten. Und es gibt sie! Second-Hand-Läden, Initiativen zu Weiterverkauf, Kleider-Miete und -Tausch oder Reparatur und Upcycling von Kleidung finden sich sicher auch in Deiner Nähe.",
-    "fr": "Mais : au lieu de donner des vêtements pour vider sa garde-robe et la remplir de nouveaux vêtements, chez BENU, nous cherchons d'autres possibilités plus durables. Et il y en a ! Des magasins de seconde main, des initiatives de revente, de location et d'échange de vêtements ou de réparation et d'upcycling de vêtements se trouvent certainement aussi dans ton région.",
-    "en": "But: Instead of donating clothes to empty the wardrobe and fill it with new garments, we at BENU are looking for other, more sustainable options. And there are! Second-hand shops, initiatives for resale, clothes rental and exchange or repair and upcycling of clothes can certainly be found in your neighbourhood.",
+    "de": "Anstatt Kleider zu spenden um den Kleiderschrank zu leeren und mit neuen Kleidungsstücken zu füllen, suchen wir bei BENU nach anderen, nachhaltigeren Möglichkeiten. Und es gibt sie! Second-Hand-Läden, Initiativen zu Weiterverkauf, Kleider-Miete und -Tausch oder Reparatur und Upcycling von Kleidung finden sich sicher auch in Deiner Nähe.",
+    "fr": "Au lieu de donner des vêtements pour vider sa garde-robe et la remplir de nouveaux vêtements, nous cherchons chez BENU d'autres possibilités plus durables. Et il y en a ! Des magasins de seconde main, des initiatives de revente, de location et d'échange de vêtements ou de réparation et d'upcycling de vêtements se trouvent certainement aussi dans ta région.",
+    "en": "Instead of donating clothes to empty the wardrobe and fill it with new garments, we at BENU are looking for other, more sustainable options. And they exist! Second-hand shops, initiatives for resale, clothes rental and exchange or repair and upcycling of clothes can certainly be found in your neighbourhood.",
     "lu": ""
   },
   {
@@ -1819,7 +2179,7 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-title-4",
     "de": "Warum nimmt BENU COUTURE keine Stoff-Reste der Kleiderindustrie an?",
-    "fr": "Pourquoi BENU COUTURE n'accepte pas les restes de tissus de l'industrie vestimentaire ?",
+    "fr": "Pourquoi BENU COUTURE n'accepte-t-il pas les restes de tissus de l'industrie de l‘habillement ?",
     "en": "Why does BENU COUTURE not accept fabric leftovers from the clothing industry?",
     "lu": ""
   },
@@ -1827,8 +2187,8 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-4-1",
     "de": "Weil wir bei BENU überzeugt sind, dass die Fast Fashion Industrie Verantwortung übernehmen und ihre Produktions- und Mengenstrategien überdenken sollte! Wir möchten nicht, dass sich die Kleiderindustrie als „grün“ verkauft, indem sie BENU COUTURE vermeidbare Restposten überlässt, aber gleichzeitig weiter in Masse produziert und den Markt mit kurzlebigen Kleidungsstücken überschwemmt.",
-    "fr": "Parce que chez BENU, nous sommes convaincus que l'industrie de la fast fashion devrait prendre ses responsabilités et repenser ses stratégies de production et de quantité ! Nous ne voulons pas que l'industrie de l'habillement se vende comme \"verte\" en laissant à BENU COUTURE des fins de série évitables, mais qu'elle continue en même temps à produire en masse et à inonder le marché de vêtements à courte durée de vie.",
-    "en": "Because we at BENU are convinced that the fast fashion industry should take responsibility and rethink its production and quantity strategies! We don't want the clothing industry to sell itself as \"green\" by giving BENU COUTURE avoidable remnants, but at the same time continue to mass produce and flood the market with short-lived garments.",
+    "fr": "Parce que chez BENU, nous sommes convaincus que l'industrie de la fast fashion devrait prendre ses responsabilités et repenser ses stratégies de production et de quantité ! Nous ne voulons pas que l'industrie de l'habillement se vende comme \"verte\" en laissant à BENU COUTURE des fins de série évitables, tout en continuant en même temps à produire en masse et à inonder le marché de vêtements à courte durée de vie.",
+    "en": "Because we at BENU are convinced that the fast fashion industry should take responsibility and rethink its production and quantity strategies! We don't want the clothing industry to sell itself as \"green\" by giving BENU COUTURE avoidable remnants, while at the same time continuing to mass-produce and flood the market with short-lasting clothes.",
     "lu": ""
   },
   {
@@ -1851,47 +2211,47 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-5-2",
     "de": "Der Online-Handel erfordert einen sehr hohen Aufwand im Bereich Logistik und Verkehr. Durch den Verbrauch von Treibstoffen und Strom hinterlässt er einen erheblichen ökologischen Fußabdruck und hat negative Auswirkungen auf die Umwelt. Dennoch sind wir bei BENU zu der Überzeugung gelangt, dass wir das Internet benötigen, um die Idee des Projektes weiterzuentwickeln und verstärkt nach außen zu tragen.",
-    "fr": "Le commerce en ligne nécessite un effort très important en matière de logistique et de transport. En consommant du carburant et de l'électricité, il laisse une empreinte écologique considérable et a un impact négatif sur l'environnement. Néanmoins, chez BENU, nous sommes parvenus à la conclusion que nous avions besoin d'Internet pour développer l'idée du projet et la faire connaître davantage à l'extérieur.",
-    "en": "Online commerce requires a very high effort in logistics and transport. Through the consumption of fuel and electricity, it leaves a significant ecological footprint and has a negative impact on the environment. Nevertheless, we at BENU have come to the conclusion that we need the internet to further develop the idea of the project and to carry it outwards more strongly.",
+    "fr": "Le commerce en ligne nécessite un effort très important en matière de logistique et de transport. En consommant du carburant et de l'électricité, il laisse derrière lui une empreinte écologique considérable et a un impact négatif sur l'environnement. Néanmoins, chez BENU, nous sommes parvenus à la conclusion que nous avions besoin d'Internet pour développer l'idée du projet et la diffuser davantage au grand public.",
+    "en": "E-commerce requires a very high effort in logistics and transport. By consuming fuel and electricity, it leaves behind a significant ecological footprint and has a negative impact on the environment. Nevertheless, we at BENU came to the conclusion that we need the internet to further develop the idea of the project and to carry it outwards more strongly.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-5-3",
-    "de": "Dies ist unser Beitrag, den Online-Handel ein wenig nachhaltiger zu machen:",
-    "fr": "C'est notre contribution pour rendre le commerce en ligne un peu plus durable :",
-    "en": "This is our contribution to making online trade a little more sustainable:",
+    "de": "Um den Onlinehandel ein wenig nachhaltiger zu machen :",
+    "fr": "Ainsi, pour rendre le commerce en ligne un peu plus durable :",
+    "en": "Therefore, to make e-commerce a little more sustainable :",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-5-4",
-    "de": "Wir wählen unsere Lieferpartner nach sozio-ökologischen Kriterien aus.",
-    "fr": "Nous sélectionnons nos partenaires de livraison selon des critères socio-écologiques.",
-    "en": "We select our delivery partners according to socio-ecological criteria.",
+    "de": "wählen wir unsere Lieferpartner nach sozial-ökologischen Kriterien aus,",
+    "fr": "nous sélectionnons nos partenaires de livraison selon des critères socio-écologiques,",
+    "en": "we select our delivery partners according to socio-ecological criteria,",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-5-5",
-    "de": "Wir nutzen für den Versand ausschließlich gebrauchte Pappkartons und plastikfreie, umweltschonende Paketbänder und verzichten auf zusätzliche Plastikverpackungen.",
-    "fr": "Pour l'expédition, nous utilisons exclusivement des boîtes en carton usagées et des rubans pour paquets sans plastique et respectueux de l'environnement, et nous renonçons à tout emballage plastique supplémentaire.",
-    "en": "We only use used cardboard boxes and plastic-free, environmentally friendly parcel tapes for shipping and do not use additional plastic packaging.",
+    "de": "für den Versand nutzen wir ausschließlich gebrauchte Pappkartons und plastikfreie, umweltschonende Paketbänder und verzichten auf zusätzliche Plastikverpackungen,",
+    "fr": "pour l'expédition, nous utilisons exclusivement des boîtes en carton usagées et des bandes adhésives sans plastique et respectueuses de l'environnement, et nous renonçons  à tout emballage plastique supplémentaire,",
+    "en": "for shipping, we only use used cardboard boxes and plastic-free, environmentally friendly parcel tapes, and we do not use any additional plastic packaging,",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-5-6",
-    "de": "Wir bieten weder kostenlosen Versand und noch kostenlose Rücksendungen und versuchen damit die Anzahl der Sendungen zu minimieren.",
-    "fr": "Nous ne proposons pas d'envoi gratuit ni de retours gratuits et essayons ainsi de minimiser le nombre d'envois.",
-    "en": "We offer neither free shipping nor free returns and thus try to minimise the number of shipments.",
+    "de": "wir bieten weder kostenlosen Versand, noch kostenlose Rücksendungen und versuchen damit die Anzahl der Sendungen zu minimisieren.",
+    "fr": "nous ne proposons ni d‘envoi gratuit, ni de retour gratuit et essayons ainsi de minimiser le nombre d'expéditions.",
+    "en": "we offer neither free delivery nor free returns and thus try to minimise the number of shipments.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-title-6",
     "de": "Was hat das BENU Logo mit Umwelt und Nachhaltigkeit zu tun?",
-    "fr": "Quel est le rapport entre le logo BENU et l'environnement et le développement durable ?",
+    "fr": "Quel rapport a le logo BENU avec l'environnement et le développement durable ?",
     "en": "What does the BENU logo have to do with the environment and sustainability?",
     "lu": ""
   },
@@ -1907,7 +2267,7 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-6-2",
     "de": "BENU wird ausgesprochen wie ‘Be New!’ und bedeutet in etwa ‘Sei Neu!’. Der BENU Vogel ist der ägyptischen Mythologie entsprungen und wurde - meist in Form eines Reihers - bereits in den ägyptischen Pyramiden dargestellt. Er ist der Vorfahre des griechischen Phönix, dieses wunderschönen roten Vogels, der am Ende seines Lebenszyklus verbrennt oder stirbt, um aus seiner Asche immer wieder neu zu erstehen.",
-    "fr": "BENU se prononce 'Be New!' et signifie approximativement 'Sois nouveau ! L'oiseau BENU est issu de la mythologie égyptienne et était déjà représenté - le plus souvent sous la forme d'un héron - dans les pyramides égyptiennes. Il est l'ancêtre du Phénix grec, ce magnifique oiseau rouge qui se consume ou meurt à la fin de son cycle de vie pour renaître à chaque fois de ses cendres.",
+    "fr": "BENU se prononce 'Be New!' et signifie approximativement 'Sois nouveau‘ ! L'oiseau BENU est issu de la mythologie égyptienne et était déjà représenté - le plus souvent sous la forme d'un héron - dans les pyramides égyptiennes. Il est l'ancêtre du Phénix grec, ce magnifique oiseau rouge qui se consume ou meurt à la fin de son cycle de vie pour renaître à chaque fois de ses cendres.",
     "en": "BENU is pronounced 'Be New' and means 'Be new'. The BENU bird originates from Egyptian mythology and was already depicted - mostly in the form of a heron - in the Egyptian pyramids. It is the ancestor of the Greek phoenix, this beautiful red bird that burns or dies at the end of its life cycle, only to rise again and again from its ashes.",
     "lu": ""
   },
@@ -1923,16 +2283,16 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-6-4",
     "de": "BENU COUTURE hat sich ebensowie alle anderen Projekte und insbesondere das gesamte Ecovillage einer konsequenten sozio-ökologischen Kreislaufwirtschaft verschrieben. Wiederverwendung, UpCycling, „Aus alt mach neu“ …. ständig suchen wir nach Möglichkeiten bestehendes weiter zu verwenden, weniger neue Ressourcen zu verbrauchen und noch weniger Ressourcen zu entsorgen.",
-    "fr": "BENU COUTURE, comme tous les autres projets et en particulier l'ensemble de l'Ecovillage, s'est engagé dans une économie socio-écologique circulaire cohérente. Réutilisation, UpCycling, \"Faire du neuf avec du vieux\" .... nous cherchons constamment des possibilités de réutiliser l'existant, de consommer moins de nouvelles ressources et d'en éliminer encore moins.",
-    "en": "BENU COUTURE, like all the other projects and especially the entire Ecovillage, is committed to a consistent socio-ecological circular economy. Reuse, UpCycling, \"Make new from old\" .... We are constantly looking for ways to reuse existing things, use fewer new resources and dispose of even fewer resources.",
+    "fr": "BENU COUTURE, comme tous nos autres projets - et en particulier l'ensemble de l'Ecovillage - s'est engagé dans une économie socio-écologique circulaire cohérente. Réutilisation, UpCycling, \"Faire du neuf avec du vieux\" .... nous cherchons constamment des possibilités de réutiliser ce qui existe déjà, de consommer moins de nouvelles ressources et d'en jeter encore moins.",
+    "en": "BENU COUTURE, like all the other projects and especially the entire Ecovillage, is committed to a consistent socio-ecological circular economy. Reuse, UpCycling, \"Make new from old\" .... We are constantly looking for ways to reuse existing things, use fewer new resources and dispose even fewer resources.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-6-5",
     "de": "Weitere Informationen über BENU findest Du",
-    "fr": "Pour plus d'informations sur BENU, tu peux",
-    "en": "More information about BENU can you find",
+    "fr": "De plus amples informations sur BENU sont disponibles",
+    "en": "More information about BENU can be found",
     "lu": ""
   },
   {
@@ -1955,8 +2315,8 @@
     "page": "Service Client",
     "key": "services.faq-group-1-question-content-7-1",
     "de": "Mit unserer Upcycling-Mode \"retten“ wir gebrauchte Kleidungsstücke, die sonst weggeworfen würden. Gleichzeitig wollen wir an all die bedrohten Tiere und Pflanzen erinnern, die unseren Schutz brauchen. Daher trägt jede Kreation einen Namen, der von einer gefährdeten oder bereits ausgestorbenen Art inspiriert ist. Unter jedem Modell findest du einen Link, der Dich zu einer Beschreibung der jeweiligen Art weiterleitet.",
-    "fr": "Avec notre mode upcycling, nous \"sauvons\" des vêtements usagés qui seraient autrement jetés. En même temps, nous voulons rappeler tous les animaux et les plantes menacés qui ont besoin de notre protection. C'est pourquoi chaque création porte un nom inspiré d'une espèce menacée ou déjà éteinte. Sous chaque modèle, tu trouveras un lien qui te mènera à une description de l'espèce en question.",
-    "en": "With our upcycling fashion, we \"rescue\" used clothes that would otherwise be thrown away. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation has a name inspired by an endangered or already extinct species. Below each model you will find a link that will take you to a description of the species.",
+    "fr": "Avec notre mode upcycling, nous \"sauvons\" des vêtements usagés qui auraient autrement été jetés. En même temps, nous voulons rappeler tous les animaux et les plantes menacés qui ont besoin de notre protection. C'est pourquoi chaque création porte un nom inspiré d'une espèce menacée ou déjà éteinte. Sous chaque modèle, tu trouveras un lien qui te mènera à une description de l'espèce en question.",
+    "en": "With our upcycling fashion, we \"rescue\" used clothes that would otherwise be thrown away. At the same time, we want to remember all the endangered animals and plants that need our protection. That's why each creation has a name inspired by an endangered or already extinct species. Below each model you will find a link that leads you to a description of the respective species.",
     "lu": ""
   },
   {
@@ -1972,7 +2332,7 @@
     "key": "services.faq-group-2-question-title-1",
     "de": "Wie kommen die Preise bei BENU zustande?",
     "fr": "Comment les prix sont-ils établis chez BENU ?",
-    "en": "How do the prices at BENU come about?",
+    "en": "How are the prices established at BENU?",
     "lu": "Wéi ginn d'Präisser bei BENU bestëmmt?"
   },
   {
@@ -1987,8 +2347,8 @@
     "page": "Service Client",
     "key": "services.faq-group-2-question-content-2",
     "de": "Wir messen also wie lange es dauert, ein Kleidungsstück herzustellen. In dieser Arbeitszeit sind alle Arbeitsschritte für die Produktion einer BENU Kreation enthalten: Vorbereitung der Stoffe, Zuschneiden, Anpassen, Zusammennähen, abschließende Qualitätskontrolle und Abfotografieren. Die verwendeten Materialien werden nicht in die Preise eingerechnet.",
-    "fr": "Nous mesurons donc le temps nécessaire à la fabrication d'un vêtement. Ce temps de travail comprend toutes les étapes nécessaires à la production d'une création BENU : Préparation des tissus, coupe, ajustement, couture, contrôle qualité final et prise de photos. Les matériaux utilisés ne sont pas inclus dans le prix.",
-    "en": "So we measure how long it takes to make a garment. This working time includes all the steps for the production of a BENU creation: Preparing the fabrics, cutting, fitting, sewing together, final quality control and photographing. The materials used are not included in the prices.",
+    "fr": "Nous mesurons donc le temps nécessaire à la fabrication d'un vêtement. Ce temps de travail comprend toutes les étapes nécessaires à la production d'une création BENU : Préparation des tissus, coupe, ajustement, couture, contrôle de la qualité finale et prise de photos. Les matériaux utilisés ne sont pas inclus dans le prix.",
+    "en": "We therefore measure the time needed to produce a garment. This working time includes all the steps for the production of a BENU creation: Preparing the fabrics, cutting, fitting, sewing together, final quality control and taking photos. The materials used are not included in the price.",
     "lu": ""
   },
   {
@@ -2003,16 +2363,16 @@
     "page": "Service Client",
     "key": "services.faq-group-2-question-content-2-1",
     "de": "Ja! Als Kulturpassinhaber:in erhältst Du schon heute freien Zugang zu den verschiedenen Partnermuseen und eine Eintrittskarte für kulturelle Veranstaltungen wie Tanzaufführungen, Konzerte und Theaterstücke, für die Cinémathèque oder Festivals zum Preis von 1,50 Euro.",
-    "fr": "Oui ! en tant que détenteur:trice du Kulturpass, tu bénéficies déjà d'un accès gratuit aux différents musées partenaires et d'un billet d'entrée pour des manifestations culturelles telles que des spectacles de danse, des concerts et des pièces de théâtre, pour la Cinémathèque ou des festivals au prix de 1,50 euro.",
-    "en": "Yes! As a Kulturpass holder:in you already receive free access to the various partner museums and a ticket for cultural events such as dance performances, concerts and plays, for the Cinémathèque or festivals for the price of 1.50 euros.",
+    "fr": "Oui ! en tant que détenteur:trice du Kulturpass, tu bénéficies déjà d'un accès gratuit aux différents musées partenaires, et d'un billet d'entrée au prix de 1,50 euro pour des manifestations culturelles telles que des spectacles de danse, des concerts, des pièces de théâtre, pour la Cinémathèque ou des festivals.",
+    "en": "Yes! As a Kulturpass holder:in you already receive free access to the various partner museums, and a ticket for the price of 1.50 euros for cultural events such as dance performances, concerts and plays, for the Cinémathèque or festivals.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-2-question-content-2-2",
     "de": "Wir bei BENU möchten ein Stück weiter gehen. Wir wünschen uns, dass das Angebot des Kulturpasses über kulturelle Veranstaltungen hinaus auch auf andere Bereiche ausgeweitet wird. Daher gewähren wir Dir als Kulturpassinhaber:in eine Ermäßigung auf alle unsere Serviceleistungen und Produkte. Ob der Kauf eines Kleidungsstückes bei BENU COUTURE oder ein Besuch im Restaurant BENU SLOOW… Du zahlst überall die Hälfte des regulären Preises.",
-    "fr": "Chez BENU, nous souhaitons aller un peu plus loin. Nous souhaitons que l'offre du Kulturpass s'étende au-delà des manifestations culturelles à d'autres domaines. C'est pourquoi, en tant que détenteur du Kulturpass, nous t'accordons une réduction sur tous nos services et produits. Que ce soit l'achat d'un vêtement chez BENU COUTURE ou une visite au restaurant BENU SLOOW... tu paieras partout la moitié du prix normal.",
-    "en": "We at BENU would like to go a bit further. We would like to see the offer of the culture pass extended beyond cultural events to other areas. Therefore, we grant you a discount on all our services and products as a culture pass holder. Whether you buy a piece of clothing at BENU COUTURE or visit the BENU SLOOW restaurant... you pay half the regular price everywhere.",
+    "fr": "Chez BENU, nous voulons aller un peu plus loin. Nous souhaitons que l'offre du Kulturpass s'étende à d‘autres domaines au-delà des manifestations culturelles. C'est pourquoi, en tant que détenteur du Kulturpass, nous t'accordons une réduction sur tous nos produits et services. Que ce soit l'achat d'un vêtement chez BENU COUTURE ou une visite au restaurant BENU SLOOW... tu paieras partout la moitié du prix normal.",
+    "en": "We at BENU want to go a bit further. We would like to extend the Kulturpass offer to other areas beyond cultural events. Therefore, as a Kulturpass holder, we grant you a discount on all our services and products. Whether you buy a piece of clothing at BENU COUTURE or visit the BENU SLOOW restaurant... you pay half the regular price everywhere.",
     "lu": ""
   },
   {
@@ -2020,7 +2380,7 @@
     "key": "services.faq-group-2-question-content-2-3",
     "de": "Weitere Informationen zum Kulturpass findest Du auf",
     "fr": "Tu trouveras plus d'informations sur le Kulturpass sur",
-    "en": "You can find more information on the Culture Pass at",
+    "en": "You can find more information on the Kulturpass at",
     "lu": ""
   },
   {
@@ -2052,7 +2412,7 @@
     "key": "services.faq-group-3-question-content-1-1",
     "de": "Die BENU Kreationen werden in Serie produziert. Das bedeutet, dass die einzelnen Modelle i.d.R. auch in unterschiedlichen Größen vorhanden sind. In Abhängigkeit vom Design des Modells und von der Nachfrage produzieren wir allerdings nicht immer in sämtlichen Größen.",
     "fr": "Les créations BENU sont produites en série. Cela signifie que les différents modèles sont généralement disponibles en différentes tailles. Cependant, en fonction du design du modèle et de la demande, nous ne produisons pas toujours toutes les tailles.",
-    "en": "The BENU creations are produced in series. This means that the individual models are usually available in different sizes. However, depending on the design of the model and the demand, we do not always produce in all sizes.",
+    "en": "The BENU creations are produced in series. This means that the various models are usually available in different sizes. However, depending on the design of the model and the demand, we do not always produce in all sizes.",
     "lu": ""
   },
   {
@@ -2067,7 +2427,7 @@
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-1-3",
     "de": "Größentabelle.",
-    "fr": "guide de taille.",
+    "fr": "guide des tailles.",
     "en": "size guide.",
     "lu": ""
   },
@@ -2075,8 +2435,8 @@
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-1-4",
     "de": "Da wir für die Produktion ausschließlich Stoffe gebrauchter Kleider und Textilien verwenden, ist jeder Artikel ein Einzelstück. Aus diesem Grund kann es vorkommen, dass nicht immer alle möglichen Größen vorrätig sind. Solltest Du Deine Wunschgröße nicht finden, dann",
-    "fr": "Comme nous utilisons exclusivement des tissus provenant de vêtements et de textiles usagés pour la production, chaque article est une pièce unique. C'est pourquoi il se peut que nous n'ayons pas toujours toutes les tailles possibles en stock. Si tu ne trouves pas la taille que tu souhaites, alors",
-    "en": "Since we only use fabrics from second-hand clothes and textiles in our production, each item is unique. For this reason it can happen that not all possible sizes are in stock. If you do not find the size you are looking for, please",
+    "fr": "Comme nous utilisons exclusivement des tissus provenant de vêtements et de textiles usagés pour la production, chaque article est une pièce unique. C'est pourquoi il se peut que nous n'ayons pas toujours toutes les tailles en stock. Si tu ne trouves pas la taille que tu souhaites, alors",
+    "en": "Since we only use fabrics from used clothes and textiles in our production, each item is unique. For this reason, we may not always have all the sizes in stock. If you can‘t find the size you are looking for, please",
     "lu": ""
   },
   {
@@ -2091,7 +2451,7 @@
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-1-6",
     "de": "Wir bemühen uns, Deinen Wunsch zu erfüllen.",
-    "fr": "Nous faisons de notre mieux pour répondre à tes souhaits.",
+    "fr": "Nous ferons de notre mieux pour répondre à tes souhaits.",
     "en": "Nous faisons de notre mieux pour répondre à tes souhaits.",
     "lu": ""
   },
@@ -2124,7 +2484,7 @@
     "key": "services.faq-group-3-question-content-3-1",
     "de": "Wir verwenden für die Produktion ausschließlich Stoffe gebrauchter Kleidungsstücke und Textilien. Dabei werden die Kreationen meist aus mehreren unterschiedlichen Stoffen zusammengesetzt, so das sie überwiegend auch aus mehreren Farben bestehen.",
     "fr": "Pour la production, nous utilisons exclusivement des tissus provenant de vêtements et de textiles usagés. Les créations sont généralement composées de plusieurs tissus différents, et donc de plusieurs couleurs.",
-    "en": "We only use fabrics from used garments and textiles in our production. The creations are usually composed of several different fabrics, so that they usually also consist of several colours.",
+    "en": "We only use fabrics from used clothes and textiles in our production. The creations are usually composed of several different fabrics, so they usually also have several colours.",
     "lu": ""
   },
   {
@@ -2132,7 +2492,7 @@
     "key": "services.faq-group-3-question-content-3-2",
     "de": "Unter jedem Artikel findest Du eine Farbangabe. Diese bezeichnet die jeweils dominierende Farbe des Kleidungsstückes. Da alle BENU Kreationen einzigartig und Einzelstücke sind, sind die verschiedenen Modelle nicht in jeder Farbrichtung vorhanden.",
     "fr": "Sous chaque article, tu trouveras une indication de couleur. Celle-ci désigne la couleur dominante du vêtement. Comme toutes les créations BENU sont uniques, les différents modèles ne sont pas disponibles dans toutes les catégories de couleurs.",
-    "en": "Under each article you will find a colour code. This indicates the dominant colour of the garment. Since all BENU creations are unique and one-of-a-kind, the different models are not available in every colour category.",
+    "en": "Under each article you will find a colour code. This indicates the dominant colour of the garment. Since all BENU creations are unique, the different models are not available in every colour category.",
     "lu": ""
   },
   {
@@ -2140,7 +2500,7 @@
     "key": "services.faq-group-3-question-content-3-3",
     "de": "Und wenn ein Modell nicht in Deiner Lieblingsfarbe erhältlich ist, dann",
     "fr": "Et si un modèle n'est pas disponible dans ta couleur préférée, alors n'hésite pas à",
-    "en": "And if a model is not available in your favourite colour, then please",
+    "en": "And if a model is not available in your favourite colour, then don‘t hesitate to",
     "lu": ""
   },
   {
@@ -2171,8 +2531,8 @@
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-4-1",
     "de": "Ja, natürlich! Suche Dir eine bestehende BENU Kreation aus, die Dir gefällt. Wir produzieren diese extra für Dich und integrieren dabei ein Stück Stoff, das Du uns zur Verfügung stellst. Der Stoff stammt dabei z.B. aus Deinem Lieblingspulli, dem Hemd vom Freund, der Bluse der Freundin oder… So entsteht ein Einzel-Emotions-Stück, nur für Dich!",
-    "fr": "Oui, bien sûr ! Choisis une création BENU existante qui te plaît. Nous la produisons spécialement pour toi et y intégrons un morceau de tissu que tu nous mets à disposition. Le tissu provient par exemple de ton pull préféré, de la chemise de ton ami, du chemisier de ta petite amie ou... C'est ainsi que naît une pièce d'émotion unique, rien que pour toi !",
-    "en": "Yes, of course! Choose an existing BENU creation that you like. We produce it especially for you and integrate a piece of fabric that you provide us with. The fabric comes from your favourite jumper, your boyfriend's shirt, your girlfriend's blouse or... This creates a single emotional piece just for you!",
+    "fr": "Oui, bien sûr ! Choisis une création BENU existante qui te plaît. Nous la produisons spécialement pour toi et y intégrons un morceau de tissu que tu nous mets à disposition. Le tissu provient par exemple de ton pull préféré, de la chemise de ton ami, du chemisier de ta petite amie ou... C'est ainsi que naît une pièce unique et émotionnelle, rien que pour toi !",
+    "en": "Yes, of course! Choose an existing BENU creation that you like. We produce it especially for you and integrate a piece of fabric that you provide us with. The fabric comes from your favourite jumper, your boyfriend's shirt, your girlfriend's blouse or... This is how a unique emotional piece is created just for you!",
     "lu": ""
   },
   {
@@ -2203,24 +2563,24 @@
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-6-1",
     "de": "Ja! Gerne reparieren und verwandeln wir Dein altes Lieblings-Kleidungsstück nach Deinen individuellen Vorstellungen. Auch ein komplett neues Kleidungsstück auf Basis der von Dir zur Verfügung gestellten Kleider und Stoffreste ist möglich. BENU COUTURE bietet Dir an, eine neue und nur für Dich bestimmte Kreation herzustellen!",
-    "fr": "Oui, nous réparons et transformons ton vieux vêtement préféré selon tes idées personnelles. Il est également possible de créer un tout nouveau vêtement à partir des vêtements et des chutes de tissu que tu nous as fournis. BENU COUTURE te propose de réaliser une nouvelle création rien que pour toi !",
-    "en": "Yes, we are happy to repair and transform your favourite old garment according to your individual ideas. It is also possible to create a completely new garment based on the clothes and fabric scraps you provide. BENU COUTURE offers to make a new creation just for you!",
+    "fr": "Oui, nous réparons et transformons ton vieux vêtement préféré selon tes idées personnelles. Il est également possible de créer un tout nouveau vêtement à partir des vêtements et des chutes de tissu que tu nous as fourni. BENU COUTURE te propose de réaliser une nouvelle création rien que pour toi !",
+    "en": "Yes, we are happy to repair and transform your favourite old garment according to your personal ideas. It is also possible to create a completely new garment from the clothes and fabric scraps you provide. BENU COUTURE offers to make a new creation just for you!",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-6-2",
     "de": "Beliebt ist auch die BRING-IN Produktion: hierbei suchst Du Dir eine bestehende BENU Kreation aus, die wir für Dich produzieren. Dabei integrieren wir ein Stück Stoff, das Du uns zur Verfügung stellst. Der Stoff stammt dabei z.B. aus dem Lieblingspulli, dem Hemd vom Freund, der Bluse der Freundin … So entsteht ein Einzel-Emotions-Stück, nur für Dich!",
-    "fr": "La production BRING-IN est également très appréciée : dans ce cas, tu choisis une création BENU existante que nous produisons pour toi. Pour cela, nous intégrons un morceau de tissu que tu mets à notre disposition. Le tissu provient par exemple de ton pull préféré, de la chemise de ton ami, du chemisier de ta petite amie... C'est ainsi que naît une pièce d'émotion unique, rien que pour toi !",
-    "en": "The BRING-IN production is also popular: here you choose an existing BENU creation that we produce for you. We integrate a piece of fabric that you provide us with. The fabric comes, for example, from your favourite jumper, your boyfriend's shirt, your girlfriend's blouse... In this way, a single emotional piece is created, just for you!",
+    "fr": "La production BRING-IN est également très appréciée : dans ce cas, tu choisis une création BENU existante que nous produisons pour toi. Nous intégrons alors un morceau de tissu que tu mets à notre disposition. Le tissu provient par exemple de ton pull préféré, de la chemise de ton ami, du chemisier de ta petite amie... C'est ainsi que naît une pièce unique et émotionnelle, rien que pour toi !",
+    "en": "The BRING-IN production is also popular: in this case you choose an existing BENU creation that we produce for you. We then ntegrate a piece of fabric that you provide us with. The fabric comes, for example, from your favourite jumper, your boyfriend's shirt, your girlfriend's blouse... This is how a unique emotional piece is created, just for you!",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-title-7",
     "de": "Wie pflege ich die Kreationen von BENU COUTURE?",
-    "fr": "Comment entretenir les créations de BENU COUTURE ?",
-    "en": "How do I care for BENU COUTURE creations?",
+    "fr": "Comment dois-je entretenir les créations de BENU COUTURE ?",
+    "en": "How do I take care of the BENU COUTURE creations?",
     "lu": "Wéi fleegen ech d'BENU COUTURE Kreatiounen?"
   },
   {
@@ -2228,7 +2588,7 @@
     "key": "services.faq-group-3-question-content-7-1",
     "de": "Bei jedem BENU Artikel findest Du Pflegehinweise. Die Pflegesymbole erklären Dir, wie Du Dein Kleidungsstück waschen, trocknen und bügeln kannst, ohne dass es Schäden nimmt. Die Pflegeempfehlungen berücksichtigen hierbei den empfindlichsten Teil des Textilartikels (z.B. den Reißverschluss). Allerdings können wir nicht garantieren, dass Flecken und Verschmutzungen vollständig verschwinden. Für einen schonenderen Umgang mit Umwelt und Kleidung empfehlen wir Dir, Deine Kleidungsstücke bei möglichst niedrigen Temperaturen zu waschen und zu bügeln.",
     "fr": "Tu trouveras des conseils d'entretien sur chaque article BENU. Les symboles d'entretien t'expliquent comment laver, sécher et repasser ton vêtement sans l'endommager. Les conseils d'entretien tiennent compte de la partie la plus fragile de l'article textile (par exemple la fermeture éclair). \nCependant, nous ne pouvons pas garantir que les taches et les salissures disparaîtront complètement. Pour une utilisation plus respectueuse de l'environnement et des vêtements, nous te recommandons de laver et de repasser tes vêtements à des températures aussi basses que possible.",
-    "en": "You will find care instructions with every BENU item. The care symbols explain how you can wash, dry and iron your garment without damaging it. The care recommendations take into account the most sensitive part of the textile item (e.g. the zip). However, we cannot guarantee that stains and soiling will disappear completely. For a gentler treatment of the environment and clothing, we recommend washing and ironing your garments at the lowest possible temperatures.",
+    "en": "You will find care instructions on every BENU item. The care symbols explain how you can wash, dry and iron your garment without damaging it. The care recommendations take into account the most sensitive part of the textile item (e.g. the zip). However, we cannot guarantee that stains and soiling will disappear completely. For a more gentle approach to the environment and clothing, we recommend washing and ironing your garments at the lowest possible temperatures.",
     "lu": ""
   },
   {
@@ -2260,7 +2620,7 @@
     "key": "services.faq-group-3-question-content-8-1",
     "de": "Ja! Denn wir möchten, dass Du möglichst lange Freude an Deiner BENU Kreation hast! Jeder einzelne Artikel wird in der BENU Schneiderei professionell und mit äußerster Sorgfalt verarbeitet. Solltest Du dennoch einen Verarbeitungsmangel entdecken, wie z.B. einen Fehler an einer Naht oder an einem Verschluss, komm zu uns oder schicke uns Deinen Artikel.",
     "fr": "Oui, car nous souhaitons que tu puisses profiter le plus longtemps possible de ta création BENU ! Chaque article est travaillé de manière professionnelle et avec le plus grand soin dans l'atelier de couture BENU. Si toutefois tu découvres un défaut de fabrication, comme par exemple un défaut sur une couture ou une fermeture, viens nous voir ou envoie-nous ton article.",
-    "en": "Yes, because we want you to enjoy your BENU creation for as long as possible! Every single item is made professionally and with the utmost care in the BENU tailoring. Should you nevertheless discover a processing defect, such as a fault in a seam or on a fastener, come to us or send us your item.",
+    "en": "Yes, because we want you to enjoy your BENU creation for as long as possible! Every single item is made professionally and with the utmost care in the BENU tailoring. Should you nevertheless discover a manufacturing defect, such as a faulty seam or fastener, come to us or send us your item.",
     "lu": ""
   },
   {
@@ -2291,16 +2651,16 @@
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-1-1",
     "de": "Du hast die Möglichkeit Deine Bestellung mit Deinem BENU Konto oder ohne Konto als Besucher/in aufzugeben. Wenn Du Dich angemeldet hast, kannst Du den Status Deiner Bestellung jederzeit in Deinem Konto verfolgen.",
-    "fr": "Tu as la possibilité de passer ta commande avec ton compte BENU ou sans compte en tant que visiteur/visiteuse. Si tu t'es inscrit, tu peux suivre le statut de ta commande à tout moment dans ton compte.",
-    "en": "You can place your order with your BENU account or without account as a visitor. Once you have logged in, you can track the status of your order in your account at any time.",
+    "fr": "Tu as la possibilité de passer ta commande avec ton compte BENU ou sans compte en tant que visiteur/visiteuse. Si tu t'es inscrit, tu peux suivre le statut de ta commande à tout moment depuis ton compte.",
+    "en": "You can place your order with your BENU account or without an account as a visitor. Once you have registered, you can track the status of your order in your account at any time.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-1-2",
     "de": "Für die Bestellung musst Du den Artikel, den Du Dir wünschst, zunächst in den Warenkorb legen. Wenn Du möchtest, kannst Du hier verschiedene Geschenkoptionen, wie z.B. eine Verpackung oder eine Geschenkkarte auswählen oder einen Gutschein einlösen.",
-    "fr": "Pour commander, tu dois d'abord ajouter l'article que tu souhaites dans le panier. Si tu le souhaites, tu peux choisir ici différentes options de cadeaux, comme par exemple un emballage ou une carte cadeau, ou encore utiliser un bon d'achat.",
-    "en": "To place an order, you must first place the item you want in the shopping basket. If you wish, you can select different gift options here, such as packaging or a gift card, or redeem a voucher.",
+    "fr": "Pour commander, tu dois d'abord ajouter l'article que tu souhaites dans le panier. Si tu le souhaites, tu peux y choisir différentes options de cadeaux, comme par exemple un emballage ou une carte cadeau, ou encore utiliser un bon d'achat.",
+    "en": "To place an order, you must first place the item you want in the shopping basket. If you wish, you can select different gift options there, such as a gift wrap or a gift card, or use a voucher.",
     "lu": ""
   },
   {
@@ -2308,7 +2668,7 @@
     "key": "services.faq-group-4-question-content-1-3",
     "de": "Im weiteren Bestellvorgang kannst Du Deine gewünschte Zahlungsmethode auswählen und angeben, ob Du die Ware nach Hause geliefert bekommen oder selbst im BENU Shop abholen möchtest.",
     "fr": "Dans la suite du processus de commande, tu peux choisir le mode de paiement souhaité et indiquer si tu souhaites que la marchandise te soit livrée à domicile ou si tu veux venir la chercher toi-même dans notre boutique BENU.",
-    "en": "In the further ordering process, you can select your desired payment method and specify whether you would like to have the goods delivered to your home or collect them yourself from our BENU shop.",
+    "en": "In the further ordering process, you can select your desired payment method and specify whether you would like to have the goods delivered to your home or whether you want to collect them yourself from our BENU shop.",
     "lu": ""
   },
   {
@@ -2347,7 +2707,7 @@
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-2-2",
     "de": "Näheres zu den Bezahlmöglichkeiten findest Du",
-    "fr": "Tu trouveras plus de détails sur les possibilités de paiement",
+    "fr": "Tu trouveras plus de détails sur les options de paiement",
     "en": "You can find more information about the payment options",
     "lu": ""
   },
@@ -2363,7 +2723,7 @@
     "page": "Service Client",
     "key": "services.faq-group-4-question-title-3",
     "de": "Kann ich BENU Kreationen auch persönlich vor Ort kaufen?",
-    "fr": "Puis-je acheter les créations BENU en personne sur place ?",
+    "fr": "Puis-je acheter les créations BENU sur place ?",
     "en": "Can I buy BENU creations in person?",
     "lu": ""
   },
@@ -2372,15 +2732,15 @@
     "key": "services.faq-group-4-question-content-3-1",
     "de": "Ja! Die BENU Kreationen erhältst Du nicht nur Online sondern auch bei uns vor Ort im BENU Shop im BENU VILLAGE in Esch-sur-Alzette. Hier kannst Du Dich inspirieren und persönlich beraten lassen. Aktuell findest Du auch einige der BENU Kreationen im Lët'z Refashion Pop-Up Store in Luxemburg-Stadt, einer Initiative der Kampagne „Rethink your Clothes“.",
     "fr": "Oui! Les créations BENU ne sont pas seulement disponibles en ligne, mais aussi sur place dans notre BENU Shop au BENU VILLAGE à Esch-sur-Alzette. Tu peux y trouver de l'inspiration et bénéficier de conseils personnalisés. Actuellement, tu peux aussi trouver quelques créations BENU au Lët'z Refashion Pop-Up Store à Luxembourg-Ville, une initiative de la campagne \"Rethink your Clothes\".",
-    "en": "Yes! BENU creations are not only available online, but also in our BENU Shop at the BENU VILLAGE in Esch-sur-Alzette. Here you can be inspired and receive personal advice. Currently, you can also find some of the BENU creations at the Lët'z Refashion Pop-Up Store in Luxembourg City, an initiative of the \"Rethink your Clothes\" campaign.",
+    "en": "Yes! BENU creations are not only available online, but also in our BENU Shop at the BENU VILLAGE in Esch-sur-Alzette. Here you can get inspired and receive personal advice. Currently, you can also find some of the BENU creations at the Lët'z Refashion Pop-Up Store in Luxembourg City, an initiative of the \"Rethink your Clothes\" campaign.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-3-2",
     "de": "Artikel, die nicht im BENU Shop in Esch-sur-Alzette sondern in einem PopUp Store erhätlich sind, sind auf",
-    "fr": "Les articles qui ne sont pas disponibles dans la boutique BENU d'Esch-sur-Alzette mais dans un PopUp Store sont signalés sur",
-    "en": "Items that are not available in the BENU shop in Esch-sur-Alzette but in a pop-up store are marked on",
+    "fr": "Les articles qui ne sont pas disponibles dans la boutique BENU d'Esch-sur-Alzette mais dans un PopUp Store figurent sur",
+    "en": "Items that are not available in the BENU shop in Esch-sur-Alzette but in a pop-up store are listed on",
     "lu": ""
   },
   {
@@ -2395,8 +2755,8 @@
     "page": "Service Client",
     "key": "services.faq-group-4-question-content-3-5",
     "de": "mit einem Vogel-Symbol gekennzeichnet.",
-    "fr": "par un symbole d'oiseau.",
-    "en": "with a bird symbol.",
+    "fr": "identifiables par un symbole d'oiseau.",
+    "en": "marked with a bird symbol.",
     "lu": ""
   },
   {
@@ -2436,14 +2796,14 @@
     "key": "services.faq-group-5-question-content-1-1",
     "de": "BENU Gutscheine gibt es im Wert von 1 Arbeitsstunde (30€) bis 6 Arbeitsstunden (180€). Du hast die Möglichkeit einen Gutschein aus Stoffresten zu kaufen, hier berechnen wir 5€ für die Produktion. Unsere Geschenkgutscheine gibt es aber auch digital im PDF-Format.",
     "fr": "Les bons BENU sont disponibles pour une valeur allant de 1 heure de travail (30€) à 6 heures de travail (180€). Tu as la possibilité d'acheter un chèque-cadeau à partir de chutes de tissu, mais dans ce cas, nous facturons 5€ pour la production. Nos chèques-cadeaux sont également disponibles sous forme numérique au format PDF.",
-    "en": "BENU vouchers are available from 1 working hour (30€) to 6 working hours (180€). You have the option to buy a gift voucher from fabric scraps, but here we charge 5€ for the production. Our gift vouchers are also available digitally in PDF format.",
+    "en": "BENU vouchers are available for a value ranging from 1 working hour (30€) to 6 working hours (180€). You have the option to buy a gift voucher from fabric scraps, but in this case we charge 5€ for the production. Our gift vouchers are also available digitally in PDF format.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-5-question-content-1-2",
     "de": "Unsere BENU Gutscheine findest Du",
-    "fr": "Tu trouveras nos bons BENU",
+    "fr": "Tu peux trouver nos bons d‘achat BENU",
     "en": "You can find our BENU gift vouchers",
     "lu": ""
   },
@@ -2468,7 +2828,7 @@
     "key": "services.faq-group-5-question-content-2-1",
     "de": "Du kannst Deinen BENU Gutschein direkt beim Online-Bestellvorgang einlösen, indem Du die Nummer des Gutscheins angibst. Das Guthaben des Gutscheins wird dann automatisch von der Verkaufssumme abgezogen.",
     "fr": "Tu peux utiliser ton bon d'achat BENU directement lors du processus de commande en ligne en indiquant le numéro du bon d'achat. Le crédit du bon est alors automatiquement déduit du montant de la vente.",
-    "en": "You can apply your BENU voucher directly during the online ordering process by entering the number of the voucher. The credit of the voucher will then be automatically deducted from the sales total.",
+    "en": "You can use your BENU voucher directly during the online ordering process by entering the number of the voucher. The credit of the voucher will then be automatically deducted from the sales amount.",
     "lu": ""
   },
   {
@@ -2491,7 +2851,7 @@
     "page": "Service Client",
     "key": "services.faq-group-5-question-content-2-4",
     "de": ") oder im BENU VILLAGE in Esch-sur-Alzette für alle Aktivitäten des BENU gültig und dies unbefristet!",
-    "fr": ") ou au BENU VILLAGE à Esch-sur-Alzette pour toutes les activités du BENU et ce, sans limite de temps !",
+    "fr": ") ou au BENU VILLAGE à Esch-sur-Alzette pour toutes les activités de BENU et ce, sans limite de temps !",
     "en": ") or at the BENU VILLAGE in Esch-sur-Alzette for all BENU activities and this for an unlimited period!",
     "lu": ""
   },
@@ -2499,7 +2859,7 @@
     "page": "Service Client",
     "key": "services.faq-group-5-question-content-2-5",
     "de": "Weitere Informationen zu den BENU Gutscheinen findest Du in den",
-    "fr": "Tu trouveras plus d'informations sur les bons BENU dans les",
+    "fr": "Tu trouveras plus d'informations sur les bons d‘achat BENU dans les",
     "en": "For more information on the BENU vouchers, please see the",
     "lu": ""
   },
@@ -2547,15 +2907,15 @@
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-1-3",
     "de": "Falls Du einen Artikel in ein anderes Land geliefert bekommen möchtest, melde Dich bitte bei uns. Wir werden dann abklären ob und unter welchen Bedingungen eine Lieferung möglich ist.",
-    "fr": "Si tu souhaites recevoir un article dans un autre pays, contacte-nous. Nous vérifierons alors si une livraison est possible et sous quelles conditions.",
-    "en": "If you would like to have an item delivered to another country, please contact us. We will then clarify whether and under what conditions a delivery is possible.",
+    "fr": "Si tu souhaites te faire livrer un article dans un autre pays que ceux listés ci-dessus, contacte-nous. Nous vérifierons alors si une livraison est possible et sous quelles conditions.",
+    "en": "If you would like to have an item delivered to another country, please contact us. We will then clarify whether delivery is possible and under what conditions.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-6-question-title-2",
     "de": "Warum liefert BENU COUTURE nicht kostenlos?",
-    "fr": "Pourquoi BENU COUTURE ne livre-t-elle pas gratuitement ?",
+    "fr": "Pourquoi BENU COUTURE ne livre-t-il pas gratuitement ?",
     "en": "Why doesn't BENU COUTURE deliver free of charge?",
     "lu": ""
   },
@@ -2564,7 +2924,7 @@
     "key": "services.faq-group-6-question-content-2-1",
     "de": "In Zeiten eines stetig wachsenden Online-Handels vergessen wir oft, dass jede einzelne Lieferung einen Aufwand an Logistik, Personal, Treibstoff, Energie und Zeit bedeutet. Jeder Online-Kauf hinterlässt einen „ökologischen Fußabdruck“ und wirkt sich auf die Umwelt aus, in der wir leben.",
     "fr": "À une époque où le commerce en ligne ne cesse de croître, nous oublions souvent que chaque livraison représente un effort en termes de logistique, de personnel, de carburant, d'énergie et de temps. Chaque achat en ligne laisse une \"empreinte écologique\" et a un impact sur l'environnement dans lequel nous vivons.",
-    "en": "In times of ever-growing online commerce, we often forget that every single delivery means an expenditure of logistics, personnel, fuel, energy and time. Every online purchase leaves an \"ecological footprint\" and affects the environment in which we live.",
+    "en": "In times of ever-growing e-commerce, we often forget that every single delivery represents an effort in terms of logistics, personnel, fuel, energy and time. Every online purchase leaves an \"ecological footprint\" and affects the environment in which we live.",
     "lu": ""
   },
   {
@@ -2579,7 +2939,7 @@
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-2-3",
     "de": "Und wenn Du nicht sicher bist, ob das Kleidungsstück passt, dass Du Dir wünschst, dann komm bei uns vorbei um es anzuprobieren. Wir freuen uns auf Deinen Besuch!",
-    "fr": "Et si tu n'es pas sûr(e) que le vêtement que tu souhaites convienne, viens nous voir pour l'essayer. Nous nous réjouissons de ta visite !",
+    "fr": "Et si tu n'es pas sûr:e que le vêtement que tu souhaites te convient, n‘hésite pas à venir nous voir pour l'essayer. Nous nous réjouissons de ta visite !",
     "en": "And if you are not sure whether the garment you want fits, then come and try it on. We look forward to your visit!",
     "lu": ""
   },
@@ -2603,7 +2963,7 @@
     "page": "Service Client",
     "key": "services.faq-group-6-question-title-3",
     "de": "Wie hoch sind die Versandkosten?",
-    "fr": "Quels sont les frais d'expédition ?",
+    "fr": "A combien s‘élèvent les frais d'expédition ?",
     "en": "How much are the shipping costs?",
     "lu": "Wéi héich sinn d'Expeditiounskäschten?"
   },
@@ -2611,23 +2971,23 @@
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-3-1",
     "de": "Die Versandkosten richten sich nach Deinem Land und dem Gesamtgewicht Deiner Bestellung. Dünne und leichte Artikel bis 500 g, wie z.B. Gutscheine, verschicken wir als Briefsendung, alle größeren Waren werden in Kartons versendet.",
-    "fr": "Les frais d'envoi dépendent de ton pays et du poids total de ta commande. Les articles fins et légers jusqu'à 500 g, comme les bons d'achat, sont envoyés par courrier, toutes les marchandises plus volumineuses sont envoyées dans des cartons.",
-    "en": "The shipping costs depend on your country and the total weight of your order. Thin and light items up to 500 g, such as vouchers, are sent by letter post, all larger items are sent in boxes.",
+    "fr": "Les frais d'envoi dépendent de ton pays et du poids total de ta commande. Les articles fins et légers jusqu'à 500 g, comme les bons d'achat, sont envoyés par courrier. Toutes les marchandises plus volumineuses sont envoyées dans des cartons.",
+    "en": "The shipping costs depend on your country and the total weight of your order. Thin and light items up to 500 g, such as vouchers, are sent by letter, all larger items are sent in boxes.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-3-2",
     "de": "Wir verrechnen Dir die Kosten für die Versendung mit Post Luxembourg. Hinzu kommen 2 Euro pro Paket bzw. 1 Euro pro Briefsendung für unsere Arbeitszeit zum Verpacken der bestellten Artikel. Das Verpackungsmaterial ist gratis.",
-    "fr": "Nous te facturons les frais d'envoi par Post Luxembourg et en plus 2 euros par colis ou 1 euro par envoi postal pour notre temps de travail pour emballer les articles commandés. Le matériel d'emballage est gratuit.",
-    "en": "We charge you the costs for the shipment with Post Luxembourg and additionally 2 Euro per parcel or 1 Euro per letter for our working time for packing the ordered items. The packing material is free of charge.",
+    "fr": "Nous te facturons les frais d'envoi par Post Luxembourg. A cela s‘ajoute 2 euros par colis ou 1 euro par envoi postal pour notre temps de travail passé à emballer les articles commandés. Le matériel d'emballage est gratuit.",
+    "en": "We charge you the costs for the shipment with Post Luxembourg. In addition, we charge 2 Euro per parcel or 1 Euro per letter for our working time for packing the ordered items. The packing material is free of charge.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-3-3",
     "de": "Eine Übersicht über die Versandkosten je nach Gewicht und Land findest Du",
-    "fr": "Tu trouveras un aperçu des frais d'envoi en fonction du poids et du pays.",
+    "fr": "Tu trouveras un aperçu des frais d'envoi en fonction du poids et du pays",
     "en": "You can find an overview of the shipping costs depending on weight and country",
     "lu": ""
   },
@@ -2651,8 +3011,8 @@
     "page": "Service Client",
     "key": "services.faq-group-6-question-content-4-1",
     "de": "Sobald die Zahlung für Deine Bestellung bei uns eingegangen ist, können wir Deine Artikel für den Versand vorbereiten. Wir bemühen uns, Deine Bestellung innerhalb eines Arbeitstages versandfertig zu machen und bei Post Luxembourg abzugeben. Wenn in Deiner Bestellung ein oder mehrere Artikel aus einem Pop-Up Store enthalten sind, kann die Vorbereitung zum Versand aus logistischen Gründen allerdings länger dauern.",
-    "fr": "Dès que nous avons reçu le paiement de ta commande, nous pouvons préparer tes articles pour l'expédition. Nous nous efforçons de préparer ta commande et de la déposer à Post Luxembourg dans un délai d'un jour ouvrable. Si ta commande contient un ou plusieurs articles d'un Pop-Up Store, la préparation de l'envoi peut toutefois prendre plus de temps pour des raisons logistiques.",
-    "en": "As soon as we have received the payment for your order, we can prepare your items for shipment. We aim to have your order ready for dispatch and delivered to Post Luxembourg within one working day. However, if your order includes one or more items from a Pop-Up Store, preparation for shipping may take longer for logistical reasons.",
+    "fr": "Nous pouvons préparer tes articles pour l'expédition dès que nous avons reçu le paiement de ta commande. Nous nous efforçons de préparer ta commande et de la déposer à Post Luxembourg dans un délai d'un jour ouvrable. Toutefois, si ta commande contient un ou plusieurs articles d'un Pop-Up Store, la préparation de l'envoi peut prendre plus de temps pour des raisons logistiques.",
+    "en": "We can prepare your items for shipment as soon as we have received the payment for your order. We aim to have your order ready for dispatch and delivered to Post Luxembourg within one working day. However, if your order includes one or more items from a Pop-Up Store, preparation for shipping may take longer for logistical reasons.",
     "lu": ""
   },
   {
@@ -2692,7 +3052,7 @@
     "key": "services.faq-group-6-question-content-6-1",
     "de": "Um Rohstoffe zu sparen, werden alle Waren in gebrauchten, wieder verwendeten Kartons verschickt. Wir verzichten außerdem auf Plastikverpackungen und benutzen plastikfreie, umweltschonende Paketbänder.",
     "fr": "Afin d'économiser les matières premières, toutes les marchandises sont envoyées dans des cartons usagés et réutilisés. Nous renonçons également aux emballages en plastique et utilisons des rubans pour paquets sans plastique et respectueux de l'environnement.",
-    "en": "To save raw materials, all goods are shipped in used, reused cardboard boxes. We also do not use plastic packaging and use plastic-free, environmentally friendly parcel tapes.",
+    "en": "To save raw materials, all goods are shipped in used or reused cardboard boxes. We also do not use plastic packaging and use plastic-free, environmentally friendly parcel tapes.",
     "lu": ""
   },
   {
@@ -2723,7 +3083,7 @@
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-1-2",
     "de": "Sollte Dir ein Artikel nicht passen oder gefallen, kannst Du ihn aber innerhalb von 28 Tagen ab dem Versanddatum zurücksenden und auf unserer Internetseite einen neuen Artikel bestellen.",
-    "fr": "Si un article ne te convient pas ou ne te plaît pas, tu peux toutefois le renvoyer dans les 28 jours à compter de la date d'envoi et commander un nouvel article sur notre site Internet.",
+    "fr": "Toutefois, si un article ne te convient pas ou ne te plaît pas, tu peux le renvoyer dans les 28 jours à compter de la date d'envoi et commander un nouvel article sur notre site Internet.",
     "en": "However, if you do not like or like an item, you can return it within 28 days from the date of dispatch and order a new item on our website.",
     "lu": ""
   },
@@ -2771,8 +3131,8 @@
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-2-3",
     "de": "in Esch-sur-Alzette abgeben. Bitte achte darauf, dass der Artikel, den Du zurücksendest, in einwandfreiem Original-Zustand, ungewaschen und unbenutzt ist. Ein vorsichtiges, sorgfältiges Anprobieren von Kleidung ist aber natürlich möglich.",
-    "fr": "à Esch-sur-Alzette. Veille à ce que l'article que tu renvoies soit en parfait état d'origine, non lavé et non utilisé. Un essayage prudent et minutieux des vêtements est toutefois possible, bien entendu.",
-    "en": "in Esch-sur-Alzette. Please make sure that the item you are returning is in perfect original condition, unwashed and unused. However, careful, careful trying on of clothes is of course possible.",
+    "fr": "à Esch-sur-Alzette. Veille à ce que l'article que tu renvoies soit en parfait état d'origine, non lavé et non utilisé. Un essayage prudent et minutieux des vêtements est bien entendu possible.",
+    "en": "in Esch-sur-Alzette. Please make sure that the item you are returning is in perfect original condition, unwashed and unused. A careful and thorough fitting of the clothes is of course possible",
     "lu": ""
   },
   {
@@ -2804,7 +3164,7 @@
     "key": "services.faq-group-7-question-content-3-1",
     "de": "In Zeiten eines stetig wachsenden Online-Handels vergessen wir oft, dass jede einzelne Lieferung einen Aufwand an Logistik, Personal, Treibstoff, Energie und Zeit bedeutet. Jeder Online-Kauf hinterlässt einen „ökologischen Fußabdruck“ und wirkt sich auf die Umwelt aus, in der wir leben.",
     "fr": "À une époque où le commerce en ligne ne cesse de croître, nous oublions souvent que chaque livraison représente un effort en termes de logistique, de personnel, de carburant, d'énergie et de temps. Chaque achat en ligne laisse une \"empreinte écologique\" et a un impact sur l'environnement dans lequel nous vivons.",
-    "en": "In times of ever-growing online commerce, we often forget that every single delivery means an expenditure of logistics, personnel, fuel, energy and time. Every online purchase leaves an \"ecological footprint\" and affects the environment in which we live.",
+    "en": "In times of ever-growing e-commerce, we often forget that every single delivery represents an effort in terms of logistics, personnel, fuel, energy and time. Every online purchase leaves an \"ecological footprint\" and affects the environment in which we live.",
     "lu": ""
   },
   {
@@ -2819,32 +3179,32 @@
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-3-3",
     "de": "Bei fehlerhafter Ware, falscher Lieferung o.ä. übernehmen wir aber natürlich die Rücksendekosten. Sie werden Dir nachträglich zusammen mit dem Verkaufspreis erstattet.",
-    "fr": "",
-    "en": "",
+    "fr": "En cas de marchandise défectueuse, d'erreur de livraison ou autre, nous prenons bien sûr en charge les frais de renvoi. Ils te seront remboursés ultérieurement en même temps que le prix de vente.",
+    "en": "In the event of defective goods, incorrect delivery or otherwise, we will of course bear the return costs. They will be refunded to you subsequently, together with the sales price",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-3-4",
     "de": "Und wenn Du nicht sicher bist, ob ein Kleidungsstück passt, dass du Dir wünschst, dann komm bei uns vorbei um es anzuprobieren. Wir freuen uns auf Deinen Besuch im",
-    "fr": "",
-    "en": "",
+    "fr": "Et si tu n'es pas sûr:e qu'un vêtement te convient, viens nous voir pour l'essayer. Nous nous réjouissons de ta visite au",
+    "en": "And if you're not sure if a garment is right for you, come and try it on. We look forward to your visit to the",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-3-5",
     "de": "BENU Shop",
-    "fr": "",
-    "en": "",
+    "fr": "BENU Shop",
+    "en": "BENU Shop",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-3-6",
     "de": "in Esch-sur-Alzette!",
-    "fr": "",
-    "en": "",
+    "fr": "à Esch-sur-Alzette",
+    "en": "in Esch-sur-Alzette",
     "lu": ""
   },
   {
@@ -2859,15 +3219,15 @@
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-1",
     "de": "Es tut uns Leid, wenn Dein Artikel nicht der gewohnten BENU COUTURE Qualität entspricht, fehlerhaft ist oder wir Dir irrtümlicherweise einen Artikel zugesendet haben, der nicht Deiner Bestellung entspricht.",
-    "fr": "",
-    "en": "",
+    "fr": "Nous sommes désolés si ton article ne correspond pas à la qualité habituelle de BENU COUTURE, s'il est défectueux ou si nous t'avons envoyé par erreur un article qui ne correspond pas à ta commande.",
+    "en": "We are sorry if your article does not correspond to the usual BENU COUTURE quality, if it is defective or if we have sent you by mistake an article that does not correspond to your order.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-2",
     "de": "Bitte sende uns den Artikel mit Angabe der Gründe zurück. Wie die Rücksendung im Einzelnen funktioniert, erfährst du",
-    "fr": "",
+    "fr": "Renvoie-nous l'article en indiquant les raisons. Pour savoir comment procéder au retour, voir",
     "en": "",
     "lu": ""
   },
@@ -2875,7 +3235,7 @@
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-3",
     "de": "hier.",
-    "fr": "",
+    "fr": "ici.",
     "en": "",
     "lu": ""
   },
@@ -6813,7 +7173,7 @@
     "de": "In den Warenkorb legen",
     "fr": "Ajouter au panier",
     "en": "Add to basket",
-    "lu": "An den Akafskierfche leeën"
+    "lu": "An den partner leeën"
   },
   {
     "page": "Bons d'achat",

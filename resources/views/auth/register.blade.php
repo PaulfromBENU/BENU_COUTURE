@@ -218,7 +218,7 @@
             <div class="register__options">
                 <label for="register_legal" class="inline-flex items-center">
                     <input id="register_legal" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_legal" value="1" tabindex="19">
-                    <span class="ml-10">{!! __('forms.register-conditions-conf') !!} *</span>
+                    <span class="ml-10">{!! __('forms.register-conditions-conf-1') !!} <a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('forms.register-conditions-conf-2') !!}</a> {!! __('forms.register-conditions-conf-3') !!} <a href="{{ route('footer.policy-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('forms.register-conditions-conf-4') !!}</a> {!! __('forms.register-conditions-conf-5') !!} *</span>
                 </label>
             </div>  
             <div class="register__options">

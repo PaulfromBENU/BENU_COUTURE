@@ -346,18 +346,18 @@
   {
     "page": "home",
     "key": "welcome.seo-title",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Das erste Upcycling-Nähatelier in Luxemburg!",
+    "fr": "Le premier atelier de couture Upcycling au Luxembourg !",
+    "en": "The first Upcycling sewing atelier in Luxembourg!",
+    "lu": "Das erste Upcycling-Nähatelier in Luxemburg!"
   },
   {
     "page": "home",
     "key": "welcome.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Wir fertigen UpCycling-Mode nachhaltig und lokal aus gebrauchten Kleidern. BENU COUTURE, das sind farbenfrohe und ansprechende Kreationen für Groß und Klein.",
+    "fr": "Nous réalisons une mode UpCycling durable et locale à partir de vieux vêtements. BENU COUTURE, ce sont des créations colorés et attrayants pour petits et grands.",
+    "en": "We manufacture upcycled fashion sustainably and locally from used clothes. BENU COUTURE, these are colourful and pleasing creations for young and old.",
+    "lu": "Wir fertigen UpCycling-Mode nachhaltig und lokal aus gebrauchten Kleidern. BENU COUTURE, das sind farbenfrohe und ansprechende Kreationen für Groß und Klein."
   },
   {
     "page": "service",
@@ -650,10 +650,10 @@
   {
     "page": "newsletter sub",
     "key": "auth.newsletter-subscribe-seo-title",
-    "de": "BENU Newsletter",
-    "fr": "BENU Newsletter",
-    "en": "BENU Newsletter",
-    "lu": "BENU Newsletter"
+    "de": "Mit dem Newsletter die Neuigkeiten von BENU verfolgen",
+    "fr": "Suivre l'actualité de BENU avec la newsletter",
+    "en": "Follow the news from BENU with the BENU newsletter",
+    "lu": ""
   },
   {
     "page": "newsletter sub",
@@ -666,7 +666,7 @@
   {
     "page": "newsletter can",
     "key": "auth.newsletter-cancelled-seo-title",
-    "de": "",
+    "de": "Newsletter kündigen. Du bist jederzeit wieder Willkommen!",
     "fr": "",
     "en": "",
     "lu": ""
@@ -682,9 +682,9 @@
   {
     "page": "Informations",
     "key": "footer.general-infos-seo-title",
-    "de": "Die Auswirkungen der Fast-Fashion",
-    "fr": "",
-    "en": "",
+    "de": "Hintergründe über SLOOW-Fashion und nachhaltigen Konsum",
+    "fr": "Informations sur SLOW fashion et consommation durable",
+    "en": "Information about SLOW fashion and sustainable consumption",
     "lu": ""
   },
   {
@@ -698,9 +698,9 @@
   {
     "page": "médias",
     "key": "footer.medias-seo-title",
-    "de": "Medienberichte über BENU COUTURE in Luxemburg und darüber hinaus",
-    "fr": "Reportages médiatiques au Luxembourg et ailleurs sur BENU COUTURE",
-    "en": "Media reports about BENU COUTURE in Luxembourg and beyond",
+    "de": "Medienberichte über BENU COUTURE in Luxemburg",
+    "fr": "Reportages médiatiques sur BENU COUTURE au Luxembourg",
+    "en": "Media reports about BENU COUTURE in Luxembourg",
     "lu": ""
   },
   {
@@ -714,14 +714,14 @@
   {
     "page": "cond. générales",
     "key": "footer.general-conditions-seo-title",
-    "de": "Wie bestelle ich nachhaltige Upcycling-Mode im BENU COUTURE Online-Shop?",
-    "fr": "Comment commander une mode upcycling durable dans la boutique en ligne BENU COUTURE ?",
-    "en": "How do I order sustainable upcycling fashion from the BENU COUTURE online shop?",
+    "de": "Nachhaltige Upcycling-Mode im BENU COUTURE Online-Shop bestellen",
+    "fr": "Comment commander une mode upcycling dans la boutique en ligne BENU COUTURE ?",
+    "en": "How to order upcycling fashion at the BENU COUTURE online shop?",
     "lu": ""
   },
   {
     "page": "cond. générales",
-    "key": "ooter.general-conditions-seo-description",
+    "key": "footer.general-conditions-seo-description",
     "de": "",
     "fr": "",
     "en": "",
@@ -730,9 +730,9 @@
   {
     "page": "Datenschutz",
     "key": "footer.policy-seo-title",
-    "de": "DSGVO BENU COUTURE: Schutz personenbezogener Daten",
-    "fr": "RGPD BENU COUTURE : Traitement des données personnelles",
-    "en": "RGPD BENU COUTURE: Treatment of personal data",
+    "de": "DSGVO: Schutz personenbezogener Daten",
+    "fr": "RGPD : Traitement des données personnelles",
+    "en": "RGPD: Treatment of personal data",
     "lu": ""
   },
   {
@@ -746,9 +746,9 @@
   {
     "page": "Impressum",
     "key": "footer.legal-seo-title",
-    "de": "BENU COUTURE : der Online-Shop für verantwortungsvolle Upcycling-Mode in Luxemburg",
-    "fr": "BENU COUTURE : la boutique en ligne de mode éco-esponsable au Luxembourg",
-    "en": "BENU COUTURE : the online shop for sustainable upcycled fashion in Luxembourg",
+    "de": "Der Online-Shop für nachhaltige Mode in Luxemburg",
+    "fr": "La boutique en ligne de mode éco-esponsable au Luxembourg",
+    "en": "The online shop for sustainable  fashion in Luxembourg",
     "lu": ""
   },
   {
@@ -1171,7 +1171,7 @@
     "page": "Histoire",
     "key": "about.full-paragraph-5-4",
     "de": "Und dann dämmert es mir, dass genau dies der Ansatzpunkt sein muss für BENU COUTURE. Wenn wir also aus den unzähligen Kleidern, die Menschen weggeben (entsorgen), Teile auswählen, die grundsätzlich von guter Qualität sind, kann ich mir eine neue Hose zusammensetzen. Hierfür benötigen wir qualifizierte Modedesigner:innen und Schneider:innen, die lokal unter anständigen Konditionen arbeiten. Jetzt die gesammelten Kleider lostrennen und die so gewonnenen Stoffteile als Rohstoff für neu entwickelte, moderne Kleider nutzen. Alles lokal, keine unendlichen Transportwege (eine durchschnittliche Jeanshose legt 20.000 km hinter sich, bevor sie in unserem Laden landet). Alles hochwertig. Lebenslange Garantie. Stark reduziertes Auswaschen von Chemieprodukten im Vergleich zu Neuware (etwa 2.400 chemische Produkte kommen im Rahmen der industriellen Textilproduktion zum Einsatz, davon gelten rund 250 als ausdrücklich schädlich für Mensch und Umwelt). Schaffung von lokalen Arbeitsplätzen zu sozial korrekten Bedingungen. So schaffen wir lokal Arbeit, bringen wieder Transparenz in eines der ältesten Handwerke der Welt und bieten, neben dem Gebrauchtkleiderverkauf und dem Vermieten von Kleidern (in Vorbereitung bei BENU COUTURE), die wohl einzige Option zur tatsächlich nachhaltigen Nutzung von Kleidern.",
-    "fr": "Et puis je me rends compte que c'est précisément là que doit se situer le point de départ de BENU COUTURE. Ainsi, si nous choisissons parmi les innombrables vêtements que les gens donnent (dont ils se débarrassent) des pièces de bonne qualité, je peux me confectionner un nouveau pantalon. Pour cela, nous avons besoin de stylistes et de couturiers·e qualifié·e·s qui travaillent localement dans des conditions décentes. Détailler les vêtements collectés et utiliser les pièces de tissu ainsi obtenues comme matière première pour des vêtements modernes nouvellement conçus. Tout est local, pas de transports interminables (un pantalon en jean parcourt en moyenne 20.000 km avant d'arriver dans nos magasins). Tout est de haute qualité. Garantie à vie. Un lavage qui libère des quantités de produits chimiques fortement réduites par rapport aux articles neufs (environ 2.400 produits chimiques sont utilisés dans le cadre de la production textile industrielle, dont environ 250 sont considérés comme expressément nocifs pour l'homme et l'environnement). Création d'emplois locaux à des conditions socialement correctes. \nNous créons ainsi du travail localement, réintroduisons de la transparence dans l'un des plus vieux métiers du monde et proposons, outre la vente de vêtements d'occasion et la location de vêtements (en préparation chez BENU COUTURE), probablement la seule option permettant une utilisation réellement durable des vêtements.",
+    "fr": "Et puis je me rends compte que c'est précisément là que doit se situer le point de départ de BENU COUTURE. Ainsi, si nous choisissons parmi les innombrables vêtements que les gens donnent (dont ils se débarrassent) des pièces de bonne qualité, je peux me confectionner un nouveau pantalon. Pour cela, nous avons besoin de stylistes et de couturier·ère·s qualifié·e·s qui travaillent localement dans des conditions décentes. Détailler les vêtements collectés et utiliser les pièces de tissu ainsi obtenues comme matière première pour des vêtements modernes nouvellement conçus. Tout est local, pas de transports interminables (un pantalon en jean parcourt en moyenne 20.000 km avant d'arriver dans nos magasins). Tout est de haute qualité. Garantie à vie. Un lavage qui libère des quantités de produits chimiques fortement réduites par rapport aux articles neufs (environ 2.400 produits chimiques sont utilisés dans le cadre de la production textile industrielle, dont environ 250 sont considérés comme expressément nocifs pour l'homme et l'environnement). Création d'emplois locaux à des conditions socialement correctes. \nNous créons ainsi du travail localement, réintroduisons de la transparence dans l'un des plus vieux métiers du monde et proposons, outre la vente de vêtements d'occasion et la location de vêtements (en préparation chez BENU COUTURE), probablement la seule option permettant une utilisation réellement durable des vêtements.",
     "en": "And then it dawns on me that this must be exactly the starting point for BENU COUTURE. So, if we select parts that are basically of good quality from the countless clothes that people give away (dispose of), I can put together a new pair of trousers. For this we need qualified fashion designers and tailors who work locally under decent conditions. Then we can separate the collected clothes and use the resulting fabric parts as raw material for newly produced, modern clothes. Everything local, no endless transport routes (an average pair of jeans travels 20,000 km before it ends up in our shops). All high quality. Lifetime guarantee. Greatly reduced leaching of chemical products compared to new clothes (about 2,400 chemical products are used in industrial textile production, of which about 250 are considered explicitly harmful to humans and the environment). Creating local jobs under socially correct conditions.\nIn this way, we create work locally, bring transparency back into one of the oldest professions in the world and offer, besides selling second-hand clothes and renting clothes (in preparation at BENU COUTURE), probably the only option for a truly sustainable use of clothes.",
     "lu": "An da stellen ech fest, dass genau do den Usazpunkt fir BENU COUTURE muss sinn. Wa mir also aus all deene Kleeder, déi d’Leit ewechginn (entsuergen), Stécker wielen, déi grondsätzlech aus gudder Qualitéit sinn, kann ech mir eng nei Box zesummesetzen. Dofir brauche mir qualifizéiert Modedesigner:innen a Schneider:innen, déi lokal ënner anstännege Konditioune schaffen. Dann déi gesammelt Kleeder auserneenhuelen an déi doraus récuperéiert Stoffdeeler als Rostoff fir nei entwéckelt, modern Kleeder notzen. Alles lokal, keng onendlech Transportweeër (eng duerchschnëttlech Jeansbox huet ongeféier 20.000 km hannert sech, éier se an eise Geschäfter lant). Alles héichwäerteg. Liewenslaang Garantie. Staark reduzéiert Auswäsche vu cheemesche Produiten am Verglach zu neier Wuer (ongeféier 2.400 cheemesch Produite kommen an der industrieller Textilproduktioun an den Asaz, dovu gëlle ronn 250 als ausdrécklech schiedlech fir de Mënsch an d’Ëmwelt). Schafe vu lokalen Aarbechtsplazen zu sozial korrekte Konditiounen. \nEsou schafe mir lokal Aarbecht, bréngen nees Transparenz an ee vun den eelsten Handwierker vun der Welt a bidden, niewent dem Verkaf vun ale Kleeder an dem Loune vu Kleeder (an der Virbereedung bei BENU COUTURE), déi wuel eenzeg Optioun fir en tatsächlech nohaltege Gebrauch vu Kleeder."
   },
@@ -1315,7 +1315,7 @@
     "page": "Home",
     "key": "welcome.pres-txt-1",
     "de": "BENU COUTURE produziert hochwertige, nachhaltige Kleidung & Accessoires im UpCycling. Es werden ausschließlich gebrauchte Kleidungsstücke und Textilien verwendet, die uns von Privatpersonen zur Verfügung gestellt werden. Natürliche Materialien wie Baumwolle, Wolle und Seide werden bevorzugt verarbeitet. Synthetische Stoffe vermeiden wir soweit wie möglich.\nAls Verpackung für den Versand benutzen wir wiederverwendete Papierboxen sowie umweltschonende Kleber und Paketbänder.",
-    "fr": "BENU COUTURE produit des vêtements & accessoires durables de haute qualité en UpCycling. Nous utilisons exclusivement des vêtements et textiles d'occasion mis à notre disposition par des personnes privées. Les matières naturelles telles que le coton, la laine et la soie, sont privilégiées. Nous évitons autant que possible les tissus synthétiques.\nPour emballer les envois, nous réutilisons des boîtes en carton et nous servons d'adhésifs et de rubans écologiques.",
+    "fr": "BENU COUTURE produit des vêtements & accessoires durables de haute qualité en UpCycling. Nous utilisons exclusivement des vêtements et textiles d'occasion mis à notre disposition par des personnes privées. Les matières naturelles telles que le coton, la laine et la soie, sont privilégiées. Nous évitons autant que possible les tissus synthétiques.\nPour emballer les envois, nous réutilisons des boîtes en carton et nous nous servons d'adhésifs et de rubans écologiques.",
     "en": "BENU COUTURE produces sustainable high-quality clothing & accessories using UpCycling. Only second-hand garments and fabrics are processed, which are provided to us by private individuals. Natural materials such as cotton, wool and silk are preferably used. We avoid synthetic fabrics as far as possible.\nAs packaging for shipping, we work with reused paper boxes as well as environmentally friendly adhesives and parcel tapes.",
     "lu": "BENU COUTURE produzéiert héichwäerteg, nohalteg Kleeder an Accessoiren am UpCycling. Et ginn nëmmen Occasiounskleeder a -stoffer benotzt, déi eis vu Privatleit zur Verfügung gestallt ginn. Natierlech Matièren ewéi Kotteng, Woll a Seid gi mat Virléift verschafft. Syntheetesch Stoffer vermeide mir esou gutt ewéi méiglech.\nFir d'Expeditioun benotze mir gebrauchte Kartrongskëschten an ëmweltfrëndleche Pechpabéier."
   },
@@ -1347,7 +1347,7 @@
     "page": "Home",
     "key": "welcome.pres-txt-2",
     "de": "BENU COUTURE ist ein professionelles Schneideratelier mit lokaler Produktion in Luxemburg, Esch-sur-Alzette. Gelernte Schneider:innen mit langjähriger Erfahrung entwerfen und nähen unsere Kreationen. Gleichzeitig leistet BENU COUTURE einen Beitrag zur sozialen Integration und bietet Arbeitsplätze für Personen, die auf dem Arbeitsmarkt benachteiligt sind und solchen, die eines besonderen Schutzes bedürfen.",
-    "fr": "BENU COUTURE est un atelier de couture professionnel avec production locale au Luxembourg, à Esch-sur-Alzette. Nos créations sont conçues et réalisées par des couturiers·e qualifié·e·s, disposant de plusieurs années d'expérience. Parallèlement, BENU COUTURE contribue à l'intégration sociale en offrant des emplois à des personnes défavorisées sur le marché du travail et/ou nécessitant une protection particulière.",
+    "fr": "BENU COUTURE est un atelier de couture professionnel avec production locale au Luxembourg, à Esch-sur-Alzette. Nos créations sont conçues et réalisées par des couturier·ère·s qualifié·e·s, disposant de plusieurs années d'expérience. Parallèlement, BENU COUTURE contribue à l'intégration sociale en offrant des emplois à des personnes défavorisées sur le marché du travail et/ou nécessitant une protection particulière.",
     "en": "BENU COUTURE is a professional tailor's studio with a local production in Luxembourg, Esch-sur-Alzette. Skilled tailors with many years of experience design and sew our creations. At the same time, BENU COUTURE contributes to social integration and provides workplaces for people who are disadvantaged on the labour market and for those who need special protection.",
     "lu": "BENU COUTURE ass e professionelle Schneideratelier mat lokaler Produktioun zu Lëtzebuerg, Esch/Uelzecht. \nGeléiert Schneider:inne mat jorelaanger Erfarung entwerfen a bitzen eis Kreatiounen. \nGläichzäiteg dréit BENU COUTURE zur sozialer Integratioun bäi a bitt Aarbechtsplaze fir Leit un, \ndéi um Aarbechtsmaart benodeelegt sinn an déi spezielle Schutz brauchen."
   },
@@ -1491,7 +1491,7 @@
     "page": "Home",
     "key": "welcome.last-subtitle",
     "de": "Unser Team aus Designer:innen und Schneider:innen entwirft und näht die BENU Kreationen im eigenen Schneideratelier in Esch-sur-Alzette. Entdecke hier unsere neuesten Modelle!",
-    "fr": "Notre équipe de designers et de couturiers·e conçoit et réalise les créations BENU dans son propre atelier de couture à Esch-sur-Alzette. Découvre nos derniers modèles ici !",
+    "fr": "Notre équipe de designers et de couturier·ère·s conçoit et réalise les créations BENU dans son propre atelier de couture à Esch-sur-Alzette. Découvre nos derniers modèles ici !",
     "en": "Our team of designers and tailors designs and sews the BENU creations in our own sewing studio in Esch-sur-Alzette. Discover our latest models here!",
     "lu": "Eis Ekipp aus Designer:innen a Schneider:innen entwërft a bitzt d'BENU Kreatiounen am eegene Schneideratelier zu Esch/Uelzecht. Entdeck hei eis neiste Modeller!"
   },
@@ -1774,6 +1774,14 @@
     "fr": "Service",
     "en": "Service",
     "lu": "Service"
+  },
+  {
+    "page": "Home",
+    "key": "footer.sponsors-title",
+    "de": "Wir danken unseren offiziellen Partnern!",
+    "fr": "Nous tenons à remercier nos partenaire officiels !",
+    "en": "We would like to thank our official partners!",
+    "lu": "Mir soen eisen offizielle Partner Merci!"
   },
   {
     "page": "Home",
@@ -3227,8 +3235,8 @@
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-2",
     "de": "Bitte sende uns den Artikel mit Angabe der Gründe zurück. Wie die Rücksendung im Einzelnen funktioniert, erfährst du",
-    "fr": "Renvoie-nous l'article en indiquant les raisons. Pour savoir comment procéder au retour, voir",
-    "en": "",
+    "fr": "Renvoie-nous l'article en indiquant les raisons du retour. Pour savoir comment procéder au retour, voir",
+    "en": "Send the item back to us, stating the reasons for the return. For information on how to return an item, see",
     "lu": ""
   },
   {
@@ -3236,39 +3244,39 @@
     "key": "services.faq-group-7-question-content-4-3",
     "de": "hier.",
     "fr": "ici.",
-    "en": "",
+    "en": "here.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-4",
     "de": "Falls wir Dir einen fehlerhaften Artikel (Produktionsfehler) zugesendet haben, kannst Du bei uns anfragen, ob der Fehler repariert werden kann. Wir prüfen dann, ob eine Reparatur möglich ist oder eventuell ein Rabatt gewährt werden kann.",
-    "fr": "",
-    "en": "",
+    "fr": "Si nous t'avons envoyé un article défectueux (erreur de production), tu peux nous demander si l'erreur peut être réparée. Nous vérifierons alors si une réparation est possible ou si une réduction peut éventuellement être accordée.",
+    "en": "If we have sent you a faulty item (production error), you can ask us whether the error can be repaired. We will then check whether a repair is possible or whether a discount can be granted.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-5",
     "de": "Bei einer Reklamation (Artikel mit Produktionsfehler, falsche Lieferung o.ä.), die auf einen Fehler von BENU COUTURE zurückgeht, erstatten wir natürlich sämtliche Versand- und Rücksendekosten.",
-    "fr": "",
-    "en": "",
+    "fr": "En cas de réclamation (article présentant un défaut de production, livraison erronée ou autre) due à une erreur de BENU COUTURE, nous remboursons bien entendu tous les frais d'envoi et de retour.",
+    "en": "In the event of a complaint (item with a production error, incorrect delivery or similar) that is due to a fault on the part of BENU COUTURE, we will of course reimburse all shipping and return costs.",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-4-6",
     "de": "Bei weiteren Fragen zur Reklamation",
-    "fr": "",
-    "en": "",
+    "fr": "Pour toute autre question concernant une réclamation",
+    "en": "For further questions about a complaint",
     "lu": ""
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-7-question-content-47",
     "de": "melde Dich bei uns!",
-    "fr": "",
-    "en": "",
+    "fr": "contacte-nous !",
+    "en": "contact us!",
     "lu": ""
   },
   {
@@ -5523,7 +5531,7 @@
     "page": "Service Client",
     "key": "shops.description-benu-village",
     "de": "Im Shop findest Du\nunsere Kreationen. Hier kannst Du Dich inspirieren und persönlich beraten lassen. Unsere\nSchneider:innen und Designer:innen stehen Dir unter der Woche jederzeit für Maßanfertigungen und Änderungen zur Verfügung. Bitte mache hierfür im Vorfeld einen Termin aus.",
-    "fr": "Tu trouveras nos créations dans notre boutique. Ici, tu pourras trouver de l'inspiration et des conseils. Nos\ncouturiers·e et designers sont à ta disposition en semaine pour des vêtements sur mesure et des modifications. Pour cela, nous te prions de prendre rendez-vous à l'avance.",
+    "fr": "Tu trouveras nos créations dans notre boutique. Ici, tu pourras trouver de l'inspiration et des conseils. Nos\ncouturier·ère·s et designers sont à ta disposition en semaine pour des vêtements sur mesure et des modifications. Pour cela, nous te prions de prendre rendez-vous à l'avance.",
     "en": "In the Shop you'll find\nour creations. Here you can receive inspiration and personal advice. Our tailors and designers are available at any time during the week to make customised garments and modifications. Please arrange an appointment in advance.",
     "lu": "Am Shop fënns Du \neis Kreatiounen. Hei kanns Du Dech inspiréieren a perséinlech berode loossen. Eis Schneider:innen an Designer:inne stinn Dir an der Woch jidderzäit zur Verfügung fir Kleeder op Mooss oder Ännerungen ze maachen. Huel wgl. dofir e Rendez-vous am Viraus."
   },
@@ -6498,10 +6506,10 @@
   {
     "page": "Créations",
     "key": "models.info-4-header",
-    "de": "Mit dem Kauf von 1 Million Second Hand Jeans würden 7 Millionen Tonnen CO2 eingespart werden.",
-    "fr": "L'achat d'un million de jeans de seconde main permettrait d'économiser 7 millions de tonnes de CO2.",
-    "en": "Buying 1 million pairs of second-hand jeans would save 7 million tonnes of CO2 in the atmosphere.",
-    "lu": "Mam Kaf vun 1 Millioun Second-Hand Jeans géife 7 Milliounen Tonne CO2 gespuert ginn."
+    "de": "Mit dem Kauf von 1 Million Second Hand Jeans würden 7.500 Tonnen CO2 eingespart werden.",
+    "fr": "L'achat d'un million de jeans de seconde main permettrait d'économiser 7.500 de tonnes de CO2.",
+    "en": "Buying 1 million pairs of second-hand jeans would save 7.500 tonnes of CO2 in the atmosphere.",
+    "lu": "Mam Kaf vun 1 Millioun Second-Hand Jeans géife 7.500 Tonne CO2 gespuert ginn."
   },
   {
     "page": "Créations",
@@ -10353,6 +10361,46 @@
   },
   {
     "page": "Panier",
+    "key": "forms.register-conditions-conf-1",
+    "de": "Ich stimme den",
+    "fr": "J’accepte les",
+    "en": "I accept the",
+    "lu": "Ech stëmmen den"
+  },
+  {
+    "page": "Panier",
+    "key": "forms.register-conditions-conf-2",
+    "de": "allgemeinen Geschäftsbedingungen",
+    "fr": "conditions générales",
+    "en": "general conditions",
+    "lu": "allgemenge Geschäftsbedéngungen"
+  },
+  {
+    "page": "Panier",
+    "key": "forms.register-conditions-conf-3",
+    "de": "und den",
+    "fr": "et la",
+    "en": "and the",
+    "lu": "an den"
+  },
+  {
+    "page": "Panier",
+    "key": "forms.register-conditions-conf-4",
+    "de": "Datenschutzrichtlinien",
+    "fr": "politique de confidentialité",
+    "en": "privacy policy",
+    "lu": "Dateschutzrichtlinne"
+  },
+  {
+    "page": "Panier",
+    "key": "forms.register-conditions-conf-5",
+    "de": "von BENU COUTURE zu",
+    "fr": "de BENU COUTURE",
+    "en": "of BENU COUTURE",
+    "lu": "vu BENU COUTURE zou"
+  },
+  {
+    "page": "Panier",
     "key": "forms.personnal-data-info",
     "de": "Indem ich meinen Einkauf fortsetze, stimme ich zu, dass die angegebenen persönlichen Daten verwendet und gespeichert werden, um die Nachverfolgung der Bestellung zu ermöglichen.",
     "fr": "En poursuivant mon achat, j'accepte que les données personnelles fournies soient utilisées et conservées afin de nous permettre de conserver une trace de la commande.",
@@ -11483,7 +11531,7 @@
     "page": "Participer",
     "key": "participate.give-content-2-4",
     "de": "Vielleicht gibt es in Deiner Gemeinde oder in der Umgebung schon Initiativen, die Second-Hand Kleidung wiederverwenden und weiterverkaufen…? Oder existiert sogar eine Tauschbörse für Kleidung? Vielleicht lassen sich alte Kleidungsstücke auch reparieren oder aufwerten… Die Abgabe und Spende von Altkleidern steht für uns erst an letzter Stelle. Trotzdem vielen Dank, dass Du an BENU gedacht hast :)",
-    "fr": "Peut-être existe-t-il déjà des initiatives de réutilisation et de revente de vêtements de seconde main dans ta commune ou dans les environs... ? Ou une bourse d'échange de vêtements ? Peut-être tes vieux vêtements peuvent-ils être réparés ou revalorisés... Pour nous, le don de vêtements constitue la toute dernière option. Merci malgré tout d'avoir pensé à BENU :)",
+    "fr": "Peut-être existe-t-il déjà des initiatives de réutilisation et de revente de vêtements de seconde main dans ta commune ou dans les environs... ? Ou une bourse d'échange de vêtements ? Peut-être tes vieux vêtements peuvent être réparés ou revalorisés... Pour nous, le don de vêtements constitue la toute dernière option. Merci malgré tout d'avoir pensé à BENU :)",
     "en": "Maybe there are already initiatives in your Commune or neighbourhood that reuse and resell second-hand clothes...? Or is there even a clothing exchange? Maybe old clothes can be repaired or upgraded... For us, handing in and donating old clothes is only the last option. Nevertheless, thank you for thinking of BENU :)",
     "lu": "Vläicht gëtt et an Denger Gemeng oder an der Ëmgéigend schonn Initiativen, déi Second-Hand Kleedung weiderverwenden oder weiderverkafen...? Oder eng \"Tauschbörse\" fir Kleeder? Vläicht kann een Deng al Kleeder flécken oder opwäerten... D'Ofginn an d'Spende vu Kleeder komme fir eis eréischt als allerlescht Optiounen a Fro. Merci awer, datt s Du u BENU geduecht hues :)"
   },
@@ -12035,7 +12083,7 @@
     "page": "À propos",
     "key": "about.section-2-txt-1",
     "de": "Wir entwerfen und produzieren UpCycling-Mode und Accessoires, und dies alles vor Ort in unserem Schneideratelier in Esch-sur-Alzette. Unser Team aus professionellen Schneider:innen und Designer:innen realisiert aus ausgewählten, qualitativ hochwertigen Stoffen eine Vielfalt an Kreationen für Kinder und Erwachsene.",
-    "fr": "Nous créons et produisons des vêtements et accessoires en UpCycling, directement dans notre atelier de couture à Esch-sur-Alzette. Notre équipe de couturiers·e et de designers professionnel·le·s réalise, à partir de tissus sélectionnés et de haute qualité, une grande variété de créations pour enfants et adultes.",
+    "fr": "Nous créons et produisons des vêtements et accessoires en UpCycling, directement dans notre atelier de couture à Esch-sur-Alzette. Notre équipe de couturier·ère·s et de designers professionnel·le·s réalise, à partir de tissus sélectionnés et de haute qualité, une grande variété de créations pour enfants et adultes.",
     "en": "We design and produce upcycled fashion and accessories, all on site in our tailoring studio in Esch-sur-Alzette. Our team of professional tailors and designers produce a variety of upcycled garments from selected, high quality fabrics.",
     "lu": "Mir entwerfen a produzéieren UpCycling-Moud an Accessoiren, op der Plaz an eisem Schneideratelier zu Esch/Uelzecht. Eis Ekipp vu professionelle Schneider:innen an Designer:inne realiséiert aus selektionéierten, qualitativ héichwäertege Stoffer, eng Vilfalt u Kreatioune fir Kanner an Erwuessener."
   },
@@ -12347,7 +12395,7 @@
     "page": "À propos",
     "key": "about.section-4-txt-1",
     "de": "Wolle, Seide, Baumwolle… für unsere Kreationen verwenden wir möglichst Stoffe aus Naturfasern.  Nur dann, wenn es die Funktion eines Kleidungsstückes unverzichtbar macht, werden Materialien verarbeitet, die (auch) synthetische Fasern enthalten. Allerdings kann auch bei natürlichen Stoffen die Existenz künstlicher Fasern nicht ganz ausgeschlossen werden, da Beimischungen häufig nicht auszumachen sind. In über 60% der verkauften reinen Baumwollstoffe werden mittlerweile  Polyester und andere künstliche Fasern beigemischt, ohne dass dies ausgewiesen würde (max. 5%).",
-    "fr": "Laine, soie, coton... pour nos créations, nous utilisons des tissus en fibres naturelles dès que possible. Ce n'est que lorsque la fonction d'un vêtement le rend indispensable que nous utilisons des matières contiennant (aussi) des fibres synthétiques. Cependant, même dans les tissus naturels, la présence de fibres artificielles ne peut pas être totalement exclue, car les mélanges sont souvent indécelables. Plus de 60% des tissus en coton pur vendus contiennent désormais du polyester et d'autres fibres artificielles, sans que cela soit indiqué (5% maximum).",
+    "fr": "Laine, soie, coton... pour nos créations, nous utilisons des tissus en fibres naturelles dès que possible. Ce n'est que lorsque la fonction d'un vêtement le rend indispensable que nous utilisons des matières contenant (aussi) des fibres synthétiques. Cependant, même dans les tissus naturels, la présence de fibres artificielles ne peut pas être totalement exclue, car les mélanges sont souvent indécelables. Plus de 60% des tissus en coton pur vendus contiennent désormais du polyester et d'autres fibres artificielles, sans que cela soit indiqué (5% maximum).",
     "en": "Wool, silk, cotton... for our creations we use fabrics made from natural fibres wherever possible. Only when the function of a garment makes it indispensable, materials that (also) contain synthetic fibres are processed. However, even with natural fabrics, the existence of artificial fibres cannot be completely ruled out, as admixtures are often impossible to detect. In the meantime, polyester and other artificial fibres are added to more than 60% of the pure cotton fabrics sold, without this being indicated (max. 5%).",
     "lu": "Woll, Seid, Kotteng... fir eis Kreatioune benotze mir méiglechst Stoffer aus Naturfaseren. Nëmme wann d'Funktioun vum Kleedungsstéck et verlaangt, gi Matièrë mat (ënnert anerem) syntheetesche Fasere verschafft."
   },
@@ -12387,7 +12435,7 @@
     "page": "À propos",
     "key": "about.section-4-txt-1-1",
     "de": "Bei den Materialien handelt es sich ausschließlich um Kleider-Spenden von Privatpersonen. Unser Nähteam wählt qualitativ hochwertige Materialien aus, die sich zu langlebigen Kleidungstücken verarbeiten lassen. Den Rest übergeben wir dem nationalen Sammel- und Sortierzentrum für Kleiderspenden von",
-    "fr": "Les matières utilisées proviennent exclusivement de vêtements d'occasion donnés par des particuliers. Nos couturiers·e sélectionnent des matières de haute qualité pouvant être transformées en vêtements durables. Nous remettons le reste au centre national de collecte et de tri pour vêtements de",
+    "fr": "Les matières utilisées proviennent exclusivement de vêtements d'occasion donnés par des particuliers. Nos couturier·ère·s sélectionnent des matières de haute qualité pouvant être transformées en vêtements durables. Nous remettons le reste au centre national de collecte et de tri pour vêtements de",
     "en": "The materials are exclusively clothing donations from private individuals. Our sewing team selects high quality materials that can be transformed into durable garments. We hand over the rest to the national collection and sorting centre for clothes of",
     "lu": "Et handelt sech haaptsächlech ëm Kleederspende vu Privatleit. Eis Schneider-Ekipp wielt qualitativ héichwäerteg Matièren aus, aus deenen nohalteg Kleeder kënnen entstoen. De Rescht gi mir weider un den nationale Sammel- a Sortéierzentrum fir Kleederspende vun der"
   },
@@ -14417,7 +14465,7 @@
   },
   {
     "page": "Campaign",
-    "key": "breadcrumbs.campaigns",
+    "key": "breadcrumbs.campaigns-all",
     "de": "BENU COUTURE's  Politische Kampagnen",
     "fr": "Les campagnes politiques de BENU COUTURE",
     "en": "BENU COUTURE's political campaigns",
@@ -14438,6 +14486,30 @@
     "fr": "Campagnes politiques",
     "en": "Political campaigns",
     "lu": "Politesch Campagnen"
+  },
+  {
+    "page": "",
+    "key": "campaigns.carte-blanche-title",
+    "de": "Persilschein",
+    "fr": "Carte blanche",
+    "en": "Free hand",
+    "lu": "Fräischäin"
+  },
+  {
+    "page": "",
+    "key": "campaigns.carte-blanche-date",
+    "de": "Oktober 2022",
+    "fr": "Octobre 2022",
+    "en": "octobre 2022",
+    "lu": "Oktober 2022"
+  },
+  {
+    "page": "",
+    "key": "campaigns.carte-blanche-summary",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
   },
   {
     "page": "Version mobile",
