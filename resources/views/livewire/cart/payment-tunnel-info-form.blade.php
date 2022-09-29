@@ -57,7 +57,7 @@
     <div class="mb-3">
         <label for="register_legal" class="flex w-full" style="color: #2E1414; transform: scale(1);">
             <input id="register_legal" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="register_legal" value="1" tabindex="6" wire:model="accepts_conditions" required style="margin-top: 6px;">
-            <p class="ml-10">{!! __('forms.register-conditions-conf') !!} *</p>
+            <p class="ml-10">{!! __('forms.register-conditions-conf-1') !!} <a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('forms.register-conditions-conf-2') !!}</a> {!! __('forms.register-conditions-conf-3') !!} <a href="{{ route('footer.policy-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('forms.register-conditions-conf-4') !!}</a> {!! __('forms.register-conditions-conf-5') !!} *</p>
         </label>
     </div>
 
