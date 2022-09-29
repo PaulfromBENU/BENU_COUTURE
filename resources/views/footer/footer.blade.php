@@ -1,13 +1,18 @@
 <footer class="footer">
-	<div class="footer__sponsors flex justify-center flex-wrap benu-container">
-		<div class="footer__sponsors__sponsor flex flex-col justify-center">
-			<div>
-				<img src="{{ asset('images/pictures/sponsors/ville-esch.png') }}" />
+	<div class="footer__sponsors benu-container">
+		<h5 class="footer__sponsors__title">
+			{{ __('footer.sponsors-title') }}
+		</h5>
+		<div class="flex justify-center flex-wrap">
+			<div class="footer__sponsors__sponsor flex flex-col justify-center">
+				<div>
+					<img src="{{ asset('images/pictures/sponsors/ville-esch.png') }}" />
+				</div>
 			</div>
-		</div>
-		<div class="footer__sponsors__sponsor flex flex-col justify-center">
-			<div>
-				<img src="{{ asset('images/pictures/sponsors/ministere-luxembourg.jpg') }}" />
+			<div class="footer__sponsors__sponsor flex flex-col justify-center">
+				<div>
+					<img src="{{ asset('images/pictures/sponsors/ministere-luxembourg.jpg') }}" />
+				</div>
 			</div>
 		</div>
 	</div>

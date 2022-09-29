@@ -4048,6 +4048,12 @@ input[type=checkbox]:focus {
   border-bottom: lightgrey 1px solid;
   margin-bottom: 50px;
 }
+.footer__sponsors__title {
+  text-align: center;
+  width: 100%;
+  font: normal normal 700 28px/34px "Barlow Condensed";
+  margin-bottom: 50px;
+}
 .footer__sponsors__sponsor {
   width: 25%;
   margin: 10px 40px;
