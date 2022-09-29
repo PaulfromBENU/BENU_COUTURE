@@ -204,17 +204,17 @@
 	<script type="text/javascript">
 		$(function() {
 			// Menu automatic activation on scroll
-		 	let creationsTop = $('#about-chapter-creations').offset().top;
-		 	let servicesTop = $('#about-chapter-services').offset().top;
-		 	let teamTop = $('#about-chapter-team').offset().top;
-		 	let materialsTop = $('#about-chapter-materials').offset().top;
+		 	let unisexTop = $('#sizes-chapter-unisex').offset().top;
+		 	let ladiesTop = $('#sizes-chapter-ladies').offset().top;
+		 	let gentlemenTop = $('#sizes-chapter-gentlemen').offset().top;
+		 	let kidsTop = $('#sizes-chapter-kids').offset().top;
 
 		 	let currentScrollPos = $(window).scrollTop();
-		 	activateSizesSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 	activateSizesSideMenu(currentScrollPos, unisexTop, ladiesTop, gentlemenTop, kidsTop);
 
 		 	$(window).on('scroll', function() {
 		 		currentScrollPos = $(window).scrollTop();
-		 		activateSizesSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 		activateSizesSideMenu(currentScrollPos, unisexTop, ladiesTop, gentlemenTop, kidsTop);
 		 	});
 		});
 
@@ -222,19 +222,19 @@
 		{
 			let windowHeight = $(window).height();
 			if (topPos < pos1 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('.sizes-menu-link').removeClass('btn-slider-left--active');
 	 		} else if(topPos < pos2 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-creations-link').addClass('btn-slider-left--active');
+	 			$('.sizes-menu-link').removeClass('btn-slider-left--active');
+	 			$('#sizes-chapter-unisex-link').addClass('btn-slider-left--active');
 	 		} else if(topPos < pos3 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-services-link').addClass('btn-slider-left--active');
+	 			$('.sizes-menu-link').removeClass('btn-slider-left--active');
+	 			$('#sizes-chapter-ladies-link').addClass('btn-slider-left--active');
 	 		} else if(topPos < pos4 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-team-link').addClass('btn-slider-left--active');
+	 			$('.sizes-menu-link').removeClass('btn-slider-left--active');
+	 			$('#sizes-chapter-gentlemen-link').addClass('btn-slider-left--active');
 	 		} else {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-materials-link').addClass('btn-slider-left--active');
+	 			$('.sizes-menu-link').removeClass('btn-slider-left--active');
+	 			$('#sizes-chapter-kids-link').addClass('btn-slider-left--active');
 	 		}
 		}
 	</script>
@@ -244,17 +244,17 @@
 	<script type="text/javascript">
 		$(function() {
 			// Menu automatic activation on scroll
-		 	let creationsTop = $('#about-chapter-creations').offset().top;
-		 	let servicesTop = $('#about-chapter-services').offset().top;
-		 	let teamTop = $('#about-chapter-team').offset().top;
-		 	let materialsTop = $('#about-chapter-materials').offset().top;
+		 	let articleTop = $('#return-chapter-article').offset().top;
+		 	let voucherTop = $('#return-chapter-voucher').offset().top;
+		 	let refundTop = $('#return-chapter-refund').offset().top;
+		 	let claimTop = $('#return-chapter-reclamations').offset().top;
 
 		 	let currentScrollPos = $(window).scrollTop();
-		 	activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 	activateReturnSideMenu(currentScrollPos, articleTop, voucherTop, refundTop, claimTop);
 
 		 	$(window).on('scroll', function() {
 		 		currentScrollPos = $(window).scrollTop();
-		 		activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 		activateReturnSideMenu(currentScrollPos, articleTop, voucherTop, refundTop, claimTop);
 		 	});
 		});
 
@@ -262,19 +262,19 @@
 		{
 			let windowHeight = $(window).height();
 			if (topPos < pos1 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('.return-menu-link').removeClass('btn-slider-left--active');
 	 		} else if(topPos < pos2 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-creations-link').addClass('btn-slider-left--active');
+	 			$('.return-menu-link').removeClass('btn-slider-left--active');
+	 			$('#return-chapter-aricle-link').addClass('btn-slider-left--active');
 	 		} else if(topPos < pos3 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-services-link').addClass('btn-slider-left--active');
+	 			$('.return-menu-link').removeClass('btn-slider-left--active');
+	 			$('#return-chapter-voucher-link').addClass('btn-slider-left--active');
 	 		} else if(topPos < pos4 - windowHeight / 2 - 50) {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-team-link').addClass('btn-slider-left--active');
+	 			$('.return-menu-link').removeClass('btn-slider-left--active');
+	 			$('#return-chapter-refund-link').addClass('btn-slider-left--active');
 	 		} else {
-	 			$('.about-menu-link').removeClass('btn-slider-left--active');
-	 			$('#about-chapter-materials-link').addClass('btn-slider-left--active');
+	 			$('.return-menu-link').removeClass('btn-slider-left--active');
+	 			$('#return-chapter-reclamations-link').addClass('btn-slider-left--active');
 	 		}
 		}
 	</script>

@@ -6,22 +6,22 @@
 		<div class="sizes__index relative mobile-hidden tablet-hidden">
 			<ul class="sizes__index__menu">
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-unisex-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-unisex') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-ladies-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-ladies') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-gentlemen-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-gentlemen') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-kids-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-kids') }}
 					</button>
 				</li>
@@ -33,26 +33,22 @@
 				<ul class="sizes__index__menu flex justify-center">
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Unisexe
-							<!-- {{ __('services.sizes-unisex-short') }} -->
+							{{ __('services.sizes-unisex-short') }}
 						</button>
 					</li>
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Femmes
-							<!-- {{ __('services.sizes-ladies-short') }} -->
+							{{ __('services.sizes-ladies-short') }}
 						</button>
 					</li>
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Hommes
-							<!-- {{ __('services.sizes-gentlemen-short') }} -->
+							{{ __('services.sizes-gentlemen-short') }}
 						</button>
 					</li>
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Enfants
-							<!-- {{ __('services.sizes-kids-short') }} -->
+							{{ __('services.sizes-kids-short') }}
 						</button>
 					</li>
 				</ul>

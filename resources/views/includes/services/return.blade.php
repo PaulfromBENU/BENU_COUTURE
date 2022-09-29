@@ -19,22 +19,22 @@
 		<div class="return__index relative mobile-hidden tablet-hidden">
 			<ul class="return__index__menu">
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-article').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-aricle-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-article').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-article') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-voucher').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-voucher-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-voucher').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-voucher') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-refund').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-refund-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-refund').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-refund') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-reclamations').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-reclamations-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-reclamations').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-reclamations') }}
 					</button>
 				</li>
