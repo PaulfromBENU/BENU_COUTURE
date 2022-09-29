@@ -5,22 +5,22 @@
 		<div class="delivery__index relative mobile-hidden tablet-hidden">
 			<ul class="delivery__index__menu">
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-options').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="delivery-chapter-options-link" class="delivery-menu-link btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-options').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.delivery-options') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-fees').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="delivery-chapter-fees-link" class="delivery-menu-link btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-fees').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.delivery-fees') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-boxes').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="delivery-chapter-boxes-link" class="delivery-menu-link btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-boxes').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.delivery-boxes') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-delay').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="delivery-chapter-delay-link" class="delivery-menu-link btn-slider-left font-bold" onclick="document.getElementById('delivery-chapter-delay').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.delivery-delay') }}
 					</button>
 				</li>

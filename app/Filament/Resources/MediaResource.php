@@ -66,8 +66,8 @@ class MediaResource extends Resource
                         ->disk('public_folder')
                         ->directory('medias')
                         ->visibility('public')
-                        ->acceptedFileTypes(['application/pdf', 'image/png', 'image/jpg', 'image/jpeg'])
-                        ->maxSize(8192),
+                        ->acceptedFileTypes(['application/pdf', 'application/PDF', 'image/png', 'image/jpg', 'image/jpeg']),
+                        // ->maxSize(8192),
             ]);
     }
 

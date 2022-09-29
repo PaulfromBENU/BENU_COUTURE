@@ -158,4 +158,131 @@
 		});
 	});
 </script>
+
+@switch($page)
+	@case(__('slugs.services-delivery'))
+	<script type="text/javascript">
+		$(function() {
+			// Menu automatic activation on scroll
+		 	let optionsTop = $('#delivery-chapter-options').offset().top;
+		 	let costTop = $('#delivery-chapter-fees').offset().top;
+		 	let boxesTop = $('#delivery-chapter-boxes').offset().top;
+		 	let delayTop = $('#delivery-chapter-delay').offset().top;
+
+		 	console.log(optionsTop, costTop, boxesTop, delayTop);
+
+		 	let currentScrollPos = $(window).scrollTop();
+		 	activateDeliverySideMenu(currentScrollPos, optionsTop, costTop, boxesTop, delayTop);
+
+		 	$(window).on('scroll', function() {
+		 		currentScrollPos = $(window).scrollTop();
+		 		activateDeliverySideMenu(currentScrollPos, optionsTop, costTop, boxesTop, delayTop);
+		 	});
+		});
+
+		function activateDeliverySideMenu(topPos, pos1, pos2, pos3, pos4)
+		{
+			let windowHeight = $(window).height();
+			if (topPos < pos1 - windowHeight / 2 - 50) {
+	 			$('.delivery-menu-link').removeClass('btn-slider-left--active');
+	 		} else if(topPos < pos2 - windowHeight / 2 - 50) {
+	 			$('.delivery-menu-link').removeClass('btn-slider-left--active');
+	 			$('#delivery-chapter-options-link').addClass('btn-slider-left--active');
+	 		} else if(topPos < pos3 - windowHeight / 2 - 50) {
+	 			$('.delivery-menu-link').removeClass('btn-slider-left--active');
+	 			$('#delivery-chapter-fees-link').addClass('btn-slider-left--active');
+	 		} else if(topPos < pos4 - windowHeight / 2 - 50) {
+	 			$('.delivery-menu-link').removeClass('btn-slider-left--active');
+	 			$('#delivery-chapter-boxes-link').addClass('btn-slider-left--active');
+	 		} else {
+	 			$('.delivery-menu-link').removeClass('btn-slider-left--active');
+	 			$('#delivery-chapter-delay-link').addClass('btn-slider-left--active');
+	 		}
+		}
+	</script>
+	@break
+
+	@case(__('slugs.services-sizes'))
+	<script type="text/javascript">
+		$(function() {
+			// Menu automatic activation on scroll
+		 	let creationsTop = $('#about-chapter-creations').offset().top;
+		 	let servicesTop = $('#about-chapter-services').offset().top;
+		 	let teamTop = $('#about-chapter-team').offset().top;
+		 	let materialsTop = $('#about-chapter-materials').offset().top;
+
+		 	let currentScrollPos = $(window).scrollTop();
+		 	activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+
+		 	$(window).on('scroll', function() {
+		 		currentScrollPos = $(window).scrollTop();
+		 		activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 	});
+		});
+
+		function activateSizesSideMenu(topPos, pos1, pos2, pos3, pos4)
+		{
+			let windowHeight = $(window).height();
+			if (topPos < pos1 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 		} else if(topPos < pos2 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-creations-link').addClass('btn-slider-left--active');
+	 		} else if(topPos < pos3 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-services-link').addClass('btn-slider-left--active');
+	 		} else if(topPos < pos4 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-team-link').addClass('btn-slider-left--active');
+	 		} else {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-materials-link').addClass('btn-slider-left--active');
+	 		}
+		}
+	</script>
+	@break
+
+	@case(__('slugs.services-return'))
+	<script type="text/javascript">
+		$(function() {
+			// Menu automatic activation on scroll
+		 	let creationsTop = $('#about-chapter-creations').offset().top;
+		 	let servicesTop = $('#about-chapter-services').offset().top;
+		 	let teamTop = $('#about-chapter-team').offset().top;
+		 	let materialsTop = $('#about-chapter-materials').offset().top;
+
+		 	let currentScrollPos = $(window).scrollTop();
+		 	activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+
+		 	$(window).on('scroll', function() {
+		 		currentScrollPos = $(window).scrollTop();
+		 		activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+		 	});
+		});
+
+		function activateReturnSideMenu(topPos, pos1, pos2, pos3, pos4)
+		{
+			let windowHeight = $(window).height();
+			if (topPos < pos1 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 		} else if(topPos < pos2 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-creations-link').addClass('btn-slider-left--active');
+	 		} else if(topPos < pos3 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-services-link').addClass('btn-slider-left--active');
+	 		} else if(topPos < pos4 - windowHeight / 2 - 50) {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-team-link').addClass('btn-slider-left--active');
+	 		} else {
+	 			$('.about-menu-link').removeClass('btn-slider-left--active');
+	 			$('#about-chapter-materials-link').addClass('btn-slider-left--active');
+	 		}
+		}
+	</script>
+	@break
+
+	@default
+		@break
+@endswitch
 @endsection
