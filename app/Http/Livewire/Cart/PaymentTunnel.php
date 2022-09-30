@@ -126,6 +126,8 @@ class PaymentTunnel extends Component
             $order = Order::find($this->order_id);
             if (auth()->check()) {
                 $this->user_id = auth()->user()->id;
+                $order->user_id = $this->user_id;
+                $order->save();
             } else {
                 $this->user_id = $order->user_id;
             }
@@ -136,7 +138,7 @@ class PaymentTunnel extends Component
             if ($order->address_id == 0) {
                 $this->delivery_method = 0;
                 $this->address_chosen = 0;
-            } else {
+            } elseif(!auth()->check() || (auth()->check() && auth()->user()->addresses->contains($order->address->id))) {
                 $this->country_code = $order->address->country;
                 $this->delivery_address_chosen = 1;
                 $this->delivery_method = 1;
@@ -145,6 +147,12 @@ class PaymentTunnel extends Component
                 $this->delivery_chosen = 1;
                 $this->order_address_id = $order->address_id;
                 $this->address_name = $order->address->address_name;
+            } else {
+                $this->delivery_method = 0;
+                $this->address_chosen = 0;
+                $order->address_id = 0;
+                $order->invoice_address_id = null;
+                $order->save();
             }
 
             if ($order->invoice_address_id !== null && $order->invoice_address_id !== 0) {
