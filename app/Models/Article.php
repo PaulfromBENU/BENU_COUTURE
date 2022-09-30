@@ -52,6 +52,9 @@ class Article extends Model
 
     public function wishlistUsers()
     {
+        if(env('APP_ENV') == 'stage') {
+            return $this->belongsToMany(User::class, 'benu_common_stage.couture_article_user');
+        }
         return $this->belongsToMany(User::class, 'benu_common.couture_article_user');
     }
 
@@ -67,11 +70,9 @@ class Article extends Model
 
     public function carts()
     {
+        if(env('APP_ENV') == 'stage') {
+            return $this->belongsToMany(Cart::class, 'benu_common_stage.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');
+        }
         return $this->belongsToMany(Cart::class, 'benu_common.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');
     }
-
-    // public function creation_category()
-    // {
-    //     return $this->hasOneThrough(CreationCategory::class, Creation::class);
-    // }
 }

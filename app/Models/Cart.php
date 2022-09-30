@@ -16,7 +16,10 @@ class Cart extends Model
 
     public function couture_variations()
     {
-        return $this->belongsToMany(Article::class, 'benu_common.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');;
+        if(env('APP_ENV') == 'stage') {
+            return $this->belongsToMany(Article::class, 'benu_common_stage.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');
+        }
+        return $this->belongsToMany(Article::class, 'benu_common.couture_article_cart')->withPivot('is_gift', 'with_wrapping', 'with_card', 'card_type', 'with_message', 'message', 'with_extra_article', 'articles_number', 'value');
     }
 
     public function order()

@@ -106,6 +106,9 @@ class User extends Authenticatable implements HasName, FilamentUser
 
     public function wishlistArticles()
     {
+        if(env('APP_ENV') == 'stage') {
+            return $this->belongsToMany('App\Models\Article', 'benu_common_stage.couture_article_user');
+        }
         return $this->belongsToMany('App\Models\Article', 'benu_common.couture_article_user');
     }
 
