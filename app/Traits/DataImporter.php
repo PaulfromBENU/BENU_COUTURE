@@ -612,8 +612,8 @@ trait DataImporter {
                         if ($picture_size  == 'M(1)') {
                             $picture_size = 'M';
                         }
-                        if ($picture_size  == '2XL') {
-                            $picture_size = 'XXL';
+                        if ($picture_size  == 'XXL') {
+                            $picture_size = '2XL';
                         }
                         if ($picture_size  == 'XL(1)') {
                             $picture_size = 'XL';
@@ -1206,7 +1206,7 @@ trait DataImporter {
         $compo_leather_id = Composition::where('fabric_fr', 'Cuir')->first()->id;
 
         // Determination of care recommendation ids for attaching
-        $care_no_washing_id = CareRecommendation::where('name', 'no_washing')->first()->id;
+        // $care_no_washing_id = CareRecommendation::where('name', 'no_washing')->first()->id;
         $care_wool_id = CareRecommendation::where('name', 'cold_wash')->first()->id;
         $care_30deg_id = CareRecommendation::where('name', 'wash_30C')->first()->id;
         $care_40deg_id = CareRecommendation::where('name', 'wash_40C')->first()->id;
@@ -1293,9 +1293,9 @@ trait DataImporter {
 
                     echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
 
-                    if ($creation_lou['Pas de lavage recommandé'] == "x") {
-                        $article->care_recommendations()->attach($care_no_washing_id);
-                    }
+                    // if ($creation_lou['Pas de lavage recommandé'] == "x") {
+                    //     $article->care_recommendations()->attach($care_no_washing_id);
+                    // }
                     if ($creation_lou['Cold wash (wool program) or hand wash'] == "x") {
                         $article->care_recommendations()->attach($care_wool_id);
                     }
@@ -1403,9 +1403,9 @@ trait DataImporter {
 
                     echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
 
-                    if ($creation_lou['Pas de lavage recommandé'] == "x") {
-                        $article->care_recommendations()->attach($care_no_washing_id);
-                    }
+                    // if ($creation_lou['Pas de lavage recommandé'] == "x") {
+                    //     $article->care_recommendations()->attach($care_no_washing_id);
+                    // }
                     if ($creation_lou['Cold wash (wool program) or hand wash'] == "x") {
                         $article->care_recommendations()->attach($care_wool_id);
                     }
@@ -1530,9 +1530,9 @@ trait DataImporter {
                 }
 
                 // Care recommendations update
-                if ($article_sophie['no_washing'] == "VRAI") {
-                    $article->care_recommendations()->attach($care_no_washing_id);
-                }
+                // if ($article_sophie['no_washing'] == "VRAI") {
+                //     $article->care_recommendations()->attach($care_no_washing_id);
+                // }
                 if ($article_sophie['cold_wash'] == "VRAI") {
                     $article->care_recommendations()->attach($care_wool_id);
                 }

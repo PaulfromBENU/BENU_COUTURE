@@ -1,21 +1,13 @@
 [
   {
-    "name": "no_washing",
-    "description_fr": "Pas de lavage recommandé",
-    "description_lu": "Kee Wäsche recommandéiert",
-    "description_de": "Kein Waschen empfohlen",
-    "description_en": "No washing recommended",
-    "translation_key": "services.care-method-1-0",
-    "picture": "care_wash_cold"
-  },
-  {
     "name": "cold_wash",
     "description_fr": "Lavage à froid (programme laine) ou à la main",
     "description_lu": "Kal wäschen (Wollprogramm) oder op der Hand",
     "description_de": "Hand- oder Kaltwäsche (Wollprogramm)",
     "description_en": "Cold wash (wool program) or hand wash",
     "translation_key": "services.care-method-1-1",
-    "picture": "care_wash_cold"
+    "picture": "care_wash_cold",
+    "family": "wash"
   },
   {
     "name": "wash_30C",
@@ -24,7 +16,8 @@
     "description_de": "Bei maximal 30°C waschen",
     "description_en": "Wash at 30°C maximum",
     "translation_key": "services.care-method-1-2",
-    "picture": "care_wash_30deg"
+    "picture": "care_wash_30deg",
+    "family": "wash"
   },
   {
     "name": "wash_40C",
@@ -33,7 +26,8 @@
     "description_de": "Bei maximal 40°C waschen",
     "description_en": "Wash at 40°C maximum",
     "translation_key": "services.care-method-1-3",
-    "picture": "care_wash_40deg"
+    "picture": "care_wash_40deg",
+    "family": "wash"
   },
   {
     "name": "wash_60C",
@@ -42,7 +36,8 @@
     "description_de": "Bei maximal 60°C waschen",
     "description_en": "Wash at 60°C maximum",
     "translation_key": "services.care-method-1-4",
-    "picture": "care_wash_60deg"
+    "picture": "care_wash_60deg",
+    "family": "wash"
   },
   {
     "name": "delicate_wash",
@@ -51,7 +46,8 @@
     "description_de": "Schonwaschgang",
     "description_en": "Delicate wash",
     "translation_key": "services.care-method-1-5",
-    "picture": "care_wash_delicate"
+    "picture": "care_wash_delicate",
+    "family": "wash"
   },
   {
     "name": "avoid_spinning",
@@ -60,16 +56,8 @@
     "description_de": "Schleudern vermeiden",
     "description_en": "Avoid spinning",
     "translation_key": "services.care-method-1-6",
-    "picture": "services_care_1"
-  },
-  {
-    "name": "hand_wash",
-    "description_fr": "Lavage à la main",
-    "description_lu": "Op der Hand wäschen",
-    "description_de": "Handwäsche",
-    "description_en": "Hand wash",
-    "translation_key": "services.care-method-1-7",
-    "picture": "care_wash_delicate"
+    "picture": "services_care_1",
+    "family": "wash"
   },
   {
     "name": "not_tumble_dry",
@@ -78,7 +66,8 @@
     "description_de": "Nicht im Trockner trocknen",
     "description_en": "Do not tumble dry",
     "translation_key": "services.care-method-2-1",
-    "picture": "care_dry_none"
+    "picture": "care_dry_none",
+    "family": "dry"
   },
   {
     "name": "dry_low_temp",
@@ -87,7 +76,8 @@
     "description_de": "Schonend trocknen (niedrige Temperatur)",
     "description_en": "Dry gently (low temperature)",
     "translation_key": "services.care-method-2-2",
-    "picture": "care_dry_low"
+    "picture": "care_dry_low",
+    "family": "dry"
   },
   {
     "name": "dry_medium_temp",
@@ -96,7 +86,8 @@
     "description_de": "Normal trocknen (mittlere Temperatur)",
     "description_en": "Normal drying (medium temperature)",
     "translation_key": "services.care-method-2-3",
-    "picture": "care_dry_normal"
+    "picture": "care_dry_normal",
+    "family": "dry"
   },
   {
     "name": "dry_flat",
@@ -105,7 +96,8 @@
     "description_de": "Horizontal liegend trocknen",
     "description_en": "Dry flat",
     "translation_key": "services.care-method-2-4",
-    "picture": "care_dry_manual_hori"
+    "picture": "care_dry_manual_hori",
+    "family": "dry"
   },
   {
     "name": "not_iron",
@@ -114,7 +106,8 @@
     "description_de": "Nicht bügeln",
     "description_en": "Do not iron",
     "translation_key": "services.care-method-3-1",
-    "picture": "care_iron_none"
+    "picture": "care_iron_none",
+    "family": "iron"
   },
   {
     "name": "iron_low_temp",
@@ -123,7 +116,8 @@
     "description_de": "Bügeln bei geringer Temperatur",
     "description_en": "Iron at low temperature",
     "translation_key": "services.care-method-3-2",
-    "picture": "care_iron_low"
+    "picture": "care_iron_low",
+    "family": "iron"
   },
   {
     "name": "iron_medium_temp",
@@ -132,7 +126,8 @@
     "description_de": "Bügeln bei mittlerer Temperatur",
     "description_en": "Iron at medium temperature",
     "translation_key": "services.care-method-3-3",
-    "picture": "care_iron_medium"
+    "picture": "care_iron_medium",
+    "family": "iron"
   },
   {
     "name": "iron_high_temp",
@@ -141,6 +136,7 @@
     "description_de": "Bügeln bei hoher Temperatur",
     "description_en": "Iron at high temperature",
     "translation_key": "services.care-method-3-4",
-    "picture": "care_iron_high"
+    "picture": "care_iron_high",
+    "family": "iron"
   }
 ]

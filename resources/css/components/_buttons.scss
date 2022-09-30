@@ -152,6 +152,10 @@
 	margin-left: 10px;
 	margin-right: 10px;
 	cursor: pointer;
+	@include mobile {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	&:hover {
 		color: $primary-color;
 		background: $white;

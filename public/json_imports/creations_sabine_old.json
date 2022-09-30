@@ -2,6 +2,7 @@
   {
     "Artikel FR": "Bandeau noeud",
     "Artikel DE": "Kopfband Schleife",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "PERILIUS",
     "Unisex": "FAUX",
@@ -15,6 +16,7 @@
   {
     "Artikel FR": "Bandeau twist",
     "Artikel DE": "Kopfband Twist",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "ANABAX",
     "Unisex": "FAUX",
@@ -28,7 +30,8 @@
   {
     "Artikel FR": "Bestecki",
     "Artikel DE": "Bestecki",
-    "Category": "Home",
+    "": "",
+    "Category": "Pique-nique",
     "New BENU Name": "PANGOLIN",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -41,6 +44,7 @@
   {
     "Artikel FR": "Blouse femme été",
     "Artikel DE": "Sommerblouse",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "PINNI",
     "Unisex": "FAUX",
@@ -54,6 +58,7 @@
   {
     "Artikel FR": "Blouse femme multicolore loose en coton",
     "Artikel DE": "",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "CHIRU",
     "Unisex": "FAUX",
@@ -67,6 +72,7 @@
   {
     "Artikel FR": "Blouse Grande taille",
     "Artikel DE": "Große Blouse",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "SHRUBBY",
     "Unisex": "FAUX",
@@ -80,6 +86,7 @@
   {
     "Artikel FR": "Blouse Nouée",
     "Artikel DE": "Geknotete Blouse",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "CARETTA",
     "Unisex": "FAUX",
@@ -93,6 +100,7 @@
   {
     "Artikel FR": "Blouse Soirée Manche Courte",
     "Artikel DE": "Abendblouse Kurzarm",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "PORITES",
     "Unisex": "FAUX",
@@ -106,6 +114,7 @@
   {
     "Artikel FR": "Blouse Soirée Manche Courte Lin",
     "Artikel DE": "Abendblouse Kurzarm Leinen",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "FISGON",
     "Unisex": "FAUX",
@@ -119,6 +128,7 @@
   {
     "Artikel FR": "Blouse Soirée Manche Longue",
     "Artikel DE": "Abendblouse Langarm",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "CERVICO",
     "Unisex": "FAUX",
@@ -132,6 +142,7 @@
   {
     "Artikel FR": "Blouse Volants",
     "Artikel DE": "Volants Blouse",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "SUMATAN",
     "Unisex": "FAUX",
@@ -145,6 +156,7 @@
   {
     "Artikel FR": "Blouson 'Bomber'",
     "Artikel DE": "Bomberjacke",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "BOBOCA",
     "Unisex": "FAUX",
@@ -158,6 +170,7 @@
   {
     "Artikel FR": "Blouson 'Bomber' Milieu",
     "Artikel DE": "Bomberjacke Mittelstück",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "JENTINKI",
     "Unisex": "FAUX",
@@ -171,6 +184,7 @@
   {
     "Artikel FR": "Bonnet hiver",
     "Artikel DE": "Wintermütze",
+    "": "",
     "Category": "Bonnet",
     "New BENU Name": "PANDAGI",
     "Unisex": "VRAI",
@@ -184,20 +198,22 @@
   {
     "Artikel FR": "Bonnet Jeans",
     "Artikel DE": "Jeansmütze",
+    "": "",
     "Category": "Bonnet",
     "New BENU Name": "BERINGO",
-    "Unisex": "VRAI",
+    "Unisex": "FAUX",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
+    "Adults": "FAUX",
+    "Kids": "VRAI",
     "Accessories": "VRAI",
     "Home": "FAUX"
   },
   {
     "Artikel FR": "Bouteille Housse avec papillon",
     "Artikel DE": "Flaschenanzug",
-    "Category": "Home",
+    "": "",
+    "Category": "Emballages cadeau",
     "New BENU Name": "DUGONG",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -210,6 +226,7 @@
   {
     "Artikel FR": "Bracelet",
     "Artikel DE": "Armband",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "KELONI",
     "Unisex": "VRAI",
@@ -223,6 +240,7 @@
   {
     "Artikel FR": "Cardigan femme",
     "Artikel DE": "Frauen Cardigan",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "CAURINA",
     "Unisex": "FAUX",
@@ -236,6 +254,7 @@
   {
     "Artikel FR": "Chemise femme",
     "Artikel DE": "Damenhemd",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "MANARA",
     "Unisex": "FAUX",
@@ -249,6 +268,7 @@
   {
     "Artikel FR": "Chemise homme",
     "Artikel DE": "Herrenhemd",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "ADDAX",
     "Unisex": "FAUX",
@@ -262,6 +282,7 @@
   {
     "Artikel FR": "Chemise homme manche courte",
     "Artikel DE": "kurzärmeliges Herrenhemd",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "ANGONO",
     "Unisex": "FAUX",
@@ -275,6 +296,7 @@
   {
     "Artikel FR": "Chemise homme oversize en coton",
     "Artikel DE": "Herrenhemd",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "TARTARUGA",
     "Unisex": "FAUX",
@@ -288,6 +310,7 @@
   {
     "Artikel FR": "Chemise homme sans pochette",
     "Artikel DE": "Herrenhemd ohne Tasche",
+    "": "",
     "Category": "Blouse & Chemise",
     "New BENU Name": "ZUBO",
     "Unisex": "FAUX",
@@ -299,22 +322,10 @@
     "Home": "FAUX"
   },
   {
-    "Artikel FR": "Coussin canapé",
-    "Artikel DE": "Sofakissen",
-    "Category": "Home",
-    "New BENU Name": "",
-    "Unisex": "FAUX",
-    "Ladies": "FAUX",
-    "Men": "FAUX",
-    "Adults": "FAUX",
-    "Kids": "FAUX",
-    "Accessories": "FAUX",
-    "Home": "VRAI"
-  },
-  {
     "Artikel FR": "Coussin chien",
     "Artikel DE": "Hundekissen",
-    "Category": "Home",
+    "": "",
+    "Category": "Coussins",
     "New BENU Name": "ADRIAS",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -327,7 +338,8 @@
   {
     "Artikel FR": "Coussin cube banc grand",
     "Artikel DE": "großes Kissen Cube Bank",
-    "Category": "Home",
+    "": "",
+    "Category": "Coussins",
     "New BENU Name": "BOVARI",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -340,7 +352,8 @@
   {
     "Artikel FR": "Coussin cube banc petit",
     "Artikel DE": "kleines Kissen Cube Bank",
-    "Category": "Home",
+    "": "",
+    "Category": "Coussins",
     "New BENU Name": "COPSY",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -353,7 +366,8 @@
   {
     "Artikel FR": "Coussin housse",
     "Artikel DE": "Kissenbezug",
-    "Category": "Home",
+    "": "",
+    "Category": "Coussins",
     "New BENU Name": "BURRAMY",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -366,20 +380,8 @@
   {
     "Artikel FR": "Coussin Nuque",
     "Artikel DE": "Nackenkissen",
-    "Category": "Home",
-    "New BENU Name": "QUOKKA",
-    "Unisex": "FAUX",
-    "Ladies": "FAUX",
-    "Men": "FAUX",
-    "Adults": "FAUX",
-    "Kids": "FAUX",
-    "Accessories": "FAUX",
-    "Home": "VRAI"
-  },
-  {
-    "Artikel FR": "Coussin Nuque SANS Tirette",
-    "Artikel DE": "Nackenkissen OHNE Reissverschluss",
-    "Category": "Home",
+    "": "",
+    "Category": "Coussins",
     "New BENU Name": "QUOKKA",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -392,6 +394,7 @@
   {
     "Artikel FR": "Crop Top femme",
     "Artikel DE": "Frauen Crop Top",
+    "": "",
     "Category": "Top",
     "New BENU Name": "COZUMEL",
     "Unisex": "FAUX",
@@ -405,7 +408,8 @@
   {
     "Artikel FR": "Démaquillant Solo",
     "Artikel DE": "Makeup entfernet Solo",
-    "Category": "Home",
+    "": "",
+    "Category": "Démaquillants",
     "New BENU Name": "VAQUITA",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -418,12 +422,13 @@
   {
     "Artikel FR": "Écharpe Bonnet",
     "Artikel DE": "",
+    "": "",
     "Category": "Echarpe & Gant",
     "New BENU Name": "ZYZOMYS",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -431,12 +436,13 @@
   {
     "Artikel FR": "Écharpe „Loop”",
     "Artikel DE": "Loop Schal",
+    "": "",
     "Category": "Echarpe & Gant",
     "New BENU Name": "CRASONY",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -444,12 +450,13 @@
   {
     "Artikel FR": "Écharpe Cravate",
     "Artikel DE": "Krawattenschal",
+    "": "",
     "Category": "Echarpe & Gant",
     "New BENU Name": "LYNX",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -457,6 +464,7 @@
   {
     "Artikel FR": "Enfant Bavette",
     "Artikel DE": "Kinder Lätzchen",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "AMAZILIA",
     "Unisex": "FAUX",
@@ -470,6 +478,7 @@
   {
     "Artikel FR": "Enfant Béret",
     "Artikel DE": "Kinder Beret",
+    "": "",
     "Category": "Bonnet",
     "New BENU Name": "TRUNCA",
     "Unisex": "FAUX",
@@ -477,12 +486,13 @@
     "Men": "FAUX",
     "Adults": "FAUX",
     "Kids": "VRAI",
-    "Accessories": "VRAI",
+    "Accessories": "FAUX",
     "Home": "FAUX"
   },
   {
     "Artikel FR": "Enfant Culotte",
     "Artikel DE": "Kinder Unterhose",
+    "": "",
     "Category": "Sous-vêtement",
     "New BENU Name": "AYRESI",
     "Unisex": "FAUX",
@@ -496,6 +506,7 @@
   {
     "Artikel FR": "Enfant Gilet",
     "Artikel DE": "Kinder Weste",
+    "": "",
     "Category": "Gilet",
     "New BENU Name": "ORYX",
     "Unisex": "FAUX",
@@ -509,6 +520,7 @@
   {
     "Artikel FR": "Enfant Pantalon",
     "Artikel DE": "Kinderhose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "ONCA",
     "Unisex": "FAUX",
@@ -522,6 +534,7 @@
   {
     "Artikel FR": "Enfant Pull à capuche",
     "Artikel DE": "Kapuzenpullover Kind",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "ANGULA",
     "Unisex": "FAUX",
@@ -535,6 +548,7 @@
   {
     "Artikel FR": "Enfant Pull sans capuche",
     "Artikel DE": "Pullover ohne Kapuze Kind",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "LOXODO",
     "Unisex": "FAUX",
@@ -548,6 +562,7 @@
   {
     "Artikel FR": "Enfant Salopette",
     "Artikel DE": "Kinder Latzhose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "WALI",
     "Unisex": "FAUX",
@@ -561,6 +576,7 @@
   {
     "Artikel FR": "Enfant Toque Chef",
     "Artikel DE": "Kinder Kochmütze",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "LEOLEO",
     "Unisex": "FAUX",
@@ -574,6 +590,7 @@
   {
     "Artikel FR": "Enfant Tablier",
     "Artikel DE": "Kinder Schürze",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "PINNA",
     "Unisex": "FAUX",
@@ -587,6 +604,7 @@
   {
     "Artikel FR": "Enfant Veste",
     "Artikel DE": "Kinder Weste",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "BAIJI",
     "Unisex": "FAUX",
@@ -600,12 +618,13 @@
   {
     "Artikel FR": "Gants Mitaine",
     "Artikel DE": "Fingerlose Handschuhe",
+    "": "",
     "Category": "Echarpe & Gant",
     "New BENU Name": "MARMOTA",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -613,12 +632,13 @@
   {
     "Artikel FR": "Gants Partenaire",
     "Artikel DE": "Partner Handschuhe",
+    "": "",
     "Category": "Echarpe & Gant",
     "New BENU Name": "GLOBI",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -626,6 +646,7 @@
   {
     "Artikel FR": "Gilet Femme",
     "Artikel DE": "Damen Weste",
+    "": "",
     "Category": "Gilet",
     "New BENU Name": "SPIMO",
     "Unisex": "FAUX",
@@ -639,6 +660,7 @@
   {
     "Artikel FR": "Gilet Femme Festif",
     "Artikel DE": "Feierliche Damen Weste",
+    "": "",
     "Category": "Gilet",
     "New BENU Name": "ALTENSIS",
     "Unisex": "FAUX",
@@ -652,6 +674,7 @@
   {
     "Artikel FR": "Gilet homme",
     "Artikel DE": "Herren Weste",
+    "": "",
     "Category": "Gilet",
     "New BENU Name": "ZALO",
     "Unisex": "FAUX",
@@ -665,6 +688,7 @@
   {
     "Artikel FR": "Gilet homme ficelles",
     "Artikel DE": "Geschnürte Herrenweste",
+    "": "",
     "Category": "Gilet",
     "New BENU Name": "RHINOVA",
     "Unisex": "FAUX",
@@ -678,6 +702,7 @@
   {
     "Artikel FR": "Gilet jeans unique",
     "Artikel DE": "Jeanweste Einzelstück",
+    "": "",
     "Category": "Gilet",
     "New BENU Name": "KOALA",
     "Unisex": "FAUX",
@@ -689,9 +714,24 @@
     "Home": "FAUX"
   },
   {
+    "Artikel FR": "Housse Tablet",
+    "Artikel DE": "Tablet Hülle",
+    "": "",
+    "Category": "Sac & Trousse",
+    "New BENU Name": "TUCU",
+    "Unisex": "VRAI",
+    "Ladies": "FAUX",
+    "Men": "FAUX",
+    "Adults": "VRAI",
+    "Kids": "FAUX",
+    "Accessories": "VRAI",
+    "Home": "FAUX"
+  },
+  {
     "Artikel FR": "Jeu Delta",
     "Artikel DE": "Delta Spiel",
-    "Category": "Jeu",
+    "": "",
+    "Category": "Jeux",
     "New BENU Name": "CUVIERI",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -704,7 +744,8 @@
   {
     "Artikel FR": "Jeu Échecs",
     "Artikel DE": "Dame-Spiel",
-    "Category": "Jeu",
+    "": "",
+    "Category": "Jeux",
     "New BENU Name": "EQUUS",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -717,7 +758,8 @@
   {
     "Artikel FR": "Jeu Voyage",
     "Artikel DE": "Reisespiel",
-    "Category": "Jeu",
+    "": "",
+    "Category": "Jeux",
     "New BENU Name": "POLAR",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -730,6 +772,7 @@
   {
     "Artikel FR": "Jupe 3 chemises",
     "Artikel DE": "3 Hemd-Rock",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "BABYRUSSA",
     "Unisex": "FAUX",
@@ -743,6 +786,7 @@
   {
     "Artikel FR": "Jupe boutons courte",
     "Artikel DE": "Knopf-Rock",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "MAUI",
     "Unisex": "FAUX",
@@ -756,6 +800,7 @@
   {
     "Artikel FR": "Jupe boutons longue",
     "Artikel DE": "",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "BWA",
     "Unisex": "FAUX",
@@ -769,6 +814,7 @@
   {
     "Artikel FR": "Jupe boutons longue tirette",
     "Artikel DE": "",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "LEVUANA",
     "Unisex": "FAUX",
@@ -782,6 +828,7 @@
   {
     "Artikel FR": "Jupe Elastique",
     "Artikel DE": "Elastischer Rock",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "AROWANA",
     "Unisex": "FAUX",
@@ -795,6 +842,7 @@
   {
     "Artikel FR": "Jupe Jean/Tissus",
     "Artikel DE": "Jeans/Stoff-Rock",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "TORTO",
     "Unisex": "FAUX",
@@ -808,6 +856,7 @@
   {
     "Artikel FR": "Jupe Unique Jeans patchwork",
     "Artikel DE": "Jeansrock Patchwork Einzelstück",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "MELICO",
     "Unisex": "FAUX",
@@ -821,6 +870,7 @@
   {
     "Artikel FR": "Jupe Unique Velours",
     "Artikel DE": "Rock Einzelstück Samt",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "SWIRAF",
     "Unisex": "FAUX",
@@ -834,6 +884,7 @@
   {
     "Artikel FR": "Jupe Volant (unique)",
     "Artikel DE": "Fliegen-Rock (Einzelstück)",
+    "": "",
     "Category": "Jupe",
     "New BENU Name": "WOLLEMI",
     "Unisex": "FAUX",
@@ -847,10 +898,11 @@
   {
     "Artikel FR": "Kimono Jeans",
     "Artikel DE": "Jeans Kimono",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "CERATO",
-    "Unisex": "FAUX",
-    "Ladies": "VRAI",
+    "Unisex": "VRAI",
+    "Ladies": "FAUX",
     "Men": "FAUX",
     "Adults": "VRAI",
     "Kids": "FAUX",
@@ -860,6 +912,7 @@
   {
     "Artikel FR": "Manteau",
     "Artikel DE": "Mantel",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "CICONIA",
     "Unisex": "FAUX",
@@ -873,7 +926,8 @@
   {
     "Artikel FR": "Marque-page",
     "Artikel DE": "Lesezeichen",
-    "Category": "Home",
+    "": "",
+    "Category": "Maque-pages",
     "New BENU Name": "AVESTRU",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -886,7 +940,8 @@
   {
     "Artikel FR": "Marque-page Set",
     "Artikel DE": "Lesezeichen Set",
-    "Category": "Home",
+    "": "",
+    "Category": "Maque-pages",
     "New BENU Name": "PAPHIO",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -897,21 +952,9 @@
     "Home": "VRAI"
   },
   {
-    "Artikel FR": "Masque BASIC (Coton)",
-    "Artikel DE": "BASIC (Wolle)",
-    "Category": "Masque",
-    "New BENU Name": "",
-    "Unisex": "VRAI",
-    "Ladies": "FAUX",
-    "Men": "FAUX",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
-    "Accessories": "VRAI",
-    "Home": "FAUX"
-  },
-  {
     "Artikel FR": "Masque BASIC (Élastiques)",
     "Artikel DE": "BASIC (Elastisch)",
+    "": "",
     "Category": "Masque",
     "New BENU Name": "LURAISI",
     "Unisex": "VRAI",
@@ -925,6 +968,7 @@
   {
     "Artikel FR": "Masque BASIC (KIDS)",
     "Artikel DE": "BASIC (Kinder)",
+    "": "",
     "Category": "Masque",
     "New BENU Name": "CLARA",
     "Unisex": "FAUX",
@@ -936,9 +980,24 @@
     "Home": "FAUX"
   },
   {
+    "Artikel FR": "Masque de nuit",
+    "Artikel DE": "Schlafmaske groß",
+    "": "",
+    "Category": "Masques de nuit",
+    "New BENU Name": "NARBATU",
+    "Unisex": "FAUX",
+    "Ladies": "FAUX",
+    "Men": "FAUX",
+    "Adults": "FAUX",
+    "Kids": "FAUX",
+    "Accessories": "FAUX",
+    "Home": "VRAI"
+  },
+  {
     "Artikel FR": "Masque de sommeil",
-    "Artikel DE": "Schlafmaske",
-    "Category": "Home",
+    "Artikel DE": "Schlafmaske klein",
+    "": "",
+    "Category": "Masques de nuit",
     "New BENU Name": "PERAMELES",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -951,6 +1010,7 @@
   {
     "Artikel FR": "Masque ERGO (Coton)",
     "Artikel DE": "ERGO (Wolle)",
+    "": "",
     "Category": "Masque",
     "New BENU Name": "MARAENA",
     "Unisex": "VRAI",
@@ -962,21 +1022,9 @@
     "Home": "FAUX"
   },
   {
-    "Artikel FR": "Masque ERGO (Élastique)",
-    "Artikel DE": "ERGO (Elastisch)",
-    "Category": "Masque",
-    "New BENU Name": "",
-    "Unisex": "VRAI",
-    "Ladies": "FAUX",
-    "Men": "FAUX",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
-    "Accessories": "VRAI",
-    "Home": "FAUX"
-  },
-  {
     "Artikel FR": "Masque ERGO (KIDS)",
     "Artikel DE": "ERGO (Kinder)",
+    "": "",
     "Category": "Masque",
     "New BENU Name": "TAMARAU",
     "Unisex": "FAUX",
@@ -990,6 +1038,7 @@
   {
     "Artikel FR": "Masque SET",
     "Artikel DE": "Masken SET",
+    "": "",
     "Category": "Masque",
     "New BENU Name": "ACROMATA",
     "Unisex": "VRAI",
@@ -1003,6 +1052,7 @@
   {
     "Artikel FR": "Palton Jacket",
     "Artikel DE": "Palton Jacke",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "CALADENIA",
     "Unisex": "FAUX",
@@ -1016,6 +1066,7 @@
   {
     "Artikel FR": "Pantalon à bande",
     "Artikel DE": "Band hose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "SAOLA",
     "Unisex": "FAUX",
@@ -1029,6 +1080,7 @@
   {
     "Artikel FR": "Pantalon boutons",
     "Artikel DE": "Knopfhose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "APROTELES",
     "Unisex": "FAUX",
@@ -1042,12 +1094,13 @@
   {
     "Artikel FR": "Pantalon carré",
     "Artikel DE": "Hose Karré",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "CRISTATU",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "FAUX",
     "Home": "FAUX"
@@ -1055,6 +1108,7 @@
   {
     "Artikel FR": "Pantalon ceinture",
     "Artikel DE": "Gürtelhose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "VARIANI",
     "Unisex": "FAUX",
@@ -1068,6 +1122,7 @@
   {
     "Artikel FR": "Pantalon Été 2021",
     "Artikel DE": "Sommer Hose 2021",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "TULO",
     "Unisex": "FAUX",
@@ -1081,6 +1136,7 @@
   {
     "Artikel FR": "Pantalon homme",
     "Artikel DE": "Herrenhose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "LEWINI",
     "Unisex": "FAUX",
@@ -1092,8 +1148,37 @@
     "Home": "FAUX"
   },
   {
+    "Artikel FR": "Pantalon homme cargo-style",
+    "Artikel DE": "Herrenhose cargo-Style",
+    "": "",
+    "Category": "Pantalon",
+    "New BENU Name": "NARCON",
+    "Unisex": "FAUX",
+    "Ladies": "FAUX",
+    "Men": "VRAI",
+    "Adults": "VRAI",
+    "Kids": "FAUX",
+    "Accessories": "FAUX",
+    "Home": "FAUX"
+  },
+  {
+    "Artikel FR": "Pantalon homme casual-style",
+    "Artikel DE": "Herrenhose casual-style",
+    "": "",
+    "Category": "Pantalon",
+    "New BENU Name": "INDINA",
+    "Unisex": "FAUX",
+    "Ladies": "FAUX",
+    "Men": "VRAI",
+    "Adults": "VRAI",
+    "Kids": "FAUX",
+    "Accessories": "FAUX",
+    "Home": "FAUX"
+  },
+  {
     "Artikel FR": "Pantalon Jeans femme",
     "Artikel DE": "Damen Jeanshose",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "BICOFINO",
     "Unisex": "FAUX",
@@ -1107,6 +1192,7 @@
   {
     "Artikel FR": "Pantalon Jeans Patchwork unique",
     "Artikel DE": "Damen Jeanshose Patchwork Einzelstück",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "BOSPRI",
     "Unisex": "FAUX",
@@ -1120,12 +1206,13 @@
   {
     "Artikel FR": "PC Housse",
     "Artikel DE": "PC Schutzhülle",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "RHINO",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1133,12 +1220,13 @@
   {
     "Artikel FR": "PC Poche",
     "Artikel DE": "PC Tasche",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "MABECO",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1146,6 +1234,7 @@
   {
     "Artikel FR": "Perfecto",
     "Artikel DE": "Perfecto",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "SONORA",
     "Unisex": "FAUX",
@@ -1159,12 +1248,13 @@
   {
     "Artikel FR": "Poche Ceinture",
     "Artikel DE": "",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "LAPWING",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1172,7 +1262,8 @@
   {
     "Artikel FR": "Porte-clef",
     "Artikel DE": "Schlüsseltasche",
-    "Category": "Home",
+    "": "",
+    "Category": "Porte-Monnaies",
     "New BENU Name": "ARMADILLO",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -1185,6 +1276,7 @@
   {
     "Artikel FR": "Pull Col Roulé",
     "Artikel DE": "",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "BATIS",
     "Unisex": "FAUX",
@@ -1198,6 +1290,7 @@
   {
     "Artikel FR": "Pull Jean",
     "Artikel DE": "Jeans pullover",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "JOPHO",
     "Unisex": "FAUX",
@@ -1211,6 +1304,7 @@
   {
     "Artikel FR": "Pull Oversize à capuche",
     "Artikel DE": "",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "EUBALA",
     "Unisex": "FAUX",
@@ -1224,6 +1318,7 @@
   {
     "Artikel FR": "Pull manches balloon",
     "Artikel DE": "",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "JANDIA",
     "Unisex": "FAUX",
@@ -1237,6 +1332,7 @@
   {
     "Artikel FR": "Pull retro",
     "Artikel DE": "Retro pullover",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "ANTILA",
     "Unisex": "FAUX",
@@ -1250,21 +1346,9 @@
   {
     "Artikel FR": "Pull sans capuche adulte",
     "Artikel DE": "Pullover ohne Kapuze",
+    "": "",
     "Category": "Pull",
     "New BENU Name": "OLIVA",
-    "Unisex": "VRAI",
-    "Ladies": "FAUX",
-    "Men": "FAUX",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
-    "Accessories": "FAUX",
-    "Home": "FAUX"
-  },
-  {
-    "Artikel FR": "Robe chemise",
-    "Artikel DE": "",
-    "Category": "Robe",
-    "New BENU Name": "AYEAYE",
     "Unisex": "FAUX",
     "Ladies": "VRAI",
     "Men": "FAUX",
@@ -1274,8 +1358,23 @@
     "Home": "FAUX"
   },
   {
+    "Artikel FR": "Pull Sweat Unisex",
+    "Artikel DE": "Sweat-Pullover unisex",
+    "": "",
+    "Category": "Pull",
+    "New BENU Name": "MITTI",
+    "Unisex": "VRAI",
+    "Ladies": "FAUX",
+    "Men": "FAUX",
+    "Adults": "VRAI",
+    "Kids": "FAUX",
+    "Accessories": "FAUX",
+    "Home": "FAUX"
+  },
+  {
     "Artikel FR": "Robe dos nu courte",
     "Artikel DE": "Kurzes rückenfreies Kleid",
+    "": "",
     "Category": "Robe",
     "New BENU Name": "REDO",
     "Unisex": "FAUX",
@@ -1289,6 +1388,7 @@
   {
     "Artikel FR": "Robe été ficelles courte",
     "Artikel DE": "kurzes Sommerkleid mit Spaghettiträger",
+    "": "",
     "Category": "Robe",
     "New BENU Name": "ACACIA",
     "Unisex": "FAUX",
@@ -1302,8 +1402,9 @@
   {
     "Artikel FR": "Robe Katja",
     "Artikel DE": "Katja Kleid",
+    "": "",
     "Category": "Robe",
-    "New BENU Name": "PRETTYWILD",
+    "New BENU Name": "MONAN",
     "Unisex": "FAUX",
     "Ladies": "VRAI",
     "Men": "FAUX",
@@ -1315,8 +1416,9 @@
   {
     "Artikel FR": "Robe portefeuille",
     "Artikel DE": "Geldbeutel Kleid",
+    "": "",
     "Category": "Robe",
-    "New BENU Name": "WATERDOG",
+    "New BENU Name": "NECTURA",
     "Unisex": "FAUX",
     "Ladies": "VRAI",
     "Men": "FAUX",
@@ -1328,6 +1430,7 @@
   {
     "Artikel FR": "Robe salopette",
     "Artikel DE": "Latzhosenkleid",
+    "": "",
     "Category": "Robe",
     "New BENU Name": "LEARI",
     "Unisex": "FAUX",
@@ -1341,12 +1444,13 @@
   {
     "Artikel FR": "Sac à dos",
     "Artikel DE": "Rucksack",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "PAN",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1354,12 +1458,13 @@
   {
     "Artikel FR": "Sac à main",
     "Artikel DE": "Handtasche",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "TARZAN",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1367,12 +1472,13 @@
   {
     "Artikel FR": "Sac à main & trousse",
     "Artikel DE": "Handtasche mit Mäppchen",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "PINTA",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1380,25 +1486,27 @@
   {
     "Artikel FR": "Sac banane",
     "Artikel DE": "Gürteltasche",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "CHARA",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
-    "Kids": "FAUX",
+    "Adults": "VRAI",
+    "Kids": "VRAI",
     "Accessories": "VRAI",
     "Home": "FAUX"
   },
   {
     "Artikel FR": "Sac clé unique noir",
     "Artikel DE": "Schwarze Tasche mit Schlüsselkette",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "TANU",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1406,12 +1514,13 @@
   {
     "Artikel FR": "Sac double",
     "Artikel DE": "Sack doppelt",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "TRAMPI",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1419,12 +1528,13 @@
   {
     "Artikel FR": "Sac épais",
     "Artikel DE": "Sack dick",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "BANTENG",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1432,12 +1542,13 @@
   {
     "Artikel FR": "Sac plat",
     "Artikel DE": "Sack flach (Einkaufstasche)",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "KANGOURAT",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1445,12 +1556,13 @@
   {
     "Artikel FR": "Sac plat Retournable",
     "Artikel DE": "Umdrehbarer Sack flach",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "MELANEMA",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1458,6 +1570,7 @@
   {
     "Artikel FR": "Sac tarte",
     "Artikel DE": "Tortentasche",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "MYAKA",
     "Unisex": "FAUX",
@@ -1465,13 +1578,14 @@
     "Men": "FAUX",
     "Adults": "FAUX",
     "Kids": "FAUX",
-    "Accessories": "VRAI",
-    "Home": "FAUX"
+    "Accessories": "FAUX",
+    "Home": "VRAI"
   },
   {
     "Artikel FR": "Serviette Solo",
     "Artikel DE": "Solo Servietten",
-    "Category": "Home",
+    "": "",
+    "Category": "Pique-nique",
     "New BENU Name": "ECAUDA",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -1484,6 +1598,7 @@
   {
     "Artikel FR": "Short Bord Coloré",
     "Artikel DE": "Short mit farbigem Rand",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "MACROPUS",
     "Unisex": "FAUX",
@@ -1497,6 +1612,7 @@
   {
     "Artikel FR": "Short Créatif",
     "Artikel DE": "Kreativer Short",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "LEPTOX",
     "Unisex": "FAUX",
@@ -1510,6 +1626,7 @@
   {
     "Artikel FR": "Short Jupe",
     "Artikel DE": "Short-Rock",
+    "": "",
     "Category": "Pantalon",
     "New BENU Name": "CYPRINO",
     "Unisex": "FAUX",
@@ -1521,21 +1638,9 @@
     "Home": "FAUX"
   },
   {
-    "Artikel FR": "Short Unique",
-    "Artikel DE": "Unikat Short",
-    "Category": "Pantalon",
-    "New BENU Name": "",
-    "Unisex": "FAUX",
-    "Ladies": "FAUX",
-    "Men": "VRAI",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
-    "Accessories": "FAUX",
-    "Home": "FAUX"
-  },
-  {
     "Artikel FR": "Slips",
     "Artikel DE": "Unterhosen",
+    "": "",
     "Category": "Sous-vêtement",
     "New BENU Name": "GECKO",
     "Unisex": "FAUX",
@@ -1547,36 +1652,11 @@
     "Home": "FAUX"
   },
   {
-    "Artikel FR": "Slips Femme",
-    "Artikel DE": "Frauen Unterhosen",
-    "Category": "Sous-vêtement",
-    "New BENU Name": "KAGU",
-    "Unisex": "FAUX",
-    "Ladies": "VRAI",
-    "Men": "FAUX",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
-    "Accessories": "FAUX",
-    "Home": "FAUX"
-  },
-  {
-    "Artikel FR": "Slips 3 pièces Femme + Homme",
-    "Artikel DE": "Unterhosen 3 stück Frau + Mann",
-    "Category": "Sous-vêtement",
-    "New BENU Name": "RAINBO set",
-    "Unisex": "VRAI",
-    "Ladies": "FAUX",
-    "Men": "FAUX",
-    "Adults": "VRAI",
-    "Kids": "FAUX",
-    "Accessories": "FAUX",
-    "Home": "FAUX"
-  },
-  {
-    "Artikel FR": "Slip Femme Boxershort",
-    "Artikel DE": "Unterhose Frau Boxershort",
-    "Category": "Sous-vêtement",
-    "New BENU Name": "RAINBO women",
+    "Artikel FR": "Short Femme Boxershort",
+    "Artikel DE": "Short Frau Boxershort",
+    "": "",
+    "Category": "Pantalon",
+    "New BENU Name": "RAINBO WOMEN",
     "Unisex": "FAUX",
     "Ladies": "VRAI",
     "Men": "FAUX",
@@ -1588,8 +1668,9 @@
   {
     "Artikel FR": "Slip Homme Boxershort",
     "Artikel DE": "Unterhose Mann Boxershort",
+    "": "",
     "Category": "Sous-vêtement",
-    "New BENU Name": "RAINBO men",
+    "New BENU Name": "RAINBO MEN",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
     "Men": "VRAI",
@@ -1601,6 +1682,7 @@
   {
     "Artikel FR": "T-Shirt Chemise",
     "Artikel DE": "Hemd T-Shirt",
+    "": "",
     "Category": "T-shirt",
     "New BENU Name": "DRYOCO",
     "Unisex": "FAUX",
@@ -1614,6 +1696,7 @@
   {
     "Artikel FR": "T-Shirt femme Easy",
     "Artikel DE": "Easy Frauen T-Shirt",
+    "": "",
     "Category": "T-shirt",
     "New BENU Name": "MEROU",
     "Unisex": "FAUX",
@@ -1627,12 +1710,13 @@
   {
     "Artikel FR": "T-Shirt femme nouveau",
     "Artikel DE": "Frauen T-shirt",
+    "": "",
     "Category": "T-shirt",
     "New BENU Name": "OKA",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "FAUX",
     "Home": "FAUX"
@@ -1640,6 +1724,7 @@
   {
     "Artikel FR": "T-Shirt homme",
     "Artikel DE": "Herren T-Shirt",
+    "": "",
     "Category": "T-shirt",
     "New BENU Name": "MALATI",
     "Unisex": "FAUX",
@@ -1653,6 +1738,7 @@
   {
     "Artikel FR": "T-Shirt homme à Capuche",
     "Artikel DE": "Kapuzen T-Shirt",
+    "": "",
     "Category": "T-shirt",
     "New BENU Name": "PANDARO",
     "Unisex": "FAUX",
@@ -1666,6 +1752,7 @@
   {
     "Artikel FR": "T-Shirt homme blanc",
     "Artikel DE": "Herren T-shirt Weiß",
+    "": "",
     "Category": "T-shirt",
     "New BENU Name": "MUSTELES",
     "Unisex": "FAUX",
@@ -1679,6 +1766,7 @@
   {
     "Artikel FR": "Tablier Chemise",
     "Artikel DE": "Hemd-Schürze",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "SELACHI",
     "Unisex": "VRAI",
@@ -1692,6 +1780,7 @@
   {
     "Artikel FR": "Tablier Jeunes",
     "Artikel DE": "Schürze Jugendliche",
+    "": "",
     "Category": "Accessoire",
     "New BENU Name": "SCIMOR",
     "Unisex": "FAUX",
@@ -1705,7 +1794,8 @@
   {
     "Artikel FR": "Tortue",
     "Artikel DE": "Schildkröte",
-    "Category": "Home",
+    "": "",
+    "Category": "Coussins",
     "New BENU Name": "KARETTO",
     "Unisex": "FAUX",
     "Ladies": "FAUX",
@@ -1718,12 +1808,13 @@
   {
     "Artikel FR": "Tote Bag",
     "Artikel DE": "Tote Bag",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "LOWLA",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "VRAI",
     "Home": "FAUX"
@@ -1731,32 +1822,35 @@
   {
     "Artikel FR": "Trousse patchwork Jeans",
     "Artikel DE": "Patchwork Mäppchen Jeans",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "MARGECKO",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
-    "Kids": "FAUX",
+    "Adults": "VRAI",
+    "Kids": "VRAI",
     "Accessories": "VRAI",
     "Home": "FAUX"
   },
   {
     "Artikel FR": "Trousse plate",
     "Artikel DE": "Flaches Mäppchen",
+    "": "",
     "Category": "Sac & Trousse",
     "New BENU Name": "ORINOKO",
-    "Unisex": "FAUX",
+    "Unisex": "VRAI",
     "Ladies": "FAUX",
     "Men": "FAUX",
-    "Adults": "FAUX",
-    "Kids": "FAUX",
+    "Adults": "VRAI",
+    "Kids": "VRAI",
     "Accessories": "VRAI",
     "Home": "FAUX"
   },
   {
     "Artikel FR": "Veste courte unique",
-    "Artikel DE": "Kurze Damenjacke  Einzelstück",
+    "Artikel DE": "Kurze Damenjacke  Einzelstück",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "MOHOBI",
     "Unisex": "FAUX",
@@ -1770,6 +1864,7 @@
   {
     "Artikel FR": "Veste Foulard été",
     "Artikel DE": "Sommerliche Jacke",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "MAGDALENA",
     "Unisex": "FAUX",
@@ -1783,6 +1878,7 @@
   {
     "Artikel FR": "Veste Homme",
     "Artikel DE": "Herren Jacke",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "CENTRAVIS",
     "Unisex": "FAUX",
@@ -1796,12 +1892,27 @@
   {
     "Artikel FR": "Veste Jean",
     "Artikel DE": "Jeansjacke",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "SUTTKUSI",
     "Unisex": "FAUX",
-    "Ladies": "FAUX",
+    "Ladies": "VRAI",
     "Men": "FAUX",
-    "Adults": "FAUX",
+    "Adults": "VRAI",
+    "Kids": "FAUX",
+    "Accessories": "FAUX",
+    "Home": "FAUX"
+  },
+  {
+    "Artikel FR": "Veste longue",
+    "Artikel DE": "lange Damenweste",
+    "": "",
+    "Category": "Blouson & Veste",
+    "New BENU Name": "IRRORA",
+    "Unisex": "FAUX",
+    "Ladies": "VRAI",
+    "Men": "FAUX",
+    "Adults": "VRAI",
     "Kids": "FAUX",
     "Accessories": "FAUX",
     "Home": "FAUX"
@@ -1809,6 +1920,7 @@
   {
     "Artikel FR": "Veston homme",
     "Artikel DE": "Herrensakko",
+    "": "",
     "Category": "Blouson & Veste",
     "New BENU Name": "WOODSTAR",
     "Unisex": "FAUX",

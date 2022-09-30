@@ -2,6 +2,7 @@
   {
     "name": "Acacia-017",
     "photo_link": "dress short_summer red_white_blue_green_fish_pattern 1 back 3 06.09.2021 One_piece Women S",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -52,6 +53,7 @@
   {
     "name": "Acacia-016",
     "photo_link": "dress short_summer green_red_white_dotted 1 front 1 06.09.2021 One_piece Women XL",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -102,6 +104,7 @@
   {
     "name": "Acacia-015",
     "photo_link": "dress short_summer green_purple_floral_pattern 1 back 4 06.09.2021 One_piece Women 3XL",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -152,6 +155,7 @@
   {
     "name": "Acacia-014",
     "photo_link": "dress short_summer cream_lightblue_floral 1 front 1 06.09.2021 One_piece Women XS",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -202,6 +206,7 @@
   {
     "name": "Acacia-013",
     "photo_link": "dress short_summer cream_green_striped 1 front 1 06.09.2021 One_piece Women M",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -252,6 +257,7 @@
   {
     "name": "Acacia-012",
     "photo_link": "dress short_summer cream_black_orange_flowers 1 front 1 06.09.2021 One_piece Women S",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -302,6 +308,7 @@
   {
     "name": "Acacia-011",
     "photo_link": "dress short_summer blue_white_green_floral_pattern 1 front 1 06.09.2021 One_piece Women S",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -352,6 +359,7 @@
   {
     "name": "Acacia-002",
     "photo_link": "dress short_summer black_white_zebra_dotted_pattern 1 back 4 06.09.2021 One_piece Women L",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -402,6 +410,7 @@
   {
     "name": "Acacia-001",
     "photo_link": "dress short_summer black_red_white_yellow_floral_pattern 1 back 3 06.09.2021 One_piece Women M",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -452,6 +461,7 @@
   {
     "name": "",
     "photo_link": "dress short_summer babyblue_black_darkblue_beige_l…attern 1 front 1 06.09.2021 One_piece Women XL",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -502,6 +512,7 @@
   {
     "name": "Acacia-008",
     "photo_link": "dress short_summer black_orange_watermelon_pattern 1 front 1 06.09.2021 One_piece Women L",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -552,6 +563,7 @@
   {
     "name": "Acacia-007",
     "photo_link": "dress short_summer beige_black_leopard_pattern 1 front 1 06.09.2021 One_piece Women 2XL",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -602,7 +614,8 @@
   {
     "name": "",
     "photo_link": "dress long_summer_dress colorful_flower_pattern 1 back 3 13.01.2021 One_piece Women S",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "NECTURA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -652,7 +665,8 @@
   {
     "name": "",
     "photo_link": "dress long_summer_dress floral_pattern 1 front 1 13.01.2021 One_piece Women M",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "NECTURA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -702,7 +716,8 @@
   {
     "name": "",
     "photo_link": "dress long_summer_dress lightblue_yellow_paisley 1 front 1 13.01.2021 One_piece Women S",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "NECTURA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -752,7 +767,8 @@
   {
     "name": "",
     "photo_link": "dress long_summer_dress lightblue_pink_floral_pattern 1 front 1 13.01.2021 One_piece Women XS",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "NECTURA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -802,7 +818,8 @@
   {
     "name": "",
     "photo_link": "dress long_summer_dress red_yellow_fantasy_pattern 1 front 1 13.01.2021 One_piece Women S",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "NECTURA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -850,8 +867,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "Wali-007",
+    "name": "Cuvieri-007",
     "photo_link": "overall with_pocket jeans_purple_black_yellow_striped 1 front 1 16.02.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -900,8 +918,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "Wali-006",
+    "name": "Cuvieri-006",
     "photo_link": "overall with_pocket jeans_green_leaves 1 front 1 16.02.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -950,8 +969,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "Wali-002",
+    "name": "Cuvieri-002",
     "photo_link": "overall with_pocket bordeaux_yellow_squared 1 front_detail_couture 2 16.02.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1000,8 +1020,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "Wali-005",
+    "name": "Cuvieri-005",
     "photo_link": "overall with_pocket jeans_black_white_houndstooth 1 front 1 16.02.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1050,8 +1071,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "Wali-001",
+    "name": "Cuvieri-001",
     "photo_link": "overall with_pocket black_red_yellow_striped 1 front 1 15.11.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1102,6 +1124,7 @@
   {
     "name": "",
     "photo_link": "overall with_pocket wool_grey_red_squared 1 front 1 16.02.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1150,8 +1173,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "Wali-008",
+    "name": "Cuvieri-008",
     "photo_link": "overall with_pocket white_floral_squared_pattern 1 front 1 16.02.2021 Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1202,6 +1226,7 @@
   {
     "name": "Baiji-007",
     "photo_link": "jacket kids_with_buttons salmon_darkblue 1 front 1 13.01.2021 Up Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1250,9 +1275,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Zalo-005",
     "photo_link": "vest no_open_side black_brown_squared 1 front 1 08.01.2021 Up Men M",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "ZALO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1300,9 +1326,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Zalo-007",
     "photo_link": "vest no_open_side bordeaux_black_houndstooth 1 front 1 14.01.2022 Up Men L",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "ZALO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1352,7 +1379,8 @@
   {
     "name": "",
     "photo_link": "vest_no_open_side jeans_navy 1 front 1 16.02.2021 Up Women S",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "ZALO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1400,9 +1428,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Spimo-009",
     "photo_link": "vest women grey_black_dotted front 03.03.2021 Up Women XS",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "SPIMO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1450,9 +1479,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Spimo-006",
     "photo_link": "vest women brown_red_navy_checkered front 03.03.2021 Up Women 2XL",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "SPIMO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1500,9 +1530,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Spimo-003",
     "photo_link": "vest women beige_militarygreen_checkered 1 front 1 03.03.2021 Up Women S",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "SPIMO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1550,9 +1581,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Spimo-002",
     "photo_link": "vest women beige_brown_checkered front 03.03.2021 Up Women XS",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "SPIMO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1600,9 +1632,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Redo-006",
     "photo_link": "dress backless orange_green_yellow_floral_pattern 1 front 1 12.01.2022 One_piece Women 2XL",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "REDO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1650,9 +1683,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Redo-003",
     "photo_link": "dress backless bordeaux_grey_yellow_flowers 1 front 1 12.01.2022 One_piece Women XL",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "REDO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1700,9 +1734,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Redo-002",
     "photo_link": "dress backless black_white_turquoise_floral_pattern 1 front 1 12.01.2022 One_piece Women M",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "REDO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1750,9 +1785,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Redo-004",
     "photo_link": "dress backless black_turquoise_blue_drops 1 back 4 12.01.2022 One_piece Women 2XL",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "REDO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1800,9 +1836,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Redo-001",
     "photo_link": "dress backless beige_olive 1 front 1 12.01.2022 One_piece Women S",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "REDO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1850,9 +1887,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Redo-007",
     "photo_link": "dress backless rose_olive_flowers 1 front 1 12.01.2022 One_piece Women XS",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "REDO",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -1902,6 +1940,7 @@
   {
     "name": "",
     "photo_link": "pullover kids_arrow blue_beige_striped_blue_blue 1 front 1 05.07.2019 Up Kids 0",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -1950,9 +1989,10 @@
     "acrylic": "VRAI"
   },
   {
-    "name": "",
+    "name": "Boboca-001",
     "photo_link": "jacket bomber_2_zippers beige_brown_velvet 1 front 1 24.10.2019 Up Women 4XL",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "BOBOCA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -2000,9 +2040,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Boboca-008",
     "photo_link": "jacket bomber_2_zippers lightpurple_navy_grey_canvas 1 front 1 24.10.2019 Up Women 5XL",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "BOBOCA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -2050,9 +2091,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Boboca-006",
     "photo_link": "jacket bomber_2_zippers blue_knitted_jean_lightblue 1 front 1 17.04.2019 Up Women 0",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "BOBOCA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -2100,9 +2142,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Rhinova-005",
     "photo_link": "vest open_side jean_black_mintgreen 1 front 1 17.04.2019 Up Men M",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "RHINOVA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -2152,7 +2195,8 @@
   {
     "name": "",
     "photo_link": "vest open_side beige_squared_red_white_beige 1 front 1 17.04.2019 Up Men M",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "RHINOVA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -2200,9 +2244,10 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Rhinova-001",
     "photo_link": "vest open_side black_brown_squared_brown 1 front 1 17.04.2019 Up Men M",
-    "creation_name": "",
+    "Type": "",
+    "creation_name": "RHINOVA",
     "size": "size",
     "color": "Color",
     "mask_stripes": "FAUX",
@@ -2250,8 +2295,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Rhinova-002",
     "photo_link": "vest open_side black_militarygreen_beige_red_squared 1 front 1 10.07.2019 Up Men XL",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2300,8 +2346,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Rhinova-003",
     "photo_link": "vest open_side darkblue_beige_darkblue 1 front 1 17.04.2019 Up Men M",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2350,8 +2397,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Rhinova-004",
     "photo_link": "vest open_side darkblue_black_jean_lightblue 1 front 1 17.04.2019 Up Men M",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2400,8 +2448,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Jentinki-001",
     "photo_link": "jacket replacement_pieces black_gold 1 front 1 19.05.2022 Up Women unique",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2450,8 +2499,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Jentinki-002",
     "photo_link": "jacket replacement_pieces black_green 1 front 1 19.05.2022 Up Women unique",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2500,8 +2550,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Jentinki-003",
     "photo_link": "jacket replacement_pieces floral_darkgreen 1 front 1 19.05.2022 Up Women unique",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2550,8 +2601,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Jentinki-004",
     "photo_link": "jacket replacement_pieces floral_jeans 1 front 1 19.05.2022 Up Women unique",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2600,8 +2652,9 @@
     "acrylic": "FAUX"
   },
   {
-    "name": "",
+    "name": "Jentinki-005",
     "photo_link": "jacket replacement_pieces floral_white 1 front 1 19.05.2022 Up Women unique",
+    "Type": "",
     "creation_name": "",
     "size": "size",
     "color": "Color",
@@ -2652,6 +2705,7 @@
   {
     "name": "Caladenia-005",
     "photo_link": "blazer modified darkblue_jeans 1 front 1 09.04.2021 Up Women L.jpg",
+    "Type": "",
     "creation_name": "Caladenia hastata",
     "size": "L (adults)",
     "color": "Color",
@@ -2702,6 +2756,7 @@
   {
     "name": "Caladenia-006",
     "photo_link": "blazer modified jeans_blue_black_fantasy_pattern 1 front 1 31.03.2021 Up Women S.jpg",
+    "Type": "",
     "creation_name": "Caladenia hastata",
     "size": "S (adults)",
     "color": "Color",
@@ -2752,6 +2807,7 @@
   {
     "name": "Woodstar-003",
     "photo_link": "blazer suit_modified brown_beige 1 front 1 03.12.2020 Up Men XL.jpg",
+    "Type": "",
     "creation_name": "Eulidia yarrellii",
     "size": "XL (adults)",
     "color": "Color",
@@ -2802,6 +2858,7 @@
   {
     "name": "Woodstar-004",
     "photo_link": "blazer suit_modified brown_plaid_green 1 front 1 25.10.2019 Up Men XL.jpg",
+    "Type": "",
     "creation_name": "Eulidia yarrellii",
     "size": "XL (adults)",
     "color": "Color",
@@ -2852,6 +2909,7 @@
   {
     "name": "Woodstar-005",
     "photo_link": "blazer suit_modified grey_black 1 front 1 30.04.2022 Up Men XL.jpg",
+    "Type": "",
     "creation_name": "Eulidia yarrellii",
     "size": "XL (adults)",
     "color": "Color",
@@ -2902,6 +2960,7 @@
   {
     "name": "Ciconia-002",
     "photo_link": "jacket winter beige_white_checkered 1 front 1 09.04.2021 One_piece Women M.jpg",
+    "Type": "",
     "creation_name": "Ciconia",
     "size": "M (adults)",
     "color": "Color",
@@ -2952,6 +3011,7 @@
   {
     "name": "",
     "photo_link": "jacket jeans blue_green_beige 1 front 1 30.04.2022 Up Women XL.jpg",
+    "Type": "",
     "creation_name": "Alabama Sturgeon",
     "size": "XL (adults)",
     "color": "Color",
@@ -3002,6 +3062,7 @@
   {
     "name": "",
     "photo_link": "jacket jeans darkblue_white 1 front 1 30.04.2022 Up Women S.jpg",
+    "Type": "",
     "creation_name": "Alabama Sturgeon",
     "size": "S (adults)",
     "color": "Color",
@@ -3052,6 +3113,7 @@
   {
     "name": "",
     "photo_link": "jacket jeans darkblue_white 1 front 1 30.04.2022 Up Women S.jpg",
+    "Type": "",
     "creation_name": "Alabama Sturgeon",
     "size": "XS (adults)",
     "color": "Color",
@@ -3102,6 +3164,7 @@
   {
     "name": "Batis-006",
     "photo_link": "pullover turtleneck grey_pink_yellow 1 front 1 13.03.2021 Up Women S.jpg",
+    "Type": "",
     "creation_name": "Batis",
     "size": "S (adults)",
     "color": "Color",
@@ -3152,6 +3215,7 @@
   {
     "name": "Batis-007",
     "photo_link": "pullover turtleneck pink_grey_blue 1 front 1 13.03.2021 Up Women M.jpg",
+    "Type": "",
     "creation_name": "Batis",
     "size": "M (adults)",
     "color": "Color",
@@ -3202,6 +3266,7 @@
   {
     "name": "Manara-004",
     "photo_link": "blouse silk blue_yellow_orange_pink 1 front 1 02.03.2022 Up Women M.jpg",
+    "Type": "",
     "creation_name": "MANARA",
     "size": "M (adults)",
     "color": "Color",
@@ -3252,6 +3317,7 @@
   {
     "name": "Manara-005",
     "photo_link": "blouse silk cream 1 front 1 11.02.2022 Up Women XL.jpg",
+    "Type": "",
     "creation_name": "MANARA",
     "size": "XL (adults)",
     "color": "Color",
@@ -3302,6 +3368,7 @@
   {
     "name": "Manara-006",
     "photo_link": "blouse silk cream_darkblue 1 front 1 23.02.2022 Up Women XL.jpg",
+    "Type": "",
     "creation_name": "MANARA",
     "size": "XL (adults)",
     "color": "Color",
@@ -3352,6 +3419,7 @@
   {
     "name": "Manara-007",
     "photo_link": "blouse silk white_black_grey 1 front 1 23.02.2022 Up Women M.jpg",
+    "Type": "",
     "creation_name": "MANARA",
     "size": "M (adults)",
     "color": "Color",
@@ -3402,6 +3470,7 @@
   {
     "name": "Fisgon-018",
     "photo_link": "blouse short_arms_linen beige 1 front 1 11.02.2022 Up Women M.jpg",
+    "Type": "",
     "creation_name": "FISGON",
     "size": "M (adults)",
     "color": "Color",
@@ -3452,6 +3521,7 @@
   {
     "name": "Angono-008",
     "photo_link": "shirt short_arms lightblue_green 1 front 1 05.05.2022 Up Men M.jpg",
+    "Type": "",
     "creation_name": "ANGONO",
     "size": "M (adults)",
     "color": "Color",

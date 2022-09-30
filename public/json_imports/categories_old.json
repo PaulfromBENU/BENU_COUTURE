@@ -128,11 +128,59 @@
     "translation_key": "category.underwear"
   },
   {
-    "name_fr": "Autres",
-    "name_lu": "category.others",
-    "name_de": "category.others",
-    "name_en": "Others",
-    "filter_key": "others",
-    "translation_key": "category.others"
+    "name_fr": "Coussin",
+    "name_lu": "Kissen",
+    "name_de": "Kissen",
+    "name_en": "Cushion",
+    "filter_key": "pillow",
+    "translation_key": "category.pillow"
+  },
+  {
+    "name_fr": "Emballages cadeau",
+    "name_lu": "Geschenkverpackungen",
+    "name_de": "Geschenkverpackungen",
+    "name_en": "Gift wrapping",
+    "filter_key": "gift",
+    "translation_key": "category.gift-wrapping"
+  },
+  {
+    "name_fr": "Marques-pages",
+    "name_lu": "Lesezeichen",
+    "name_de": "Lesezeichen",
+    "name_en": "Bookmarks",
+    "filter_key": "bookmarks",
+    "translation_key": "category.bookmarks"
+  },
+  {
+    "name_fr": "Masques de nuit",
+    "name_lu": "Masken für die Nacht",
+    "name_de": "Masken für die Nacht",
+    "name_en": "Night masks",
+    "filter_key": "nightmasks",
+    "translation_key": "category.night-masks"
+  },
+  {
+    "name_fr": "Démaquillants",
+    "name_lu": "Make-up-Entferner",
+    "name_de": "Make-up-Entferner",
+    "name_en": "Make-up remover",
+    "filter_key": "makeup",
+    "translation_key": "category.make-up-remover"
+  },
+  {
+    "name_fr": "Porte-monnaies",
+    "name_lu": "Geldbörsen",
+    "name_de": "Geldbörsen",
+    "name_en": "Wallets",
+    "filter_key": "wallets",
+    "translation_key": "category.wallets"
+  },
+  {
+    "name_fr": "Pique-nique",
+    "name_lu": "Picknickzubehör",
+    "name_de": "Picknickzubehör",
+    "name_en": "Picnic equipment",
+    "filter_key": "picnic",
+    "translation_key": "category.picnic"
   }
 ]

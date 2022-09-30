@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql_common')->table('users')->delete();
+        DB::connection('mysql_common')->table('users')->truncate();
 
         DB::connection('mysql_common')->table('users')->insert([
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -35,6 +35,7 @@ class UserSeeder extends Seeder
             'newsletter' => '1',
             'origin' => 'couture',
             'client_number' => 'C00000',
+            'favorite_language' => 'en',
             'general_comment' => "No comment",
         ]);
         
@@ -54,6 +55,7 @@ class UserSeeder extends Seeder
             'newsletter' => '1',
             'origin' => 'couture',
             'client_number' => 'C00001',
+            'favorite_language' => 'fr',
             'general_comment' => "No comment",
         ]);
 
