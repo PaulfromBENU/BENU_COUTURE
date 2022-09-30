@@ -19,45 +19,7 @@ class UserSeeder extends Seeder
     {
         DB::connection('mysql_common')->table('users')->truncate();
 
-        DB::connection('mysql_common')->table('users')->insert([
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'email' => 'admin@benu.lu',
-            'password' => Hash::make('BENU@dmin'),
-            'role' => 'admin',
-            'first_name' => 'Administrateur',
-            'last_name' => 'BENU',
-            'gender' => 'neutral',
-            'company' => 'BENU',
-            'phone' => '+352 123 456 789',
-            'is_over_18' => '1',
-            'legal_ok' => '1',
-            'newsletter' => '1',
-            'origin' => 'couture',
-            'client_number' => 'C00000',
-            'favorite_language' => 'en',
-            'general_comment' => "No comment",
-        ]);
         
-         DB::connection('mysql_common')->table('users')->insert([
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'email' => 'paul.guillard@benu.lu',
-            'password' => Hash::make('password00'),
-            'role' => 'admin',
-            'first_name' => 'Paul',
-            'last_name' => 'Guillard',
-            'gender' => 'Male',
-            'company' => 'BENU',
-            'phone' => '+352 123 456 789',
-            'is_over_18' => '1',
-            'legal_ok' => '1',
-            'newsletter' => '1',
-            'origin' => 'couture',
-            'client_number' => 'C00001',
-            'favorite_language' => 'fr',
-            'general_comment' => "No comment",
-        ]);
 
         // $role_options = ['user', 'newsletter', 'author'];
         // $gender_options = ['male', 'female', 'neutral', ''];
