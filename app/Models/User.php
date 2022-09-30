@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\App;
 
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasName;
@@ -106,7 +107,7 @@ class User extends Authenticatable implements HasName, FilamentUser
 
     public function wishlistArticles()
     {
-        if(env('APP_ENV') == 'stage') {
+        if(App::environment('stage')) {
             return $this->belongsToMany('App\Models\Article', 'benu_common_stage.couture_article_user');
         }
         return $this->belongsToMany('App\Models\Article', 'benu_common.couture_article_user');
