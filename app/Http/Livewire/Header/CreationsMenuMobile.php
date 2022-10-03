@@ -59,6 +59,7 @@ class CreationsMenuMobile extends Component
             $ladies_id = CreationGroup::where('filter_key', 'ladies')->first()->id;
             $gentlemen_id = CreationGroup::where('filter_key', 'gentlemen')->first()->id;
             $kids_id = CreationGroup::where('filter_key', 'kids')->first()->id;
+            $home_id = CreationGroup::where('filter_key', 'home')->first()->id;
             $accessories_id = CreationGroup::where('filter_key', 'accessories')->first()->id;
 
             foreach ($this->getAvailableCreations() as $creation) {
@@ -117,6 +118,13 @@ class CreationsMenuMobile extends Component
                 if (!isset($this->accessories[$query])) {
                     if ($creation->is_accessory == '1') {
                         $this->accessories[$query] = $filter_key;
+                    }
+                }
+
+                // Fill Home creations arrays
+                if (!isset($this->home_creations[$query])) {
+                    if ($creation->creation_groups->contains($home_id)) {
+                        $this->home_creations[$query] = $filter_key;
                     }
                 }
             }

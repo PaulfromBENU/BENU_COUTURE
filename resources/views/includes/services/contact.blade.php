@@ -11,7 +11,7 @@
 		<a href="mailto:info@benucouture.lu" class="btn-slider-left m-auto">info@benucouture.lu</a>
 	</div>
 	<div class="contact__phone">
-		+352 123 456 789
+		+352 2791 1949
 	</div>
 	<div class="contact__opening">
 		{!! __('services.contact-opening-1') !!}

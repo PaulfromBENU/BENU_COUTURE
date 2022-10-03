@@ -136,9 +136,23 @@
             </div>
         </div>
 
-        <a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}" class="side-mobile__creations__title flex justify-start">
+        <div>
+            <div class="side-mobile__creations__title flex justify-between">
+                <h3>{{ __('header.house') }}</h3>
+                @svg('chevron-down', 'side-mobile__creations__title__svg')
+            </div>
+            <div class="side-mobile__creations__list side-mobile__creations__list--hidden">
+                <ul class="side-mobile__creations__list__links mt-3">
+                    @foreach($home_creations as $category => $link_query)
+                        <li><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home', 'categories' => $link_query]) }}">{{ $category }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+
+       <!--  <a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}" class="side-mobile__creations__title flex justify-start">
             <h3>{{ __('header.house') }}</h3>
-        </a>
+        </a> -->
 
         <a href="{{ route('vouchers-'.app()->getLocale()) }}" class="side-mobile__creations__title flex justify-start">
             <h3>{{ __('header.vouchers') }}</h3>
