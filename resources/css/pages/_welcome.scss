@@ -34,7 +34,7 @@
 		}
 		@include mobile {
 			padding-top: 10px;
-			height: 550px;
+			min-height: 550px;
 		}
 		&__bar {
 			padding: 10px 5px;
@@ -180,6 +180,9 @@
 	margin-bottom: 37px;
 	// min-height: 100vh;
 	// height: min(100vh, 900px);
+	@include mobile {
+		margin-top: 20px;
+	}
 	&__left {
 		width: 50%;
 		margin-top: 50px;
