@@ -71,9 +71,6 @@
 			<div class="participate__nav__arrow participate__nav__arrow--right mobile-only">
 				@svg('chevron-down')
 			</div>
-			<!-- <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-sustainable')]) }}" class="participate__nav__link @if($page == __('slugs.participate-sustainable')) participate__nav__link--active @endif" id="participate-nav-payment">
-				{{ __('participate.nav-sustainable') }}
-			</a> -->
 		</div>
 	</div>
 

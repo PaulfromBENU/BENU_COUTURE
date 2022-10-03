@@ -309,10 +309,6 @@
 					</p>
 				</div>
 				<div class="about__general__content__info-section__txt">
-					<!-- <p class="about__general__content__info-section__txt__paragraph">
-						{{ __('about.section-4-txt-3') }}
-					</p> -->
-
 					<div class="flex flex-col md:flex-row justify-start md:justify-between flex-wrap mb-10">
 						<div class="w-full md:w-2/5 mb-5 md:mb-0">
 							<img src="{{ asset('images/pictures/about/about-content-7.jpg') }}">

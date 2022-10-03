@@ -55,14 +55,6 @@
 								<th>Zone 4 (CH, CZ, DK, FI, IT, PT, SE, SK)</th>
 								<th>Zone 5 (ES, GR, HU, IR, IS, LT, NO, UK)</th>
 							</tr>
-	<!-- 						<tr class="grid grid-cols-6">
-								<td class="p-4 pr-5 font-medium">
-									{{ __('services.delivery-total') }}
-								</td>
-								<td class="p-4 pr-5 font-medium">
-									{{ __('services.delivery-tara') }}
-								</td> 
-								</tr> -->
 							<tr class="grid grid-cols-6 delivery__chapter__table__data-rows">
 								<td>0.05</td>
 	<!-- 							<td>0.1</td> -->

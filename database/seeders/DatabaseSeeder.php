@@ -25,14 +25,14 @@ class DatabaseSeeder extends Seeder
             // TranslationSeeder::class,
             // ArticleSeeder::class,
             // CreationCreationGroupSeeder::class,
-            BadgeSeeder::class,
+            // BadgeSeeder::class,
 
             // Not required anymore
             // ArticleCareRecommendationSeeder::class,
             // ArticleCompositionSeeder::class,
 
             // Required before importation only in case of common DB update
-            // UserSeeder::class,
+            UserSeeder::class,
             // PartnerSeeder::class,
             // ShopSeeder::class,
 

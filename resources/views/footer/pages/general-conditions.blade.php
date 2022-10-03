@@ -276,7 +276,7 @@
 			{{ __('footer.general-conditions-lowtitle-2-6') }}
 		</h3>
 		<p class="footer-conditions__paragraph">
-			{!! __('footer.general-conditions-txt-2-6-1') !!} <!-- <span class="footer-conditions--update">{!! __('footer.general-conditions-txt-2-6-1-1') !!}</span> -->
+			{!! __('footer.general-conditions-txt-2-6-1') !!}
 		</p>
 		<p class="footer-conditions__paragraph">
 			{!! __('footer.general-conditions-txt-2-6-2') !!}

@@ -73,9 +73,6 @@
 
     @livewire('header.creations-menu-mobile')
 
-    <!-- <div class="mb-5">
-        <a href="{{ route('newsletter-'.app()->getLocale()) }}" class="btn-couture-plain btn-couture-plain--fit inline-block" style="margin-left: 0px; width: 100%; border-radius: 8px;">{!! __('welcome.side-menu-newsletter-register') !!}</a>
-    </div> -->
     <div class="flex justify-start pt-5">
         <a href="https://www.facebook.com/benuvillageesch/" target="_blank" class="footer__social"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/benu_village/" target="_blank" class="footer__social"><i class="fab fa-linkedin-in"></i></a>

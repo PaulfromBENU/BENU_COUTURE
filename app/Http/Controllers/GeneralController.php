@@ -26,6 +26,8 @@ use App\Http\Requests\NewsletterRequest;
 use JeroenDesloovere\VCard\VCard;
 use Maatwebsite\Excel\Facades\Excel;
 
+use App\Models\Translation;
+
 class GeneralController extends Controller
 {
     use ArticleAnalyzer;
@@ -33,6 +35,19 @@ class GeneralController extends Controller
 
     public function home()
     {
+        // Temp - translations check
+        // $translations = Translation::all();
+        // $missing_translations = [];
+        // foreach ($translations as $translation) {
+        //     if ($translation->fr == "" && $translation->en == "" && $translation->de == "" && $translation->lu == "") {
+        //         array_push($missing_translations, $translation->page.'.'.$translation->key.' - No translation at all');
+        //     } elseif ($translation->fr == "" || $translation->en == "" || $translation->de == "" || $translation->lu == "") {
+        //         array_push($missing_translations, $translation->page.'.'.$translation->key.' - Missing languages');
+        //     }
+        // }
+
+        // dd($missing_translations);
+
         // Reset payment on-going status to reach dashboard after connect
         session(['payment-ongoing' => 'inactive']);
 

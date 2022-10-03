@@ -72,9 +72,6 @@
                         </a>
                         @endif
                     @endguest
-                    <!-- <a href="{{ route('dashboard') }}" class="header__newsletter-btn__link">
-                        {{ __('header.dashboard') }}
-                    </a> -->
                 </div>
             </div>
             <div class="flex justify-between header__main-menu">

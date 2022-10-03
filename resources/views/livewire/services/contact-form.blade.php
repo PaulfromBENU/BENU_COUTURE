@@ -100,20 +100,6 @@
                     </p>
                 </div>
             </div>
-            <!-- <p>{{ $checksum_number_1 }} + {{ $checksum_number_2 }}&nbsp;= </p> -->
-            <!-- <input type="text" minlength="1" maxlength="2" class="ml-8 input-underline tablet-hidden rounded" required wire:model.defer="user_sum" style="height: 40px; border: solid 1px lightgrey;"> -->
-
-            <!-- <div class="mobile-only w-1/2 mb-3 md:mb-5">
-                <p class="mb-3">{!! __('forms.security-question-mobile') !!}</p> 
-                <div class="flex justify-center w-3/4 md:w-1/2 m-auto">
-                    <p class="w-1/2 md:w-1/4" style="font-size: 18px;">
-                        {{ $checksum_number_1 }} + {{ $checksum_number_2 }} =&nbsp;?
-                    </p>
-                    <div class="w-1/2 md:w-1/4">
-                        <input type="text" minlength="1" maxlength="2" class="ml-2 input-underline mobile-only rounded" required wire:model.defer="user_sum" style="height: 40px; border: solid 1px lightgrey;">
-                    </div>
-                </div>
-            </div> -->
 
             <div wire:click="checkSum" class="contact__form__form__security__btn btn-couture-plain" style="max-width: 250px;">{{ __('forms.check') }}</div>
         </div>

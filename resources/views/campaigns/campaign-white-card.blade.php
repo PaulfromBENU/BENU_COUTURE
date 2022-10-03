@@ -27,7 +27,6 @@
 @section('main-content')
 	<div class="single-campaign">
 		<section class="single-campaign__header scroll-grow-1">
-			<!-- <img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
 			<div class="single-campaign__header__opacifier scroll-opacity-1" ></div> <!-- style="opacity: 0;" -->
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__header__txt-container">
 				<h3 class="single-campaign__header__toptitle">{{ __('campaigns.carte-blanche-main-picture-top-title') }}</h3>
@@ -83,7 +82,6 @@
 		</section>
 
 		<section class="single-campaign__transition-1 scroll-grow-2" id="transition-1">
-<!-- 			<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
 			<div class="single-campaign__transition-1__opacifier scroll-opacity-2"></div>
 			<div class="w-4/5 lg:w-1/2 m-auto single-campaign__transition-1__txt-container flex flex-col justify-center">
 				<div>
@@ -123,14 +121,9 @@
 		</section>
 
 		<section class="single-campaign__section-3 scroll-grow-3" id="transition-2">
-			<!-- <img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
 			<div class="single-campaign__section-3__opacifier scroll-opacity-3"></div>
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container flex flex-col justify-center">
 				<h2 class="single-campaign__section-3__title">{{ __('campaigns.carte-blanche-section-3-title') }}</h2>
-
-				<!-- <div class="scroll-appearing-3">
-					
-				</div> -->
 			</div>
 		</section>
 
@@ -151,14 +144,6 @@
 				</div>
 				<div class="single-campaign__section-3bis__picture">
 					<img src="{{ asset('images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_4.jpg') }}" class="single-campaign__section-3bis__picture__img" />
-					<!-- <div class="single-campaign__section-3bis__picture__txt-container flex flex-col justify-center">
-						<p class="single-campaign__section-3bis__picture__txt single-campaign__section-3bis__picture__txt--base">
-							{{ __('campaigns.carte-blanche-txt-6') }}
-						</p>
-						<p class="single-campaign__section-3bis__picture__txt single-campaign__section-3bis__picture__txt--hover">
-							{{ __('campaigns.carte-blanche-txt-6') }}
-						</p>
-					</div> -->
 				</div>
 			</div>
 		</section>
