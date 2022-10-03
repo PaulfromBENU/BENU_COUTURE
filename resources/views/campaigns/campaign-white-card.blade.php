@@ -28,7 +28,7 @@
 	<div class="single-campaign">
 		<section class="single-campaign__header scroll-grow-1">
 			<!-- <img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
-			<div class="single-campaign__header__opacifier scroll-opacity-1" style="opacity: 0;"></div>
+			<div class="single-campaign__header__opacifier scroll-opacity-1" ></div> <!-- style="opacity: 0;" -->
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__header__txt-container">
 				<h3 class="single-campaign__header__toptitle">{{ __('campaigns.carte-blanche-main-picture-top-title') }}</h3>
 				<h2 class="single-campaign__header__title">{{ __('campaigns.carte-blanche-main-picture-title') }}</h2>
@@ -84,7 +84,7 @@
 
 		<section class="single-campaign__transition-1 scroll-grow-2" id="transition-1">
 <!-- 			<img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
-			<div class="single-campaign__transition-1__opacifier scroll-opacity-2" style="opacity: 0;"></div>
+			<div class="single-campaign__transition-1__opacifier scroll-opacity-2"></div>
 			<div class="w-4/5 lg:w-1/2 m-auto single-campaign__transition-1__txt-container flex flex-col justify-center">
 				<div>
 					<h2 class="single-campaign__transition-1__title">
@@ -124,7 +124,7 @@
 
 		<section class="single-campaign__section-3 scroll-grow-3" id="transition-2">
 			<!-- <img src="{{ asset('images/pictures/campaigns/DSC09261006.png') }}" /> -->
-			<div class="single-campaign__section-3__opacifier scroll-opacity-3" style="opacity: 0;"></div>
+			<div class="single-campaign__section-3__opacifier scroll-opacity-3"></div>
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__section-3__txt-container flex flex-col justify-center">
 				<h2 class="single-campaign__section-3__title">{{ __('campaigns.carte-blanche-section-3-title') }}</h2>
 
@@ -206,9 +206,15 @@
 
 			// Initialization in case of refresh in the middle of the page
 			$('.scroll-grow-1').css('border-width', (Math.max(0, marginWidth - 0.5 * $(document).scrollTop())) + 'px');
-			$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01 - 1));
-			$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
-			$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
+			if ($(window).width() > 768) {
+				$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
+				$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
+			} else {
+				$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01 - 1));
+				$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
+				$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
+			}
+			
 			if ($(document).scrollTop() > ($('#header-end').offset().top - $(window).height())) {
 				$('.scroll-grow-1').css('background-attachment', 'scroll');
 			} else {
@@ -250,9 +256,14 @@
 			// Header picture with scroll indication
 			if ($(document).scrollTop() < 2 * $(window).height()) {
 				$('.scroll-grow-1').css('border-width', (Math.max(0, marginWidth - 0.5 * $(document).scrollTop())) + 'px');
-				$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01 - 1));
-				$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
-				$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
+				if ($(window).width() > 768) {
+					$('.scroll-opacity-1').css('opacity', Math.min(0.5, $(document).scrollTop() * 0.01 - 1));
+					$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
+					$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
+				} else {
+					$('.scroll-fading-1').css('opacity', Math.max(0, 1 - $(document).scrollTop() * 0.01));
+					$('.scroll-appearing-1').css('opacity', Math.max(0, $(document).scrollTop() * 0.01) - 1);
+				}
 			}
 			if ($(document).scrollTop() > ($('#header-end').offset().top - $(window).height())) {
 				if($(window).width() > 1250) {
@@ -268,7 +279,9 @@
 			if ($(document).scrollTop() > ($('#transition-1').offset().top - 0.55 * $(window).height())) {
 				relativeScroll = $(document).scrollTop() - $('#transition-1').offset().top + 0.55 * $(window).height();
 				$('.scroll-grow-2').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-				$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+				if ($(window).width() > 768) {
+					$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+				}
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
 				// $('.scroll-appearing-1').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}
@@ -289,7 +302,9 @@
 			if ($(document).scrollTop() > ($('#transition-2').offset().top - 0.55 * $(window).height())) {
 				relativeScroll = $(document).scrollTop() - $('#transition-2').offset().top + 0.55 * $(window).height();
 				$('.scroll-grow-3').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-				$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+				if ($(window).width() > 768) {
+					$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+				}
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
 				$('.scroll-appearing-3').css('opacity', Math.max(0, relativeScroll * 0.01) - 1);
 			}

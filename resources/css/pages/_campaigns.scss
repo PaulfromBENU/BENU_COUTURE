@@ -158,8 +158,11 @@
 			// height: calc(100vh - 140px);
 			height: 100%;
 			background: $dark-bg;
-			// opacity: 0;
+			opacity: 0;
 			z-index: -1;
+			@include mobile {
+				opacity: 0.5;
+			}
 		}
 		&__txt-container {
 			height: 100%;
@@ -378,6 +381,9 @@
 			background: $dark-bg;
 			// opacity: 0.5;
 			z-index: -1;
+			@include mobile {
+				opacity: 0.5;
+			}
 		}
 		&__txt-container {
 			height: 100%;
@@ -404,7 +410,10 @@
 				font: normal normal 600 68px/74px 'Barlow Condensed';
 			}
 			@include mobile {
-				font: normal normal 600 48px/54px 'Barlow Condensed';
+				font: normal normal 600 42px/54px 'Barlow Condensed';
+				max-width: 80vw;
+				margin: auto;
+				margin-bottom: 60px;
 			}
 		}
 		&__txt {
@@ -555,6 +564,9 @@
 			background: $dark-bg;
 			opacity: 0.5;
 			z-index: -1;
+			@include mobile {
+				opacity: 0.5;
+			}
 		}
 		&__txt-container {
 			height: 100%;

@@ -13877,7 +13877,13 @@ input[type=checkbox]:focus {
   width: 100%;
   height: 100%;
   background: #2E1414;
+  opacity: 0;
   z-index: -1;
+}
+@media (max-width: 767px) {
+  .single-campaign__header__opacifier {
+    opacity: 0.5;
+  }
 }
 .single-campaign__header__txt-container {
   height: 100%;
@@ -14141,6 +14147,11 @@ input[type=checkbox]:focus {
   background: #2E1414;
   z-index: -1;
 }
+@media (max-width: 767px) {
+  .single-campaign__transition-1__opacifier {
+    opacity: 0.5;
+  }
+}
 .single-campaign__transition-1__txt-container {
   height: 100%;
   position: absolute;
@@ -14176,7 +14187,10 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .single-campaign__transition-1__title {
-    font: normal normal 600 48px/54px "Barlow Condensed";
+    font: normal normal 600 42px/54px "Barlow Condensed";
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 60px;
   }
 }
 .single-campaign__transition-1__txt {
@@ -14360,6 +14374,11 @@ input[type=checkbox]:focus {
   background: #2E1414;
   opacity: 0.5;
   z-index: -1;
+}
+@media (max-width: 767px) {
+  .single-campaign__section-3__opacifier {
+    opacity: 0.5;
+  }
 }
 .single-campaign__section-3__txt-container {
   height: 100%;
