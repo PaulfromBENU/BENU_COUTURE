@@ -117,7 +117,7 @@
             	{!! __('dashboard.details-update-confirm') !!}
             </div>
             @else
-            <div class="mt-10">
+            <div class="mt-10 text-center">
             	<button class="btn-couture-plain" style="padding-bottom: 7px; padding-top: 7px; height: fit-content;">{{ __('dashboard.details-save-changes') }}</button>
             </div>
 			@endif
