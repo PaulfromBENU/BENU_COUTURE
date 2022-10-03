@@ -84,7 +84,7 @@
 		<p class="model-pres__desc__txt">
 			{{ $localized_description }}
 		</p>
-		<div class="flex justify-start model-pres__desc__keywords">
+		<div class="flex flex-col md:flex-row justify-start model-pres__desc__keywords">
 			<ul class="w-full lg:w-1/2">
 				@for($i = 0; $i < 4; $i++)
 					@if(isset($keywords[$i]))
