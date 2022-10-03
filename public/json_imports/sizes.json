@@ -20,7 +20,7 @@
     "category": "adults"
   },
   {
-    "value": "XXL",
+    "value": "2XL",
     "category": "adults"
   },
   {
@@ -116,7 +116,19 @@
     "category": "plusieurs tailles enfants"
   },
   {
+    "value": "92-98",
+    "category": "plusieurs tailles enfants"
+  },
+  {
     "value": "98-104",
+    "category": "plusieurs tailles enfants"
+  },
+  {
+    "value": "104-110",
+    "category": "plusieurs tailles enfants"
+  },
+  {
+    "value": "116-122",
     "category": "plusieurs tailles enfants"
   },
   {
@@ -128,7 +140,23 @@
     "category": "tailles enfants accessoires"
   },
   {
+    "value": 38,
+    "category": "bonnets"
+  },
+  {
+    "value": 42,
+    "category": "bonnets"
+  },
+  {
+    "value": 48,
+    "category": "bonnets"
+  },
+  {
     "value": 50,
+    "category": "bonnets"
+  },
+  {
+    "value": 54,
     "category": "bonnets"
   },
   {
@@ -146,5 +174,13 @@
   {
     "value": "specific",
     "category": "specific"
+  },
+  {
+    "value": "unique-kids",
+    "category": "unique"
+  },
+  {
+    "value": "unique-youth",
+    "category": "unique"
   }
 ]

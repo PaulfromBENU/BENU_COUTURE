@@ -1,7 +1,7 @@
 [
   {
     "name_fr": "Sacs & trousses",
-    "name_lu": "Täschen & Säck",
+    "name_lu": "Poschen & Troussen",
     "name_de": "Taschen & Beutel",
     "name_en": "Bags & cases",
     "filter_key": "bags-cases",
@@ -25,7 +25,7 @@
   },
   {
     "name_fr": "Gilets",
-    "name_lu": "Vesten",
+    "name_lu": "Gileten",
     "name_de": "Westen",
     "name_en": "Waistcoats",
     "filter_key": "cardigans",
@@ -59,7 +59,7 @@
     "name_fr": "Blousons & vestes",
     "name_lu": "Jacketten & Mäntel",
     "name_de": "Jacken & Mäntel",
-    "name_en": "Jackets & vests",
+    "name_en": "Jackets & coats",
     "filter_key": "jackets-vests",
     "translation_key": "category.jackets-vests"
   },
@@ -73,7 +73,7 @@
   },
   {
     "name_fr": "Écharpes & gants",
-    "name_lu": "Schalen & Händschen",
+    "name_lu": "Schaler & Händschen",
     "name_de": "Schals & Handschuhe",
     "name_en": "Scarves & gloves",
     "filter_key": "scarfs-gloves",
@@ -105,7 +105,7 @@
   },
   {
     "name_fr": "Tops",
-    "name_lu": "Topen",
+    "name_lu": "Toppen",
     "name_de": "Tops",
     "name_en": "Tops",
     "filter_key": "tops",
@@ -129,10 +129,66 @@
   },
   {
     "name_fr": "Autres",
-    "name_lu": "category.others",
-    "name_de": "category.others",
+    "name_lu": "Aneres",
+    "name_de": "Anderes",
     "name_en": "Others",
     "filter_key": "others",
     "translation_key": "category.others"
+  },
+  {
+    "name_fr": "Coussin",
+    "name_lu": "Këssen",
+    "name_de": "Kissen",
+    "name_en": "Pillow",
+    "filter_key": "pillow",
+    "translation_key": "category.pillow"
+  },
+  {
+    "name_fr": "Emballages cadeau",
+    "name_lu": "Kaddosverpackungen",
+    "name_de": "Geschenkverpackungen",
+    "name_en": "Gift wrapping",
+    "filter_key": "gift",
+    "translation_key": "category.gift-wrapping"
+  },
+  {
+    "name_fr": "Marque-pages",
+    "name_lu": "Lieszeechen",
+    "name_de": "Lesezeichen",
+    "name_en": "Bookmarks",
+    "filter_key": "bookmarks",
+    "translation_key": "category.bookmarks"
+  },
+  {
+    "name_fr": "Masques de nuit",
+    "name_lu": "Schlofmasken",
+    "name_de": "Schlafmasken",
+    "name_en": "Night masks",
+    "filter_key": "nightmasks",
+    "translation_key": "category.night-masks"
+  },
+  {
+    "name_fr": "Cotons démaquillants",
+    "name_lu": "Ofschminkdicher",
+    "name_de": "Abschminktücher",
+    "name_en": "Make-up removal pads",
+    "filter_key": "makeup",
+    "translation_key": "category.make-up-remover"
+  },
+  {
+    "name_fr": "Porte-monnaie",
+    "name_lu": "Portmonnien",
+    "name_de": "Geldbeutel",
+    "name_en": "Wallets",
+    "filter_key": "wallets",
+    "translation_key": "category.wallets"
+  },
+  {
+    "name_fr": "Pique-nique",
+    "name_lu": "Picknick",
+    "name_de": "Picknickzubehör",
+    "name_en": "Picnic equipment",
+    "filter_key": "picnic",
+    "translation_key": "category.picnic"
   }
 ]

@@ -17,7 +17,6 @@
 				<div class="harmonica-menu__content__col__closed harmonica-menu__content__col__closed--village">
 					<div class="harmonica-menu__content__col__banner">
 						@svg('logo_benu_village', 'm-auto')
-						<!-- <img src="{{ asset('images/svg/logo_benu_couture.svg') }}" class="m-auto"> -->
 					</div>
 					<div class="flex flex-col justify-center harmonica-menu__content__col__title">
 						<h3 class="harmonica-menu__content__col__title--village">BENU VILLAGE ESCH ASBL</h3>
@@ -33,7 +32,6 @@
 							{!! __('header.village-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.village-desc-mobile') !!} -->
 							{!! __('header.village-desc') !!}
 						</div>
 						<div class="text-center">
@@ -63,7 +61,6 @@
 							{!! __('header.sis-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.sis-desc-mobile') !!} -->
 							{!! __('header.sis-desc') !!}
 						</div>
 						<div class="text-center">
@@ -92,7 +89,6 @@
 							{!! __('header.sloow-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.sloow-desc-mobile') !!} -->
 							{!! __('header.sloow-desc') !!}
 						</div>
 						<div class="text-center">
@@ -121,7 +117,6 @@
 							{!! __('header.couture-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.couture-desc-mobile') !!} -->
 							{!! __('header.couture-desc') !!}
 						</div>
 						<div class="text-center">
@@ -150,7 +145,6 @@
 							{!! __('header.reuse-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.reuse-desc-mobile') !!} -->
 							{!! __('header.reuse-desc') !!}
 						</div>
 						<div class="text-center">
@@ -179,7 +173,6 @@
 							{!! __('header.lasa-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.lasa-desc-mobile') !!} -->
 							{!! __('header.lasa-desc') !!}
 						</div>
 						<div class="text-center">
@@ -208,7 +201,6 @@
 							{!! __('header.design-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.design-desc-mobile') !!} -->
 							{!! __('header.design-desc') !!}
 						</div>
 						<div class="text-center">
@@ -237,7 +229,6 @@
 							{!! __('header.break-desc') !!}
 						</div>
 						<div class="text-center harmonica-menu__content__col__open__desc__text--mobile">
-							<!-- {!! __('header.break-desc-mobile') !!} -->
 							{!! __('header.break-desc') !!}
 						</div>
 						<div class="text-center">

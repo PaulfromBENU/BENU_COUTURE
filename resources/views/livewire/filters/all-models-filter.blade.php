@@ -257,10 +257,11 @@
                     <div class="all-models__filters__filter flex" id="filter-gender">
                         <p>{{ __('models.filter-type') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                     </div>
-                    <div class="all-models__filters__filter flex" id="filter-category">
-                        <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
-                    </div>
                 @endif
+                
+                <div class="all-models__filters__filter flex" id="filter-category">
+                    <p>{{ __('models.filter-category') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
+                </div>
                 <div class="all-models__filters__filter flex" id="filter-color">
                     <p>{{ __('models.filter-color') }}</p> <img src="{{ asset('images/pictures/chevron_bottom.png') }}">
                 </div>

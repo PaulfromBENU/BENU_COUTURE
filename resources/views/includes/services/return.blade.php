@@ -1,40 +1,27 @@
 <section class="w-full m-auto return service-panel" id="services-return">
+	
 	<h2 class="return__title">{{ __('services.return-title') }}</h2>
-	<!-- <p class="return__txt">
-		{{ __('services.return-txt-1') }}
-	</p>
-	<div class="return__highlight">
-		{{ __('services.return-highlighted-1') }}
-	</div>
-	<p class="return__txt">
-		{{ __('services.return-txt-2') }}
-	</p>
-	<div class="text-center return__link">
-		<a href="{{ route('client-service-'.app()->getLocale(), ['page' => 'contact']) }}" class="btn-couture m-auto">
-			{{ __('services.return-contact') }}
-		</a>
-	</div> -->
 
 	<div class="flex justify-between benu-container return__container">
 		<div class="return__index relative mobile-hidden tablet-hidden">
 			<ul class="return__index__menu">
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-article').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-aricle-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-article').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-article') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-voucher').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-voucher-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-voucher').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-voucher') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-refund').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-refund-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-refund').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-refund') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('return-chapter-reclamations').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="return-chapter-reclamations-link" class="return-menu-link btn-slider-left font-bold" onclick="document.getElementById('return-chapter-reclamations').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.return-reclamations') }}
 					</button>
 				</li>

@@ -23,62 +23,57 @@
 @section('main-content')
 	<section class="footer-medias w-4/5 lg:w-1/2 m-auto">
 		<h3 class="footer-medias__subtitle">{{ __('footer.medias-subtitle') }}</h3>
-		<h1 class="footer-medias__title">{{ __('footer.medias-title') }}</h1>
-		<p class="footer-medias__paragraph pl-10 pr-10">
-			{{ __('footer.medias-txt-1') }}
-		</p>
-		<ul class="faq__accordion">
+		<h1 class="footer-medias__title" id="medias-title">{{ __('footer.medias-title') }}</h1>
+		<ul class="media-links__accordion">
 			<li>
-				<div class="faq__accordion__header flex justify-between">
-					<p class="faq__accordion__header__title">{{ __('footer.medias-section-title-1') }}</p>
-					<p class="faq__accordion__header__arrow flex flex-col justify-center">
-						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron">
+				<div class="media-links__accordion__header flex justify-between">
+					<p class="media-links__accordion__header__title">{{ __('footer.medias-section-title-1') }}</p>
+					<p class="media-links__accordion__header__arrow flex flex-col justify-center">
+						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="media-links__accordion__header__chevron">
 					</p>
 				</div>
 
-				<div class="faq__accordion__answer mb-10" style="display: none; margin-bottom: 40px;">
-					<p class="faq__accordion__answer__txt">
-						{{ __('footer.medias-section-1-txt-1') }}
-					</p>
-					<div class="flex">
-						
-					</div>
+				<div class="media-links__accordion__answer mb-10" style="display: none; margin-bottom: 40px;">
+					@livewire('medias.media-links', ['media_type' => "newspapers"])
 				</div>
 			</li>
 
 			<li>
-				<div class="faq__accordion__header flex justify-between">
-					<p class="faq__accordion__header__title">{{ __('footer.medias-section-title-2') }}</p>
-					<p class="faq__accordion__header__arrow flex flex-col justify-center">
-						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron">
+				<div class="media-links__accordion__header flex justify-between">
+					<p class="media-links__accordion__header__title">{{ __('footer.medias-section-title-2') }}</p>
+					<p class="media-links__accordion__header__arrow flex flex-col justify-center">
+						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="media-links__accordion__header__chevron">
 					</p>
 				</div>
 
-				<div class="faq__accordion__answer mb-10" style="display: none; margin-bottom: 40px;">
-					<p class="faq__accordion__answer__txt">
-						{{ __('footer.medias-section-2-txt-1') }}
-					</p>
-					<div class="flex">
-						
-					</div>
+				<div class="media-links__accordion__answer mb-10" style="display: none; margin-bottom: 40px;">
+					@livewire('medias.media-links', ['media_type' => "radio"])
 				</div>
 			</li>
 
 			<li>
-				<div class="faq__accordion__header flex justify-between">
-					<p class="faq__accordion__header__title">{{ __('footer.medias-section-title-3') }}</p>
-					<p class="faq__accordion__header__arrow flex flex-col justify-center">
-						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="faq__accordion__header__chevron">
+				<div class="media-links__accordion__header flex justify-between">
+					<p class="media-links__accordion__header__title">{{ __('footer.medias-section-title-3') }}</p>
+					<p class="media-links__accordion__header__arrow flex flex-col justify-center">
+						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="media-links__accordion__header__chevron">
 					</p>
 				</div>
 
-				<div class="faq__accordion__answer" style="display: none; margin-bottom: 40px;">
-					<p class="faq__accordion__answer__txt">
-						{{ __('footer.medias-section-3-txt-1') }}
+				<div class="media-links__accordion__answer" style="display: none; margin-bottom: 40px;">
+					@livewire('medias.media-links', ['media_type' => "video"])
+				</div>
+			</li>
+
+			<li>
+				<div class="media-links__accordion__header flex justify-between">
+					<p class="media-links__accordion__header__title">{{ __('footer.medias-section-title-4') }}</p>
+					<p class="media-links__accordion__header__arrow flex flex-col justify-center">
+						<img src="{{ asset('images/pictures/chevron_bottom_white.png') }}" class="media-links__accordion__header__chevron">
 					</p>
-					<div class="flex">
-						
-					</div>
+				</div>
+
+				<div class="media-links__accordion__answer" style="display: none; margin-bottom: 40px;">
+					@livewire('medias.media-links', ['media_type' => "web"])
 				</div>
 			</li>
 		</ul>

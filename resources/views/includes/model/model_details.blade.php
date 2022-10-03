@@ -26,7 +26,31 @@
 	</div>
 
 	<div class="model-pres__desc">
-		@if($model->product_type == 0)
+		@if($model->name == 'PINNA')
+		<!-- Case kid apron -->
+			<div class="flex flex-col lg:flex-row justify-start">
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
+					{{ strtoupper(__('models.apron-kid-info')) }}
+				</div>
+			</div>
+		@elseif($model->name == 'SCIMOR')
+		<!-- Case teen apron -->
+			<div class="flex flex-col lg:flex-row justify-start">
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
+					{{ strtoupper(__('models.apron-teen-info')) }}
+				</div>
+			</div>
+		@elseif($model->name == 'SELACHI')
+		<!-- Case adult apron -->
+			<div class="flex flex-col lg:flex-row justify-start">
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
+				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
+					{{ strtoupper(__('models.apron-adult-info')) }}
+				</div>
+			</div>
+		@elseif($model->product_type == 0)
 			<h1 class="model-pres__desc__title">{{ __('models.model') }} {{ strtoupper($model->name) }}</h1>
 		@elseif($model->product_type == 1)
 		<!-- Case mask for kids -->
@@ -47,7 +71,7 @@
 		@elseif($model->product_type == 3)
 		<!-- Case small item -->
 			<div class="flex flex-col lg:flex-row justify-start">
-				<h1 class="model-pres__desc__title">{{ __('models.masks') }} {{ strtoupper($model->name) }}</h1>
+				<h1 class="model-pres__desc__title">{{ strtoupper($model->name) }}</h1>
 				<div class="model-pres__desc__age lg:ml-5 w-3/4 md:w-1/4 m-auto" style="min-width: fit-content;">
 					{{ strtoupper(__('models.is-small-item')) }}
 				</div>
@@ -60,7 +84,7 @@
 		<p class="model-pres__desc__txt">
 			{{ $localized_description }}
 		</p>
-		<div class="flex justify-start model-pres__desc__keywords">
+		<div class="flex flex-col md:flex-row justify-start model-pres__desc__keywords">
 			<ul class="w-full lg:w-1/2">
 				@for($i = 0; $i < 4; $i++)
 					@if(isset($keywords[$i]))
@@ -94,31 +118,31 @@
 		</div>
 		@endif
 
-		@if($model->product_type != 3)
-			<div class="model-pres__desc__seemore">
-				<div class="model-pres__wiki-link">
-					<p class="model-pres__desc__txt" style="margin-bottom: 20px;">
-						{!! __('models.link-explanation') !!}
-					</p>
-					<p class="model-pres__desc__link">
-						@php $link_query = "origin_link_".app()->getLocale(); @endphp
-						<a href="{{ $model->$link_query }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" style="margin: 0;">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
-					</p>
-				</div>
-
-				<div class="flex tablet-hidden">
-					<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
-						{{ __('models.model-link-articles') }} @svg('model_arrow_down')
-					</a>
-					
-					@if($model->creation_accessories()->count() > 0)
-					<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
-						{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
-					</a>
-					@endif
-				</div>
-				
+		
+		<div class="model-pres__desc__seemore">
+			<div class="model-pres__wiki-link">
+				<p class="model-pres__desc__txt" style="margin-bottom: 20px;">
+					{!! __('models.link-explanation') !!}
+				</p>
+				<p class="model-pres__desc__link">
+					@php $link_query = "origin_link_".app()->getLocale(); @endphp
+					<a href="{{ $model->$link_query }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" style="margin: 0;">{{ __('models.model-origins') }} {{ strtoupper($model->name) }}</a>
+				</p>
 			</div>
-		@endif
+
+			@if($model->product_type != 3)
+			<div class="flex tablet-hidden">
+				<a onclick='document.getElementById("model-articles").scrollIntoView({ behavior: "smooth", block: "start" });' class="flex">
+					{{ __('models.model-link-articles') }} @svg('model_arrow_down')
+				</a>
+				
+				@if($model->creation_accessories()->count() > 0)
+				<a onclick='document.getElementById("model-extra-accessories").scrollIntoView({ behavior: "smooth", block: "center" });' class="flex">
+					{{ __('models.model-link-accessories') }} @svg('model_arrow_down')
+				</a>
+				@endif
+			</div>
+			@endif
+		</div>
 	</div>
 </section>

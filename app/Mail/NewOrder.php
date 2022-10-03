@@ -31,7 +31,7 @@ class NewOrder extends Mailable
     {
         $this->order = $order;
         $this->invoice = $pdf_invoice;
-        $this->locale = $this->order->user->favorite_language;
+        $this->locale = strtolower($this->order->user->favorite_language);
     }
 
     /**

@@ -24,7 +24,7 @@ class WriteNews extends Page
      
     protected static ?string $slug = 'write-news';
 
-    protected static ?string $navigationGroup = 'News';
+    protected static ?string $navigationGroup = 'News and Medias';
 
     protected static ?int $navigationSort = 1;
 

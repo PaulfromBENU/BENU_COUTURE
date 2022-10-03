@@ -395,7 +395,7 @@
                     </div>
                     <div class="flex justify-between mt-5 pt-5" style="border-top: lightgrey 1px solid;">
                         <div>
-                            <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover" wire:click="validateDeliveryStep">
+                            <button class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover text-md md:text-lg" wire:click="validateDeliveryStep">
                                 {{ __('cart.payment-delivery-validate') }}
                             </button>
                         </div>

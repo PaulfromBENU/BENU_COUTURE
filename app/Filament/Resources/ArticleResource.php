@@ -27,6 +27,8 @@ class ArticleResource extends Resource
 
     protected static ?string $navigationGroup = 'Creations & Variations';
 
+    protected static ?int $navigationSort = 2;
+
     protected static function shouldRegisterNavigation(): bool
     {
         return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');

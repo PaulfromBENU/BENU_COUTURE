@@ -77,7 +77,7 @@
 				</p>
 			</div>
 			<p class="shops__card__desc">
-				{{ $shop->$desc_query }}
+				{!! $shop->$desc_query !!}
 			</p>
 			<div class="flex flex-col lg:flex-row justify-start mb-5 shops__card__desc">
 				<p class="mr-4"><strong>{!! __('services.shops-opening') !!}:</strong></p>

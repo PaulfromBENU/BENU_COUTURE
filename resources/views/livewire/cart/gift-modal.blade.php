@@ -58,7 +58,7 @@
             </div> -->
             <div class="cart-gift-modal__card__type @if($card_type == 2) cart-gift-modal__card__type--active @endif" wire:click="updateCard(2)">
                 <div class="cart-gift-modal__card__type__svg-container">
-                    <img src="{{ asset('images/pictures/gift_card_2.png') }}" alt="Gift card from BENU" title="Gift Card" />
+                    <img src="{{ asset('images/pictures/gift_card_1.jpg') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="2" wire:model="card_type" wire:click="updateCard(2)" id="cart-add-card-2">
@@ -67,7 +67,7 @@
             </div>
             <div class="cart-gift-modal__card__type @if($card_type == 3) cart-gift-modal__card__type--active @endif" wire:click="updateCard(3)">
                 <div class="cart-gift-modal__card__type__svg-container">
-                    <img src="{{ asset('images/pictures/gift_card_3.png') }}" alt="Gift card from BENU" title="Gift Card" />
+                    <img src="{{ asset('images/pictures/gift_card_2.jpg') }}" alt="Gift card from BENU" title="Gift Card" />
                 </div>
                 <div>
                     <input type="radio" name="cart_add_card" value="3" wire:model="card_type" wire:click="updateCard(3)" id="cart-add-card-3">

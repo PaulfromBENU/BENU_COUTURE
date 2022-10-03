@@ -30,6 +30,10 @@
             <p class="article-overview__footer__size">
                 @if($article->size->value == 'unique')
                 {{ __('components.unique-size') }}
+                @elseif($article->size->value == 'unique-kids')
+                {{ __('components.unique-size-kids') }}
+                @elseif($article->size->value == 'unique-youth')
+                {{ __('components.unique-size-youth') }}
                 @else
                     @if($article->creation->creation_category->filter_key == 'bonnets')
                     {{ $article->size->value }}cm

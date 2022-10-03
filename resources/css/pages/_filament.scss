@@ -4,7 +4,7 @@
 	}
 	&__select {
 		background: transparent;
-		color: lightgrey;
+		// color: lightgrey;
 		min-width: 15vw;
 		border-radius: 3px;
 		margin-top: 5px;
@@ -94,7 +94,7 @@
 			padding: 5px 15px;
 			border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 			transition: all 0.2s;
-			color: lightgrey;
+			// color: lightgrey;
 			border-radius: 5px;
 			&:hover {
 				background: rgb(234 179 8/var(--tw-bg-opacity));
@@ -216,7 +216,7 @@
 		padding: 5px 15px;
 		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 		transition: all 0.2s;
-		color: lightgrey;
+		// color: lightgrey;
 		border-radius: 5px;
 		&:hover {
 			background: rgb(234 179 8/var(--tw-bg-opacity));
@@ -232,7 +232,7 @@
 		border-bottom: 1px solid lightgrey;
 		select {
 			background: transparent;
-			color: lightgrey;
+			// color: lightgrey;
 			min-width: 15vw;
 			border-radius: 3px;
 			margin-top: 5px;
@@ -267,7 +267,7 @@
 		right: 0;
 		top: 0;
 		cursor: pointer;
-		color: lightgrey;
+		// color: lightgrey;
 		border: solid 1px lightgrey;
 		padding: 0px 10px;
 		font-size: 1.5rem;
@@ -301,7 +301,7 @@
 		padding: 5px 15px;
 		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 		transition: all 0.2s;
-		color: lightgrey;
+		// color: lightgrey;
 		border-radius: 5px;
 		font-size: 1.3rem;
 		&:hover {
@@ -312,16 +312,20 @@
 }
 
 
+.orders-title {
+	font-size: 1.4rem;
+	font-weight: 600;
+	padding-bottom: 4px;
+	border-bottom: rgb(234 179 8/var(--tw-bg-opacity)) solid 4px;
+	margin-bottom: 5px;
+	color: rgb(234 179 8/var(--tw-bg-opacity));
+	cursor: pointer;
+	padding-top: 40px;
+}
+
+
 .new-orders {
 	position: relative;
-	h2 {
-		font-size: 1.4rem;
-		font-weight: 600;
-		padding-bottom: 4px;
-		border-bottom: rgb(234 179 8/var(--tw-bg-opacity)) solid 4px;
-		margin-bottom: 5px;
-		color: rgb(234 179 8/var(--tw-bg-opacity));
-	}
 	&__btn-1 {
 		color: rgb(234 179 8/var(--tw-bg-opacity));
 		transition: color 0.2s;
@@ -343,7 +347,7 @@
 				padding: 5px 15px;
 				border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 				transition: all 0.2s;
-				color: lightgrey;
+				// color: lightgrey;
 				border-radius: 5px;
 				font-size: 1.3rem;
 				&:hover {
@@ -399,7 +403,7 @@
 		padding: 5px 15px;
 		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 		transition: all 0.2s;
-		color: lightgrey;
+		// color: lightgrey;
 		border-radius: 5px;
 		font-size: 1.3rem;
 		&:hover {
@@ -509,7 +513,7 @@
 			padding: 5px 15px;
 			border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 			transition: all 0.2s;
-			color: lightgrey;
+			// color: lightgrey;
 			border-radius: 5px;
 			font-size: 1.3rem;
 			margin-left: 10px;
@@ -539,7 +543,7 @@
 	}
 	&__select {
 		background: transparent;
-		color: lightgrey;
+		// color: lightgrey;
 		min-width: 15vw;
 		border-radius: 3px;
 		margin-top: 5px;
@@ -571,7 +575,7 @@
 		padding: 5px 15px;
 		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
 		transition: all 0.2s;
-		color: lightgrey;
+		// color: lightgrey;
 		border-radius: 5px;
 		font-size: 1.3rem;
 		margin-left: 10px;
@@ -601,5 +605,84 @@
 		font-weight: 700;
 		color: $primary-color;
 		padding: 20px;
+	}
+}
+
+.accounting-invoices {
+	margin-bottom: 80px !important;
+	button {
+		background: transparent;
+		padding: 5px 15px;
+		border: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		transition: all 0.2s;
+		// color: lightgrey;
+		border-radius: 5px;
+		font-size: 1.3rem;
+		margin-left: 10px;
+		&:hover {
+			background: rgb(234 179 8/var(--tw-bg-opacity));
+			color: $white;
+		}
+	}
+	h3 {
+		margin-top: 30px;
+		width: 100%;
+		font-size: 1.2rem;
+		border-bottom: solid 1px rgb(234 179 8/var(--tw-bg-opacity));
+		padding-bottom: 10px;
+	}
+	&__input-group {
+		margin-right: 40px;
+		label {
+			margin-bottom: 10px;
+		}
+		input[type="date"] {
+			width: 100%;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			background: transparent;
+		}
+	}
+	&__invoice {
+		display: block;
+		font-size: 1.1rem;
+		padding: 10px 0px;
+		margin-left: 10px;
+		border-bottom: solid 1px lightgrey;
+		cursor: pointer;
+		transition: all 0.2s;
+		&:hover {
+			color: rgb(234 179 8/var(--tw-bg-opacity));
+		}
+	}
+	&__title {
+		width: 100%;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		padding-bottom: 15px;
+		margin-bottom: 30px;
+	}
+}
+
+
+.accounting-csv {
+	a {
+		transition: color 0.2s;
+		font-size: 1.1rem;
+		&:hover {
+			color: rgb(234 179 8/var(--tw-bg-opacity));
+		}
+		&::before {
+			content: ">  ";
+		}
+	}
+	&__title {
+		width: 100%;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: solid 2px rgb(234 179 8/var(--tw-bg-opacity));
+		padding-bottom: 15px;
+		margin-bottom: 30px;
 	}
 }

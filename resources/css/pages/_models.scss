@@ -233,17 +233,26 @@
 			height: 350px;
 			width: 100%;
 			margin-bottom: 50px;
-			padding: 140px 125px;
+			padding: 0 125px;
+			// background-position-x: right !important;
+			@include intermediate {
+				height: 200px;
+				padding: 0 100px;
+			}
 			@include tablet {
 				height: 200px;
-				padding: 70px 75px;
+				padding: 0 75px;
 			}
 			@include mobile {
-				height: 140px;
-				padding: 40px 45px;
+				display: none;
+				height: 145px;
+				// height: 100px; To show the picture for portrait mobile.
+				min-height: fit-content;
+				padding: 0 45px;
+				// background-position-x: right !important;
 			}
 			&--1 {
-				background: transparent url('/images/pictures/models_separator_1.png') 0% 0% no-repeat padding-box;
+				background: transparent url('/images/pictures/models_separator_1.jpg') 0% 0% no-repeat padding-box;
 				@include tablet {
 					background-size: cover;
 				}
@@ -252,7 +261,34 @@
 				}
 			}
 			&--2 {
-				background: transparent url('/images/pictures/models_separator_2.png') 0% 0% no-repeat padding-box;
+				background: transparent url('/images/pictures/models_separator_2.jpg') 0% 0% no-repeat padding-box;
+				@include tablet {
+					background-size: cover;
+				}
+				@include mobile {
+					background-size: cover;
+				}
+			}
+			&--3 {
+				background: transparent url('/images/pictures/models_separator_3.jpg') 0% 0% no-repeat padding-box;
+				@include tablet {
+					background-size: cover;
+				}
+				@include mobile {
+					background-size: cover;
+				}
+			}
+			&--4 {
+				background: transparent url('/images/pictures/models_separator_4.png') 0% 0% no-repeat padding-box;
+				@include tablet {
+					background-size: cover;
+				}
+				@include mobile {
+					background-size: cover;
+				}
+			}
+			&--5 {
+				background: transparent url('/images/pictures/models_separator_5.jpg') 0% 0% no-repeat padding-box;
 				@include tablet {
 					background-size: cover;
 				}
@@ -262,14 +298,19 @@
 			}
 			&__title {
 				text-align: left;
-				font: normal normal 600 36px/30px 'Barlow';
+				font: normal normal 600 36px/46px 'Barlow';
 				letter-spacing: 0px;
 				padding-bottom: 10px;
+				width: 65%;
+				@include intermediate {
+					font: normal normal 600 30px/38px 'Barlow';
+				}
 				@include tablet {
-					font: normal normal 600 32px/26px 'Barlow';
+					font: normal normal 600 24px/30px 'Barlow';
 				}
 				@include mobile {
-					font: normal normal 600 26px/22px 'Barlow';
+					width: 75%;
+					font: normal normal 600 16px/22px 'Barlow';
 				}
 			}
 			&__subtitle {
@@ -296,7 +337,7 @@
 	}
 	&__img-container {
 		width: 29%;
-		height: 640px;
+		height: 700px;
 		position: relative;
 		overflow: hidden;
 		border-radius: 25px;
@@ -305,14 +346,17 @@
 		@include tablet {
 			min-width: 300px;
 			width: fit-content;
+			max-width: 400px;
 			height: 600px;
 			margin: auto;
 		}
 		@include mobile {
 			min-width: 250px;
 			width: 100%;
+			max-width: 400px;
 			height: 400px;
-			margin-right: 0px;
+			margin: auto;
+			// margin-right: 0px;
 		}
 		img {
 			min-height: 100%;
@@ -351,10 +395,10 @@
 	}
 	&__desc {
 		width: 67%;
-		height: 640px;
+		height: 700px;
 		background: $bg-light-grey;
 		border-radius: 25px;
-		padding: 33px 71px; //2.5% 3%;
+		padding: 30px 65px; //2.5% 3%;
 		position: relative;
 		@include intermediate {
 			padding: 25px 45px;
@@ -379,6 +423,9 @@
 			font: normal normal 700 44px/53px 'Barlow Condensed';
 			letter-spacing: 0px;
 			margin-bottom: 35px;
+			@include intermediate {
+				font: normal normal 700 40px/50px 'Barlow Condensed';
+			}
 			@include tablet {
 				text-align: center;
 				font: normal normal 700 36px/46px 'Barlow Condensed';
@@ -407,6 +454,10 @@
 			text-align: left;
 			font: normal normal 500 15px/26px 'Barlow';
 			letter-spacing: 0px;
+			@include intermediate {
+				font: normal normal 500 14px/24px 'Barlow';
+				margin-bottom: 20px;
+			}
 			@include tablet {
 				font: normal normal 500 14px/24px 'Barlow';
 				margin-bottom: 20px;
@@ -439,9 +490,10 @@
 			li {
 				display: flex;
 				justify-content: flex-start;
-				width: 80%;
+				width: 98%;
+				margin-right: 2%;
 				text-align: left;
-				font: normal normal 500 15px/24px 'Barlow';
+				font: normal normal 500 14px/22px 'Barlow';
 				letter-spacing: 0px;
 				@include mobile {
 					width: 90%;
@@ -449,9 +501,9 @@
 					margin-bottom: 5px;
 				}
 				svg {
-					margin-top: 9px;
+					margin-top: 8px;
 					margin-right: 5px;
-					width: 19px;
+					width: 18px;
 					@include mobile {
 						margin-top: 5px;
 					}

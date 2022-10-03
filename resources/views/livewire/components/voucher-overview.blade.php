@@ -1,7 +1,7 @@
 <div class="article-overview" wire:click="triggerSideBar">
     <div class="article-overview__cap article-overview__cap--red"></div>
     <div class="article-overview__img-container">
-        <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers">
+        <img src="{{ asset('images/pictures/photo_voucher.jpg') }}" alt="BENU vouchers" title="BENU Vouchers">
     </div>
     <div class="article-overview__footer">
         <div class="flex justify-start">

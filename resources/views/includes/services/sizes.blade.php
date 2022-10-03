@@ -6,22 +6,22 @@
 		<div class="sizes__index relative mobile-hidden tablet-hidden">
 			<ul class="sizes__index__menu">
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-unisex-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-unisex') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-ladies-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-ladies') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-gentlemen-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-gentlemen') }}
 					</button>
 				</li>
 				<li>
-					<button class="btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+					<button id="sizes-chapter-kids-link" class="sizes-menu-link btn-slider-left font-bold" onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
 						{{ __('services.sizes-kids') }}
 					</button>
 				</li>
@@ -33,26 +33,22 @@
 				<ul class="sizes__index__menu flex justify-center">
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-unisex-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Unisexe
-							<!-- {{ __('services.sizes-unisex-short') }} -->
+							{{ __('services.sizes-unisex-short') }}
 						</button>
 					</li>
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-ladies-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Femmes
-							<!-- {{ __('services.sizes-ladies-short') }} -->
+							{{ __('services.sizes-ladies-short') }}
 						</button>
 					</li>
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-gentlemen-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Hommes
-							<!-- {{ __('services.sizes-gentlemen-short') }} -->
+							{{ __('services.sizes-gentlemen-short') }}
 						</button>
 					</li>
 					<li>
 						<button onclick="document.getElementById('sizes-chapter-kids-picture').scrollIntoView({ behavior: 'smooth', block: 'center' });">
-							Enfants
-							<!-- {{ __('services.sizes-kids-short') }} -->
+							{{ __('services.sizes-kids-short') }}
 						</button>
 					</li>
 				</ul>
@@ -150,7 +146,7 @@
 								<td>{{ __('services.sizes-gentlemen-table-info-4-8') }}</td>
 								<td>{{ __('services.sizes-gentlemen-table-info-4-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -211,18 +207,6 @@
 								<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-ladies-th-8') }}</th>
 								<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-ladies-th-9') }}</th>
 							</tr>
-							<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
-								<td class="col-span-3">{{ __('services.sizes-ladies-table-size') }}</td>
-								<td>{{ __('services.sizes-ladies-size-1') }}</td>
-								<td>{{ __('services.sizes-ladies-size-2') }}</td>
-								<td>{{ __('services.sizes-ladies-size-3') }}</td>
-								<td>{{ __('services.sizes-ladies-size-4') }}</td>
-								<td>{{ __('services.sizes-ladies-size-5') }}</td>
-								<td>{{ __('services.sizes-ladies-size-6') }}</td>
-								<td>{{ __('services.sizes-ladies-size-7') }}</td>
-								<td>{{ __('services.sizes-ladies-size-8') }}</td>
-								<td>{{ __('services.sizes-ladies-size-9') }}</td>
-							</tr> -->
 							<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 								<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-ladies-table-info-2') }}</td>
 								<td><!-- 80 -->{{ __('services.sizes-ladies-table-info-2-1') }}</td>
@@ -259,7 +243,7 @@
 								<td>{{ __('services.sizes-ladies-table-info-4-8') }}</td>
 								<td>{{ __('services.sizes-ladies-table-info-4-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -320,18 +304,6 @@
 								<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-gentlemen-th-8') }}</th>
 								<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-gentlemen-th-9') }}</th>
 							</tr>
-							<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
-								<td class="col-span-3">{{ __('services.sizes-gentlemen-table-size') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-1') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-2') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-3') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-4') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-5') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-6') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-7') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-8') }}</td>
-								<td>{{ __('services.sizes-gentlemen-size-9') }}</td>
-							</tr> -->
 							<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 								<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-gentlemen-table-info-2') }}</td>
 								<td><!-- 80 -->{{ __('services.sizes-gentlemen-table-info-2-1') }}</td>
@@ -368,7 +340,7 @@
 								<td>{{ __('services.sizes-gentlemen-table-info-4-8') }}</td>
 								<td>{{ __('services.sizes-gentlemen-table-info-4-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -441,18 +413,6 @@
 								<th class="sizes__chapter__table__header"><!-- 48/4XL -->{{ __('services.sizes-kids-th-8') }}</th>
 								<th class="sizes__chapter__table__header"><!-- 50/5XL -->{{ __('services.sizes-kids-th-9') }}</th>
 							</tr>
-							<!-- <tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
-								<td class="col-span-3">{{ __('services.sizes-kids-table-size') }}</td>
-								<td>{{ __('services.sizes-kids-size-1') }}</td>
-								<td>{{ __('services.sizes-kids-size-2') }}</td>
-								<td>{{ __('services.sizes-kids-size-3') }}</td>
-								<td>{{ __('services.sizes-kids-size-4') }}</td>
-								<td>{{ __('services.sizes-kids-size-5') }}</td>
-								<td>{{ __('services.sizes-kids-size-6') }}</td>
-								<td>{{ __('services.sizes-kids-size-7') }}</td>
-								<td>{{ __('services.sizes-kids-size-8') }}</td>
-								<td>{{ __('services.sizes-kids-size-9') }}</td>
-							</tr> -->
 							<tr class="grid grid-cols-12 sizes__chapter__table__data-rows">
 								<td class="col-span-3"><span class="primary-color">B.</span> {{ __('services.sizes-kids-table-info-2') }}</td>
 								<td><!-- 80 -->{{ __('services.sizes-kids-table-info-2-1') }}</td>
@@ -513,7 +473,7 @@
 								<td>{{ __('services.sizes-kids-table-info-6-8') }}</td>
 								<td>{{ __('services.sizes-kids-table-info-6-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-right mobile-hidden">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -567,7 +527,7 @@
 								<td>{{ __('services.sizes-kids-table-info-6-12') }}</td>
 								<td>{{ __('services.sizes-kids-table-info-6-13') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>

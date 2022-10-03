@@ -16,6 +16,7 @@ use App\Models\Media;
 use App\Mail\NewsletterConfirmation;
 use App\Mail\NewsletterConfirmationForAdmin;
 use App\Mail\NewsletterCancelConfirmationForAdmin;
+use App\Exports\OrdersExport;
 
 use App\Traits\ArticleAnalyzer;
 use App\Traits\DataImporter;
@@ -23,6 +24,9 @@ use App\Traits\DataImporter;
 use App\Http\Requests\NewsletterRequest;
 
 use JeroenDesloovere\VCard\VCard;
+use Maatwebsite\Excel\Facades\Excel;
+
+use App\Models\Translation;
 
 class GeneralController extends Controller
 {
@@ -31,6 +35,19 @@ class GeneralController extends Controller
 
     public function home()
     {
+        // Temp - translations check
+        // $translations = Translation::all();
+        // $missing_translations = [];
+        // foreach ($translations as $translation) {
+        //     if ($translation->fr == "" && $translation->en == "" && $translation->de == "" && $translation->lu == "") {
+        //         array_push($missing_translations, $translation->page.'.'.$translation->key.' - No translation at all');
+        //     } elseif ($translation->fr == "" || $translation->en == "" || $translation->de == "" || $translation->lu == "") {
+        //         array_push($missing_translations, $translation->page.'.'.$translation->key.' - Missing languages');
+        //     }
+        // }
+
+        // dd($missing_translations);
+
         // Reset payment on-going status to reach dashboard after connect
         session(['payment-ongoing' => 'inactive']);
 
@@ -88,11 +105,27 @@ class GeneralController extends Controller
     public function showNews(string $slug = '')
     {
         if ($slug == '') {
-            $all_news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
+            if (app('env') == 'stage' || app('env') == 'local') {
+                $all_news = NewsArticle::orderBy('updated_at', 'desc')->get();
+            } else {
+                $all_news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
+            }
             return view('news', ['all_news' => $all_news]);
         }
 
-        if (NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
+        if (NewsArticle::where('slug_'.app()->getLocale(), $slug)->where('is_ready', '1')->count() > 0) {
+            $news = NewsArticle::where('slug_'.app()->getLocale(), $slug)->first();
+            $previous_news = NewsArticle::where('created_at', '>', $news->created_at)
+                                          ->where('is_ready', '1')
+                                          ->orderBy('created_at', 'asc')
+                                          ->first();
+            $next_news = NewsArticle::where('created_at', '<', $news->created_at)
+                                      ->where('is_ready', '1')
+                                      ->orderBy('created_at', 'desc')
+                                      ->first();
+            return view('news-single', ['news' => $news, 'previous_news' => $previous_news, 'next_news' => $next_news]);
+        } elseif ((app('env') == 'stage' || app('env') == 'local') && NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
+            // In stage or local, articles can be displayed for test even if not validated.
             $news = NewsArticle::where('slug_'.app()->getLocale(), $slug)->first();
             $previous_news = NewsArticle::where('created_at', '>', $news->created_at)
                                           ->where('is_ready', '1')
@@ -303,9 +336,9 @@ class GeneralController extends Controller
 
     public function showSiteMap()
     {
-        $clothes = $this->getAvailableCreations('clothes');
-        $accessories = $this->getAvailableCreations('accessories');
-        $home_items = $this->getAvailableCreations('home');
+        $clothes = $this->getAvailableCreations('clothes')->sortBy('name');
+        $accessories = $this->getAvailableCreations('accessories')->sortBy('name');
+        $home_items = $this->getAvailableCreations('home')->sortBy('name');
         $news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
         return view('footer.pages.sitemap', [
             'clothes' => $clothes, 
@@ -316,22 +349,45 @@ class GeneralController extends Controller
     }
 
 
+    public function exportOrdersData(int $year, int $month) 
+    {
+        if (auth()->check() && auth()->user()->role == 'admin') {
+            return Excel::download(new OrdersExport($year, $month), 'orders-'.str_pad($month, 2, '0', STR_PAD_LEFT).'-'.$year.'.csv');
+        }
+    }
+
+
+    public function launchWebsite()
+    {
+        return view('launch-intro');
+    }
+
+
     public function startImport()
     {
         if(auth::check() && auth::user()->role == 'admin') {
         // if(1 == 1) {
+            echo "*** Time limit set to 3600s ***<br/>";
             set_time_limit(3600);
+            // echo "*** Creating folders with creations names in 'to_be_processed' folder' ***<br/>";
             // $this->createModelsFolders();
             // Article::query()->update(['checked' => '1']);
 
-            // Run db:seed before executing the following, to fully clear and reset data before import
-            echo "*** Importation started...<br/>";
+            // !!! Run db:seed before executing the following, to fully clear and reset data before import
+
+            // echo "*** Data importation started ***<br/>";
             // $this->importDataFromSophie();
             // $this->importCreationsFromLou();
             // $this->importCreationsFromSabine();
+
+            // echo "*** Pictures and articles importation started ***<br/>";
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
-            $this->importTranslations();
+
+            // echo "*** Translations importation started ***<br/>";
+            // $this->importTranslations();
+
+            echo "*** Importation process complete! :) ***<br/>";
         } else {
             return redirect()->route('login-fr');
         }

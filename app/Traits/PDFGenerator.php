@@ -45,6 +45,25 @@ trait PDFGenerator {
         }
     }
 
+    public function downloadInvoicePdf($order_code)
+    {
+        if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
+            $order = Order::where('unique_id', $order_code)->first();
+            $countries = [];
+            $localized_country = "country_".app()->getLocale();
+            foreach (DeliveryCountry::all() as $country) {
+                $countries[$country->country_code] = $country->$localized_country;
+            }
+            $countries['Luxembourg'] = 'Luxembourg';
+            $countries['France'] = 'France';
+            $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
+
+            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+
+            return $pdf;
+        }
+    }
+
     public function generateVoucherPdf($voucher_code)
     {
         if (strlen($voucher_code) == 12 && Voucher::where('unique_code', $voucher_code)->count() > 0) {

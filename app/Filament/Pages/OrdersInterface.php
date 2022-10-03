@@ -43,10 +43,18 @@ class OrdersInterface extends Page
     public $orders_sent;
     public $orders_ready_for_collect;
     public $orders_collected;
+    public $orders_sold_in_shop;
 
     public $delivery_link;
 
     public $show_unpaid = [];
+
+    public $show_new_orders = 0;
+    public $show_unpaid_orders = 0;
+    public $show_sent_orders = 0;
+    public $show_orders_ready_for_collect = 0;
+    public $show_collected_orders = 0;
+    public $show_sold_in_shop_orders = 0;
 
     public function mount()
     {
@@ -85,6 +93,7 @@ class OrdersInterface extends Page
         $this->orders_sent = Order::where('delivery_status', '2')->orWhere('delivery_status', '4')->orderBy('delivery_date', 'desc')->get();
         $this->orders_ready_for_collect = Order::where('delivery_status', '3')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
         $this->orders_collected = Order::where('delivery_status', '5')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
+        $this->orders_sold_in_shop = Order::where('delivery_status', '10')->where('address_id', '0')->orderBy('delivery_date', 'desc')->get();
     }
 
     public function cleanUnsoldArticles()
@@ -195,6 +204,7 @@ class OrdersInterface extends Page
         $order->status = 2;// Order confirmed
         $order->payment_status = 1;// Payment not received
         $order->delivery_status = 1;// Not ready for delivery or collect
+        $order->transaction_date = null;//Transaction date for accountability
         if($order->save()) {
             $this->initializeOrders();
         }
@@ -205,9 +215,9 @@ class OrdersInterface extends Page
         $order = Order::find($order_id);
         $order->status = 4;
         foreach ($order->cart->couture_variations as $variation) {
-            if ($variation->pending_shops()->count() > 0) {
-                $pivot = $variation->pending_shops()->first()->pivot;
-                $pivot->decrement('stock_in_cart');
+            if ($variation->shops()->count() > 0) {
+                $pivot = $variation->shops()->orderBy('updated_at', 'desc')->first()->pivot;
+                // $pivot->decrement('stock_in_cart');
                 $pivot->increment('stock');
             }
         }
@@ -238,6 +248,7 @@ class OrdersInterface extends Page
         $order->status = 2;// Paid
         $order->payment_status = 2;// Payment received
         $order->delivery_status = 1;// Not ready for delivery or collect
+        $order->transaction_date = Carbon::now()->toDateTimeString();//Transaction date for accountability
         if($order->save()) {
             if ($order->pdf_vouchers->count() > 0) {
                 foreach ($order->pdf_vouchers as $voucher) {
@@ -262,6 +273,90 @@ class OrdersInterface extends Page
     public function hideUnpaidDetails($order_id)
     {
         $this->show_unpaid[$order_id] = 0;
+    }
+
+    public function toggleNewOrders()
+    {
+        if ($this->show_new_orders == 0) {
+            $this->show_new_orders = 1;
+        } else {
+            $this->show_new_orders = 0;
+        }
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
+    }
+
+    public function toggleUnpaidOrders()
+    {
+        if ($this->show_unpaid_orders == 0) {
+            $this->show_unpaid_orders = 1;
+        } else {
+            $this->show_unpaid_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
+    }
+
+    public function toggleSentOrders()
+    {
+        if ($this->show_sent_orders == 0) {
+            $this->show_sent_orders = 1;
+        } else {
+            $this->show_sent_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
+    }
+
+    public function toggleOrdersReadyForCollect()
+    {
+        if ($this->show_orders_ready_for_collect == 0) {
+            $this->show_orders_ready_for_collect = 1;
+        } else {
+            $this->show_orders_ready_for_collect = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_collected_orders = 0;
+        $this->show_sold_in_shop_orders = 0;
+    }
+
+    public function toggleCollectedOrders()
+    {
+        if ($this->show_collected_orders == 0) {
+            $this->show_collected_orders = 1;
+        } else {
+            $this->show_collected_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_sold_in_shop_orders = 0;
+    }
+
+    public function toggleSoldInShopOrders()
+    {
+        if ($this->show_sold_in_shop_orders == 0) {
+            $this->show_sold_in_shop_orders = 1;
+        } else {
+            $this->show_sold_in_shop_orders = 0;
+        }
+        $this->show_new_orders = 0;
+        $this->show_unpaid_orders = 0;
+        $this->show_sent_orders = 0;
+        $this->show_orders_ready_for_collect = 0;
+        $this->show_collected_orders = 0;
     }
 
     // Display new orders - paid & not handled

@@ -124,7 +124,13 @@ class PaymentTunnel extends Component
         // If order has already been started, use existing data
         if ($this->order_id > 0) {
             $order = Order::find($this->order_id);
-            $this->user_id = $order->user_id;
+            if (auth()->check()) {
+                $this->user_id = auth()->user()->id;
+                $order->user_id = $this->user_id;
+                $order->save();
+            } else {
+                $this->user_id = $order->user_id;
+            }
             $this->info_valid = 1;
             $this->order_first_name = User::find($this->user_id)->first_name;
             $this->order_last_name = User::find($this->user_id)->last_name;
@@ -132,7 +138,7 @@ class PaymentTunnel extends Component
             if ($order->address_id == 0) {
                 $this->delivery_method = 0;
                 $this->address_chosen = 0;
-            } else {
+            } elseif(!auth()->check() || (auth()->check() && auth()->user()->addresses->contains($order->address->id))) {
                 $this->country_code = $order->address->country;
                 $this->delivery_address_chosen = 1;
                 $this->delivery_method = 1;
@@ -141,6 +147,12 @@ class PaymentTunnel extends Component
                 $this->delivery_chosen = 1;
                 $this->order_address_id = $order->address_id;
                 $this->address_name = $order->address->address_name;
+            } else {
+                $this->delivery_method = 0;
+                $this->address_chosen = 0;
+                $order->address_id = 0;
+                $order->invoice_address_id = null;
+                $order->save();
             }
 
             if ($order->invoice_address_id !== null && $order->invoice_address_id !== 0) {
@@ -231,6 +243,7 @@ class PaymentTunnel extends Component
                         'origin' => 'couture',
                         'general_comment' => "",
                         'client_number' => $client_number,
+                        'favorite_language' => session('locale'),
                     ]);
                 }
 

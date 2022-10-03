@@ -419,7 +419,8 @@
 	position: absolute;
 	top: 100px;
 	left: calc(50vw - 220px);
-	transition: top 2.5s ease-in-out ;
+	transition: top 2.5s ease-in-out, left 6s ease-out;
+	min-width: fit-content;
 	@include tablet {
 		top: 80px;
 		left: calc(50vw - 110px);
@@ -430,6 +431,7 @@
 	}
 	&__img {
 		height: 280px;
+		min-width: 498px;
 		@include tablet {
 			//max-height: 150px;
 			width: 250px;

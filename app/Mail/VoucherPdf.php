@@ -29,7 +29,7 @@ class VoucherPdf extends Mailable
         $this->buyer = $buyer;
         $this->voucher = $voucher;
         $this->pdf_voucher = $pdf_voucher;
-        $this->locale = $this->buyer->favorite_language;
+        $this->locale = strtolower($this->buyer->favorite_language);
     }
 
     /**

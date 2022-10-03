@@ -5,7 +5,7 @@
     <a target="_blank" href="{{ route('model-'.app()->getLocale(), ['name' => strtolower($article->creation->name), 'article' => strtolower($article->name)]) }}" class="block col-span-4 lg:col-span-1 cart-content__article__img-container">
     @endif
         @if($article->name == 'voucher')
-        <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" />
+        <img src="{{ asset('images/pictures/photo_voucher.jpg') }}" alt="BENU vouchers" title="BENU Vouchers" />
         @elseif($article->photos()->where('is_front', '1')->count() > 0)
         <img src="{{ asset('images/pictures/articles/'.$article->photos()->where('is_front', '1')->first()->file_name) }}">
         @else
@@ -101,7 +101,11 @@
                 @if($article->voucher_type == 'pdf')
                 {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value }}&euro;
                 @else
-                {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
+                    @if(session('has_kulturpass') !== null)
+                        {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 2.5 }}&euro;
+                    @else
+                        {{ $article->carts()->where('carts.cart_id', session('cart_id'))->first()->pivot->value + 5 }}&euro;
+                    @endif
                 @endif
             @else
                 @if($article->is_extra_accessory)

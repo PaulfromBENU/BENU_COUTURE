@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
+use Carbon\Carbon;
+
 use App\Models\Article;
 use App\Models\Cart;
 use App\Models\DeliveryCountry;
@@ -80,7 +82,7 @@ class SaleController extends Controller
             $cart->save();
 
             // This is your test secret API key.
-            \Stripe\Stripe::setApiKey('sk_test_51KnNZGADiHn0YYXdEqMAZ9cyLwagbSL6nbbJRj3zF8iiXJwW5A25oNwdOCGi2J9LGz9Wsu1POK7mZx0uuiwaCiwC00sk2V07AZ');
+            \Stripe\Stripe::setApiKey(config('stripe.secret'));
 
             // Create a PaymentIntent with amount and currency
             $paymentIntent = \Stripe\PaymentIntent::create([
@@ -190,16 +192,20 @@ class SaleController extends Controller
 
                 if ($current_order->payment_type ==  '0') { //Case payment by card
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 } elseif ($current_order->payment_type == '1') { // Case PayPal
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 } elseif ($current_order->payment_type == '2') { // Case Payconiq
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '3') { // Case bank transfer
                     $current_order->payment_status = 1;
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 } elseif ($current_order->payment_type == '5') { // Case Paid in shop
                     $current_order->payment_status = 2;
+                    $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 }
 
                 // Send e-mails with pdf vouchers (1 e-mail/pdf voucher) if already paid
@@ -256,6 +262,16 @@ class SaleController extends Controller
             $order = Order::where('unique_id', substr($order_code, 4, 6))->first();
             $pdf = $this->generateInvoicePdf($clean_order_code);
             return $pdf->stream('BENU_Order_'.$order->unique_id.'.pdf');
+        }
+    }
+
+    public function downloadInvoice($order_code)
+    {
+        if (strlen($order_code) == 22 && Order::where('unique_id', substr($order_code, 4, 6))->count() > 0) {
+            $clean_order_code = substr($order_code, 4, 6);
+            $order = Order::where('unique_id', substr($order_code, 4, 6))->first();
+            $pdf = $this->downloadInvoicePdf($clean_order_code);
+            return $pdf->download('benu-invoice-'.$order->unique_id.'.pdf');
         }
     }
 

@@ -458,9 +458,9 @@
 			background: lighten(lightgrey, 10);
 			color: $primary-color;
 			font-weight: 500;
-			font-size: 0.85rem;
+			font-size: 1rem;
 			border: none;
-			height: 26px;
+			height: 40px;
 			&:focus {
 				border: none;
 				outline: none;
@@ -748,7 +748,19 @@
 		}
 		&__more {
 			&__list {
-				font: normal normal 500 14px/26px 'Barlow';
+				font: normal normal 500 16px/28px 'Barlow';
+			}
+		}
+		&__valid {
+			border-radius: 10px;
+			padding: 20px 30px;
+			background: $success-green;
+			color: #556f6a;
+			margin-top: 20px;
+			border: 1px solid #dce9e8;
+			font: normal normal 500 18px/24px 'Barlow Condensed';
+			@include mobile {
+				padding: 15px;
 			}
 		}
 	}

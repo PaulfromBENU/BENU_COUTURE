@@ -132,7 +132,7 @@
 		}
 	}
 	&__content {
-		font: normal normal 400 16px/28px 'Barlow';
+		font: normal normal 500 16px/28px 'Barlow';
 		letter-spacing: 0;
 		margin-bottom: 40px;
 		text-align: left;
@@ -171,7 +171,7 @@
 		margin-bottom: 40px;
 		text-align: left;
 		&__txt {
-			font: normal normal 400 16px/28px 'Barlow';
+			font: normal normal 500 16px/28px 'Barlow';
 		}
 	}
 	&__collect-box {
@@ -236,7 +236,7 @@
 		text-align: left;
 	}
 	&__content {
-		font: normal normal 400 16px/28px 'Barlow';
+		font: normal normal 500 16px/28px 'Barlow';
 		margin-bottom: 40px;
 		text-align: left;
 	}
@@ -275,7 +275,8 @@
 	}
 	h3 {
 		text-align: center;
-		font: normal normal 700 20px/30px 'Barlow Condensed';
+		font: normal normal 700 22px/28px 'Barlow Condensed';
+		margin-bottom: 30px;
 		@include tablet {
 			margin-bottom: 30px;
 		}
@@ -285,6 +286,9 @@
 	}
 	&__cards {
 		padding-bottom: 55px;
+		@include mobile {
+			padding-bottom: 30px;
+		}
 		&__card {
 			width: 30%;
 			min-width: 280px;
@@ -304,6 +308,7 @@
 			@include mobile {
 				width: 100%;
 				margin: 10px;
+				margin-bottom: 30px;
 			}
 			&:hover {
 				.participate-smart__cards__card__number {
@@ -371,11 +376,14 @@
 				}
 			}
 		}
-		&__final {
-			width: 60%;
-			margin: auto;
-			font: normal normal 500 14px/17px 'Barlow';
-			text-align: left;
+	}
+	&__final {
+		width: 60%;
+		margin: auto;
+		font: normal normal 500 16px/28px 'Barlow';
+		text-align: left;
+		@include mobile {
+			width: 90%;
 		}
 	}
 }
@@ -390,7 +398,7 @@
 		margin-bottom: 60px;
 	}
 	&__content {
-		font: normal normal 400 16px/28px 'Barlow';
+		font: normal normal 500 16px/28px 'Barlow';
 		margin-bottom: 40px;
 		text-align: left;
 	}

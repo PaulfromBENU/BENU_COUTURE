@@ -21,9 +21,30 @@
 @endsection
 
 @section('main-content')
-<section class="w-full m-auto about mb-10 pb-10">
+<section class="w-full m-auto about mb-2">
 	<h2 class="w-11/12 lg:w-full m-auto about__subtitle">{{ __('about.subtitle-top') }}</h2>
 	<h1 class="w-11/12 lg:w-full m-auto about__title">{{ __('about.title-top') }}</h1>
+
+	<ul class="service__nav flex justify-between mobile-only" style="border-bottom: solid 1px lightgrey; overflow: hidden; max-width: min(90vw, 380px); margin: auto; margin-bottom: 40px;">
+		<!-- <li class="service__nav__arrow service__nav__arrow--left">
+			@svg('chevron-down')
+		</li> -->
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-creations').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-1') }}</button>
+		</li>
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-services').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-2') }}</button>
+		</li>
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-team').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-3') }}</button>
+		</li>
+		<li>
+			<button class="service__nav__link" onclick="document.getElementById('about-chapter-materials').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-4') }}</button>
+		</li>
+		<!-- <div class="service__nav__arrow service__nav__arrow--right mobile-only">
+			@svg('chevron-down')
+		</div> -->
+	</ul>
 
 	<h3 id="about-chapter-creations" class="about__section-title w-11/12 lg:w-full m-auto">
 		{{ __('about.section-title-1') }}
@@ -34,16 +55,16 @@
 			<div class="about__general__menu-container__menu">
 				<ul>
 					<li>
-						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-creations').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-1') }}</button>
+						<button id="about-chapter-creations-link" class="about-menu-link btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-creations').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-1') }}</button>
 					</li>
 					<li>
-						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-services').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-2') }}</button>
+						<button id="about-chapter-services-link" class="about-menu-link btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-services').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-2') }}</button>
 					</li>
 					<li>
-						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-team').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-3') }}</button>
+						<button id="about-chapter-team-link" class="about-menu-link btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-team').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-3') }}</button>
 					</li>
 					<li>
-						<button class="btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-materials').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-4') }}</button>
+						<button id="about-chapter-materials-link" class="about-menu-link btn-slider-left text-lg font-bold" onclick="document.getElementById('about-chapter-materials').scrollIntoView({ behavior: 'smooth', block: 'center' });">{{ __('about.side-menu-4') }}</button>
 					</li>
 				</ul>
 			</div>
@@ -254,6 +275,7 @@
 							<img src="{{ asset('images/pictures/about/about-content-6.jpg') }}">
 						</div>
 					</div>
+					<div id="materials"></div>
 					<p class="text-center mt-4 mb-10">
 						<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-3-btn-contact') }}</a>
 					</p>
@@ -269,7 +291,7 @@
 
 			<div class="about__general__content__info-section">
 				<div class="about__general__content__info-section__picture">
-					<img src="{{ asset('images/pictures/about/about-transition-4.png') }}" style="width: 100%;">
+					<img src="{{ asset('images/pictures/about/about-transition-4.jpg') }}" style="width: 100%;">
 				</div>
 
 				<div class="about__general__content__info-section__txt">
@@ -277,17 +299,19 @@
 						{{ __('about.section-4-txt-1') }}
 					</p>
 					<p class="about__general__content__info-section__txt__paragraph">
+						{{ __('about.section-4-txt-1-bis') }}
+					</p>
+					<p class="about__general__content__info-section__txt__paragraph">
 						{{ __('about.section-4-txt-2') }}
+					</p>
+					<p class="about__general__content__info-section__txt__paragraph">
+						{{ __('about.section-4-txt-2-bis') }}
 					</p>
 				</div>
 				<div class="about__general__content__info-section__txt">
-					<!-- <p class="about__general__content__info-section__txt__paragraph">
-						{{ __('about.section-4-txt-3') }}
-					</p> -->
-
 					<div class="flex flex-col md:flex-row justify-start md:justify-between flex-wrap mb-10">
 						<div class="w-full md:w-2/5 mb-5 md:mb-0">
-							<img src="{{ asset('images/pictures/about/about-content-7.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-7.jpg') }}">
 						</div>
 						<div class="w-full md:w-3/5 md:pl-5">
 							<h5>
@@ -315,7 +339,7 @@
 							</p>
 						</div>
 						<div class="w-full md:w-1/2 mb-5 md:mb-0">
-							<img src="{{ asset('images/pictures/about/about-content-8.png') }}">
+							<img src="{{ asset('images/pictures/about/about-content-8.jpg') }}">
 						</div>
 					</div>
 
@@ -359,16 +383,26 @@
 			if (!$('.about__general__content__slider').is(':animated')) {
 				let leftPos = $('.about__general__content__slider').scrollLeft();
 				let fullSliderWidth = $('.about__general__content__slider').get(0).scrollWidth - $('.about__general__content__slider').width();
-	  			$('.about__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 4}, 'fast');
+				if ($(window).width() > 768) {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 4}, 'fast');
+	  			} else {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos + fullSliderWidth / 10}, 'fast');
+	  			}
 
 	  			let leftPosScroll = parseInt($('.about__general__content__slider__bar__scroll--red').css('left'));
 	  			let fullBarWidth = $('.about__general__content__slider__bar__scroll').width();
 	  			let redBarWidth = fullBarWidth / 4;
-	  			if (leftPosScroll < (3 * redBarWidth - 20)) {//Margin to avoid bugs
-	  				// $('.about__general__content__slider__bar__scroll--red').animate({left: leftPosScroll + redBarWidth}, 'fast');
-	  			} else {
-	  				$('.about__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
-	  			}
+	  			if ($(window).width() > 768) {
+		  			if (leftPosScroll >= (3 * redBarWidth - 20)) {//Margin to avoid bugs
+		  				$('.about__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
+		  			}
+		  		} //else {
+		  		// 	if (leftPosScroll >= (5 / 2 * redBarWidth - 20)) {//Margin to avoid bugs
+		  		// 		$('.about__general__content__slider__bar__scroll--red').css('left', fullBarWidth * 0.75);
+		  		// 	} else {
+		  		// 		$('.about__general__content__slider__bar__scroll--red').css('left', leftPosScroll + fullBarWidth / 9);
+		  		// 	}
+		  		// }
 	  		}
 	 	});
 
@@ -376,7 +410,12 @@
 	 		if (!$('.about__general__content__slider').is(':animated')) {
 				let leftPos = $('.about__general__content__slider').scrollLeft();
 	  			let fullSliderWidth = $('.about__general__content__slider').get(0).scrollWidth - $('.about__general__content__slider').width();
-	  			$('.about__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 4}, 'fast');
+
+	  			if ($(window).width() > 768) {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 4}, 'fast');
+	  			} else {
+	  				$('.about__general__content__slider').animate({scrollLeft: leftPos - fullSliderWidth / 10}, 'fast');
+	  			}
 
 	  			let leftPosScroll = $('.about__general__content__slider__bar__scroll--red').position().left;
 	  			let fullBarWidth = $('.about__general__content__slider__bar__scroll').width();
@@ -395,11 +434,45 @@
 			let fullSliderWidth = $('.about__general__content__slider').get(0).scrollWidth - $('.about__general__content__slider').width();
 			let ratio = leftPos / fullSliderWidth;
 
- 			console.log(ratio);
- 			$('.about__general__content__slider__bar__scroll--red').css('left', $('.about__general__content__slider__bar__scroll').width() * ratio * 0.75);
- 			console.log($('.about__general__content__slider__bar__scroll--red').css('left'));
+			if ($(window).width() > 768) {
+ 				$('.about__general__content__slider__bar__scroll--red').css('left', $('.about__general__content__slider__bar__scroll').width() * ratio * 0.75);
+ 			}
 
 	 	})
+
+	 	// Menu automatic activation on scroll
+	 	let creationsTop = $('#about-chapter-creations').offset().top;
+	 	let servicesTop = $('#about-chapter-services').offset().top;
+	 	let teamTop = $('#about-chapter-team').offset().top;
+	 	let materialsTop = $('#about-chapter-materials').offset().top;
+
+	 	let currentScrollPos = $(window).scrollTop();
+	 	activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+
+	 	$(window).on('scroll', function() {
+	 		currentScrollPos = $(window).scrollTop();
+	 		activateAboutSideMenu(currentScrollPos, creationsTop, servicesTop, teamTop, materialsTop);
+	 	});
 	});
+
+	function activateAboutSideMenu(topPos, pos1, pos2, pos3, pos4)
+	{
+		let windowHeight = $(window).height();
+		if (topPos < pos1 - windowHeight / 2 - 50) {
+ 			$('.about-menu-link').removeClass('btn-slider-left--active');
+ 		} else if(topPos < pos2 - windowHeight / 2 - 50) {
+ 			$('.about-menu-link').removeClass('btn-slider-left--active');
+ 			$('#about-chapter-creations-link').addClass('btn-slider-left--active');
+ 		} else if(topPos < pos3 - windowHeight / 2 - 50) {
+ 			$('.about-menu-link').removeClass('btn-slider-left--active');
+ 			$('#about-chapter-services-link').addClass('btn-slider-left--active');
+ 		} else if(topPos < pos4 - windowHeight / 2 - 50) {
+ 			$('.about-menu-link').removeClass('btn-slider-left--active');
+ 			$('#about-chapter-team-link').addClass('btn-slider-left--active');
+ 		} else {
+ 			$('.about-menu-link').removeClass('btn-slider-left--active');
+ 			$('#about-chapter-materials-link').addClass('btn-slider-left--active');
+ 		}
+	}
 </script>
 @endsection

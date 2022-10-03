@@ -54,15 +54,15 @@ trait DataImporter {
 
         echo "<br/><br/><strong>----------------  Importing data from Sophie's file...</strong><br/>";
 
-        if (env('APP_ENV') != 'production') {
+        if (env('APP_ENV') !== 'production') {
             // WARNING: will empty the table!! To be used with caution.
-            //ArticleCareRecommendation::truncate();
-            // CareRecommendation::truncate();
-            //ArticleComposition::truncate();
+            DB::connection('mysql')->table('article_care_recommendation')->truncate();
+            DB::connection('mysql')->table('article_composition')->truncate();
+            CareRecommendation::truncate();
             Composition::truncate();
-            // Color::truncate();
-            // Size::truncate();
-            // CreationGroup::truncate();
+            Color::truncate();
+            Size::truncate();
+            CreationGroup::truncate();
             echo "<strong>--- All data deleted from CareRecommendation, Composition, Color, Size, CreationGroup tables in database ---</strong><br/>";
         }
 
@@ -83,10 +83,10 @@ trait DataImporter {
                 } else {
                     $new_care->picture = "services_care_1";
                 }
-                // if ($new_care->save()) {
-                //     array_push($cares_created, $care['name']);
-                //     echo "<span style='color:green;'>New care recommendation ".$care['name']." successfully added to the database :)</span><br/>";
-                // }
+                if ($new_care->save()) {
+                    array_push($cares_created, $care['name']);
+                    echo "<span style='color:green;'>New care recommendation ".$care['name']." successfully added to the database :)</span><br/>";
+                }
             }
         }
 
@@ -99,10 +99,10 @@ trait DataImporter {
                 $new_category->name_de = $category['name_de'];
                 $new_category->translation_key = $category['translation_key'];
                 $new_category->filter_key = $category['filter_key'];
-                // if ($new_category->save()) {
-                //     array_push($categories_created, $category['filter_key']);
-                //     echo "<span style='color:green;'>New creation category ".$category['name_fr']." successfully added to the database :)</span><br/>";
-                // }
+                if ($new_category->save()) {
+                    array_push($categories_created, $category['filter_key']);
+                    echo "<span style='color:green;'>New creation category ".$category['name_fr']." successfully added to the database :)</span><br/>";
+                }
             }
         }
 
@@ -111,10 +111,10 @@ trait DataImporter {
                 $new_color = new Color();
                 $new_color->name = strtolower($color['name_en']);
                 $new_color->hex_code = $color['hex_code'];
-                // if ($new_color->save()) {
-                //     array_push($colors_created, $color['name_en']);
-                //     echo "<span style='color:green;'>New color ".$color['name_en']." successfully added to the database :)</span><br/>";
-                // }
+                if ($new_color->save()) {
+                    array_push($colors_created, $color['name_en']);
+                    echo "<span style='color:green;'>New color ".$color['name_en']." successfully added to the database :)</span><br/>";
+                }
             }
         }
 
@@ -144,10 +144,10 @@ trait DataImporter {
                 $new_size = new Size();
                 $new_size->value = $size['value'];
                 $new_size->category = $size['category'];
-                // if ($new_size->save()) {
-                //     array_push($sizes_created, $size['value']);
-                //     echo "<span style='color:green;'>New size ".$size['value']." successfully added to the database :)</span><br/>";
-                // }
+                if ($new_size->save()) {
+                    array_push($sizes_created, $size['value']);
+                    echo "<span style='color:green;'>New size ".$size['value']." successfully added to the database :)</span><br/>";
+                }
             }
         }
 
@@ -160,10 +160,10 @@ trait DataImporter {
                 $new_type->name_en = $type['name_en'];
                 $new_type->filter_key = $type['filter_key'];
                 $new_type->translation_key = $type['translation_key'];
-                // if ($new_type->save()) {
-                //     array_push($types_created, $type['name_fr']);
-                //     echo "<span style='color:green;'>New type ".$type['name_fr']." successfully added to the database :)</span><br/>";
-                // }
+                if ($new_type->save()) {
+                    array_push($types_created, $type['name_fr']);
+                    echo "<span style='color:green;'>New type ".$type['name_fr']." successfully added to the database :)</span><br/>";
+                }
             }
         }
 
@@ -346,7 +346,7 @@ trait DataImporter {
                             $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'trousers')->first()->id;
                             break;
 
-                        case 'Jeu':
+                        case 'Jeux':
                             $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'games')->first()->id;
                             break;
 
@@ -370,6 +370,34 @@ trait DataImporter {
                             } else {
                                 $creation_to_update->product_type = 2;
                             }
+                            break;
+
+                        case 'Pique-nique':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'picnic')->first()->id;
+                            break;
+
+                        case 'Emballages cadeau':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'gift')->first()->id;
+                            break;
+
+                        case 'Coussins':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'pillow')->first()->id;
+                            break;
+
+                        case 'Démaquillants':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'makeup')->first()->id;
+                            break;
+
+                        case 'Maque-pages':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'bookmarks')->first()->id;
+                            break;
+
+                        case 'Masques de nuit':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'nightmasks')->first()->id;
+                            break;
+
+                        case 'Porte-Monnaies':
+                            $creation_to_update->creation_category_id = CreationCategory::where('filter_key', 'wallets')->first()->id;
                             break;
                         
                         default:
@@ -490,7 +518,7 @@ trait DataImporter {
                     $picture_name = trim($picture->getFilename());
                     $picture_info = explode(" ", $picture_name);
                     $color_options = [
-                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
+                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'Denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
                     ];
 
                     if (in_array(explode("_", $picture_info[2])[0], $color_options)) {
@@ -545,7 +573,7 @@ trait DataImporter {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown'])) {
                             $picture_main_color  = 'brown';
-                        } elseif (in_array($picture_main_color, ['denim', 'jeans', 'jean'])) {
+                        } elseif (in_array($picture_main_color, ['Denim', 'jeans', 'jean'])) {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss'])) {
                             $picture_main_color  = 'green';
@@ -584,11 +612,19 @@ trait DataImporter {
                         if ($picture_size  == 'M(1)') {
                             $picture_size = 'M';
                         }
-                        if ($picture_size  == '2XL') {
-                            $picture_size = 'XXL';
+                        if ($picture_size  == 'XXL') {
+                            $picture_size = '2XL';
                         }
                         if ($picture_size  == 'XL(1)') {
                             $picture_size = 'XL';
+                        }
+
+                        if ($picture_size  == 'uk') {
+                            $picture_size = 'unique';
+                        }
+
+                        if ($picture_size  == 'uy') {
+                            $picture_size = 'unique';
                         }
 
                         // Default value to M for sold articles of unknown size
@@ -622,7 +658,7 @@ trait DataImporter {
                                 $new_article->singularity_lu = "";
                                 $new_article->singularity_fr = "";
                                 $new_article->singularity_en = "";
-                                $new_article->singularity_de = "article.singularity-".strtolower($creation->name)."-".$new_article->name;
+                                $new_article->singularity_de = "";
                                 $new_article->translation_key = "article.singularity-".strtolower($new_article->name);
                                 $new_article->creation_date = $picture_info[6];
                                 //$new_article->picture_name = $picture_name;
@@ -773,7 +809,7 @@ trait DataImporter {
                 foreach ($all_replacement_pictures as $replacement_picture) {
                     $picture_info = explode(" ", trim($replacement_picture->getFilename()));
                     $color_options = [
-                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
+                        'beige', 'wool', 'caramel', 'black', 'back', 'dark', 'babyblue', 'blue', 'cyan', 'darkblue', 'fadedblue',  'lightblue', 'ligthblue', 'marineblue', 'navy', 'navyblue', 'skyblue', 'stoneblue', 'turquoise', 'blueish', 'thin', 'thinblue', 'camo', 'royal', 'teal', 'bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown', 'Denim', 'jeans', 'jean', 'darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss', 'darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey', 'floral', 'flowers', 'Mosaique', 'colorful', 'various', 'multicolor', 'motive', 'pink', 'rose', 'baby', 'salmon', 'lightrose', 'deep_mauve', 'eggplant', 'lightpurple', 'mauve', 'purple', 'lavender', 'bordeau', 'bordeaux', 'burgundy', 'darkred', 'red', 'firered', 'velvet', 'cream', 'creamwhite', 'white', 'whtie', 'creamy', 'golden', 'lightyellow', 'mustard', 'neonyellow', 'yellow', 'trombone', 'orange', 'deep', 'old',
                     ];
 
                     if (in_array(explode("_", $picture_info[2])[0], $color_options)) {
@@ -818,8 +854,8 @@ trait DataImporter {
                             $picture_main_color  = 'blue';
                         } elseif (in_array($picture_main_color, ['bronze', 'Brown', 'brown', 'brownish', 'darkbrown', 'maroon', 'marron', 'chestnut', 'lightbrown'])) {
                             $picture_main_color  = 'brown';
-                        } elseif (in_array($picture_main_color, ['denim', 'jeans', 'jean'])) {
-                            $picture_main_color  = 'denim';
+                        } elseif (in_array($picture_main_color, ['Denim', 'jeans', 'jean'])) {
+                            $picture_main_color  = 'Denim';
                         } elseif (in_array($picture_main_color, ['darkgreen', 'green', 'greenish', 'khaki', 'militarygreen', 'mint', 'neongreen', 'olive', 'lightgreen', 'kaki', 'sacramento', 'moss'])) {
                             $picture_main_color  = 'green';
                         } elseif (in_array($picture_main_color, ['darkgrey', 'rey', 'grey', 'greyish', 'jeangrey', 'lightgrey'])) {
@@ -889,7 +925,7 @@ trait DataImporter {
                                 $new_replacement->singularity_lu = "";
                                 $new_replacement->singularity_fr = "";
                                 $new_replacement->singularity_en = "";
-                                $new_replacement->singularity_de = "article.singularity-".strtolower($replacement)."-".$new_replacement->name;
+                                $new_replacement->singularity_de = "";
                                 $new_replacement->translation_key = "article.singularity-".strtolower($new_replacement->name);
                                 $new_replacement->creation_date = $picture_info[6];
 
@@ -1153,7 +1189,7 @@ trait DataImporter {
         $compo_silk_id = Composition::where('fabric_fr', 'Soie')->first()->id;
         $compo_silk_crepe_id = Composition::where('fabric_fr', 'Crêpe de soie')->first()->id;
         $compo_cotton_id = Composition::where('fabric_fr', 'Coton')->first()->id;
-        $compo_cotton_crepe_id = Composition::where('fabric_fr', 'Crêpe de coton')->first()->id;
+        // $compo_cotton_crepe_id = Composition::where('fabric_fr', 'Crêpe de coton')->first()->id;
         $compo_jersey_id = Composition::where('fabric_fr', 'Jersey de coton')->first()->id;
         $compo_wool_id = Composition::where('fabric_fr', 'Laine')->first()->id;
         $compo_tissed_wool_id = Composition::where('fabric_fr', 'Laine tissée')->first()->id;
@@ -1167,9 +1203,10 @@ trait DataImporter {
         $compo_smooth_velvet_id = Composition::where('fabric_fr', 'Velours lisse de coton')->first()->id;
         $compo_denim_id = Composition::where('fabric_fr', 'Denim')->first()->id;
         $compo_acrylic_id = Composition::where('fabric_fr', 'Acrylique')->first()->id;
+        $compo_leather_id = Composition::where('fabric_fr', 'Cuir')->first()->id;
 
         // Determination of care recommendation ids for attaching
-        $care_no_washing_id = CareRecommendation::where('name', 'no_washing')->first()->id;
+        // $care_no_washing_id = CareRecommendation::where('name', 'no_washing')->first()->id;
         $care_wool_id = CareRecommendation::where('name', 'cold_wash')->first()->id;
         $care_30deg_id = CareRecommendation::where('name', 'wash_30C')->first()->id;
         $care_40deg_id = CareRecommendation::where('name', 'wash_40C')->first()->id;
@@ -1208,10 +1245,10 @@ trait DataImporter {
                     if ($creation_lou['Coton'] == "x") {
                         $article->compositions()->attach($compo_cotton_id);
                     }
-                    if ($creation_lou['Crêpe de coton'] == "x") {
-                        $article->compositions()->attach($compo_cotton_crepe_id);
-                    }
-                    if ($creation_lou['Jersey'] == "x") {
+                    // if ($creation_lou['Crêpe de coton'] == "x") {
+                    //     $article->compositions()->attach($compo_cotton_crepe_id);
+                    // }
+                    if ($creation_lou['Jersey de coton'] == "x") {
                         $article->compositions()->attach($compo_jersey_id);
                     }
                     if ($creation_lou['Laine'] == "x") {
@@ -1226,7 +1263,7 @@ trait DataImporter {
                     if ($creation_lou['Fibres synthétiques'] == "x") {
                         $article->compositions()->attach($compo_synthetic_id);
                     }
-                    if ($creation_lou['Crêpe de Polyester'] == "x") {
+                    if ($creation_lou['Polyester'] == "x") {
                         $article->compositions()->attach($compo_poly_crepe_id);
                     }
                     if ($creation_lou['Élasthanne'] == "x") {
@@ -1238,25 +1275,28 @@ trait DataImporter {
                     if ($creation_lou['Nylon'] == "x") {
                         $article->compositions()->attach($compo_nylon_id);
                     }
-                    if ($creation_lou['Velours côtelé'] == "x") {
+                    if ($creation_lou['Velours de coton côtelé'] == "x") {
                         $article->compositions()->attach($compo_velvet_id);
                     }
-                    if ($creation_lou['Velours lisse'] == "x") {
+                    if ($creation_lou['Velours de coton lisse'] == "x") {
                         $article->compositions()->attach($compo_smooth_velvet_id);
                     }
                     if ($creation_lou['Denim'] == "x") {
                         $article->compositions()->attach($compo_denim_id);
                     }
-                    if ($creation_lou['Acrylic'] == "x") {
+                    if ($creation_lou['Acrylique'] == "x") {
                         $article->compositions()->attach($compo_acrylic_id);
+                    }
+                    if ($creation_lou['Cuir'] == "x") {
+                        $article->compositions()->attach($compo_leather_id);
                     }
 
                     echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
 
-                    if ($creation_lou['Pas de lavage recommandé'] == "x") {
-                        $article->care_recommendations()->attach($care_no_washing_id);
-                    }
-                    if ($creation_lou['Programme laine'] == "x") {
+                    // if ($creation_lou['Pas de lavage recommandé'] == "x") {
+                    //     $article->care_recommendations()->attach($care_no_washing_id);
+                    // }
+                    if ($creation_lou['Cold wash (wool program) or hand wash'] == "x") {
                         $article->care_recommendations()->attach($care_wool_id);
                     }
                     if ($creation_lou['30°C max'] == "x") {
@@ -1315,10 +1355,10 @@ trait DataImporter {
                     if ($creation_lou['Coton'] == "x") {
                         $article->compositions()->attach($compo_cotton_id);
                     }
-                    if ($creation_lou['Crêpe de coton'] == "x") {
-                        $article->compositions()->attach($compo_cotton_crepe_id);
-                    }
-                    if ($creation_lou['Jersey'] == "x") {
+                    // if ($creation_lou['Crêpe de coton'] == "x") {
+                    //     $article->compositions()->attach($compo_cotton_crepe_id);
+                    // }
+                    if ($creation_lou['Jersey de coton'] == "x") {
                         $article->compositions()->attach($compo_jersey_id);
                     }
                     if ($creation_lou['Laine'] == "x") {
@@ -1333,7 +1373,7 @@ trait DataImporter {
                     if ($creation_lou['Fibres synthétiques'] == "x") {
                         $article->compositions()->attach($compo_synthetic_id);
                     }
-                    if ($creation_lou['Crêpe de Polyester'] == "x") {
+                    if ($creation_lou['Polyester'] == "x") {
                         $article->compositions()->attach($compo_poly_crepe_id);
                     }
                     if ($creation_lou['Élasthanne'] == "x") {
@@ -1345,25 +1385,28 @@ trait DataImporter {
                     if ($creation_lou['Nylon'] == "x") {
                         $article->compositions()->attach($compo_nylon_id);
                     }
-                    if ($creation_lou['Velours côtelé'] == "x") {
+                    if ($creation_lou['Velours de coton côtelé'] == "x") {
                         $article->compositions()->attach($compo_velvet_id);
                     }
-                    if ($creation_lou['Velours lisse'] == "x") {
+                    if ($creation_lou['Velours de coton lisse'] == "x") {
                         $article->compositions()->attach($compo_smooth_velvet_id);
                     }
                     if ($creation_lou['Denim'] == "x") {
                         $article->compositions()->attach($compo_denim_id);
                     }
-                    if ($creation_lou['Acrylic'] == "x") {
+                    if ($creation_lou['Acrylique'] == "x") {
                         $article->compositions()->attach($compo_acrylic_id);
+                    }
+                    if ($creation_lou['Cuir'] == "x") {
+                        $article->compositions()->attach($compo_leather_id);
                     }
 
                     echo "<span style='color: green;'>Composition updated for article ".$article->name."</span><br/>";
 
-                    if ($creation_lou['Pas de lavage recommandé'] == "x") {
-                        $article->care_recommendations()->attach($care_no_washing_id);
-                    }
-                    if ($creation_lou['Programme laine'] == "x") {
+                    // if ($creation_lou['Pas de lavage recommandé'] == "x") {
+                    //     $article->care_recommendations()->attach($care_no_washing_id);
+                    // }
+                    if ($creation_lou['Cold wash (wool program) or hand wash'] == "x") {
                         $article->care_recommendations()->attach($care_wool_id);
                     }
                     if ($creation_lou['30°C max'] == "x") {
@@ -1407,6 +1450,9 @@ trait DataImporter {
                     }
 
                     echo "<span style='color: green;'>Care Recommendations updated for article ".$article->name."</span><br/>";
+
+                    // Size category update
+                    $article->size_category = $creation_lou['Enveloppe'];
                 }
 
                 // Keywords handling
@@ -1446,9 +1492,6 @@ trait DataImporter {
                         }
                     }
                 }
-
-                // Size category update
-                $article->size_category = $creation_lou['Enveloppe'];
             }
         }
 
@@ -1480,16 +1523,16 @@ trait DataImporter {
                 if ($article_sophie['singularity_de'] != "") {
                     $article->singularity_de = $article_sophie['singularity_de'];
                 } else {
-                    $article->singularity_fr = $article->translation_key;
+                    $article->singularity_de = "";
                 }
                 if ($article->save()) {
                     echo "<span style='color: green; padding-left: 10px;'>Singularities updated for article ".$article->name."</span><br/>";
                 }
 
                 // Care recommendations update
-                if ($article_sophie['no_washing'] == "VRAI") {
-                    $article->care_recommendations()->attach($care_no_washing_id);
-                }
+                // if ($article_sophie['no_washing'] == "VRAI") {
+                //     $article->care_recommendations()->attach($care_no_washing_id);
+                // }
                 if ($article_sophie['cold_wash'] == "VRAI") {
                     $article->care_recommendations()->attach($care_wool_id);
                 }
@@ -1547,9 +1590,9 @@ trait DataImporter {
                 if ($article_sophie['cotton'] == "VRAI") {
                     $article->compositions()->attach($compo_cotton_id);
                 }
-                if ($article_sophie['cotton_crepe'] == "VRAI") {
-                    $article->compositions()->attach($compo_cotton_crepe_id);
-                }
+                // if ($article_sophie['cotton_crepe'] == "VRAI") {
+                //     $article->compositions()->attach($compo_cotton_crepe_id);
+                // }
                 if ($article_sophie['jersey'] == "VRAI") {
                     $article->compositions()->attach($compo_jersey_id);
                 }

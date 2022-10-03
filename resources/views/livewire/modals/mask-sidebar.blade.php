@@ -164,7 +164,7 @@
                     {{ __('sidebar.masks-send-request') }}
                 </button>
                 @elseif($status == 'sent')
-                <div class="p-4 bg-green-100 text-green-600">
+                <div class="article-sidebar__content__valid">
                     {!! __('sidebar.mask-sent-confirm') !!}
                 </div>
                 @endif

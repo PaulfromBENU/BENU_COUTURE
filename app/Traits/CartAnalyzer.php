@@ -24,7 +24,11 @@ trait CartAnalyzer {
                 if ($variation->name == 'voucher') {
                     $article_amount = $variation->pivot->articles_number * $variation->pivot->value;
                     if ($variation->voucher_type == 'fabric') {
-                        $article_amount += 5 * $variation->pivot->articles_number;
+                        if(session('has_kulturpass') !== null) {
+                            $article_amount += 2.5 * $variation->pivot->articles_number;
+                        } else {
+                            $article_amount += 5 * $variation->pivot->articles_number;
+                        }
                     }
                 } else {
                     if ($variation->is_extra_accessory == '1') {

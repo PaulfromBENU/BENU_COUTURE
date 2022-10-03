@@ -28,7 +28,7 @@
 		@endfor
 	</div>
 
-	<h3 class="mt-10 mb-5">
+	<h3 class="mt-4 md:mt-10 mb-5">
 		{{ __('participate.smart-subtitle-2') }}
 	</h3>
 

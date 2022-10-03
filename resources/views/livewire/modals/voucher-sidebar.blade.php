@@ -3,7 +3,7 @@
         <!-- Hidden on mobile -->
         <div class="article-sidebar__img-container tablet-hidden">
             <div style="height: 100%;">
-                <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
+                <img src="{{ asset('images/pictures/photo_voucher.jpg') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
             </div>
         </div>
 

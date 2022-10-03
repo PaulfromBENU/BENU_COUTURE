@@ -374,15 +374,6 @@
 					</div>
 				</div>
 
-				<!-- <div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
-					<div style="position: absolute; width: 75%; top: 0; left: 0%;">
-						{{ __('pdf.invoice-included-vta') }}
-					</div>
-					<div style="position: absolute; width: 25%; top: 0; left: 75%;">
-						{{ number_format($sum_before_voucher - $sum_without_tax, 2) }}&euro;
-					</div>
-				</div> -->
-
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; width: 60%; margin-left: 40%;">
 					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
 						{{ __('pdf.invoice-delivery-fees') }}

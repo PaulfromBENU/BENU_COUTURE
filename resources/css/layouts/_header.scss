@@ -403,7 +403,7 @@
 				//transform: translateX(-50%);
 				transition: all 0.3s ease-in-out;
 			}
-			&:hover {
+			&:hover, &--active {
 				color: $primary-color;
 				&::before {
 					left: 0%;
@@ -486,20 +486,6 @@
 			color: #CFCFCF;
 			li {
                 padding-top: 5px;
-				a {
-					color: $dark-text;
-					padding: 0.5rem;
-					font: normal normal normal 18px/22px 'Barlow Condensed';
-					letter-spacing: 0.36px;
-					transition: color 0.3s ease-in-out;
-					@include intermediate {
-						padding: 0.5rem 0.2rem;
-						font: normal normal normal 17px/20px 'Barlow Condensed';
-					}
-					&:hover {
-						color: $primary-color;
-					}
-				}
 			}
 			li:nth-child(odd) {
 				padding-right: .4rem;
@@ -508,6 +494,20 @@
 			li:nth-child(even) {
 				padding-left: 0;
 				padding-right: 0;
+			}
+			&__link {
+				color: $dark-text;
+				padding: 0.5rem;
+				font: normal normal normal 18px/22px 'Barlow Condensed';
+				letter-spacing: 0.36px;
+				transition: color 0.3s ease-in-out;
+				@include intermediate {
+					padding: 0.5rem 0.2rem;
+					font: normal normal normal 17px/20px 'Barlow Condensed';
+				}
+				&:hover, &--active {
+					color: $primary-color;
+				}
 			}
 		}
 	}

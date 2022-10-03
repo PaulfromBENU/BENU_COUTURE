@@ -1,4 +1,21 @@
 <footer class="footer">
+	<div class="footer__sponsors benu-container">
+		<h5 class="footer__sponsors__title">
+			{{ __('footer.sponsors-title') }}
+		</h5>
+		<div class="flex justify-center flex-wrap">
+			<div class="footer__sponsors__sponsor flex flex-col justify-center">
+				<a href="https://esch.lu" target="_blank" class="block">
+					<img src="{{ asset('images/pictures/sponsors/ville-esch.png') }}" />
+				</a>
+			</div>
+			<div class="footer__sponsors__sponsor flex flex-col justify-center">
+				<a href="https://mecdd.gouvernement.lu/fr.html" target="_blank" class="block">
+					<img src="{{ asset('images/pictures/sponsors/ministere-luxembourg.jpg') }}" />
+				</a>
+			</div>
+		</div>
+	</div>
 	<div class="benu-container">
 		<div class="flex flex-start flex-wrap footer__lists">
 			<div class="footer__lists__col">

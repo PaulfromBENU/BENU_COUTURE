@@ -21,6 +21,8 @@
 @endsection
 
 @section('more-styles')
+<!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
 @endsection
 
 @section('robots-behaviour-top')

@@ -133,7 +133,7 @@
                     {{ __('sidebar.items-send-request') }}
                 </button>
                 @elseif($status == 'sent')
-                <div class="p-4 bg-green-100 text-green-600">
+                <div class="article-sidebar__content__valid">
                     {!! __('sidebar.items-sent-confirm') !!}
                 </div>
                 @endif

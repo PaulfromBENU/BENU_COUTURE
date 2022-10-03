@@ -655,7 +655,10 @@
 			}
 		}
 		div {
-			width: 100%;
+			width: fit-content;
+			@include mobile {
+				width: 100%;
+			}
 		}
 	}
 }
