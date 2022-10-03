@@ -47,7 +47,7 @@
 
 	<div class="participate-give__collect-box">
 		<h3 id="participate-give-collect-point-1">
-			BENU Shop Esch-sur-Alzette
+			BENU Shop <br/>Esch-sur-Alzette
 		</h3>
 		<div class="participate-give__collect-box__details">
 			<p class="mb-3">
@@ -111,7 +111,7 @@
 
 	<div class="participate-give__collect-box">
 		<h3>
-			Executive Textil Atelier - Sylvie Hamus
+			Executive Textil Atelier <br/>Sylvie Hamus
 		</h3>
 		<div class="participate-give__collect-box__details">
 			<p class="mb-3">
@@ -131,7 +131,7 @@
 
 	<div class="participate-give__collect-box">
 		<h3>
-			Naturpark Our - Christian Kayser
+			Naturpark Our <br/>Christian Kayser
 		</h3>
 		<div class="participate-give__collect-box__details">
 			<p class="mb-3">
@@ -154,7 +154,7 @@
 
 	<div class="participate-give__collect-box">
 		<h3>
-			BENU VILLAGE ESCH asbl - Georges Kieffer
+			BENU VILLAGE ESCH asbl <br/>Georges Kieffer
 		</h3>
 		<div class="participate-give__collect-box__details">
 			<p class="mb-3">
