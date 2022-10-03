@@ -33,6 +33,8 @@ class MaskSidebar extends Component
     public $email;
     public $with_pictures;
 
+    public $singularity_query;
+
     protected $rules = [
         'size' => 'nullable|min:4|string',
         'with_filter' => 'nullable|boolean',
@@ -51,6 +53,7 @@ class MaskSidebar extends Component
         if (Auth::check()) {
             $this->email = Auth::user()->email;
         }
+        $this->singularity_query = "singularity_".app()->getLocale();
     }
 
     public function getCreationData()

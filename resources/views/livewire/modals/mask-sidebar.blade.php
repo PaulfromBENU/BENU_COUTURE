@@ -81,9 +81,9 @@
             {{ $creation_price }}&euro;
         </p>
 
-        <p class="article-sidebar__content__singularity">
+        <!-- <p class="article-sidebar__content__singularity">
             <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ __('sidebar.mask-singularity') }}
-        </p>
+        </p> -->
 
         @if($age == 'kid')
         <h4 class="article-sidebar__content__mask-subtitle">

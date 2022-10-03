@@ -61,7 +61,7 @@ class DashboardNavigation extends Component
             'email' => ['nullable', 'string', 'email', 'max:255'],
             'company' => ['nullable', 'string', 'max:255'],
             'phone' => ['nullable', 'string', 'max:30'],
-            'old_password' => ['nullable', Rules\Password::defaults()],
+            'old_password' => ['nullable', 'string', 'min:6'],
             'new_password' => ['nullable', Rules\Password::defaults()],
             'new_password_confirmation' => ['nullable', Rules\Password::defaults()],
             "delete_confirm" => "nullable|boolean",

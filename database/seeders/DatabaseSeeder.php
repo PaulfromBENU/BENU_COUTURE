@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             // ArticleCompositionSeeder::class,
 
             // Required before importation only in case of common DB update
-            UserSeeder::class,
+            // UserSeeder::class,
             // PartnerSeeder::class,
             // ShopSeeder::class,
 
