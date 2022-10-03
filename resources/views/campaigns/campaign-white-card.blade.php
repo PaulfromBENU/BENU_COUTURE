@@ -208,7 +208,9 @@
 
 			relativeScroll = $(document).scrollTop() - $('#transition-1').offset().top + 0.55 * $(window).height();
 			$('.scroll-grow-2').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-			$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+			if ($(window).width() > 768) {
+				$('.scroll-opacity-2').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+			}
 			if ($(document).scrollTop() > ($('#transition-1-end').offset().top - $(window).height())) {
 				$('.scroll-grow-2').css('background-attachment', 'scroll');
 			} else {
@@ -217,7 +219,9 @@
 
 			relativeScroll = $(document).scrollTop() - $('#transition-2').offset().top + 0.55 * $(window).height();
 			$('.scroll-grow-3').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
-			$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+			if ($(window).width() > 768) {
+				$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
+			}
 			if ($(document).scrollTop() > ($('#transition-2-end').offset().top - $(window).height())) {
 				$('.scroll-grow-3').css('background-attachment', 'scroll');
 			} else {
