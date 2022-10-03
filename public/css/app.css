@@ -4096,7 +4096,7 @@ input[type=checkbox]:focus {
 .footer__sponsors__sponsor:hover {
   box-shadow: 0px 25px 25px #CFCFCF80;
 }
-.footer__sponsors__sponsor div {
+.footer__sponsors__sponsor a {
   max-height: 100%;
 }
 .footer__sponsors__sponsor img {

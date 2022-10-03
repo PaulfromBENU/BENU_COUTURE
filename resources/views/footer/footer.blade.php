@@ -5,14 +5,14 @@
 		</h5>
 		<div class="flex justify-center flex-wrap">
 			<div class="footer__sponsors__sponsor flex flex-col justify-center">
-				<div>
+				<a href="https://esch.lu" target="_blank" class="block">
 					<img src="{{ asset('images/pictures/sponsors/ville-esch.png') }}" />
-				</div>
+				</a>
 			</div>
 			<div class="footer__sponsors__sponsor flex flex-col justify-center">
-				<div>
+				<a href="https://mecdd.gouvernement.lu/fr.html" target="_blank" class="block">
 					<img src="{{ asset('images/pictures/sponsors/ministere-luxembourg.jpg') }}" />
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
