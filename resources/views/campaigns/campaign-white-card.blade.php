@@ -27,7 +27,7 @@
 @section('main-content')
 	<div class="single-campaign">
 		<section class="single-campaign__header scroll-grow-1">
-			<div class="single-campaign__header__opacifier scroll-opacity-1" ></div> <!-- style="opacity: 0;" -->
+			<div class="single-campaign__header__opacifier scroll-opacity-1" ></div>
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__header__txt-container">
 				<h3 class="single-campaign__header__toptitle">{{ __('campaigns.carte-blanche-main-picture-top-title') }}</h3>
 				<h2 class="single-campaign__header__title">{{ __('campaigns.carte-blanche-main-picture-title') }}</h2>
