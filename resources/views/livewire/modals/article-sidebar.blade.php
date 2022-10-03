@@ -215,6 +215,9 @@
 
                 @if($sold == 0)
                     @if($sent_to_cart == 0)
+                    <p class="text-center mb-2 mobile-only">
+                        
+                    </p>
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" wire:click="addToCart">{{ __('sidebar.add-to-cart') }}</button>
                     @else
                     <p class="text-center mb-2">
