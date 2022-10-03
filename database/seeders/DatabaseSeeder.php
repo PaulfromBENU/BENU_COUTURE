@@ -19,20 +19,21 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             // Required before importation, to clear updated tables and relationship tables
-            ArticlePhotoSeeder::class,
-            ArticleShopSeeder::class,
-            DeliveryCountrySeeder::class,
-            TranslationSeeder::class,
-            ArticleSeeder::class,
-            CreationCreationGroupSeeder::class,
+            // ArticlePhotoSeeder::class,
+            // ArticleShopSeeder::class,
+            // DeliveryCountrySeeder::class,
+            // TranslationSeeder::class,
+            // ArticleSeeder::class,
+            // CreationCreationGroupSeeder::class,
+            BadgeSeeder::class,
 
             // Not required anymore
             // ArticleCareRecommendationSeeder::class,
             // ArticleCompositionSeeder::class,
 
             // Required before importation only in case of common DB update
-            UserSeeder::class,
-            PartnerSeeder::class,
+            // UserSeeder::class,
+            // PartnerSeeder::class,
             // ShopSeeder::class,
 
             // Imported - Use data importation route
@@ -48,8 +49,6 @@ class DatabaseSeeder extends Seeder
             // ArticleSeeder::class,
             // PhotoSeeder::class,
             // CreationKeywordSeeder::class,
-
-            // BadgeSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

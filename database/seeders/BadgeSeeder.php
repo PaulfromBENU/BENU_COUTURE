@@ -34,7 +34,7 @@ class BadgeSeeder extends Seeder
             'svg_file' => 'icon_benu_couture_top_user_2022_OK',
         ]);
 
-        User::find(2)->badges()->attach(Badge::where('name', 'Brain COUTURE 2022')->first()->id);
-        User::find(2)->badges()->attach(Badge::where('name', 'Top User COUTURE 2022')->first()->id);
+        // User::find(2)->badges()->attach(Badge::where('name', 'Brain COUTURE 2022')->first()->id);
+        // User::find(2)->badges()->attach(Badge::where('name', 'Top User COUTURE 2022')->first()->id);
     }
 }
