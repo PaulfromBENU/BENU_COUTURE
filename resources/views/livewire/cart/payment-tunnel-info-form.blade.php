@@ -71,9 +71,11 @@
     @endif
     <div class="flex flex-wrap justify-between mt-5">
         @if($duplicate_email_info !== 1)
-        <button type="submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover mt-3 md:mt-0 md:mr-5">
-            {{ __('cart.info-validate') }}
-        </button>
+        <div class="mt-3 md:mt-0 md:mr-5 m-auto md:ml-0">
+            <button type="submit" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">
+                {{ __('cart.info-validate') }}
+            </button>
+        </div>
         @endif
         <a href="{{ route('login-'.app()->getLocale()) }}" class="btn-slider-left m-auto md:mr-3 mt-3 md:mt-0 mb-3 md:mb-0">
             {{ __('cart.info-connect') }}

@@ -919,6 +919,9 @@ select {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mr-auto {
+  margin-right: auto;
+}
 .block {
   display: block;
 }
@@ -2915,6 +2918,10 @@ select {
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:ml-0 {
+    margin-left: 0px;
   }
 
   .md\:flex {
