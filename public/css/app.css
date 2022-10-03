@@ -3518,9 +3518,9 @@ input[type=checkbox]:focus {
   background: #ededed;
   color: #D41C1B;
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 1rem;
   border: none;
-  height: 26px;
+  height: 40px;
 }
 .article-sidebar__content__mask-email:focus {
   border: none;
