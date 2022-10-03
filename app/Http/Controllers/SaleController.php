@@ -82,7 +82,7 @@ class SaleController extends Controller
             $cart->save();
 
             // This is your test secret API key.
-            \Stripe\Stripe::setApiKey('sk_test_51KnNZGADiHn0YYXdEqMAZ9cyLwagbSL6nbbJRj3zF8iiXJwW5A25oNwdOCGi2J9LGz9Wsu1POK7mZx0uuiwaCiwC00sk2V07AZ');
+            \Stripe\Stripe::setApiKey(config('stripe.secret'));
 
             // Create a PaymentIntent with amount and currency
             $paymentIntent = \Stripe\PaymentIntent::create([
