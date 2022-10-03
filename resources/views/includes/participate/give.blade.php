@@ -78,7 +78,7 @@
 				<strong>{!! __('services.shops-address') !!} : </strong>  53, rue de Remich, L- 5330 Moutfort, Luxembourg
 			</p>
 			<div class="flex">
-				<p class="w-3/5">
+				<p class="w-full lg:w-3/5">
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 691 35 87 13
 				</p>
 			</div>
@@ -98,7 +98,7 @@
 				<strong>{!! __('services.shops-address') !!} : </strong>  4, Ancien Chemin d'Osweiler, L-6469 Echternach, Luxembourg
 			</p>
 			<div class="flex">
-				<p class="w-3/5">
+				<p class="w-full lg:w-3/5">
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 72 82 42
 				</p>
 			</div>
@@ -118,7 +118,7 @@
 				<strong>{!! __('services.shops-address') !!} : </strong>  49, rue Victor Muller-Fromes, L-9261 Diekirch, Luxembourg
 			</p>
 			<div class="flex">
-				<p class="w-3/5">
+				<p class="w-full lg:w-3/5">
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 26 80 32 50
 				</p>
 			</div>
@@ -137,8 +137,8 @@
 			<p class="mb-3">
 				<strong>{!! __('services.shops-address') !!} : </strong>  12, Parc, L-9836 Hosingen, Luxembourg
 			</p>
-			<div class="flex">
-				<p class="w-3/5">
+			<div class="flex flex-col md:flex-row">
+				<p class="w-full lg:w-3/5 mb-3 md:mb-0">
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 90 81 88-1
 				</p>
 				<p class="w-full lg:w-2/5">
@@ -161,7 +161,7 @@
 				<strong>{!! __('services.shops-address') !!} : </strong>  50, rue des Celtes, L-1318 Luxembourg, Luxembourg
 			</p>
 			<div class="flex">
-				<p class="w-3/5">
+				<p class="w-full lg:w-3/5">
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 621 18 81 05
 				</p>
 			</div>

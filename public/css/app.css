@@ -4272,7 +4272,7 @@ input[type=checkbox]:focus {
 }
 @media (max-width: 767px) {
   .footer-learnmore__block p {
-    text-align: left;
+    text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     font: normal normal 500 16px/28px "Barlow";
@@ -6198,6 +6198,8 @@ input[type=checkbox]:focus {
 @media (max-width: 767px) {
   .sizes__chapter__table {
     min-width: 650px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
 .sizes__chapter__table th:nth-child(odd) {

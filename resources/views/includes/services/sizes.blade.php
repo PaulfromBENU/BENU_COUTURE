@@ -146,7 +146,7 @@
 								<td>{{ __('services.sizes-gentlemen-table-info-4-8') }}</td>
 								<td>{{ __('services.sizes-gentlemen-table-info-4-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -255,7 +255,7 @@
 								<td>{{ __('services.sizes-ladies-table-info-4-8') }}</td>
 								<td>{{ __('services.sizes-ladies-table-info-4-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -364,7 +364,7 @@
 								<td>{{ __('services.sizes-gentlemen-table-info-4-8') }}</td>
 								<td>{{ __('services.sizes-gentlemen-table-info-4-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -509,7 +509,7 @@
 								<td>{{ __('services.sizes-kids-table-info-6-8') }}</td>
 								<td>{{ __('services.sizes-kids-table-info-6-9') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-right mobile-hidden">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
@@ -563,7 +563,7 @@
 								<td>{{ __('services.sizes-kids-table-info-6-12') }}</td>
 								<td>{{ __('services.sizes-kids-table-info-6-13') }}</td>
 							</tr>
-							<tr class="text-right">
+							<tr class="text-left md:text-right">
 								<td class="p-4 pr-5 font-medium">
 									{{ __('services.sizes-info-cm') }}
 								</td>
