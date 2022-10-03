@@ -2913,6 +2913,10 @@ select {
     margin-right: 0.5rem;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }

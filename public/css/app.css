@@ -13565,6 +13565,11 @@ input[type=checkbox]:focus {
 .participate-smart__cards {
   padding-bottom: 55px;
 }
+@media (max-width: 767px) {
+  .participate-smart__cards {
+    padding-bottom: 30px;
+  }
+}
 .participate-smart__cards__card {
   width: 30%;
   min-width: 280px;
@@ -13587,6 +13592,7 @@ input[type=checkbox]:focus {
   .participate-smart__cards__card {
     width: 100%;
     margin: 10px;
+    margin-bottom: 30px;
   }
 }
 .participate-smart__cards__card:hover .participate-smart__cards__card__number {
@@ -13668,6 +13674,11 @@ input[type=checkbox]:focus {
   margin: auto;
   font: normal normal 500 16px/28px "Barlow";
   text-align: left;
+}
+@media (max-width: 767px) {
+  .participate-smart__final {
+    width: 90%;
+  }
 }
 
 .participate-sustainable__title {

@@ -286,6 +286,9 @@
 	}
 	&__cards {
 		padding-bottom: 55px;
+		@include mobile {
+			padding-bottom: 30px;
+		}
 		&__card {
 			width: 30%;
 			min-width: 280px;
@@ -305,6 +308,7 @@
 			@include mobile {
 				width: 100%;
 				margin: 10px;
+				margin-bottom: 30px;
 			}
 			&:hover {
 				.participate-smart__cards__card__number {
@@ -378,6 +382,9 @@
 		margin: auto;
 		font: normal normal 500 16px/28px 'Barlow';
 		text-align: left;
+		@include mobile {
+			width: 90%;
+		}
 	}
 }
 
