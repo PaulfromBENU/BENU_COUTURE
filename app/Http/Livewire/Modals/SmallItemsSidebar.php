@@ -27,6 +27,8 @@ class SmallItemsSidebar extends Component
     public $email;
     public $with_pictures;
 
+    public $singularity_query;
+
     protected $rules = [
         'items_number' => 'required|integer|max:500',
         'text_demand' => 'nullable|string|max:1000',
@@ -42,6 +44,7 @@ class SmallItemsSidebar extends Component
         if (Auth::check()) {
             $this->email = Auth::user()->email;
         }
+        $this->singularity_query = "singularity_".app()->getLocale();
     }
 
     public function getCreationData()

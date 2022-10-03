@@ -77,9 +77,9 @@
             {{ $creation_price }}&euro;
         </p>
 
-        <p class="article-sidebar__content__singularity">
+        <!-- <p class="article-sidebar__content__singularity">
             <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ __('sidebar.items-singularity') }}
-        </p>
+        </p> -->
 
         <form method="POST" wire:submit.prevent="submitItemsRequest">
             @csrf

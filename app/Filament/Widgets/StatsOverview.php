@@ -81,7 +81,7 @@ class StatsOverview extends BaseWidget
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($articles_in_stock_count)
             ->color('success'),
-            Card::make('Missing translations', Translation::whereColumn('translation_key', 'de')->count()),
+            // Card::make('Missing translations', Translation::whereColumn('translation_key', 'de')->count()),
         ];
     }
 }

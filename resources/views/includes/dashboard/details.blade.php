@@ -64,6 +64,8 @@
 	                        @svg('hide-pwd-btn')
 	                    </div>
 	                </div>
+                    @error('old_password') <span class="error primary-color">{{ $message }}</span> @enderror
+
 	                <div class="input-group reactive-label-input w-full">
 	                    <label style="color: black;">{{ __('dashboard.new-password-label') }}</label>
 	                    <input type="password" name="new_password" class="input-underline w-full" tabindex="6" minlength="8" maxlength="150" wire:model.defer="new_password">
@@ -74,6 +76,8 @@
 	                        @svg('hide-pwd-btn')
 	                    </div>
 	                </div>
+                    @error('new_password') <span class="error primary-color">{{ $message }}</span> @enderror
+
 	                <div class="input-group reactive-label-input w-full">
 	                    <label style="color: black;">{{ __('dashboard.new-password-confirmation-label') }}</label>
 	                    <input type="password" name="new_password_confirmation" class="input-underline w-full" tabindex="6" minlength="8" maxlength="150" wire:model.defer="new_password_confirmation">
@@ -84,6 +88,7 @@
 	                        @svg('hide-pwd-btn')
 	                    </div>
 	                </div>
+                    @error('new_password_confirmation') <span class="error primary-color">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="w-full lg:w-5/12">
