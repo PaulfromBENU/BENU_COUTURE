@@ -11,7 +11,6 @@
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'cardigans']) }}">{{ __('welcome.other-words-summer-5') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'types' => 'kids']) }}">{{ __('welcome.other-words-summer-6') }}</a>
 		@else
-		Ici les liens pour les creations hiver
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'blouses-shirts']) }}">{{ __('welcome.other-words-summer-1') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'jackets-vests']) }}">{{ __('welcome.other-words-summer-2') }}</a>
 		<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'categories' => 'trousers']) }}">{{ __('welcome.other-words-summer-3') }}</a>
