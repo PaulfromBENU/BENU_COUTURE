@@ -407,7 +407,7 @@ class WriteNews extends Page
         $news->seo_desc_en = $this->article_seo_desc_en;
 
         // Main photo handling
-        if(is_file($this->main_photo)) {
+        if($this->main_photo) {
             $img = Image::make($this->main_photo);
             $file_name = 'news-main-picture-'.$this->article_slug_en.'.'.$this->main_photo->getClientOriginalExtension();
             if ($img->width() < $img->height()) {
