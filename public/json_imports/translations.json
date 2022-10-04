@@ -618,9 +618,9 @@
   {
     "page": "après paiement",
     "key": "payment.seo-title-payment-complete",
-    "de": "Bestellung ass ukomm",
-    "fr": "Bestellung ass ukomm",
-    "en": "Bestellung ass ukomm",
+    "de": "Bestellung eingegangen",
+    "fr": "Commande reçue",
+    "en": "Order received",
     "lu": "Bestellung ass ukomm"
   },
   {
@@ -770,6 +770,22 @@
   {
     "page": "campaign",
     "key": "campaigns.all-seo-desc",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "campaign",
+    "key": "campaigns.single-white-card-seo-title",
+    "de": "Das Mikrophon für Politisches - Persilschein",
+    "fr": "Le micro pour la politique - Carte blanche",
+    "en": "A microphone for politics - Free hand",
+    "lu": "De Mikro fir Politisches - Fräischäin"
+  },
+  {
+    "page": "campaign",
+    "key": "campaigns.single-white-card-seo-desc",
     "de": "",
     "fr": "",
     "en": "",
@@ -2474,10 +2490,26 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-2-1",
-    "de": "BENU unterstützt die LGBTQ Gemeinschaft und egagiert sich für Akzeptanz und Gleichberechtigung aller Menschen, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität. \n\nIn der Mode-Branche ist die herkömmliche Kategorisierung in Männer und Frauen noch immer vorherrschend. Frauen* sollten in der Damen*-Abteilung und Männer* in der Herren*-Abteilung shoppen. Und auch in den meisten Online-Shops sind die Kollektionen für Frauen und Männer strikt voneinander getrennt und die Filterfunktionen auf diese beiden Kategorien beschränkt. \n\nWir bei BENU COUTURE sind der Meinung, dass  jede:r die Kleidung das tragen sollte, in der er/sie sich wohlfühlt, unahängig davon für wen die Mode kreiert wurde. Mit dem Design von Unisex Kreationen entwerfen wir Mode, die für beide Geschlechter funktioniert. Aber natürlich dürfen sich Männer auch in für Frauen entworfenen Kleidungsstücken wohlfühlen und Frauen können in der Männer-Abteilung fündig werden!",
-    "fr": "BENU soutient la communauté LGBTQ et s'engage pour l'acceptation et l'égalité des droits de toutes les personnes, indépendamment de leur identité de genre et de leur (a)sexualité. \n\nDans le monde de la mode, la catégorisation conventionnelle entre hommes et femmes prédomine toujours. Les femmes* doivent faire leur shopping dans le rayon Femmes* et les hommes* dans le rayon Hommes*. Et même dans la plupart des boutiques en ligne, les collections pour femmes et pour hommes sont strictement séparées et les fonctions de filtrage se limitent à ces deux catégories. \n\nChez BENU COUTURE, nous pensons que chacun(e) devrait porter les vêtements dans lesquels il/elle se sent bien, que la mode soit créée pour les hommes ou pour les femmes. En concevant des créations unisexes, nous créons une mode qui fonctionne pour les deux sexes. Mais bien sûr, les hommes peuvent aussi se sentir à l'aise dans des vêtements conçus pour les femmes et ces dernières peuvent trouver leur bonheur dans le rayon hommes !",
-    "en": "BENU supports the LGBTQ community and is committed to acceptance and equality for all people, regardless of their gender identity and (a)sexuality.\n\n In the fashion world, the traditional categorisation into men and women is still dominant. Women* should shop in the women's* department and men* in the men's* department. And even in most online shops, the collections for women and men are strictly separated and the filter functions are limited to these two categories. \n\nAt BENU COUTURE, we believe that everyone should wear the clothes they feel comfortable in, regardless of whether the fashion was created for men or women. By designing unisex creations, we create fashion that works for both sexes. But of course, men can also feel comfortable in clothes designed for women and women can find what they are looking for in the men's department!",
-    "lu": "BENU unterstützt die LGBTQ Gemeinschaft und egagiert sich für Akzeptanz und Gleichberechtigung aller Menschen, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität. \n\nIn der Mode-Branche ist die herkömmliche Kategorisierung in Männer und Frauen noch immer vorherrschend. Frauen* sollten in der Damen*-Abteilung und Männer* in der Herren*-Abteilung shoppen. Und auch in den meisten Online-Shops sind die Kollektionen für Frauen und Männer strikt voneinander getrennt und die Filterfunktionen auf diese beiden Kategorien beschränkt. \n\nWir bei BENU COUTURE sind der Meinung, dass  jede:r die Kleidung das tragen sollte, in der er/sie sich wohlfühlt, unahängig davon für wen die Mode kreiert wurde. Mit dem Design von Unisex Kreationen entwerfen wir Mode, die für beide Geschlechter funktioniert. Aber natürlich dürfen sich Männer auch in für Frauen entworfenen Kleidungsstücken wohlfühlen und Frauen können in der Männer-Abteilung fündig werden!"
+    "de": "BENU unterstützt die LGBTQ+ Gemeinschaft und egagiert sich für Akzeptanz und Gleichberechtigung aller Menschen, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität.",
+    "fr": "BENU soutient la communauté LGBTQ+ et s'engage pour l'acceptation et l'égalité des droits de toutes les personnes, indépendamment de leur identité de genre et de leur (a)sexualité.",
+    "en": "BENU supports the LGBTQ+ community and is committed to acceptance and equality for all people, regardless of their gender identity and (a)sexuality.",
+    "lu": "BENU unterstützt die LGBTQ+ Gemeinschaft und egagiert sich für Akzeptanz und Gleichberechtigung aller Menschen, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität."
+  },
+  {
+    "page": "",
+    "key": "services.faq-group-3-question-content-2-2",
+    "de": "In der Mode-Branche ist die herkömmliche Kategorisierung in Männer und Frauen noch immer vorherrschend. Frauen sollen in der Damen-Abteilung und Männer in der Herren-Abteilung shoppen. Und auch in den meisten Online-Shops sind die Kollektionen für Frauen und Männer strikt voneinander getrennt und die Filterfunktionen auf diese beiden Kategorien beschränkt.",
+    "fr": "Dans le monde de la mode, la catégorisation conventionnelle entre hommes et femmes prédomine toujours. Les femmes doivent faire leur shopping dans le rayon Femmes et les hommes dans le rayon Hommes. Et même dans la plupart des boutiques en ligne, les collections pour femmes et pour hommes sont strictement séparées et les fonctions de filtrage se limitent à ces deux catégories.",
+    "en": "In the fashion world, the traditional categorisation into men and women is still dominant. Women should shop in the women's department and men in the men's department. And even in most online shops, the collections for women and men are strictly separated and the filter functions are limited to these two categories",
+    "lu": "In der Mode-Branche ist die herkömmliche Kategorisierung in Männer und Frauen noch immer vorherrschend. Frauen sollen in der Damen-Abteilung und Männer in der Herren-Abteilung shoppen. Und auch in den meisten Online-Shops sind die Kollektionen für Frauen und Männer strikt voneinander getrennt und die Filterfunktionen auf diese beiden Kategorien beschränkt."
+  },
+  {
+    "page": "",
+    "key": "services.faq-group-3-question-content-2-3",
+    "de": "Wir bei BENU COUTURE sind der Meinung, dass  jede:r die Kleidung  tragen sollte, in der er/sie sich wohlfühlt, unahängig davon für wen die Mode kreiert wurde. Mit dem Design von Unisex Kreationen entwerfen wir Mode, die für jede/n funktioniert. Aber natürlich kannst Du Dich in allen unseren Abteilungen umsehen und das für Dich ideale Kleidungsstück entdecken.",
+    "fr": "Chez BENU COUTURE, nous pensons que chacun(e) devrait porter les vêtements dans lesquels il/elle se sent à l'aise, indépendamment de la personne pour laquelle la mode a été créée. En concevant des créations unisexes, nous créons une mode qui fonctionne pour tout le monde. Mais bien sûr, tu peux faire un tour dans tous nos départements et découvrir le vêtement idéal pour toi.",
+    "en": "At BENU COUTURE, we believe that everyone should wear the clothes they feel comfortable in, regardless of who the fashion is created for. By designing unisex creations, we create fashion that works for everyone. But of course, you can browse through all our departments and find the perfect garment for you.",
+    "lu": "Wir bei BENU COUTURE sind der Meinung, dass  jede:r die Kleidung  tragen sollte, in der er/sie sich wohlfühlt, unahängig davon für wen die Mode kreiert wurde. Mit dem Design von Unisex Kreationen entwerfen wir Mode, die für jede/n funktioniert. Aber natürlich kannst Du Dich in allen unseren Abteilungen umsehen und das für Dich ideale Kleidungsstück entdecken."
   },
   {
     "page": "Service Client",
@@ -7544,6 +7576,22 @@
     "lu": "D'Welt vun den Textilien"
   },
   {
+    "page": "Actualités",
+    "key": "news.previous-article",
+    "de": "Vorangegangener Artikel",
+    "fr": "Article précédent",
+    "en": "Previous article",
+    "lu": "Artikel virdrun"
+  },
+  {
+    "page": "Actualités",
+    "key": "news.next-article",
+    "de": "Nächster Artikel",
+    "fr": "Article suivant",
+    "en": "Next article",
+    "lu": "Nächsten Artikel"
+  },
+  {
     "page": "Compte",
     "key": "breadcrumbs.register",
     "de": "Konto eröffnen",
@@ -8488,6 +8536,14 @@
     "lu": "Liwweradress"
   },
   {
+    "page": "",
+    "key": "pdf.invoice-delivery-address-more-info",
+    "de": "Spezifische Bemerkungen oder Informationen",
+    "fr": "Remarques ou informations particulières",
+    "en": "Specific comments or information",
+    "lu": "Spezifesch Remarken oder Informatiounen"
+  },
+  {
     "page": "Mon compte",
     "key": "pdf.invoice-collect-in-shop",
     "de": "Selbstabholung",
@@ -9073,6 +9129,14 @@
   },
   {
     "page": "Mon compte",
+    "key": "dashboard.com-item-demands-from",
+    "de": "Anfrage zu kleinen Artikeln von",
+    "fr": "Demande concernant des petits articles provenant de",
+    "en": "Request for small articles from",
+    "lu": "Ufro zu kleng Artikelen vun"
+  },
+  {
+    "page": "Mon compte",
     "key": "dashboard.com-mask-demand-sent-on",
     "de": "Anfrage gesendet am:",
     "fr": "Demande envoyée le :",
@@ -9424,6 +9488,14 @@
     "lu": "Am Moment ass keng Adress registréiert."
   },
   {
+    "page": "Mon compte",
+    "key": "dashboard.address-complement",
+    "de": "Adresszusatz",
+    "fr": "Complément d'adresse",
+    "en": "Additional address information",
+    "lu": "Adresszousaz"
+  },
+  {
     "page": "Remarquen",
     "key": "dashboard.remark",
     "de": "Anmerkungen",
@@ -9574,6 +9646,22 @@
     "fr": "Charger un nouveau Kulturpass.",
     "en": "Upload a new Kulturpass.",
     "lu": "En neie Kulturpass eroplueden."
+  },
+  {
+    "page": "",
+    "key": "dashboard.kulturpass-valid",
+    "de": "Ein gültiger Kulturpass ist in Deinem Konto gespeichert.",
+    "fr": "Un Kulturpass valable est enregistré dans ton compte.",
+    "en": "A valid Kulturpass is registered in your account.",
+    "lu": "E gültege Kulturpass ass an Dengem Kont gespäichert."
+  },
+  {
+    "page": "",
+    "key": "dashboard.kulturpass-validation_pending",
+    "de": "Dein Kulturpass ist bei BENU eingegangen. Wir werden ihn  überprüfen und anschließend Deinen Status anpassen.",
+    "fr": "Votre Kulturpass a été reçu par BENU. Nous allons le vérifier et ensuite adapter votre statut.",
+    "en": "Your Kulturpass has been received by BENU. We will check it and then adjust your status.",
+    "lu": ""
   },
   {
     "page": "Mon compte",
@@ -12601,6 +12689,14 @@
   },
   {
     "page": "Confidentialité",
+    "key": "breadcrumbs.policy-mentions",
+    "de": "Datenschutz",
+    "fr": "Politique de confidentialité",
+    "en": "Privacy policy",
+    "lu": "Dateschutz"
+  },
+  {
+    "page": "Confidentialité",
     "key": "footer.policy-subtitle",
     "de": "Was geschieht mit Deinen persönlichen Daten?",
     "fr": "Qu'advient-il de tes données personnelles ?",
@@ -14249,11 +14345,35 @@
   },
   {
     "page": "Version mobile",
-    "key": "cart.payment-delivery-more-\ninfo",
-    "de": "Adresszusatz",
-    "fr": "Complément d'adresse",
-    "en": "Additional address information",
-    "lu": "Adresszousaz"
+    "key": "cart.payment-delivery-more-info",
+    "de": "Spezifische Bemerkungen oder Informationen",
+    "fr": "Remarques ou informations particulières",
+    "en": "Specific comments or information",
+    "lu": "Spezifesch Remarken oder Informatiounen"
+  },
+  {
+    "page": "Version mobile",
+    "key": "cart.color",
+    "de": "Farbe",
+    "fr": "Couleur",
+    "en": "Color",
+    "lu": "Faarf"
+  },
+  {
+    "page": "Version mobile",
+    "key": "cart.number-of-items",
+    "de": "Anzahl",
+    "fr": "Quantité",
+    "en": "Quantity",
+    "lu": "Unzuel"
+  },
+  {
+    "page": "",
+    "key": "models.filter-mobile-sorts",
+    "de": "Sortieren nach",
+    "fr": "Trier par",
+    "en": "Sort by",
+    "lu": "Sortéieren no"
   },
   {
     "page": "Campaign",
@@ -14552,7 +14672,7 @@
     "lu": "De Mikro fir Politesches"
   },
   {
-    "page": "",
+    "page": "Campaign",
     "key": "campaigns.carte-blanche-title",
     "de": "Persilschein",
     "fr": "Carte blanche",
@@ -14560,7 +14680,7 @@
     "lu": "Fräischäin"
   },
   {
-    "page": "",
+    "page": "Campaign",
     "key": "campaigns.carte-blanche-date",
     "de": "Oktober 2022",
     "fr": "Octobre 2022",
@@ -14568,12 +14688,12 @@
     "lu": "Oktober 2022"
   },
   {
-    "page": "",
+    "page": "Campaign",
     "key": "campaigns.carte-blanche-summary",
-    "de": "Ein Aufruf für mehr Ehrlichkeit und Konsequenz. Stopp. Bitte!",
-    "fr": "Un appel pour plus d'honnêteté et de cohérence. Stop. S'il-vous-plaît !",
-    "en": "A call for more honesty and consistency. Stop it. Please!",
-    "lu": "En Opruff fir méi Éierlechkeet a Konsequenz. Stop. Wannechglift!"
+    "de": "Ein Aufruf für mehr Ehrlichkeit und Konsequenz",
+    "fr": "Un appel pour plus d'honnêteté et de cohérence",
+    "en": "A call for more honesty and consistency",
+    "lu": "En Opruff fir méi Éierlechkeet a Konsequenz"
   },
   {
     "page": "Version mobile",
