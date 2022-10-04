@@ -228,6 +228,12 @@
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
 							{!! __('services.faq-group-3-question-content-2-1') !!}
 						</p>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							{!! __('services.faq-group-3-question-content-2-2') !!}
+						</p>
+						<p class="faq__accordion__answer__subanswer" style="display: none;">
+							{!! __('services.faq-group-3-question-content-2-3') !!}
+						</p>
 					</li>
 					<li>
 						<div class="flex justify-between faq__accordion__answer__header">
