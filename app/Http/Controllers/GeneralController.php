@@ -105,7 +105,7 @@ class GeneralController extends Controller
     public function showNews(string $slug = '')
     {
         if ($slug == '') {
-            if (app('env') == 'stage' || app('env') == 'local') {
+            if (auth()->check() && auth()->user()->role == 'admin') {
                 $all_news = NewsArticle::orderBy('updated_at', 'desc')->get();
             } else {
                 $all_news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();

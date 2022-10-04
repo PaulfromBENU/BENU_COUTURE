@@ -443,7 +443,7 @@ class WriteNews extends Page
                 $element->content_en = $this->element_contents_en[$i];
 
                 // New article photo handling
-                if(is_file($this->element_photo_files[$i])) {
+                if($this->element_photo_files[$i]) {
                     $img = Image::make($this->element_photo_files[$i]);
                     $file_name = 'news-additionnal-picture-'.$this->article_slug_en.'-'.$i.'.'.$this->element_photo_files[$i]->getClientOriginalExtension();
                     if ($img->width() < $img->height()) {
