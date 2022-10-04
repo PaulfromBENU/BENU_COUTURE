@@ -29,6 +29,8 @@ class CreateCart
             $new_cart->cart_id = $random_id;
             if (auth()->check()) {
                 $new_cart->user_id = auth()->user()->id;
+            } else {
+                $new_cart->user_id = str_replace(".", "", $request->ip());
             }
             $new_cart->is_active = 1;
             if ($new_cart->save()) {
