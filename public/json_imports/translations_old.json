@@ -346,10 +346,10 @@
   {
     "page": "home",
     "key": "welcome.seo-title",
-    "de": "Das erste Upcycling Nähatelier in Luxemburg!",
-    "fr": "Le premier atelier de couture Upcycling au Luxembourg !",
-    "en": "The first Upcycling sewing atelier in Luxembourg!",
-    "lu": "Den éischten UpCycling-Schneideratelier zu Lëtzebuerg!"
+    "de": "Das erste Upcycling Nähatelier in Luxemburg",
+    "fr": "Le premier atelier de couture Upcycling au Luxembourg",
+    "en": "The first Upcycling sewing atelier in Luxembourg",
+    "lu": "Den éischten UpCycling Schneideratelier zu Lëtzebuerg"
   },
   {
     "page": "home",
@@ -394,10 +394,10 @@
   {
     "page": "participer",
     "key": "participate.seo-title",
-    "de": "Du kannst bei BENU COUTURE mitmachen!",
-    "fr": "Tu peux participer à BENU COUTURE !",
-    "en": "You can participate to BENU COUTURE!",
-    "lu": "Du kanns bei BENU COUTURE matmaachen!"
+    "de": "Du kannst bei BENU COUTURE mitmachen",
+    "fr": "Tu peux participer à BENU COUTURE",
+    "en": "You can participate to BENU COUTURE",
+    "lu": "Du kanns bei BENU COUTURE matmaachen"
   },
   {
     "page": "participer",
@@ -458,10 +458,10 @@
   {
     "page": "créations",
     "key": "models.seo-title-all",
-    "de": "Alle BENU COUTURE Modelle sind einzigartig und lokal gefertigt.",
-    "fr": "Tous les modèles BENU COUTURE sont uniques et fabriqués localement.",
-    "en": "All BENU COUTURE models are unique and locally made.",
-    "lu": "All BENU COUTURE Modeller sinn eenzegaarteg a lokal gemaach."
+    "de": "Alle BENU COUTURE Modelle sind einzigartig und lokal gefertigt",
+    "fr": "Tous les modèles BENU COUTURE sont uniques et fabriqués localement",
+    "en": "All BENU COUTURE models are unique and locally made",
+    "lu": "All BENU COUTURE Modeller sinn eenzegaarteg a lokal gemaach"
   },
   {
     "page": "créations",
@@ -474,10 +474,10 @@
   {
     "page": "Model",
     "key": "models.seo-title",
-    "de": "Modell \":name\" - 100% UpCycling, lokal, fair",
-    "fr": "Modèle \":name\" - 100% UpCycling, local, équitable",
-    "en": "Model \":name\" - 100% UpCycling, local, fair",
-    "lu": "Modell \":name\" - 100% UpCycling, lokal, fair"
+    "de": "Modell \":name\" 100% UpCycling, lokal, fair",
+    "fr": "Modèle \":name\" 100% UpCycling, local, équitable",
+    "en": "Model \":name\" 100% UpCycling, local, fair",
+    "lu": "Modell \":name\" 100% UpCycling, lokal, fair"
   },
   {
     "page": "Model",
@@ -490,10 +490,10 @@
   {
     "page": "Model vendu",
     "key": "models.sold-seo-title",
-    "de": "Modell \":name\" - verkauft",
-    "fr": "Modèle \":name\" - vendu",
-    "en": "Model \":name\" - sold",
-    "lu": "Modell \":name\" - verkaaft"
+    "de": "Modell \":name\" verkauft",
+    "fr": "Modèle \":name\" vendu",
+    "en": "Model \":name\" sold",
+    "lu": "Modell \":name\" verkaaft"
   },
   {
     "page": "Model vendu",
@@ -682,7 +682,7 @@
   {
     "page": "Informations",
     "key": "footer.general-infos-seo-title",
-    "de": "Hintergründe über SLOW-Fashion und nachhaltigen Konsum",
+    "de": "Hintergründe über SLOW Fashion und nachhaltigen Konsum",
     "fr": "Informations sur la SLOW fashion et la consommation durable",
     "en": "Information on SLOW fashion and sustainable consumption",
     "lu": "Hannergrondinformatioun iwwer SLOW-Fashion an nohaltege Konsum"
@@ -762,10 +762,10 @@
   {
     "page": "campaign",
     "key": "campaigns.all-seo-title",
-    "de": "Die politischen Kampagnen von BENU COUTURE",
-    "fr": "Les campagnes politiques de BENU COUTURE",
-    "en": "The political campaigns of BENU COUTURE",
-    "lu": "Déi politesch Campagnen vun BENU COUTURE"
+    "de": "BENU COUTURE's Mikrophon für Politisches",
+    "fr": "Le micro de BENU COUTURE pour la politique",
+    "en": "BENU COUTURE's microphone for politics",
+    "lu": "Dem BENU COUTURE säi Mikro fir Politisches"
   },
   {
     "page": "campaign",
@@ -778,10 +778,10 @@
   {
     "page": "Sitemap",
     "key": "footer.sitemap-title",
-    "de": "Plattform für nachhaltige UpCycling-Mode in Luxemburg",
-    "fr": "Plate-forme pour la mode durable UpCycling au Luxembourg",
-    "en": "Platform for sustainable upcycling fashion in Luxembourg",
-    "lu": "Plattform fir nohalteg Upcycling Moud zu Lëtzebuerg"
+    "de": "BENU COUTURE - Die Plattform für  UpCycling-Mode in Luxemburg",
+    "fr": "BENU COUTURE - La plate-forme pour la mode UpCycling au Luxembourg",
+    "en": "BENU COUTURE - The platform for upcycling fashion in Luxembourg",
+    "lu": "BENU COUTURE - D'Plattform fir Upcycling Moud zu Lëtzebuerg"
   },
   {
     "page": "Sitemap",
@@ -1458,10 +1458,10 @@
   {
     "page": "Home",
     "key": "welcome.campaign-title-1",
-    "de": "BENU COUTURE's  Politische Kampagne",
-    "fr": "Campagne politique de BENU COUTURE",
-    "en": "BENU COUTURE's Political Campaign",
-    "lu": "Politesch Campagne vu BENU COUTURE"
+    "de": "BENU COUTURE's Mikrophon für Politisches",
+    "fr": "Le micro de BENU COUTURE pour la politique",
+    "en": "BENU COUTURE's microphone for politics",
+    "lu": "Dem BENU COUTURE säi Mikro fir Politisches"
   },
   {
     "page": "Home",
@@ -1858,10 +1858,10 @@
   {
     "page": "Home",
     "key": "footer.footer-list-2-2",
-    "de": "Politische Kampagnen",
-    "fr": "Campagnes politiques",
-    "en": "Political campaigns",
-    "lu": "Politesch Campagnen"
+    "de": "Ein Mikrophon für Politisches",
+    "fr": "Un micro pour de la politique",
+    "en": "A microphone for politics",
+    "lu": "De Mikro fir Politesches"
   },
   {
     "page": "Home",
@@ -2466,18 +2466,18 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-title-2",
-    "de": "Warum gibt des die Größe Unisex?",
-    "fr": "Pourquoi existe-t-il une taille unisexe ?",
-    "en": "Why is there a unisex size?",
-    "lu": "Firwat gëtt et eng Unisex Gréisst?"
+    "de": "Warum bieten wir Unisex Kleidung an?",
+    "fr": "Pourquoi proposons-nous des vêtements unisexes ?",
+    "en": "Why do we offer unisex clothing?",
+    "lu": "Firwat bidden mir Unisex Kleeder un?"
   },
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-2-1",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "BENU unterstützt die LGBTQ Gemeinschaft und egagiert sich für Akzeptanz und Gleichberechtigung aller Menschen, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität. \n\nIn der Mode-Branche ist die herkömmliche Kategorisierung in Männer und Frauen noch immer vorherrschend. Frauen* sollten in der Damen*-Abteilung und Männer* in der Herren*-Abteilung shoppen. Und auch in den meisten Online-Shops sind die Kollektionen für Frauen und Männer strikt voneinander getrennt und die Filterfunktionen auf diese beiden Kategorien beschränkt. \n\nWir bei BENU COUTURE sind der Meinung, dass  jede:r die Kleidung das tragen sollte, in der er/sie sich wohlfühlt, unahängig davon für wen die Mode kreiert wurde. Mit dem Design von Unisex Kreationen entwerfen wir Mode, die für beide Geschlechter funktioniert. Aber natürlich dürfen sich Männer auch in für Frauen entworfenen Kleidungsstücken wohlfühlen und Frauen können in der Männer-Abteilung fündig werden!",
+    "fr": "BENU soutient la communauté LGBTQ et s'engage pour l'acceptation et l'égalité des droits de toutes les personnes, indépendamment de leur identité de genre et de leur (a)sexualité. \n\nDans le monde de la mode, la catégorisation conventionnelle entre hommes et femmes prédomine toujours. Les femmes* doivent faire leur shopping dans le rayon Femmes* et les hommes* dans le rayon Hommes*. Et même dans la plupart des boutiques en ligne, les collections pour femmes et pour hommes sont strictement séparées et les fonctions de filtrage se limitent à ces deux catégories. \n\nChez BENU COUTURE, nous pensons que chacun(e) devrait porter les vêtements dans lesquels il/elle se sent bien, que la mode soit créée pour les hommes ou pour les femmes. En concevant des créations unisexes, nous créons une mode qui fonctionne pour les deux sexes. Mais bien sûr, les hommes peuvent aussi se sentir à l'aise dans des vêtements conçus pour les femmes et ces dernières peuvent trouver leur bonheur dans le rayon hommes !",
+    "en": "BENU supports the LGBTQ community and is committed to acceptance and equality for all people, regardless of their gender identity and (a)sexuality.\n\n In the fashion world, the traditional categorisation into men and women is still dominant. Women* should shop in the women's* department and men* in the men's* department. And even in most online shops, the collections for women and men are strictly separated and the filter functions are limited to these two categories. \n\nAt BENU COUTURE, we believe that everyone should wear the clothes they feel comfortable in, regardless of whether the fashion was created for men or women. By designing unisex creations, we create fashion that works for both sexes. But of course, men can also feel comfortable in clothes designed for women and women can find what they are looking for in the men's department!",
+    "lu": "BENU unterstützt die LGBTQ Gemeinschaft und egagiert sich für Akzeptanz und Gleichberechtigung aller Menschen, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität. \n\nIn der Mode-Branche ist die herkömmliche Kategorisierung in Männer und Frauen noch immer vorherrschend. Frauen* sollten in der Damen*-Abteilung und Männer* in der Herren*-Abteilung shoppen. Und auch in den meisten Online-Shops sind die Kollektionen für Frauen und Männer strikt voneinander getrennt und die Filterfunktionen auf diese beiden Kategorien beschränkt. \n\nWir bei BENU COUTURE sind der Meinung, dass  jede:r die Kleidung das tragen sollte, in der er/sie sich wohlfühlt, unahängig davon für wen die Mode kreiert wurde. Mit dem Design von Unisex Kreationen entwerfen wir Mode, die für beide Geschlechter funktioniert. Aber natürlich dürfen sich Männer auch in für Frauen entworfenen Kleidungsstücken wohlfühlen und Frauen können in der Männer-Abteilung fündig werden!"
   },
   {
     "page": "Service Client",
@@ -3406,6 +3406,38 @@
     "fr": "Ici, tu trouveras la bonne taille",
     "en": "Here you'll find your right size",
     "lu": "Hei fënns Du déi passend Gréisst"
+  },
+  {
+    "page": "Service Client",
+    "key": "services.sizes-unisex-short",
+    "de": "Unisex",
+    "fr": "Unisex",
+    "en": "Unisex",
+    "lu": "Unisex"
+  },
+  {
+    "page": "Service Client",
+    "key": "services.sizes-ladies-short",
+    "de": "Frauen",
+    "fr": "Femmes",
+    "en": "Women",
+    "lu": "Frae"
+  },
+  {
+    "page": "Service Client",
+    "key": "services.sizes-gentlemen-short",
+    "de": "Männer",
+    "fr": "Hommes",
+    "en": "Men",
+    "lu": "Männer"
+  },
+  {
+    "page": "Service Client",
+    "key": "services.sizes-kids-short",
+    "de": "Kinder",
+    "fr": "Enfants",
+    "en": "Kids",
+    "lu": "Kanner"
   },
   {
     "page": "Service Client",
@@ -9392,6 +9424,14 @@
     "lu": "Am Moment ass keng Adress registréiert."
   },
   {
+    "page": "Remarquen",
+    "key": "dashboard.remark",
+    "de": "Anmerkungen",
+    "fr": "Remarques",
+    "en": "Comments",
+    "lu": "Remarquen"
+  },
+  {
     "page": "Mon compte",
     "key": "dashboard.nav-conditions",
     "de": "Nutzungsbedingungen",
@@ -11538,10 +11578,10 @@
   {
     "page": "Participer",
     "key": "participate.give-content-2-5",
-    "de": "Weitere Gedanken hierzu findest du in unserer ersten politischen Kampagne!",
-    "fr": "Tu trouveras d'autres réflexions à ce sujet dans notre première campagne politique !",
-    "en": "You can find more thoughts on this in our first political campaign!",
-    "lu": "Weider Gedanken dozou fënns Du an eiser éischter politescher Campagne!"
+    "de": "Weitere Gedanken hierzu findest Du in BENU COUTURE's Mikrophon für Politisches!",
+    "fr": "Tu trouveras d'autres réflexions à ce sujet dans le micro de BENU COUTURE pour la politique !",
+    "en": "You can find more thoughts on this in BENU COUTURE's microphone for politics!",
+    "lu": "Weider Gedanken dozou fënns Du an BENU COTURE sengem Mikro fir Politisches!"
   },
   {
     "page": "Participer",
@@ -13777,6 +13817,14 @@
   },
   {
     "page": "sitemap",
+    "key": "breadcrumbs.sitemap",
+    "de": "Seitenübersicht",
+    "fr": "Plan du site",
+    "en": "Site map",
+    "lu": "Säiteniwwersiicht"
+  },
+  {
+    "page": "sitemap",
     "key": "footer.sitemap-home",
     "de": "Startseite",
     "fr": "Accueil",
@@ -14018,10 +14066,10 @@
   {
     "page": "sitemap",
     "key": "footer.sitemap-all-campaigns",
-    "de": "Politischer Blog",
-    "fr": "Blog politique",
-    "en": "Political blog",
-    "lu": "Politesche Blog"
+    "de": "Ein Mikrophon für Politisches",
+    "fr": "Un micro pour de la politique",
+    "en": "A microphone for politics",
+    "lu": "De Mikro fir Politesches"
   },
   {
     "page": "sitemap",
@@ -14192,12 +14240,28 @@
     "lu": "Filter"
   },
   {
+    "page": "Version mobile",
+    "key": "models.filter-mobile-filters",
+    "de": "Filter",
+    "fr": "Filtre",
+    "en": "Filter",
+    "lu": "Filter"
+  },
+  {
+    "page": "Version mobile",
+    "key": "cart.payment-delivery-more-\ninfo",
+    "de": "Adresszusatz",
+    "fr": "Complément d'adresse",
+    "en": "Additional address information",
+    "lu": "Adresszousaz"
+  },
+  {
     "page": "Campaign",
     "key": "campaigns.carte-blanche-main-picture-top-title",
-    "de": "BENU COUTURE's  Politische Kampage",
-    "fr": "Campagne politique de BENU COUTURE",
-    "en": "BENU COUTURE's Political Campaign",
-    "lu": "Politesch Campagne vu BENU COUTURE"
+    "de": "BENU COUTURE's Mikrophon für Politisches",
+    "fr": "Le micro de BENU COUTURE pour la politique",
+    "en": "BENU COUTURE's microphone for politics",
+    "lu": "Dem BENU COUTURE säi Mikro fir Politisches"
   },
   {
     "page": "Campaign",
@@ -14458,18 +14522,18 @@
   {
     "page": "Campaign",
     "key": "campaigns.all-campaigns-link",
-    "de": "Alle politischen Kampagnen",
-    "fr": "Toutes les campagnes politiques",
-    "en": "All political campaigns",
-    "lu": "All politesch Campagnen"
+    "de": "Alle Beiträge",
+    "fr": "Tous les articles",
+    "en": "All articles",
+    "lu": "All Artikelen"
   },
   {
     "page": "Campaign",
     "key": "breadcrumbs.campaigns-all",
-    "de": "BENU COUTURE's  Politische Kampagnen",
-    "fr": "Les campagnes politiques de BENU COUTURE",
-    "en": "BENU COUTURE's political campaigns",
-    "lu": "Politesch Campagnë vu BENU COUTURE"
+    "de": "Mikrophon für Politisches",
+    "fr": "Micro pour de la politique",
+    "en": "Microphone for politics",
+    "lu": "Mikro fir Politesches"
   },
   {
     "page": "a",
@@ -14482,10 +14546,10 @@
   {
     "page": "Campaign",
     "key": "campaigns.all-title",
-    "de": "Politische Kampagnen",
-    "fr": "Campagnes politiques",
-    "en": "Political campaigns",
-    "lu": "Politesch Campagnen"
+    "de": "Ein Mikrophon für Politisches",
+    "fr": "Un micro pour de la politique",
+    "en": "A microphone for politics",
+    "lu": "De Mikro fir Politesches"
   },
   {
     "page": "",
@@ -14506,10 +14570,10 @@
   {
     "page": "",
     "key": "campaigns.carte-blanche-summary",
-    "de": "Persilschein",
-    "fr": "Carte blanche",
-    "en": "Free hand",
-    "lu": "Fräischäin"
+    "de": "Ein Aufruf für mehr Ehrlichkeit und Konsequenz. Stopp. Bitte!",
+    "fr": "Un appel pour plus d'honnêteté et de cohérence. Stop. S'il-vous-plaît !",
+    "en": "A call for more honesty and consistency. Stop it. Please!",
+    "lu": "En Opruff fir méi Éierlechkeet a Konsequenz. Stop. Wannechglift!"
   },
   {
     "page": "Version mobile",
