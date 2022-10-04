@@ -115,12 +115,12 @@
 		background: url('/images/pictures/campaigns/BC_WS_Photos_PoliticalDeclaration_1.jpg');
 		background-position: bottom;
 		background-attachment: fixed;
-		@include large {
-			background-size: cover;
-		}
 		background-size: cover;
 		z-index: 1;
 		border: solid white 60px;
+		@include large {
+			background-size: cover;
+		}
 		@include intermediate {
 			border: solid white 20px;
 		}
@@ -130,6 +130,7 @@
 		@include mobile {
 			// height: calc(100vh - 120px);
 			border: solid white 20px;
+			background-attachment: scroll;
 		}
 		a {
 			font-weight: 600;
@@ -362,6 +363,7 @@
 			border: solid $white 20px;
 			height: fit-content;
 			padding-top: 15vh;
+			background-attachment: scroll;
 		}
 		img {
 			position: absolute;
