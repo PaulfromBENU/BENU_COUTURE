@@ -31,10 +31,21 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $country_options = DeliveryCountry::all();
         $localized_country = "country_".app()->getLocale();
+        // $country_options = DeliveryCountry::all();
+        $nearby_countries = DeliveryCountry::where('country_code', 'DE')
+                                            ->orWhere('country_code', 'BE')
+                                            ->orWhere('country_code', 'FR')
+                                            ->orWhere('country_code', 'LU')
+                                            ->get();
+        $country_options = DeliveryCountry::where('country_code', '<>', 'DE')
+                                            ->where('country_code', '<>', 'BE')
+                                            ->where('country_code', '<>', 'FR')
+                                            ->where('country_code', '<>', 'LU')
+                                            ->orderBy($localized_country, 'asc')
+                                            ->get();
 
-        return view('auth.register', ['country_options' => $country_options, 'localized_country' => $localized_country]);
+        return view('auth.register', ['nearby_countries' => $nearby_countries, 'country_options' => $country_options, 'localized_country' => $localized_country]);
     }
 
     /**
