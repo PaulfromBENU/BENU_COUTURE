@@ -31,7 +31,8 @@ class ArticleResource extends Resource
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+        return (auth()->user()->role == 'hidden');
+        // return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
     }
 
     public function mount(): void

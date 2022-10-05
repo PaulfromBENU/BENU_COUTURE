@@ -50,7 +50,7 @@
 				</div>
 				<p style="margin-bottom: 5px;">
 					@if($new_order->user !== null)
-					Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }}
+					Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }} - Language: {{ $new_order->user->favorite_language }}
 					@endif
 				</p>
 				<p style="margin-bottom: 5px;">
@@ -285,7 +285,7 @@
 				@if(isset($show_unpaid[$unpaid_order->id]) && $show_unpaid[$unpaid_order->id] == 1)
 				<div style="border-left: solid 1px lightgrey; padding-left: 10px;">
 					<p class="text-lg">
-						Ordered by: {{ ucfirst($unpaid_order->user->first_name) }} {{ ucfirst($unpaid_order->user->last_name) }}
+						Ordered by: {{ ucfirst($unpaid_order->user->first_name) }} {{ ucfirst($unpaid_order->user->last_name) }} - Language: {{ $unpaid_order->user->favorite_language }}
 					</p>
 					<p style="margin-bottom: 5px;">
 						@if($unpaid_order->user !== null)
@@ -476,7 +476,7 @@
 				</div>
 				<p style="margin-bottom: 5px;">
 					@if($sent_order->user !== null)
-					Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }}
+					Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }} - Language: {{ $sent_order->user->favorite_language }}
 					@endif
 				</p>
 				<p style="margin-bottom: 5px;">
@@ -544,7 +544,7 @@
 				</div>
 				<p style="margin-bottom: 5px;">
 					@if($ready_order->user !== null)
-					Ordered by: {{ $ready_order->user->first_name }} {{ $ready_order->user->last_name }}, on {{ Carbon\Carbon::parse($ready_order->created_at)->format('d\/m\/Y') }}
+					Ordered by: {{ $ready_order->user->first_name }} {{ $ready_order->user->last_name }}, on {{ Carbon\Carbon::parse($ready_order->created_at)->format('d\/m\/Y') }} - Language: {{ $ready_order->user->favorite_language }}
 					@endif
 				</p>
 				<p style="margin-bottom: 5px;">
@@ -604,7 +604,7 @@
 				</div>
 				<p style="margin-bottom: 5px;">
 					@if($collected_order->user !== null)
-					Ordered by: {{ $collected_order->user->first_name }} {{ $collected_order->user->last_name }}, on {{ Carbon\Carbon::parse($collected_order->created_at)->format('d\/m\/Y') }}
+					Ordered by: {{ $collected_order->user->first_name }} {{ $collected_order->user->last_name }}, on {{ Carbon\Carbon::parse($collected_order->created_at)->format('d\/m\/Y') }} - Language: {{ $collected_order->user->favorite_language }}
 					@endif
 				</p>
 				<p style="margin-bottom: 5px;">
@@ -659,7 +659,7 @@
 				</div>
 				<p style="margin-bottom: 5px;">
 					@if($order_sold_in_shop->user !== null)
-					Ordered by: {{ $order_sold_in_shop->user->first_name }} {{ $order_sold_in_shop->user->last_name }}, on {{ Carbon\Carbon::parse($order_sold_in_shop->created_at)->format('d\/m\/Y') }}
+					Ordered by: {{ $order_sold_in_shop->user->first_name }} {{ $order_sold_in_shop->user->last_name }}, on {{ Carbon\Carbon::parse($order_sold_in_shop->created_at)->format('d\/m\/Y') }} - Language: {{ $order_sold_in_shop->user->favorite_language }}
 					@endif
 				</p>
 				<p style="margin-bottom: 5px;">

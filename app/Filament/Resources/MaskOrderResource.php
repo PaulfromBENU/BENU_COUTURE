@@ -4,12 +4,14 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\MaskOrderResource\Pages;
 use App\Filament\Resources\MaskOrderResource\RelationManagers;
+use App\Models\Creation;
 use App\Models\MaskOrder;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\Select;
 
 class MaskOrderResource extends Resource
 {
@@ -28,15 +30,21 @@ class MaskOrderResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('creation_id')
+                Select::make('creation_id')
+                    ->label('Creation')
+                    ->options(Creation::all()->pluck('name', 'id'))
+                    ->searchable()
                     ->required(),
+                // Forms\Components\TextInput::make('creation_id')
+                //     ->label('Creation')
+                //     ->required(),
+                Forms\Components\TextInput::make('size')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\Toggle::make('with_filter')
                     ->required(),
                 Forms\Components\Toggle::make('with_cotton')
                     ->required(),
-                Forms\Components\TextInput::make('size')
-                    ->required()
-                    ->maxLength(255),
                 Forms\Components\TextInput::make('requested_number')
                     ->required(),
                 Forms\Components\Textarea::make('text_demand')
@@ -47,8 +55,10 @@ class MaskOrderResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Toggle::make('with_pictures')
+                    ->label('Pictures requested')
                     ->required(),
                 Forms\Components\Toggle::make('is_read')
+                    ->label('Mark as read')
                     ->required(),
             ]);
     }
@@ -64,10 +74,10 @@ class MaskOrderResource extends Resource
                 Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('text_demand'),
                 Tables\Columns\TextColumn::make('requested_number')->label('Number of masks requested'),
-                Tables\Columns\BooleanColumn::make('with_filter')->label('With filter?'),
-                Tables\Columns\BooleanColumn::make('with_cotton')->label('Cotton strings?'),
                 Tables\Columns\TextColumn::make('size'),
                 Tables\Columns\BooleanColumn::make('with_pictures')->label('Pictures requested?'),
+                Tables\Columns\BooleanColumn::make('with_filter')->label('With filter?'),
+                Tables\Columns\BooleanColumn::make('with_cotton')->label('Cotton strings?'),
             ])
             ->filters([
                 //

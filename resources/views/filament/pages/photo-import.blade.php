@@ -17,7 +17,7 @@
 			@if($creation_id != 0)
 			<em>Existing variations for this creation:</em>
 			@else
-			<em>Select a creation to continue. If not available, it must be created in 'CREATIONS ET VARIATIONS -> Creations'.</em>
+			<em>Select a creation to continue. If the creation doees not exist, it must be created in 'CREATIONS & VARIATIONS -> Creations -> New Creation'.</em>
 			@endif
 		</h4>
 		<div class="flex justify-start new-photo-form__variations-gallery">

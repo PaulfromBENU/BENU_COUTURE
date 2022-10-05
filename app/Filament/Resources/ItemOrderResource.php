@@ -5,12 +5,14 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ItemOrderResource\Pages;
 use App\Filament\Resources\ItemOrderResource\RelationManagers;
 use Filament\Navigation\NavigationItem;
+use App\Models\Creation;
 use App\Models\ItemOrder;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\Select;
 
 class ItemOrderResource extends Resource
 {
@@ -42,8 +44,13 @@ class ItemOrderResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('creation_id')
+                Select::make('creation_id')
+                    ->label('Creation')
+                    ->options(Creation::all()->pluck('name', 'id'))
+                    ->searchable()
                     ->required(),
+                // Forms\Components\TextInput::make('creation_id')
+                //     ->required(),
                 Forms\Components\TextInput::make('requested_number')
                     ->required(),
                 Forms\Components\Textarea::make('text_demand')
@@ -54,8 +61,10 @@ class ItemOrderResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Toggle::make('with_pictures')
+                    ->label('Pictures requested')
                     ->required(),
                 Forms\Components\Toggle::make('is_read')
+                    ->label('Mark as read')
                     ->required(),
             ]);
     }
