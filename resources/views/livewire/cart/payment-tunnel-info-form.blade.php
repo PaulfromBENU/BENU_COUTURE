@@ -2,9 +2,9 @@
     @csrf
     <h4>{{ __('cart.info-required') }}</h4>
     <div class="mb-5">
-        <div class="flex flex-wrap justify-between">
-            <div class="w-full lg:w-5/12 payment-tunnel__identification__field__col">
-                <div class="flex justify-start flex-wrap input-group register__form__radio-group">
+        <div>
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full lg:w-5/12 flex justify-start flex-wrap input-group register__form__radio-group">
                     <div class="mr-4">
                         <input type="radio" id="register_gender_male" name="register_gender" value="male" wire:model="gender">
                         <label for="register_gender_male" class="ml-2" style="color: #2E1414;">{{ __('forms.sir') }}</label><br>
@@ -18,29 +18,32 @@
                         <label for="register_gender_neutral" class="ml-2" style="color: #2E1414;">{{ __('forms.neutral') }}</label> 
                     </div>
                 </div>
-                <div class="input-group reactive-label-input">
+                <div class="w-full lg:w-5/12 input-group reactive-label-input mobile-hidden tablet-hidden">
+                    
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full lg:w-5/12 input-group reactive-label-input">
                     <label for="first-name">{{ __('forms.first-name') }} *</label>
                     <input type="text" id="first-name" name="first_name" class="input-underline w-full" tabindex="1" minlength="2" maxlength="255" wire:model="first_name" required>
                     @error('register_first_name')
                         <div class="primary-color">{{ $message }}</div>
                     @enderror
                 </div>
-
-                <div class="input-group reactive-label-input">
-                    <label>{{ __('forms.email') }} *</label>
-                    <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" wire:model="email" required>
-                </div>
-            </div>
-
-            <div class="w-full lg:w-5/12 payment-tunnel__identification__field__col">
-                <div class="input-group reactive-label-input mobile-hidden tablet-hidden">
-                    
-                </div>
-                <div class="input-group reactive-label-input">
+                <div class="w-full lg:w-5/12 input-group reactive-label-input">
                     <label>{{ __('forms.last-name') }} *</label>
                     <input type="text" name="register_last_name" class="input-underline w-full" tabindex="2" minlength="2" maxlength="255" wire:model="last_name" required>
                 </div>
-                <div class="input-group reactive-label-input">
+            </div>
+
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full lg:w-5/12 input-group reactive-label-input">
+                    <label>{{ __('forms.email') }} *</label>
+                    <input type="email" name="email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255" wire:model="email" required>
+                </div>
+                
+                <div class="w-full lg:w-5/12 input-group reactive-label-input">
                     <label>{{ __('forms.phone') }} *</label>
                     <input type="tel" name="register_phone" class="input-underline w-full" minlength="6" maxlength="30" tabindex="4" wire:model="phone" required>
                 </div>
