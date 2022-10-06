@@ -68,6 +68,7 @@ class SoldArticleOverviewWishlist extends Component
             } else {
                 auth::user()->wishlistArticles()->detach($this->article->id);
                 $this->is_wishlisted = 0;
+                $this->emit('wishlistUpdated');
             }
         }
     }

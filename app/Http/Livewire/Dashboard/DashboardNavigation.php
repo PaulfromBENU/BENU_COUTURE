@@ -52,6 +52,8 @@ class DashboardNavigation extends Component
 
     protected $queryString = ['section' => ['except' => '', 'except' => 'overview']];
 
+    protected $listeners = ['wishlistUpdated' => 'getWishlistArticles'];
+
     protected function rules()
     {
         return [
