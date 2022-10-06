@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Response;
 
 use App\Models\Article;
 use App\Models\Creation;
@@ -279,7 +280,16 @@ class GeneralController extends Controller
         $vcard->addPhoneNumber($request->phone, 'PREF;WORK');
 
         // return vcard as a download
-        return $vcard->download();
+        // return $vcard->download();
+        // The following response is created and returned to avoid bugs with iOs
+        $response = new Response();
+        $response->setContent($vcard->getOutput());
+        $response->setStatusCode(200);
+        $response->headers->set('Content-Type', 'text/x-vcard');
+        $response->headers->set('Content-Disposition', 'attachment; filename="' . $firstname . $lastname . '.vcf"');
+        $response->headers->set('Content-Length', mb_strlen($vcard->getOutput(), 'utf-8'));
+
+        return $response;
     }
 
 
