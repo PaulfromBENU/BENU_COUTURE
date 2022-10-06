@@ -215,7 +215,7 @@
 
                 @if($sold == 0)
                     @if($sent_to_cart == 0)
-                    <p class="text-center mb-2 mobile-only">
+                    <p class="text-center mb-2 mobile-only" style="height: 24px;">
                         
                     </p>
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" wire:click="addToCart">{{ __('sidebar.add-to-cart') }}</button>
@@ -223,12 +223,12 @@
                     <p class="text-center mb-2">
                         {!! __('vouchers.added-to-cart') !!}
                     </p>
-                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn">
+                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="block btn-couture-plain article-sidebar__content__cart-btn" style="padding-top: 10px;">
                         {{ __('vouchers.go-to-cart') }}
                     </a>
                     @endif
                 @else
-                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn" style="height: auto;">
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn" style="height: auto; padding-top: 10px;">
                         {{ __('sidebar.order-other') }}
                     </a>
                 @endif

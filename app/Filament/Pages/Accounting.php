@@ -29,6 +29,11 @@ class Accounting extends Page
 
     protected static ?int $navigationSort = 6;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return (auth()->user()->role == 'admin');
+    }
+
     public $invoices_start;
     public $invoices_end;
     public $invoices;

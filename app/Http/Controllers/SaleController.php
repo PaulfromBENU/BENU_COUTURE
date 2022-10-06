@@ -212,7 +212,7 @@ class SaleController extends Controller
                 if ($current_order->payment_status == 2 && $current_order->user_id > 0) {
                     foreach ($current_order->pdf_vouchers as $voucher) {
                         $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
-                        Mail::to($current_order->user->email)->send(new VoucherPdf($current_order->user, $voucher, $voucher_pdf));
+                        Mail::to($current_order->user->email)->bcc(config('mail.mailers.smtp.sender'))->send(new VoucherPdf($current_order->user, $voucher, $voucher_pdf));
                     }
                 }
 
