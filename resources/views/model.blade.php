@@ -100,4 +100,12 @@
     	$('html').css('overflow-y', 'auto');
 	});
 </script>
+<!-- <script type="text/javascript">
+	$(function() {
+		$('#sidebar-btn-delivery').on('click', function() {
+			console.log('test');
+			$('.article-sidebar__content').scrollTop(0);
+		});
+	});
+</script> -->
 @endsection
