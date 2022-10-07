@@ -224,6 +224,8 @@ class PaymentTunnel extends Component
                     $user->save();
                     $this->user_id = $user->id;
                 } else {
+                    // In case of reactivation of deleted email, to be included here
+                    
                     //Client number created randomly  - C#####
                     $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
                     while (User::where('client_number', $client_number)->count() > 0) {

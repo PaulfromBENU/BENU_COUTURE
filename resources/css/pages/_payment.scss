@@ -390,8 +390,8 @@
 			transform: scale(0.8);
 			@include mobile {
 				transform: scale(0.8);
-				width: fit-content;
-				white-space: nowrap;
+				// width: fit-content;
+				// white-space: nowrap;
 			}
 		}
 	}

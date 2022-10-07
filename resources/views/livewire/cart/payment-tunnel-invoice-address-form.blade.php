@@ -95,7 +95,7 @@
         </div>
 
         <div class="w-full reactive-label-input" style="margin-top: 15px;">
-            <label style="width: fit-content;">
+            <label style="width: fit-content; white-space: nowrap;">
                 {{ __('forms.register-address-other') }}
             </label>
             <input type="text" name="register_address_other" class="input-underline w-full register_address_field" tabindex="17" maxlength="255" wire:model="address_other">
