@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Response;
 
 use App\Models\Article;
 use App\Models\Creation;
@@ -279,7 +280,16 @@ class GeneralController extends Controller
         $vcard->addPhoneNumber($request->phone, 'PREF;WORK');
 
         // return vcard as a download
-        return $vcard->download();
+        // return $vcard->download();
+        // The following response is created and returned to avoid bugs with iOs
+        $response = new Response();
+        $response->setContent($vcard->getOutput());
+        $response->setStatusCode(200);
+        $response->headers->set('Content-Type', 'text/x-vcard');
+        $response->headers->set('Content-Disposition', 'attachment; filename="' . $firstname . $lastname . '.vcf"');
+        $response->headers->set('Content-Length', mb_strlen($vcard->getOutput(), 'utf-8'));
+
+        return $response;
     }
 
 
@@ -363,6 +373,15 @@ class GeneralController extends Controller
     }
 
 
+    public function accessStage(Request $request)
+    {
+        if ($request->stage_password == 'benew') {
+            session(['stage_checked' => 'OK']);
+            return redirect()->back();
+        }
+    }
+
+
     public function startImport()
     {
         if(auth::check() && auth::user()->role == 'admin') {
@@ -388,17 +407,17 @@ class GeneralController extends Controller
             // $this->importTranslations();
 
             // VAT update -> 3% for kids
-            echo "*** Updating VAT to 3% for kids clothes and accessories ***<br/>";
-            $creations_to_be_updated = Creation::whereHas('creation_groups', function($query) {
-                return $query->where('filter_key', 'kids');
-            })->get();
+            // echo "*** Updating VAT to 3% for kids clothes and accessories ***<br/>";
+            // $creations_to_be_updated = Creation::whereHas('creation_groups', function($query) {
+            //     return $query->where('filter_key', 'kids');
+            // })->get();
 
-            foreach ($creations_to_be_updated as $creation) {
-                $creation->tva_value = 3;
-                $creation->save();
-            }
+            // foreach ($creations_to_be_updated as $creation) {
+            //     $creation->tva_value = 3;
+            //     $creation->save();
+            // }
 
-            echo "*** VAT updated for kids! :) ***";
+            // echo "*** VAT updated for kids! :) ***";
 
             // echo "*** Importation process complete! :) ***<br/>";
         } else {

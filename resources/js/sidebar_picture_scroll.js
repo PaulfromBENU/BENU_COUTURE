@@ -36,6 +36,9 @@ $(function() {
 	});
 	Livewire.on('sidebarChange', function() {
 		$('.article-sidebar__img-container__scroller').css('opacity', Math.max(0, 1 - $('.article-sidebar__img-container').scrollTop() / 100));
+		$('.article-sidebar__content').scrollTop(0);
+		$('#general-side-modal').scrollTop(0);
+		$('.article-sidebar').scrollTop(0);
 	});
 
     // $('.jcarousel').jcarousel({

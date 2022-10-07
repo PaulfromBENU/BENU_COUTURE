@@ -659,7 +659,7 @@
 				</div>
 				<p style="margin-bottom: 5px;">
 					@if($order_sold_in_shop->user !== null)
-					Ordered by: {{ $order_sold_in_shop->user->first_name }} {{ $order_sold_in_shop->user->last_name }}, on {{ Carbon\Carbon::parse($order_sold_in_shop->created_at)->format('d\/m\/Y') }} - Language: {{ $order_sold_in_shop->user->favorite_language }}
+					Bought by: {{ $order_sold_in_shop->user->first_name }} {{ $order_sold_in_shop->user->last_name }}, on {{ Carbon\Carbon::parse($order_sold_in_shop->created_at)->format('d\/m\/Y') }} - Language: {{ $order_sold_in_shop->user->favorite_language }}
 					@endif
 				</p>
 				<p style="margin-bottom: 5px;">
@@ -668,7 +668,7 @@
 					@endif
 				</p>
 				<p class="text-xl">
-					Total: {{ $order_sold_in_shop->total_price }}&euro; - Paid - Collected on {{ Carbon\Carbon::parse($order_sold_in_shop->delivery_date)->format('d\/m\/Y') }}
+					Total: {{ $order_sold_in_shop->total_price }}&euro; - Paid - Sold on {{ Carbon\Carbon::parse($order_sold_in_shop->delivery_date)->format('d\/m\/Y') }} @if($order_sold_in_shop->seller !== null) by {{ $order_sold_in_shop->seller }}@endif
 				</p>
 				<p>
 					Return possible:

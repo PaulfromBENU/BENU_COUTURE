@@ -80,7 +80,15 @@ class OrdersExport implements FromCollection
                         break;
 
                     case 5:
-                        $payment_method = "Paid in shop";
+                        $payment_method = "Paid in shop - Card/SumUp";
+                        break;
+
+                    case 6:
+                        $payment_method = "Paid in shop - Cash";
+                        break;
+
+                    case 7:
+                        $payment_method = "Paid in shop - Payconiq";
                         break;
                     
                     default:

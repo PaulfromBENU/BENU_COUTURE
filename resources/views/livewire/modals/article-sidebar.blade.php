@@ -37,18 +37,20 @@
         </div>
 
 
-        @if(in_array(app()->getLocale(), ['lu', 'de']))
-        <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-only" wire:click="closeSideBar">
-            <div class="article-sidebar__content__close article-sidebar__content__close--large">
-                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+        @if($content == 'overview')
+            @if(in_array(app()->getLocale(), ['lu', 'de']))
+            <div class="article-sidebar__content__close-container article-sidebar__content__close-container--large mobile-only" wire:click="closeSideBar">
+                <div class="article-sidebar__content__close article-sidebar__content__close--large">
+                    {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+                </div>
             </div>
-        </div>
-        @else
-        <div class="article-sidebar__content__close-container mobile-only" wire:click="closeSideBar">
-            <div class="article-sidebar__content__close">
-                {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+            @else
+            <div class="article-sidebar__content__close-container mobile-only" wire:click="closeSideBar">
+                <div class="article-sidebar__content__close">
+                    {{ __('sidebar.close') }} <span class="pl-2">&#10005;</span>
+                </div>
             </div>
-        </div>
+            @endif
         @endif
 
         <!-- Mobile only -->
@@ -215,7 +217,7 @@
 
                 @if($sold == 0)
                     @if($sent_to_cart == 0)
-                    <p class="text-center mb-2 mobile-only">
+                    <p class="text-center mb-2 mobile-only" style="height: 24px;">
                         
                     </p>
                     <button class="btn-couture-plain article-sidebar__content__cart-btn" wire:click="addToCart">{{ __('sidebar.add-to-cart') }}</button>
@@ -223,12 +225,12 @@
                     <p class="text-center mb-2">
                         {!! __('vouchers.added-to-cart') !!}
                     </p>
-                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn">
+                    <a href="{{ route('cart-'.app()->getLocale()) }}" class="block btn-couture-plain article-sidebar__content__cart-btn" style="padding-top: 10px;">
                         {{ __('vouchers.go-to-cart') }}
                     </a>
                     @endif
                 @else
-                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn" style="height: auto;">
+                    <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" class="block btn-couture-plain btn-couture-plain--fit article-sidebar__content__cart-btn" style="height: auto; padding-top: 10px;">
                         {{ __('sidebar.order-other') }}
                     </a>
                 @endif
@@ -244,7 +246,7 @@
                     <li class="flex justify-between" wire:click="switchDisplay('care')">
                         <p>{{ __('sidebar.care') }}</p> @svg('chevron-down')
                     </li>
-                    <li class="flex justify-between" wire:click="switchDisplay('delivery')">
+                    <li class="flex justify-between" wire:click="switchDisplay('delivery')" id="sidebar-btn-delivery">
                         <p>{{ __('sidebar.delivery') }}</p> @svg('chevron-down')
                     </li>
                     <li class="flex justify-between" wire:click="switchDisplay('more')">

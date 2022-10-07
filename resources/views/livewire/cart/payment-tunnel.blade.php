@@ -47,6 +47,33 @@
                 <input type="password" id="inshop_security" name="inshop_security" wire:model.defer="inshop_security" class="input-underline w-full" tabindex="5" minlength="2" maxlength="255" required>
             </div>
 
+            <div class="w-full mt-8">
+                <p class="mb-5">
+                    Paiement&nbsp;:
+                    <!-- {{ __('forms.payment-types-label') }} -->
+                </p>
+                <div class="flex justify-start md:justify-center flex-wrap">
+                    <div class="w-full md:w-1/4 text-center">
+                        <input type="radio" id="payment-type-card" name="payment_type" value="card" style="margin-top: 0;" checked wire:model="inshop_payment_type">
+                        <label for="payment-type-card" class="pl-2">
+                            Credit Card / SumUp
+                        </label>
+                    </div>
+                    <div class="w-full md:w-1/4 text-center">
+                        <input type="radio" id="payment-type-cash" name="payment_type" value="cash" style="margin-top: 0;" wire:model="inshop_payment_type">
+                        <label for="payment-type-cash" class="pl-2">
+                            Cash
+                        </label>
+                    </div>
+                    <div class="w-full md:w-1/4 text-center">
+                        <input type="radio" id="payment-type-payconiq" name="payment_type" value="payconiq" style="margin-top: 0;" wire:model="inshop_payment_type">
+                        <label for="payment-type-payconiq" class="pl-2">
+                            Payconiq
+                        </label>
+                    </div>
+                </div>
+            </div>
+
             <div class="w-full mt-8 text-center">
                 <p class="mb-5">
                     <span class="uppercase">{{ __('cart.payment-in-shop-warning') }}</span> {{ __('cart.payment-in-shop-pay-before-validate') }}
