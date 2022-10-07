@@ -58,6 +58,8 @@ if (app('env') == 'landing') {
 				session(['has_kulturpass' => null]);
 				return redirect()->back();
 			})->name('forget-kulturpass');
+
+			Route::post('/validate-stage-session', 'GeneralController@accessStage')->name('stage-access');
 			
 			//Auth routes
 			require __DIR__.'/auth.php';

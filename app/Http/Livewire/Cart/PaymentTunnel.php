@@ -225,7 +225,16 @@ class PaymentTunnel extends Component
                     $this->user_id = $user->id;
                 } else {
                     // In case of reactivation of deleted email, to be included here
-                    
+                    // if(User::withTrashed()->where('email', $this->order_email)->count() > 0) {
+                        // $user_to_be_restored = User::withTrashed()->where('email', $this->order_email)->first();
+                        // $user_to_be_restored->restore();
+                        // $user_to_be_restored->role = 'guest_client';
+                        // $user_to_be_restored->password = "";
+                        // $user_to_be_restored->newsletter = 0;
+                        // $user_to_be_restored->origin = "couture";
+                        // $user_to_be_restored->save();
+                    // }
+
                     //Client number created randomly  - C#####
                     $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
                     while (User::where('client_number', $client_number)->count() > 0) {

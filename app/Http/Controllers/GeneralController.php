@@ -373,6 +373,15 @@ class GeneralController extends Controller
     }
 
 
+    public function accessStage(Request $request)
+    {
+        if ($request->stage_password == 'benew') {
+            session(['stage_checked' => 'OK']);
+            return redirect()->back();
+        }
+    }
+
+
     public function startImport()
     {
         if(auth::check() && auth::user()->role == 'admin') {
