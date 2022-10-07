@@ -60,6 +60,7 @@ class PaymentTunnel extends Component
     public $inshop_email;
     public $inshop_newsletter;
     public $inshop_security = "";
+    public $inshop_payment_type = 'card';
 
     protected $listeners = ['infoValidated' => 'validateInfoStep', 'newAddressCreated' => 'selectAddress', 'newAddressCancelled' => 'unselectAddress', 'newInvoiceAddressCreated' => 'selectInvoiceAddress', 'newInvoiceAddressCancelled' => 'unselectInvoiceAddress'];
 
@@ -647,6 +648,7 @@ class PaymentTunnel extends Component
                                 'newsletter' => $add_newsletter,
                                 'origin' => 'couture',
                                 'general_comment' => "",
+                                'favorite_language' => strtolower(session('locale')),
                                 'client_number' => $client_number,
                             ]);
                         } else {
@@ -683,11 +685,25 @@ class PaymentTunnel extends Component
                     $new_order->user_id = $this->user_id;
                     $new_order->address_id = $this->order_address_id;
                     $new_order->invoice_address_id = 0;
-                    $new_order->payment_type = 5;
-                    $new_order->payment_status = 2;
-                    $new_order->delivery_date = date("Y-m-d");
                 }
-                $new_order->status = '0';
+                if(auth()->check()) {
+                    $new_order->seller = auth()->user()->email;
+                }
+
+                $new_order->payment_type = 5;
+                if ($this->inshop_payment_type == 'card') {
+                    $new_order->payment_type = 5;
+                } elseif ($this->inshop_payment_type == 'cash') {
+                    $new_order->payment_type = 6;
+                } elseif ($this->inshop_payment_type == 'payconiq') {
+                    $new_order->payment_type = 7;
+                }
+
+                $new_order->status = 5;
+                $new_order->payment_status = 2;
+                $new_order->delivery_status = 10;
+                $new_order->delivery_date = date("Y-m-d");
+                $new_order->transaction_date = Carbon::now()->toDateTimeString();
 
                 if (session('has_kulturpass') !== null) {
                     $new_order->with_kulturpass = 1;

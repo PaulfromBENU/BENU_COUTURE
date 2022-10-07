@@ -203,7 +203,7 @@ class SaleController extends Controller
                 } elseif ($current_order->payment_type == '4') { // Case voucher paid all
                     $current_order->payment_status = 2;
                     $current_order->transaction_date = Carbon::now()->toDateTimeString();
-                } elseif ($current_order->payment_type == '5') { // Case Paid in shop
+                } elseif ($current_order->payment_type >= '5') { // Case Paid in shop
                     $current_order->payment_status = 2;
                     $current_order->transaction_date = Carbon::now()->toDateTimeString();
                 }
@@ -216,7 +216,8 @@ class SaleController extends Controller
                     }
                 }
 
-                if($current_order->payment_type == '5') {
+                if($current_order->payment_type >= '5') {
+                    $current_order->status = 5; //5 -> sold in shop
                     $current_order->delivery_status = 10; //10 -> bought in shop
                 } elseif ($current_order->cart->couture_variations->count() == 1 
                     && $current_order->pdf_vouchers->count() > 0

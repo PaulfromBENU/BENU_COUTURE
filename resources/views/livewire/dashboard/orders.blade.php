@@ -19,6 +19,11 @@
                         <p>
                             {{ __('dashboard.order-amount') }} <strong>{{ $order->total_price }}&euro;</strong>
                         </p>
+                        @if($order->payment_type >= 5 && $order->seller !== null)
+                        <p>
+                            {{ __('dashboard.order-sold-by') }} <strong>{{ $order->seller }}</strong>
+                        </p>
+                        @endif
                     </div>
                     <div class="dashboard-orders__order__details">
                         <p class="primary-color font-bold mb-5">
