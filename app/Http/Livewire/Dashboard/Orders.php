@@ -22,7 +22,7 @@ class Orders extends Component
     {
         $this->show_details = 1;
         if (auth()->user()->role == 'vendor') {
-            if (Order::where('payment_type', '5')->find($order_id)) {
+            if (Order::where('payment_type', '>=', '5')->find($order_id)) {
                 $this->detailed_order_id = $order_id;
                 $this->emit('orderSelected');
             }

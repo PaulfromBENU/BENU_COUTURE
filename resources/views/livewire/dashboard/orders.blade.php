@@ -12,11 +12,11 @@
         @foreach($orders as $order)
             <div class="dashboard-orders__order flex justify-between flex-col lg:flex-row" wire:key="{{ $order->id }}">
                 <div class="w-full lg:w-2/3 lg:pr-5">
-                    <div class="flex justify-start mb-5">
-                        <p class="mr-5">
+                    <div class="flex flex-wrap justify-start mb-5">
+                        <p class="mr-5 mb-3 md:mb-0">
                             {{ __('dashboard.order-number') }} <strong>{{ $order->unique_id }}</strong>
                         </p>
-                        <p>
+                        <p class="mb-3 md:mb-0">
                             {{ __('dashboard.order-amount') }} <strong>{{ $order->total_price }}&euro;</strong>
                         </p>
                         @if($order->payment_type >= 5 && $order->seller !== null)
@@ -49,6 +49,8 @@
                                 @endif
                             @elseif($order->status == 4)
                                 {{ __('dashboard.order-cancelled-because-not-paid') }}
+                            @elseif($order->status == 5)
+                                {{ __('dashboard.sold-in-shop') }} - Paid by @if($order->payment_type == 5) SumUp/Card @elseif($order->payment_type == 6) Cash @elseif($order->payment_type == 7) Payconiq @else *** to be checked *** @endif
                             @else
                                 {{ __('dashboard.order-not-finished-not-paid') }}
                             @endif
@@ -249,6 +251,8 @@
                 @endif
             @elseif($order->status == 4)
                 {{ __('dashboard.order-cancelled-because-not-paid') }}
+            @elseif($order->status == 5)
+                {{ __('dashboard.sold-in-shop') }} - Paid by @if($order->payment_type == 5) SumUp/Card @elseif($order->payment_type == 6) Cash @elseif($order->payment_type == 7) Payconiq @else *** to be checked *** @endif
             @else
                 {{ __('dashboard.order-not-finished-not-paid') }}
             @endif
