@@ -1,5 +1,15 @@
 @php
-	app()->setLocale('en');
+	if(strpos(url()->full(), 'fr/') !== false) {
+		app()->setLocale('fr');
+	} elseif(strpos(url()->full(), 'en/') !== false) {
+		app()->setLocale('en');
+	} elseif(strpos(url()->full(), 'de/') !== false) {
+		app()->setLocale('de');
+	} elseif(strpos(url()->full(), 'lu/') !== false) {
+		app()->setLocale('lu');
+	} else {
+		app()->setLocale('en');
+	}
 @endphp
 
 @extends('layouts.error_page_layout')
@@ -16,10 +26,12 @@
 	<section class="text-center text-3xl pt-10 error-page">
 		<div style="padding-top: 10vh;">
 			<h2>
-				Wooops! 500 error...
+				<!-- {{ __('welcome.error-500-1') }} -->
+				Wooops! Internal error...
 			</h2>
 			<h1>
-				An internal error occured.
+				<!-- {{ __('welcome.error-500-2') }} -->
+				An issue occured. Please try again or contact us to share this issue with us.
 			</h1>
 		</div>
 		<div class="text-center">
