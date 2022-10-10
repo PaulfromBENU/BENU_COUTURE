@@ -29,6 +29,11 @@ class Selling extends Page
 
     protected static ?int $navigationSort = 1;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return (auth()->user()->role == 'deactivated');
+    }
+
     public $lines_number;
     public $articles_sold;
     public $all_creations;
