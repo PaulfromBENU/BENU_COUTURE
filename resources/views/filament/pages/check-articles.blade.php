@@ -84,7 +84,7 @@
 						</div>
 
 
-						<h4>> Singularity - Translation key: {{ $article->translation_key }}</h4>
+						<h4>> Singularity</h4>
 						<div class="flex justify-between flex-wrap">
 							<div class="article-check__form__singularity">
 								<label>Singularity FR<br/></label>

@@ -378,6 +378,8 @@ class GeneralController extends Controller
         if ($request->stage_password == 'benew') {
             session(['stage_checked' => 'OK']);
             return redirect()->back();
+        } else {
+            return redirect()->back();
         }
     }
 

@@ -24,7 +24,8 @@ class PhotoResource extends Resource
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+        return false;
+        // return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
     }
 
     public function mount(): void
