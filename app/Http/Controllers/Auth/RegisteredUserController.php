@@ -227,7 +227,7 @@ class RegisteredUserController extends Controller
 
         Mail::to($user->email)->bcc(config('mail.mailers.smtp.sender'))->send(new UserRegistered($user));
 
-        if ($user->newsletter) {
+        if ($user->newsletter && app('env') == 'prod') {
             // Mail::to($user->email)->send(new NewsletterConfirmation());
             Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
         }
