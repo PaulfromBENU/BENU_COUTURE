@@ -36,7 +36,6 @@ class GeneralController extends Controller
 
     public function home()
     {
-        dd(app('env'));
         // Temp - translations check
         // $translations = Translation::all();
         // $missing_translations = [];
