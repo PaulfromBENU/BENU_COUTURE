@@ -379,7 +379,7 @@ class GeneralController extends Controller
             session(['stage_checked' => 'OK']);
             return redirect()->back();
         } else {
-            return redirect()->back();
+            return redirect()->back()->with('msg', "Wrong password :(");
         }
     }
 
