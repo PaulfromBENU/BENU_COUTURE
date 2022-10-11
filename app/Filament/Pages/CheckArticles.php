@@ -127,7 +127,7 @@ class CheckArticles extends Page
             $article = Article::find($article_id);
             $photo = Photo::find($photo_id);
             $article->photos()->detach($photo_id);
-            File::delete(asset('images/pictures/articles/'.$photo->file_name));
+            File::delete(public_path('images/pictures/articles/'.$photo->file_name));
             $this->notify('success', 'Photo deleted!');
             $this->updateArticles();
         }

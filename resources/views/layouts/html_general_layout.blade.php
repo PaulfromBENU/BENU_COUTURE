@@ -67,6 +67,13 @@
                 <form method="POST" action="{{ route('stage-access', ['locale' => app()->getLocale()]) }}" class="stage-check flex flex-col justify-center" style="width: 100vw; height: 100vh; background: white; position: fixed; z-index: 1000;">
                     @csrf
                     <div>
+                        @if(session('msg') !== null)
+                        <div class="flex flex-col justify-center">
+                            <p class="text-center primary-color mb-5">
+                                {{ session('msg') }}
+                            </p>
+                        </div>
+                        @endif
                         <div class="m-auto mb-4 text-center">
                             <label>Enter the stage password to access the stage server:</label><br/><br/>
                             <input type="password" name="stage_password" placeholder="Stage password here" required>

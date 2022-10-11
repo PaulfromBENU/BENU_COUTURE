@@ -41,6 +41,8 @@ class SendUpdatedConditionsEmail implements ShouldQueue
         foreach ($this->users as $user) {
             Mail::mailer('smtp')->to($user->email)->send(new ConditionsUpdated($user));
         }
-        Mail::mailer('smtp')->to(config('mail.mailers.smtp.sender'))->send(new ConditionsUpdated(User::find(1)));
+        if(app('env') == 'prod') {
+            Mail::mailer('smtp')->to(config('mail.mailers.smtp.sender'))->send(new ConditionsUpdated(User::find(1)));
+        }
     }
 }
