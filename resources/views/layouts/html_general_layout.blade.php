@@ -70,7 +70,7 @@
                         @if(session('msg') !== null)
                         <div class="flex flex-col justify-center">
                             <p class="text-center primary-color mb-5">
-                                {{ $msg }}
+                                {{ session('msg') }}
                             </p>
                         </div>
                         @endif
