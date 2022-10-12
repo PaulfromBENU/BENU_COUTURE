@@ -10,6 +10,7 @@ use App\Models\DeliveryCountry;
 class PaymentTunnelInvoiceAddressForm extends Component
 {
     public $country_options;
+    public $nearby_countries;
     public $localized_country;
     public $address_id;
     public $address_name;
@@ -43,8 +44,19 @@ class PaymentTunnelInvoiceAddressForm extends Component
 
     public function mount()
     {
-        $this->country_options = DeliveryCountry::all();
+        // $this->country_options = DeliveryCountry::all();
         $this->localized_country = "country_".app()->getLocale();
+        $this->nearby_countries = DeliveryCountry::where('country_code', 'DE')
+                                            ->orWhere('country_code', 'BE')
+                                            ->orWhere('country_code', 'FR')
+                                            ->orWhere('country_code', 'LU')
+                                            ->get();
+        $this->country_options = DeliveryCountry::where('country_code', '<>', 'DE')
+                                            ->where('country_code', '<>', 'BE')
+                                            ->where('country_code', '<>', 'FR')
+                                            ->where('country_code', '<>', 'LU')
+                                            ->orderBy($this->localized_country, 'asc')
+                                            ->get();
         $this->address_country  = "LU";
     }
 

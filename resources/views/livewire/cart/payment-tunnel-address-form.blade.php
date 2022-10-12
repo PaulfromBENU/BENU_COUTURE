@@ -76,11 +76,27 @@
                 {{ __('forms.register-address-country') }} <span class="register_optionnal_star">*</span>
             </label>
             <select name="register_address_country" class="input-underline w-full register_address_field register_address_field_mandatory" tabindex="16" maxlength="50" required wire:model="address_country" style="margin-top: 20px;">
-                @foreach($country_options as $country)
-                <option value="{{ $country->country_code }}">
-                    {{ $country->$localized_country }}
-                </option>
-                @endforeach
+                <optgroup label="Grande Region">
+                    <option value="LU" {{ old('register_address_country') === 'LU' ? 'selected' : '' }}>
+                        {{ $nearby_countries->where('country_code', 'LU')->first()->$localized_country }}
+                    </option>
+                    <option value="BE" {{ old('register_address_country') === 'BE' ? 'selected' : '' }}>
+                        {{ $nearby_countries->where('country_code', 'BE')->first()->$localized_country }}
+                    </option>
+                    <option value="FR" {{ old('register_address_country') === 'FR' ? 'selected' : '' }}>
+                        {{ $nearby_countries->where('country_code', 'FR')->first()->$localized_country }}
+                    </option>
+                    <option value="DE" {{ old('register_address_country') === 'DE' ? 'selected' : '' }}>
+                        {{ $nearby_countries->where('country_code', 'DE')->first()->$localized_country }}
+                    </option>
+                </optgroup>
+                <optgroup label="Europe">
+                    @foreach($country_options as $country)
+                    <option value="{{ $country->country_code }}" {{ old('register_address_country') === $country->country_code ? 'selected' : '' }}>
+                        {{ $country->$localized_country }}
+                    </option>
+                    @endforeach
+                </optgroup>
             </select>
         </div>
 
