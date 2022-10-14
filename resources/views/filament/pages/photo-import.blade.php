@@ -7,7 +7,7 @@
 			<select name="creation-0" id="creation-0" class="sell-form__select" wire:model="creation_id">
 				<option value="0" wire:click="adaptVariations(0)">Select a creation</option>
 				@foreach($all_creations as $creation)
-					<option value="{{ $creation->id }}" wire:key="{{ $creation->id }}" wire:click="adaptVariations({{ $creation->id }})">{{ $creation->name }}@if($creation->creation_category()->count() > 0) - {{ $creation->creation_category->name_en }}@endif</option>
+					<option value="{{ $creation->id }}" wire:key="creations-{{ $creation->id }}" wire:click="adaptVariations({{ $creation->id }})">{{ $creation->name }}@if($creation->creation_category()->count() > 0) - {{ $creation->creation_category->name_en }}@endif</option>
 				@endforeach
 			</select> 
 		</div>
@@ -17,7 +17,7 @@
 			@if($creation_id != 0)
 			<em>Existing variations for this creation:</em>
 			@else
-			<em>Select a creation to continue. If the creation doees not exist, it must be created in 'CREATIONS & VARIATIONS -> Creations -> New Creation'.</em>
+			<em>Select a creation to continue. If the creation does not exist, it must be created in 'CREATIONS & VARIATIONS -> Creations -> New Creation'.</em>
 			@endif
 		</h4>
 		<div class="flex justify-start new-photo-form__variations-gallery">
@@ -33,9 +33,9 @@
 			@endforeach
 		</div>
 
-		<h3>Article details</h3>
+		<h3>New variation details</h3>
 		<div class="flex justify-start flex-wrap">
-			<div>
+			<!-- <div>
 				<label for="article-0">Select an article</label><br/>
 				<select name="article-0" id="article-0" class="sell-form__select" wire:model="article_id">
 					<option value="-1">Select article</option>
@@ -44,13 +44,13 @@
 						<option value="{{ $variation->id }}" wire:key="{{ $variation->id }}" wire:click="getSizeandColor">{{ $variation->name }}</option>
 					@endforeach
 				</select> 
-			</div>
+			</div> -->
 			<div>
 				<label for="size-0">Select size</label><br/>
 				<select name="size-0" id="size-0" class="sell-form__select" wire:model="size_id" @if($is_new_article == 0) disabled @endif>
 					<option value="0">Select size</option>
-					@foreach($all_sizes as $id => $size_value)
-						<option value="{{ $id }}" wire:key="{{ $id }}">{{ $size_value }}</option>
+					@foreach($all_sizes as $size_id => $size_value)
+						<option value="{{ $size_id }}" wire:key="size-{{ $size_id }}">{{ $size_value }}</option>
 					@endforeach
 				</select>
 			</div>
@@ -58,8 +58,8 @@
 				<label for="color-0">Select main color</label><br/>
 				<select name="color-0" id="color-0" class="sell-form__select" wire:model="color_id" @if($is_new_article == 0) disabled @endif>
 					<option value="0">Choose color</option>
-					@foreach($all_colors as $id => $color_name)
-						<option value="{{ $id }}" wire:key="{{ $id }}">{{ $color_name }}</option>
+					@foreach($all_colors as $color_id => $color_name)
+						<option value="{{ $color_id }}" wire:key="color-{{ $color_id }}">{{ $color_name }}</option>
 					@endforeach
 				</select> 
 			</div>
@@ -68,8 +68,8 @@
 				<label for="shop-0">Shop where the article is sold</label><br/>
 				<select name="shop-0" id="shop-0" class="sell-form__select" wire:model="shop_id">
 					<option value="0">Choose shop</option>
-					@foreach($all_shops as $id => $shop_name)
-						<option value="{{ $id }}" wire:key="{{ $id }}">{{ $shop_name }}</option>
+					@foreach($all_shops as $shop_id => $shop_name)
+						<option value="{{ $shop_id }}" wire:key="shop-{{ $shop_id }}">{{ $shop_name }}</option>
 					@endforeach
 				</select> 
 			</div>

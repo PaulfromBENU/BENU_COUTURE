@@ -7,6 +7,7 @@ use App\Filament\Resources\CreationResource\RelationManagers;
 use Filament\Forms\Components\Select;
 use App\Models\Creation;
 use App\Models\CreationCategory;
+use App\Models\CreationGroup;
 use App\Models\Partner;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -44,27 +45,38 @@ class CreationResource extends Resource
                 Select::make('product_type')
                         ->label('Creation Type')
                         ->options([
-                            '0' => "Vêtement ou accessoire",
-                            '1' => "Masque enfant",
-                            '2' => "Masque adulte",
-                            '3' => "Petit article (type bracelet)"
+                            '0' => "Clothe or Accessory",
+                            '1' => "Mask for kids",
+                            '2' => "Mask for adults",
+                            '3' => "Small article"
                         ])
                         ->searchable(),
                 Select::make('creation_category_id')
                         ->label('Category')
-                        ->options(CreationCategory::all()->pluck('name_fr', 'id'))
+                        ->options(CreationCategory::all()->pluck('name_en', 'id'))
+                        // ->columnSpan(2)
                         ->searchable(),
-                Select::make('partner_id')
-                        ->label('Partner')
-                        ->options(Partner::all()->pluck('name', 'id'))
-                        ->searchable(),
+                Select::make('creation_groups')
+                        ->label('Type')
+                        ->multiple()
+                        // ->options(CreationGroup::all()->pluck('name_en', 'id'))
+                        ->options([
+                            'test' => 'Test',
+                        ])
+                        ->relationship('creation_groups', 'name_en'),
+                // Select::make('partner_id')
+                //         ->label('Partner')
+                //         ->options(Partner::all()->pluck('name', 'id'))
+                //         ->searchable(),
                 Forms\Components\TextInput::make('price')
+                    ->label('Price (€)')
                     ->required(),
                 Forms\Components\TextInput::make('tva_value')
                     ->label('TVA (%)')
                     ->required(),
                 Forms\Components\TextInput::make('weight')
                     ->label('Weight [g]')
+                    ->columnSpan(2)
                     ->required(),
                 Forms\Components\Toggle::make('is_accessory')
                     ->label('Is an accessory?')
@@ -72,9 +84,9 @@ class CreationResource extends Resource
                 Forms\Components\Toggle::make('pillow_option')
                     ->label('Extra pillow option?')
                     ->required(),
-                Forms\Components\Toggle::make('requires_size')
-                    ->label('Requires size filter?')
-                    ->required(),
+                // Forms\Components\Toggle::make('requires_size')
+                //     ->label('Requires size filter?')
+                //     ->hidden(),
                 Forms\Components\Textarea::make('description_lu')
                     ->maxLength(65535),
                 Forms\Components\Textarea::make('description_fr')
@@ -92,6 +104,7 @@ class CreationResource extends Resource
                 Forms\Components\TextInput::make('origin_link_en')
                     ->maxLength(255),
                 Forms\Components\Toggle::make('rental_enabled')
+                    ->hidden()
                     ->required(),
             ]);
     }
@@ -109,7 +122,7 @@ class CreationResource extends Resource
                 Tables\Columns\TextColumn::make('tva_value')->label('TVA [%]'),
                 Tables\Columns\TextColumn::make('weight')->label('Weight [g]'),
                 Tables\Columns\BooleanColumn::make('pillow_option')->label('Has pillow option?'),
-                Tables\Columns\BooleanColumn::make('requires_size')->label('Requires Size filter?'),
+                // Tables\Columns\BooleanColumn::make('requires_size')->label('Requires Size filter?'),
                 Tables\Columns\TextColumn::make('description_lu')->limit('50'),
                 Tables\Columns\TextColumn::make('description_fr')->limit('50'),
                 Tables\Columns\TextColumn::make('description_en')->limit('50'),

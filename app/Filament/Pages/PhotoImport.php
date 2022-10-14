@@ -37,15 +37,15 @@ class PhotoImport extends Page
 
     protected static string $view = 'filament.pages.photo-import';
 
-    protected static ?string $title = 'Import pictures';
+    protected static ?string $title = 'New variation - Import pictures';
  
-    protected static ?string $navigationLabel = 'New photo importation';
+    protected static ?string $navigationLabel = 'New variation - Photo import';
      
     protected static ?string $slug = 'importation-photo';
 
-    protected static ?string $navigationGroup = 'Data Importation';
+    protected static ?string $navigationGroup = 'Creations & Variations';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 3;
 
     public $all_creations;
     public $existing_variations;
@@ -73,6 +73,7 @@ class PhotoImport extends Page
         $this->all_colors = [];
         $this->all_shops = [];
         $this->article_creation_date = "01.01.2022";
+        $this->article_id = 0;
     }
 
     public function adaptVariations()
@@ -83,6 +84,7 @@ class PhotoImport extends Page
         } elseif (Creation::find($this->creation_id)) {
             $this->existing_variations = $this->getAvailableArticles(Creation::find($this->creation_id));
         }
+        $this->getSizeandColor();
     }
 
     public function getSizeandColor()

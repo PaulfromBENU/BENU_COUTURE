@@ -63,6 +63,7 @@ class MediaResource extends Resource
                 Forms\Components\TextInput::make('link')
                     ->maxLength(255),
                 FileUpload::make('doc_name')
+                        ->label('Document upload')
                         ->disk('public_folder')
                         ->directory('medias')
                         ->visibility('public')

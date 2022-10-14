@@ -193,7 +193,7 @@ return [
             ],
         ],
         'footer' => [
-            'should_show_logo' => true,
+            'should_show_logo' => false,
         ],
         'max_content_width' => null,
         'tables' => [
@@ -212,7 +212,7 @@ return [
     |
     */
 
-    'favicon' => null,
+    'favicon' => public_path('images/favicon/apple-icon-60x60.png'),
 
     /*
     |--------------------------------------------------------------------------

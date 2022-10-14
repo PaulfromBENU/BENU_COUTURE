@@ -59,7 +59,7 @@
 				Users currently subscribed <span wire:loading> - processing...</span>
 			</h2>
 			<p>
-				<em>Remove from MailChimp list, then remove with the button below. Upon removal, the user will be completely deleted if he/she is only registered as a newsletter subscriber in the database.</em>
+				<em>To remove a user from the newsletter list, remove from MailChimp list, then remove with the button below. Upon removal, the user will be completely deleted if he/she is only registered as a newsletter subscriber in the database. The user will not be notified.</em>
 			</p>
 		</div>
 
