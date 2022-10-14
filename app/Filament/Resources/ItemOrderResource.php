@@ -98,7 +98,7 @@ class ItemOrderResource extends Resource
     {
         return [
             'index' => Pages\ListItemOrders::route('/'),
-            'create' => Pages\CreateItemOrder::route('/create'),
+            // 'create' => Pages\CreateItemOrder::route('/create'),
             'edit' => Pages\EditItemOrder::route('/{record}/edit'),
         ];
     }

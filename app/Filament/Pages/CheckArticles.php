@@ -25,13 +25,13 @@ class CheckArticles extends Page
 
     protected static ?string $title = 'Check and update articles';
  
-    protected static ?string $navigationLabel = 'New Variations Check';
+    protected static ?string $navigationLabel = 'New Variation - Check';
      
     protected static ?string $slug = 'check-articles';
 
-    protected static ?string $navigationGroup = 'Data Importation';
+    protected static ?string $navigationGroup = 'Creations & Variations';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 4;
 
     public $unchecked_articles;
     public $size_ids = [];
@@ -80,7 +80,7 @@ class CheckArticles extends Page
     public function updateArticles()
     {
         $this->unchecked_articles = Article::where('checked', '0')->orderBy('created_at', 'desc')->get();
-        self::$navigationLabel = "Vérification Articles (".$this->unchecked_articles->count().")";
+        // self::$navigationLabel = "Vérification Articles (".$this->unchecked_articles->count().")";
 
         if ($this->unchecked_articles->count() > 0) {
             foreach ($this->unchecked_articles as $article) {
@@ -129,6 +129,21 @@ class CheckArticles extends Page
             $article->photos()->detach($photo_id);
             File::delete(public_path('images/pictures/articles/'.$photo->file_name));
             $this->notify('success', 'Photo deleted!');
+            $this->updateArticles();
+        }
+    }
+
+    public function deleteVariation($article_id)
+    {
+        if (Article::find($article_id)) {
+            $article = Article::find($article_id);
+            foreach ($article->photos()->get() as $photo) {
+                $article->photos()->detach($photo->id);
+                File::delete(public_path('images/pictures/articles/'.$photo->file_name));
+            }
+            $article->shops()->detach();
+            $article->delete();
+            $this->notify('success', 'Variation deleted!');
             $this->updateArticles();
         }
     }

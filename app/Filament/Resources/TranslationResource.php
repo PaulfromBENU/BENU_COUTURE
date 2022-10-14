@@ -10,6 +10,9 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\Select;
+use Closure;
+use Filament\Forms\Components\Hidden;
 
 class TranslationResource extends Resource
 {
@@ -36,12 +39,54 @@ class TranslationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('page')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('key')
-                    ->required()
-                    ->maxLength(255),
+                // Select::make('page')
+                //     ->label('Translation group')
+                //     ->options([
+                //         'about' => 'about',
+                //         'auth' => 'auth',
+                //         'breadcrumbs' => 'breadcrumbs',
+                //         'campaigns' => 'campaigns',
+                //         'cart' => 'cart',
+                //         'colors' => 'colors',
+                //         'components' => 'components',
+                //         'contact' => 'contact',
+                //         'dashboard' => 'dashboard',
+                //         'emails' => 'emails',
+                //         'footer' => 'footer',
+                //         'forms' => 'forms',
+                //         'header' => 'header',
+                //         'models' => 'models',
+                //         'news' => 'news',
+                //         'pagination' => 'pagination',
+                //         'paricipate' => 'participate',
+                //         'partners' => 'partners',
+                //         'passwords' => 'passwords',
+                //         'payment' => 'payment',
+                //         'pdf' => 'pdf',
+                //         'services' => 'services',
+                //         'sidebar' => 'sidebar',
+                //         'slugs' => 'slugs',
+                //         'sold' => 'sold',
+                //         'vouchers' => 'vouchers',
+                //         'welcome' => 'welcome',
+                //     ])
+                //     ->hidden()
+                //     ->required(),
+                Hidden::make('page')
+                    ->required(),
+                Hidden::make('key')
+                    ->required(),
+                Forms\Components\TextInput::make('translation_key')
+                    ->maxLength(255)
+                    ->columnSpan(2)
+                    ->reactive()
+                    ->afterStateUpdated(function (Closure $set, $state) {
+                        $set('page', explode('.', $state)[0]);
+                        if(count(explode('.', $state)) > 1) {
+                            $set('key', explode('.', $state)[1]);
+                        }
+                    })
+                    ->required(),
                 Forms\Components\Textarea::make('fr')
                     ->required()
                     ->maxLength(65535),
@@ -54,8 +99,6 @@ class TranslationResource extends Resource
                 Forms\Components\Textarea::make('lu')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\TextInput::make('translation_key')
-                    ->maxLength(255),
             ]);
     }
 

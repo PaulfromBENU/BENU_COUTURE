@@ -95,7 +95,7 @@ class MaskOrderResource extends Resource
     {
         return [
             'index' => Pages\ListMaskOrders::route('/'),
-            'create' => Pages\CreateMaskOrder::route('/create'),
+            // 'create' => Pages\CreateMaskOrder::route('/create'),
             'edit' => Pages\EditMaskOrder::route('/{record}/edit'),
         ];
     }

@@ -10,6 +10,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\Select;
 
 class ShopResource extends Resource
 {
@@ -39,9 +40,13 @@ class ShopResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('type')
-                    ->required()
-                    ->maxLength(255),
+                Select::make('type')
+                    ->label('Shop owner')
+                    ->options([
+                        'BENU owned' => 'BENU Shop',
+                        'Pop-up' => 'Pop-up store',
+                    ])
+                    ->required(),
                 Forms\Components\Textarea::make('description_de')
                     ->required()
                     ->maxLength(65535),

@@ -24,6 +24,7 @@ class PartnerResource extends Resource
 
     protected static function shouldRegisterNavigation(): bool
     {
+        return false;
         return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
     }
 
