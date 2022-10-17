@@ -38,9 +38,9 @@ class OrderReadyConfirmation extends Mailable
     public function build()
     {
         if ($this->order->address_id == 0) {
-            return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.order-ready-collect-subject-1", [], $this->locale).' ('.$this->order->unique_id.') '.trans("emails.order-ready-collect-subject-2", [], $this->locale))->view('emails.order-ready');
+            return $this->from(config('mail.mailers.smtp_admin.sender'), 'BENU')->subject(trans("emails.order-ready-collect-subject-1", [], $this->locale).' ('.$this->order->unique_id.') '.trans("emails.order-ready-collect-subject-2", [], $this->locale))->view('emails.order-ready');
         } else {
-            return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.order-ready-delivery-subject-1", [], $this->locale).' ('.$this->order->unique_id.') '.trans("emails.order-ready-delivery-subject-2", [], $this->locale))->view('emails.order-ready');
+            return $this->from(config('mail.mailers.smtp_admin.sender'), 'BENU')->subject(trans("emails.order-ready-delivery-subject-1", [], $this->locale).' ('.$this->order->unique_id.') '.trans("emails.order-ready-delivery-subject-2", [], $this->locale))->view('emails.order-ready');
         }
     }
 }

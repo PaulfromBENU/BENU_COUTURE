@@ -142,7 +142,7 @@ class OrdersInterface extends Page
         if($order->save()) {
             foreach ($order->pdf_vouchers as $voucher) {
                 $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
-                Mail::to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
+                Mail::mailer('smtp_admin')->to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
             }
             $this->initializeOrders();
         }
@@ -253,7 +253,7 @@ class OrdersInterface extends Page
             if ($order->pdf_vouchers->count() > 0) {
                 foreach ($order->pdf_vouchers as $voucher) {
                     $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
-                    Mail::to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
+                    Mail::mailer('smtp_admin')->to($order->user->email)->send(new VoucherPdf($order->user, $voucher, $voucher_pdf));
                 }
                 if ($order->cart->couture_variations->count() == 1) {
                     $order->delivery_status = 4;

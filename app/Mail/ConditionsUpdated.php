@@ -34,6 +34,6 @@ class ConditionsUpdated extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.conditions-subject", [], $this->locale))->view('emails.updated-general-conditions');
+        return $this->from(config('mail.mailers.smtp_admin.sender'), 'BENU')->subject(trans("emails.conditions-subject", [], $this->locale))->view('emails.updated-general-conditions');
     }
 }
