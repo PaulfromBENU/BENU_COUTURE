@@ -73,8 +73,7 @@ class HandleNewsletters extends Page
         if (User::find($user_id)) {
             $user = User::find($user_id);
             $user->newsletter = 0;
-            Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterCancelConfirmationForAdmin($user));
-            // Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin($user));
+            Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.sender'))->send(new NewsletterCancelConfirmationForAdmin($user));
             if ($user->role == 'newsletter') {
                 $user->forceDelete();
             } else {
@@ -90,9 +89,8 @@ class HandleNewsletters extends Page
             $user = User::find($user_id);
             $user->newsletter = 0;
             Mail::mailer('smtp_admin')
-                    ->to(config('mail.mailers.smtp_admin.admin_receiver'))
+                    ->to(config('mail.mailers.smtp_admin.sender'))
                     ->send(new NewsletterCancelConfirmationForAdmin($user));
-            // Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin($user));
             Mail::mailer('smtp')
                     ->to($user->email)
                     ->send(new NewsletterCancelConfirmationForUser($user, strtolower($user->favorite_language)));

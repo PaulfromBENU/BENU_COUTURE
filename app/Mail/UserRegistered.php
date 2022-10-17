@@ -39,6 +39,6 @@ class UserRegistered extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.mailers.smtp.sender'), 'BENU')->subject(trans("emails.new-user-subject", [], $this->locale).' ('.$this->user->client_number.')')->view('emails.registered-user');
+        return $this->from(config('mail.mailers.smtp_admin.sender'), 'BENU')->subject(trans("emails.new-user-subject", [], $this->locale).' ('.$this->user->client_number.')')->view('emails.registered-user');
     }
 }

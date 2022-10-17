@@ -213,9 +213,9 @@ class SaleController extends Controller
                     foreach ($current_order->pdf_vouchers as $voucher) {
                         $voucher_pdf = $this->generateVoucherPdf($voucher->unique_code);
                         if(app('env') == 'prod') {
-                            Mail::to($current_order->user->email)->bcc(config('mail.mailers.smtp.sender'))->send(new VoucherPdf($current_order->user, $voucher, $voucher_pdf));
+                            Mail::mailer('smtp_admin')->to($current_order->user->email)->bcc(config('mail.mailers.smtp_admin.sender'))->send(new VoucherPdf($current_order->user, $voucher, $voucher_pdf));
                         } else {
-                            Mail::to($current_order->user->email)->send(new VoucherPdf($current_order->user, $voucher, $voucher_pdf));
+                            Mail::mailer('smtp_admin')->to($current_order->user->email)->send(new VoucherPdf($current_order->user, $voucher, $voucher_pdf));
                         }
                     }
                 }

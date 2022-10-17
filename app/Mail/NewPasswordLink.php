@@ -32,8 +32,7 @@ class NewPasswordLink extends Mailable
      */
     public function build()
     {
-        return $this->mailer('smtp')
-                    ->from(config('mail.mailers.smtp.sender'), 'BENU')
+        return $this->from(config('mail.mailers.smtp_admin.sender'), 'BENU')
                     ->subject(trans('emails.reset-password-subject', [], $this->locale))
                     ->view('emails.password-reset-link');
     }

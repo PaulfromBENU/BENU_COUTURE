@@ -154,7 +154,7 @@ class User extends Authenticatable implements HasName, FilamentUser
             'email' => $email,
         ], false));
 
-        Mail::mailer('smtp')->to($email)->send(new NewPasswordLink($route));
+        Mail::mailer('smtp_admin')->to($email)->send(new NewPasswordLink($route));
 
         return true;
 

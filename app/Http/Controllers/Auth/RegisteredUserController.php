@@ -225,7 +225,7 @@ class RegisteredUserController extends Controller
             $new_kulturpass->save();
         }
 
-        Mail::to($user->email)->bcc(config('mail.mailers.smtp.sender'))->send(new UserRegistered($user));
+        Mail::mailer('smtp_admin')->to($user->email)->bcc(config('mail.mailers.smtp_admin.sender'))->send(new UserRegistered($user));
 
         if ($user->newsletter && app('env') == 'prod') {
             // Mail::to($user->email)->send(new NewsletterConfirmation());

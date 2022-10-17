@@ -39,6 +39,6 @@ class SendOrderReadyConfirmationEmail implements ShouldQueue
      */
     public function handle()
     {
-        Mail::mailer('smtp')->to($this->order->user->email)->bcc(config('mail.mailers.smtp.sender'))->send(new OrderReadyConfirmation($this->order));
+        Mail::mailer('smtp_admin')->to($this->order->user->email)->bcc(config('mail.mailers.smtp.sender'))->send(new OrderReadyConfirmation($this->order));
     }
 }

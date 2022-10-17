@@ -24,13 +24,13 @@
             {{ trans('emails.newsletter-confirmation-txt-1', [], $locale) }}
         </p>
         <p>
-            {{ trans('emails.newsletter-confirmation-txt-2', [], $locale) }} <a href="mailto:benu@benuvillageesch.lu" style="color: #27955B;">{{ trans('emails.newsletter-confirmation-txt-3', [], $locale) }}</a> {{ trans('emails.newsletter-confirmation-txt-4', [], $locale) }}
+            {{ trans('emails.newsletter-confirmation-txt-2', [], $locale) }} <a href="mailto:benu@benu.lu" style="color: #27955B;">{{ trans('emails.newsletter-confirmation-txt-3', [], $locale) }}</a> {{ trans('emails.newsletter-confirmation-txt-4', [], $locale) }}
         </p>
         <p>
             {{ trans('emails.newsletter-confirmation-txt-5', [], $locale) }}
         </p>
         <p>
-            {{ trans('emails.newsletter-confirmation-txt-6', [], $locale) }} <a href="mailto:benu@benuvillageesch.lu" style="color: #27955B;">benu@benuvillageesch.lu</a> {{ trans('emails.newsletter-confirmation-txt-8', [], $locale) }} <a href="{{ route('newsletter-stop-'.$locale, ['id' => rand(10, 99).rand(10, 99).rand(10, 99).$user->id]) }}" style="color: #27955B">{{ trans('emails.newsletter-confirmation-txt-9', [], $locale) }}</a>.
+            {{ trans('emails.newsletter-confirmation-txt-6', [], $locale) }} <a href="mailto:benu@benu.lu" style="color: #27955B;">benu@benu.lu</a> {{ trans('emails.newsletter-confirmation-txt-8', [], $locale) }} <a href="{{ route('newsletter-stop-'.$locale, ['id' => rand(10, 99).rand(10, 99).rand(10, 99).$user->id]) }}" style="color: #27955B">{{ trans('emails.newsletter-confirmation-txt-9', [], $locale) }}</a>.
         </p>
 
         <p>
