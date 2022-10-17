@@ -43,7 +43,7 @@ class CreationResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Select::make('product_type')
-                        ->label('Creation Type')
+                        ->label('Creation Classification')
                         ->options([
                             '0' => "Clothe or Accessory",
                             '1' => "Mask for kids",
@@ -60,9 +60,6 @@ class CreationResource extends Resource
                         ->label('Type')
                         ->multiple()
                         // ->options(CreationGroup::all()->pluck('name_en', 'id'))
-                        ->options([
-                            'test' => 'Test',
-                        ])
                         ->relationship('creation_groups', 'name_en'),
                 // Select::make('partner_id')
                 //         ->label('Partner')
@@ -72,7 +69,7 @@ class CreationResource extends Resource
                     ->label('Price (€)')
                     ->required(),
                 Forms\Components\TextInput::make('tva_value')
-                    ->label('TVA (%)')
+                    ->label('VAT (%)')
                     ->required(),
                 Forms\Components\TextInput::make('weight')
                     ->label('Weight [g]')
