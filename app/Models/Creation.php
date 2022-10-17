@@ -16,7 +16,7 @@ class Creation extends Model
 
     public function creation_groups()
     {
-        return $this->belongsToMany('App\Models\CreationGroup');
+        return $this->belongsToMany('App\Models\CreationGroup')->where('creation_groups.filter_key', '<>', 'accessories');
     }
 
     public function creation_category()
