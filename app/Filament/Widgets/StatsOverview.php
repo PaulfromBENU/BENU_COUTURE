@@ -8,6 +8,8 @@ use Filament\Widgets\StatsOverviewWidget\Card;
 use Carbon\Carbon;
 
 use App\Models\Article;
+use App\Models\Cart;
+use App\Models\Shop;
 use App\Models\Translation;
 use App\Models\User;
 
@@ -20,13 +22,32 @@ class StatsOverview extends BaseWidget
         $number_of_days = 7;
 
         // Static Data
-        $sold_articles_total = Article::whereHas('shops', function($query) {
-            $query->where('stock', '0');
-        })->count();
+        // Sold articles determined from orders which have been paid
+        $sold_articles_total = 0;
+        foreach (Cart::whereHas('order', function($query) {
+            $query->where('payment_status', '>=', '2');
+        })->get() as $cart) {
+            foreach ($cart->couture_variations as $variation) {
+                $sold_articles_total += $variation->pivot->articles_number;
+            }
+        }
 
-        $articles_in_stock = Article::whereHas('shops', function($query) {
-            $query->where('stock', '<>', '0');
-        })->count();
+        // Articles in stock determined based on available stock in shops
+        // Total number of articles includes articles with stock empty and available stocks
+        $articles_in_stock = 0;
+        $articles_total = 0;
+        foreach (Shop::all() as $shop) {
+            foreach ($shop->articles_in_stock as $article_in_stock) {
+                $articles_in_stock += $article_in_stock->pivot->stock;
+            }
+            foreach ($shop->articles as $article) {
+                if ($article->pivot->stock + $article->pivot->stock_in_cart == 0) {
+                    $articles_total ++;
+                } else {
+                    $articles_total += $article->pivot->stock + $article->pivot->stock_in_cart;
+                }
+            }
+        }
 
         // Compute data evolution for chart display
         $last_users_count = [];
@@ -66,22 +87,21 @@ class StatsOverview extends BaseWidget
             ->descriptionIcon($users_icon)
             ->chart($last_users_count)
             ->color($user_color),
-            Card::make('Total number of variations', Article::count())
+            Card::make('Total number of variations', $articles_total)
             ->description('Over 8 days')
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($variations_count)
             ->color('success'),
-            Card::make('Variations sold (total)', $sold_articles_total)
+            Card::make('Variations sold since website launch (total including vouchers)', $sold_articles_total)
             ->description('Over 8 days')
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($sold_articles_count)
             ->color('success'),
-            Card::make('Variations in stock', $articles_in_stock)
+            Card::make('Variations in stock (total)', $articles_in_stock)
             ->description('Over 8 days')
             ->descriptionIcon('heroicon-s-trending-up')
             ->chart($articles_in_stock_count)
             ->color('success'),
-            // Card::make('Missing translations', Translation::whereColumn('translation_key', 'de')->count()),
         ];
     }
 }
