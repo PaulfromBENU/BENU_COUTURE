@@ -58,7 +58,7 @@
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 27 91 19 49
 				</p>
 				<p class="w-full lg:w-2/5">
-					<strong>{!! __('services.shops-website') !!} : </strong> <a href="https://www.benu.lu" target="_blank">www.benu.lu</a>
+					<strong>{!! __('services.shops-website') !!} : </strong> <a href="https://www.benu.lu" target="_blank" rel="noreferrer">www.benu.lu</a>
 				</p>
 			</div>
 		</div>
@@ -142,7 +142,7 @@
 					<strong>{!! __('services.shops-phone') !!} :</strong> +352 90 81 88-1
 				</p>
 				<p class="w-full lg:w-2/5">
-					<strong>{!! __('services.shops-website') !!} : </strong> <a href="https://naturpark-our.lu" target="_blank">naturpark-our.lu</a>
+					<strong>{!! __('services.shops-website') !!} : </strong> <a href="https://naturpark-our.lu" target="_blank" rel="noreferrer">naturpark-our.lu</a>
 				</p>
 			</div>
 		</div>
