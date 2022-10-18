@@ -143,6 +143,7 @@ class ModelController extends Controller
             'filter_names' => $filter_names,
             'initial_filters' => $initial_filters,
             'article_id' => $article_id,
+            'slug' => $request->name,
         ]);
     }
 

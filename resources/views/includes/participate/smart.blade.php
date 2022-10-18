@@ -1,5 +1,5 @@
 <section class="w-full lg:w-3/4 m-auto text-center participate-smart participate-panel" id="participate-smart">
-	<h2 class="participate-smart__title">{{ __('participate.smart-title') }}</h2>
+	<h1 class="participate-smart__title">{{ __('participate.smart-title') }}</h1>
 
 	<h3>
 		{{ __('participate.smart-subtitle-1') }}

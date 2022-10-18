@@ -1,5 +1,5 @@
 <section class="w-full m-auto text-center sizes service-panel mb-10" id="services-sizes">
-	<h2 class="sizes__title">{{ __('services.sizes-title') }}</h2>
+	<h1 class="sizes__title">{{ __('services.sizes-title') }}</h1>
 
 	
 	<div class="flex justify-between benu-container sizes__container">

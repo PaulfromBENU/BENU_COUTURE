@@ -1,5 +1,5 @@
 <section class="w-11/12 lg:w-1/2 m-auto text-center payment service-panel service-column" id="services-payment">
-	<h2 class="payment__title">{!! __('services.payment-title') !!}</h2>
+	<h1 class="payment__title">{!! __('services.payment-title') !!}</h1>
 	<p class="payment__subtitle">
 		{!! __('services.payment-subtitle') !!}
 	</p>

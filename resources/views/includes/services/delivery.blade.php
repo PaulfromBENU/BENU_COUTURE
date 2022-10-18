@@ -1,5 +1,5 @@
 <section class="text-center delivery service-panel" id="services-delivery">
-	<h2 class="delivery__title">{{ __('services.delivery-title') }}</h2>
+	<h1 class="delivery__title">{{ __('services.delivery-title') }}</h1>
 	
 	<div class="flex justify-between benu-container delivery__container">
 		<div class="delivery__index relative mobile-hidden tablet-hidden">

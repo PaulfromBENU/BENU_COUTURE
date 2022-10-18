@@ -1,5 +1,5 @@
 <section class="w-full lg:w-2/3 m-auto text-center participate-badges participate-panel" id="participate-badges">
-	<h2 class="participate-badges__title">{{ __('participate.badges-title') }}</h2>
+	<h1 class="participate-badges__title">{{ __('participate.badges-title') }}</h1>
 	<p class="participate-badges__content">
 		{{ __('participate.badges-content-1') }}
 	</p>

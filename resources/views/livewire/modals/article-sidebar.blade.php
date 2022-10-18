@@ -2,12 +2,12 @@
     @if($article_id != '0')
         <!-- Hidden on mobile -->
         <div class="article-sidebar__img-container tablet-hidden">
-            @if($article->creation->partner != null)
+            @if($variation->creation->partner != null)
             <div class="model-overview__img-container__partner-icon">
                 <div class="model-overview__img-container__partner-icon__content flex justify-between">
                     <div>
                         <p class="primary-color pl-2 pr-2 text-sm">
-                            <strong>{{ $article->creation->partner->name }}</strong>
+                            <strong>{{ $variation->creation->partner->name }}</strong>
                         </p>
                         <p class="pl-2 pr-2 text-sm">
                             <em>{{ __('components.partner') }}</em>
@@ -22,7 +22,7 @@
 
             <div style="height: 100%;">
             @foreach($article_pictures as $picture)
-                <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $article->creation->name }}" class="w-full">
+                <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $variation->creation->name }}" class="w-full">
             @endforeach
             </div>
 
@@ -56,12 +56,12 @@
         <!-- Mobile only -->
         <div class="article-sidebar__img-container-mobile relative mobile-only">
             @if($content == 'overview')
-                @if($article->creation->partner != null)
+                @if($variation->creation->partner != null)
                 <div class="model-overview__img-container__partner-icon">
                     <div class="model-overview__img-container__partner-icon__content flex justify-between">
                         <div>
                             <p class="primary-color pl-2 pr-2 text-sm">
-                                <strong>{{ $article->creation->partner->name }}</strong>
+                                <strong>{{ $variation->creation->partner->name }}</strong>
                             </p>
                             <p class="pl-2 pr-2 text-sm">
                                 <em>{{ __('components.partner') }}</em>
@@ -85,7 +85,7 @@
 
                 <div class="flex justify-start article-sidebar__img-container-mobile__images">
                     @foreach($article_pictures as $picture)
-                        <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $article->creation->name }}" class="w-full">
+                        <img src="{{ asset('images/pictures/articles/'.$picture) }}" alt="Photo article {{ $variation->creation->name }}" class="w-full">
                     @endforeach
                 </div>
             @endif
@@ -112,7 +112,7 @@
 
             @if($content == 'overview')
                 <h3 class="article-sidebar__content__subtitle">
-                    {{ $article->creation->creation_category->$name_query }}
+                    {{ $variation->creation->creation_category->$name_query }}
                 </h3>
 
                 @auth
@@ -146,42 +146,42 @@
 
                 @if($sold == 0)
                 <div class="article-sidebar__content__size">
-                    @if(strtolower($article->size->value) == 'unique')
+                    @if(strtolower($variation->size->value) == 'unique')
                     {{ __('sidebar.size-unique-sidebar') }}
                     @else
-                    {{ __('sidebar.size') }} {{ strtoupper($article->size->value) }}
+                    {{ __('sidebar.size') }} {{ strtoupper($variation->size->value) }}
                     @endif
                 </div>
                 @else
                 <div class="article-sidebar__content__size article-sidebar__content__size--sold">
-                    @if(strtolower($article->size->value) == 'unique')
+                    @if(strtolower($variation->size->value) == 'unique')
                     {{ __('sidebar.size-unique-sidebar') }}
                     @else
-                    {{ __('sidebar.size') }} {{ strtoupper($article->size->value) }}
+                    {{ __('sidebar.size') }} {{ strtoupper($variation->size->value) }}
                     @endif
                 </div>
                 @endif
 
                 <h2 class="article-sidebar__content__title">
-                    {{ strtoupper($article->name) }}
-                    @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
-                        &nbsp;- {{ $article->available_shops()->where('filter_key', '<>', "benu-esch")->first()->name }}
+                    {{ strtoupper($variation->name) }}
+                    @if($variation->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
+                        &nbsp;- {{ $variation->available_shops()->where('filter_key', '<>', "benu-esch")->first()->name }}
                     @endif
                 </h2>
 
                 <p class="article-sidebar__content__price">
                     @if($sold == 0)
-                        @if($article->is_extra_accessory)
-                        {{ $article->specific_price }}&euro;
+                        @if($variation->is_extra_accessory)
+                        {{ $variation->specific_price }}&euro;
                         @else
-                        {{ $article->creation->price }}&euro;
+                        {{ $variation->creation->price }}&euro;
                         @endif
                     @else
                     {{ strtoupper(__('models.sold-sold')) }}
                     @endif
                 </p>
 
-                <div class="article-sidebar__content__color color-circle color-circle--{{ $article->color->name }}"></div>
+                <div class="article-sidebar__content__color color-circle color-circle--{{ $variation->color->name }}"></div>
 
                 <p class="article-sidebar__content__desc">
                     @if($full_desc == 0)
@@ -194,21 +194,21 @@
                     @endif
                 </p>
 
-                @if($article->$singularity_query != "")
+                @if($variation->$singularity_query != "")
                 <p class="article-sidebar__content__singularity">
-                    <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ $article->$singularity_query }}
+                    <span class="primary-color">{!! __('sidebar.singularity') !!}</span> {{ $variation->$singularity_query }}
                 </p>
                 @endif
 
-                @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
-                    @if($article->available_shops()->where('filter_key', '<>', "benu-esch")->first()->delayed_stock == '1')
+                @if($variation->available_shops()->where('filter_key', '<>', "benu-esch")->count() > 0)
+                    @if($variation->available_shops()->where('filter_key', '<>', "benu-esch")->first()->delayed_stock == '1')
                     <div class="article-sidebar__content__delayed-stock">
                         <span class="font-bold primary-color">{!! __('sidebar.special-pop-up-store') !!}</span>: {{ __('sidebar.special-pop-up-content') }}
                     </div>
                     @endif
                 @endif
 
-                @if($article->creation->pillow_option == 1)
+                @if($variation->creation->pillow_option == 1)
                 <div class="text-center m-auto mb-5">
                     <input type="checkbox" name="with_extra" wire:model="with_extra" class="mr-2 rounded" id="with_extra">
                     <label for="with_extra">{{ __('sidebar.add-extra-pillow-for') }} 10&euro;</label>
@@ -266,7 +266,7 @@
                 <h5 class="article-sidebar__content__compo__title-expl">{!! __('sidebar.composition-title') !!}</h5>
 
                 <ul class="article-sidebar__content__compo__list">
-                    @foreach($article->compositions as $composition)
+                    @foreach($variation->compositions as $composition)
                     <li>
                         <img src="{{ asset('images/pictures/composition/'.$composition->picture) }}">
                         <h5>
@@ -288,7 +288,7 @@
                 </h5>
 
                 <ul class="article-sidebar__content__care__list">
-                    @foreach($article->care_recommendations as $recommendation)
+                    @foreach($variation->care_recommendations as $recommendation)
                     <li class="flex mb-3">
                         @svg('care/'.$recommendation->picture)
                         <p>
@@ -322,7 +322,7 @@
                 <h5 class="article-sidebar__content__compo__title-expl mb-10">{!! __('sidebar.more-details-title') !!}</h5>
 
                 <ul class="article-sidebar__content__more__list">
-                    @foreach($article->creation->keywords as $keyword)
+                    @foreach($variation->creation->keywords as $keyword)
                         <li class="flex mb-3">
                             <div class="pt-3">
                                 @svg('list_cintre')

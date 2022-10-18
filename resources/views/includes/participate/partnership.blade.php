@@ -1,5 +1,5 @@
 <section class="w-full lg:w-2/3 m-auto text-center participate-partnership participate-panel" id="participate-partnership">
-	<h2 class="participate-partnership__title">{{ __('participate.partnership-title') }}</h2>
+	<h1 class="participate-partnership__title">{{ __('participate.partnership-title') }}</h1>
 
 	<p class="participate-partnership__content">
 		{{ __('participate.partnership-content-1') }}

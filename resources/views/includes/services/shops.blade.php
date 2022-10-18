@@ -1,5 +1,5 @@
 <section class="w-3/4 m-auto text-center shops service-panel benu-container" id="services-shops">
-	<h2 class="shops__title">{{ __('services.shops-title') }}</h2>
+	<h1 class="shops__title">{{ __('services.shops-title') }}</h1>
 
 	@foreach($shops_benu as $shop)
 	<div class="shops__card flex justify-start flex-col lg:flex-row">

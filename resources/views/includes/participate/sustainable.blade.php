@@ -1,5 +1,5 @@
 <section class="w-2/3 m-auto text-center participate-sustainable participate-panel" id="participate-sustainable">
-	<h2 class="participate-sustainable__title">{{ __('participate.sustainable-title') }}</h2>
+	<h1 class="participate-sustainable__title">{{ __('participate.sustainable-title') }}</h1>
 
 	<p class="participate-sustainable__content">
 		{{ __('participate.sustainable-content-1') }}
