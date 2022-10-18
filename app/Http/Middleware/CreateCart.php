@@ -25,17 +25,18 @@ class CreateCart
                 $random_id = substr(str_shuffle(Str::random(30)."0123456789"), rand(0, 5), 20);
             }
             session(['cart_id' => $random_id]);
-            $new_cart = new Cart();
-            $new_cart->cart_id = $random_id;
-            if (auth()->check()) {
-                $new_cart->user_id = auth()->user()->id;
-            } else {
-                $new_cart->user_id = str_replace(".", "", $request->ip());
-            }
-            $new_cart->is_active = 1;
-            if ($new_cart->save()) {
-                return $next($request);
-            }
+            // $new_cart = new Cart();
+            // $new_cart->cart_id = $random_id;
+            // if (auth()->check()) {
+            //     $new_cart->user_id = auth()->user()->id;
+            // } else {
+            //     $new_cart->user_id = str_replace(".", "", $request->ip());
+            // }
+            // $new_cart->is_active = 1;
+            return $next($request);
+            // if ($new_cart->save()) {
+            //     return $next($request);
+            // }
         }
         return $next($request);
     }
