@@ -32,13 +32,16 @@ class ArticleSidebar extends Component
     public $article_description;
     public $full_desc;
     public $sent_to_cart;
+    public $variation;
+
+    protected $queryString = ['article' => ['except' => '']];
 
     protected $listeners = ['ArticleModalReady' => "loadArticleDetails"];
 
     public function mount()
     {
         $this->article_pictures = [];
-        $this->article = collect([]);
+        $this->variation = collect([]);
         $this->content = 'overview';
         $this->name_query = "name_".app()->getLocale();
         $this->desc_query = "description_".app()->getLocale();
@@ -55,6 +58,10 @@ class ArticleSidebar extends Component
 
     public function loadArticleDetails(int $article_id)
     {
+        if ($article_id == 0) {
+            $this->article = "";
+        }
+
         $this->article_id = $article_id;
 
         if (Cart::where('cart_id', session('cart_id'))->count() > 0 && Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->article_id)) {
@@ -66,12 +73,13 @@ class ArticleSidebar extends Component
         $this->full_desc = 0;
         $this->content = 'overview';
         if(Article::where('id', $article_id)->count() > 0) {
-            $this->article = Article::find($article_id);
+            $this->variation = Article::find($article_id);
+            $this->article = strtolower($this->variation->name);
             $this->article_pictures = [];
 
             // Load wishlist status
             if (auth::check()) {
-                if (auth::user()->wishlistArticles->contains($this->article->id)) {
+                if (auth::user()->wishlistArticles->contains($this->variation->id)) {
                     $this->is_wishlisted = 1;
                 } else {
                     $this->is_wishlisted = 0;
@@ -79,10 +87,10 @@ class ArticleSidebar extends Component
             }
 
             // Load pictures
-            foreach ($this->article->photos()->where('is_front', '1')->get() as $front_photo) {
+            foreach ($this->variation->photos()->where('is_front', '1')->get() as $front_photo) {
                 array_push($this->article_pictures, $front_photo->file_name);
             }
-            foreach ($this->article->photos()->where('is_front', '<>', '1')->get() as $other_photo) {
+            foreach ($this->variation->photos()->where('is_front', '<>', '1')->get() as $other_photo) {
                 array_push($this->article_pictures, $other_photo->file_name);
             }
 
@@ -91,11 +99,11 @@ class ArticleSidebar extends Component
 
             // Load description with limited number of words
             $query = $this->desc_query;
-            $this->article_description = $this->article->creation->$query;
-            $this->article_description_short = Str::words($this->article->creation->$query, 20, '...');
+            $this->article_description = $this->variation->creation->$query;
+            $this->article_description_short = Str::words($this->variation->creation->$query, 20, '...');
 
             // Determine if article is sold or not
-            if($this->stock($this->article) == 0) {
+            if($this->stock($this->variation) == 0) {
                 $this->sold = 1;
             } else {
                 $this->sold = 0;
@@ -140,6 +148,7 @@ class ArticleSidebar extends Component
 
     public function closeSideBar()
     {
+        $this->article = "";
         $this->emit('closeSideBar');
     }
 
@@ -147,14 +156,14 @@ class ArticleSidebar extends Component
     {
         if(auth::check()) {
             if ($this->is_wishlisted == 0) {
-                // auth::user()->wishlistArticles()->attach($this->article->id);
+                // auth::user()->wishlistArticles()->attach($this->variation->id);
                 $this->is_wishlisted = 1;
             } else {
-                // auth::user()->wishlistArticles()->detach($this->article->id);
+                // auth::user()->wishlistArticles()->detach($this->variation->id);
                 $this->is_wishlisted = 0;
             }
         }
-        $this->emit('wishlistUpdated', $this->article->id);
+        $this->emit('wishlistUpdated', $this->variation->id);
     }
 
     public function addToCart()
@@ -179,7 +188,7 @@ class ArticleSidebar extends Component
             } else {
                 $cart->couture_variations()->attach($this->article_id);
             }
-            $pivot = $this->article->available_shops()->first()->pivot;
+            $pivot = $this->variation->available_shops()->first()->pivot;
             $pivot->decrement('stock');
             $pivot->increment('stock_in_cart');
             $this->sent_to_cart = 1;
