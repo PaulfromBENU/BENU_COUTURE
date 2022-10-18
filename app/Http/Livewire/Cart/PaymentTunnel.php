@@ -713,6 +713,10 @@ class PaymentTunnel extends Component
                 $new_order->total_price = $this->total_price;
 
                 if ($new_order->save()) {
+                    $new_cart = $new_order->cart;
+                    $new_cart->status = 3;
+                    $new_cart->is_active = 0;
+                    $new_cart->save();
                     return redirect()->route('payment-validate-'.app()->getLocale(), ['order' => strtolower($new_order->unique_id).Str::random(12)]);
                 }
             }

@@ -98,10 +98,11 @@ class OrdersInterface extends Page
 
     public function cleanUnsoldArticles()
     {
-        // Automatically delete unfinished orders and carts older than 9 days, and restore items
-        $unfinished_carts_to_be_deleted = Cart::where('status', '<', '3')
+        // Automatically delete unfinished orders and carts older than 7 days, and restore items
+        $unfinished_carts_to_be_deleted = Cart::where('status', '<', '1')
                                             ->where('is_active', '1')
-                                            ->where('updated_at', '<', Carbon::now()->subDays(9))
+                                            ->where('price_before_voucher', '0')
+                                            ->where('updated_at', '<', Carbon::now()->subDays(7))
                                             ->select('id')
                                             ->get();
         foreach ($unfinished_carts_to_be_deleted as $unfinished_cart_to_be_deleted) {
