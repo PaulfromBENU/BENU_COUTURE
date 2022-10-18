@@ -25,7 +25,7 @@
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('model-'.app()->getLocale(), ['name' => $model->name]) }}" class="primary-color"><strong>{{ __('breadcrumbs.model') }} {{ $model->name }}</strong></a>
+			<a href="{{ route('model-'.app()->getLocale(), ['name' => $slug]) }}" class="primary-color"><strong>{{ __('breadcrumbs.model') }} {{ $model->name }}</strong></a>
 		</div>
 	</div>
 @endsection

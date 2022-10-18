@@ -1,5 +1,5 @@
 <section class="w-11/12 lg:w-1/2 m-auto text-center faq service-panel service-column" id="services-faq">
-	<h2 class="faq__title">{!! __('services.faq-title') !!}</h2>
+	<h1 class="faq__title">{!! __('services.faq-title') !!}</h1>
 	<ul class="faq__accordion">
 		<!-- Umwelt und Nachhaltigkeit -->
 		<li>

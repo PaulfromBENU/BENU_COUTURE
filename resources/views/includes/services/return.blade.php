@@ -1,6 +1,6 @@
 <section class="w-full m-auto return service-panel" id="services-return">
 	
-	<h2 class="return__title">{{ __('services.return-title') }}</h2>
+	<h1 class="return__title">{{ __('services.return-title') }}</h1>
 
 	<div class="flex justify-between benu-container return__container">
 		<div class="return__index relative mobile-hidden tablet-hidden">

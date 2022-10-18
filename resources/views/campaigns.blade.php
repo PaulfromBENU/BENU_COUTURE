@@ -23,7 +23,7 @@
 @section('main-content')
 	<div class="text-center all-campaigns w-2/3 md:w-3/4 lg:w-2/3 m-auto">
 		<h4 class="all-campaigns__subtitle">{{ __('campaigns.all-subtitle') }}</h4>
-		<h2 class="all-campaigns__title">{{ __('campaigns.all-title') }}</h2>
+		<h1 class="all-campaigns__title">{{ __('campaigns.all-title') }}</h1>
 
 		@include('includes.campaigns.overview', [
 			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']), 
