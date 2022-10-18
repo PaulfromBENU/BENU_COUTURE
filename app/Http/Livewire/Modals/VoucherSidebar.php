@@ -48,7 +48,7 @@ class VoucherSidebar extends Component
     {
         $this->voucher_id = $voucher_id;
 
-        if (Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->voucher_id)) {
+        if (Cart::where('cart_id', session('cart_id'))->count() > 0 && Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->voucher_id)) {
             $this->sent_to_cart = 1;
         } else {
             $this->sent_to_cart = 0;
@@ -112,9 +112,15 @@ class VoucherSidebar extends Component
     {
         $this->validate();
 
-        $cart = Cart::firstOrNew([
-            'cart_id' => session('cart_id')
-        ]);
+        // $cart = Cart::firstOrNew([
+        //     'cart_id' => session('cart_id')
+        // ]);
+        if (Cart::where('cart_id', session('cart_id'))->count() > 0) {
+            $cart = Cart::where('cart_id', session('cart_id'))->first();
+        } else {
+            $cart = new Cart();
+        }
+        $cart->cart_id = session('cart_id');
         $cart->is_active = 1;
         if (auth()->check()) {
             $cart->user_id = auth()->user()->id;

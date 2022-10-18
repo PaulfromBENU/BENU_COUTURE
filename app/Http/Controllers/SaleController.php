@@ -132,6 +132,7 @@ class SaleController extends Controller
             $current_order = Order::where('unique_id', substr($order, 0, 6))->first();
 
             if ($current_order->status >= 2) {
+                $request->session()->forget('cart_id');
                 return redirect()->route('payment-processed-'.session('locale'), ['order' => $order]);
             } else {
                 $request->session()->forget('cart_id');

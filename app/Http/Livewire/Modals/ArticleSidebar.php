@@ -57,7 +57,7 @@ class ArticleSidebar extends Component
     {
         $this->article_id = $article_id;
 
-        if (Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->article_id)) {
+        if (Cart::where('cart_id', session('cart_id'))->count() > 0 && Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->article_id)) {
             $this->sent_to_cart = 1;
         } else {
             $this->sent_to_cart = 0;
@@ -159,9 +159,15 @@ class ArticleSidebar extends Component
 
     public function addToCart()
     {
-        $cart = Cart::firstOrNew([
-            'cart_id' => session('cart_id')
-        ]);
+        // $cart = Cart::firstOrNew([
+        //     'cart_id' => session('cart_id')
+        // ]);
+        if (Cart::where('cart_id', session('cart_id'))->count() > 0) {
+            $cart = Cart::where('cart_id', session('cart_id'))->first();
+        } else {
+            $cart = new Cart();
+        }
+        $cart->cart_id = session('cart_id');
         $cart->is_active = 1;
         if (auth()->check()) {
             $cart->user_id = auth()->user()->id;
