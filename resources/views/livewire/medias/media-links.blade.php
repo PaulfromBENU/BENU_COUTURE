@@ -6,7 +6,7 @@
             @if($media->doc_name !== null && $media->doc_name !== "")
                 <a href="{{ asset($media->doc_name) }}" class="media-links__card" download>
             @else
-                <a href="{{ $media->link }}" target="_blank" class="media-links__card">
+                <a href="{{ $media->link }}" target="_blank" rel="noreferrer" class="media-links__card">
             @endif
                     <div class="media-links__card__icon">
                         @if($media->family == 'newspapers')

@@ -43,7 +43,7 @@
                                             @endif
                                         @else
                                         {{ __('dashboard.order-delivery-sent-on') }} {{ date('d\/m\/Y', strtotime($order->delivery_date)) }}
-                                            @if($order->delivery_link !== null) - <a href="https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search" class="primary-color hover:underline" target="_blank">{{ __('dashboard.order-follow-order-link') }}</a> - {{ __('dashboard.order-delivery-tracking-number') }} {{ $order->delivery_link }}@endif
+                                            @if($order->delivery_link !== null) - <a href="https://www.post.lu/de/particuliers/colis-courrier/track-and-trace#/search" class="primary-color hover:underline" target="_blank" rel="noreferrer">{{ __('dashboard.order-follow-order-link') }}</a> - {{ __('dashboard.order-delivery-tracking-number') }} {{ $order->delivery_link }}@endif
                                         @endif
                                     @endif
                                 @endif

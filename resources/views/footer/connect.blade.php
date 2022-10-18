@@ -1,6 +1,6 @@
 <section class="footer-connect">
 	<p class="text-center">
-		{{ __('footer.connect') }} <a href="https://www.instagram.com/benu_village/" target="_blank" class="primary-color" style="font-weight: 600;">@benucouture</a>
+		{{ __('footer.connect') }} <a href="https://www.instagram.com/benu_village/" target="_blank" rel="noreferrer" class="primary-color" style="font-weight: 600;">@benucouture</a>
 	</p>
 	@php
 	$links = [
@@ -23,7 +23,7 @@
 	@endphp
 	<div class="flex justify-start footer-connect__pictures">
 		@for($i = 1; $i <= 15; $i++)
-			<a href="{{ $links[$i - 1] }}" target="_blank" class="block footer-connect__pictures__img-container">
+			<a href="{{ $links[$i - 1] }}" target="_blank" rel="noreferrer" class="block footer-connect__pictures__img-container">
 				<img src="{{ asset('images/pictures/instagram/insta-'.$i.'.jpg') }}" style="height: 100%;">
 			</a>
 		@endfor	

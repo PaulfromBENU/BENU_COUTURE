@@ -50,7 +50,7 @@
 								<strong>{!! __('partners.address') !!}:</strong> {{ $partner->address }}
 							</p>
 							<p>
-								<strong>{!! __('partners.email') !!}:</strong> <span class="primary-color"><a href="mailto:{{ $partner->email }}" class="partners__box__link" target="_blank">{{ $partner->email }}</a></span>
+								<strong>{!! __('partners.email') !!}:</strong> <span class="primary-color"><a href="mailto:{{ $partner->email }}" class="partners__box__link" target="_blank" rel="noreferrer">{{ $partner->email }}</a></span>
 							</p>
 						</div>
 						<div class="flex justify-start flex-wrap">
@@ -58,7 +58,7 @@
 								<strong>{!! __('partners.phone') !!}:</strong> {{ $partner->phone }}
 							</p>
 							<p>
-								<strong>{!! __('partners.website') !!}:</strong> <span class="primary-color"><a href="https://{{ $partner->website }}" class="partners__box__link" target="_blank">{{ $partner->website }}</a></span>
+								<strong>{!! __('partners.website') !!}:</strong> <span class="primary-color"><a href="https://{{ $partner->website }}" class="partners__box__link" target="_blank" rel="noreferrer">{{ $partner->website }}</a></span>
 							</p>
 						</div>
 					</div>

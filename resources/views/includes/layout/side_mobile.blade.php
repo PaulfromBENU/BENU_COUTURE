@@ -74,8 +74,8 @@
     @livewire('header.creations-menu-mobile')
 
     <div class="flex justify-start pt-5">
-        <a href="https://www.facebook.com/benuvillageesch/" target="_blank" class="footer__social"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/benu_village/" target="_blank" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank" class="footer__social"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/benuvillageesch/" target="_blank" rel="noreferrer" class="footer__social"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/benu_village/" target="_blank" rel="noreferrer" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank" rel="noreferrer" class="footer__social"><i class="fab fa-instagram"></i></a>
     </div>
 </div>

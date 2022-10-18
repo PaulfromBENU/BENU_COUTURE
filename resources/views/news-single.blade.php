@@ -81,7 +81,7 @@ $localized_label = "link_label_".app()->getLocale();
 
 				@case('2')
 					<div class="single-news__link">
-						<a href="{{ $element->link }}" target="_blank" class="btn-couture">{{ $element->$localized_label }}</a>
+						<a href="{{ $element->link }}" target="_blank" rel="noreferrer" class="btn-couture">{{ $element->$localized_label }}</a>
 					</div>
 				@break
 

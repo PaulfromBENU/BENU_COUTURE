@@ -5,12 +5,12 @@
 		</h5>
 		<div class="flex justify-center flex-wrap">
 			<div class="footer__sponsors__sponsor flex flex-col justify-center">
-				<a href="https://esch.lu" target="_blank" class="block">
+				<a href="https://esch.lu" target="_blank" rel="noreferrer" class="block">
 					<img src="{{ asset('images/pictures/sponsors/ville-esch.png') }}" />
 				</a>
 			</div>
 			<div class="footer__sponsors__sponsor flex flex-col justify-center">
-				<a href="https://mecdd.gouvernement.lu/fr.html" target="_blank" class="block">
+				<a href="https://mecdd.gouvernement.lu/fr.html" target="_blank" rel="noreferrer" class="block">
 					<img src="{{ asset('images/pictures/sponsors/ministere-luxembourg.jpg') }}" />
 				</a>
 			</div>
@@ -70,9 +70,9 @@
 				</ul>
 				<h4>{{ __('footer.footer-title-5') }}</h4>
 				<div class="flex justify-start">
-					<a href="https://www.facebook.com/benuvillageesch/" target="_blank" class="footer__social"><i class="fab fa-facebook-f"></i></a>
-					<a href="https://www.instagram.com/benu_village/" target="_blank" class="footer__social"><i class="fab fa-instagram"></i></a>
-					<a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://www.facebook.com/benuvillageesch/" target="_blank" rel="noreferrer" class="footer__social"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/benu_village/" target="_blank" rel="noreferrer" class="footer__social"><i class="fab fa-instagram"></i></a>
+					<a href="https://lu.linkedin.com/company/benu-village-esch" target="_blank" rel="noreferrer" class="footer__social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 			</div>
 		</div>

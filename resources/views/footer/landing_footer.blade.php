@@ -7,13 +7,13 @@
         </div>
         <div class="footer__links__icons">
             <p class="footer__links__icon">
-                <a href="https://www.facebook.com/benuvillageesch/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/benuvillageesch/" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i></a>
             </p>
             <p class="footer__links__icon">
-                <a href="https://www.instagram.com/benu_village/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/benu_village/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
             </p>
             <p class="footer__links__icon">
-                <a href="https://benu.lu/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://benu.lu/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
             </p>
         </div>
     </div>

@@ -43,11 +43,11 @@
 					<h1 class="single-campaign__header__subtitle">{{ __('campaigns.carte-blanche-main-picture-subtitle') }}</h1>
 
 					<p class="single-campaign__header__txt">
-						{{ __('campaigns.carte-blanche-txt-1-1') }} <a href="https://www.globallivingwage.org/" target="_blank">{{ __('campaigns.carte-blanche-link-0') }}</a> {{ __('campaigns.carte-blanche-txt-1-2') }}
+						{{ __('campaigns.carte-blanche-txt-1-1') }} <a href="https://www.globallivingwage.org/" target="_blank" rel="noreferrer">{{ __('campaigns.carte-blanche-link-0') }}</a> {{ __('campaigns.carte-blanche-txt-1-2') }}
 					</p>
 
 					<p class="single-campaign__header__txt">
-						{{ __('campaigns.carte-blanche-txt-2-1') }} <a href="https://www.fairtrade.net/" target="_blank">{{ __('campaigns.carte-blanche-link-1') }}</a> {{ __('campaigns.carte-blanche-txt-2-2') }} <a href="https://global-standard.org/" target="_blank">{{ __('campaigns.carte-blanche-link-2') }}</a> {{ __('campaigns.carte-blanche-txt-2-3') }}
+						{{ __('campaigns.carte-blanche-txt-2-1') }} <a href="https://www.fairtrade.net/" target="_blank" rel="noreferrer">{{ __('campaigns.carte-blanche-link-1') }}</a> {{ __('campaigns.carte-blanche-txt-2-2') }} <a href="https://global-standard.org/" target="_blank" rel="noreferrer">{{ __('campaigns.carte-blanche-link-2') }}</a> {{ __('campaigns.carte-blanche-txt-2-3') }}
 					</p>
 
 					<p class="single-campaign__header__txt">

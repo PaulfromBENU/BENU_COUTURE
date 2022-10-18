@@ -138,7 +138,7 @@
 								{{ __('about.section-2-txt-2-2') }}
 							</p>
 							<p class="about__general__content__info-section__txt__paragraph">
-								{{ __('about.section-2-txt-2-3') }} <a href="{{ route('model-'.app()->getLocale()) }}" class="primary-color hover:text-gray-800 transition" target="_blank">{{ __('about.section-2-txt-2-link-1') }}</a> {{ __('about.section-2-txt-2-4') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="primary-color hover:text-gray-800 transition" target="_blank">{{ __('about.section-2-txt-2-link-2') }}</a> {{ __('about.section-2-txt-2-5') }}
+								{{ __('about.section-2-txt-2-3') }} <a href="{{ route('model-'.app()->getLocale()) }}" class="primary-color hover:text-gray-800 transition" target="_blank" rel="noreferrer">{{ __('about.section-2-txt-2-link-1') }}</a> {{ __('about.section-2-txt-2-4') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-shops')]) }}" class="primary-color hover:text-gray-800 transition" target="_blank" rel="noreferrer">{{ __('about.section-2-txt-2-link-2') }}</a> {{ __('about.section-2-txt-2-5') }}
 							</p>
 						</div>
 					</div>
@@ -214,7 +214,7 @@
 					</p>
 
 					<p class="text-center mb-10">
-						<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-2-btn-contact') }}</a>
+						<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" rel="noreferrer" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-2-btn-contact') }}</a>
 					</p>
 					
 				</div>
@@ -277,7 +277,7 @@
 					</div>
 					<div id="materials"></div>
 					<p class="text-center mt-4 mb-10">
-						<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-3-btn-contact') }}</a>
+						<a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" rel="noreferrer" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">{{ __('about.section-3-btn-contact') }}</a>
 					</p>
 				</div>
 			</div>
@@ -318,13 +318,13 @@
 								{{ __('about.section-4-lowtitle-1') }}
 							</h5>
 							<p class="about__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-1') }} <a href="https://www.spendchen.lu" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-1') }}</a> {{ __('about.section-4-txt-1-1-end') }}
+								{{ __('about.section-4-txt-1-1') }} <a href="https://www.spendchen.lu" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-1') }}</a> {{ __('about.section-4-txt-1-1-end') }}
 							</p>
 							<p class="about__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-2') }} <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-give')]) }}#collect-points" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-2') }}</a> {{ __('about.section-4-txt-1-2-end') }}
+								{{ __('about.section-4-txt-1-2') }} <a href="{{ route('header.participate-'.app()->getLocale(), ['page' => __('slugs.participate-give')]) }}#collect-points" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-2') }}</a> {{ __('about.section-4-txt-1-2-end') }}
 							</p>
 							<p class="about__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-1-3') }} <a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>
+								{{ __('about.section-4-txt-1-3') }} <a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-3') }}</a>
 							</p>
 						</div>
 					</div>
@@ -358,7 +358,7 @@
 								{{ __('about.section-4-txt-3-2') }}
 							</p>
 							<p class="about__general__content__info-section__txt__paragraph">
-								{{ __('about.section-4-txt-3-3') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-4') }}</a>
+								{{ __('about.section-4-txt-3-3') }} <a href="{{ route('client-service-'.app()->getLocale(), ['page' => __('slugs.services-contact')]) }}" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{{ __('about.section-4-link-4') }}</a>
 							</p>
 							<p class="about__general__content__info-section__txt__paragraph">
 								{{ __('about.section-4-txt-3-4') }}

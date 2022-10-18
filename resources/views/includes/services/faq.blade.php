@@ -123,7 +123,7 @@
 							{!! __('services.faq-group-1-question-content-6-4') !!}
 						</p>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-1-question-content-6-5') !!} <a href="https://benu.lu" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-1-question-content-6-6') !!}</a>
+							{!! __('services.faq-group-1-question-content-6-5') !!} <a href="https://benu.lu" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-1-question-content-6-6') !!}</a>
 						</p>
 					</li>
 					<li>
@@ -182,7 +182,7 @@
 							{!! __('services.faq-group-2-question-content-2-2') !!}
 						</p>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-2-question-content-2-3') !!} <a href="https://kulturpass.lu" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-2-question-content-2-4') !!}</a>
+							{!! __('services.faq-group-2-question-content-2-3') !!} <a href="https://kulturpass.lu" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-2-question-content-2-4') !!}</a>
 						</p>
 					</li>
 				</ul>
@@ -431,7 +431,7 @@
 							{!! __('services.faq-group-5-question-content-2-1') !!}
 						</p>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
-							{!! __('services.faq-group-5-question-content-2-2') !!} <a href="https://www.benureuse.lu" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-5-question-content-2-3') !!}</a> {!! __('services.faq-group-5-question-content-2-4') !!}
+							{!! __('services.faq-group-5-question-content-2-2') !!} <a href="https://www.benureuse.lu" target="_blank" rel="noreferrer" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-5-question-content-2-3') !!}</a> {!! __('services.faq-group-5-question-content-2-4') !!}
 						</p>
 						<p class="faq__accordion__answer__subanswer" style="display: none;">
 							{!! __('services.faq-group-5-question-content-2-5') !!} <a href="{{ route('footer.general-conditions-'.app()->getLocale()) }}" target="_blank" class="primary-color hover:text-gray-800 transition">{!! __('services.faq-group-5-question-content-2-6') !!}</a>
