@@ -33,27 +33,54 @@
 				<li class="sitemap__list sitemap__list--large"><a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes']) }}">{{ __('footer.sitemap-all-clothes') }}</a></li>
 				@foreach($clothes as $clothe)
 					<li class="sitemap__list sitemap__list--small">
-						<a href="{{ route('model-'.app()->getLocale(), ['family' => 'clothes', 'name' => strtolower($clothe->name)]) }}">
+						<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower(str_replace(' ', '-', $clothe->name))]) }}">
 							{{ __('footer.sitemap-single-clothe') }} {{ $clothe->name }}
 						</a>
+						<ul>
+							@foreach($clothe->articles as $clothe_article)
+							<li class="pl-3" style="font-size: 1rem;">
+								<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower(str_replace(' ', '-', $clothe->name)), 'article' => strtolower($clothe_article->name)]) }}">
+									{{ $clothe_article->name }}
+								</a>
+							</li>
+							@endforeach
+						</ul>
 					</li>
 				@endforeach
 
 				<li class="sitemap__list sitemap__list--large"><a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories']) }}">{{ __('footer.sitemap-all-accessories') }}</a></li>
 				@foreach($accessories as $accessory)
 					<li class="sitemap__list sitemap__list--small">
-						<a href="{{ route('model-'.app()->getLocale(), ['family' => 'accessories', 'name' => strtolower($accessory->name)]) }}">
+						<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower(str_replace(' ', '-', $accessory->name))]) }}">
 							{{ __('footer.sitemap-single-clothe') }} {{ $accessory->name }}
 						</a>
+						<ul>
+							@foreach($accessory->articles as $accessory_article)
+							<li class="pl-3" style="font-size: 1rem;">
+								<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower(str_replace(' ', '-', $accessory->name)), 'article' => strtolower($accessory_article->name)]) }}">
+									{{ $accessory_article->name }}
+								</a>
+							</li>
+							@endforeach
+						</ul>
 					</li>
 				@endforeach
 
 				<li class="sitemap__list sitemap__list--large"><a href="{{ route('model-'.app()->getLocale(), ['family' => 'home']) }}">{{ __('footer.sitemap-all-home-items') }}</a></li>
 				@foreach($home_items as $home_item)
 					<li class="sitemap__list sitemap__list--small">
-						<a href="{{ route('model-'.app()->getLocale(), ['family' => 'home', 'name' => strtolower($home_item->name)]) }}">
+						<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower(str_replace(' ', '-', $home_item->name))]) }}">
 							{{ __('footer.sitemap-single-clothe') }} {{ $home_item->name }}
 						</a>
+						<ul>
+							@foreach($home_item->articles as $home_article)
+							<li class="pl-3" style="font-size: 1rem;">
+								<a href="{{ route('model-'.app()->getLocale(), ['name' => strtolower(str_replace(' ', '-', $home_item->name)), 'article' => strtolower($home_article->name)]) }}">
+									{{ $home_article->name }}
+								</a>
+							</li>
+							@endforeach
+						</ul>
 					</li>
 				@endforeach
 
