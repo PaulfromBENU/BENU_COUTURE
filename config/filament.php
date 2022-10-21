@@ -212,7 +212,7 @@ return [
     |
     */
 
-    'favicon' => 'images/favicon/apple-icon-60x60.png',
+    'favicon' => 'https://couture.benu.lu/images/favicon/apple-icon-60x60.png',
 
     /*
     |--------------------------------------------------------------------------

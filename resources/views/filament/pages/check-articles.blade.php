@@ -110,7 +110,7 @@
 						</div>
 
 						<div class="new-photo-form__btn-container">
-					    	<button type="submit">Update and set visible</button>
+					    	<button type="submit">Update and send to validation</button>
 					    </div>
 					</form>
 				</div>
@@ -118,6 +118,6 @@
 			@endif
 		@endforeach
 	@else
-		<p>No unchecked article for the moment...</p>
+		<p>No new variation for the moment...</p>
 	@endif
 </x-filament::page>

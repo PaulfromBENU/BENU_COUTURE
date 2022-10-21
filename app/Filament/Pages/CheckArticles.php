@@ -19,13 +19,13 @@ use Illuminate\Support\Facades\File;
 
 class CheckArticles extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-check-circle';
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
 
     protected static string $view = 'filament.pages.check-articles';
 
-    protected static ?string $title = 'Check and update articles';
+    protected static ?string $title = 'Add infos to new variations';
  
-    protected static ?string $navigationLabel = 'New Variation - Check';
+    protected static ?string $navigationLabel = 'New Variation - Infos';
      
     protected static ?string $slug = 'check-articles';
 
@@ -79,7 +79,7 @@ class CheckArticles extends Page
 
     public function updateArticles()
     {
-        $this->unchecked_articles = Article::where('checked', '0')->orderBy('created_at', 'desc')->get();
+        $this->unchecked_articles = Article::where('to_be_validated', '0')->orderBy('created_at', 'desc')->get();
         // self::$navigationLabel = "Vérification Articles (".$this->unchecked_articles->count().")";
 
         if ($this->unchecked_articles->count() > 0) {
@@ -208,10 +208,10 @@ class CheckArticles extends Page
                 $article->singularity_en = "";
             }
             
-            $article->checked = '1';
+            $article->to_be_validated = '1';
             
             if ($article->save()) {
-                $this->notify('success', 'Article '.$article->name.' has been updated and is now visible on the website!');
+                $this->notify('success', 'Article '.$article->name.' has been updated and is now ready for validation!');
                 $this->updateArticles();
             }
         }
