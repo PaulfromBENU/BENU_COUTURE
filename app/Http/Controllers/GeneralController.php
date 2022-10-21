@@ -439,6 +439,10 @@ class GeneralController extends Controller
 
             // echo "*** VAT updated for kids! :) ***";
 
+            echo "*** validating existing variations... ***";
+            Article::where('checked', '1')->update(['to_be_validated' => '1']);
+            echo "*** Existing variations updated! ***";
+
             // echo "*** Importation process complete! :) ***<br/>";
         } else {
             return redirect()->route('login-fr');
