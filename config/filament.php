@@ -212,7 +212,7 @@ return [
     |
     */
 
-    'favicon' => public_path('images/favicon/apple-icon-60x60.png'),
+    'favicon' => asset('images/favicon/apple-icon-60x60.png'),
 
     /*
     |--------------------------------------------------------------------------
