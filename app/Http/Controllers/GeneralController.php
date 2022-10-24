@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use App\Models\Article;
 use App\Models\Creation;
 use App\Models\CreationCategory;
+use App\Models\CreationKeyword;
 use App\Models\NewsArticle;
 use App\Models\Partner;
 use App\Models\User;
@@ -450,6 +451,14 @@ class GeneralController extends Controller
             // echo "*** validating existing variations... ***";
             // Article::where('checked', '1')->update(['to_be_validated' => '1']);
             // echo "*** Existing variations updated! ***";
+
+            echo "*** Cleaning keywords list ***";
+            foreach (CreationKeyword::all() as $pivot_entry) {
+                if (CreationKeyword::where('creation_id', $pivot_entry->creation_id)->where('keyword_id', $pivot_entry->keyword_id)->count() > 1) {
+                    CreationKeyword::where('creation_id', $pivot_entry->creation_id)->where('keyword_id', $pivot_entry->keyword_id)->orderBy('id', 'desc')->first()->delete();
+                }
+            }
+            echo "*** Table creation_keyword clean";
 
             // echo "*** Importation process complete! :) ***<br/>";
         } else {
