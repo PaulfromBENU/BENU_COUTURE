@@ -61,6 +61,13 @@
                     <input type="text" id="newsletter_email" name="newsletter_email" class="input-underline w-full" required @auth value="{{ auth()->user()->email }}" @endauth>
                 </div>
 
+                <div class="input-group reactive-label-input">
+                    <label for="newsletter_checksum">{!! __('forms.security-question') !!} {{ $random_1 }} + {{ $random_2 }} ? *</label>
+                    <input type="text" name="newsletter_checksum" min="2" max="20" class="input-underline w-full" required>
+                    <input type="hidden" name="newsletter_checksum_1" value="{{ $random_1 }}">
+                    <input type="hidden" name="newsletter_checksum_2" value="{{ $random_2 }}">
+                </div>
+
                 <p class="login__info">
                     <em>* {{ __('auth.newsletter-subscribe-mandatory') }}</em>
                 </p>

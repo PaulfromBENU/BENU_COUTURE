@@ -144,70 +144,49 @@ class GeneralController extends Controller
 
     public function showNewsletter()
     {
-        return view('newsletter');
+        $random_1 = random_int(1, 10);
+        $random_2 = random_int(1, 10);
+        return view('newsletter', ['random_1' => $random_1, 'random_2' => $random_2]);
     }
 
     public function storeNewsletter(NewsletterRequest $request)
     {
         $message = "";
-        if (auth()->check()) {
-            if (auth()->user()->newsletter == '2') {
-                auth()->user()->newsletter = 3;
-                auth()->user()->save();
+        if ($request->newsletter_checksum_1 + $request->newsletter_checksum_2 == $request->newsletter_checksum) {
+            if (auth()->check()) {
+                if (auth()->user()->newsletter == '2') {
+                    auth()->user()->newsletter = 3;
+                    auth()->user()->save();
 
-                if(app('env') == 'prod') {
-                    Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterCancelConfirmationForAdmin(auth()->user()));
-                } else {
-                    Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin(auth()->user()));
-                }
+                    if(app('env') == 'prod') {
+                        Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterCancelConfirmationForAdmin(auth()->user()));
+                    } else {
+                        Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterCancelConfirmationForAdmin(auth()->user()));
+                    }
 
-                $message = __('auth.newsletter-unsubscribe-pending');
-                return redirect()->route('newsletter-'.session('locale'))->with('cancellation', $message);
-            } else {
-                auth()->user()->newsletter = 1;
-                auth()->user()->favorite_language = session('locale');
-                auth()->user()->save();
-                $message = __('auth.newsletter-subscribe-confirm');
-                // Mail::to(auth()->user()->email)->send(new NewsletterConfirmation(auth()->user()));
-                if(app('env') == 'prod') {
-                    Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin(auth()->user()));
+                    $message = __('auth.newsletter-unsubscribe-pending');
+                    return redirect()->route('newsletter-'.session('locale'))->with('cancellation', $message);
                 } else {
-                    Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterConfirmationForAdmin(auth()->user()));
-                }
+                    auth()->user()->newsletter = 1;
+                    auth()->user()->favorite_language = session('locale');
+                    auth()->user()->save();
+                    $message = __('auth.newsletter-subscribe-confirm');
+                    // Mail::to(auth()->user()->email)->send(new NewsletterConfirmation(auth()->user()));
+                    if(app('env') == 'prod') {
+                        Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin(auth()->user()));
+                    } else {
+                        Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterConfirmationForAdmin(auth()->user()));
+                    }
 
-                $message = __('auth.newsletter-subscribe-pending');
-                return redirect()->route('newsletter-'.session('locale'))->with('subscription', $message);
-            }
-        } else {
-            if (User::where('email', $request->newsletter_email)->count() > 0) {
-                $user = User::where('email', $request->newsletter_email)->first();
-                $user->newsletter = 1;
-                $user->favorite_language = session('locale');
-                $user->save();
-                $message = __('auth.newsletter-subscribe-confirm');
-                // Mail::to($user->email)->send(new NewsletterConfirmation($user));
-                
-                if(app('env') == 'prod') {
-                    Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
-                } else {
-                    Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterConfirmationForAdmin($user));
+                    $message = __('auth.newsletter-subscribe-pending');
+                    return redirect()->route('newsletter-'.session('locale'))->with('subscription', $message);
                 }
             } else {
-                $user = new User();
-                $user->email = $request->newsletter_email;
-                $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-                while (User::where('client_number', $client_number)->count() > 0) {
-                    $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
-                }
-
-                $user->client_number = $client_number;
-                $user->first_name = $request->newsletter_first_name;
-                $user->last_name = $request->newsletter_last_name;
-                $user->newsletter = 1;
-                $user->role = 'newsletter';
-                $user->favorite_language = session('locale');
-                $user->general_comment = "";
-                if($user->save()) {
+                if (User::where('email', $request->newsletter_email)->count() > 0) {
+                    $user = User::where('email', $request->newsletter_email)->first();
+                    $user->newsletter = 1;
+                    $user->favorite_language = session('locale');
+                    $user->save();
                     $message = __('auth.newsletter-subscribe-confirm');
                     // Mail::to($user->email)->send(new NewsletterConfirmation($user));
                     
@@ -216,10 +195,39 @@ class GeneralController extends Controller
                     } else {
                         Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterConfirmationForAdmin($user));
                     }
+                } else {
+                    $blacklist = ['59.120.51.46'];
+                    if (!in_array($request->ip(), $blacklist)) {
+                        $user = new User();
+                        $user->email = $request->newsletter_email;
+                        $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                        while (User::where('client_number', $client_number)->count() > 0) {
+                            $client_number = "C".rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9);
+                        }
+
+                        $user->client_number = $client_number;
+                        $user->first_name = $request->newsletter_first_name;
+                        $user->last_name = $request->newsletter_last_name;
+                        $user->newsletter = 1;
+                        $user->role = 'newsletter';
+                        $user->favorite_language = session('locale');
+                        $user->general_comment = "";
+                        if($user->save()) {
+                            $message = __('auth.newsletter-subscribe-confirm');
+                            // Mail::to($user->email)->send(new NewsletterConfirmation($user));
+                            
+                            if(app('env') == 'prod') {
+                                Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.admin_receiver'))->send(new NewsletterConfirmationForAdmin($user));
+                            } else {
+                                Mail::mailer('smtp_admin')->to('paul.guillard@benu.lu')->send(new NewsletterConfirmationForAdmin($user));
+                            }
+                        }
+                    }
                 }
+                return redirect()->route('newsletter-'.session('locale'))->with('subscription', $message);
             }
-            return redirect()->route('newsletter-'.session('locale'))->with('subscription', $message);
         }
+        return redirect()->route('newsletter-'.session('locale'));
 
     }
 
@@ -439,9 +447,9 @@ class GeneralController extends Controller
 
             // echo "*** VAT updated for kids! :) ***";
 
-            echo "*** validating existing variations... ***";
-            Article::where('checked', '1')->update(['to_be_validated' => '1']);
-            echo "*** Existing variations updated! ***";
+            // echo "*** validating existing variations... ***";
+            // Article::where('checked', '1')->update(['to_be_validated' => '1']);
+            // echo "*** Existing variations updated! ***";
 
             // echo "*** Importation process complete! :) ***<br/>";
         } else {
