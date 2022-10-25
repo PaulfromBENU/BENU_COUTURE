@@ -21,7 +21,7 @@ class CreationKeywords extends Page
 
     protected static ?string $navigationGroup = 'Creations & Variations';
 
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 2;
 
     protected static function shouldRegisterNavigation(): bool
     {

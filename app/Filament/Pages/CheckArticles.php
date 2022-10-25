@@ -31,7 +31,7 @@ class CheckArticles extends Page
 
     protected static ?string $navigationGroup = 'Creations & Variations';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 5;
 
     public $unchecked_articles;
     public $size_ids = [];
