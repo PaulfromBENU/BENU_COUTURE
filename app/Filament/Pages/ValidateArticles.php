@@ -23,7 +23,7 @@ class ValidateArticles extends Page
 
     protected static ?string $navigationGroup = 'Creations & Variations';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 6;
 
     public $variations_to_validate;
     public $all_shops = [];

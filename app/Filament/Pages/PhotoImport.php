@@ -45,7 +45,7 @@ class PhotoImport extends Page
 
     protected static ?string $navigationGroup = 'Creations & Variations';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 4;
 
     public $all_creations;
     public $existing_variations;

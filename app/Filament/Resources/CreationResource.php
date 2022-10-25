@@ -17,6 +17,9 @@ use Filament\Tables;
 
 class CreationResource extends Resource
 {
+    protected static ?string $label = 'Creation';
+    protected static ?string $pluralLabel = 'Creations';
+
     protected static ?string $model = Creation::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
