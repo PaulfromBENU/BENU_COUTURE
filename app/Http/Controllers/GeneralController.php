@@ -411,6 +411,18 @@ class GeneralController extends Controller
     }
 
 
+    public function generateQrCode(string $name, int $number = 1)
+    {
+        $creation_name = str_replace("-", " ", $name);
+
+        if (Creation::where('name', $creation_name)->count() > 0) {
+            return view('qr-code', ['creation_name' => $creation_name, 'number' => $number]);
+        }
+
+        return view('qr-code', ['creation_name' => 'caretta', 'number' => '1']);
+    }
+
+
     public function startImport()
     {
         if(auth::check() && auth::user()->role == 'admin') {
@@ -452,13 +464,13 @@ class GeneralController extends Controller
             // Article::where('checked', '1')->update(['to_be_validated' => '1']);
             // echo "*** Existing variations updated! ***";
 
-            echo "*** Cleaning keywords list ***";
-            foreach (CreationKeyword::all() as $pivot_entry) {
-                if (CreationKeyword::where('creation_id', $pivot_entry->creation_id)->where('keyword_id', $pivot_entry->keyword_id)->count() > 1) {
-                    CreationKeyword::where('creation_id', $pivot_entry->creation_id)->where('keyword_id', $pivot_entry->keyword_id)->orderBy('id', 'desc')->first()->delete();
-                }
-            }
-            echo "*** Table creation_keyword clean";
+            // echo "*** Cleaning keywords list ***";
+            // foreach (CreationKeyword::all() as $pivot_entry) {
+            //     if (CreationKeyword::where('creation_id', $pivot_entry->creation_id)->where('keyword_id', $pivot_entry->keyword_id)->count() > 1) {
+            //         CreationKeyword::where('creation_id', $pivot_entry->creation_id)->where('keyword_id', $pivot_entry->keyword_id)->orderBy('id', 'desc')->first()->delete();
+            //     }
+            // }
+            // echo "*** Table creation_keyword clean";
 
             // echo "*** Importation process complete! :) ***<br/>";
         } else {

@@ -22,7 +22,8 @@
         "livewire/livewire": "^2.9",
         "maatwebsite/excel": "^3.1",
         "mailchimp/marketing": "^3.0",
-        "stripe/stripe-php": "^7.122"
+        "stripe/stripe-php": "^7.122",
+        "simplesoftwareio/simple-qrcode": "^4.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

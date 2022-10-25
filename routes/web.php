@@ -210,6 +210,9 @@ if (app('env') == 'landing') {
 
 		// Launch page
 		Route::get('/launch', 'GeneralController@launchWebsite')->name('launch');
+
+		// QR code generation
+		Route::get('/qr-code/{name}/{number?}', 'GeneralController@generateQrCode')->name('qr-code');
 	});
 
 	Route::group([
