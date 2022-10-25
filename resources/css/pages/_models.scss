@@ -782,3 +782,21 @@
 	font: normal normal 400 22px/26px 'Barlow Condensed';
 	letter-spacing: 0.44px;
 }
+
+
+.qr-code {
+	width: 800px;
+	margin: auto;
+	margin-top: -80px;
+	&__code {
+		font: normal normal 600 22px/26px 'Barlow Condensed';
+		width: fit-content;
+		padding: 20px;
+		p {
+			padding-top: 10px;
+		}
+		svg {
+			margin: auto;
+		}
+	}
+}
