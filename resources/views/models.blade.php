@@ -1,5 +1,14 @@
 @extends('layouts.base_layout')
 
+@section('og-metadata')
+	<meta property="og:title" content="{{ __('models.seo-title-all') }}" />
+    <meta property="og:url" content="{{ url()->full() }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ __('models.seo-description-all') }}" />
+    <meta property="og:image" content="{{ asset('images/pictures/shops/benu_shop_2.jpg') }}" />
+    <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
+@endsection
+
 @section('title')
 	{{ __('models.seo-title-all') }}
 @endsection
