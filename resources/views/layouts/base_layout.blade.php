@@ -3,11 +3,11 @@
 @section('og-metadata-top')
 	@yield('og-metadata')
 	@sectionMissing('og-metadata')
-        <meta property="og:title" content="@yield('title-top')" />
+        <meta property="og:title" content="@yield('title')" />
         <meta property="og:url" content="{{ url()->full() }}" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="@yield('description')" />
-        <meta property="og:image" content="{{ asset('images/benu_landing_illustration.svg') }}" />
+        <meta property="og:image" content="{{ asset('images/pictures/shops/benu_shop_2.jpg') }}" />
         <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
     @endif
 @endsection
