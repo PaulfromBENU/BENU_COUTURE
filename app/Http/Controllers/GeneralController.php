@@ -416,10 +416,11 @@ class GeneralController extends Controller
         $creation_name = str_replace("-", " ", $name);
 
         if (Creation::where('name', $creation_name)->count() > 0) {
-            return view('qr-code', ['creation_name' => $creation_name, 'number' => $number]);
+            $price = Creation::where('name', $creation_name)->first()->price;
+            return view('qr-code', ['creation_name' => $creation_name, 'price' => $price, 'number' => $number]);
         }
 
-        return view('qr-code', ['creation_name' => 'caretta', 'number' => '1']);
+        return view('qr-code', ['creation_name' => 'caretta', 'price' => '1', 'number' => '1']);
     }
 
 
