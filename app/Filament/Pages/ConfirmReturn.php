@@ -32,7 +32,7 @@ class ConfirmReturn extends Page
 
     public function mount()
     {
-        $this->orders = Order::where('delivery_date', '>', \Carbon\Carbon::now()->subDays(28))->get();
+        $this->orders = Order::where('delivery_date', '>', \Carbon\Carbon::now()->subDays(28))->where('user_id', '>', '0')->get();
     }
 
     public function updatedOrderUniqueId()
