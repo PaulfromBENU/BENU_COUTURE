@@ -33,9 +33,9 @@
         </div>
 
         <div class="">
-            <p class="welcome-illustration-1 welcome-presentation__desc__text">
+            <div class="welcome-illustration-1 welcome-presentation__desc__text">
                 {!! __('welcome.pres-txt-1') !!}
-            </p>
+            </div>
             <p class="welcome-illustration-2 welcome-presentation__desc__text">
                 {!! __('welcome.pres-txt-2') !!}
             </p>
