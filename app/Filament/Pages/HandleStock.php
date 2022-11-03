@@ -56,6 +56,8 @@ class HandleStock extends Page
     public $selected_variation;
     public $photos = [];
     public $front_pictures = [];
+    public $creation_name;
+    public $variation_name;
     public $creation_id;
     public $article_id;
     public $color;
