@@ -70,7 +70,7 @@ class DownloadVariationPictures extends Page
     {
         if (Article::find($this->variation_id)) {
             $this->selected_variation = Article::find($this->variation_id);
-
+            $this->photos = [];
             foreach ($this->selected_variation->photos()->get() as $photo) {
                 array_push($this->photos, $photo->file_name);
             }
