@@ -38,7 +38,7 @@
 				BENU Village Esch asbl
 			</p>
 			<p>
-				51 rue d'Audun
+				32 rue d'Audun
 				<br/>
 				4018 Esch-sur-Alzette
 				<br/>

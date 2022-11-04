@@ -60,7 +60,7 @@
 				<h4>{{ __('footer.footer-title-4') }}</h4>
 				<p class="footer__contact">
 					<span class="primary-color"><strong>BENU Village Esch asbl</strong></span>
-					<br/>51 rue d'Audun
+					<br/>32 rue d'Audun
 					<br/>4018 Esch-sur-Alzette
 					<br/>Luxembourg
 					<br/><span class="primary-color">+352 27 91 19 49</span>

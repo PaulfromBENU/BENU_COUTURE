@@ -51,7 +51,7 @@
 		</h3>
 		<div class="participate-give__collect-box__details">
 			<p class="mb-3">
-				<strong>{!! __('services.shops-address') !!} : </strong>  51 rue d'Audun, 4018 Esch-sur-Alzette, Luxembourg
+				<strong>{!! __('services.shops-address') !!} : </strong>  32 rue d'Audun, 4018 Esch-sur-Alzette, Luxembourg
 			</p>
 			<div class="flex flex-wrap">
 				<p class="w-full lg:w-3/5 mb-3 lg:mb-0">
