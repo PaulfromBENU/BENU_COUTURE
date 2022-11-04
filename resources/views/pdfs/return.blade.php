@@ -85,7 +85,7 @@
 					<p style="font-family: 'Barlow Condensed'; margin-bottom: 0px; padding-bottom: 0px;">
 						<span style="font-weight: 600">BENU Village Esch asbl</span>
 						<br/>
-						51 rue d'Audun
+						32 rue d'Audun
 						<br/>
 						4018 Esch-sur-Alzette
 						<br/>
@@ -316,7 +316,7 @@
 					<div style="font-size: 1.2rem; font-weight: 500;">
 						BENU VILLAGE Esch ASBL
 						<br/>
-						51 rue d'Audun
+						32 rue d'Audun
 						<br/>
 						L-4018 Esch-sur-Alzette
 						<br/>

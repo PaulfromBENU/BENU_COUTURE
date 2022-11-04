@@ -37,7 +37,7 @@
 				</p>
 				<ul class="mb-2">
 					<li class="primary-color font-bold">BENU Village Esch ASBL</li>
-					<li>51 rue d'Audun</li>
+					<li>32 rue d'Audun</li>
 					<li>L-4018 Esch-sur-Alzette</li>
 					<li>Luxembourg</li>
 				</ul>
