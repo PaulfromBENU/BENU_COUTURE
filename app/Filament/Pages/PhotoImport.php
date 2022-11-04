@@ -158,89 +158,93 @@ class PhotoImport extends Page
 
     public function savePhoto()
     {
-        $saved_pictures_count = 0;
-        // Validation
-        $form_check_ok = 0;
-        if (Creation::find($this->creation_id)
-            && count($this->photos) > 0
-            && Shop::find($this->shop_id)) {
-            $form_check_ok = 1;
-        }
-
-        if ($form_check_ok == 1) {
-            $photo_counter = 1;
-            $creation_name = Creation::find($this->creation_id)->name;
-            $all_clear = 0;
-
-            if ($this->is_new_article == 0) {
-                if (Article::find($this->article_id) 
-                    && Creation::find($this->creation_id)->articles()->where('id', $this->article_id)->count() > 0) {
-                    $article_name = Article::find($this->article_id)->name;
-                    $photo_counter = Article::find($this->article_id)->photos()->count() + 1;
-                    $article_index = Creation::find($this->creation_id)->articles()->count();
-                    $all_clear = 1;
-                } else {
-                    $this->notify('danger', 'An error occured, article could not be found...');
-                    $this->photos = collect([]);
-                }
-            } else {
-                $article_index = Creation::find($this->creation_id)->articles()->count() + 1;
-                $article_name = ucfirst(strtolower($creation_name)).'-'.str_pad($article_index, 3, '0', STR_PAD_LEFT);
-
-                $new_article = new Article();
-                $new_article->name = $article_name;
-                $new_article->creation_id = Creation::find($this->creation_id)->id;
-                $new_article->size_id = $this->size_id;
-                $new_article->color_id = $this->color_id;
-                $new_article->secondary_color = "Not defined";
-                $new_article->third_color = "Not defined";
-                $new_article->translation_key = "article.singularity-".strtolower($article_name);
-                $new_article->creation_date = $this->article_creation_date;
-                if ($new_article->save()) {
-                    $all_clear = 1;
-                    $this->article_id = $new_article->id;
-                }
+        if ($this->size_id == 0 || $this->color_id == 0 || $this->shop_id == 0) {
+            $this->notify('danger', 'Importation could not be performed. Missing size, colour or shop. These can be changed after if necessary.');
+        } else {
+            $saved_pictures_count = 0;
+            // Validation
+            $form_check_ok = 0;
+            if (Creation::find($this->creation_id)
+                && count($this->photos) > 0
+                && Shop::find($this->shop_id)) {
+                $form_check_ok = 1;
             }
 
-            if ($all_clear == 1) {
-                $updated_article = Article::find($this->article_id);
-                $updated_article->update(['checked' => '0']);
-                if (!($updated_article->available_shops()->get()->contains($this->shop_id))) {
-                    $updated_article->shops()->attach($this->shop_id, [
-                        'stock' => 1,
-                    ]);
-                }
-                foreach ($this->photos as $photo) {
-                    $random_counter = rand(100, 999);
-                    $img = Image::make($photo);
-                    if($this->savePhotoWithWatermark($img, $creation_name, $article_name, $photo_counter, $random_counter)) {
-                        $new_photo = new Photo();
-                        $new_photo->file_name = 'processed/'.$creation_name.'/'.$article_name.'-'.$random_counter.''.$photo_counter.'.png';
-                        $new_photo->use_for_model = 1;
-                        if (strpos($photo->getClientOriginalName(), 'front') !== false) {
-                            $new_photo->is_front = 1;
-                        } else {
-                            $new_photo->is_front = 0;
-                        }
-                        $new_photo->title = $creation_name.' by BENU COUTURE - Variation '.$article_index;
-                        $new_photo->author = "BENU Village Esch Asbl";
-                        if ($new_photo->save()) {
-                            $updated_article->photos()->attach($new_photo->id);
-                            $saved_pictures_count ++;
-                            $photo_counter ++;
-                        }
+            if ($form_check_ok == 1) {
+                $photo_counter = 1;
+                $creation_name = Creation::find($this->creation_id)->name;
+                $all_clear = 0;
+
+                if ($this->is_new_article == 0) {
+                    if (Article::find($this->article_id) 
+                        && Creation::find($this->creation_id)->articles()->where('id', $this->article_id)->count() > 0) {
+                        $article_name = Article::find($this->article_id)->name;
+                        $photo_counter = Article::find($this->article_id)->photos()->count() + 1;
+                        $article_index = Creation::find($this->creation_id)->articles()->count();
+                        $all_clear = 1;
+                    } else {
+                        $this->notify('danger', 'An error occured, article could not be found...');
+                        $this->photos = collect([]);
+                    }
+                } else {
+                    $article_index = Creation::find($this->creation_id)->articles()->count() + 1;
+                    $article_name = ucfirst(strtolower($creation_name)).'-'.str_pad($article_index, 3, '0', STR_PAD_LEFT);
+
+                    $new_article = new Article();
+                    $new_article->name = $article_name;
+                    $new_article->creation_id = Creation::find($this->creation_id)->id;
+                    $new_article->size_id = $this->size_id;
+                    $new_article->color_id = $this->color_id;
+                    $new_article->secondary_color = "Not defined";
+                    $new_article->third_color = "Not defined";
+                    $new_article->translation_key = "article.singularity-".strtolower($article_name);
+                    $new_article->creation_date = $this->article_creation_date;
+                    if ($new_article->save()) {
+                        $all_clear = 1;
+                        $this->article_id = $new_article->id;
                     }
                 }
-                
-                if ($saved_pictures_count == count($this->photos)) {
-                    $this->notify('success', 'All photos imported, article updated in the database :)');
-                    $this->clearAllFields();
-                } else {
-                    $this->notify('danger', 'An error occured, we could not save all the pictures... Please check all fields and contact an administrator if the problem is still present.');
+
+                if ($all_clear == 1) {
+                    $updated_article = Article::find($this->article_id);
+                    $updated_article->update(['checked' => '0']);
+                    if (!($updated_article->available_shops()->get()->contains($this->shop_id))) {
+                        $updated_article->shops()->attach($this->shop_id, [
+                            'stock' => 1,
+                        ]);
+                    }
+                    foreach ($this->photos as $photo) {
+                        $random_counter = rand(100, 999);
+                        $img = Image::make($photo);
+                        if($this->savePhotoWithWatermark($img, $creation_name, $article_name, $photo_counter, $random_counter)) {
+                            $new_photo = new Photo();
+                            $new_photo->file_name = 'processed/'.$creation_name.'/'.$article_name.'-'.$random_counter.''.$photo_counter.'.png';
+                            $new_photo->use_for_model = 1;
+                            if (strpos($photo->getClientOriginalName(), 'front') !== false) {
+                                $new_photo->is_front = 1;
+                            } else {
+                                $new_photo->is_front = 0;
+                            }
+                            $new_photo->title = $creation_name.' by BENU COUTURE - Variation '.$article_index;
+                            $new_photo->author = "BENU Village Esch Asbl";
+                            if ($new_photo->save()) {
+                                $updated_article->photos()->attach($new_photo->id);
+                                $saved_pictures_count ++;
+                                $photo_counter ++;
+                            }
+                        }
+                    }
+                    
+                    if ($saved_pictures_count == count($this->photos)) {
+                        $this->notify('success', 'All photos imported, article updated in the database :)');
+                        $this->clearAllFields();
+                    } else {
+                        $this->notify('danger', 'An error occured, we could not save all the pictures... Please check all fields and contact an administrator if the problem is still present.');
+                    }
                 }
+            } else {
+                $this->notify('danger', 'Importation could not be performed. Please check that a creation has been selected and that photos have been added.');
             }
-        } else {
-            $this->notify('danger', 'Importation could not be performed. Please check that a creation has been selected and that photos have been added.');
         }
     }
 }
