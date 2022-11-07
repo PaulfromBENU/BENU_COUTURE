@@ -27,6 +27,12 @@ class Order extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function user_with_trashed()
+    {
+        return $this->belongsTo(User::class)->withTrashed();
+        //Not working...
+    }
+
     public function cart()
     {
         return $this->belongsTo(Cart::class);

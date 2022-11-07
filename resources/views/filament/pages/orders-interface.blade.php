@@ -48,6 +48,11 @@
 	                    #{{ $new_order->unique_id }}
 	                </a>
 				</div>
+				@if($new_order->user_id > 0 && $new_order->user !== null && $new_order->address_id > 0 && !($new_order->cart->couture_variations->count() == 1 && $new_order->pdf_vouchers->count() > 0))
+				<p class="hover:underline" style="margin-top: 5px; margin-bottom: 5px; color: orange;">
+					<a target="_blank" href="{{ route('order-download-'.strtolower($new_order->user->favorite_language), ['order_code' => $new_order->unique_id]) }}">Download and display order PDF for sending</a>
+				</p>
+				@endif
 				<p style="margin-bottom: 5px;">
 					@if($new_order->user !== null)
 					Ordered by: {{ $new_order->user->first_name }} {{ $new_order->user->last_name }}, on {{ Carbon\Carbon::parse($new_order->created_at)->format('d\/m\/Y') }} - Language: {{ $new_order->user->favorite_language }}
@@ -474,6 +479,11 @@
 	                    #{{ $sent_order->unique_id }}
 	                </a>
 				</div>
+				@if($sent_order->user_id > 0 && $sent_order->user !== null && $sent_order->address_id > 0 && !($sent_order->cart->couture_variations->count() == 1 && $sent_order->pdf_vouchers->count() > 0))
+				<p class="hover:underline" style="margin-top: 5px; margin-bottom: 5px; color: orange;">
+					<a target="_blank" href="{{ route('order-download-'.strtolower($sent_order->user->favorite_language), ['order_code' => $sent_order->unique_id]) }}">Download and display order PDF for sending</a>
+				</p>
+				@endif
 				<p style="margin-bottom: 5px;">
 					@if($sent_order->user !== null)
 					Ordered by: {{ $sent_order->user->first_name }} {{ $sent_order->user->last_name }}, on {{ Carbon\Carbon::parse($sent_order->created_at)->format('d\/m\/Y') }} - Language: {{ $sent_order->user->favorite_language }}

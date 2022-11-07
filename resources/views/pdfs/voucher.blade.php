@@ -47,7 +47,7 @@
 				+352 27 91 19 49
 				<br/>
 				<span style="color: #27955B;">
-					benu@benuvillageesch.lu
+					benu@benu.lu
 				</span>
 			</p>
 		</div>
