@@ -177,7 +177,7 @@
                 <div class="w-full">
                     <label class="text-sm">{{ __('forms.register-address-country') }} <span class="register_optionnal_star">*</span></label>
                     <select name="register_address_country" class="input-underline w-full register_address_field_mandatory" tabindex="16" maxlength="50" required style="margin-top: 4px; background: transparent;">
-                        <optgroup label="Grande Region">
+                        <optgroup label="{{ __('forms.select-country-region') }}">
                             <option value="LU" {{ old('register_address_country') === 'LU' ? 'selected' : '' }}>
                                 {{ $nearby_countries->where('country_code', 'LU')->first()->$localized_country }}
                             </option>
@@ -191,7 +191,7 @@
                                 {{ $nearby_countries->where('country_code', 'DE')->first()->$localized_country }}
                             </option>
                         </optgroup>
-                        <optgroup label="Europe">
+                        <optgroup label="{{ __('forms.select-country-europe') }}">
                             @foreach($country_options as $country)
                             <option value="{{ $country->country_code }}" {{ old('register_address_country') === $country->country_code ? 'selected' : '' }}>
                                 {{ $country->$localized_country }}
