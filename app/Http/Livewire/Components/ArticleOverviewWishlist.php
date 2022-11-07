@@ -53,10 +53,12 @@ class ArticleOverviewWishlist extends Component
             $this->is_pop_up = 1;
         }
 
-        if (Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->article->id)) {
-            $this->sent_to_cart = 1;
-        } else {
-            $this->sent_to_cart = 0;
+        if (session('cart_id') !== null && Cart::where('cart_id', session('cart_id'))->count() > 0) {
+            if (Cart::where('cart_id', session('cart_id'))->first()->couture_variations->contains($this->article->id)) {
+                $this->sent_to_cart = 1;
+            } else {
+                $this->sent_to_cart = 0;
+            }
         }
     }
 
@@ -106,11 +108,17 @@ class ArticleOverviewWishlist extends Component
 
     public function addToCart()
     {
-        if (session('cart_id') !== null && Cart::where('cart_id', session('cart_id'))->count() > 0) {
-            $cart = Cart::firstOrNew([
-                'cart_id' => session('cart_id')
-            ]);
+        if (session('cart_id') !== null) {
+            // $cart = Cart::firstOrNew([
+            //     'cart_id' => session('cart_id')
+            // ]);
+            if (Cart::where('cart_id', session('cart_id'))->count() > 0) {
+                $cart = Cart::where('cart_id', session('cart_id'))->first();
+            } else {
+                $cart = new Cart();
+            }
             $cart->is_active = 1;
+            $cart->cart_id = session('cart_id');
             if (auth()->check()) {
                 $cart->user_id = auth()->user()->id;
             }
