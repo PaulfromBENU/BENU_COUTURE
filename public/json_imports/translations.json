@@ -915,9 +915,9 @@
     "page": "Home",
     "key": "header.design-desc",
     "de": "UpCycling betrifft nicht nur Kleidung, sondern geht weit darüber hinausgeht! BENU FORM entwirft aus alten Möbelstücken, die ursprünglich auf der Müllhalde landen sollten, einzigartige, neue und geupcycelte BENU FORM Kreationen, die Du alle im BENU VILLAGE finden kannst. \nEine neue, umfangreichere Website wird im Frühjahr 2023 eingerichtet. Mehr dazu hier:",
-    "fr": "Parce que l'UpCycling ne concerne pas que les vêtements, mais va bien au-delà ! BENU FORM conçoit et propose des meubles uniques en UpCycling à partir d’anciens meubles qui étaient destinés à la déchetterie. Tu peux retrouver l’ensemble des créations BENU FORM au BENU VILLAGE.\nUn nouveau site plus complet sera mis en place au printemps  2023. Pour en savoir plus :",
-    "en": "Because UpCycling is not only about clothes, but goes far beyond! BENU FORM designs and offers unique upcycled furniture from old furniture that was destined for the rubbish dump. You can find all the BENU FORM creations in the BENU VILLAGE.\nA new, more complete website will be set up in spring 2023. For more information:",
-    "lu": "Well UpCycling net just Kleedung concernéiert, mee wäit doriwwer eraus geet! BENU FORM entwërft a bitt eenzegaarteg Miwwelen un, déi aus ale Miwwele geupcycelt sinn déi soss um Tipp gelant wieren. All d'BENU FORM Kreatioune fënns du am BENU VILLAGE. Eng méi informatiounsräich Internetsäit wäert am Fréijoer 2023 ageriicht ginn. Méi dozou hei:"
+    "fr": "L'UpCycling ne concerne pas seulement les vêtements. BENU FORM crée des meubles uniques et UpCycling, par exemple. Cela veut dire que nous concevons ne nouvelles créations à partir d’anciens meubles dont on voulait se débarasser. Tu peux retrouver l’ensemble des créations BENU FORM au BENU VILLAGE.\nUn nouveau site plus informatif sera mis en place au printemps 2023. Pour en savoir plus :",
+    "en": "UpCycling is not only about clothes. BENU FORM creates unique pieces of UpCycling-furniture, for instance. Those are made from used furniture that was about to be thrown away. You can find all BENU FORM creations in the BENU VILLAGE.\nA new and more informative website will be set up in spring 2023. For more information:",
+    "lu": "UpCycling concernéiert net just Gezei. BENU FORM kreéiert zum Beispill eenzegaarteg Upcycling-Miwwelen. Dës ginn aus ale Miwwelstécker produzéiert, déi soss um Tipp gelant wieren. All d'BENU FORM Kreatioune fënns du am BENU VILLAGE. Eng méi informativ Internetsäit wäert am Fréijoer 2023 ageriicht ginn. Méi dozou fënns Du hei:"
   },
   {
     "page": "Home",
@@ -1394,7 +1394,7 @@
   {
     "page": "Home",
     "key": "welcome.pres-txt-3",
-    "de": "Die handgefertigte BENU Kreationen werden vor Ort im Schneideratelier entworfen und in verschiedenen Variationen produziert. Für die Produktion werden ausschließlich Stoffe unterschiedlicher, gebrauchter Kleider und Textilien verwendet. Daher ist jedes Kleidungsstück einzigartig, ein Unikat! \nIndividuell gefertigte Kreationen aus Deinem gebrauchten Lieblingskleid oder -stoff können im BENU Shop in Esch-sur-Alzette in Auftrag gegeben werden.",
+    "de": "Die handgefertigten BENU Kreationen werden vor Ort im Schneideratelier entworfen und in verschiedenen Variationen produziert. Für die Produktion werden ausschließlich Stoffe unterschiedlicher, gebrauchter Kleider und Textilien verwendet. Daher ist jedes Kleidungsstück einzigartig, ein Unikat! \nIndividuell gefertigte Kreationen aus Deinem gebrauchten Lieblingskleid oder -stoff können im BENU Shop in Esch-sur-Alzette in Auftrag gegeben werden.",
     "fr": "Les créations artisanales de BENU sont conçues sur place, dans l'atelier de production, et déclinées en plusieurs variantes. Seuls les tissus provenant de vêtements et textiles d'occasion sont utilisés. C'est pour cela que chaque pièce est unique, exclusive ! Des créations individuelles, utilisant tes vieux vêtements ou tissus, peuvent être réalisées sur demande au BENU Shop à Esch-sur-Alzette.",
     "en": "The handcrafted BENU creations are designed on site in the tailor's studio and produced in different variations. Only fabrics from different, second-hand garments and textiles are chosen for production. Therefore, each garment is unique, one of a kind! \nIndividually made garments from your favourite used clothes or fabrics can be commissioned at the BENU Shop in Esch-sur-Alzette.",
     "lu": "Déi handgemaachte BENU Kreatioune ginn op der Plaz, am Schneideratelier entworf an a verschiddene Variante produzéiert. Fir d'Produktioun ginn exklusiv Stoffer vun ënnerschiddleche Second-Hand Kleeder an Textilie benotzt. Dowéinst ass all Kleedungsstéck eenzegaarteg, en \"Unikat\"! Du kanns individuell Kreatiounen, déi aus Dengen eegene Liblingskleeder oder Stoffer hiergestallt ginn, am BENU Shop zu Esch/Uelzecht an Optrag ginn."
@@ -6145,6 +6145,30 @@
   },
   {
     "page": "Créations",
+    "key": "models.general-title-clothes",
+    "de": "Hier findest Du alle Bekleidungsartikel von BENU COUTURE",
+    "fr": "Voici l'ensemble des vêtements confectionnés par BENU COUTURE",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Créations",
+    "key": "models.general-title-accessories",
+    "de": "Hier findest Du alle Accessoires von BENU COUTURE",
+    "fr": "Voici l'ensemble des accessoires confectionnés par BENU COUTURE",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Créations",
+    "key": "models.general-title-home",
+    "de": "Hier findest Du BENU COUTURE's Artikel für zu Hause",
+    "fr": "Voici l'ensemble des créations pour la maison confectionnés par BENU COUTURE",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Créations",
     "key": "models.filter-category",
     "de": "Kategorie",
     "fr": "Catégorie",
@@ -9701,7 +9725,7 @@
     "de": "Dein Kulturpass ist bei BENU eingegangen. Wir werden ihn  überprüfen und anschließend Deinen Status anpassen.",
     "fr": "Votre Kulturpass a été reçu par BENU. Nous allons le vérifier et ensuite adapter votre statut.",
     "en": "Your Kulturpass has been received by BENU. We will check it and then adjust your status.",
-    "lu": ""
+    "lu": "BENU huet Däi Kulturpass kritt. Mir iwwerpréiwen en, a passen Däi Status duerno un."
   },
   {
     "page": "Mon compte",
@@ -9754,10 +9778,10 @@
   {
     "page": "Mon compte",
     "key": "dashboard.confirm-delete-label",
-    "de": "Hiermit bestätige ich, dass ich mein Konto bei BENU löschen möchte.",
+    "de": "Hiermit bestätige ich, dass ich mein Konto bei BENU löschen möchte. Dieser Vorgang ist definitiv, Dein Konto kann nicht wiederhergestellt werden.",
     "fr": "Par la présente, je confirme vouloir supprimer mon compte BENU.",
-    "en": "Hereby, I confirm that I'd like to delete my BENU account.",
-    "lu": "Ech bestätegen heimat datt ech mäi Kont bei BENU läsche wëll."
+    "en": "I hereby confirm that I want to delete my BENU account.",
+    "lu": "Heimat bestätegen ech, dass ech mäi BENU-Konto läsche wëll."
   },
   {
     "page": "Mon compte",
@@ -9811,17 +9835,17 @@
     "page": "Mon compte",
     "key": "auth.register-account-exists",
     "de": "Dieses Konto existiert bereits. Bitte melde Dich mit Deiner E-Mail-Adresse und Deinem Passwort an.",
-    "fr": "",
+    "fr": "Ce compte existe déjà. Connecte-toi en utilisant ton adresse électronique et ton mot de passe.",
     "en": "Account already exists. Please log in with your e-mail address and password.",
-    "lu": ""
+    "lu": "Dëse Konto existéiert schonn. Mell Dech wannechgelift mat Dengem Passwuert an Denger E-Mail Adress un."
   },
   {
     "page": "Mon compte",
     "key": "auth.register-account-deleted",
-    "de": "Dieses Konto wurde gelöscht und kann nicht reaktiviert werden. Bitte kontaktiere uns, wenn Du Dein Konto wiederherstellen möchten.",
-    "fr": "",
-    "en": "This account has been deleted and cannot be reactivated. Please contact us if you need to restore your account.",
-    "lu": ""
+    "de": "Dieses Konto wurde gelöscht und kann nicht reaktiviert werden.",
+    "fr": "Ce compte a été supprimé et ne peut pas être réactivé.",
+    "en": "This account has been deleted and cannot be reactivated.",
+    "lu": "Dëse Konto gouf geläscht a kann net méi reactivéiert ginn."
   },
   {
     "page": "Mon compte",

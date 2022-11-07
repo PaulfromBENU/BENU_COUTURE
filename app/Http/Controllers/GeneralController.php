@@ -461,8 +461,8 @@ class GeneralController extends Controller
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
 
-            // echo "*** Translations importation started ***<br/>";
-            // $this->importTranslations();
+            echo "*** Translations importation started ***<br/>";
+            $this->importTranslations();
 
             // VAT update -> 3% for kids
             // echo "*** Updating VAT to 3% for kids clothes and accessories ***<br/>";
