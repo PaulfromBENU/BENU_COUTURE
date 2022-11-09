@@ -25,7 +25,10 @@ class CareRecommendationResource extends Resource
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+        $authorized_roles = [
+            'admin',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
     }
 
     public function mount(): void

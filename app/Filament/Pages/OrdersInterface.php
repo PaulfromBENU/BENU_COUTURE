@@ -38,6 +38,15 @@ class OrdersInterface extends Page
 
     protected static ?int $navigationSort = 2;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $new_orders;
     public $orders_waiting_for_payment;
     public $orders_sent;

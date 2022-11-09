@@ -27,6 +27,15 @@ class ItemOrderResource extends Resource
 
     protected static ?int $navigationSort = 4;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     // protected static function getNavigationBadge(): ?string
     // {
     //     return ItemOrder::where('is_read', '0')->count();

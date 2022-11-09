@@ -25,6 +25,15 @@ class ConfirmReturn extends Page
 
     protected static ?int $navigationSort = 6;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $orders;
     public $order_unique_id;
     public $locale = "";

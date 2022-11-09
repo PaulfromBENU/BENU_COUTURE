@@ -25,7 +25,11 @@ class CreationKeywords extends Page
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return (auth()->user()->role == 'admin');
+        $authorized_roles = [
+            'admin',
+            'translator',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
     }
 
     public $all_creations;

@@ -23,6 +23,15 @@ class ReplyToMessages extends Page
 
     protected static ?int $navigationSort = 1;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $unread_messages;
     public $benu_answer;
 

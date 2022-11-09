@@ -96,7 +96,11 @@
 			</div>
 
 			<div style="position: relative; width: 100%; margin-bottom: 10px;">
-				{{ __('pdf.order-txt-left-1') }} {{ __('pdf.order-client') }} : {{ $order->user->client_number }}
+				{{ __('pdf.order-client') }} : {{ $order->user->client_number }}
+			</div>
+
+			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+				{{ __('pdf.order-txt-left-1') }}
 			</div>
 
 			<div style="position: relative; width: 100%; margin-bottom: 10px;">

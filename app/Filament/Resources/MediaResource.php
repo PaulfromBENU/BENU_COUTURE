@@ -30,6 +30,15 @@ class MediaResource extends Resource
 
     protected static ?int $navigationSort = 2;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public static function form(Form $form): Form
     {
         return $form

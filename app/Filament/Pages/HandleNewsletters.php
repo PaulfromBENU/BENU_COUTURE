@@ -27,6 +27,15 @@ class HandleNewsletters extends Page
 
     protected static ?int $navigationSort = 5;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'newsletter-manager',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $pending_users;
     public $cancelling_users;
     public $subscribed_users;

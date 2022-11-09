@@ -28,6 +28,15 @@ class DownloadVariationPictures extends Page
 
     protected static ?int $navigationSort = 7;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'photo-upload',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $all_creations;
     public $computed_variations;
     public $selected_variation;

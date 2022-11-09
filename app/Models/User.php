@@ -85,14 +85,22 @@ class User extends Authenticatable implements HasName, FilamentUser
    *
    * @return string
    */ 
-    public function getFullNameAttribute()
+    public function getFullNameAttribute(): string
     {
         return "{$this->first_name} {$this->last_name}";
     }
 
     public function canAccessFilament(): bool
     {
-        return ($this->role == 'admin' || $this->role == 'vendor' || $this->role == 'editor');
+        $authorized_roles = [
+            'admin',
+            'vendor',
+            'newsletter-manager',
+            'photo-upload',
+            'translator',
+            'workshop',
+        ];
+        return in_array($this->role, $authorized_roles);
     }
 
     public function addresses()
