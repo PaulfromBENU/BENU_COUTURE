@@ -25,6 +25,14 @@ class ValidateArticles extends Page
 
     protected static ?int $navigationSort = 6;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $variations_to_validate;
     public $all_shops = [];
     public $all_compos = [];

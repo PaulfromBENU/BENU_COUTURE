@@ -33,6 +33,16 @@ class CheckArticles extends Page
 
     protected static ?int $navigationSort = 5;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'translator',
+            'workshop',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $unchecked_articles;
     public $size_ids = [];
     public $color_ids = [];

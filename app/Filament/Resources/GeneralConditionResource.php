@@ -23,6 +23,14 @@ class GeneralConditionResource extends Resource
 
     protected static ?string $navigationGroup = 'Site Data';
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public static function form(Form $form): Form
     {
         return $form

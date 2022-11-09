@@ -28,6 +28,15 @@ class WriteNews extends Page
 
     protected static ?int $navigationSort = 1;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $show_general_info = 0;
     public $show_article_content = 0;
     public $show_pending_articles = 0;

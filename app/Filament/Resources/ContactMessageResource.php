@@ -26,7 +26,11 @@ class ContactMessageResource extends Resource
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return auth()->user()->role == 'admin';
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
     }
 
     public static function form(Form $form): Form

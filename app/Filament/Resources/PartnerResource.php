@@ -24,8 +24,10 @@ class PartnerResource extends Resource
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return false;
-        return (auth()->user()->role == 'admin' || auth()->user()->role == 'editor');
+        $authorized_roles = [
+            'none',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
     }
 
     public function mount(): void

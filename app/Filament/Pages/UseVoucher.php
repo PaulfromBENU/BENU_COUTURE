@@ -25,6 +25,15 @@ class UseVoucher extends Page
 
     protected static ?int $navigationSort = 3;
 
+    protected static function shouldRegisterNavigation(): bool
+    {
+        $authorized_roles = [
+            'admin',
+            'vendor',
+        ];
+        return in_array(auth()->user()->role, $authorized_roles);
+    }
+
     public $all_codes;
     public $code;
     public $user_id;
