@@ -120,4 +120,16 @@ trait PDFGenerator {
             return $pdf;
         }
     }
+
+    public function generateOrderPdf($order_code)
+    {
+        if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
+            $order = Order::where('unique_id', $order_code)->first();
+            
+            $pdf = PDF::loadView('pdfs.order', compact('order'));
+            $pdf->setPaper('A4', 'landscape');
+
+            return $pdf;
+        }
+    }
 }

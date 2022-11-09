@@ -116,6 +116,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "lu").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-lu');
 		Route::get('/'.trans("slugs.invoice-download", [], "lu").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-lu');
 		Route::get('/'.trans("slugs.show-voucher", [], "lu").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-lu');
+		Route::get('/'.trans("slugs.order-download", [], "lu").'/{order_code}', 'GeneralController@downloadOrder')->name('order-download-lu');
 
 		// CSV export for admin
 		Route::get('/invoice-export-csv/{year}/{month}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-lu');
@@ -184,6 +185,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "fr").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-fr');
 		Route::get('/'.trans("slugs.invoice-download", [], "fr").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-fr');
 		Route::get('/'.trans("slugs.show-voucher", [], "fr").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-fr');
+		Route::get('/'.trans("slugs.order-download", [], "fr").'/{order_code}', 'GeneralController@downloadOrder')->name('order-download-fr');
 
 		// CSV export for admin
 		Route::get('/invoice-export-csv/{year}/{month}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-fr');
@@ -265,6 +267,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "en").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-en');
 		Route::get('/'.trans("slugs.invoice-download", [], "en").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-en');
 		Route::get('/'.trans("slugs.show-voucher", [], "en").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-en');
+		Route::get('/'.trans("slugs.order-download", [], "en").'/{order_code}', 'GeneralController@downloadOrder')->name('order-download-en');
 
 		// CSV export for admin
 		Route::get('/invoice-export-csv/{year}/{month}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-en');
@@ -332,6 +335,7 @@ if (app('env') == 'landing') {
 		Route::get('/'.trans("slugs.invoice", [], "de").'/{order_code}', 'SaleController@displayInvoice')->name('invoice-de');
 		Route::get('/'.trans("slugs.invoice-download", [], "de").'/{order_code}', 'SaleController@downloadInvoice')->name('invoice-download-de');
 		Route::get('/'.trans("slugs.show-voucher", [], "de").'/{voucher_code}', 'UserController@displayVoucher')->name('show-voucher-pdf-de');
+		Route::get('/'.trans("slugs.order-download", [], "de").'/{order_code}', 'GeneralController@downloadOrder')->name('order-download-de');
 		// CSV export for admin
 		Route::get('/invoice-export-csv/{year}/{month}', 'GeneralController@exportOrdersData')->name('export-invoice-csv-de');
 

@@ -12,6 +12,7 @@ use App\Models\Creation;
 use App\Models\CreationCategory;
 use App\Models\CreationKeyword;
 use App\Models\NewsArticle;
+use App\Models\Order;
 use App\Models\Partner;
 use App\Models\User;
 use App\Models\Media;
@@ -30,10 +31,13 @@ use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Translation;
 
+use App\Traits\PDFGenerator;
+
 class GeneralController extends Controller
 {
     use ArticleAnalyzer;
     use DataImporter;
+    use PDFGenerator;
 
     public function home()
     {
@@ -421,6 +425,18 @@ class GeneralController extends Controller
         }
 
         return view('qr-code', ['creation_name' => 'caretta', 'price' => '1', 'number' => '1']);
+    }
+
+
+    public function downloadOrder(string $order_code)
+    {
+        if (Order::where('unique_id', $order_code)->count() > 0) {
+            $order = Order::where('unique_id', $order_code)->first();
+            if ($order->address_id !== 0 && $order->user_id !== 0) {
+                $pdf = $this->generateOrderPdf($order->unique_id);
+                return $pdf->download('BENU_Order_'.$order->unique_id.'.pdf');
+            }
+        }
     }
 
 

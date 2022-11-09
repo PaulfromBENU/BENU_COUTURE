@@ -41,6 +41,15 @@
 
 @section('main-content')
 <section class="all-models" id="all-models">
+	<h1 class="all-models__title">
+		@if($family == 'clothes')
+			{{ __('models.general-title-clothes') }}
+		@elseif($family == 'accessories')
+			{{ __('models.general-title-accessories') }}
+		@else
+			{{ __('models.general-title-home') }}
+		@endif
+	</h1>
 	@livewire('filters.all-models-filter', ['filter_names' => $filter_names, 'initial_filters' => $initial_filters, 'family' => $family])
 	@livewire('filters.filtered-models', ['initial_filters' => $initial_filters, 'family' => $family])
 </section>
