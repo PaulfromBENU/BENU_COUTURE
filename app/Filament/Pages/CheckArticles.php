@@ -123,13 +123,15 @@ class CheckArticles extends Page
 
                 // If no composition has been saved so far, use composition of the first variation created for this creation
                 if (!$has_compo) {
-                    $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
-                    $this->base_variation_compo = $base_article->name;
-                    foreach ($this->all_compos as $compo_id => $fabric) {
-                        if ($base_article->compositions->contains($compo_id)) {
-                            $this->compo_ids[$article->id][$compo_id] = true;
-                        } else {
-                            $this->compo_ids[$article->id][$compo_id] = false;
+                    if($article->creation->articles()->count() > 0) {
+                        $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
+                        $this->base_variation_compo = $base_article->name;
+                        foreach ($this->all_compos as $compo_id => $fabric) {
+                            if ($base_article->compositions->contains($compo_id)) {
+                                $this->compo_ids[$article->id][$compo_id] = true;
+                            } else {
+                                $this->compo_ids[$article->id][$compo_id] = false;
+                            }
                         }
                     }
                 }
@@ -148,13 +150,15 @@ class CheckArticles extends Page
 
                 // If no care recommendation has been saved so far, use recommendation of the first variation created for this creation
                 if (!$has_care) {
-                    $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
-                    $this->base_variation_care = $base_article->name;
-                    foreach ($this->all_cares as $care_id => $desc) {
-                        if ($base_article->care_recommendations->contains($care_id)) {
-                            $this->care_ids[$article->id][$care_id] = true;
-                        } else {
-                            $this->care_ids[$article->id][$care_id] = false;
+                    if($article->creation->articles()->count() > 0) {
+                        $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
+                        $this->base_variation_care = $base_article->name;
+                        foreach ($this->all_cares as $care_id => $desc) {
+                            if ($base_article->care_recommendations->contains($care_id)) {
+                                $this->care_ids[$article->id][$care_id] = true;
+                            } else {
+                                $this->care_ids[$article->id][$care_id] = false;
+                            }
                         }
                     }
                 }
