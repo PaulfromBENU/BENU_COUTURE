@@ -61,6 +61,7 @@ class PaymentTunnel extends Component
     public $inshop_newsletter;
     public $inshop_security = "";
     public $inshop_payment_type = 'card';
+    public $order_comment = "";
 
     protected $listeners = ['infoValidated' => 'validateInfoStep', 'newAddressCreated' => 'selectAddress', 'newAddressCancelled' => 'unselectAddress', 'newInvoiceAddressCreated' => 'selectInvoiceAddress', 'newInvoiceAddressCancelled' => 'unselectInvoiceAddress'];
 
@@ -704,6 +705,7 @@ class PaymentTunnel extends Component
                 $new_order->delivery_status = 10;
                 $new_order->delivery_date = date("Y-m-d");
                 $new_order->transaction_date = Carbon::now()->toDateTimeString();
+                $new_order->comment = $this->order_comment;
 
                 if (session('has_kulturpass') !== null) {
                     $new_order->with_kulturpass = 1;
