@@ -1,5 +1,5 @@
 <x-filament::page>
-	<div class="use-voucher__code-selection">
+	<div class="use-voucher__code-selection flex">
 		<select wire:model="code">
 			<option value="0" wire:click="selectCode">Select a code</option>
 			@foreach($all_codes as $one_code => $value)
@@ -8,6 +8,11 @@
 				</option>
 			@endforeach
 		</select>
+		<div style="margin-left: 40px; padding-top: 13px;">
+			@if($code_selected !== 0)
+			<a style="color: orange;" class="hover:underline" target="_blank" href="{{ route('show-voucher-pdf-en', ['voucher_code' => \Illuminate\Support\Str::random(4).$code.\Illuminate\Support\Str::random(12)]) }}">Show voucher as PDF</a>
+			@endif
+		</div>
 	</div>
 
 	@if($code_selected != '0')

@@ -45,6 +45,7 @@ class UseVoucher extends Page
 
     public $voucher_init_value;
     public $voucher_current_value;
+    public $voucher_type;
     public $user_first_name;
     public $user_last_name;
 
@@ -65,6 +66,7 @@ class UseVoucher extends Page
         $this->user_last_name = "";
         $this->voucher_used = 0;
         $this->code_selected = 0;
+        $this->voucher_type = "";
     }
 
     public function findAllCodes()
@@ -83,6 +85,7 @@ class UseVoucher extends Page
             $selected_voucher = Voucher::where('unique_code', $this->code)->first();
             $this->voucher_init_value = $selected_voucher->initial_value;
             $this->remaining_value = $selected_voucher->remaining_value;
+            $this->voucher_type = $selected_voucher->type;
             if ($selected_voucher->user_id != null && $selected_voucher->user_id != "" && User::find($selected_voucher->user_id)) {
                 $this->user_id = $selected_voucher->user_id;
                 $this->user_first_name = ucfirst($selected_voucher->user->first_name);
