@@ -59,6 +59,8 @@ class CheckArticles extends Page
     public $singularities_de = [];
     public $singularities_en = [];
     public $singularities_lu = [];
+    public $base_variation_compo = 'none';
+    public $base_variation_care = 'none';
 
     protected $rules = [
         'size_ids[*]' => 'required|integer|min:1',
@@ -107,19 +109,53 @@ class CheckArticles extends Page
                     }
                 }
 
+                // Pre-fill of variation composition
+                // Check of existing compositions saved
+                $has_compo = false;
                 foreach ($this->all_compos as $compo_id => $fabric) {
                     if ($article->compositions->contains($compo_id)) {
-                        $this->compo_ids[$article->id][$compo_id] = true; // $article->compositions()->where('compositions.id', $compo_id)->first()->id;
+                        $this->compo_ids[$article->id][$compo_id] = true;
+                        $has_compo = true;
                     } else {
                         $this->compo_ids[$article->id][$compo_id] = false;
                     }
                 }
 
+                // If no composition has been saved so far, use composition of the first variation created for this creation
+                if (!$has_compo) {
+                    $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
+                    $this->base_variation_compo = $base_article->name;
+                    foreach ($this->all_compos as $compo_id => $fabric) {
+                        if ($base_article->compositions->contains($compo_id)) {
+                            $this->compo_ids[$article->id][$compo_id] = true;
+                        } else {
+                            $this->compo_ids[$article->id][$compo_id] = false;
+                        }
+                    }
+                }
+
+                // Pre-fill of variation care recommendations
+                // Check of existing recommendations saved
+                $has_care = false;
                 foreach ($this->all_cares as $care_id => $desc) {
                     if ($article->care_recommendations->contains($care_id)) {
-                        $this->care_ids[$article->id][$care_id] = true; // $article->care_recommendations()->where('care_recommendations.id', $care_id)->first()->id;
+                        $this->care_ids[$article->id][$care_id] = true;
+                        $has_care = true;
                     } else {
                         $this->care_ids[$article->id][$care_id] = false;
+                    }
+                }
+
+                // If no care recommendation has been saved so far, use recommendation of the first variation created for this creation
+                if (!$has_care) {
+                    $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
+                    $this->base_variation_care = $base_article->name;
+                    foreach ($this->all_cares as $care_id => $desc) {
+                        if ($base_article->care_recommendations->contains($care_id)) {
+                            $this->care_ids[$article->id][$care_id] = true;
+                        } else {
+                            $this->care_ids[$article->id][$care_id] = false;
+                        }
                     }
                 }
 

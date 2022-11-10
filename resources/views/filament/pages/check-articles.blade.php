@@ -68,6 +68,11 @@
 						</div>
 
 						<h4>> Composition</h4>
+						@if($base_variation_compo !== 'none')
+						<p style="margin-bottom: 5px;">
+							<em>Care recommendations pre-filled based on variation {{ $base_variation_compo }}</em>
+						</p>
+						@endif
 						<div class="flex justify-between flex-wrap">
 							@foreach($all_compos as $compo_id => $composition)
 							<div wire:key="{{ 'compo-'.$article->id.'-'.$compo_id }}" class="article-check__form__select-group">
@@ -79,6 +84,11 @@
 
 
 						<h4>> Care Recommendations</h4>
+						@if($base_variation_care !== 'none')
+						<p style="margin-bottom: 5px;">
+							<em>Care recommendations pre-filled based on variation {{ $base_variation_care }}</em>
+						</p>
+						@endif
 						<div class="flex justify-between flex-wrap">
 							@foreach($all_cares as $care_id => $care)
 							<div wire:key="{{ 'care-'.$article->id.'-'.$care_id }}" class="article-check__form__select-group">
