@@ -35,6 +35,10 @@
                 <label for="inshop_email">{{ __('forms.email') }}</label>
                 <input type="email" id="inshop_email" name="inshop_email" wire:model.defer="inshop_email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255">
             </div>
+            <div class="w-full mt-4">
+                <label for="order_comment">Optionnal comment:</label><br/>
+                <textarea class="w-full" rows="4" wire:model="order_comment" id="order_comment"></textarea>
+            </div>
             <div class="mt-6 pb-5" style="border-bottom: solid 1px #D41C1B;">
                 <label for="inshop_newsletter" class="inline-flex items-center">
                     <input id="inshop_newsletter" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="inshop_newsletter" value="1" tabindex="4" style="margin-top: 2px;">
