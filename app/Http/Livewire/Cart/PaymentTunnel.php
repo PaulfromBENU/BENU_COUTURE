@@ -62,6 +62,7 @@ class PaymentTunnel extends Component
     public $inshop_security = "";
     public $inshop_payment_type = 'card';
     public $order_comment = "";
+    public $inshop_discount = 0;
 
     protected $listeners = ['infoValidated' => 'validateInfoStep', 'newAddressCreated' => 'selectAddress', 'newAddressCancelled' => 'unselectAddress', 'newInvoiceAddressCreated' => 'selectInvoiceAddress', 'newInvoiceAddressCancelled' => 'unselectInvoiceAddress'];
 
@@ -600,6 +601,12 @@ class PaymentTunnel extends Component
         }
     }
 
+    public function updatedInshopDiscount()
+    {
+        $this->inshop_discount = intval($this->inshop_discount);
+        $this->emit('applyDiscount', $this->inshop_discount);
+    }
+
     public function sellFromShop()
     {
         $this->validate();
@@ -706,11 +713,12 @@ class PaymentTunnel extends Component
                 $new_order->delivery_date = date("Y-m-d");
                 $new_order->transaction_date = Carbon::now()->toDateTimeString();
                 $new_order->comment = $this->order_comment;
+                $new_order->extra_discount = $this->inshop_discount;
 
                 if (session('has_kulturpass') !== null) {
                     $new_order->with_kulturpass = 1;
                 }
-                $this->total_price = $this->computeTotal($this->cart_id, 'collect');
+                $this->total_price = $this->computeTotal($this->cart_id, 'collect') * (1 - $this->inshop_discount / 100);
 
                 $new_order->total_price = $this->total_price;
 

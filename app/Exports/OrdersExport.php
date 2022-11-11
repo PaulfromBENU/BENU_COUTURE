@@ -35,7 +35,7 @@ class OrdersExport implements FromCollection
     public function collection()
     {
         // Create collection manually with headers and order content
-        $full_summary = new Collection([['Order ID', 'Total order price (with Delivery)', 'Order Delivery Price', 'Transaction Date', 'Transaction timestamp', 'Payment method', 'Creation Name', 'Article Reference', 'Unit Price WoT', 'VAT', 'Unit VAT price', 'Unit Price WT', 'Extra Options', 'Quantity', 'Final Total Price before Kulturpass', 'Has Kulturpass?', 'Final Total Price after Kulturpass']]);
+        $full_summary = new Collection([['Order ID', 'Total order price (with Delivery)', 'Order Delivery Price', 'Transaction Date', 'Transaction timestamp', 'Payment method', 'Creation Name', 'Article Reference', 'Unit Price WoT', 'VAT', 'Unit VAT price', 'Unit Price WT', 'Extra Options', 'Quantity', 'Final Total Price before Kulturpass', 'Has Kulturpass?', 'Final Total Price after Kulturpass', 'Extra Discount', 'Final Total Price after Kulturpass and extra Discount']]);
 
         // $latest = new Collection(['bar']);
 
@@ -181,8 +181,10 @@ class OrdersExport implements FromCollection
                     } else {
                         $final_price = $article->pivot->articles_number * ($article->pivot->value + 5 * (1 - 0.5 * intval($order->with_kulturpass))) + $options_price * (1 - 0.5 * intval($order->with_kulturpass));
                     }
+                    $final_price_with_discount = $final_price;
                 } else {
                     $final_price = $article->pivot->articles_number * $article->creation->price * (1 - 0.5 * intval($order->with_kulturpass)) + $options_price * (1 - 0.5 * intval($order->with_kulturpass));
+                    $final_price_with_discount = $final_price * (1 - $order->extra_discount / 100);
                 }
 
 
@@ -205,6 +207,8 @@ class OrdersExport implements FromCollection
                     $final_price_before_kulturpass.'€',
                     $has_kulturpass,
                     $final_price.'€',
+                    $order->extra_discount.'%',
+                    $final_price_with_discount.'€',
                 ]]);
 
                 $collection = $collection->merge($new_line);
