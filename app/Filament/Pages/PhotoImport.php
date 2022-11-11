@@ -85,9 +85,8 @@ class PhotoImport extends Page
         $this->article_id = 0;
     }
 
-    public function adaptVariations()
+    public function updatedCreationId()
     {
-        // $this->clearItem();
         if ($this->creation_id == '0') {
             $this->existing_variations = collect([]);
         } elseif (Creation::find($this->creation_id)) {

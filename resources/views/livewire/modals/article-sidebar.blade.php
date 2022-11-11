@@ -171,10 +171,18 @@
 
                 <p class="article-sidebar__content__price">
                     @if($sold == 0)
-                        @if($variation->is_extra_accessory)
-                        {{ $variation->specific_price }}&euro;
+                        @if(session('has_kulturpass') !== null)
+                            @if($variation->is_extra_accessory)
+                            {{ $variation->specific_price / 2 }}&euro;
+                            @else
+                            {{ $variation->creation->price / 2 }}&euro;
+                            @endif
                         @else
-                        {{ $variation->creation->price }}&euro;
+                            @if($variation->is_extra_accessory)
+                            {{ $variation->specific_price }}&euro;
+                            @else
+                            {{ $variation->creation->price }}&euro;
+                            @endif
                         @endif
                     @else
                     {{ strtoupper(__('models.sold-sold')) }}

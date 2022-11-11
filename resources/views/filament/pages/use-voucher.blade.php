@@ -1,9 +1,9 @@
 <x-filament::page>
 	<div class="use-voucher__code-selection flex">
 		<select wire:model="code">
-			<option value="0" wire:click="selectCode">Select a code</option>
+			<option value="0">Select a code</option>
 			@foreach($all_codes as $one_code => $value)
-				<option value="{{ $one_code }}" wire:click="selectCode" wire:key="{{ $one_code }}">
+				<option value="{{ $one_code }}" wire:key="{{ $one_code }}">
 					{{ $one_code }} - {{ $value }}&euro;
 				</option>
 			@endforeach

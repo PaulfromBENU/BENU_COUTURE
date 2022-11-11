@@ -6,18 +6,18 @@
 			<div>
 				<label for="creation-0">Creation</label><br/>
 				<select name="creation-0" id="creation-0" class="stock-handling__select" wire:model="creation_id">
-					<option value="0" wire:click="adaptVariations(0)">Select a creation</option>
+					<option value="0">Select a creation</option>
 					@foreach($all_creations as $creation)
-						<option value="{{ $creation->id }}" wire:key="stock-creation-{{ $creation->id }}" wire:click="adaptVariations({{ $creation->id }})">{{ $creation->name }}</option>
+						<option value="{{ $creation->id }}" wire:key="stock-creation-{{ $creation->id }}">{{ $creation->name }}</option>
 					@endforeach
 				</select> 
 			</div>
 			<div>
 				<label for="variation-0">Variation</label><br/>
 				<select name="variation-0" id="variation-0" class="stock-handling__select" wire:model="variation_id">
-					<option value="0" wire:click="loadVariationPictures">Select a variation</option>
+					<option value="0">Select a variation</option>
 					@foreach($computed_variations as $variation)
-						<option value="{{ $variation->id }}" wire:key="stock-variation-{{ $variation->id }}" wire:click="loadVariationPictures">{{ $variation->name }}</option>
+						<option value="{{ $variation->id }}" wire:key="stock-variation-{{ $variation->id }}">{{ $variation->name }}</option>
 					@endforeach
 				</select> 
 			</div>
