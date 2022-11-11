@@ -35,7 +35,7 @@
 					</div>
 				@endforeach
 
-				@if(App\Models\User::where('email', $messages->first()->email)->count() > 0)
+				@if(App\Models\User::where('email', $messages->first()->email)->where('role', '<>', 'newsletter')->where('role', '<>', 'guest_client')->count() > 0)
 				<h5>Add a reply:</h5>
 				<form method="POST" wire:submit.prevent="sendReply({{ $thread }})">
 					@csrf
