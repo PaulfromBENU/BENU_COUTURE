@@ -104,6 +104,28 @@
         @endif
     @endif
 
+    @if(session('has_kulturpass') !== null)
+    <div class="flex justify-between cart-summary__price">
+        <p>
+            Kulturpass
+        </p>
+        <p>
+            -50%
+        </p>
+    </div>
+    @endif
+
+    @if($extra_discount > 0)
+    <div class="flex justify-between cart-summary__price">
+        <p>
+            Special Discount
+        </p>
+        <p>
+            -{{ $extra_discount }}%
+        </p>
+    </div>
+    @endif
+
     <div class="flex justify-between cart-summary__price">
         <p>
             @if($in_tunnel)

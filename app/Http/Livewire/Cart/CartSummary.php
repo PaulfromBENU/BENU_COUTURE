@@ -26,6 +26,7 @@ class CartSummary extends Component
     public $gift_sum;
     public $with_extra;
     public $country_code;
+    public $extra_discount = 0;
     public $total;
 
     public $use_voucher;
@@ -42,7 +43,7 @@ class CartSummary extends Component
     const GIFT_CARD_PRICE = 3;
     const EXTRA_PILLOW_PRICE = 10;
 
-    protected $listeners = ['cartSumUpdated' => 'computeAll', 'giftUpdated' => 'computeAll', 'addressUpdated' => 'updateDeliveryCode'];
+    protected $listeners = ['cartSumUpdated' => 'computeAll', 'giftUpdated' => 'computeAll', 'addressUpdated' => 'updateDeliveryCode', 'applyDiscount' => 'computeAll'];
 
     public function mount()
     {
@@ -64,7 +65,7 @@ class CartSummary extends Component
         $this->with_extra = 0;
 
         $this->country_code = "LU";
-        if (auth()->check() && auth()->user()->role == 'vendor') {
+        if (auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'vendor' || auth()->user()->role == 'shop')) {
             $this->country_code = "collect";
         }
 
@@ -151,7 +152,7 @@ class CartSummary extends Component
         }
     }
 
-    public function computeAll()
+    public function computeAll(int $discount = 0)
     {
         $this->articles_sum = $this->computeArticlesSum($this->cart_id);
         $this->with_extra = $this->computeExtraSum($this->cart_id);
@@ -163,13 +164,16 @@ class CartSummary extends Component
             }
         }
         $this->gift_sum = $this->computeGiftSum($this->cart_id);
-        $this->computeTotalWithVoucher();
+        if (is_numeric($discount) && $discount >= 0 && $discount <= 100) {
+            $this->extra_discount = $discount;
+        }
+        $this->computeTotalWithVoucher($this->extra_discount);
     }
 
 
-    public function computeTotalWithVoucher()
+    public function computeTotalWithVoucher(int $discount)
     {
-        $this->total = $this->articles_sum + $this->with_extra + $this->delivery_sum + $this->gift_sum;
+        $this->total = ($this->articles_sum + $this->with_extra + $this->delivery_sum + $this->gift_sum) * (1 - $discount / 100);
 
         $cart = Cart::where('cart_id', $this->cart_id)->first();
         $cart->price_before_voucher = $this->total;

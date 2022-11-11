@@ -35,20 +35,28 @@
                 <label for="inshop_email">{{ __('forms.email') }}</label>
                 <input type="email" id="inshop_email" name="inshop_email" wire:model.defer="inshop_email" class="input-underline w-full" tabindex="3" minlength="2" maxlength="255">
             </div>
-            <div class="w-full mt-4">
-                <label for="order_comment">Optionnal comment:</label><br/>
-                <textarea class="w-full" rows="4" wire:model="order_comment" id="order_comment"></textarea>
-            </div>
             <div class="mt-6 pb-5" style="border-bottom: solid 1px #D41C1B;">
                 <label for="inshop_newsletter" class="inline-flex items-center">
                     <input id="inshop_newsletter" type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm" name="inshop_newsletter" value="1" tabindex="4" style="margin-top: 2px;">
                     <span class="ml-5">{{ __('forms.subscribe-to-newsletter') }}</span>
                 </label>
             </div>
+            <div class="w-full mt-4">
+                <label for="order_comment">Optionnal comment:</label><br/>
+                <textarea class="w-full" rows="4" wire:model="order_comment" id="order_comment" tabindex="5"></textarea>
+            </div>
+
+            <div class="w-full mt-4">
+                <label for="inshop_discount">Add a special Discount [in %]:<!--{{ __('forms.add-discount') }}--></label>
+                <input type="number" id="inshop_discount" name="inshop_discount" wire:model.lazy="inshop_discount" class="input-underline w-full" tabindex="6" minlength="2" maxlength="255">
+                <p>
+                    <em>Special discount cannot be applied to vouchers. Vouchers should be ordered separately.</em>
+                </p>
+            </div>
 
             <div class="w-full mt-8">
                 <label for="inshop_security">{{ __('forms.security-code') }} *</label>
-                <input type="password" id="inshop_security" name="inshop_security" wire:model.defer="inshop_security" class="input-underline w-full" tabindex="5" minlength="2" maxlength="255" required>
+                <input type="password" id="inshop_security" name="inshop_security" wire:model.defer="inshop_security" class="input-underline w-full" tabindex="7" minlength="2" maxlength="255" required>
             </div>
 
             <div class="w-full mt-8">

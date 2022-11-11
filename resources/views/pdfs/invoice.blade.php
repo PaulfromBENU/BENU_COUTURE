@@ -383,6 +383,12 @@
 					</div>
 				</div>
 
+				@php
+					if($delivery_cost > 0) {
+						$vat_high += $delivery_cost * (1 - 1 / 1.17);
+					}
+				@endphp
+
 				@if($order->with_kulturpass)
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-top: solid lightgrey 1px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
 					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
@@ -390,6 +396,17 @@
 					</div>
 					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
 						-50%
+					</div>
+				</div>
+				@endif
+
+				@if($order->extra_discount > 0)
+				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; width: 60%; margin-left: 40%;">
+					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
+						{{ __('pdf.invoice-extra-discount') }}
+					</div>
+					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
+						-{{ $order->extra_discount }}%
 					</div>
 				</div>
 				@endif
@@ -420,6 +437,19 @@
 						@endif
 					</div>
 				</div>
+
+				@php
+				if($order->with_kulturpass) {
+					$vat_low = $vat_low / 2;
+					$vat_med = $vat_med / 2;
+					$vat_high = $vat_high / 2;
+				}
+				if($order->extra_discount > 0) {
+					$vat_low = $vat_low  * (1 - $order->extra_discount / 100);
+					$vat_med = $vat_med * (1 - $order->extra_discount / 100);
+					$vat_high = $vat_high * (1 - $order->extra_discount / 100);
+				}
+				@endphp
 
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; border-bottom: solid lightgrey 1px; width: 60%; margin-left: 40%;">
 					<div style="position: absolute; width: 75%; top: 4px; left: 0%;">
