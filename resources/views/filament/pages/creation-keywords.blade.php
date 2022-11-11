@@ -6,9 +6,9 @@
 			<div>
 				<label for="creation-0">Creation</label><br/>
 				<select id="creation-0" class="sell-form__select" wire:model="creation_name">
-					<option value="none-0" wire:click="selectCreation(0)">Select a creation</option>
+					<option value="none-0">Select a creation</option>
 					@foreach($all_creations as $creation)
-						<option value="{{ $creation->name }}" wire:key="creations-options-{{ $creation->id }}" wire:click="selectCreation({{ $creation->id }})">{{ $creation->name }}</option>
+						<option value="{{ $creation->name }}" wire:key="creations-options-{{ $creation->id }}">{{ $creation->name }}</option>
 					@endforeach
 				</select> 
 			</div>

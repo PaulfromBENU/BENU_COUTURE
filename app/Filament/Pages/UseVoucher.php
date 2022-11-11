@@ -77,7 +77,7 @@ class UseVoucher extends Page
         }
     }
 
-    public function selectCode()
+    public function updatedCode()
     {
         if ($this->code !== 0 && Voucher::where('unique_code', $this->code)->count() > 0) {
             $this->resetValues();

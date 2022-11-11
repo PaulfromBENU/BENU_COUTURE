@@ -109,17 +109,17 @@ class HandleStock extends Page
         $this->all_shops = Shop::all();
     }
 
-    public function adaptVariations($creation_id)
+    public function updatedCreationName()
     {
         $this->loadStaticData();
-        if ($creation_id == '0') {
+        if ($this->creation_name == 'none-0') {
             $this->computed_variations = collect([]);
-        } elseif (Creation::find($creation_id)) {
-            $this->computed_variations = Creation::find($creation_id)->articles;
+        } elseif (Creation::where('name', $this->creation_name)->count() > 0) {
+            $this->computed_variations = Creation::where('name', $this->creation_name)->first()->articles;
         }
     }
 
-    public function loadVariationData()
+    public function updatedVariationName()
     {
         if (Article::where('name', $this->variation_name)->count() > 0) {
             // Define chosen variation as object

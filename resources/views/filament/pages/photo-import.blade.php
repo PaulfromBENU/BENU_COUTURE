@@ -5,9 +5,9 @@
 		<h3>Creation selection</h3>
 		<div>
 			<select name="creation-0" id="creation-0" class="sell-form__select" wire:model="creation_id">
-				<option value="0" wire:click="adaptVariations(0)">Select a creation</option>
+				<option value="0">Select a creation</option>
 				@foreach($all_creations as $creation)
-					<option value="{{ $creation->id }}" wire:key="creations-{{ $creation->id }}" wire:click="adaptVariations({{ $creation->id }})">{{ $creation->name }}@if($creation->creation_category()->count() > 0) - {{ $creation->creation_category->name_en }}@endif</option>
+					<option value="{{ $creation->id }}" wire:key="creations-{{ $creation->id }}">{{ $creation->name }}@if($creation->creation_category()->count() > 0) - {{ $creation->creation_category->name_en }}@endif</option>
 				@endforeach
 			</select> 
 		</div>
@@ -22,7 +22,7 @@
 		</h4>
 		<div class="flex justify-start new-photo-form__variations-gallery">
 			@foreach($existing_variations as $variation)
-				<figure class="new-photo-form__variations-gallery__img-container">
+				<figure class="new-photo-form__variations-gallery__img-container text-center" style="min-width: 150px;">
 					@if($variation->photos()->where('is_front', '1')->count() > 0)
 						<img src="{{ asset('images/pictures/articles/'.$variation->photos()->where('is_front', '1')->first()->file_name) }}">
 					@else

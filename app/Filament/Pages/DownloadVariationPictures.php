@@ -62,7 +62,7 @@ class DownloadVariationPictures extends Page
         $this->all_creations = Creation::all()->sortBy('name');
     }
 
-    public function adaptVariations($creation_id)
+    public function updatedCreationId($creation_id)
     {
         $this->loadStaticData();
         if ($creation_id == '0') {
@@ -75,7 +75,7 @@ class DownloadVariationPictures extends Page
         }
     }
 
-    public function loadVariationPictures()
+    public function updatedVariationId()
     {
         if (Article::find($this->variation_id)) {
             $this->selected_variation = Article::find($this->variation_id);

@@ -64,10 +64,10 @@ class CreationKeywords extends Page
         $this->deleted_keywords = [];
     }
 
-    public function selectCreation($creation_id)
+    public function updatedCreationName()
     {
-        if (Creation::find($creation_id)) {
-            $this->selected_creation = Creation::find($creation_id);
+        if (Creation::where('name', $this->creation_name)->count() > 0) {
+            $this->selected_creation = Creation::where('name', $this->creation_name)->first();
             $this->existing_keywords = $this->selected_creation->keywords;
             foreach ($this->existing_keywords as $keyword) {
                 $this->keywords[$keyword->id]['lu'] = $keyword->keyword_lu;
