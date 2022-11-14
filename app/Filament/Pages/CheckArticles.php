@@ -59,8 +59,8 @@ class CheckArticles extends Page
     public $singularities_de = [];
     public $singularities_en = [];
     public $singularities_lu = [];
-    public $base_variation_compo = 'none';
-    public $base_variation_care = 'none';
+    public $base_variation_compos = [];
+    public $base_variation_cares = [];
 
     protected $rules = [
         'size_ids[*]' => 'required|integer|min:1',
@@ -125,7 +125,7 @@ class CheckArticles extends Page
                 if (!$has_compo) {
                     if($article->creation->articles()->count() > 0) {
                         $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
-                        $this->base_variation_compo = $base_article->name;
+                        $this->base_variation_compos[$article->id] = $base_article->name;
                         foreach ($this->all_compos as $compo_id => $fabric) {
                             if ($base_article->compositions->contains($compo_id)) {
                                 $this->compo_ids[$article->id][$compo_id] = true;
@@ -134,6 +134,8 @@ class CheckArticles extends Page
                             }
                         }
                     }
+                } else {
+                    $this->base_variation_compos[$article->id] = 'none';
                 }
 
                 // Pre-fill of variation care recommendations
@@ -152,7 +154,7 @@ class CheckArticles extends Page
                 if (!$has_care) {
                     if($article->creation->articles()->count() > 0) {
                         $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
-                        $this->base_variation_care = $base_article->name;
+                        $this->base_variation_cares[$article->id] = $base_article->name;
                         foreach ($this->all_cares as $care_id => $desc) {
                             if ($base_article->care_recommendations->contains($care_id)) {
                                 $this->care_ids[$article->id][$care_id] = true;
@@ -161,6 +163,8 @@ class CheckArticles extends Page
                             }
                         }
                     }
+                } else {
+                    $this->base_variation_cares[$article->id] = 'none';
                 }
 
                 $this->singularities_de[$article->id] = $article->singularity_de;
@@ -263,6 +267,7 @@ class CheckArticles extends Page
             if ($article->save()) {
                 $this->notify('success', 'Article '.$article->name.' has been updated and is now ready for validation!');
                 $this->updateArticles();
+                $this->emit('variationChecked');
             }
         }
     }

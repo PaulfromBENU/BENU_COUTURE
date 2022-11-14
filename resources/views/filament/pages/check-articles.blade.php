@@ -68,9 +68,9 @@
 						</div>
 
 						<h4>> Composition</h4>
-						@if($base_variation_compo !== 'none')
+						@if($base_variation_compos[$article->id] !== 'none')
 						<p style="margin-bottom: 5px;">
-							<em>Care recommendations pre-filled based on variation {{ $base_variation_compo }}</em>
+							<em>Care recommendations pre-filled based on variation {{ $base_variation_compos[$article->id] }}</em>
 						</p>
 						@endif
 						<div class="flex justify-between flex-wrap">
@@ -84,9 +84,9 @@
 
 
 						<h4>> Care Recommendations</h4>
-						@if($base_variation_care !== 'none')
+						@if($base_variation_cares[$article->id] !== 'none')
 						<p style="margin-bottom: 5px;">
-							<em>Care recommendations pre-filled based on variation {{ $base_variation_care }}</em>
+							<em>Care recommendations pre-filled based on variation {{ $base_variation_cares[$article->id] }}</em>
 						</p>
 						@endif
 						<div class="flex justify-between flex-wrap">
@@ -119,8 +119,8 @@
 							</div>
 						</div>
 
-						<div class="new-photo-form__btn-container">
-					    	<button type="submit">Update and send to validation</button>
+						<div class="new-photo-form__btn-container" x-data>
+					    	<button type="submit" @click="window.scrollTo({ top: 0, behavior: 'smooth' });">Update and send to validation</button>
 					    </div>
 					</form>
 				</div>
