@@ -72,7 +72,7 @@
 
 	<div style="width: 100%; height: 100%;">
 		<section style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-right: dashed lightgrey 2px; padding-right: 20px;">
-			<div style="position: relative; padding-left: 0px; margin-bottom: 80px; height: 120px;">
+			<div style="position: relative; padding-left: 0px; margin-bottom: 60px; height: 120px;">
 				<div style="position: absolute; top: 0; left: 0px;">
 					<img src="{{ asset('images/pictures/logo_benu_green.png') }}" style="height: 150px;" />
 				</div>
@@ -96,14 +96,14 @@
 			</div>
 
 			<div style="position: relative; width: 100%; margin-bottom: 10px;">
-				{{ __('pdf.order-client') }} : {{ $order->user->client_number }}
+				{{ __('pdf.order-client') }} : {{ $order->unique_id }}
 			</div>
 
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				{{ __('pdf.order-txt-left-1') }}
 			</div>
 
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				<div style="position: absolute; width: 30px; top: 5px; left: 0; text-align: left;">
 					<img src="{{ asset('images/pictures/puce_village.png') }}" style="height: 18px; width: 18px;" />
 				</div>
@@ -111,7 +111,7 @@
 					{{ __('pdf.order-txt-left-bullet-1') }}
 				</div>
 			</div>
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				<div style="position: absolute; width: 30px; top: 5px; left: 0; text-align: left;">
 					<img src="{{ asset('images/pictures/puce_village.png') }}" style="height: 18px; width: 18px;" />
 				</div>
@@ -119,7 +119,7 @@
 					{{ __('pdf.order-txt-left-bullet-2') }}
 				</div>
 			</div>
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				<div style="position: absolute; width: 30px; top: 5px; left: 0; text-align: left;">
 					<img src="{{ asset('images/pictures/puce_village.png') }}" style="height: 18px; width: 18px;" />
 				</div>
@@ -127,7 +127,7 @@
 					{{ __('pdf.order-txt-left-bullet-3') }}
 				</div>
 			</div>
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				<div style="position: absolute; width: 30px; top: 5px; left: 0; text-align: left;">
 					<img src="{{ asset('images/pictures/puce_village.png') }}" style="height: 18px; width: 18px;" />
 				</div>
@@ -136,26 +136,26 @@
 				</div>
 			</div>
 
-			<div style="text-align: center; font-size: 1.4rem; font-weight: 500; margin-bottom: 15px;">
+			<div style="text-align: center; font-size: 1.3rem; font-weight: 500; margin-bottom: 15px; margin-right: 120px;">
 				<em>{{ __('pdf.order-txt-left-wrapped-by') }}</em>
 			</div>
 
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				{{ __('pdf.order-txt-left-2') }}
 			</div>
 
-			<div style="position: relative; width: 100%; color: #27955B;">
+			<div style="position: relative; width: 100%; color: #27955B; line-height: 0.8rem;">
 				{{ __('pdf.order-txt-left-3') }}
 			</div>
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				{{ __('pdf.order-txt-left-4') }} <span style="font-weight: 500;">{{ __('pdf.order-txt-left-phone-number') }}</span>, <span style="color: #27955B;">{{ __('pdf.order-txt-left-email') }}</span> {{ __('pdf.order-txt-left-5') }} <span style="color: #27955B;">www.benucouture.lu</span>.
 			</div>
 
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				{{ __('pdf.order-txt-left-6') }}
 			</div>
 
-			<div style="position: relative; width: 100%; margin-bottom: 10px;">
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
 				{{ __('pdf.order-txt-left-7') }}
 			</div>
 		</section>
@@ -197,7 +197,7 @@
 				</div>
 			</div>
 
-			<div style="position: absolute; right: 50px; bottom: 75px; padding-left: 0px; transform: rotate(-90deg);">
+			<div style="position: absolute; right: 45px; bottom: 75px; padding-left: 0px; transform: rotate(-90deg);">
 				<div style="font-size: 1.2rem; color: #27955B;">
 					{{ __('pdf.order-bottom-right-title') }}
 				</div>
