@@ -58,12 +58,18 @@ class UserResource extends Resource
                     ->label('Role')
                     ->options([
                         'admin' => 'Administrator (full rights)',
-                        'vendor' => 'Shop vendor',
-                        'author' => 'Content Editor',
-                        'standard' => 'Basic user',
-                        'newsletter' => 'Newsletter subscriber',
-                        'guest_client' => 'Simple guest',
-                    ]),
+                        'assistant' => 'Admin Assistant',
+                        'vendor' => 'Vendor',
+                        'shop' => 'Shop',
+                        'newsletter-manager' => 'Newsletter Manager',
+                        'photo-upload' => 'Photo and Variations Upload',
+                        'translator' => 'Translator',
+                        'workshop' => 'Workshop',
+                        'user' => 'Basic User',
+                        'newsletter' => 'Website visitor with newsletter',
+                        'guest_client' => 'Website user with no account',
+                    ])
+                    ->hidden(auth()->user()->role !== 'admin'),
                 Forms\Components\TextInput::make('first_name')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('last_name')
