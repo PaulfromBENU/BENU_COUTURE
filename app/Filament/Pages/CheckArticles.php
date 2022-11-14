@@ -123,8 +123,8 @@ class CheckArticles extends Page
 
                 // If no composition has been saved so far, use composition of the first variation created for this creation
                 if (!$has_compo) {
-                    if($article->creation->articles()->count() > 0) {
-                        $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
+                    if($article->creation->all_articles()->count() > 0) {
+                        $base_article = $article->creation->all_articles()->orderBy('created_at', 'asc')->first();
                         $this->base_variation_compos[$article->id] = $base_article->name;
                         foreach ($this->all_compos as $compo_id => $fabric) {
                             if ($base_article->compositions->contains($compo_id)) {
@@ -152,8 +152,8 @@ class CheckArticles extends Page
 
                 // If no care recommendation has been saved so far, use recommendation of the first variation created for this creation
                 if (!$has_care) {
-                    if($article->creation->articles()->count() > 0) {
-                        $base_article = $article->creation->articles()->orderBy('created_at', 'asc')->first();
+                    if($article->creation->all_articles()->count() > 0) {
+                        $base_article = $article->creation->all_articles()->orderBy('created_at', 'asc')->first();
                         $this->base_variation_cares[$article->id] = $base_article->name;
                         foreach ($this->all_cares as $care_id => $desc) {
                             if ($base_article->care_recommendations->contains($care_id)) {
