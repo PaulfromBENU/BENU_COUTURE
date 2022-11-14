@@ -188,14 +188,14 @@ class PhotoImport extends Page
                         && Creation::find($this->creation_id)->articles()->where('id', $this->article_id)->count() > 0) {
                         $article_name = Article::find($this->article_id)->name;
                         $photo_counter = Article::find($this->article_id)->photos()->count() + 1;
-                        $article_index = Creation::find($this->creation_id)->articles()->count();
+                        $article_index = Creation::find($this->creation_id)->all_articles()->count();
                         $all_clear = 1;
                     } else {
                         $this->notify('danger', 'An error occured, article could not be found...');
                         $this->photos = collect([]);
                     }
                 } else {
-                    $article_index = Creation::find($this->creation_id)->articles()->count() + 1;
+                    $article_index = Creation::find($this->creation_id)->all_articles()->count() + 1;
                     $article_name = ucfirst(strtolower($creation_name)).'-'.str_pad($article_index, 3, '0', STR_PAD_LEFT);
 
                     $new_article = new Article();
