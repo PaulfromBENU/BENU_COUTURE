@@ -34,6 +34,7 @@ class MediaResource extends Resource
     {
         $authorized_roles = [
             'admin',
+            'assistant',
             'vendor',
         ];
         return in_array(auth()->user()->role, $authorized_roles);

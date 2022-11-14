@@ -94,6 +94,7 @@ class User extends Authenticatable implements HasName, FilamentUser
     {
         $authorized_roles = [
             'admin',
+            'assistant',
             'vendor',
             'newsletter-manager',
             'photo-upload',
@@ -167,5 +168,31 @@ class User extends Authenticatable implements HasName, FilamentUser
         return true;
 
         // $this->notify(new BenuResetPasswordNotification($token));
+    }
+
+    public function usesSalesInterface()
+    {
+        $sales_roles = [
+            'admin',
+            'assistant',
+            'vendor',
+            'shop',
+        ];
+        return in_array($this->role, $sales_roles);
+    }
+
+    public function isBenuStaff()
+    {
+        $benu_roles = [
+            'admin',
+            'assistant',
+            'vendor',
+            'shop',
+            'newsletter-manager',
+            'photo-upload',
+            'translator',
+            'workshop',
+        ];
+        return in_array($this->role, $benu_roles);
     }
 }

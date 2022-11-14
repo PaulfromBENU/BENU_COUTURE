@@ -22,7 +22,7 @@
                             {{ __('dashboard.nav-overview') }}
                         </a>
                     </li>
-                    @if(auth()->user()->role == 'admin' || auth()->user()->role == 'vendor')
+                    @if(auth()->user()->isBenuStaff())
                     <li>
                         <a href="{{ route('filament.pages.dashboard') }}" class="btn-slider-left dashboard__nav__link" target="_blank">
                             Admin Panel

@@ -65,7 +65,7 @@ class CartSummary extends Component
         $this->with_extra = 0;
 
         $this->country_code = "LU";
-        if (auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'vendor' || auth()->user()->role == 'shop')) {
+        if (auth()->check() && auth()->user()->usesSalesInterface()) {
             $this->country_code = "collect";
         }
 

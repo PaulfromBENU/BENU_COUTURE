@@ -54,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Blade::directive('inshop', function () {
-            return "<?php if(auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'vendor' || auth()->user()->role == 'shop')): ?>";
+            return "<?php if(auth()->check() && auth()->user()->usesSalesInterface()): ?>";
         });
 
         Blade::directive('endinshop', function () {
