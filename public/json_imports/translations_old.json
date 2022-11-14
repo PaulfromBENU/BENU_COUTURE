@@ -2490,9 +2490,9 @@
   {
     "page": "Service Client",
     "key": "services.faq-group-3-question-content-2-1",
-    "de": "BENU unterstützt die LGBTQ+ Gemeinschaft und setzt sich für die Akzeptanz und Gleichberechtigung aller Menschen ein, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität.",
-    "fr": "BENU soutient la communauté LGBTQ+ et s'engage pour l'acceptation et l'égalité des droits de toutes les personnes, indépendamment de leur identité de genre et de leur (a)sexualité.",
-    "en": "BENU supports the LGBTQ+ community and is committed to further the acceptance and equality of everyone, regardless of their gender identity and (a)sexuality.",
+    "de": "BENU unterstützt die LGBTIQ+ Gemeinschaft und setzt sich für die Akzeptanz und Gleichberechtigung aller Menschen ein, unabhängig von ihrer Geschlechtsidentität und ihrer (A)Sexualität.",
+    "fr": "BENU soutient la communauté LGBTIQ+ et s'engage pour l'acceptation et l'égalité des droits de toutes les personnes, indépendamment de leur identité de genre et de leur (a)sexualité.",
+    "en": "BENU supports the LGBTIQ+ community and is committed to further the acceptance and equality of everyone, regardless of their gender identity and (a)sexuality.",
     "lu": "BENU ënnerstëtzt d’LGBTQ+ Communautéit an engagéiert sech fir d’Akzeptanz an d’Gläichberechtegung vun all de Mënschen, onofhängeg vun hirer Geschlechtsidentitéit an hirer (A)Sexualitéit."
   },
   {
@@ -6147,25 +6147,25 @@
     "page": "Créations",
     "key": "models.general-title-clothes",
     "de": "Hier findest Du alle Bekleidungsartikel von BENU COUTURE",
-    "fr": "Voici l'ensemble des vêtements confectionnés par BENU COUTURE",
-    "en": "",
-    "lu": ""
+    "fr": "Voici l'ensemble des vêtements BENU COUTURE",
+    "en": "Here are all clothes made by BENU COUTURE",
+    "lu": "Hei fënns du all d’Gezei vu BENU COUTURE"
   },
   {
     "page": "Créations",
     "key": "models.general-title-accessories",
     "de": "Hier findest Du alle Accessoires von BENU COUTURE",
-    "fr": "Voici l'ensemble des accessoires confectionnés par BENU COUTURE",
-    "en": "",
-    "lu": ""
+    "fr": "Voici l'ensemble des accessoires BENU COUTURE",
+    "en": "Here are all accessories made by BENU COUTURE",
+    "lu": "Hei fënns Du all d’Accessoire vu BENU COUTURE"
   },
   {
     "page": "Créations",
     "key": "models.general-title-home",
     "de": "Hier findest Du BENU COUTURE's Artikel für zu Hause",
-    "fr": "Voici l'ensemble des créations pour la maison confectionnés par BENU COUTURE",
-    "en": "",
-    "lu": ""
+    "fr": "Voici l'ensemble des créations BENU COUTURE pour la maison",
+    "en": "Here you can find everything for your home by BENU COUTURE",
+    "lu": "Hei fënns Du all d’BENU COUTURE Kreatioune fir doheem"
   },
   {
     "page": "Créations",
