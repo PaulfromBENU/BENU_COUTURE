@@ -18,7 +18,7 @@ class CheckKulturpass
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'vendor' || auth()->user()->role == 'shop')) {
+        if(auth()->check() && auth()->user()->usesSalesInterface()) {
             //do nothing, keep status
         } elseif (auth()->check() && auth()->user()->kulturpasses()->where('approved', '1')->count() > 0) {
             $kulturpass = auth()->user()->kulturpasses()->orderBy('updated_at', 'desc')->first();

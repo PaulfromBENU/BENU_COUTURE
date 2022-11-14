@@ -186,7 +186,7 @@ class SaleController extends Controller
                 // Send e-mail with purchase confirmation, with pdf invoice
                 if ($current_order->user_id > 0) {
                     SendNewOrderEmails::dispatchAfterResponse($current_order->user->email, $current_order, $pdf);
-                } elseif (auth()->check() && auth()->user()->role == 'vendor') {
+                } elseif (auth()->check() && auth()->user()->usesSalesInterface()) {
                     SendNewOrderEmails::dispatchAfterResponse(auth()->user()->email, $current_order, $pdf);
                     // Mail::to(auth()->user()->email)->send(new NewOrder($current_order, $pdf));
                 }
@@ -253,7 +253,7 @@ class SaleController extends Controller
             return redirect()->route('home', ['locale' => app()->getLocale()]);
         }
 
-        if (auth()->check() && auth()->user()->role == 'vendor') {
+        if (auth()->check() && auth()->user()->usesSalesInterface()) {
             session(['has_kulturpass' => null]);
         }
 

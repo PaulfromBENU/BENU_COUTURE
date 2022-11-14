@@ -32,6 +32,7 @@ class WriteNews extends Page
     {
         $authorized_roles = [
             'admin',
+            'assistant',
             'vendor',
         ];
         return in_array(auth()->user()->role, $authorized_roles);

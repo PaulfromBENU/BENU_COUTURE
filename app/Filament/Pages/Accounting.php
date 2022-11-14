@@ -33,7 +33,7 @@ class Accounting extends Page
     {
         $authorized_roles = [
             'admin',
-            'vendor',
+            'assistant',
         ];
         return in_array(auth()->user()->role, $authorized_roles);
     }
