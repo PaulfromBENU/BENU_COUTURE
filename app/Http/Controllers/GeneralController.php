@@ -111,7 +111,7 @@ class GeneralController extends Controller
     public function showNews(string $slug = '')
     {
         if ($slug == '') {
-            if (auth()->check() && auth()->user()->role == 'admin') {
+            if (auth()->check() && auth()->user()->canCheckNews()) {
                 $all_news = NewsArticle::orderBy('updated_at', 'desc')->get();
             } else {
                 $all_news = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
@@ -130,7 +130,7 @@ class GeneralController extends Controller
                                       ->orderBy('created_at', 'desc')
                                       ->first();
             return view('news-single', ['news' => $news, 'previous_news' => $previous_news, 'next_news' => $next_news]);
-        } elseif (auth()->check() && auth()->user()->role == 'admin' && NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
+        } elseif (auth()->check() && auth()->user()->canCheckNews() && NewsArticle::where('slug_'.app()->getLocale(), $slug)->count() > 0) {
             // In stage or local, articles can be displayed for test even if not validated.
             $news = NewsArticle::where('slug_'.app()->getLocale(), $slug)->first();
             $previous_news = NewsArticle::where('created_at', '>', $news->created_at)
