@@ -91,7 +91,7 @@ class CheckArticles extends Page
 
     public function updateArticles()
     {
-        $this->unchecked_articles = Article::where('to_be_validated', '0')->orderBy('created_at', 'desc')->get();
+        $this->unchecked_articles = Article::where('to_be_validated', '0')->orderBy('created_at', 'asc')->get();
         // self::$navigationLabel = "Vérification Articles (".$this->unchecked_articles->count().")";
 
         if ($this->unchecked_articles->count() > 0) {
