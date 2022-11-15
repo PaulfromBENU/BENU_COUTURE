@@ -181,6 +181,16 @@ class User extends Authenticatable implements HasName, FilamentUser
         return in_array($this->role, $sales_roles);
     }
 
+    public function canCheckNews()
+    {
+        $news_roles = [
+            'admin',
+            'assistant',
+            'vendor',
+        ];
+        return in_array($this->role, $news_roles);
+    }
+
     public function isBenuStaff()
     {
         $benu_roles = [
