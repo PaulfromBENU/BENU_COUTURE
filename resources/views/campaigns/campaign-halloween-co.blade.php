@@ -149,7 +149,7 @@
 					</p>
 
 					<p class="single-campaign__section-3__txt">
-						{{ __('campaigns.halloween-txt-13') }}
+						{{ __('campaigns.halloween-txt-13-1') }} <a href="https://www.facebook.com/benuvillageesch/" target="_blank" rel="noreferrer" class="single-campaign__section-3__txt__link">{{ __('campaigns.halloween-txt-13-facebook') }}</a> {{ __('campaigns.halloween-txt-13-2') }} <a href="https://www.instagram.com/benu_village/" target="_blank" rel="noreferrer" class="single-campaign__section-3__txt__link">{{ __('campaigns.halloween-txt-13-insta') }}</a> {{ __('campaigns.halloween-txt-13-3') }}
 					</p>
 				</div>
 				<div class="single-campaign__section-3bis__picture">
@@ -177,9 +177,9 @@
 				<p class="single-campaign__section-4__quote-2__txt">
 					{{ __('campaigns.halloween-quote-txt-2-1') }}
 				</p>
-				<!-- <a class="single-campaign__section-4__quote-2__signature" href="https://www.thedrum.com/opinion/2019/10/11/halloween-black-friday-cyber-monday-what-s-the-next-big-retail-event" target="_blank" rel="noreferrer">
+				<a class="single-campaign__section-4__quote-2__signature" href="https://www.thedrum.com/opinion/2019/10/11/halloween-black-friday-cyber-monday-what-s-the-next-big-retail-event" target="_blank" rel="noreferrer">
 					{{ __('campaigns.halloween-quote-2-signature') }}
-				</a> -->
+				</a>
 			</div>
 		</section>
 
