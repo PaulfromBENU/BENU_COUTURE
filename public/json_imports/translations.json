@@ -1745,6 +1745,14 @@
   },
   {
     "page": "Mon compte",
+    "key": "pdf.invoice-extra-discount",
+    "de": "Besonderer Rabatt",
+    "fr": "Remise exceptionnelle",
+    "en": "Exceptional discount",
+    "lu": "Aussergewéinlech Remise"
+  },
+  {
+    "page": "Mon compte",
     "key": "dashboard.order-return",
     "de": "Zurück senden",
     "fr": "Retourner",
@@ -4394,6 +4402,54 @@
   {
     "page": "E-Mail automatique",
     "key": "emails.pwd-reset-signature",
+    "de": "Dein BENU Team",
+    "fr": "Ton équipe BENU",
+    "en": "Your BENU team",
+    "lu": "Deng BENU Ekipp"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.message-answer-subject",
+    "de": "Du hast eine Benachrichtigung in Deinem BENU Konto!",
+    "fr": "Tu as une notification dans ton compte BENU!",
+    "en": "You have a notification in your BENU account",
+    "lu": "Du hues eng Noriicht an Dengem BENU Konto!"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.message-answer-hello",
+    "de": "Hallo",
+    "fr": "Bonjour",
+    "en": "Hello",
+    "lu": "Moien"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.message-answer-txt-1",
+    "de": "Du hast uns über das Kontaktformular auf einer der BENU Internetseiten eine Nachricht geschickt! Vielen Dank!",
+    "fr": "Tu nous as envoyé un message en utilisant le formulaire de contact sur l'un des sites Internet de BENU! Merci beaucoup !",
+    "en": "You have sent us a message via the contact form on one of the BENU websites! Thank you very much!",
+    "lu": "Du hues eis iwwer de Kontaktformulaire op enger vun de BENU Internetsäiten eng Noriicht geschéckt! Villmools Merci!"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.message-answer-txt-2",
+    "de": "Unsere Antwort findest Du in Deinem BENU Konto unter \"Meine Mitteilungen\".",
+    "fr": "Tu trouveras notre réponse dans ton compte BENU sous \"Mes communications“.",
+    "en": "You will find our answer in your BENU account under \"my messages\".",
+    "lu": "Eis Äntwert fënns Du an Dengem BENU Konto ënnert \"Meng Noriichten\"."
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.message-answer-conclusion-1",
+    "de": "Mit besten BENU Grüßen",
+    "fr": "Avec nos meilleures salutations BENU",
+    "en": "With best BENU greetings",
+    "lu": "Mat beschte BENU Gréiss"
+  },
+  {
+    "page": "E-Mail automatique",
+    "key": "emails.message-answer-signature",
     "de": "Dein BENU Team",
     "fr": "Ton équipe BENU",
     "en": "Your BENU team",
@@ -15152,6 +15208,358 @@
     "lu": "En Opruff fir méi Éierlechkeet a Konsequenz"
   },
   {
+    "page": "Campaign",
+    "key": "campaigns.carte-halloween-title",
+    "de": "Halloween & Co",
+    "fr": "Halloween & Co",
+    "en": "Halloween & Co",
+    "lu": "Halloween & Co"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.carte-halloween-date",
+    "de": "novembre 2022",
+    "fr": "Novombre 2022",
+    "en": "novembre 2022",
+    "lu": "novembre 2022"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.carte-halloween-summary",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-main-picture-top-title",
+    "de": "BENU COUTURE's Mikrophon für Politisches",
+    "fr": "Le micro de BENU COUTURE pour la politique",
+    "en": "BENU COUTURE's microphone for politics",
+    "lu": "Dem BENU COUTURE säi Mikro fir Politisches"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-main-picture-title",
+    "de": "Halloween & Co",
+    "fr": "Halloween & Co",
+    "en": "Halloween & Co",
+    "lu": "Halloween & Co"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-scroll-to-see",
+    "de": "Bitte scrollen",
+    "fr": "Défiler s'il te plaît",
+    "en": "Please scroll",
+    "lu": "Scroll wgl."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-1-1",
+    "de": "Wieso sollte sich BENU äußern zu vermeintlichen Festen und „Traditionen“ wie Halloween, Black Friday, Cyber Monday, Black Week, ja, Green Friday, man höre und staune, so wie zu den immer länger währenden Weihnachts- und Wintermärkten? .",
+    "fr": "Pourquoi est-ce que BENU devrait se positionner par rapport à de prétendues fêtes et „traditions“ comme Halloween, le Black Friday, le Cyber Monday, la Black Week - ou le Green Friday, qu'on se le dise -, ou des marchés de Noël et d'hiver qui durent de plus en plus longtemps?",
+    "en": "Why should BENU take a stand on supposed festivities and traditions such as Halloween, Black Friday, Cyber Monday, Black Week - or, get this, Green Friday -, or on the ever-longer existing Christmas and winter markets?",
+    "lu": "Firwat sollt BENU sech zu Fester an „Traditiounen“ ewéi Halloween, Black Friday, Cyber Monday, Black Week - oder Green Friday, wien hätt dat geduecht -, oder zu de Wanter- a Chrëschtmäert äusseren, déi mëttlerweil ëmmer méi laang daueren?"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-1-2",
+    "de": "Es gibt  einen Grund dafür: Das allgemeine Verlangen nach Nachhaltigkeit.",
+    "fr": "Il y a une raison qui explique notre prise de position: le désir manifeste de durabilité.",
+    "en": "There is a reason for us voicing our opinion: the general desire for sustainability.",
+    "lu": "Et huet e Grond, firwat mir eis Meenung dozou matdeelen: Den allgemenge Wonsch no méi Nohaltegkeet."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-1-3",
+    "de": "Viele Menschen kommen zu uns, um über Alternativen zu sprechen. Nachhaltigere Alternativen ob beim Bauen, beim Einkauf, beim Essen und Trinken, bei der Bekleidung oder der Einrichtung. Inzwischen sind die Presse und das Internet voll mit Ratschlägen, Erklärungen und Definitionen bezüglich dessen, was es denn mit der Nachhaltigkeit so auf sich hat.",
+    "fr": "De nombreuses personnes nous rendent visite pour parler d’alternatives, notamment des alternatives plus durables - que ce soit en matière de construction, d'achat, de nourriture et de boisson, de vêtements ou d'aménagement. Entre-temps, la presse et Internet regorgent de conseils, d'explications et de définitions sur ce que signifie la durabilité.",
+    "en": "Many people reach out to us to talk about alternatives; more sustainable alternatives, whether in relation to building, shopping, eating and drinking, clothing or furnishings. Meanwhile, both the press and the internet are full of advice, explanations and definitions that are supposed to enlighten us on what sustainability is all about.",
+    "lu": "Vill Leit komme bei eis, fir mat eis iwwer Alternativen ze schwätzen. Alternativen, déi méi nohalteg sinn - sief et beim Bauen, beim Akaf, beim Iessen oder Drénken, beim Gezei oder der Ariichtung. Mëttlerweil sinn d’Medien an den Internet voll mat Rotschléi, Erklärungen an Definitiounen doriwwer, wat et mat der Nohaltegkeet esou op sech huet."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-1-4",
+    "de": "Schließlich wollen doch alle die Erde und das Klima retten, um unseren Kindern eine bessere Zukunft zu hinterlassen…",
+    "fr": "Après tout, tout le monde veut surtout sauver la planète et le climat pour laisser un meilleur avenir à nos enfants…",
+    "en": "Because, after all, we all want, above all, to save the earth and the climate in order to ensure a better future for our children…",
+    "lu": "Schlussendlech wëlle mir jo awer alleguer dat selwecht: eis Welt an de Klima retten, fir eise Kanner eng besser Zukunft ze hannerloossen…"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-1-5",
+    "de": "… oder etwa nicht?",
+    "fr": "… n’est-ce pas?",
+    "en": "… right?",
+    "lu": "… oder?"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-6-1",
+    "de": "Viele Menschen haben keinen Zugang zu dieser Diskussion, keine Zeit oder kein Verständnis dafür.",
+    "fr": "Beaucoup de gens n'ont pas accès à cette discussion, n’en trouvent pas le temps ou la compréhension nécessaire.",
+    "en": "Many people have no access to this discussion, or lack the necessary time and understanding.",
+    "lu": "Tatsächlech hu vill Leit keen Zougang zu dëser Diskussioun, keng Zäit oder kee Verständnëss dofir."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-6-2",
+    "de": "Doch viele andere machen sich Gedanken. Und das ist nicht nur richtig gut, sondern auch notwendig. Danke dafür.",
+    "fr": "Cependant, il y a beaucoup d'autres qui s'en préoccupent, ce qui est non seulement très bien, mais aussi nécessaire. Merci pour cela.",
+    "en": "But many others are concerned - which is more than good, essential even. Thank you for that.",
+    "lu": "Vill aner Leit maachen sech awer hir Gedanken. An dat ass och gutt esou - net just gutt, esouguer immens wichteg. Merci dofir."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-6-3",
+    "de": "Wie also kann ich nachhaltig konsumieren? Und was hat das mit den oben genannten \"Festen\" zu tun?",
+    "fr": "Alors, comment puis-je consommer de manière durable? Et quel est le rapport avec les \"fêtes\" susmentionnées?",
+    "en": "So - how can I consume sustainably? And what does this have to do with these \"festivities\" mentioned above?",
+    "lu": "Wéi kann ech also nohalteg konsuméieren? A wat huet dat alles mat deene „Fester“ a „Traditiounen“ ze dinn, déi uewe genannt goufen?"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-6-4",
+    "de": "Lasst uns mit einer Tatsache beginnen: es gibt KEINEN nachhaltigen Konsum. Jeder Konsum hinterlässt einen sozio-ökologischen Fußabdruck. Grüne Logos - mit oder ohne Kindermotiv - können nicht darüber hinwegtäuschen, dass es immer nur darum gehen kann, den Fußabdruck mehr oder weniger zu reduzieren und damit den Konsum etwas weniger dramatisch (im Sinne der Nachhaltigkeit) werden zu lassen.",
+    "fr": "Commençons par un fait compromettant: il n'existe AUCUNE consommation durable. Toute consommation est nécessairement accompagnée d’une empreinte socio-environnementale. Aucun logo vert - avec ou sans motif d'enfants - ne pourra jamais cacher le fait que la consommation \"durable\" se résumera toujours à réduire cette empreinte et à rendre la consommation un peu moins dramatique (en termes de durabilité).",
+    "en": "Let's start with a rather brute fact: there is NO such thing as sustainable consumption. All consumption necessarily leaves a socio-ecological footprint. No green logo - with or without a child motif - could ever hide the fact that „sustainable“ consumption will always merely be a matter of reducing the footprint and making the consumption appear a little less dramatic (in terms of sustainability).",
+    "lu": "Enger Tatsaach musse mer an d’Ae kucken: et gëtt KEEN nohaltege Konsum. All Konsum hannerléisst e sozio-ekologesche Foussofdrock. Gréng Logoen, ob mat oder ouni Kannermotiv, kënnen am Endeffekt och näischt drun änneren, dass et ëmmer just wäert drëms goen, den Impakt vun dësem Foussofdrock méi oder manner ze reduzéieren an domat de Konsum e bësse manner dramatesch ze maachen (am Sënn vun der Nohaltegkeet)."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-6-picture",
+    "de": "Nein. Eigentlich nicht.",
+    "fr": "En fait, non, pas vraiment.",
+    "en": "No. Not really.",
+    "lu": "Nee. U sech net."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-transition-1-title",
+    "de": "So ein Green Friday ist schon eine feine Sache.",
+    "fr": "Prenons un Green Friday. Quelle belle opportunité!",
+    "en": "Green Friday is a fine thing, though.",
+    "lu": "Esou e Green Friday ass schon eng flott Saach."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-7-1",
+    "de": "Ich mache mein Schnäppchen und der/die Verkäufer:in pflanzt dafür mehrere Halme Weizen in ein prächtiges Feld, oder gleich einen zwanzig Zentimeter hohen Baum  dort, wo vor einem Jahr noch ein Tropenwald mit 1.000 Jahre alten Urwaldriesen stand. So wird gleichzeitig auch noch die Natur gerettet.",
+    "fr": "e peux faire une bonne affaire, pendant que les vendeurs:euses plantent plusieurs tiges de blé dans un champ magnifique, voire un arbre de vingt centimètres de haut là où, il y a un an, il y avait une forêt tropicale avec des géants de la jungle âgés de mille ans - sauvant ainsi la nature en même temps!",
+    "en": "I can make a bargain, while the seller plants several stalks of wheat in a beautiful field, or even a twenty-centimetre-high tree where a tropical forest with 1,000-year-old jungle giants stood a year ago - saving nature at the same time! Bravo!",
+    "lu": "Ech kann eng gutt Affär maachen an de/d’ Verkeefer:in planzt wärenddeem e bësse Weess an e schéint Feld, oder direkt esouguer en zwanzeg Zentimeter grousse Bam op déi Plaz, wou virun engem Joer nach en Tropebësch mat 1.000 Joer alen Urwaldrise stoung. Esou gëtt nämlech och nach direkt d’Natur gerett!"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-7-2",
+    "de": "Und nicht nur das; man hat dabei auch noch allen Menschen, also auch den ärmeren, die Möglichkeit auf ein echtes Schnäppchen eröffnet. Ein sozialer Leckerbissen. Also natürlich nur für Käufer:innen und Verkäufer:innen, denn es ist ja klar, dass die herstellenden Arbeiter:innen von diesem Leckerbissen nicht auch noch ein Stück abhaben können.",
+    "fr": "Est-ce que je deviens fou, ce n'est même pas tout: on offre également à toutes les personnes, y compris aux plus pauvres, la possibilité de faire une véritable bonne affaire. Une véritable friandise sociale - qui est toutefois réservée aux acheteurs:euses et aux vendeurs:euses.Il est presque inutile d'expliquer que les travailleurs:euses impliqué:e:s dans la production de nos bonnes affaires n'en profitent point Bien entendu.",
+    "en": "Even more than that; in the process, all people, including the poorer ones, are given the opportunity to get a real bargain. An amazing social treat - which is, however and obviously, reserved for the buyer and the seller. It is almost needless to say that there won’t be any piece of that cake left for the workers, though. Of course.",
+    "lu": "An net just dat: et huet een domat och nach all de Leit, och deene manner bemëttelten, d’Méiglechkeet ginn, eng richteg gutt Affär ze maachen. Eng wonnerbar sozial Geschicht - also natierlech just fir d’Keefer:innen an d’Verkeefer:innen, well et ass jo kloer, dass d’ Aarbechter:innen, déi de Produit produzéiert hunn, net och nach kënnen dovunner profitéieren."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-1",
+    "de": "Schade nur, dass die Forschung die Mär solcher \"echter Schnäppchen\" nicht bestätigen kann.  Eine bekannte",
+    "fr": "Et pourtant … la recherche scientifique ne peut pas confirmer la fable des \"vraies bonnes affaires\". Une",
+    "en": "Now, it is a pity that research cannot confirm the fairy tale of \"real bargains\" in this context. A well-known",
+    "lu": "Komesch ass just, dass d’Fuerschung d’Märche vun der „richteg gudder Affär“ net confirméiere kann. Eng bekannten däitsch"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-1-link",
+    "de": "Preisvergleichsplattform",
+    "fr": "plateforme de comparaison",
+    "en": "price comparison platform",
+    "lu": "Präisvergläichsplattform"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-2",
+    "de": "hat Ende 2020 die Black-Friday-Rausch-Preise der beliebtesten Produktkategorien untersucht und stellte dabei eine durchschnittliche Ersparnis von vier Prozent im Vergleich zu den Durchschnittspreisen fest. Vier Prozent.",
+    "fr": "de prix bien connue a examiné fin 2020 les prix de la frénésie du Black Friday pour les catégories de produits les plus populaires et a constaté une économie moyenne de quatre pour cent par rapport aux prix moyens. Quatre pour cent.",
+    "en": "examined the Black Friday rush prices of the most popular product categories at the end of 2020 and found an average saving of four per cent compared to the average prices. Four percent",
+    "lu": "huet Enn 2020 d'Black-Friday-Rausch-Präisser vun de beléifteste Produitskategorien ënnersicht an huet dobäi en duerchschnëttlecht Spuere vu ganze véier Prozent am Verglach zu den Duerchschnëttspräisser festgestallt. Véier Prozent."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-3",
+    "de": "Dabei ist ein konsequent nachhaltig orientierter Konsum viel einfacher, als viele denken.",
+    "fr": "Or, une consommation orientée vers la durabilité est bien plus simple que beaucoup ne le pensent.",
+    "en": "The joke here is that a consistently sustainable consumption is much easier than many may be inclined to think.",
+    "lu": "De Witz bei der ganzer Saach ass, dass e konsequent nohalteg orientéierte Konsum e gutt Stéck méi einfach ass, wéi ee géif mengen."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-4",
+    "de": "Man muss einfach das Ganze umdrehen: Also nicht ins Gewühl rennen, um dort herauszufinden, was ich schon immer „dringend gebraucht habe“. Vielmehr investiere ich meine Zeit hautpsächlich in mein Wohlbefinden meine Lebensqualität und damit unweigerlich auch in meine Zufriedenheit und mein Glücklichsein. Wenn ich etwas wirklich brauche, informiere ich mich und suche nach guten, nein, den bestmöglichen Konditionen. Neben dem Preis interessieren mich vor allem die sozialen und ökologischen Aspekte wie Regionalität, Saisonalität, die Arbeitsbindungen im Herstellerland und so weiter..  Erst dann kaufe ich.",
+    "fr": "Il suffit d'inverser tout ce processus: je ne me précipite pas dans la foule pour y trouver ce qui m'a toujours \"manqué cruellement\". J’investis cette énergie et ce temps plutôt dans mon bien-être, ma qualité de vie, et du coup dans ma satisfaction et mon bonheur. S'il me manque quelque chose, je m'informe et je cherche de bonnes - non - les meilleures conditions possibles. Outre le prix, je m'intéresse surtout aux aspects sociaux et écologiques, à savoir à la régionalité, la saisonnalité, aux liens de travail dans le pays producteur et tout cela. Ce n'est qu'ensuite que j'achète.",
+    "en": "You simply have to turn the whole process around. Simply put: I don't run into the hustle and bustle to find what I've always „desperately needed“. Instead, I invest my time primarily in my well-being, my quality of life - and thereby in my contentment and happiness. Should I really need something, I will inform myself and look for good - no - the best possible conditions. Apart from the price, I am interested in the social and ecological aspects, such as regionality, seasonality, the labour ties in the producer country, and so forth. Only then do I buy.",
+    "lu": "Et muss een dee ganze Prozess einfach ëmdréien, also net an d’Gewulls lafen, fir do erauszefannen, wat mir schonn ëmmer „dringend gefeelt“ huet. Ech investéiere meng Zäit léiwer a mäi Wuelbefannen, meng Liewensqualitéit an doduerch och a meng Zefriddenheet a mäi Glécklechsinn. Wa mir eppes feelt, informéieren ech mech a sichen no gudden - nee - no de beschte Konditiounen. Niewent dem Präis intresséiere mech virun allem nach déi sozial an ekologesch Aspekter ewéi Regionalitéit, Saisonalitéit, d’Aarbechtsbedéngungen am Produktiounsland an esou weider. Eréischt da kafen ech."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-5",
+    "de": "Der Vorteil?",
+    "fr": "L'avantage?",
+    "en": "The advantage?",
+    "lu": "De Virdeel?"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-6",
+    "de": "Ich gewinne unglaublich viel Zeit und Lebensqualität. Ich erliege nicht mehr dem Effekt des sogenannten 'Shopping Momentums' (ein Einkauf spornt mich zu einem weiteren, vermeintlich notwendigen Einkauf an, s. Rubrik 'Käufer, die dieses Produkt kauften, interessierten sich auch hierfür') und habe keine FOMO mehr- das ist die Auweia-ich-verpasse-eine-super-Gelegenheit-Panik, auf englisch die",
+    "fr": "Je gagne énormément de temps et une meilleure qualité de vie. Je ne succombe plus à l'effet du „momentum shopping\" (un achat m'incite à en faire un autre, qui est soi-disant nécessaire - voir la rubrique \"Les acheteurs qui ont acheté ce produit s'y intéressent également\") et je n'ai plus de FOMO - c'est-à-dire de la panique-de-manquer-une-super-occasion, en anglais la",
+    "en": "I gain an incredible amount of time and a better quality of life. I no longer succumb to the effect of the so-called 'shopping momentum' (a purchase spurs me to make another, supposedly necessary purchase, refer to the section 'Buyers who bought this product were also interested in this one') and I no longer have",
+    "lu": "Ech gewannen onmoosseg vill Zäit a Liewensqualitéit. Ech ginn och net méi Affer vum sougenannte 'Shopping Momentum' (een Akaf féiert dozou, dass ech e weideren, „wichtegen“ Akaf maachen, vgl. d’Rubrik 'Keefer, déi dëse Produit kaf hunn, intresséieren sech och heifir') an hu keng FOMO méi - dat ass d’ech-verpassen-eng-super-Occasioun-Angscht, op Englesch"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-8-6-link",
+    "de": "fear of missing out' (FOMO)",
+    "fr": "fear of missing out\" (FOMO)",
+    "en": "FOMO - the 'fear of missing out'",
+    "lu": "d’'fear of missing out' (FOMO)"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-section-3-title",
+    "de": "Am Ende spare ich dabei auch noch Geld und reduziere meinen Abfall. Wie klasse ist das denn?",
+    "fr": "Au final, j'économise de l'argent et je réduis mes déchets. N'est-ce pas génial?",
+    "en": "In the end, I also save money and reduce my waste. Isn't that pretty great?",
+    "lu": "Schlussendlech superen ech dobäi och nach Suen a reduzéiere mäin Offall. Ass dat net mega?"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-9",
+    "de": "Ich frage mich jetzt nur, ob ich mit einem solchen Verhalten nicht unsere „Traditionen“, wie zum Beispiel Halloween, (zer-)störe?  Nun gut, die Forschung sucht immer noch nach dem wirklichen Ursprung des Kürbisfestes, neben Charlie Brown wohlgemerkt…",
+    "fr": "Je me demande seulement si, par ce comportement, je risque de déranger ou détruire nos \"traditions\", comme Halloween par exemple? Oui d'accord, les experts sont toujours encore à la recherche de la véritable origine de la fête de la citrouille, à côté de Charlie Brown bien sûr...",
+    "en": "I'm just wondering now if my behaviour could be destroying our \"traditions\", like Halloween, for instance? Granted be the fact that research is still looking for the real origin of this pumpkin festival, besides Charlie Brown - mind you ....",
+    "lu": "Ech froe mech elo just, ob ech mat esou engem Verhalen net eis „Traditiounen“, ewéi zum Beispill Halloween, stéieren oder futti maachen? Obschonn d’Welt nach ëmmer no dem richtegen Ursprong vun dësem Kürbisfest sicht - nieft dem Charlie Brown, versteet sech …"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-10",
+    "de": "Dann eben die Wintermärkte, die wir so benannt haben, um sie auch nach Weihnachten noch anbieten zu können. Gerade auf diesen Märkten, die Wohlsein, gepaart mit reinem Holzduft und ursprünglicher Handwerkskraft versprechen, finden wir zunehmend Essbuden, die die selben Würstchen anbieten, wie  neulich der Discounter an der Ecke bei seiner Eröffnung, neben allerlei Nippes aus echten Kunststoffvarianten, der frisch aus Billiglohnländern ohne Umweltstandards importiert wurde.",
+    "fr": "Prenons alors les marchés d'hiver, que nous avons nommés ainsi pour pouvoir les exploiter même après Noël? C'est justement sur ces marchés, qui promettent un sentiment de bien-être, associé à une odeur de bois pur et à une force artisanale originelle, que nous trouvons de plus en plus de stands de nourriture proposant les mêmes saucisses que le discounter du coin lors de son ouverture l'autre jour, à côté de toutes sortes de bibelots en véritables variantes de plastique, fraîchement importés des pays à bas salaires sans normes environnementales.",
+    "en": "Or perhaps the winter markets, which we have specifically named that way so that we could still operate them after Christmas? It is precisely at these markets, which promise a feeling of well-being coupled with the pure scent of wood and some pristine craftsmanship, that we increasingly find food stalls offering the same sausages as the discounter on the corner did the other day when it opened, alongside all kinds of knick-knacks made of genuine plastic varieties, freshly imported from low-wage countries with absolutely no environmental standards.",
+    "lu": "Oder d’Wantermäert, déi mir extra esou genannt hunn, fir se och nach no Chrëschtdag ubidden ze kënnen? Grad op dëse Mäert, déi ee Gefill vu Wuelbefanne verspriechen, zesumme mat engem pueren Holzgeroch an ursprénglechem Handwierk, fanne mir ëmmer méi Iessbuden, déi déi selwecht Wirschtecher ubidden, déi et d’lescht Kéier bei der Erëffnung vum Discounter ëm den Eck och gouf, esou wéi och all méigleche Krimskrams an alle Plastiksvariatiounen, dee frësch aus Länner ouni Ëmweltrichtlinnen an ze niddregem Salaire importéiert ginn ass."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-11",
+    "de": "Wo sind sie geblieben, meine geliebten Bräuche mit selbstgemachten Bienenwachskerzen aus der regionalen Werkstatt, mit saisonalem Selbstgekochtem von der Dorfgruppe, die zu einem gemütlichen Zusammensitzen einlädt? Stattdessen wird mir selbst gewärmte Pizza auf einem (Einweg-)Pappteller angeboten. Soll dieser Teller etwa so eine Art Nachhaltigkeit suggerieren, nur weil das darin enthaltene Plastik unsichtbar ist und uns so als vermeintlicher „Bio-Teller“ , als nachhaltige Alternative zum Einweg-Plastikteller verkauft wird?",
+    "fr": "Où sont-elles, mes coutumes bien-aimées avec des bougies en cire d'abeille faites maison dans l'atelier régional, avec de la cuisine maison saisonale, préparée par le groupe du village qui invite à s'asseoir confortablement ensemble? Au lieu de cela, on me propose une pizza réchauffée sur une assiette en carton (jetable). Cette assiette est-elle censée suggérer une sorte de durabilité, uniquement parce que le plastique est bien caché à l'intérieur? Elle nous est ainsi présentée comme une prétendue \"assiette bio\" - et comme l'équivalent durable de l'assiette en plastique jetable.",
+    "en": "Where have they gone, my beloved customs with homemade beeswax candles from the regional workshop, with seasonal home-cooked food from the village group, inviting people to sit together in a cosy atmosphere? Now, I am offered some heated pizza on a (disposable) paper plate. Is this plate actually supposed to suggest some kind of sustainability, only because it contains invisible plastic inside? In any way, customers are fooled into believing that it is an environmentally friendly “organic plate“, and a sustainable counterpart to the disposable plastic plate.",
+    "lu": "Wou sinn se, meng léif Traditioune mat selwergemaachtem Beiewuess aus dem regionalen Atelier, oder dat selwer gekacht, saisonaalt Iesse vun der Duerfgrupp, déi op e gemittlecht Zesummesinn invitéiert? Elo gëtt mer just eng gewiermte Pizza op engem („Einweg“-)Kartongsteller ugebueden. Soll dësen Teller vläicht Nohaltegkeet suggeréieren, just well de Plastik bannendran verschafft an net erkennbar ass? Esou gëtt en eis quasi als „Bio-Teller“ presentéiert - als nohaltegt Géigestéck zum „Einweg“-Plastikteller."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-12",
+    "de": "Nein, ehrlich Leute, ich bleibe lieber beim Aussuchen und Kaufen dessen, was mir wirklich fehlt  - und die übrige Zeit verbringe ich mit meinen Lieben. Das ist nachhaltiger - ohne Zweifel auch für meine Seele.",
+    "fr": "Non, honnêtement, je m'en tiens à choisir et à acheter ce qui me manque vraiment. Et en ce qui concerne le reste de mon temps, je préfère le passer avec mes proches. C'est plus durable - sans aucun doute aussi pour mon âme.",
+    "en": "Honestly, folks - I prefer to choose and buy what I am really lacking, and spend the rest of the time with my loved ones. It's more sustainable - no doubt for my soul as well.",
+    "lu": "Nee, éierlech: ech bleiwe léiwer beim Eraussichen a Kafe vun deene Saachen, déi ech wierklech brauch. De Rescht vu menger Zäit verbréngen ech mat deene Leit, déi mir wichteg sinn. Dat ass mat Sécherheet méi nohalteg - och fir meng Séil."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-13-1",
+    "de": "Weiterlesen: Auf den BENU",
+    "fr": "Lire la suite: Sur les pages",
+    "en": "Read more: On the BENU",
+    "lu": "Weiderliesen: Op de BENU"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-13-facebook",
+    "de": "Facebook",
+    "fr": "Facebook",
+    "en": "Facebook",
+    "lu": "Facebook"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-13-2",
+    "de": "und",
+    "fr": "Et",
+    "en": "And",
+    "lu": "an"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-13-insta",
+    "de": "Instagram",
+    "fr": "Instagram",
+    "en": "Instagram",
+    "lu": "Instagram"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-txt-13-3",
+    "de": "Seiten findest Du einen Post über das Konsummonster … Lesenswert ;)",
+    "fr": "de BENU, tu trouveras un post sur le monstre de la consommation ... A lire ;)",
+    "en": "pages you can find a post about the consumer monster ... Worth reading ;)",
+    "lu": "fënns Du e Post iwwer d’Konsummonster … Liesenswäert ;)"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-txt-1-1",
+    "de": "Singles Day. 11. November. Erfunden von Universitätsstudenten in China. Sie wählten den 11.11., weil das Datum wie vier \"Einsame\" aussieht. Alibaba übernahm das Datum 2009 und machte daraus einen Tag mit Sonderangeboten, der sich an Alleinstehende richtet, die sich etwas gönnen wollen.",
+    "fr": "Journée des célibataires. Le 11 novembre, créé par des étudiants universitaires en Chine. Ils ont choisi le 11.11 parce que la date ressemble à quatre 'solitaires'. Alibaba l'a reprise en 2009 et l'a transformée en une journée d'offres spéciales, destinée aux personnes seules souhaitant se soigner.",
+    "en": "Singles Day. November 11. Created by university students in China. They chose 11.11 because the date looks like four ‘lonely ones’. Alibaba picked it up in 2009 and turned it into a day of special offers, aimed at single people wanting to treat themselves.",
+    "lu": "Dag vun de Singelen. Den 11. November. Erfonnt vun Universitéitsstudenten a China. Si hunn sech fir den 11.11. entscheed, well déi Zifferen ausgesi wéi einsam Mënschen. Alibaba huet déi Iddi opgegraff am Joer 2009 an huet dorausser en Dag mat Promotioune gemat, déi an éischter Linn alleng liewend Mënsche viséiert hunn, déi sech eppes Guddes leeschte wéilten."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-txt-2-1",
+    "de": "Seitdem sind die Umsätze stetig gestiegen und der Tag ist heute wertvoller als jedes andere Einzelhandelsereignis der Welt. Letztes Jahr erzielte Alibaba am Singles Day einen Umsatz von 30,8 Milliarden Pfund, während die Verbraucher in den gesamten USA am Cyber Monday und am Black Friday zusammen 13,92 Milliarden Dollar ausgaben.",
+    "fr": "Depuis lors, les ventes n'ont cessé de croître et elle est désormais plus précieuse que tout autre événement de vente au détail dans le monde. L'année dernière, Alibaba a réalisé 30,8 milliards de livres sterling de ventes pour la Journée des célibataires, tandis que dans l'ensemble des États-Unis, les consommateurs ont dépensé 13,92 milliards de dollars sur le Cyber Monday et le Black Friday combinés.",
+    "en": "Since then, sales have grown steadily and it’s now more valuable than any other retail event in the world. Last year, Alibaba made £30.8 billion worth of Singles Day sales, while across the whole of the US, consumers spent $13.92 billion on Cyber Monday and Black Friday combined.",
+    "lu": "Säit däer Zäit sinn d'Verakfszuele kontinuéierlech eropgaang, an haut gëtt um Dag vun de Singelen méi Geschäft gemat wéi bei all aner kommerziell Verkafsinitiativ. Lescht Joer huet Alibaba op dësem Dag en Ëmsaz vun 30,8 Milliarden englesch Pond gemat wärenddeem an de ganzen USA d'Konsumenten 13,92 Milliarden US-Dollar ausginn hunn um Black Friday a Cyber Monday zesummen."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-2-signature",
+    "de": "[Halloween, Black Friday, Cyber Monday... Was ist das nächste große Einzelhandelsereignis? | The Drum 11.10.2019]",
+    "fr": "[Halloween, Black Friday, Cyber Monday... Quel est le prochain grand événement de vente au détail ? | Le Tambour 11.10.2019]",
+    "en": "[Halloween, Black Friday, Cyber Monday… What’s the next big retail event? | The Drum 11.10.2019]",
+    "lu": "[Halloween, Black Friday, Cyber Monday … wat kënnt als nächsten décken Verkafsevent? | The Drum 11.10.2019]"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-1",
+    "de": "Lasst uns gemeinsam anfangen, etwas zu",
+    "fr": "Commençons ensemble à",
+    "en": "Let's start together to",
+    "lu": "Loosst eis zesummen ufänken, eppes ze"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-2",
+    "de": "VERÄNDERN",
+    "fr": "CHANGER",
+    "en": "CHANGE",
+    "lu": "ÄNNEREN"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-3",
+    "de": ".",
+    "fr": "les choses.",
+    "en": "things.",
+    "lu": "."
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.halloween-quote-signature",
+    "de": "Georges",
+    "fr": "Georges",
+    "en": "Georges",
+    "lu": "Georges"
+  },
+  {
     "page": "Backoffice handle ordes",
     "key": "pdf.order-txt-left-1",
     "de": "Beim Versand dieser Bestellung haben wir uns bemüht, den Verbrauch von Ressourcen soweit wie möglich zu reduzieren!",
@@ -15259,9 +15667,9 @@
     "page": "Backoffice handle ordes",
     "key": "pdf.order-txt-left-6",
     "de": "Wir freuen uns auch über Deinen Besuch in unserem Shop im BENU VILLAGE in Esch-sur-Alzette.",
-    "fr": "Nous nous réjouissons également de ta visite dans notre boutique au BENU VILLAGE à Esch-sur-Alzette !",
-    "en": "We also look forward to your visit at our shop in the BENU VILLAGE in Esch-sur-Alzette!",
-    "lu": "Mir freeën eis och op Däi Besuch an eisem Buttek am BENU VILLAGE zu Esch-Uelzecht!"
+    "fr": "Nous nous réjouissons également de ta visite dans notre Shop au BENU VILLAGE à Esch-sur-Alzette !",
+    "en": "We also look forward to your visit at our Shop in the BENU VILLAGE in Esch-sur-Alzette!",
+    "lu": "Mir freeën eis och op Däi Besuch an eisem Shop am BENU VILLAGE zu Esch-Uelzecht!"
   },
   {
     "page": "Backoffice handle ordes",
