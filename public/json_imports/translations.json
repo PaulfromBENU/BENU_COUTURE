@@ -15209,6 +15209,14 @@
   },
   {
     "page": "Campaign",
+    "key": "welcome.campaign-title-halloween",
+    "de": "Halloween & Co",
+    "fr": "Halloween & Co",
+    "en": "Halloween & Co",
+    "lu": "Halloween & Co"
+  },
+  {
+    "page": "Campaign",
     "key": "campaigns.carte-halloween-title",
     "de": "Halloween & Co",
     "fr": "Halloween & Co",
