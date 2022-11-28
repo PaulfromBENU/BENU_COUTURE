@@ -15226,10 +15226,10 @@
   {
     "page": "Campaign",
     "key": "campaigns.carte-halloween-summary",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Weihnachts- und Wintermärkte wohin man schaut. Ist es das wonach wir suchen?",
+    "fr": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Des marchés de Noël et d'hiver partout où l'on regarde. C'est ce que nous recherchons ?",
+    "en": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Christmas and winter markets everywhere you look. Is this what we are looking for?",
+    "lu": "Halloween, Black Friday, Cyber ​​​​Monday, Black Week, Green Friday ... Chrëscht- a Wantermäert iwwerall wou Dir kuckt. Ass et dat wat mir sichen?"
   },
   {
     "page": "Campaign",
@@ -15265,7 +15265,7 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.halloween-txt-1-2",
+    "key": "campaigns.halloween-txt-2-1",
     "de": "Es gibt  einen Grund dafür: Das allgemeine Verlangen nach Nachhaltigkeit.",
     "fr": "Il y a une raison qui explique notre prise de position: le désir manifeste de durabilité.",
     "en": "There is a reason for us voicing our opinion: the general desire for sustainability.",
@@ -15273,7 +15273,7 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.halloween-txt-1-3",
+    "key": "campaigns.halloween-txt-3-1",
     "de": "Viele Menschen kommen zu uns, um über Alternativen zu sprechen. Nachhaltigere Alternativen ob beim Bauen, beim Einkauf, beim Essen und Trinken, bei der Bekleidung oder der Einrichtung. Inzwischen sind die Presse und das Internet voll mit Ratschlägen, Erklärungen und Definitionen bezüglich dessen, was es denn mit der Nachhaltigkeit so auf sich hat.",
     "fr": "De nombreuses personnes nous rendent visite pour parler d’alternatives, notamment des alternatives plus durables - que ce soit en matière de construction, d'achat, de nourriture et de boisson, de vêtements ou d'aménagement. Entre-temps, la presse et Internet regorgent de conseils, d'explications et de définitions sur ce que signifie la durabilité.",
     "en": "Many people reach out to us to talk about alternatives; more sustainable alternatives, whether in relation to building, shopping, eating and drinking, clothing or furnishings. Meanwhile, both the press and the internet are full of advice, explanations and definitions that are supposed to enlighten us on what sustainability is all about.",
@@ -15281,7 +15281,7 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.halloween-txt-1-4",
+    "key": "campaigns.halloween-txt-4-1",
     "de": "Schließlich wollen doch alle die Erde und das Klima retten, um unseren Kindern eine bessere Zukunft zu hinterlassen…",
     "fr": "Après tout, tout le monde veut surtout sauver la planète et le climat pour laisser un meilleur avenir à nos enfants…",
     "en": "Because, after all, we all want, above all, to save the earth and the climate in order to ensure a better future for our children…",
@@ -15289,7 +15289,7 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.halloween-txt-1-5",
+    "key": "campaigns.halloween-txt-5-1",
     "de": "… oder etwa nicht?",
     "fr": "… n’est-ce pas?",
     "en": "… right?",
