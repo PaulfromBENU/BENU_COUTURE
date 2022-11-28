@@ -285,8 +285,8 @@
 			}
 
 			// Second large picture transition
-			if ($(document).scrollTop() > ($('#transition-2').offset().top - 0.55 * $(window).height())) {
-				relativeScroll = $(document).scrollTop() - $('#transition-2').offset().top + 0.55 * $(window).height();
+			if ($(document).scrollTop() > ($('#transition-2').offset().top - 0.85 * $(window).height())) {
+				relativeScroll = $(document).scrollTop() - $('#transition-2').offset().top + 0.85 * $(window).height();
 				$('.scroll-grow-3').css('border-width', (Math.max(0, marginWidth - 0.2 * relativeScroll)) + 'px');
 				$('.scroll-opacity-3').css('opacity', Math.min(0.5, relativeScroll * 0.005 - 1));
 				// $('.scroll-fading-1').css('opacity', Math.max(0, 1 - relativeScroll * 0.01));
