@@ -33,6 +33,14 @@
 			"summary" => __('campaigns.carte-blanche-summary')
 		])
 
+		@include('includes.campaigns.overview', [
+			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'halloween']), 
+			"picture" => "BC_WS_Photos_PoliticalDeclaration_6.jpg", 
+			"title" => __('campaigns.halloween-title'), 
+			"date" => __('campaigns.halloween-date'), 
+			"summary" => __('campaigns.halloween-summary')
+		])
+
 		<!-- <div class="mt-10 mb-10 text-center">
 			<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']) }}" class="btn-couture-plain btn-couture-plain--fit btn-couture-plain--dark-hover">Campagne Carte Blanche</a>
 		</div> -->

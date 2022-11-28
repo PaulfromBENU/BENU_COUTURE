@@ -132,6 +132,9 @@
 			border: solid white 20px;
 			background-attachment: scroll;
 		}
+		&--halloween {
+			background-image: url('/images/pictures/campaigns/halloween-campaign-main-1.jpg');
+		}
 		a {
 			font-weight: 600;
 			text-decoration: underline;
@@ -333,6 +336,9 @@
 					background-position: center;
 					padding: 0 20px;
 					// -webkit-text-fill-color: transparent;
+					&--halloween {
+						background-image: url('/images/pictures/campaigns/halloween-campaign-side-1.jpg');
+					}
 				}
 			}
 		}
@@ -364,6 +370,9 @@
 			height: fit-content;
 			padding-top: 15vh;
 			background-attachment: scroll;
+		}
+		&--halloween {
+			background-image: url('/images/pictures/campaigns/halloween-campaign-transtion-1.jpg');
 		}
 		img {
 			position: absolute;
@@ -560,6 +569,9 @@
 		// 	object-fit: cover;
 		// 	z-index: -2;
 		// }
+		&--halloween {
+			background-image: url('/images/pictures/campaigns/halloween-campaign-transition-3.jpg');
+		}
 		&__opacifier {
 			position: absolute;
 			top: 0;
