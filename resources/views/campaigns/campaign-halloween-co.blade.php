@@ -122,7 +122,7 @@
 			</div>
 		</section>
 
-		<section class="single-campaign__section-3 single-campaign__section-3--halloween single-campaign__section-3--halloween scroll-grow-3" id="transition-2">
+		<section class="single-campaign__section-3 single-campaign__section-3--halloween scroll-grow-3" id="transition-2">
 			<div class="single-campaign__section-3__opacifier scroll-opacity-3"></div>
 			<div class="w-11/12 md:4/5 lg:w-3/4 m-auto single-campaign__section-3__txt-container flex flex-col justify-center">
 				<h2 class="single-campaign__section-3__title single-campaign__section-3__title--halloween">{{ __('campaigns.halloween-section-3-title') }}</h2>

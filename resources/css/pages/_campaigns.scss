@@ -543,9 +543,6 @@
 		background-size: cover;
 		border: solid $white 60px;
 		z-index: 1;
-		&--halloween {
-			padding-top: 15vh;
-		}
 		@include intermediate {
 			border: solid $white 20px;
 		}
