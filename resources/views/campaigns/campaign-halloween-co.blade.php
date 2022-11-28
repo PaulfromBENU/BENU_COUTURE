@@ -17,7 +17,7 @@
 		<section class="single-campaign__header single-campaign__header--halloween scroll-grow-1">
 			<div class="single-campaign__header__opacifier scroll-opacity-1" ></div>
 			<div class="w-11/12 md:4/5 lg:w-1/2 m-auto single-campaign__header__txt-container">
-				<h3 class="single-campaign__header__toptitle">{{ __('campaigns.halloween-main-picture-top-title') }}</h3>
+				<h1 class="single-campaign__header__toptitle">{{ __('campaigns.halloween-main-picture-top-title') }}</h1>
 				<h2 class="single-campaign__header__title">{{ __('campaigns.halloween-main-picture-title') }}</h2>
 
 				<div class="single-campaign__header__subtitle text-center scroll-fading-1" style="opacity: 1; text-align: center; margin-bottom: 0;">
@@ -28,8 +28,6 @@
 				</div>
 
 				<div class="scroll-appearing-1" style="opacity: 0;">
-					<h1 class="single-campaign__header__subtitle">{{ __('campaigns.halloween-main-picture-subtitle') }}</h1>
-
 					<p class="single-campaign__header__txt">
 						{{ __('campaigns.halloween-txt-1-1') }}
 					</p>
@@ -161,13 +159,13 @@
 		</section>
 
 		<section class="single-campaign__section-4" id="section-3bis-end">
-			<!-- <blockquote class="single-campaign__section-4__quote w-11/12 md:4/5 lg:w-1/2 m-auto">
+			<blockquote class="single-campaign__section-4__quote w-11/12 md:4/5 lg:w-1/2 m-auto">
 				{{ __('campaigns.halloween-quote-1') }} <span class="single-campaign__section-4__quote--highlight">{{ __('campaigns.halloween-quote-2') }}</span> {{ __('campaigns.halloween-quote-3') }}
 			</blockquote>
 			<div class="single-campaign__section-4__separator"></div>
 			<p class="single-campaign__section-4__signature">
 				{{ __('campaigns.halloween-quote-signature') }}
-			</p> -->
+			</p>
 
 			<div class="single-campaign__section-4__quote-2">
 				<p class="single-campaign__section-4__quote-2__symbols">
@@ -179,9 +177,9 @@
 				<p class="single-campaign__section-4__quote-2__txt">
 					{{ __('campaigns.halloween-quote-txt-2-1') }}
 				</p>
-				<a class="single-campaign__section-4__quote-2__signature" href="https://www.thedrum.com/opinion/2019/10/11/halloween-black-friday-cyber-monday-what-s-the-next-big-retail-event" target="_blank" rel="noreferrer">
+				<!-- <a class="single-campaign__section-4__quote-2__signature" href="https://www.thedrum.com/opinion/2019/10/11/halloween-black-friday-cyber-monday-what-s-the-next-big-retail-event" target="_blank" rel="noreferrer">
 					{{ __('campaigns.halloween-quote-2-signature') }}
-				</a>
+				</a> -->
 			</div>
 		</section>
 

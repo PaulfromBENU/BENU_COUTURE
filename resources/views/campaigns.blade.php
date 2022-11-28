@@ -35,7 +35,7 @@
 
 		@include('includes.campaigns.overview', [
 			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'halloween']), 
-			"picture" => "BC_WS_Photos_PoliticalDeclaration_6.jpg", 
+			"picture" => "halloween-campaign-main-1.jpg", 
 			"title" => __('campaigns.halloween-title'), 
 			"date" => __('campaigns.halloween-date'), 
 			"summary" => __('campaigns.halloween-summary')
