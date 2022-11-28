@@ -533,7 +533,7 @@
 	}
 	&__section-3 {
 		position: relative;
-		height: calc(100vh - 160px);
+		// height: calc(100vh - 160px);
 		padding-top: 20vh;
 		padding-bottom: 55px;
 		color: $white;
@@ -588,7 +588,7 @@
 		}
 		&__txt-container {
 			height: 100%;
-			overflow-y: auto;
+			// overflow-y: auto;
 			z-index: 2;
 			position: relative;
 		}

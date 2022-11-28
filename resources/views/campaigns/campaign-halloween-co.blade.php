@@ -131,7 +131,7 @@
 
 		<section class="single-campaign__section-3bis benu-container" id="transition-2-end">
 			<div class="flex justify-start flex-wrap">
-				<div class="single-campaign__section-3bis__txt flex flex-col lg:justify-end">
+				<div class="single-campaign__section-3bis__txt flex flex-col lg:justify-end" style="padding-top: 30px;">
 					<p class="single-campaign__section-3__txt">
 						{{ __('campaigns.halloween-txt-9') }}
 					</p>
@@ -301,10 +301,10 @@
 			}
 
 			// Last section text scroll
-			if ($(window).width() > 1250 && $(document).scrollTop() > ($('#transition-2-end').offset().top) - $(window).height()) {
-				relativeScroll = $(document).scrollTop() - $('#transition-2-end').offset().top + $(window).height();
-				$('.single-campaign__section-3bis__txt').css('padding-bottom', relativeScroll / 4);
-			}
+			// if ($(window).width() > 1250 && $(document).scrollTop() > ($('#transition-2-end').offset().top) - $(window).height()) {
+			// 	relativeScroll = $(document).scrollTop() - $('#transition-2-end').offset().top + $(window).height();
+			// 	$('.single-campaign__section-3bis__txt').css('padding-bottom', relativeScroll / 4);
+			// }
 		});
 	});
 </script>
