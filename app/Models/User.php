@@ -77,7 +77,10 @@ class User extends Authenticatable implements HasName, FilamentUser
     // For Filament
     public function getFilamentName(): string
     {
-        return $this->first_name;
+        if ($this->first_name) {
+            return $this->first_name;
+        }
+        return "";
     }
 
     /**
