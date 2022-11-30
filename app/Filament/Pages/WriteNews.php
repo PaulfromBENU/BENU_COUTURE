@@ -47,6 +47,7 @@ class WriteNews extends Page
 
     public $pending_articles;
     public $online_articles;
+    public $delete_check;
 
     public $article_title_fr = "";
     public $article_title_de = "";
@@ -112,6 +113,9 @@ class WriteNews extends Page
     public function refreshData()
     {
         $this->pending_articles = NewsArticle::where('is_ready', '0')->orderBy('updated_at', 'desc')->get();
+        foreach ($this->pending_articles as $pending_article) {
+            $this->delete_check[$pending_article->id] = 0;
+        }
         $this->online_articles = NewsArticle::where('is_ready', '1')->orderBy('updated_at', 'desc')->get();
     }
 
@@ -517,6 +521,16 @@ class WriteNews extends Page
         $news->is_ready = 0;
         $news->save();
         $this->refreshData();
+    }
+
+    public function checkDelete($article_id)
+    {
+        $this->delete_check[$article_id] = 1;
+    }
+
+    public function cancelDelete($article_id)
+    {
+        $this->delete_check[$article_id] = 0;
     }
 
     public function deleteNews($article_id)
