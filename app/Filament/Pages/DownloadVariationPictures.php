@@ -71,7 +71,7 @@ class DownloadVariationPictures extends Page
             $this->selected_variation = null;
             $this->variation_id = 0;
         } elseif (Creation::find($creation_id)) {
-            $this->computed_variations = Creation::find($creation_id)->articles;
+            $this->computed_variations = Creation::find($creation_id)->all_articles;
         }
     }
 

@@ -28,7 +28,7 @@
 					@else
 						<img src="{{ asset('images/pictures/articles/'.$variation->photos()->first()->file_name) }}">
 					@endif
-					<figcaption>{{ $variation->name }} - {{ $variation->size->value }} - {{ $variation->color->name }}</figcaption>
+					<figcaption>{{ $variation->name }} - {{ $variation->size->value }} - {{ $variation->color->name }} @if(!$variation->checked) - !! Not validated @endif</figcaption>
 		        </figure>
 			@endforeach
 		</div>

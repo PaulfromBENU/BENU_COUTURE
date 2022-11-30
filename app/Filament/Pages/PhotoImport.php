@@ -90,7 +90,8 @@ class PhotoImport extends Page
         if ($this->creation_id == '0') {
             $this->existing_variations = collect([]);
         } elseif (Creation::find($this->creation_id)) {
-            $this->existing_variations = $this->getAvailableArticles(Creation::find($this->creation_id));
+            // $this->existing_variations = $this->getAvailableArticles(Creation::find($this->creation_id));
+            $this->existing_variations = Creation::find($this->creation_id)->all_articles()->get();
         }
         $this->getSizeandColor();
     }
