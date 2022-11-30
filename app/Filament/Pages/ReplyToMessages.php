@@ -6,6 +6,9 @@ use Filament\Pages\Page;
 
 use App\Models\ContactMessage;
 use App\Models\BenuAnswer;
+use App\Models\User;
+
+use App\Jobs\SendContactAnswerConfirmationEmail;
 
 class ReplyToMessages extends Page
 {
@@ -75,7 +78,6 @@ class ReplyToMessages extends Page
             $benu_answer = new BenuAnswer();
             $benu_answer->message = $this->benu_answer[$thread];
             $benu_answer->contact_message_id = ContactMessage::where('thread', $thread)->orderBy('created_at', 'desc')->first()->id;
-
             if ($benu_answer->save()) {
                 $this->benu_answer[$thread] = "";
                 ContactMessage::where('thread', $thread)->update([
@@ -83,6 +85,9 @@ class ReplyToMessages extends Page
                     'is_answered' => '1',
                 ]);
                 $this->loadMessages();
+                if (User::where('email', $benu_answer->contactMessage->email)->count() > 0) {
+                    SendContactAnswerConfirmationEmail::dispatchAfterResponse(User::where('email', $benu_answer->contactMessage->email)->first());
+                }
             }
         }
     }

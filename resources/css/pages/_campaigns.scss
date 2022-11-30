@@ -132,6 +132,9 @@
 			border: solid white 20px;
 			background-attachment: scroll;
 		}
+		&--halloween {
+			background-image: url('/images/pictures/campaigns/halloween-campaign-main-1.jpg');
+		}
 		a {
 			font-weight: 600;
 			text-decoration: underline;
@@ -333,6 +336,9 @@
 					background-position: center;
 					padding: 0 20px;
 					// -webkit-text-fill-color: transparent;
+					&--halloween {
+						background-image: url('/images/pictures/campaigns/halloween-campaign-side-1.jpg');
+					}
 				}
 			}
 		}
@@ -364,6 +370,9 @@
 			height: fit-content;
 			padding-top: 15vh;
 			background-attachment: scroll;
+		}
+		&--halloween {
+			background-image: url('/images/pictures/campaigns/halloween-campaign-transtion-1.jpg');
 		}
 		img {
 			position: absolute;
@@ -524,7 +533,7 @@
 	}
 	&__section-3 {
 		position: relative;
-		height: calc(100vh - 160px);
+		// height: calc(100vh - 160px);
 		padding-top: 20vh;
 		padding-bottom: 55px;
 		color: $white;
@@ -560,6 +569,9 @@
 		// 	object-fit: cover;
 		// 	z-index: -2;
 		// }
+		&--halloween {
+			background-image: url('/images/pictures/campaigns/halloween-campaign-transition-3.jpg');
+		}
 		&__opacifier {
 			position: absolute;
 			top: 0;
@@ -576,7 +588,7 @@
 		}
 		&__txt-container {
 			height: 100%;
-			overflow-y: auto;
+			// overflow-y: auto;
 			z-index: 2;
 			position: relative;
 		}
@@ -593,6 +605,9 @@
 			}
 			@include mobile {
 				font: normal normal 700 45px/64px 'Barlow Condensed';
+			}
+			&--halloween {
+				font: normal normal 700 70px/84px 'Barlow Condensed';
 			}
 		}
 		&__txt {

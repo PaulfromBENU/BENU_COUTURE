@@ -366,11 +366,12 @@ class GeneralController extends Controller
     public function showSingleCampaign(string $slug)
     {
         $campaign_slugs = [
-            'carte-blanche',
+            'carte-blanche' => 'white-card',
+            'halloween' => 'halloween-co',
         ];
 
-        if (in_array($slug, $campaign_slugs)) {
-            return view('campaigns.campaign-white-card');
+        if ($campaign_slugs[$slug] !== null) {
+            return view('campaigns.campaign-'.$campaign_slugs[$slug]);
         }
     }
 

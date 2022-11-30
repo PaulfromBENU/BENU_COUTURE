@@ -10,7 +10,7 @@
 
 @section('main-content')
     @include('includes.welcome.presentation')
-    @include('includes.welcome.campaign')
+    @include('includes.welcome.campaign-halloween')
     @include('includes.welcome.last_creations')
     @include('includes.welcome.other_creations')
 @endsection

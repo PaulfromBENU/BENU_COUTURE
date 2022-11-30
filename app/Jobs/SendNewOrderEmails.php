@@ -44,11 +44,11 @@ class SendNewOrderEmails implements ShouldQueue
      */
     public function handle()
     {
-
-        Mail::mailer('smtp_admin')->to($this->email)->send(new NewOrder($this->order, $this->pdf_invoice));
         if(app('env') == 'prod') {
             Mail::mailer('smtp_admin')->to($this->email)->bcc(config('mail.mailers.smtp_admin.sender'))->send(new NewOrder($this->order, $this->pdf_invoice));
             Mail::mailer('smtp_admin')->to(config('mail.mailers.smtp_admin.sender'))->send(new NewOrderForAdmin($this->order));
+        } else {
+            Mail::mailer('smtp_admin')->to($this->email)->send(new NewOrder($this->order, $this->pdf_invoice));
         }
     }
 }
