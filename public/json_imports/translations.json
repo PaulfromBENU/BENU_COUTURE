@@ -15217,7 +15217,7 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.carte-halloween-title",
+    "key": "campaigns.halloween-title",
     "de": "Halloween & Co",
     "fr": "Halloween & Co",
     "en": "Halloween & Co",
@@ -15225,7 +15225,7 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.carte-halloween-date",
+    "key": "campaigns.halloween-date",
     "de": "novembre 2022",
     "fr": "Novombre 2022",
     "en": "novembre 2022",
@@ -15233,11 +15233,11 @@
   },
   {
     "page": "Campaign",
-    "key": "campaigns.carte-halloween-summary",
+    "key": "campaigns.halloween-summary",
     "de": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Weihnachts- und Wintermärkte wohin man schaut. Ist es das wonach wir suchen?",
-    "fr": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Des marchés de Noël et d'hiver partout où l'on regarde. C'est ce que nous recherchons ?",
-    "en": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Christmas and winter markets everywhere you look. Is this what we are looking for?",
-    "lu": "Halloween, Black Friday, Cyber ​​​​Monday, Black Week, Green Friday ... Chrëscht- a Wantermäert iwwerall wou Dir kuckt. Ass et dat wat mir sichen?"
+    "fr": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Des marchés de Noël et d'hiver partout où on regarde. Est-ce vraiment ce que nous recherchons ?",
+    "en": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Christmas and winter markets everywhere you look. Is this really what we are looking for?",
+    "lu": "Halloween, Black Friday, Cyber Mondy, Black Week, Green Friday,... Chrëscht- a Wantermäert, egal wouhin ee kuckt. Ass et wierklech dat, wat mir sichen?"
   },
   {
     "page": "Campaign",
@@ -15491,8 +15491,8 @@
     "page": "Campaign",
     "key": "campaigns.halloween-txt-13-2",
     "de": "und",
-    "fr": "Et",
-    "en": "And",
+    "fr": "et",
+    "en": "and",
     "lu": "an"
   },
   {

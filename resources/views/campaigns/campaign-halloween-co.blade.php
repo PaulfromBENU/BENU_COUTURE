@@ -104,7 +104,7 @@
 				</div>
 				<div class="single-campaign__section-2__txt flex flex-col lg:justify-end">
 					<p>
-						{{ __('campaigns.halloween-txt-8-1') }} <a href="https://www.cnbc.com/2019/11/29/psychology-of-black-friday-shopping-phenomenon-and-crowds-explained.html" target="_blank" rel="noreferrer" class="single-campaign__section-3__txt__link">{{ __('campaigns.halloween-txt-8-1-link') }}</a> {{ __('campaigns.halloween-txt-8-2') }}
+						{{ __('campaigns.halloween-txt-8-1') }} <a href="https://www.tagesschau.de/wirtschaft/verbraucher/black-friday-verbraucherschutz-rabattaktion-scheinrabatte-101.html" target="_blank" rel="noreferrer" class="single-campaign__section-3__txt__link">{{ __('campaigns.halloween-txt-8-1-link') }}</a> {{ __('campaigns.halloween-txt-8-2') }}
 					</p>
 					<p>
 						{{ __('campaigns.halloween-txt-8-3') }}
