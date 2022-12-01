@@ -2754,10 +2754,10 @@
   {
     "page": "mentions legals",
     "key": "footer.legal-txt-1",
-    "de": "Willkommen auf der Internetseite",
-    "fr": "Bienvenue sur le site Internet",
-    "en": "Welcome to the website",
-    "lu": "Wëllkomm op der Internetsäit"
+    "de": "Willkommen auf einer Internetseite von BENU Village Esch asbl .",
+    "fr": "Bienvenue sur un site Internet de BENU Village Esch asbl.",
+    "en": "Welcome to a website of BENU Village Esch asbl.",
+    "lu": "Wëllkomm op enger Internetsäit vu BENU Village Esch asbl."
   },
   {
     "page": "mentions legals",
@@ -2778,10 +2778,10 @@
   {
     "page": "mentions legals",
     "key": "footer.legal-highlight-1",
-    "de": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949  •  www.benucouture.lu",
-    "fr": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949  •  www.benucouture.lu",
-    "en": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949  •  www.benucouture.lu",
-    "lu": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949  •  www.benucouture.lu"
+    "de": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949",
+    "fr": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949",
+    "en": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949",
+    "lu": "50, rue des Celtes  •  L-1318 Luxembourg  •  Tel. +352 2791 1949"
   },
   {
     "page": "mentions legals",
