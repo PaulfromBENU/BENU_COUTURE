@@ -26,19 +26,19 @@
 		<h1 class="all-campaigns__title">{{ __('campaigns.all-title') }}</h1>
 
 		@include('includes.campaigns.overview', [
+			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'black-friday']), 
+			"picture" => "halloween-campaign-main-1.jpg", 
+			"title" => __('campaigns.halloween-title'), 
+			"date" => __('campaigns.halloween-date'), 
+			"summary" => __('campaigns.halloween-summary')
+		])
+
+		@include('includes.campaigns.overview', [
 			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'carte-blanche']), 
 			"picture" => "BC_WS_Photos_PoliticalDeclaration_6.jpg", 
 			"title" => __('campaigns.carte-blanche-title'), 
 			"date" => __('campaigns.carte-blanche-date'), 
 			"summary" => __('campaigns.carte-blanche-summary')
-		])
-
-		@include('includes.campaigns.overview', [
-			"link" => route('campaign-single-'.app()->getLocale(), ['slug' => 'halloween']), 
-			"picture" => "halloween-campaign-main-1.jpg", 
-			"title" => __('campaigns.halloween-title'), 
-			"date" => __('campaigns.halloween-date'), 
-			"summary" => __('campaigns.halloween-summary')
 		])
 
 		<!-- <div class="mt-10 mb-10 text-center">

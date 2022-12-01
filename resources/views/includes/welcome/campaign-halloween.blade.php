@@ -8,7 +8,7 @@
 					<img src="{{ asset('images/pictures/campaigns/halloween-campaign-main-1.jpg') }}" class="m-auto">
 				</div>
 				<div class="flex justify-center flex-wrap welcome-campaign__left__links">
-					<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'halloween']) }}" class="block btn-couture">{{ __('welcome.campaign-link-1') }}</a>
+					<a href="{{ route('campaign-single-'.app()->getLocale(), ['slug' => 'black-friday']) }}" class="block btn-couture">{{ __('welcome.campaign-link-1') }}</a>
 					<!-- <a href="#" class="block btn-couture">{{ __('welcome.campaign-link-2') }}</a> -->
 				</div>
 			</div>
