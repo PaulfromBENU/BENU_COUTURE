@@ -367,6 +367,7 @@ class GeneralController extends Controller
     {
         $campaign_slugs = [
             'carte-blanche' => 'white-card',
+            'black-friday' => 'halloween-co',
             'halloween' => 'halloween-co',
         ];
 
