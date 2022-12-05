@@ -608,6 +608,15 @@
 			}
 			&--halloween {
 				font: normal normal 700 70px/84px 'Barlow Condensed';
+				@include large {
+					font: normal normal 700 100px/114px 'Barlow Condensed';
+				}
+				@include tablet {
+					font: normal normal 700 50px/64px 'Barlow Condensed';
+				}
+				@include mobile {
+					font: normal normal 700 35px/44px 'Barlow Condensed';
+				}
 			}
 		}
 		&__txt {
