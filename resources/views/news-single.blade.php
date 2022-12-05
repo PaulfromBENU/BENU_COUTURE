@@ -23,7 +23,7 @@ $localized_label = "link_label_".app()->getLocale();
 
 @section('breadcrumbs')
 	<div class="breadcrumbs pattern-bg">
-		<div class="benu-container breadcrumbs__content flex justify-start">
+		<div class="benu-container breadcrumbs__content flex justify-start flex-wrap">
 			<a href="{{ route('home', [app()->getLocale()]) }}">{{ __('breadcrumbs.home') }}</a>
 			<div class="pl-5 pr-5">
 				>
@@ -32,7 +32,7 @@ $localized_label = "link_label_".app()->getLocale();
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('news-'.app()->getLocale(), ['slug' => $news->$localized_slug]) }}" class="primary-color"><strong>{{ $news->$localized_title }}</strong></a>
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => $news->$localized_slug]) }}" class="primary-color"><strong>{{ Illuminate\Support\Str::limit($news->$localized_title, 50) }}</strong></a>
 		</div>
 	</div>
 @endsection
@@ -115,7 +115,7 @@ $localized_label = "link_label_".app()->getLocale();
 						</p>
 					</div>
 					<h3>
-						{{ $previous_news->$localized_title }}
+						{{ Illuminate\Support\Str($previous_news->$localized_title, 60) }}
 					</h3>
 				</div>
 			</a>
@@ -135,7 +135,7 @@ $localized_label = "link_label_".app()->getLocale();
 						</p>
 					</div>
 					<h3>
-						{{ $next_news->$localized_title }}
+						{{ Illuminate\Support\Str($next_news->$localized_title, 60) }}
 					</h3>
 				</div>
 				<div class="single-news__prev-next__block__img-container">
