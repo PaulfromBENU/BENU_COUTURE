@@ -32,7 +32,7 @@ $localized_label = "link_label_".app()->getLocale();
 			<div class="pl-5 pr-5">
 				>
 			</div>
-			<a href="{{ route('news-'.app()->getLocale(), ['slug' => $news->$localized_slug]) }}" class="primary-color"><strong>{{ Illuminate\Support\Str::limit($news->$localized_title, 60) }}</strong></a>
+			<a href="{{ route('news-'.app()->getLocale(), ['slug' => $news->$localized_slug]) }}" class="primary-color"><strong>{{ Illuminate\Support\Str::limit($news->$localized_title, 100) }}</strong></a>
 		</div>
 	</div>
 @endsection
