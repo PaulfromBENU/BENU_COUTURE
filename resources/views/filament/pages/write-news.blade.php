@@ -341,7 +341,7 @@
 					@break
 
 					@case('3')
-						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Picture</h4>
+						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Landscape Picture</h4>
 						<input type="file" wire:model="element_photo_files.{{ $i }}" class="new-photo-form__file-input">
 					    <div wire:loading wire:target="element_photo_files.{{ $i }}">Uploading...</div>
 
@@ -358,6 +358,40 @@
 					        <div class="flex justify-start new-photo-form__img-gallery">
 						        <div class="new-photo-form__img-gallery__img-container">
 						        	<img src="{{ asset('images/pictures/news/'.$element_photo_files[$i]) }}">
+						        </div>
+						    </div>
+					    @endif
+
+					    <div class="flex create-news__new-link">
+							<div class="create-news__new-link__field">
+								<label>Photo Alt:</label><br/>
+								<input type="text" name="element_photo_alts_{{ $i }}" wire:model.defer="element_photo_alts.{{ $i }}">
+							</div>
+							<div class="create-news__new-link__field">
+								<label>Photo Title:</label><br/>
+								<input type="text" name="element_photo_titles_{{ $i }}" wire:model.defer="element_photo_titles.{{ $i }}">
+							</div>
+						</div>
+					@break
+
+					@case('4')
+						<h4 class="create-news__new-element-title">Element #{{ $i + 1 }} - Portrait Picture</h4>
+						<input type="file" wire:model="element_vertical_photo_files.{{ $i }}" class="new-photo-form__file-input">
+					    <div wire:loading wire:target="element_vertical_photo_files.{{ $i }}">Uploading...</div>
+
+					    @error('element_vertical_photo_files') <span class="error">{{ $message }}</span> @enderror
+					    @if(is_file($element_vertical_photo_files[$i]))
+					    	<h4>Photo Preview:</h4>
+					        <div class="flex justify-start new-photo-form__img-gallery">
+						        <div class="new-photo-form__img-gallery__img-container">
+						        	<img src="{{ $element_vertical_photo_files[$i]->temporaryUrl() }}">
+						        </div>
+						    </div>
+					    @elseif(is_string($element_vertical_photo_files[$i]) && $element_vertical_photo_files[$i] !== "")
+					    	<h4>Photo Preview:</h4>
+					        <div class="flex justify-start new-photo-form__img-gallery">
+						        <div class="new-photo-form__img-gallery__img-container">
+						        	<img src="{{ asset('images/pictures/news/'.$element_vertical_photo_files[$i]) }}">
 						        </div>
 						    </div>
 					    @endif
@@ -403,7 +437,8 @@
 				<button wire:click.prevent="addElement(0)">Add a paragraph</button>
 				<button wire:click.prevent="addElement(1)">Add a highlight</button>
 				<button wire:click.prevent="addElement(2)">Add a button with link</button>
-				<button wire:click.prevent="addElement(3)">Add a picture</button>
+				<button wire:click.prevent="addElement(3)">Add a landscape picture</button>
+				<button wire:click.prevent="addElement(4)">Add a portrait picture</button>
 			</div>
 			
 			</div>
