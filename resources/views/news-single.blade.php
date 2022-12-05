@@ -91,6 +91,12 @@ $localized_label = "link_label_".app()->getLocale();
 					</div>
 				@break
 
+				@case('4')
+					<div class="single-news__img-container--portrait">
+						<img src="{{ asset('images/pictures/news/'.$element->photo_file_name) }}" alt="{{ $element->photo_alt }}" title="{{ $element->photo_title }}">
+					</div>
+				@break
+
 				@default
 					<p class="single-news__txt">
 						{!! $element->$localized_content !!}

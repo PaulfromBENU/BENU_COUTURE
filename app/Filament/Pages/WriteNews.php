@@ -95,6 +95,7 @@ class WriteNews extends Page
     public $element_contents_lu = [];
     public $element_contents_en = [];
     public $element_photo_files = [];
+    public $element_vertical_photo_files = [];
     public $element_photo_alts = [];
     public $element_photo_titles = [];
     public $element_links = [];
@@ -173,7 +174,16 @@ class WriteNews extends Page
             $this->element_contents_de[$i] = $element->content_de;
             $this->element_contents_lu[$i] = $element->content_lu;
             $this->element_contents_en[$i] = $element->content_en;
-            $this->element_photo_files[$i] = $element->photo_file_name;
+            if ($element->type == 3) {
+                $this->element_photo_files[$i] = $element->photo_file_name;
+                $this->element_vertical_photo_files[$i] = null;
+            } elseif ($element->type == 4) {
+                $this->element_photo_files[$i] = null;
+                $this->element_vertical_photo_files[$i] = $element->photo_file_name;
+            } else {
+                $this->element_photo_files[$i] = null;
+                $this->element_vertical_photo_files[$i] = null;
+            }
             $this->element_photo_alts[$i] = $element->photo_alt;
             $this->element_photo_titles[$i] = $element->photo_title;
             $this->element_links[$i] = $element->link;
@@ -259,6 +269,7 @@ class WriteNews extends Page
         $this->element_contents_lu[$this->number_of_elements] = "";
         $this->element_contents_en[$this->number_of_elements] = "";
         $this->element_photo_files[$this->number_of_elements] = null;
+        $this->element_vertical_photo_files[$this->number_of_elements] = null;
         $this->element_photo_alts[$this->number_of_elements] = "";
         $this->element_photo_titles[$this->number_of_elements] = "";
         $this->element_links[$this->number_of_elements] = "";
@@ -288,6 +299,9 @@ class WriteNews extends Page
 
         unset($this->element_photo_files[$index]);
         $this->element_photo_files = array_values($this->element_photo_files);
+
+        unset($this->element_vertical_photo_files[$index]);
+        $this->element_vertical_photo_files = array_values($this->element_vertical_photo_files);
 
         unset($this->element_photo_alts[$index]);
         $this->element_photo_alts = array_values($this->element_photo_alts);
@@ -474,9 +488,34 @@ class WriteNews extends Page
                         if($img->save(public_path('images/pictures/news/'.$file_name))) {
                             $element->photo_file_name = $file_name;
                         }
+                    } else {
+                        $element->photo_file_name = $this->element_photo_files[$i];
                     }
-                } else {
-                    $element->photo_file_name = $this->element_photo_files[$i];
+                }
+
+                // New article portrait photo handling
+                if($this->element_vertical_photo_files[$i]) {
+                    if(!is_string($this->element_vertical_photo_files[$i])) {
+                        $img = Image::make($this->element_vertical_photo_files[$i]);
+                        $file_name = 'news-additionnal-picture-'.$this->article_slug_en.'-'.$i.'.'.$this->element_vertical_photo_files[$i]->getClientOriginalExtension();
+                        if ($img->width() > $img->height()) {
+                            $img->rotate(90);
+                        }
+                        $img->resize(850, 1000, function ($constraint) {
+                            $constraint->aspectRatio();
+                            $constraint->upsize();
+                        });
+
+                        if($img->save(public_path('images/pictures/news/'.$file_name))) {
+                            $element->photo_file_name = $file_name;
+                        }
+                    } else {
+                        $element->photo_file_name = $this->element_vertical_photo_files[$i];
+                    }
+                }
+
+                if (!$this->element_vertical_photo_files[$i] && !$this->element_photo_files[$i]) {
+                    $element->photo_file_name = null;
                 }
 
                 $element->photo_alt = $this->element_photo_alts[$i];
@@ -501,6 +540,7 @@ class WriteNews extends Page
                 'element_contents_lu',
                 'element_contents_en',
                 'element_photo_files',
+                'element_vertical_photo_files',
                 'element_photo_alts',
                 'element_photo_titles',
                 'element_links',
