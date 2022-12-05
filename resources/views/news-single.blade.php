@@ -125,7 +125,7 @@ $localized_label = "link_label_".app()->getLocale();
 			
 			@if($next_news !== null)
 			<a class="single-news__prev-next__block justify-between flex-row-reverse lg:flex-row" href="{{ route('news-'.app()->getLocale(), ['slug' => $next_news->$localized_slug]) }}">
-				<div class="pr-0 pl-4 lg:pr-4 lg:pl-0 w-7/10">
+				<div class="pr-0 pl-4 lg:pr-4 lg:pl-0" style="width: 70%;">
 					<div class="flex justify-end mb-3">
 						<p class="single-news__prev-next__block__text">
 							{{ __('news.next-article') }}
