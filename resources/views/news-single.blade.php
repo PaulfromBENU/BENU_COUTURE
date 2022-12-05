@@ -115,7 +115,7 @@ $localized_label = "link_label_".app()->getLocale();
 						</p>
 					</div>
 					<h3>
-						{{ Illuminate\Support\Str($previous_news->$localized_title, 60) }}
+						{{ Illuminate\Support\Str::limit($previous_news->$localized_title, 60) }}
 					</h3>
 				</div>
 			</a>
@@ -135,7 +135,7 @@ $localized_label = "link_label_".app()->getLocale();
 						</p>
 					</div>
 					<h3>
-						{{ Illuminate\Support\Str($next_news->$localized_title, 60) }}
+						{{ Illuminate\Support\Str::limit($next_news->$localized_title, 60) }}
 					</h3>
 				</div>
 				<div class="single-news__prev-next__block__img-container">
