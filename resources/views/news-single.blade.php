@@ -101,7 +101,7 @@ $localized_label = "link_label_".app()->getLocale();
 
 		<div class="single-news__prev-next flex justify-between flex-wrap">
 			@if($previous_news !== null)
-			<a class="single-news__prev-next__block justify-start" href="{{ route('news-'.app()->getLocale(), ['slug' => $previous_news->$localized_slug]) }}">
+			<a class="single-news__prev-next__block justify-between" href="{{ route('news-'.app()->getLocale(), ['slug' => $previous_news->$localized_slug]) }}">
 				<div class="single-news__prev-next__block__img-container">
 					<img src="{{ asset('images/pictures/news/'.$previous_news->main_photo) }}" alt="{{ $previous_news->main_photo_alt }}" title="{{ $previous_news->main_photo_title }}" />
 				</div>
@@ -124,7 +124,7 @@ $localized_label = "link_label_".app()->getLocale();
 			@endif
 			
 			@if($next_news !== null)
-			<a class="single-news__prev-next__block justify-end flex-row-reverse lg:flex-row" href="{{ route('news-'.app()->getLocale(), ['slug' => $next_news->$localized_slug]) }}">
+			<a class="single-news__prev-next__block justify-between flex-row-reverse lg:flex-row" href="{{ route('news-'.app()->getLocale(), ['slug' => $next_news->$localized_slug]) }}">
 				<div class="pr-0 pl-4 lg:pr-4 lg:pl-0">
 					<div class="flex justify-start mb-3">
 						<p class="single-news__prev-next__block__text">
