@@ -254,9 +254,12 @@
 				}
 			}
 			h3 {
-				font: normal normal 700 24px/28px 'Barlow Condensed';
+				font: normal normal 700 22px/24px 'Barlow Condensed';
 				color: $primary-color;
 				transition: color 0.2s;
+				@include mobile {
+					font: normal normal 700 20px/22px 'Barlow Condensed';
+				}
 			}
 			&__chevron {
 				width: 20px;
@@ -275,7 +278,8 @@
 			}
 			&__img-container {
 				height: 100%;
-				width: 40%;
+				width: 30%;
+				min-width: 30%;
 				border-radius: 8px;
 				overflow: hidden;
 				img {
