@@ -61,7 +61,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Custom Blade @inshop
         Blade::directive('inshop', function () {
-            return "<?php if(auth()->check() && auth()->user()->role == 'vendor'): ?>";
+            return "<?php if(auth()->check() && auth()->user()->usesSalesInterface()): ?>";
         });
 
         Blade::directive('endinshop', function () {
