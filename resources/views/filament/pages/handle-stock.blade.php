@@ -1,5 +1,5 @@
 <x-filament::page>
-	<form method="POST" wire:submit.prevent="saveVariation" class="stock-handling">
+	<form method="POST" wire:submit.prevent="saveVariation" class="stock-handling" onkeydown="return event.key != 'Enter';">
 		@csrf
 
 		<h2>Select a variation to update</h2>
@@ -44,13 +44,13 @@
 			<div class="flex justify-start new-photo-form__variations-gallery" style="height: auto; overflow-y: auto;">
 				@if($selected_variation !== null && $selected_variation->photos()->count() > 0)
 					@foreach($selected_variation->photos()->get() as $photo)
-						<figure class="new-photo-form__variations-gallery__img-container text-center">
+						<figure class="new-photo-form__variations-gallery__img-container text-center" wire:key="photo-display-{{ $photo->id }}">
 							<figcaption style="height: 25px;">{{ explode("/", $photo->file_name)[2] }}</figcaption>
 							<img src="{{ asset('images/pictures/articles/'.$photo->file_name) }}" style="margin-bottom: 5px;">
 							<input type="checkbox" name="is_front" value="1" id="is_front_{{ $photo->id }}" wire:model="front_pictures.{{ $photo->id }}" style="border-radius: 4px; margin-right: 5px;">
 							<label for="is_front_{{ $photo->id }}">Is front picture</label>
 
-							<button wire:click.prevent.stop="deletePhoto({{ $photo->id }})" class="flex" style="margin: auto; margin-top: 5px; padding: 10px; border: none; font-size: 1rem;">
+							<button wire:click.prevent.stop="deletePhoto({{ $photo->id }})" class="flex" style="margin: auto; margin-top: 5px; padding: 10px; border: none; font-size: 1rem;" tabindex="-1">
 								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 								  <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
 								</svg> Delete picture
@@ -64,7 +64,7 @@
 			<h4>Photos Preview:</h4>
 	        <div class="flex justify-start new-photo-form__img-gallery" style="overflow-x: auto; height: fit-content; min-height: 20px; max-height: 220px;">
 		        @foreach($photos as $photo)
-		        <div class="new-photo-form__img-gallery__img-container" style="height: auto;">
+		        <div class="new-photo-form__img-gallery__img-container" style="height: auto;" wire:key="photo-preview-{{ $photo->id }}">
 		        	<img src="{{ $photo->temporaryUrl() }}">
 		        </div>
 		        @endforeach

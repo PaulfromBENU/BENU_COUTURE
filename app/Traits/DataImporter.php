@@ -1227,12 +1227,12 @@ trait DataImporter {
         foreach ($creations_lou as $creation_lou) {
             if (Article::query()
                 ->where('is_extra_accessory', '1')
-                ->where('name', 'LIKE', '%'.ucfirst(strtolower($creation_lou['name'])).'%')
+                ->where('name', "LIKE", "%".ucfirst(strtolower($creation_lou['name']))."%")
                 ->count() > 0) {
 
                 $extra_accessory_articles = Article::query()
                 ->where('is_extra_accessory', '1')
-                ->where('name', 'LIKE', '%'.ucfirst(strtolower($creation_lou['name'])).'%')
+                ->where('name', 'LIKE', "%".ucfirst(strtolower($creation_lou['name']))."%")
                 ->get();
 
                 foreach ($extra_accessory_articles as $article) {
@@ -1453,6 +1453,7 @@ trait DataImporter {
 
                     // Size category update
                     $article->size_category = $creation_lou['Enveloppe'];
+                    $article->save();
                 }
 
                 // Keywords handling

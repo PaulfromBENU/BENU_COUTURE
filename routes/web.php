@@ -33,9 +33,9 @@ if (app('env') == 'landing') {
 	Route::get('/de', 'GeneralController@landingDe')->name('landing-de');
 	Route::get('/lu', 'GeneralController@landingLu')->name('landing-lu');
 } else {
-	// Home does not need URI translation. Any locale may land on this page, middleware will ensure locale is prepended to the URI.
+	// The following routes do not need URI translation. Any locale may land on this page, middleware will ensure locale is prepended to the URI.
 	// Same for auth requests, no translation needed.
-	// Dashboard is also common to everyone, due to several redirections that would need to be handled in the auth process
+	// Dashboard is also common to all locales, to avoid several redirections that would need to be handled in the auth process
 	Route::group([
 		'prefix' => '{locale?}',
 		'middleware' => 'setlocale'], function() {
