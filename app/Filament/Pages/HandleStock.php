@@ -205,7 +205,7 @@ class HandleStock extends Page
             }
         }
         if ($saved_pictures_count == count($this->photos)) {
-            $this->loadVariationData();
+            // $this->loadVariationData();
             $this->clearUploadPictures();
         } else {
             $this->notify('danger', 'An error occured, we could not save all the pictures... Please check all files are pictures and contact an administrator if the problem is still present.');
@@ -220,7 +220,7 @@ class HandleStock extends Page
             $article->photos()->detach($photo_id);
             File::delete(public_path('images/pictures/articles/'.$photo->file_name));
             $this->notify('success', 'Photo deleted!');
-            $this->loadVariationData();
+            // $this->loadVariationData();
             $this->clearUploadPictures();
         }
     }
