@@ -40,6 +40,7 @@ class CreationKeywords extends Page
     public $new_keywords;
     public $new_keywords_count;
     public $deleted_keywords;
+    public $example_photo;
 
     public function mount()
     {
@@ -62,6 +63,7 @@ class CreationKeywords extends Page
         ];
         $this->new_keywords_count = 1;
         $this->deleted_keywords = [];
+        $this->example_photo = "";
     }
 
     public function updatedCreationName()
@@ -74,6 +76,9 @@ class CreationKeywords extends Page
                 $this->keywords[$keyword->id]['fr'] = $keyword->keyword_fr;
                 $this->keywords[$keyword->id]['en'] = $keyword->keyword_en;
                 $this->keywords[$keyword->id]['de'] = $keyword->keyword_de;
+            }
+            if ($this->selected_creation->articles()->first()->photos()->count() > 0) {
+                $this->example_photo = $this->selected_creation->articles()->first()->photos()->first()->file_name;
             }
         } else {
             $this->initializeFields();

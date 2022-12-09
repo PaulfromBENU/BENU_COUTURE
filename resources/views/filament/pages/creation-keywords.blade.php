@@ -2,7 +2,7 @@
 	<h2>Select a creation to see and update keywords</h2>
 
 	<div class="flex justify-between mb-10 sell-form__input-group">
-		<div class="flex justify-start flex-wrap">
+		<div class="flex justify-between flex-wrap" style="width: 100%;">
 			<div>
 				<label for="creation-0">Creation</label><br/>
 				<select id="creation-0" class="sell-form__select" wire:model="creation_name">
@@ -11,6 +11,11 @@
 						<option value="{{ $creation->name }}" wire:key="creations-options-{{ $creation->id }}">{{ $creation->name }}</option>
 					@endforeach
 				</select> 
+			</div>
+			<div>
+				@if($example_photo !== "")
+				<img src="{{ asset('images/pictures/articles/'.$example_photo) }}" style="height: 24vh;">
+				@endif
 			</div>
 		</div>
 	</div>
