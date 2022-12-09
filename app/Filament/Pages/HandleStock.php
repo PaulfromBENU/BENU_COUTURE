@@ -9,6 +9,7 @@ use Livewire\WithFileUploads;
 
 use App\Models\Article;
 use App\Models\CareRecommendation;
+use App\Models\Cart;
 use App\Models\Color;
 use App\Models\Composition;
 use App\Models\Creation;
@@ -79,6 +80,7 @@ class HandleStock extends Page
     public $singularity_de = [];
     public $singularity_en = [];
     public $singularity_lu = [];
+    public $confirm_delete = 0;
 
     public function mount()
     {
@@ -305,6 +307,56 @@ class HandleStock extends Page
             }
         } else {
             $this->notify('danger', 'An error occured, please check the content or contact the administrator.');
+        }
+    }
+
+    public function toggleDelete()
+    {
+        $this->confirm_delete = !$this->confirm_delete;
+    }
+
+    public function deleteVariation()
+    {
+        $delete_ok = 1;
+        $cart_id = 0;
+        foreach (Cart::all() as $cart) {
+            if ($cart->couture_variations->contains($this->selected_variation->id)) {
+                $delete_ok = 0;
+                $cart_id = $cart->id;
+            }
+        }
+
+        if ($this->selected_variation->wishlistUsers->count() > 0) {
+            $delete_ok = 0;
+        }
+        
+        if ($delete_ok) {
+            $id = $this->selected_variation->id;
+            foreach ($this->selected_variation->shops as $shop) {
+                $shop->articles()->detach($id);
+            }
+
+            foreach ($this->selected_variation->compositions as $composition) {
+                $composition->articles()->detach($id);
+            }
+
+            foreach ($this->selected_variation->care_recommendations as $care_recommendation) {
+                $care_recommendation->articles()->detach($id);
+            }
+            
+            foreach ($this->selected_variation->photos as $photo) {
+                $photo->articles()->detach($id);
+                File::delete(public_path('images/pictures/articles/'.$photo->file_name));
+            }
+
+            $this->selected_variation->delete();
+            $this->notify('success', 'The variation has been deleted permanently.');
+            // Reset data
+            $this->selected_variation = null;
+            $this->creation_name = "none-0";
+            $this->variation_name = "none-0";
+        } else {
+            $this->notify('danger', 'The variation could not be deleted because it has been used or wishlisted by a user on the website.');
         }
     }
 }
