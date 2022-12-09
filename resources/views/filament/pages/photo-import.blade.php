@@ -35,16 +35,6 @@
 
 		<h3>New variation details</h3>
 		<div class="flex justify-start flex-wrap">
-			<!-- <div>
-				<label for="article-0">Select an article</label><br/>
-				<select name="article-0" id="article-0" class="sell-form__select" wire:model="article_id">
-					<option value="-1">Select article</option>
-					<option value="0" wire:click="getSizeandColor">Create new article</option>
-					@foreach($existing_variations as $variation)
-						<option value="{{ $variation->id }}" wire:key="{{ $variation->id }}" wire:click="getSizeandColor">{{ $variation->name }}</option>
-					@endforeach
-				</select> 
-			</div> -->
 			<div>
 				<label for="size-0">Select size</label><br/>
 				<select name="size-0" id="size-0" class="sell-form__select" wire:model="size_id" @if($is_new_article == 0) disabled @endif>
@@ -84,8 +74,12 @@
         <h4>Photos Preview:</h4>
         <div class="flex justify-start new-photo-form__img-gallery">
 	        @foreach($photos as $photo)
-	        <div class="new-photo-form__img-gallery__img-container">
+	        <div class="new-photo-form__img-gallery__img-container" wire:key="photo-gallery-{{ $photo->getClientOriginalName() }}">
 	        	<img src="{{ $photo->temporaryUrl() }}">
+	        	<div>
+	        		<input type="checkbox" name="is_front" value="1" id="is_front_{{ explode('.', $photo->getClientOriginalName())[0] }}" wire:model.defer="front_pictures.{{ explode('.', $photo->getClientOriginalName())[0] }}" style="border-radius: 4px; margin-right: 5px;">
+					<label for="is_front_{{ explode('.', $photo->getClientOriginalName())[0] }}">Is front picture</label>
+	        	</div>
 	        </div>
 	        @endforeach
 	    </div>

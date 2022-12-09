@@ -72,6 +72,7 @@ class PhotoImport extends Page
     public $color_id;
     public $article_creation_date;
     public $shop_id;
+    public $front_pictures;
 
     public function mount()
     {
@@ -83,6 +84,7 @@ class PhotoImport extends Page
         $this->all_shops = [];
         $this->article_creation_date = "01.01.2022";
         $this->article_id = 0;
+        $this->front_pictures = [];
     }
 
     public function updatedCreationId()
@@ -143,11 +145,15 @@ class PhotoImport extends Page
         }
     }
 
-    public function updatedPhoto()
+    public function updatedPhotos()
     {
         $this->validate([
             'photos.*' => 'image|max:6144', // 6MB Max
         ]);
+
+        foreach ($this->photos as $photo) {
+            $this->front_pictures[explode('.', $photo->getClientOriginalName())[0]] = 0;
+        }
     }
 
     public function clearAllFields()
@@ -224,12 +230,16 @@ class PhotoImport extends Page
                     }
                     foreach ($this->photos as $photo) {
                         $random_counter = rand(100, 999);
+                        $is_front = 0;
+                        if (strpos($photo->getClientOriginalName(), 'front') !== false || $this->front_pictures[explode('.', $photo->getClientOriginalName())[0]]) {
+                            $is_front = 1;
+                        }
                         $img = Image::make($photo);
                         if($this->savePhotoWithWatermark($img, $creation_name, $article_name, $photo_counter, $random_counter)) {
                             $new_photo = new Photo();
                             $new_photo->file_name = 'processed/'.$creation_name.'/'.$article_name.'-'.$random_counter.''.$photo_counter.'.png';
                             $new_photo->use_for_model = 1;
-                            if (strpos($photo->getClientOriginalName(), 'front') !== false) {
+                            if ($is_front) {
                                 $new_photo->is_front = 1;
                             } else {
                                 $new_photo->is_front = 0;

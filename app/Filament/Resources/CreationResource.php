@@ -146,12 +146,12 @@ class CreationResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            RelationManagers\ArticlesRelationManager::class,
-        ];
-    }
+    // public static function getRelations(): array
+    // {
+    //     return [
+    //         RelationManagers\ArticlesRelationManager::class,
+    //     ];
+    // }
 
     public static function getPages(): array
     {
