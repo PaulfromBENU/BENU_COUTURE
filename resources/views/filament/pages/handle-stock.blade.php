@@ -152,6 +152,18 @@
 			<div class="text-center" style="margin-top: 60px;">
 				<button type="submit">Update</button>
 			</div>
+
+			<div class="text-right" style="margin-top: 60px;">
+				@if(!$confirm_delete)
+				<p wire:click="toggleDelete" style="cursor: pointer;" class="hover:underline">Delete variation</p>
+				@else
+				<p class="text-center" style="margin-bottom: 15px;">Are you sure you want to delete this variation? A check will be performed before deletion to avoid any issue on the website, but this remains a critical action.</p>
+				<div class="flex justify-center">
+					<button wire:click.prevent.stop="deleteVariation">Delete permanently {{ strtoupper($selected_variation->name) }}</button>
+					<button wire:click.prevent.stop="toggleDelete">Cancel</button>
+				</div>
+				@endif
+			</div>
 		@endif
 	</form>
 </x-filament::page>
