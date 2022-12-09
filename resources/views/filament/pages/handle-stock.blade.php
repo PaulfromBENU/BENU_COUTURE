@@ -64,7 +64,7 @@
 			<h4>Photos Preview:</h4>
 	        <div class="flex justify-start new-photo-form__img-gallery" style="overflow-x: auto; height: fit-content; min-height: 20px; max-height: 220px;">
 		        @foreach($photos as $photo)
-		        <div class="new-photo-form__img-gallery__img-container" style="height: auto;" wire:key="photo-preview-{{ $photo->id }}">
+		        <div class="new-photo-form__img-gallery__img-container" style="height: auto;" wire:key="photo-preview-{{ $photo->temporaryUrl() }}">
 		        	<img src="{{ $photo->temporaryUrl() }}">
 		        </div>
 		        @endforeach
