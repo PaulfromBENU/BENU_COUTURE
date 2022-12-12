@@ -98,7 +98,6 @@ class CheckArticles extends Page
             foreach ($this->unchecked_articles as $article) {
                 $this->size_ids[$article->id] = $article->size->id;
                 $this->color_ids[$article->id] = $article->color->id;
-                $this->delivery_sizes[$article->id] = $article->size_category;
                 $this->stocks[$article->id] = [];
 
                 foreach ($this->all_shops as $shop_id => $shop_name) {
@@ -107,6 +106,13 @@ class CheckArticles extends Page
                     } else {
                         $this->stocks[$article->id][$shop_id] = 0;
                     }
+                }
+
+                // Pre-fill of variation packaging option
+                // If variation from the same creation is already present, use it as reference for the packaging
+                if($article->creation->all_articles()->count() > 0) {
+                    $base_article = $article->creation->all_articles()->orderBy('created_at', 'asc')->first();
+                    $this->delivery_sizes[$article->id] = $base_article->size_category;
                 }
 
                 // Pre-fill of variation composition
