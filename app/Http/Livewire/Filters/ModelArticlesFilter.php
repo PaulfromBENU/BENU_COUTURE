@@ -48,6 +48,7 @@ class ModelArticlesFilter extends Component
         }
         $this->sendFilters();
         $this->initializeMobileDisplay();
+        $this->emit('resetMobileWindow');
     }
 
     public function updateSorting(string $sort_order)

@@ -172,8 +172,14 @@
             <div wire:click="toggleFilter('colors', '{{ $color }}')" wire:key="{{ $color }}">
             @if($color_filter == '1')
                 <div class="all-models__active-filters__filter flex justify-between">
+                    @if($color == 'multicolored')
+                    <div style="padding-top: 3px; margin-right: 3px;">
+                        <img src="{{ asset('images/pictures/multicolor.png') }}">
+                    </div>
+                    @else
                     <div class="color-circle color-circle--{{ $color }} w-1/5"></div>
-                    <p class="w-3/5 pl-1">{{ $filter_names['colors'][$color] }}</p>
+                    @endif
+                    <p class="w-3/5 pl-1 pr-1" style="min-width: fit-content;">{{ $filter_names['colors'][$color] }}</p>
                     <div class="w-1/5">&#x2715;</div>
                 </div>
             @endif
