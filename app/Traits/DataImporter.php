@@ -1163,6 +1163,46 @@ trait DataImporter {
     }
 
 
+    public function updatePackagingOnly()
+    {
+        echo "<br/><br/><strong>----------------  Updating packaging options from Lou's file...</strong><br/>";
+        $creations_lou = json_decode(file_get_contents(asset('json_imports/creations_lou.json')), true);
+
+        foreach ($creations_lou as $creation_lou) {
+            if (is_numeric($creation_lou['Enveloppe']) && $creation_lou['Enveloppe'] >= 0 && $creation_lou['Enveloppe'] <= 5) {
+                if (Article::query()
+                    ->where('is_extra_accessory', '1')
+                    ->where('name', "LIKE", "%".ucfirst(strtolower($creation_lou['name']))."%")
+                    ->count() > 0) {
+
+                    $extra_accessory_articles = Article::query()
+                    ->where('is_extra_accessory', '1')
+                    ->where('name', 'LIKE', "%".ucfirst(strtolower($creation_lou['name']))."%")
+                    ->get();
+
+                    foreach ($extra_accessory_articles as $article) {
+                        // Size category update
+                        $article->size_category = $creation_lou['Enveloppe'];
+                        $article->save();
+                    }
+
+                } elseif (Creation::where('name', $creation_lou['name'])->count() > 0) {
+                    $creation = Creation::where('name', $creation_lou['name'])->first();
+
+                    foreach ($creation->articles as $article) {
+                        // Size category update
+                        $article->size_category = $creation_lou['Enveloppe'];
+                        $article->save();
+                    }
+                }
+                echo "<span style='color: green; padding-left: 10px;'>Packaging option updated for creation ".$creation_lou['name'].", new value is ".$creation_lou['Enveloppe']."</span><br/>";
+            } else {
+                echo "<span style='color: red; padding-left: 10px;'>Packaging option impossible for creation ".$creation_lou['name'].", given value is: ".$creation_lou['Enveloppe']."</span><br/>";
+            }
+        }
+    }
+
+
     public function updateArticlesFromLouAndSophie()
     {
         echo "<br/><br/><strong>----------------  Updating Creations and articles data from Lou's and Sophie's file...</strong><br/>";
@@ -1174,7 +1214,7 @@ trait DataImporter {
         $creations_lou = json_decode(file_get_contents(asset('json_imports/creations_lou.json')), true);
         $articles_sophie = json_decode(file_get_contents(asset('json_imports/articles.json')), true);
 
-        if (env('APP_ENV') != 'production') {
+        if (app('env') != 'production') {
             // WARNING: will empty the table!! To be used with caution.
             DB::table('article_care_recommendation')->truncate();
             DB::table('article_composition')->truncate();
