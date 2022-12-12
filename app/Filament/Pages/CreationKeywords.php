@@ -28,6 +28,7 @@ class CreationKeywords extends Page
         $authorized_roles = [
             'admin',
             'translator',
+            'workshop',
         ];
         return in_array(auth()->user()->role, $authorized_roles);
     }
@@ -45,12 +46,12 @@ class CreationKeywords extends Page
     public function mount()
     {
         $this->all_creations = Creation::orderBy('name', 'asc')->get();
+        $this->creation_name = 'none-0';
         $this->initializeFields();
     }
 
     public function initializeFields()
     {
-        $this->creation_name = 'none-0';
         $this->selected_creation = null;
         $this->keywords = [];
         $this->new_keywords = [
@@ -68,6 +69,7 @@ class CreationKeywords extends Page
 
     public function updatedCreationName()
     {
+        $this->initializeFields();
         if (Creation::where('name', $this->creation_name)->count() > 0) {
             $this->selected_creation = Creation::where('name', $this->creation_name)->first();
             $this->existing_keywords = $this->selected_creation->keywords;
@@ -81,6 +83,7 @@ class CreationKeywords extends Page
                 $this->example_photo = $this->selected_creation->articles()->first()->photos()->first()->file_name;
             }
         } else {
+            $this->creation_name = 'none-0';
             $this->initializeFields();
         }
     }
@@ -115,9 +118,9 @@ class CreationKeywords extends Page
         $missing_words = 0;
         foreach ($this->new_keywords as $new_keyword_array) {
             if ($new_keyword_array['fr'] !== "" 
-                && $new_keyword_array['lu'] !== "" 
-                && $new_keyword_array['de'] !== "" 
-                && $new_keyword_array['en'] !== "") {
+                || $new_keyword_array['lu'] !== "" 
+                || $new_keyword_array['de'] !== "" 
+                || $new_keyword_array['en'] !== "") {
 
                 $new_keyword = new Keyword();
                 $new_keyword->keyword_fr = $new_keyword_array['fr'];
@@ -131,20 +134,18 @@ class CreationKeywords extends Page
                 if ($new_keyword->save()) {
                     $this->selected_creation->keywords()->attach($new_keyword->id);
                 }
-            } elseif($new_keyword_array['fr'] !== "" 
-                || $new_keyword_array['lu'] !== "" 
-                || $new_keyword_array['de'] !== "" 
-                || $new_keyword_array['en'] !== "") {
+            } else {
                 $missing_words = 1;
             }
         }
 
-        if ($missing_words) {
-            $this->notify('success', 'Existing keywords were updated successfully :)');
-            $this->notify('danger', 'Keywords translations are missing. Please fill all four languages.');
-        } else {
+        // if ($missing_words) {
+        //     $this->notify('success', 'Existing keywords were updated successfully :)');
+        //     $this->notify('danger', 'Keywords translations are missing. Please fill all four languages.');
+        // } else {
             $this->notify('success', 'Keywords updated successfully :)');
+            $this->creation_name = 'none-0';
             $this->initializeFields();
-        }
+        // }
     }
 }

@@ -87,7 +87,7 @@
 		<div class="flex flex-col md:flex-row justify-start model-pres__desc__keywords">
 			<ul class="w-full lg:w-1/2">
 				@for($i = 0; $i < 4; $i++)
-					@if(isset($keywords[$i]))
+					@if(isset($keywords[$i]) && $keywords[$i] !== "")
 					<li class="flex">@svg('list_cintre', 'w-1/5') <p class="w-4/5">{{ $keywords[$i] }}</p></li>
 					@endif
 				@endfor
@@ -96,7 +96,7 @@
 			@if(sizeof($keywords) > 4)
 			<ul class="w-full lg:w-1/2">
 				@for($i = 4; $i < 8; $i++)
-					@if(isset($keywords[$i]))
+					@if(isset($keywords[$i]) && $keywords[$i] !== "")
 					<li class="flex">@svg('list_cintre', 'w-1/5') <p class="w-4/5">{{ $keywords[$i] }}</p></li>
 					@endif
 				@endfor
