@@ -57,6 +57,7 @@ class ModelArticlesFilter extends Component
             $this->sorting_order = $sort_order;
             $this->emit('sortUpdated', $this->sorting_order, $this->active_filters);
             $this->initializeMobileDisplay();
+            $this->emit('resetMobileWindow');
         }
     }
 
