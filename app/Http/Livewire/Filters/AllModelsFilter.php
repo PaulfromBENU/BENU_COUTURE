@@ -77,6 +77,7 @@ class AllModelsFilter extends Component
 
         $this->sendFilters();
         $this->initializeMobileDisplay();
+        $this->emit('resetMobileWindow');
     }
 
     public function updateSorting(string $sort_order)
@@ -85,6 +86,7 @@ class AllModelsFilter extends Component
             $this->sorting_order = $sort_order;
             $this->emit('sortUpdated', $this->sorting_order, $this->active_filters);
             $this->initializeMobileDisplay();
+            $this->emit('resetMobileWindow');
         }
     }
 
