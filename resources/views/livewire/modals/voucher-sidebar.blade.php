@@ -26,7 +26,7 @@
             @if($content == 'overview')
                 <div class="flex justify-start article-sidebar__img-container-mobile__images">
                     <div style="height: 100%;">
-                        <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
+                        <img src="{{ asset('images/pictures/photo_voucher.jpg') }}" alt="BENU vouchers" title="BENU Vouchers" class="w-full">
                     </div>
                 </div>
             @endif
