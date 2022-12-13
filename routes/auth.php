@@ -22,7 +22,7 @@ Route::get('/inscription-de', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register-de');
 
-Route::get('/inscription-en', [RegisteredUserController::class, 'create'])
+Route::get('/create-account', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register-en');
 
@@ -38,7 +38,7 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login');
 
-Route::get('/login-en', [AuthenticatedSessionController::class, 'create'])
+Route::get('/log-in', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login-en');
 
@@ -66,7 +66,7 @@ Route::get('/mot-de-passe-oublie', [PasswordResetLinkController::class, 'create'
                 ->middleware('guest')
                 ->name('password.request-fr');
 
-Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
+Route::get('/forgotten-password', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request-en');
 
@@ -90,7 +90,7 @@ Route::get('/reinitialisation-mdp/{token}', [NewPasswordController::class, 'crea
                 ->middleware('guest')
                 ->name('password.reset-fr');
 
-Route::get('/reset-password-en/{token}', [NewPasswordController::class, 'create'])
+Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.reset-en');
 
