@@ -91,6 +91,7 @@
 			@include tablet {
 				font: normal normal bold 35px/42px 'Barlow Condensed';
 				margin-bottom: 35px;
+				max-width: 50%;
 			}
 			@include mobile {
 				font: normal normal bold 30px/38px 'Barlow Condensed';
@@ -180,6 +181,9 @@
 	margin-bottom: 37px;
 	// min-height: 100vh;
 	// height: min(100vh, 900px);
+	@include tablet {
+		margin-top: -40px;
+	}
 	@include mobile {
 		margin-top: 20px;
 	}
