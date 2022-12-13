@@ -4,7 +4,7 @@
 		<p class="welcome-creations__subtitle">
 			{{ __('welcome.last-subtitle') }}
 		</p>
-		<div class="welcome-creations__list flex flex-wrap justify-between">
+		<div class="welcome-creations__list flex flex-wrap justify-center lg:justify-between">
 			@foreach($latest_models as $model)
 				@livewire('components.model-overview', ['model' => $model])
 			@endforeach

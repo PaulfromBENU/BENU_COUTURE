@@ -14,7 +14,7 @@
         <!-- Mise à jour en cours... -->
     </div>
 
-    <div class="flex flex-wrap justify-start all-models__list" id="filtered-creations">
+    <div class="flex flex-wrap justify-center lg:justify-start all-models__list" id="filtered-creations">
     @for($j = 0; $j < $sections_number; $j++)
         @foreach($displayed_models[$j] as $model)
             @livewire('components.model-overview', ['model' => $model], key($model->id))
