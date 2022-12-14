@@ -68,7 +68,7 @@
 	</style>
 </head>
 <!-- To use a landscape format, use $pdf->set_paper('A4', 'landscape'); in the controller -->
-<body style="width: 100%; margin-left: 0%; font-family: 'Barlow Condensed'; font-weight: 400; font-size: 0.9rem; position: relative;">
+<body style="width: 100%; margin-left: 0%; font-family: 'Barlow Condensed'; font-weight: 400; font-size: 0.85rem; position: relative;">
 
 	<div style="width: 100%; height: 100%;">
 		<section style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-right: dashed lightgrey 2px; padding-right: 20px;">
@@ -97,6 +97,10 @@
 
 			<div style="position: relative; width: 100%; margin-bottom: 10px;">
 				{{ __('pdf.order-client') }} : {{ $order->unique_id }}
+			</div>
+
+			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
+				{{ __('emails.new-order-hello') }} {{ ucfirst($order->user->first_name) }},
 			</div>
 
 			<div style="position: relative; width: 100%; margin-bottom: 10px; line-height: 0.8rem;">
@@ -136,7 +140,7 @@
 				</div>
 			</div>
 
-			<div style="text-align: center; font-size: 1.3rem; font-weight: 500; margin-bottom: 15px; margin-right: 120px;">
+			<div style="text-align: center; font-size: 1.25rem; font-weight: 500; margin-bottom: 15px; margin-right: 120px;">
 				<em>{{ __('pdf.order-txt-left-wrapped-by') }}</em>
 			</div>
 
@@ -175,7 +179,7 @@
 						{{ $order->address->country }}
 						<br/>
 						@endif
-						{{ __('pdf.order-client-number') }} {{ $order->user->client_number }}
+						<!-- {{ __('pdf.order-client-number') }} {{ $order->user->client_number }} -->
 					</p>
 				</div>
 			</div>
