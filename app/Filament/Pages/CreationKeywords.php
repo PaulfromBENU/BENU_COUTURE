@@ -79,7 +79,7 @@ class CreationKeywords extends Page
                 $this->keywords[$keyword->id]['en'] = $keyword->keyword_en;
                 $this->keywords[$keyword->id]['de'] = $keyword->keyword_de;
             }
-            if ($this->selected_creation->articles()->first()->photos()->count() > 0) {
+            if ($this->selected_creation->articles()->count() > 0 && $this->selected_creation->articles()->first()->photos()->count() > 0) {
                 $this->example_photo = $this->selected_creation->articles()->first()->photos()->first()->file_name;
             }
         } else {
