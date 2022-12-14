@@ -42,9 +42,9 @@
   {
     "page": "Home",
     "key": "header.sloow-desc",
-    "de": "Weil Ernährung und Lebensmittelverschwendung Themen sind, die uns am Herzen liegen, haben wir BENU SLOOW gegründet. Das erste \n \"Rescued Food\"-Restaurant der Großregion bietet eine Bio-Küche an, die originell und vor allem nachhaltig ist!\nEine neue, umfangreichere Website wird im Winter 2023 eingerichtet. Mehr dazu hier:",
-    "fr": "Parce que l’alimentation et le gaspillage alimentaire sont des sujets qui nous tiennent à cœur, nous avons créé BENU SLOOW. Le premier restaurant \"Rescued Food\" de la Grande Région propose une cuisine bio, originale, mais surtout durable !\nUn nouveau site plus complet sera mis en place à l'hiver 2023. Pour en savoir plus :",
-    "en": "Food and food waste are subjects that are close to our hearts. That's why we have created BENU SLOOW. The first \"Rescued Food\" restaurant in the Greater Region offers organic, original and above all, sustainable dishes!\nA new, more complete website will be launched in winter 2023. For more information:",
+    "de": "Weil Ernährung und Lebensmittelverschwendung Themen sind, die uns am Herzen liegen, haben wir BENU SLOOW gegründet. Das erste \n \"Rescued Food\"-Restaurant der Großregion bietet eine Bio-Küche an, die originell und vor allem nachhaltig ist!\nEine neue, umfangreichere Website wird im Winter 2022 eingerichtet. Mehr dazu hier:",
+    "fr": "Parce que l’alimentation et le gaspillage alimentaire sont des sujets qui nous tiennent à cœur, nous avons créé BENU SLOOW. Le premier restaurant \"Rescued Food\" de la Grande Région propose une cuisine bio, originale, mais surtout durable !\nUn nouveau site plus complet sera mis en place à l'hiver 2022. Pour en savoir plus :",
+    "en": "Food and food waste are subjects that are close to our hearts. That's why we have created BENU SLOOW. The first \"Rescued Food\" restaurant in the Greater Region offers organic, original and above all, sustainable dishes!\nA new, more complete website will be launched in winter 2022. For more information:",
     "lu": "Well Ernärung a Liewensmëttelverschwendung Theeme sinn, déi eis um Häerze leien, hu mir BENU SLOOW gegrënnt. Den éischte \"Rescued Food\" Restaurant an der Groussregioun, bitt eng Bio-Kichen un, originell a virun allem nohalteg! \nEng méi informatiounsräich Internetsäit wäert am Wanter 2022 ageriicht ginn. Méi dozou hei:"
   },
   {
@@ -58,7 +58,7 @@
   {
     "page": "Home",
     "key": "header.couture-desc",
-    "de": "Dies ist die erste UpCycling-Nähwerkstatt in Luxemburg! Wir bieten einzigartige Stücke an, die in Luxemburg aus alten Kleidungsstücken entworfen und hergestellt werden. BENU COUTURE, das sind lustige, farbenfrohe und ansprechende Kleidungsstücke, die Kinder und Erwachsene von XS bis 5XL einkleiden. Du kannst Deine Kleidung auch Deinen eigenen Ideen entsprechend umgestalten!",
+    "de": "Dies ist die erste UpCycling-Schneiderei in Luxemburg! Wir bieten einzigartige Stücke an, die in Luxemburg aus alten Kleidungsstücken entworfen und hergestellt werden. BENU COUTURE, das sind lustige, farbenfrohe und ansprechende Kleidungsstücke, die Kinder und Erwachsene von XS bis 5XL einkleiden. Du kannst Deine Kleidung auch Deinen eigenen Ideen entsprechend umgestalten!",
     "fr": "C’est le premier atelier de couture UpCycling au Luxembourg ! Nous proposons des pièces uniques, conçues et produites au Luxembourg à partir de vieux vêtements. BENU COUTURE, ce sont des vêtements gais, colorés et attrayants qui habillent les enfants et les adultes du XS au 5XL. Tu peux aussi remodeler tes vêtements selon tes propres idées !",
     "en": "This is the first UpCycling sewing workshop in Luxembourg! We offer unique pieces designed and produced in Luxembourg using old clothes. BENU COUTURE offers fun, colourful and pleasing clothing for children and adults from XS to 5XL. You can also transform your clothes according to your own ideas!",
     "lu": "Dëst ass den éischten UpCycling-Schneideratelier zu Lëtzebuerg! Mir bidden eenzegaarteg Stécker un, déi zu Lëtzebuerg aus alem Gezei entworf a produzéiert ginn. BENU COUTURE, dat si lëschteg, faarweg an uspriechend Kleedungsstécker fir Kanner an Erwuessener vun XS bis 5XL. Du kanns Deng Kleeder och no Dengen eegenen Iddie modifizéieren!"
@@ -544,6 +544,14 @@
     "lu": "Hei kanns Du Däi Kont opmaachen!"
   },
   {
+    "page": "",
+    "key": "auth.register-subtitle-text",
+    "de": "Mit Deinem  BENU Konto kannst Du Deine Aktivitäten auf den  verschiedenen Internetseiten von BENU Village Esch asbl einsehen und verwalten.",
+    "fr": "Avec ton compte BENU, tu peux consulter et gérer tes activités sur les différents sites Internet de BENU Village Esch asbl.",
+    "en": "With your BENU account, you can view and manage your activities on the different BENU Village Esch asbl websites.",
+    "lu": "Mat Dengem  BENU Konto kanns Du Deng Aktivitéiten op deenen ënnerschiddlechen Internetsäite vu BENU Village Esch asbl kucken a verwalten."
+  },
+  {
     "page": "Compte",
     "key": "forms.password",
     "de": "Gib hier bitte ein Passwort ein",
@@ -689,11 +697,43 @@
   },
   {
     "page": "Compte",
-    "key": "forms.register-conditions-conf",
-    "de": "Ich stimme den allgemeinen Geschäftsbedingungen und den Datenschutzrichtlinien von BENU COUTURE zu",
-    "fr": "J’accepte les conditions générales et la politique de confidentialité de BENU COUTURE",
-    "en": "I accept the general conditions and the privacy policy of BENU COUTURE",
-    "lu": "Ech stëmmen den allgemenge Geschäftsbedéngungen an den Dateschutzrichtlinne vu BENU COUTURE zou"
+    "key": "forms.register-conditions-conf-1",
+    "de": "Ich stimme den",
+    "fr": "J’accepte les",
+    "en": "I accept the",
+    "lu": "Ech stëmmen den"
+  },
+  {
+    "page": "Compte",
+    "key": "forms.register-conditions-conf-2",
+    "de": "allgemeinen Geschäftsbedingungen",
+    "fr": "conditions générales",
+    "en": "general conditions",
+    "lu": "allgemenge Geschäftsbedéngungen"
+  },
+  {
+    "page": "Compte",
+    "key": "forms.register-conditions-conf-3",
+    "de": "und den",
+    "fr": "et la",
+    "en": "and the",
+    "lu": "an den"
+  },
+  {
+    "page": "Compte",
+    "key": "forms.register-conditions-conf-4",
+    "de": "Datenschutzrichtlinien",
+    "fr": "politique de confidentialité",
+    "en": "privacy policy",
+    "lu": "Dateschutzrichtlinne"
+  },
+  {
+    "page": "Compte",
+    "key": "forms.register-conditions-conf-5",
+    "de": "von BENU zu",
+    "fr": "de BENU",
+    "en": "of BENU",
+    "lu": "vu BENU zou"
   },
   {
     "page": "Compte",
@@ -962,10 +1002,10 @@
   {
     "page": "Connexion",
     "key": "auth.login-no-account",
-    "de": "Noch kein BENU COUTURE Konto?",
-    "fr": "Pas encore de compte BENU COUTURE ?",
-    "en": "No BENU COUTURE account yet?",
-    "lu": "Nach kee BENU COUTURE Kont?"
+    "de": "Noch kein BENU Konto?",
+    "fr": "Pas encore de compte BENU ?",
+    "en": "No BENU account yet?",
+    "lu": "Nach kee BENU Kont?"
   },
   {
     "page": "Connexion",
@@ -974,6 +1014,14 @@
     "fr": "Tu peux créer ton compte ici",
     "en": "You can create your account here",
     "lu": "Hei kanns Du Däi Kont opmaachen"
+  },
+  {
+    "page": "Connexion",
+    "key": "auth.register-subtitle-text",
+    "de": "Mit Deinem  BENU Konto kannst Du Deine Aktivitäten auf den unterschiedlichen Internetseiten von BENU Village Esch asbl einsehen und verwalten.",
+    "fr": "Avec ton compte BENU, tu peux consulter et de gérer tes activités sur les différents sites Internet de BENU Village Esch asbl.",
+    "en": "With your BENU account, you can view and manage your activities on the different BENU Village Esch asbl websites.",
+    "lu": "Mat Dengem  BENU Konto kanns Du Deng Aktivitéiten op deenen ënnerschiddlechen Internetsäite vu BENU Village Esch asbl kucken a verwalten."
   },
   {
     "page": "Connexion",
@@ -2658,10 +2706,10 @@
   {
     "page": "Mon compte",
     "key": "dashboard.delete-account-txt-1",
-    "de": "Schade, dass Du Dein Konto löschen möchtest! Wenn Du später doch wieder bei BENU mitmachen möchtest, kannst Du jederzeit ein neues Konto eröffnen. Du hilfst uns BENU COUTURE zu verbessern, wenn Du uns erklärst, warum Du Dein Konto löschen möchtest. Vielen Dank!",
-    "fr": "Dommage que tu souhaites supprimer ton compte ! Si tu as envie de rejoindre BENU ultérieurement, tu peux rouvrir un compte à tout moment. En nous expliquant pourquoi tu souhaites supprimer ton compte, tu nous aides à améliorer BENU COUTURE. Merci beaucoup !",
-    "en": "It's a pity that you want to delete your account! If you want to join BENU again later, you can open a new account at any time. You will help us to improve BENU COUTURE if you explain why you want to delete your account. Thank you very much!",
-    "lu": "Schued datt s Du Däi Kont läsche wëlls! Wann s Du méi spéit nach eng Kéier bei BENU wëlls bäitrieden, kanns Du zu all Moment en neie Kont opmaachen. Du hëllefs eis BENU COUTURE ze verbessere wann s Du eis erkläers, firwat s Du däi Kont läsche wëlls. Villmools Merci!"
+    "de": "Schade, dass Du Dein Konto löschen möchtest! Wenn Du später doch wieder bei BENU mitmachen möchtest, kannst Du jederzeit ein neues Konto eröffnen. Du hilfst uns BENU zu verbessern, wenn Du uns erklärst, warum Du Dein Konto löschen möchtest. Vielen Dank!",
+    "fr": "Dommage que tu souhaites supprimer ton compte ! Si tu as envie de rejoindre BENU ultérieurement, tu peux rouvrir un compte à tout moment. En nous expliquant pourquoi tu souhaites supprimer ton compte, tu nous aides à améliorer BENU. Merci beaucoup !",
+    "en": "It's a pity that you want to delete your account! If you want to join BENU again later, you can open a new account at any time. You will help us to improve BENU if you explain why you want to delete your account. Thank you very much!",
+    "lu": "Schued datt s Du Däi Kont läsche wëlls! Wann s Du méi spéit nach eng Kéier bei BENU wëlls bäitrieden, kanns Du zu all Moment en neie Kont opmaachen. Du hëllefs eis BENU ze verbessere wann s Du eis erkläers, firwat s Du däi Kont läsche wëlls. Villmools Merci!"
   },
   {
     "page": "Mon compte",
@@ -3338,10 +3386,10 @@
   {
     "page": "conditions générales",
     "key": "footer.general-conditions-txt-1-5-14",
-    "de": "Die während des Bestellvorgangs angegebenen personenbezogenen Daten können nach dem Anklicken des Buttons \"Bestätigen\" (Payconiq/Digicash, Überweisung) bzw. \"Zahlung bestätigen\" (Kreditkarte, PayPal) nicht mehr geändert oder korrigiert werden. Wenn die Bestellung erfolgreich übermittelt wurde, erhält der/die Kunde/in eine automatische Bestätigungs-E-Mail. Diese Nachricht bestätigt, dass die Bestellung bei BENU COUTURE eingegangen ist. Ein Kaufvertrag zwischen BENU Village Esch asbl und dem/der Kunde/in kommt erst mit dem Zahlungseingang zustande.",
-    "fr": "Les données personnelles fournies lors du processus de commande ne peuvent plus être ni modifiées ni corrigées après avoir cliqué sur le bouton \"Confirmer\" (Payconiq/Digicash, virement) ou \"Confirmer le paiement\" (carte de crédit, PayPal). Si la commande a été transmise avec succès, le·la client·e reçoit un e-mail de confirmation automatique. Ce message confirme que la commande a bien été reçue par BENU COUTURE. Un contrat de vente entre BENU Village Esch asbl et le·la client·e n'est conclu qu'après réception du paiement.",
-    "en": "The personal data provided during the ordering process can no longer be changed or corrected after clicking the button \"Confirm\" (Payconiq/Digicash, bank transfer) or \"Confirm payment\" (credit card, PayPal). If the order has been successfully submitted, the customer will receive an automatic confirmation e-mail. This message confirms that the order has been received by BENU COUTURE. A purchase contract between BENU Village Esch asbl and the customer is only concluded upon receipt of payment.",
-    "lu": "Déi perséinlech Donnéeën déi wärend dem Bestellprozess matgedeelt gi sinn, kënnen no Uklicke vum Knäppche \"Bestätegen\" (Payconiq/Digicash, Iwwerweisung) oder \"Bezuelung bestätegen\" (Kreditkaart, PayPal), net méi geännert oder verbessert ginn. Wann d'Bestellung erfollegräich iwwermëttelt gouf, kritt de/d'Client:e eng automatesch Bestätegungs-E-Mail. Dës Noriicht bestätegt, datt d'Bestellung bei BENU COUTURE ukomm ass. E Kafvertrag tëschent BENU Village Esch asbl an dem/der Client:e gëtt eréischt dann ofgeschloss, wann d'Bezuelung ukomm ass."
+    "de": "Die während des Bestellvorgangs angegebenen personenbezogenen Daten können nach dem Anklicken des Buttons \"Bestätigen\" (Payconiq/Digicash, Überweisung) bzw. \"Zahlung bestätigen\" (Kreditkarte, PayPal) nicht mehr geändert oder korrigiert werden. Wenn die Bestellung erfolgreich übermittelt wurde, erhält der/die Kunde/in eine automatische Bestätigungs-E-Mail. Diese Nachricht bestätigt, dass die Bestellung bei BENU eingegangen ist. Ein Kaufvertrag zwischen BENU Village Esch asbl und dem/der Kunde/in kommt erst mit dem Zahlungseingang zustande.",
+    "fr": "Les données personnelles fournies lors du processus de commande ne peuvent plus être ni modifiées ni corrigées après avoir cliqué sur le bouton \"Confirmer\" (Payconiq/Digicash, virement) ou \"Confirmer le paiement\" (carte de crédit, PayPal). Si la commande a été transmise avec succès, le·la client·e reçoit un e-mail de confirmation automatique. Ce message confirme que la commande a bien été reçue par BENU. Un contrat de vente entre BENU Village Esch asbl et le·la client·e n'est conclu qu'après réception du paiement.",
+    "en": "The personal data provided during the ordering process can no longer be changed or corrected after clicking the button \"Confirm\" (Payconiq/Digicash, bank transfer) or \"Confirm payment\" (credit card, PayPal). If the order has been successfully submitted, the customer will receive an automatic confirmation e-mail. This message confirms that the order has been received by BENU. A purchase contract between BENU Village Esch asbl and the customer is only concluded upon receipt of payment.",
+    "lu": "Déi perséinlech Donnéeën déi wärend dem Bestellprozess matgedeelt gi sinn, kënnen no Uklicke vum Knäppche \"Bestätegen\" (Payconiq/Digicash, Iwwerweisung) oder \"Bezuelung bestätegen\" (Kreditkaart, PayPal), net méi geännert oder verbessert ginn. Wann d'Bestellung erfollegräich iwwermëttelt gouf, kritt de/d'Client:e eng automatesch Bestätegungs-E-Mail. Dës Noriicht bestätegt, datt d'Bestellung bei BENU ukomm ass. E Kafvertrag tëschent BENU Village Esch asbl an dem/der Client:e gëtt eréischt dann ofgeschloss, wann d'Bezuelung ukomm ass."
   },
   {
     "page": "conditions générales",
@@ -4456,6 +4504,294 @@
     "lu": "Deng BENU Ekipp"
   },
   {
+    "page": "participer",
+    "key": "participate.seo-title",
+    "de": "Du kannst bei BENU mitmachen",
+    "fr": "Tu peux participer à BENU",
+    "en": "You can participate to BENU",
+    "lu": "Du kanns bei BENU matmaachen"
+  },
+  {
+    "page": "participer",
+    "key": "participate.seo-description",
+    "de": "Auch Du kannst bei Aktivitäten von BENU mitmachen und die sozio-ökologische Kreislaufwirtschaft in Luxemburg voranzubringen!",
+    "fr": "Toi aussi, tu peux participer aux activités de BENU et faire avancer l'économie circulaire socio-écologique au Luxembourg !",
+    "en": "You too can get involved in BENU activities and promote the socio-ecological circular economy in Luxembourg!",
+    "lu": "Och Du kanns bei Aktivitéite vu BENU matmaachen an déi sozio-ekologesch Kreeslafwirtschaft zu Lëtzebuerg weiderbréngen!"
+  },
+  {
+    "page": "bons d'achat",
+    "key": "vouchers.seo-title",
+    "de": "Nachhaltig und fair verschenken mit BENU Gutscheinen",
+    "fr": "Offrir un bon d'achat BENU comme cadeau durable et équitable",
+    "en": "Make a sustainable and fair gift with BENU vouchers",
+    "lu": "Schenk nohalteg a fair mat BENU Bongen"
+  },
+  {
+    "page": "bons d'achat",
+    "key": "vouchers.seo-description",
+    "de": "Du machst gern Geschenke und legst Wert auf deren Nachhaltigkeit? Dann ist der BENU Geschenkgutschein wie für Dich gemacht!",
+    "fr": "Tu aimes faire des cadeaux et tu tiens à ce qu'ils soient durables ? Alors le chèque-cadeau BENU est fait pour toi!",
+    "en": "Do you like giving gifts and value sustainability? Then our BENU gift voucher is made for you!",
+    "lu": "Du méchs gäre Kaddoen a lees Wäert op Nohaltegkeet? Dann ass eise BENU Bong wéi fir Dech gemaach!"
+  },
+  {
+    "page": "connexion",
+    "key": "auth.login-seo-title",
+    "de": "Anmeldung",
+    "fr": "Connexion",
+    "en": "Log in",
+    "lu": "Aloggen"
+  },
+  {
+    "page": "connexion",
+    "key": "auth.login-seo-desc",
+    "de": "Du hast bereits ein BENU Konto? Melde Dich an und schau Dir unsere neuesten Upcycling-Kreationen an!",
+    "fr": "Tu as déjà un compte BENU? Connecte-toi et découvre nos dernières créations UpCycling!",
+    "en": "You already have a BENU account? Sign up and check out our latest UpCycling creations!",
+    "lu": "Du hues schonn ee BENU Konto? Da mell Dech un a kuck Dir eis nei Upcycling-Kreatiounen un!"
+  },
+  {
+    "page": "inscription",
+    "key": "auth.register-seo-title",
+    "de": "BENU Konto eröffnen",
+    "fr": "Créer un compte BENU",
+    "en": "Create account BENU",
+    "lu": "BENU Kont opmaachen"
+  },
+  {
+    "page": "inscription",
+    "key": "auth.register-seo-desc",
+    "de": "Du möchtest öfter bei uns vorbeischauen? Mit einem BENU Konto ist das Bestellen schneller und einfacher!",
+    "fr": "Tu veux passer plus souvent chez nous? Avec un compte BENU, commander est plus rapide et plus facile!",
+    "en": "Do you intend to visit us more often? With a BENU account, ordering is quicker and easier!",
+    "lu": "Du wëlls eis méi dacks besichen? Mat engem BENU Konto geet d’Bestelle méi séier a méi einfach!"
+  },
+  {
+    "page": "mot passe oublie",
+    "key": "auth.password-forgotten-seo-title",
+    "de": "Passwort vergessen",
+    "fr": "Mot de passe oublié",
+    "en": "Forgotten password",
+    "lu": "Passwuert vergiess"
+  },
+  {
+    "page": "mot passe oublie",
+    "key": "auth.password-forgotten-seo-description",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "erreur",
+    "key": "welcome.error-seo-title",
+    "de": "Fehlermeldung",
+    "fr": "Message d'erreur",
+    "en": "Error message",
+    "lu": "Feeler Message"
+  },
+  {
+    "page": "erreur",
+    "key": "welcome.error-seo-description",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "Compte",
+    "key": "dashboard.seo-title",
+    "de": "Mein BENU Konto",
+    "fr": "Mon compte BENU",
+    "en": "My BENU account",
+    "lu": "Mäi BENU Kont"
+  },
+  {
+    "page": "Compte",
+    "key": "dashboard.seo-description",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "panier",
+    "key": "cart.seo-title",
+    "de": "Mein BENU Warenkorb",
+    "fr": "Mon panier BENU",
+    "en": "My BENU basket",
+    "lu": "Mäi BENU Akafskierfchen"
+  },
+  {
+    "page": "panier",
+    "key": "cart.seo-description",
+    "de": "Deine Auswahl an BENU Artikeln auf einen Blick",
+    "fr": "Ta sélection d'articles BENU en un coup d'œil",
+    "en": "Your choice of BENU items at a glance",
+    "lu": "Deng Auswiel u BENU Artikelen"
+  },
+  {
+    "page": "tunnel d'achat paiement",
+    "key": "payment.seo-title",
+    "de": "Bezahlung",
+    "fr": "Paiement",
+    "en": "Payment",
+    "lu": "Bezuelung"
+  },
+  {
+    "page": "tunnel d'achat paiement",
+    "key": "payment.seo-description",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "après paiement",
+    "key": "payment.seo-title-payment-complete",
+    "de": "Bestellung eingegangen",
+    "fr": "Commande reçue",
+    "en": "Order received",
+    "lu": "Bestellung ass ukomm"
+  },
+  {
+    "page": "après paiement",
+    "key": "payment.seo-description-payment-complete",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "paiement carte Paypal",
+    "key": "payment.process-seo-title",
+    "de": "Bezahlung per PayPal",
+    "fr": "Paiement par PayPal",
+    "en": "Payment via PayPal",
+    "lu": "Bezuelung mat PayPal"
+  },
+  {
+    "page": "paiement carte Paypal",
+    "key": "payment.process-seo-description",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "newsletter sub",
+    "key": "auth.newsletter-subscribe-seo-title",
+    "de": "Mit dem Newsletter die Neuigkeiten von BENU verfolgen",
+    "fr": "Suivre l'actualité de BENU avec la newsletter",
+    "en": "Follow the news from BENU with the BENU newsletter",
+    "lu": "Mam BENU Newsletter d'Neiegkeete vu BENU suivéieren"
+  },
+  {
+    "page": "newsletter sub",
+    "key": "auth.newsletter-subscribe-seo-desc",
+    "de": "Gut informiert sein heißt nicht, alles zu wissen, sondern das, worauf es ankommt - zum Beispiel, was in unserer Newsletter steht!",
+    "fr": "Être bien informé ne signifie pas savoir tout, mais savoir ce qui compte - comme le contenu de notre bulletin d'information, par exemple!",
+    "en": "Being well informed is not about knowing everything, but knowing about what matters - like our newsletter’s content, for example!",
+    "lu": "Gutt informéiert sinn heescht net, alles ze wëssen, mee dat ze wëssen, wat wichteg ass - ewéi zum Beispill alles, wat an eisem Newsletter steet!"
+  },
+  {
+    "page": "newsletter can",
+    "key": "auth.newsletter-cancelled-seo-title",
+    "de": "BENU Newsletter kündigen",
+    "fr": "Se désabonner de la newsletter BENU",
+    "en": "Unsubscribe from the BENU newsletter",
+    "lu": "BENU Newsletter kënnegen"
+  },
+  {
+    "page": "newsletter can",
+    "key": "auth.newsletter-cancelled-seo-desc",
+    "de": "",
+    "fr": "",
+    "en": "",
+    "lu": ""
+  },
+  {
+    "page": "médias",
+    "key": "footer.medias-seo-title",
+    "de": "Medienberichte über BENU in Luxemburg",
+    "fr": "Reportages médiatiques sur BENU au Luxembourg",
+    "en": "Media reports about BENU in Luxembourg",
+    "lu": "Medieberichter iwwer BENU zu Lëtzebuerg"
+  },
+  {
+    "page": "médias",
+    "key": "footer.medias-seo-description",
+    "de": "Die Erfolgsgeschichte nachhaltiger Produkte made in Luxembourg: BENU in den sozialen Netzwerken, im Radio, der Zeitung und im Fernsehen.",
+    "fr": "La réussite des produits durables made in Luxembourg: BENU sur les réseaux sociaux, à la radio, dans les journaux et à la télévision.",
+    "en": "The success story of sustainable products made in Luxembourg: BENU on social networks, on the radio, in the newspaper and on television.",
+    "lu": "De Succès vun nohaltege Produiten made in Luxembourg: BENU an de soziale Medien, am Radio, an der Zeitung an op der Tëlee."
+  },
+  {
+    "page": "cond. générales",
+    "key": "footer.general-conditions-seo-title",
+    "de": "Allgemeine Nutzungsbedingungen der BENU Internetseiten",
+    "fr": "Conditions générales d'utilisation des pages Internet BENU",
+    "en": "General terms of use of the BENU websites",
+    "lu": "Allgemeng Gebrauchsbedéngunge vun de BENU Internetsäiten"
+  },
+  {
+    "page": "cond. générales",
+    "key": "footer.general-conditions-seo-description",
+    "de": "Erfahre mehr über die Bedingungen und Modalitäten der Serviceleistungen von BENU Village Esch asbl.",
+    "fr": "En savoir plus sur les conditions et les modalités des services BENU Village Esch asbl.",
+    "en": "Find out more about the terms and conditions of our BENU VILLAGE Esch asbl services.",
+    "lu": "Hei gëss du méi iwwer d’Bedéngungen an d’Modalitéite vun de Servicer vu BENU VILLAGE Esch asbl gewuer."
+  },
+  {
+    "page": "Datenschutz",
+    "key": "footer.policy-seo-title",
+    "de": "DSGVO: Schutz personenbezogener Daten",
+    "fr": "RGPD: Protection des données personnelles",
+    "en": "RGPD: Protection of personal data",
+    "lu": "DSGVO: Schutz vu perséinlechen Donnéeën"
+  },
+  {
+    "page": "Datenschutz",
+    "key": "footer.policy-seo-description",
+    "de": "BENU legt nicht nur Wert auf Transparenz in Sachen Kommunikation - auch der verantwortungsvolle Umgang mit Deinen Daten liegt uns am Herzen.",
+    "fr": "La transparence en matière de communication nous tient à coeur - exactement comme le traitement responsable de tes données.",
+    "en": "BENU not only attaches importance to transparency regarding communication - the responsible handling of your data is also dear to our hearts.",
+    "lu": "BENU leet net just Wäert op Transparenz bei der Kommunikatioun - de responsabelen Ëmgang mat Dengen Donnéeën ass eis genau esou wichteg."
+  },
+  {
+    "page": "Impressum",
+    "key": "footer.legal-seo-title",
+    "de": "Impressum der Internetseiten von BENU",
+    "fr": "Mentions légales du site Internet BENU",
+    "en": "Legal notice of the BENU website",
+    "lu": "Legal Informatiounen zu de BENU Internetsäiten"
+  },
+  {
+    "page": "Impressum",
+    "key": "footer.legal-seo-description",
+    "de": "Die BENU Village Esch asbl begleitet BENU bei Konzeption, Realisierung und Kommunikation des Ökodorfes BENU VILLAGE.",
+    "fr": "BENU Village Esch asbl assiste BENU dans la conception, la réalisation et la communication de l'écovillage BENU VILLAGE.",
+    "en": "BENU Village Esch asbl assists BENU in the conception, realisation and communication of the ecovillage BENU VILLAGE.",
+    "lu": "BENU VILLAGE Esch asbl begleet BENU bei der Konzeptioun, der Realiséierung an der Kommunikatioun vum Ekoduerf BENU VILLAGE."
+  },
+  {
+    "page": "Sitemap",
+    "key": "footer.sitemap-title",
+    "de": "Seitenübersicht der Internetseiten von BENU",
+    "fr": "Aperçu des pages du site Internet de BENU",
+    "en": "Site map of the BENU websites",
+    "lu": "Iwwersiicht vun de BENU Internetsäiten"
+  },
+  {
+    "page": "Sitemap",
+    "key": "footer.sitemap-desc",
+    "de": "BENU COUTURE designt, produziert und verkauft in Luxemburg nachhaltige UpCycling-Kleidung in “Haute Couture”-Qualität.",
+    "fr": "BENU COUTURE conçoit, produit et vend des vêtements durables UpCycling de qualité haute couture au Luxembourg.",
+    "en": "BENU COUTURE designs, produces and sells sustainable UpCycling clothes in haute couture quality.",
+    "lu": "BENU COUTURE designt, produzéiert a verkeeft nohalteg UpCycling-Kleeder an Haute Couture-Qualitéit zu Lëtzebuerg."
+  },
+  {
     "page": "slug",
     "key": "slugs.models",
     "de": "kreationen",
@@ -4848,38 +5184,6 @@
     "lu": ""
   },
   {
-    "page": "participer",
-    "key": "participate.seo-title",
-    "de": "Du kannst bei BENU COUTURE mitmachen",
-    "fr": "Tu peux participer à BENU COUTURE",
-    "en": "You can participate to BENU COUTURE",
-    "lu": "Du kanns bei BENU COUTURE matmaachen"
-  },
-  {
-    "page": "participer",
-    "key": "participate.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "bons d'achat",
-    "key": "vouchers.seo-title",
-    "de": "Nachhaltig und fair verschenken mit BENU Gutscheinen",
-    "fr": "Offrir un cadeau durable et équitable avec les bons d'achat BENU",
-    "en": "Make a sustainable and fair gift with BENU vouchers",
-    "lu": "Schenk nohalteg a fair mat BENU Bongen"
-  },
-  {
-    "page": "bons d'achat",
-    "key": "vouchers.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
     "page": "actualités",
     "key": "news.all-seo-title",
     "de": "Neuigkeiten aus dem UpCycling Schneideratelier BENU COUTURE",
@@ -4960,182 +5264,6 @@
     "lu": ":name"
   },
   {
-    "page": "connexion",
-    "key": "auth.login-seo-title",
-    "de": "Anmeldung",
-    "fr": "Connexion",
-    "en": "Log in",
-    "lu": "Aloggen"
-  },
-  {
-    "page": "connexion",
-    "key": "auth.login-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "inscription",
-    "key": "auth.register-seo-title",
-    "de": "Konto eröffnen",
-    "fr": "Créer un compte",
-    "en": "Create account",
-    "lu": "Kont opmaachen"
-  },
-  {
-    "page": "inscription",
-    "key": "auth.register-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "mot passe oublie",
-    "key": "auth.password-forgotten-seo-title",
-    "de": "Passwort vergessen",
-    "fr": "Mot de passe oublié",
-    "en": "Forgotten password",
-    "lu": "Passwuert vergiess"
-  },
-  {
-    "page": "mot passe oublie",
-    "key": "auth.password-forgotten-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "erreur",
-    "key": "welcome.error-seo-title",
-    "de": "Fehlermeldung",
-    "fr": "Message d'erreur",
-    "en": "Error message",
-    "lu": "Feeler Message"
-  },
-  {
-    "page": "erreur",
-    "key": "welcome.error-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Compte",
-    "key": "dashboard.seo-title",
-    "de": "Mein BENU Konto",
-    "fr": "Mon compte BENU",
-    "en": "My BENU account",
-    "lu": "Mäi BENU Kont"
-  },
-  {
-    "page": "Compte",
-    "key": "dashboard.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "panier",
-    "key": "cart.seo-title",
-    "de": "Mein BENU Warenkorb",
-    "fr": "Mon panier BENU",
-    "en": "My BENU basket",
-    "lu": "Mäi BENU Akafskierfchen"
-  },
-  {
-    "page": "panier",
-    "key": "cart.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "tunnel d'achat paiement",
-    "key": "payment.seo-title",
-    "de": "Bezahlung",
-    "fr": "Paiement",
-    "en": "Payment",
-    "lu": "Bezuelung"
-  },
-  {
-    "page": "tunnel d'achat paiement",
-    "key": "payment.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "après paiement",
-    "key": "payment.seo-title-payment-complete",
-    "de": "Bestellung eingegangen",
-    "fr": "Commande reçue",
-    "en": "Order received",
-    "lu": "Bestellung ass ukomm"
-  },
-  {
-    "page": "après paiement",
-    "key": "payment.seo-description-payment-complete",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "paiement carte Paypal",
-    "key": "payment.process-seo-title",
-    "de": "Bezahlung per PayPal",
-    "fr": "Paiement par PayPal",
-    "en": "Payment via PayPal",
-    "lu": "Bezuelung mat PayPal"
-  },
-  {
-    "page": "paiement carte Paypal",
-    "key": "payment.process-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "newsletter sub",
-    "key": "auth.newsletter-subscribe-seo-title",
-    "de": "Mit dem Newsletter die Neuigkeiten von BENU verfolgen",
-    "fr": "Suivre l'actualité de BENU avec la newsletter",
-    "en": "Follow the news from BENU with the BENU newsletter",
-    "lu": "Mam BENU Newsletter d'Neiegkeete vu BENU suivéieren"
-  },
-  {
-    "page": "newsletter sub",
-    "key": "auth.newsletter-subscribe-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "newsletter can",
-    "key": "auth.newsletter-cancelled-seo-title",
-    "de": "BENU Newsletter kündigen",
-    "fr": "Se désabonner de la newsletter BENU",
-    "en": "Unsubscribe from the BENU newsletter",
-    "lu": "BENU Newsletter kënnegen"
-  },
-  {
-    "page": "newsletter can",
-    "key": "auth.newsletter-cancelled-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
     "page": "Informations",
     "key": "footer.general-infos-seo-title",
     "de": "Hintergründe über SLOW Fashion und nachhaltigen Konsum",
@@ -5146,70 +5274,6 @@
   {
     "page": "Informations",
     "key": "footer.general-infos-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "médias",
-    "key": "footer.medias-seo-title",
-    "de": "Medienberichte über BENU COUTURE in Luxemburg",
-    "fr": "Reportages médiatiques sur BENU COUTURE au Luxembourg",
-    "en": "Media reports about BENU COUTURE in Luxembourg",
-    "lu": "Medieberichter iwwer BENU COUTURE zu Lëtzebuerg"
-  },
-  {
-    "page": "médias",
-    "key": "footer.medias-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "cond. générales",
-    "key": "footer.general-conditions-seo-title",
-    "de": "UpCycling-Mode im BENU COUTURE Online-Shop bestellen",
-    "fr": "Commander de la mode Upcycling dans la boutique en ligne BENU COUTURE",
-    "en": "Order Upcycling fashion from the BENU COUTURE online shop",
-    "lu": "UpCycling Moud am BENU COUTURE Online Buttek bestellen"
-  },
-  {
-    "page": "cond. générales",
-    "key": "footer.general-conditions-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Datenschutz",
-    "key": "footer.policy-seo-title",
-    "de": "DSGVO: Schutz personenbezogener Daten",
-    "fr": "RGPD : Protection des données personnelles",
-    "en": "RGPD: Protection of personal data",
-    "lu": "DSGVO: Schutz vu perséinlechen Donnéeën"
-  },
-  {
-    "page": "Datenschutz",
-    "key": "footer.policy-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Impressum",
-    "key": "footer.legal-seo-title",
-    "de": "Der Online-Shop für nachhaltige Mode in Luxemburg",
-    "fr": "La boutique en ligne de mode éco-responsable au Luxembourg",
-    "en": "The online shop for sustainable  fashion in Luxembourg",
-    "lu": "Den Online Buttek fir nohalteg Moud zu Lëtzebuerg"
-  },
-  {
-    "page": "Impressum",
-    "key": "footer.legal-seo-description",
     "de": "",
     "fr": "",
     "en": "",
@@ -5242,22 +5306,6 @@
   {
     "page": "campaign",
     "key": "campaigns.single-white-card-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
-  },
-  {
-    "page": "Sitemap",
-    "key": "footer.sitemap-title",
-    "de": "BENU COUTURE - Die Plattform für  UpCycling-Mode in Luxemburg",
-    "fr": "BENU COUTURE - La plate-forme pour la mode UpCycling au Luxembourg",
-    "en": "BENU COUTURE - The platform for UpCycling fashion in Luxembourg",
-    "lu": "BENU COUTURE - D'Plattform fir UpCycling Moud zu Lëtzebuerg"
-  },
-  {
-    "page": "Sitemap",
-    "key": "footer.sitemap-desc",
     "de": "",
     "fr": "",
     "en": "",
@@ -12233,46 +12281,6 @@
   },
   {
     "page": "Panier",
-    "key": "forms.register-conditions-conf-1",
-    "de": "Ich stimme den",
-    "fr": "J’accepte les",
-    "en": "I accept the",
-    "lu": "Ech stëmmen den"
-  },
-  {
-    "page": "Panier",
-    "key": "forms.register-conditions-conf-2",
-    "de": "allgemeinen Geschäftsbedingungen",
-    "fr": "conditions générales",
-    "en": "general conditions",
-    "lu": "allgemenge Geschäftsbedéngungen"
-  },
-  {
-    "page": "Panier",
-    "key": "forms.register-conditions-conf-3",
-    "de": "und den",
-    "fr": "et la",
-    "en": "and the",
-    "lu": "an den"
-  },
-  {
-    "page": "Panier",
-    "key": "forms.register-conditions-conf-4",
-    "de": "Datenschutzrichtlinien",
-    "fr": "politique de confidentialité",
-    "en": "privacy policy",
-    "lu": "Dateschutzrichtlinne"
-  },
-  {
-    "page": "Panier",
-    "key": "forms.register-conditions-conf-5",
-    "de": "von BENU COUTURE zu",
-    "fr": "de BENU COUTURE",
-    "en": "of BENU COUTURE",
-    "lu": "vu BENU COUTURE zou"
-  },
-  {
-    "page": "Panier",
     "key": "forms.personnal-data-info",
     "de": "Indem ich meinen Einkauf fortsetze, stimme ich zu, dass die angegebenen persönlichen Daten verwendet und gespeichert werden, um die Nachverfolgung der Bestellung zu ermöglichen.",
     "fr": "En poursuivant mon achat, j'accepte que les données personnelles fournies soient utilisées et conservées afin qu’une tracede la commande puisse être conservée.",
@@ -15266,7 +15274,7 @@
   {
     "page": "Campaign",
     "key": "campaigns.halloween-txt-1-1",
-    "de": "Wieso sollte sich BENU äußern zu vermeintlichen Festen und „Traditionen“ wie Halloween, Black Friday, Cyber Monday, Black Week, ja, Green Friday, man höre und staune, so wie zu den immer länger währenden Weihnachts- und Wintermärkten? .",
+    "de": "Wieso sollte sich BENU äußern zu vermeintlichen Festen und „Traditionen“ wie Halloween, Black Friday, Cyber Monday, Black Week, ja, Green Friday, man höre und staune, so wie zu den immer länger währenden Weihnachts- und Wintermärkten?",
     "fr": "Pourquoi est-ce que BENU devrait se positionner par rapport à de prétendues fêtes et „traditions“ comme Halloween, le Black Friday, le Cyber Monday, la Black Week - ou le Green Friday, qu'on se le dise -, ou des marchés de Noël et d'hiver qui durent de plus en plus longtemps?",
     "en": "Why should BENU take a stand on supposed festivities and traditions such as Halloween, Black Friday, Cyber Monday, Black Week - or, get this, Green Friday -, or on the ever-longer existing Christmas and winter markets?",
     "lu": "Firwat sollt BENU sech zu Fester an „Traditiounen“ ewéi Halloween, Black Friday, Cyber Monday, Black Week - oder Green Friday, wien hätt dat geduecht -, oder zu de Wanter- a Chrëschtmäert äusseren, déi mëttlerweil ëmmer méi laang daueren?"
@@ -15355,7 +15363,7 @@
     "page": "Campaign",
     "key": "campaigns.halloween-txt-7-1",
     "de": "Ich mache mein Schnäppchen und der/die Verkäufer:in pflanzt dafür mehrere Halme Weizen in ein prächtiges Feld, oder gleich einen zwanzig Zentimeter hohen Baum  dort, wo vor einem Jahr noch ein Tropenwald mit 1.000 Jahre alten Urwaldriesen stand. So wird gleichzeitig auch noch die Natur gerettet.",
-    "fr": "e peux faire une bonne affaire, pendant que les vendeurs:euses plantent plusieurs tiges de blé dans un champ magnifique, voire un arbre de vingt centimètres de haut là où, il y a un an, il y avait une forêt tropicale avec des géants de la jungle âgés de mille ans - sauvant ainsi la nature en même temps!",
+    "fr": "Je peux faire une bonne affaire, pendant que les vendeurs:euses plantent plusieurs tiges de blé dans un champ magnifique, voire un arbre de vingt centimètres de haut là où, il y a un an, il y avait une forêt tropicale avec des géants de la jungle âgés de mille ans - sauvant ainsi la nature en même temps!",
     "en": "I can make a bargain, while the seller plants several stalks of wheat in a beautiful field, or even a twenty-centimetre-high tree where a tropical forest with 1,000-year-old jungle giants stood a year ago - saving nature at the same time! Bravo!",
     "lu": "Ech kann eng gutt Affär maachen an de/d’ Verkeefer:in planzt wärenddeem e bësse Weess an e schéint Feld, oder direkt esouguer en zwanzeg Zentimeter grousse Bam op déi Plaz, wou virun engem Joer nach en Tropebësch mat 1.000 Joer alen Urwaldrise stoung. Esou gëtt nämlech och nach direkt d’Natur gerett!"
   },
@@ -15402,7 +15410,7 @@
   {
     "page": "Campaign",
     "key": "campaigns.halloween-txt-8-4",
-    "de": "Man muss einfach das Ganze umdrehen: Also nicht ins Gewühl rennen, um dort herauszufinden, was ich schon immer „dringend gebraucht habe“. Vielmehr investiere ich meine Zeit hautpsächlich in mein Wohlbefinden meine Lebensqualität und damit unweigerlich auch in meine Zufriedenheit und mein Glücklichsein. Wenn ich etwas wirklich brauche, informiere ich mich und suche nach guten, nein, den bestmöglichen Konditionen. Neben dem Preis interessieren mich vor allem die sozialen und ökologischen Aspekte wie Regionalität, Saisonalität, die Arbeitsbindungen im Herstellerland und so weiter..  Erst dann kaufe ich.",
+    "de": "Man muss einfach das Ganze umdrehen: Also nicht ins Gewühl rennen, um dort herauszufinden, was ich schon immer „dringend gebraucht habe“. Vielmehr investiere ich meine Zeit hautpsächlich in mein Wohlbefinden meine Lebensqualität und damit unweigerlich auch in meine Zufriedenheit und mein Glücklichsein. Wenn ich etwas wirklich brauche, informiere ich mich und suche nach guten, nein, den bestmöglichen Konditionen. Neben dem Preis interessieren mich vor allem die sozialen und ökologischen Aspekte wie Regionalität, Saisonalität, die Arbeitsbindungen im Herstellerland und so weiter. Erst dann kaufe ich.",
     "fr": "Il suffit d'inverser tout ce processus: je ne me précipite pas dans la foule pour y trouver ce qui m'a toujours \"manqué cruellement\". J’investis cette énergie et ce temps plutôt dans mon bien-être, ma qualité de vie, et du coup dans ma satisfaction et mon bonheur. S'il me manque quelque chose, je m'informe et je cherche de bonnes - non - les meilleures conditions possibles. Outre le prix, je m'intéresse surtout aux aspects sociaux et écologiques, à savoir à la régionalité, la saisonnalité, aux liens de travail dans le pays producteur et tout cela. Ce n'est qu'ensuite que j'achète.",
     "en": "You simply have to turn the whole process around. Simply put: I don't run into the hustle and bustle to find what I've always „desperately needed“. Instead, I invest my time primarily in my well-being, my quality of life - and thereby in my contentment and happiness. Should I really need something, I will inform myself and look for good - no - the best possible conditions. Apart from the price, I am interested in the social and ecological aspects, such as regionality, seasonality, the labour ties in the producer country, and so forth. Only then do I buy.",
     "lu": "Et muss een dee ganze Prozess einfach ëmdréien, also net an d’Gewulls lafen, fir do erauszefannen, wat mir schonn ëmmer „dringend gefeelt“ huet. Ech investéiere meng Zäit léiwer a mäi Wuelbefannen, meng Liewensqualitéit an doduerch och a meng Zefriddenheet a mäi Glécklechsinn. Wa mir eppes feelt, informéieren ech mech a sichen no gudden - nee - no de beschte Konditiounen. Niewent dem Präis intresséiere mech virun allem nach déi sozial an ekologesch Aspekter ewéi Regionalitéit, Saisonalitéit, d’Aarbechtsbedéngungen am Produktiounsland an esou weider. Eréischt da kafen ech."
@@ -15426,7 +15434,7 @@
   {
     "page": "Campaign",
     "key": "campaigns.halloween-txt-8-6-link",
-    "de": "fear of missing out' (FOMO)",
+    "de": "‘fear of missing out' (FOMO)",
     "fr": "fear of missing out\" (FOMO)",
     "en": "FOMO - the 'fear of missing out'",
     "lu": "d’'fear of missing out' (FOMO)"
