@@ -821,7 +821,7 @@ trait FiltersGenerator {
                 foreach ($articles_filtered_by_color as $article_checked_for_shop) {
                     $article_ok = 0;
                     foreach ($article_checked_for_shop->shops as $article_shop) {
-                        if ($article_shop->filter_key == $shop) {
+                        if ($article_shop->filter_key == $shop && $article_shop->pivot->stock > 0) {
                             $article_ok = 1;
                         }
                     }
