@@ -104,7 +104,7 @@
 						<div class="flex justify-start flex-wrap new-orders__order__article" wire:key="new-article-{{ $article->id }}">
 							<div class="new-orders__order__article__img-container">
 								@if($article->name == 'voucher')
-						        <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" />
+						        <img src="{{ asset('images/pictures/photo_voucher.jpg') }}" alt="BENU vouchers" title="BENU Vouchers" />
 						        @elseif($article->photos()->where('is_front', '1')->count() > 0)
 						        <img src="{{ asset('images/pictures/articles/'.$article->photos()->where('is_front', '1')->first()->file_name) }}">
 						        @else
@@ -333,7 +333,7 @@
 							<div class="flex justify-start flex-wrap new-orders__order__article" wire:key="unpaid-article-detail-{{ $article->id }}">
 								<div class="new-orders__order__article__img-container">
 									@if($article->name == 'voucher')
-							        <img src="{{ asset('images/pictures/vouchers_img.png') }}" alt="BENU vouchers" title="BENU Vouchers" />
+							        <img src="{{ asset('images/pictures/photo_voucher.jpg') }}" alt="BENU vouchers" title="BENU Vouchers" />
 							        @elseif($article->photos()->where('is_front', '1')->count() > 0)
 							        <img src="{{ asset('images/pictures/articles/'.$article->photos()->where('is_front', '1')->first()->file_name) }}">
 							        @else
