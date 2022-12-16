@@ -463,8 +463,8 @@ class GeneralController extends Controller
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
 
-            // echo "*** Translations importation started ***<br/>";
-            // $this->importTranslations();
+            echo "*** Translations importation started ***<br/>";
+            $this->importTranslations();
 
             // echo "*** Updating packaging for all creations ***<br/>";
             // $this->updatePackagingOnly();
