@@ -208,6 +208,40 @@ class CheckArticles extends Page
         }
     }
 
+    public function validateSingularities($article_id)
+    {
+        if (Article::find($article_id)) {
+            $article = Article::find($article_id);
+
+            if ($this->singularities_de[$article_id] !== null) {
+                $article->singularity_de = $this->singularities_de[$article_id];
+            } else {
+                $article->singularity_de = "";
+            }
+            if ($this->singularities_fr[$article_id] !== null) {
+                $article->singularity_fr = $this->singularities_fr[$article_id];
+            } else {
+                $article->singularity_fr = "";
+            }
+            if ($this->singularities_lu[$article_id] !== null) {
+                $article->singularity_lu = $this->singularities_lu[$article_id];
+            } else {
+                $article->singularity_lu = "";
+            }
+            if ($this->singularities_en[$article_id] !== null) {
+                $article->singularity_en = $this->singularities_en[$article_id];
+            } else {
+                $article->singularity_en = "";
+            }
+
+            if ($article->save()) {
+                $this->notify('success', 'Singularities for article '.$article->name.' have been updated!');
+                $this->updateArticles();
+                // $this->emit('variationChecked');
+            }
+        }
+    }
+
     public function validateArticle($article_id)
     {
         if (Article::find($article_id)) {

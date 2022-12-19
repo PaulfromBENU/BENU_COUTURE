@@ -119,6 +119,10 @@
 							</div>
 						</div>
 
+						<div class="new-photo-form__btn-container">
+					    	<button wire:click.prevent.stop="validateSingularities({{ $article->id }})">Validate singularities only</button>
+					    </div>
+
 						<div class="new-photo-form__btn-container" x-data>
 					    	<button type="submit" @click="window.scrollTo({ top: 0, behavior: 'smooth' });">Update and send to validation</button>
 					    </div>

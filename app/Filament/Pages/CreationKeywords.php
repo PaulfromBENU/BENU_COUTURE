@@ -123,13 +123,30 @@ class CreationKeywords extends Page
                 || $new_keyword_array['en'] !== "") {
 
                 $new_keyword = new Keyword();
-                $new_keyword->keyword_fr = $new_keyword_array['fr'];
 
-                $new_keyword->keyword_de = $new_keyword_array['de'];
+                if (isset($new_keyword_array['fr'])) {
+                    $new_keyword->keyword_fr = $new_keyword_array['fr'];
+                } else {
+                    $new_keyword->keyword_fr = "";
+                }
 
-                $new_keyword->keyword_lu = $new_keyword_array['lu'];
+                if (isset($new_keyword_array['de'])) {
+                    $new_keyword->keyword_de = $new_keyword_array['de'];
+                } else {
+                    $new_keyword->keyword_de = "";
+                }
 
-                $new_keyword->keyword_en = $new_keyword_array['en'];
+                if (isset($new_keyword_array['lu'])) {
+                    $new_keyword->keyword_lu = $new_keyword_array['lu'];
+                } else {
+                    $new_keyword->keyword_lu = "";
+                }
+
+                if (isset($new_keyword_array['en'])) {
+                    $new_keyword->keyword_en = $new_keyword_array['en'];
+                } else {
+                    $new_keyword->keyword_en = "";
+                }
 
                 if ($new_keyword->save()) {
                     $this->selected_creation->keywords()->attach($new_keyword->id);
