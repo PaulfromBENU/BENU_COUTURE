@@ -18,7 +18,7 @@ class FilteredArticles extends Component
     public $sorting_order;
     public $size_order;
 
-    protected $listeners = ['filtersUpdated' => 'applyFilters', 'sortUpdated' => 'updateSorting'];
+    protected $listeners = ['filtersUpdated' => 'applyFilters', 'sortUpdated' => 'updateSorting', 'cartUpdated' => 'refreshFilters'];
 
     public function mount()
     {
@@ -46,6 +46,13 @@ class FilteredArticles extends Component
         });
 
         $this->emit('articlesUpdated');
+
+        $this->initial_filters = $applied_filters;
+    }
+
+    public function refreshFilters()
+    {
+        $this->applyFilters($this->initial_filters);
     }
 
     public function updateSorting(string $sort_order, $applied_filters)
