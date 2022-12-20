@@ -9,6 +9,11 @@ use App\Models\Cart;
 trait DeliveryCalculator {
 	protected $pillow_weight = 800;
 
+	protected $envelope_mini_price_lu = 1.00;
+	protected $envelope_maxi_price_lu = 2.00;
+	protected $envelope_mini_price_eu = 1.40;
+	protected $envelope_maxi_price_eu = 4.20;
+
 	protected $fare_table = [
 		'1' => [
 			'0.05' => '2',
@@ -112,35 +117,51 @@ trait DeliveryCalculator {
 
 		$delivery_cost = 0;
 
+		if (DeliveryCountry::where('country_code', $country_code)->count() == 0) {
+			$code = 5;
+		} else {
+			$code = DeliveryCountry::where('country_code', $country_code)->first()->delivery_zone;
+		}
+
+		if(!in_array($code, ['1', '2', '3', '4', '5'])) {
+			$code = 5;
+		}
+
 		if($envelope == 0) {
-			if (DeliveryCountry::where('country_code', $country_code)->count() == 0) {
-				$code = 5;
-			} else {
-				$code = DeliveryCountry::where('country_code', $country_code)->first()->delivery_zone;
-			}
-
-			if(!in_array($code, ['1', '2', '3', '4', '5'])) {
-				$code = 5;
-			}
-
 			$index = 0;
+			$weight_reached = 1;
 			foreach ($this->fare_table[$code] as $weight_breakpoint => $amount) {
-				if ($index == 0) {
+				if ($index == 0 || $weight_reached == 1) {
+					// Delivery cost is the first price above the breakpoint in the table
 					$delivery_cost = $amount;
 				}
 				$index ++;
 				if ($weight > $weight_breakpoint) {
-					$delivery_cost = $amount;
+					$weight_reached = 1;
+				} else {
+					$weight_reached = 0;
 				}
 			}
 
 			$delivery_cost += 2;
 		} elseif ($envelope == 1) {
 			// Case Envelope MINI
-			$delivery_cost = 2;
+			if ($code > 1) {
+				// Price outside LU
+				$delivery_cost = $this->envelope_mini_price_eu + 1;
+			} else {
+				// Price in LU
+				$delivery_cost = $this->envelope_mini_price_lu + 1;
+			}
 		} elseif ($envelope == 2) {
 			// Case Envelope MAXI
-			$delivery_cost = 3;
+			if ($code > 1) {
+				// Price outside LU
+				$delivery_cost = $this->envelope_maxi_price_eu + 1;
+			} else {
+				// Price in  LU
+				$delivery_cost = $this->envelope_maxi_price_lu + 1;
+			}
 		}
 
 		return $delivery_cost;
