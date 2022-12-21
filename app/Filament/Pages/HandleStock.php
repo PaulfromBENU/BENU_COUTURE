@@ -117,7 +117,7 @@ class HandleStock extends Page
         if ($this->creation_name == 'none-0') {
             $this->computed_variations = collect([]);
         } elseif (Creation::where('name', $this->creation_name)->count() > 0) {
-            $this->computed_variations = Creation::where('name', $this->creation_name)->first()->articles;
+            $this->computed_variations = Creation::where('name', $this->creation_name)->first()->all_articles;
         }
     }
 
