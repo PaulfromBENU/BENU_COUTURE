@@ -4792,6 +4792,22 @@
     "lu": "BENU COUTURE designt, produzéiert a verkeeft nohalteg UpCycling-Kleeder an Haute Couture-Qualitéit zu Lëtzebuerg."
   },
   {
+    "page": "Kontakt",
+    "key": "service.seo-title",
+    "de": "BENU VILLAGE kontaktieren",
+    "fr": "Contacter BENU VILLAGE",
+    "en": "Contact BENU VILLAGE",
+    "lu": "BENU VILLAGE kontaktéieren"
+  },
+  {
+    "page": "Kontakt",
+    "key": "service.seo-description",
+    "de": "Du findest uns im BENU VILLAGE in der Stadt Esch-sur-Alzette im Süden Luxemburgs.",
+    "fr": "Tu nous trouveras au BENU VILLAGE dans la ville d'Esch-sur-Alzette, au sud du Luxembourg.",
+    "en": "You will find us in the BENU VILLAGE located in Esch-sur-Alzette, a town in the south of Luxembourg.",
+    "lu": "Du fënns eis am BENU VILLAGE zu Esch-Uelzecht am Süde vu Lëtzebuerg."
+  },
+  {
     "page": "slug",
     "key": "slugs.models",
     "de": "kreationen",
@@ -5149,7 +5165,7 @@
     "de": "Wir fertigen nachhaltige und faire Mode aus alten Kleidungsstücken. BENU COUTURE, das sind farbenfrohe und ansprechende Kreationen für Groß und Klein.",
     "fr": "Nous créons une mode durable et équitable à partir de vieux vêtements. BENU COUTURE, ce sont des créations colorées et attrayantes pour petits et grands.",
     "en": "We manufacture sustainable and fair fashion from old clothes. BENU COUTURE offers colourful and attractive designs for young and old.",
-    "lu": "Mir produzéieren nohalteg a fair Kleedungsstécker aus alem Gezei. BENU COUTURE, dat si faarweg an uspriechend Kreatioune fir Grouss a Kleng."
+    "lu": "Mir produzéieren nohalteg a fair Kleedungsstécker aus alem Gezei. BENU COUTURE, dat si faarweg an uspriechend Kreatiounen fir Grouss a Kleng."
   },
   {
     "page": "service",
@@ -5162,10 +5178,10 @@
   {
     "page": "service",
     "key": "services.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Beim Kauf Deiner Upcycling-Kleidung sind Fragen aufgetreten? Wir haben unsere helfende Hand schon nach Dir ausgestreckt!",
+    "fr": "Tu as des questions sur l'achat de tes vêtements UpCycling? Nous sommes là pour t'aider!",
+    "en": "You are left with some questions when buying your UpCycling clothes? We’re here to help you!",
+    "lu": "Beim Kaf vun Dengem UpCycling-Gezei si Froen opkomm? Mir hunn eis Hand schonn no Dir ausgestreckt, fir Dir ze hëllefen!"
   },
   {
     "page": "histoire",
@@ -5178,10 +5194,10 @@
   {
     "page": "histoire",
     "key": "about.full-story-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Immer mehr Kleidung wird produziert, gekauft und weggeworfen. BENU COUTURE möchte das zusammen mit Dir und unserer Slow Fashion Kleidung ändern!",
+    "fr": "On produit, on achète et on jette de plus en plus de vêtements. BENU COUTURE veut changer cela ensemble avec toi et nos vêtements Slow Fashion!",
+    "en": "More and more clothes are being produced, bought and thrown away. BENU COUTURE wants to change that, together with you and our slow fashion clothing!",
+    "lu": "Et gëtt ëmmer méi Gezei produzéiert, kaf an ewechgeheit. BENU COUTURE wëll dat zesumme mat Dir an eisem Slow Fashion-Gezei änneren!"
   },
   {
     "page": "actualités",
@@ -5194,10 +5210,10 @@
   {
     "page": "actualités",
     "key": "news.all-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Im UpCycling-Atelier von BENU COUTURE ist immer was los, und neue Projekte lassen nie lange auf sich warten!",
+    "fr": "Il se passe toujours quelque chose dans l'atelier UpCycling de BENU COUTURE, et des nouveaux projets ne se font jamais attendre!",
+    "en": "There's always something going on in BENU COUTURE’s UpCycling studio, and new projects are never long in coming!",
+    "lu": "Am UpCycling Atelier vu BENU COUTURE ass ëmmer eppes lass, an nei Projete loossen ni laang op sech waarden!"
   },
   {
     "page": "à propos",
@@ -5210,10 +5226,18 @@
   {
     "page": "à propos",
     "key": "about.seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Unser BENU COUTURE Team könnte nicht vielfältiger sein. Was uns alle vereint: die Freude daran, aus Altem Neues zu erschaffen!",
+    "fr": "Notre équipe BENU COUTURE ne pourrait être plus diversifiée. Ce qui nous unit tous: le plaisir de créer du neuf à partir de l'ancien!",
+    "en": "Our BENU COUTURE team could not be more diverse. What unites us all: the joy of creating something new from something old!",
+    "lu": "Eis BENU COUTURE Ekipp kéint net méi villsäiteg sinn. Wat mir all gemeinsam hunn: d’Freed dorun, aus eppes Alem eppes Neies ze kreéieren!"
+  },
+  {
+    "page": "créations",
+    "key": "models.seo-title-all",
+    "de": "Alle BENU COUTURE Modelle sind einzigartig und lokal gefertigt",
+    "fr": "Tous les modèles BENU COUTURE sont uniques et fabriqués localement",
+    "en": "All BENU COUTURE models are unique and locally made",
+    "lu": "All d’BENU COUTURE Modeller sinn eenzegaarteg a lokal produzéiert"
   },
   {
     "page": "créations",
@@ -5226,10 +5250,50 @@
   {
     "page": "créations",
     "key": "models.seo-description-all",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Wir setzen den Traum einer textilen Kreislaufwirtschaft in die Tat um - wir freuen uns, Dir unsere UpCycling-Kleidung zu zeigen!",
+    "fr": "Nous réalisons le rêve d’une économie circulaire au niveau de la production textile - nous sommes heureux de te montrer tous nos vêtements UpCycling!",
+    "en": "We turn the dream of the textile circular economy into reality - we are thrilled to show you all of our UpCycling clothes!",
+    "lu": "Mir realiséieren de Projet vun enger kreeslafwirtschaftlecher Kleederproduktioun - mir freeën eis, Dir all eis UpCycling-Kleeder ze weisen!"
+  },
+  {
+    "page": "créations",
+    "key": "models.seo-title-all-clothes",
+    "de": "Alle UpCycling-Kleidungsstücke von BENU COUTURE",
+    "fr": "Tous les vêtements UpCycling de BENU COUTURE",
+    "en": "All UpCycling-clothes by BENU COUTURE",
+    "lu": "All d’UpCycling-Gezei vu BENU COUTURE"
+  },
+  {
+    "page": "créations",
+    "key": "models.seo-description-all-clothes",
+    "de": "Entdecke unsere Vielfalt nachhaltiger und fair produzierter Slow Fashion - made in Luxembourg!",
+    "fr": "Découvre tous nos vêtements slow fashion durables, équitables et made in Luxembourg!",
+    "en": "Discover our variety of sustainable and fair slow fashion made in Luxembourg!",
+    "lu": "Entdeck all eist nohaltegt, fair produzéiert Slow Fashion-Gezei made in Luxembourg!"
+  },
+  {
+    "page": "créations",
+    "key": "models.seo-title-all-accessories",
+    "de": "Alle UpCycling-Accessoires von BENU COUTURE",
+    "fr": "Tous les accessoires UpCycling de BENU COUTURE",
+    "en": "All UpCycling-accessories by BENU COUTURE",
+    "lu": "All d’UpCycling-Accessoirë vu BENU COUTURE"
+  },
+  {
+    "page": "créations",
+    "key": "models.seo-description-all-accessories",
+    "de": "Unsere nachhaltigen UpCycling-Accessoires vervollständigen, was wirklich wichtig ist: Deine persönliche Ausstrahlung!",
+    "fr": "Nos accessoires UpCycling durables complètent ce qui est vraiment important: ta personnalité unique!",
+    "en": "Our sustainable UpCycling accessories complete what actually matters: your unique charisma!",
+    "lu": "Eis nohalteg UpCycling-Accessoirë completéieren, wat wierklech wichteg ass: Deng perséinlech Ausstralung!"
+  },
+  {
+    "page": "créations",
+    "key": "models.seo-title-all-home",
+    "de": "Alle UpCycling-Gebrauchsgegenstände von BENU COUTURE",
+    "fr": "Tous les objets d’usage courant UpCycling de BENU OUTURE",
+    "en": "All UpCycling utility items by BENU COUTURE",
+    "lu": "All d’UpCycling-Gebrauchsgéigestänn vu BENU COUTURE"
   },
   {
     "page": "Model",
@@ -5269,15 +5333,15 @@
     "de": "Hintergründe über SLOW Fashion und nachhaltigen Konsum",
     "fr": "Informations sur la SLOW fashion et la consommation durable",
     "en": "Information on SLOW fashion and sustainable consumption",
-    "lu": "Hannergrondinformatiounen iwwer SLOW-Fashion an nohaltege Konsum"
+    "lu": "Informatiounen iwwer SLOW-Fashion an nohaltege Konsum"
   },
   {
     "page": "Informations",
     "key": "footer.general-infos-seo-description",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Erfahre mehr darüber, wie Du Dich auf eine umweltbewusstere und sozialverantwortlichere Weise kleiden kannst.",
+    "fr": "Découvre comment tu peux t'habiller de manière plus écologique et socialement responsable.",
+    "en": "Learn more about how you can dress in a more environmentally and socially responsible way.",
+    "lu": "Fann eraus, wéi s Du Dech méi ëmweltbewosst a sozialverantwortlech akleede kanns."
   },
   {
     "page": "campaign",
@@ -5290,10 +5354,10 @@
   {
     "page": "campaign",
     "key": "campaigns.all-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "BENU COUTURE produziert nicht nur nachhaltige Mode. Informiere Dich über sozialpolitisch relevante Themen mit unserem Mikrofon für Politisches!",
+    "fr": "BENU COUTURE ne produit pas que de la mode durable. Informe-toi sur les thèmes sociopolitiques importants grâce à notre micro pour la politique!",
+    "en": "BENU COUTURE does not only produce sustainable fashion. Learn more about socio-political, relevant topics with our political microphone!",
+    "lu": "BENU COUTURE produzéiert net just nohalteg Moud. Informéier Dech iwwer sozialpolitesch relevant Themen mat eisem Mikro fir Politesches!"
   },
   {
     "page": "campaign",
@@ -5301,15 +5365,31 @@
     "de": "Das Mikrofon für Politisches - Freibrief",
     "fr": "Le micro pour la politique - Carte blanche",
     "en": "A microphone for politics - Free hand",
-    "lu": "De Mikro fir Politesches - Carte Blanche"
+    "lu": "De Mikro fir Politesches - Fräischäin"
   },
   {
     "page": "campaign",
     "key": "campaigns.single-white-card-seo-desc",
-    "de": "",
-    "fr": "",
-    "en": "",
-    "lu": ""
+    "de": "Der Konsumrausch und das schlechte Gewissen - Über unsere Gewohnheit, uns beim Kleiderkauf selbst in die Tasche zu lügen",
+    "fr": "La frénésie de consommation et notre mauvaise conscience - À propos de notre habitude de nous mentir à nous-mêmes en achetant des vêtements",
+    "en": "The consumerist frenzy and the guilty conscience - about our habit of lying to ourselves when buying clothes",
+    "lu": "De Konsumrausch an dat schlecht Gewëssen - Iwwer eis Gewunnecht, eis selwer unzeléien, wa mir Gezei kafen"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.single-halloween-seo-title",
+    "de": "Das Mikrofon für Politisches - Blackfriday & Co",
+    "fr": "Le micro pour la politique - Blackfriday & Co",
+    "en": "A microphone for politics - Blackfriday & Co",
+    "lu": "De Mikro fir Politesches - Blackfriday & Co"
+  },
+  {
+    "page": "Campaign",
+    "key": "campaigns.single-halloween-seo-desc",
+    "de": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Weihnachts- und Wintermärkte wohin man schaut. Ist es das wonach wir suchen?",
+    "fr": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Des marchés de Noël et d'hiver partout où on regarde. Est-ce vraiment ce que nous recherchons ?",
+    "en": "Halloween, Black Friday, Cyber Monday, Black Week, Green Friday.... Christmas and winter markets everywhere you look. Is this really what we are looking for?",
+    "lu": "Halloween, Black Friday, Cyber Mondy, Black Week, Green Friday,... Chrëscht- a Wantermäert, egal wouhin ee kuckt. Ass et wierklech dat, wat mir sichen?"
   },
   {
     "page": "Home",
@@ -15210,10 +15290,10 @@
   {
     "page": "Campaign",
     "key": "campaigns.carte-blanche-summary",
-    "de": "Ein Aufruf für mehr Ehrlichkeit und Konsequenz",
-    "fr": "Un appel pour plus d'honnêteté et de cohérence",
-    "en": "A call for more honesty and consistency",
-    "lu": "En Opruff fir méi Éierlechkeet a Konsequenz"
+    "de": "Ein Aufruf für mehr Ehrlichkeit und Konsequenz - über unsere Gewohnheit, uns beim Kleiderkauf selbst in die Tasche zu lügen.",
+    "fr": "Un appel pour plus d'honnêteté et de cohérence - à propos de notre habitude de nous mentir à nous-mêmes en achetant des vêtements",
+    "en": "A call for more honesty and consistency - about our habit of lying to ourselves when buying clothes",
+    "lu": "En Opruff fir méi Éierlechkeet a Konsequenz - iwwer eis Gewunnecht, eis selwer unzeléien, wa mir Gezei kafen"
   },
   {
     "page": "Campaign",

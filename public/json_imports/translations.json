@@ -42,10 +42,10 @@
   {
     "page": "Home",
     "key": "header.sloow-desc",
-    "de": "Weil Ernährung und Lebensmittelverschwendung Themen sind, die uns am Herzen liegen, haben wir BENU SLOOW gegründet. Das erste \n \"Rescued Food\"-Restaurant der Großregion bietet eine Bio-Küche an, die originell und vor allem nachhaltig ist!\nEine neue, umfangreichere Website wird im Winter 2022 eingerichtet. Mehr dazu hier:",
-    "fr": "Parce que l’alimentation et le gaspillage alimentaire sont des sujets qui nous tiennent à cœur, nous avons créé BENU SLOOW. Le premier restaurant \"Rescued Food\" de la Grande Région propose une cuisine bio, originale, mais surtout durable !\nUn nouveau site plus complet sera mis en place à l'hiver 2022. Pour en savoir plus :",
-    "en": "Food and food waste are subjects that are close to our hearts. That's why we have created BENU SLOOW. The first \"Rescued Food\" restaurant in the Greater Region offers organic, original and above all, sustainable dishes!\nA new, more complete website will be launched in winter 2022. For more information:",
-    "lu": "Well Ernärung a Liewensmëttelverschwendung Theeme sinn, déi eis um Häerze leien, hu mir BENU SLOOW gegrënnt. Den éischte \"Rescued Food\" Restaurant an der Groussregioun, bitt eng Bio-Kichen un, originell a virun allem nohalteg! \nEng méi informatiounsräich Internetsäit wäert am Wanter 2022 ageriicht ginn. Méi dozou hei:"
+    "de": "Weil Ernährung und Lebensmittelverschwendung Themen sind, die uns am Herzen liegen, haben wir BENU SLOOW gegründet. Das erste \n \"Rescued Food\"-Restaurant der Großregion bietet eine Bio-Küche an, die originell und vor allem nachhaltig ist!\nEine neue, umfangreichere Website wird im Winter 2022/23 eingerichtet. Mehr dazu hier:",
+    "fr": "Parce que l’alimentation et le gaspillage alimentaire sont des sujets qui nous tiennent à cœur, nous avons créé BENU SLOOW. Le premier restaurant \"Rescued Food\" de la Grande Région propose une cuisine bio, originale, mais surtout durable !\nUn nouveau site plus complet sera mis en place en hiver 2022/23. Pour en savoir plus :",
+    "en": "Food and food waste are subjects that are close to our hearts. That's why we have created BENU SLOOW. The first \"Rescued Food\" restaurant in the Greater Region offers organic, original and above all, sustainable dishes!\nA new, more complete website will be launched in winter 2022/23. For more information:",
+    "lu": "Well Ernärung a Liewensmëttelverschwendung Theeme sinn, déi eis um Häerze leien, hu mir BENU SLOOW gegrënnt. Den éischte \"Rescued Food\" Restaurant an der Groussregioun, bitt eng Bio-Kichen un, originell a virun allem nohalteg! \nEng méi informatiounsräich Internetsäit wäert am Wanter 2022/23 ageriicht ginn. Méi dozou hei:"
   },
   {
     "page": "Home",
@@ -549,7 +549,7 @@
     "de": "Mit Deinem  BENU Konto kannst Du Deine Aktivitäten auf den  verschiedenen Internetseiten von BENU Village Esch asbl einsehen und verwalten.",
     "fr": "Avec ton compte BENU, tu peux consulter et gérer tes activités sur les différents sites Internet de BENU Village Esch asbl.",
     "en": "With your BENU account, you can view and manage your activities on the different BENU Village Esch asbl websites.",
-    "lu": "Mat Dengem  BENU Konto kanns Du Deng Aktivitéiten op deenen ënnerschiddlechen Internetsäite vu BENU Village Esch asbl kucken a verwalten."
+    "lu": "Mat Dengem BENU Konto kanns Du Deng Aktivitéiten op deenen ënnerschiddlechen Internetsäite vu BENU Village Esch asbl kucken a verwalten."
   },
   {
     "page": "Compte",
@@ -4790,22 +4790,6 @@
     "fr": "BENU COUTURE conçoit, produit et vend des vêtements durables UpCycling de qualité haute couture au Luxembourg.",
     "en": "BENU COUTURE designs, produces and sells sustainable UpCycling clothes in haute couture quality.",
     "lu": "BENU COUTURE designt, produzéiert a verkeeft nohalteg UpCycling-Kleeder an Haute Couture-Qualitéit zu Lëtzebuerg."
-  },
-  {
-    "page": "Kontakt",
-    "key": "service.seo-title",
-    "de": "BENU VILLAGE kontaktieren",
-    "fr": "Contacter BENU VILLAGE",
-    "en": "Contact BENU VILLAGE",
-    "lu": "BENU VILLAGE kontaktéieren"
-  },
-  {
-    "page": "Kontakt",
-    "key": "service.seo-description",
-    "de": "Du findest uns im BENU VILLAGE in der Stadt Esch-sur-Alzette im Süden Luxemburgs.",
-    "fr": "Tu nous trouveras au BENU VILLAGE dans la ville d'Esch-sur-Alzette, au sud du Luxembourg.",
-    "en": "You will find us in the BENU VILLAGE located in Esch-sur-Alzette, a town in the south of Luxembourg.",
-    "lu": "Du fënns eis am BENU VILLAGE zu Esch-Uelzecht am Süde vu Lëtzebuerg."
   },
   {
     "page": "slug",
@@ -12554,10 +12538,10 @@
   {
     "page": "Panier",
     "key": "cart.payment-choose-invoice-address",
-    "de": "Wähle Deine Rechnungsadresse",
-    "fr": "Choisis ton adresse de facturation",
-    "en": "Choose your invoice address​",
-    "lu": "Wiel Deng Rechnungsadress"
+    "de": "Wähle Deine Rechnungsadresse um fortzufahren",
+    "fr": "Pour continuer choisis ton adresse de facturation pour continuer",
+    "en": "Choose your invoice address​ to continue",
+    "lu": "Wiel Deng Rechnungsadress aus fir weiderzefueren"
   },
   {
     "page": "Panier",
