@@ -30,10 +30,10 @@ class CompositionResource extends Resource
         return in_array(auth()->user()->role, $authorized_roles);
     }
 
-    public function mount(): void
-    {
-        abort_unless((auth()->user()->role == 'admin' || auth()->user()->role == 'editor'), 403);
-    }
+    // public function mount(): void
+    // {
+    //     abort_unless((auth()->user()->role == 'admin' || auth()->user()->role == 'editor'), 403);
+    // }
 
     public static function form(Form $form): Form
     {
