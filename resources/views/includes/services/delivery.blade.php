@@ -59,19 +59,19 @@
 								<td>0.05</td>
 	<!-- 							<td>0.1</td> -->
 								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
+								<td>2.40</td>
+								<td>2.40</td>
+								<td>2.40</td>
+								<td>2.40</td>
 							</tr>
 							<tr class="grid grid-cols-6 delivery__chapter__table__data-rows">
 								<td>0.5</td>
 	<!-- 							<td>0.1</td> -->
 								<td>3</td>
-								<td>4</td>
-								<td>4</td>
-								<td>4</td>
-								<td>4</td>
+								<td>5.20</td>
+								<td>5.20</td>
+								<td>5.20</td>
+								<td>5.20</td>
 							</tr>
 							<tr class="grid grid-cols-6 delivery__chapter__table__data-rows">
 								<td>1</td>
@@ -86,7 +86,7 @@
 								<td>2</td>
 	<!-- 							<td>0.3</td> -->
 								<td>8.13</td>
-								<td>11.63</td>
+								<td>13.63</td>
 								<td>16.23</td>
 								<td>20.49</td>
 								<td>22.35</td>

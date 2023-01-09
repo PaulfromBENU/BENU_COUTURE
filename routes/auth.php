@@ -18,15 +18,15 @@ Route::get('/inscription', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register-fr');
 
-Route::get('/inscription-de', [RegisteredUserController::class, 'create'])
+Route::get('/registrierung', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register-de');
 
-Route::get('/create-account', [RegisteredUserController::class, 'create'])
+Route::get('/registering', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register-en');
 
-Route::get('/inscription-lu', [RegisteredUserController::class, 'create'])
+Route::get('/registreieren', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register-lu');
 
@@ -46,11 +46,11 @@ Route::get('/connexion', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login-fr');
 
-Route::get('/login-lu', [AuthenticatedSessionController::class, 'create'])
+Route::get('/aloggen', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login-lu');
 
-Route::get('/login-de', [AuthenticatedSessionController::class, 'create'])
+Route::get('/anmeldung', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login-de');
 
@@ -70,11 +70,11 @@ Route::get('/forgotten-password', [PasswordResetLinkController::class, 'create']
                 ->middleware('guest')
                 ->name('password.request-en');
 
-Route::get('/forgot-password-de', [PasswordResetLinkController::class, 'create'])
+Route::get('/passwort-vergessen', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request-de');
 
-Route::get('/forgot-password-lu', [PasswordResetLinkController::class, 'create'])
+Route::get('/passwuert-vergiess', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request-lu');
 
@@ -86,19 +86,19 @@ Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.reset');
 
-Route::get('/reinitialisation-mdp/{token}', [NewPasswordController::class, 'create'])
+Route::get('/reinitialisation-mot-de-passe/{token}', [NewPasswordController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.reset-fr');
 
-Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
+Route::get('/password-restore/{token}', [NewPasswordController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.reset-en');
 
-Route::get('/reset-password-de/{token}', [NewPasswordController::class, 'create'])
+Route::get('/passwort-wiederherstellen/{token}', [NewPasswordController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.reset-de');
 
-Route::get('/reset-password-lu/{token}', [NewPasswordController::class, 'create'])
+Route::get('/passwuert-restaureieren/{token}', [NewPasswordController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.reset-lu');
 
