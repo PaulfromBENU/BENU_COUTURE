@@ -511,7 +511,11 @@
 				@if($vat_high > 0)
 				<div style="position: relative; font-family: 'Barlow Condensed Regular'; height: 32px; width: 60%; margin-left: 40%;">
 					<div style="position: absolute; width: 74%; top: 4px; left: 0%; ">
-						{{ __('pdf.invoice-vat-17-percent') }}
+						@if(Carbon\Carbon::parse($order->transaction_date)->format('Y') == '2022')
+							{{ __('pdf.invoice-vat-17-percent') }}
+						@else
+							VAT {{ $vat_rate_high_adapted }}%
+						@endif
 					</div>
 					<div style="position: absolute; width: 25%; top: 4px; left: 75%;">
 						{{ number_format($vat_high, 2) }}&euro;

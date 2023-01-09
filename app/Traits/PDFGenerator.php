@@ -68,11 +68,12 @@ trait PDFGenerator {
             $countries['France'] = 'France';
             $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
 
+            $vat_rate_high_2022 = $this->vat_rate_high_2022;
             $vat_rate_high = $this->vat_rate_high;
             $vat_rate_medium = $this->vat_rate_medium;
             $vat_rate_low = $this->vat_rate_low;
 
-            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost', 'vat_rate_high', 'vat_rate_medium', 'vat_rate_low'));
+            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost', 'vat_rate_high_2022', 'vat_rate_high', 'vat_rate_medium', 'vat_rate_low'));
 
             return $pdf;
         }
