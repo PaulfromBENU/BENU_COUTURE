@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Response;
 
 use App\Models\Article;
+use App\Models\Color;
 use App\Models\Creation;
 use App\Models\CreationCategory;
 use App\Models\CreationKeyword;
@@ -466,6 +467,18 @@ class GeneralController extends Controller
             // echo "*** Translations importation started ***<br/>";
             // $this->importTranslations();
 
+            // Replace denim by blue in all article colors
+            echo "*** Updating color from denim (5) to blue (3) ***<br/>";
+            $articles_to_be_updated = Article::where('color_id', '5')->get();
+            foreach ($articles_to_be_updated as $article) {
+                $article->color_id = 3;
+                $article->save();
+            }
+
+            Color::where('name', 'denim')->first()->delete();
+
+            echo "<br/>*** All denim colors updated to blue. Denim color deleted.";
+
             // echo "*** Updating packaging for all creations ***<br/>";
             // $this->updatePackagingOnly();
 
@@ -480,18 +493,18 @@ class GeneralController extends Controller
             //     $creation->save();
             // }
 
-            echo "*** VAT updated for adults, from 17% to 16%! :) ***";
+            // echo "*** VAT updated for adults, from 17% to 16%! :) ***";
 
-            // VAT update -> 16% for adults
-            echo "*** Updating VAT to 16% for clothes and accessories ***<br/>";
-            $creations_to_be_updated = Creation::where('tva_value', '17')->get();
+            // // VAT update -> 16% for adults
+            // echo "*** Updating VAT to 16% for clothes and accessories ***<br/>";
+            // $creations_to_be_updated = Creation::where('tva_value', '17')->get();
 
-            foreach ($creations_to_be_updated as $creation) {
-                $creation->tva_value = 16;
-                $creation->save();
-            }
+            // foreach ($creations_to_be_updated as $creation) {
+            //     $creation->tva_value = 16;
+            //     $creation->save();
+            // }
 
-            echo "*** VAT updated from 17% to 16%! :) ***";
+            // echo "*** VAT updated from 17% to 16%! :) ***";
 
             // echo "*** validating existing variations... ***";
             // Article::where('checked', '1')->update(['to_be_validated' => '1']);
