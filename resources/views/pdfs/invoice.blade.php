@@ -264,10 +264,18 @@
 						{{ strtoupper($article->name) }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
-						@if($article->is_extra_accessory == '1')
-						{{ round($article->specific_price / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@if($article->creation->tva_value == 16)
+							@if($article->is_extra_accessory == '1')
+							{{ round($article->specific_price / (1 + $vat_rate_high_adapted/100), 2) }}&euro;
+							@else
+							{{ round($article->creation->price / (1 + $vat_rate_high_adapted/100), 2) }}&euro;
+							@endif
 						@else
-						{{ round($article->creation->price / (1 + $article->creation->tva_value/100), 2) }}&euro;
+							@if($article->is_extra_accessory == '1')
+							{{ round($article->specific_price / (1 + $article->creation->tva_value/100), 2) }}&euro;
+							@else
+							{{ round($article->creation->price / (1 + $article->creation->tva_value/100), 2) }}&euro;
+							@endif
 						@endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
@@ -317,10 +325,18 @@
 						+ {{ __('pdf.invoice-aditionnal-pillow') }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
-						{{ round(10 / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@if($article->creation->tva_value == 16)
+							{{ round(10 / (1 + $vat_rate_high_adapted/100), 2) }}&euro;
+						@else
+							{{ round(10 / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
-						{{ $article->creation->tva_value }}%
+						@if($article->creation->tva_value == 16)
+							{{ $vat_rate_high_adapted }}%
+						@else
+							{{ $article->creation->tva_value }}%
+						@endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 70%;">
 						{{ $article->pivot->articles_number }}
@@ -347,10 +363,18 @@
 						+ {{ __('pdf.invoice-gift-wrap') }}
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 40%;">
-						{{ round(($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@if($article->creation->tva_value == 16)
+							{{ round(($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $vat_rate_high_adapted/100), 2) }}&euro;
+						@else
+							{{ round(($article->pivot->with_wrapping * 5 + $article->pivot->with_card * 3) / (1 + $article->creation->tva_value/100), 2) }}&euro;
+						@endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 55%;">
-						{{ $article->creation->tva_value }}%
+						@if($article->creation->tva_value == 16)
+							{{ $vat_rate_high_adapted }}%
+						@else
+							{{ $article->creation->tva_value }}%
+						@endif
 					</div>
 					<div style="position: absolute; width: 15%; top: 4px; left: 70%;">
 						{{ $article->pivot->articles_number }}
