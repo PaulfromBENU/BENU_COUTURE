@@ -17,6 +17,11 @@ trait PDFGenerator {
 
     use DeliveryCalculator;
 
+    public $vat_rate_high_2022 = 17;
+    public $vat_rate_high = 16;
+    public $vat_rate_medium = 8;
+    public $vat_rate_low = 3;
+
 	public function generateInvoicePdf($order_code)
     {
         if (strlen($order_code) == 6 && Order::where('unique_id', $order_code)->count() > 0) {
@@ -35,7 +40,12 @@ trait PDFGenerator {
                 app()->setLocale(auth()->user()->favorite_language);
             }
 
-            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+            $vat_rate_high_2022 = $this->vat_rate_high_2022;
+            $vat_rate_high = $this->vat_rate_high;
+            $vat_rate_medium = $this->vat_rate_medium;
+            $vat_rate_low = $this->vat_rate_low;
+
+            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost', 'vat_rate_high_2022', 'vat_rate_high', 'vat_rate_medium', 'vat_rate_low'));
 
             if (auth()->check()) {
                 app()->setLocale($current_locale);
@@ -58,7 +68,12 @@ trait PDFGenerator {
             $countries['France'] = 'France';
             $delivery_cost = $this->calculateDeliveryTotalFromCart($order->cart);
 
-            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost'));
+            $vat_rate_high_2022 = $this->vat_rate_high_2022;
+            $vat_rate_high = $this->vat_rate_high;
+            $vat_rate_medium = $this->vat_rate_medium;
+            $vat_rate_low = $this->vat_rate_low;
+
+            $pdf = PDF::loadView('pdfs.invoice', compact('order', 'countries', 'delivery_cost', 'vat_rate_high_2022', 'vat_rate_high', 'vat_rate_medium', 'vat_rate_low'));
 
             return $pdf;
         }

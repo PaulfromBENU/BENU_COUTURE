@@ -17,6 +17,11 @@ class OrdersExport implements FromCollection
 
     protected $year;
 
+    public const VAT_RATE_HIGH_2022 = 17;
+    public const VAT_RATE_HIGH_2023 = 16;
+    public const VAT_RATE_MEDIUM = 8;
+    public const VAT_RATE_LOW = 3;
+
     public function __construct(int $year, int $month)
     {
         $this->year = 2022;
@@ -137,15 +142,27 @@ class OrdersExport implements FromCollection
                         $vat = round(0, 2);
                         $price_w_vat = $price_wo_vat;
                     } else {
-                        $price_wo_vat = round($article->pivot->value + 5 * 1 / (1 + 17 / 100), 2);
-                        $vat_rate = "17% on voucher fabrication only";
-                        $vat = round(5 * (1 - 1 / (1 + 17 / 100)), 2);
+                        if(Carbon::parse($order->transaction_date)->format('Y') == '2022') {
+                            $price_wo_vat = round($article->pivot->value + 5 * 1 / (1 + self::VAT_RATE_HIGH_2022 / 100), 2);
+                            $vat_rate = self::VAT_RATE_HIGH_2022."% on voucher fabrication only";
+                            $vat = round(5 * (1 - 1 / (1 + self::VAT_RATE_HIGH_2022 / 100)), 2);
+                        } else {
+                            $price_wo_vat = round($article->pivot->value + 5 * 1 / (1 + self::VAT_RATE_HIGH_2023 / 100), 2);
+                            $vat_rate = self::VAT_RATE_HIGH_2023."% on voucher fabrication only";
+                            $vat = round(5 * (1 - 1 / (1 + self::VAT_RATE_HIGH_2023 / 100)), 2);
+                        }
                         $price_w_vat = round($article->pivot->value + 5, 2);
                     }
                 } else {
-                    $price_wo_vat = round($article->creation->price / (1 + $article->creation->tva_value / 100), 2);
-                    $vat_rate = $article->creation->tva_value.'%';
-                    $vat = round($article->creation->price * (1 - 1 / (1 + $article->creation->tva_value / 100)), 2);
+                    if($article->creation->tva_value == 16 && Carbon::parse($order->transaction_date)->format('Y') == '2022') {
+                        $price_wo_vat = round($article->creation->price / (1 + self::VAT_RATE_HIGH_2022 / 100), 2);
+                        $vat_rate = self::VAT_RATE_HIGH_2022.'%';
+                        $vat = round($article->creation->price * (1 - 1 / (1 + self::VAT_RATE_HIGH_2022 / 100)), 2);
+                    } else {
+                        $price_wo_vat = round($article->creation->price / (1 + $article->creation->tva_value / 100), 2);
+                        $vat_rate = $article->creation->tva_value.'%';
+                        $vat = round($article->creation->price * (1 - 1 / (1 + $article->creation->tva_value / 100)), 2);
+                    }
                     $price_w_vat = round($article->creation->price, 2);
                 }
 
