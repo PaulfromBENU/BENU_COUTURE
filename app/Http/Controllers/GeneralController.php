@@ -463,8 +463,8 @@ class GeneralController extends Controller
             // $this->createArticlesFromPictures();
             // $this->updateArticlesFromLouAndSophie();
 
-            echo "*** Translations importation started ***<br/>";
-            $this->importTranslations();
+            // echo "*** Translations importation started ***<br/>";
+            // $this->importTranslations();
 
             // echo "*** Updating packaging for all creations ***<br/>";
             // $this->updatePackagingOnly();
@@ -480,7 +480,18 @@ class GeneralController extends Controller
             //     $creation->save();
             // }
 
-            // echo "*** VAT updated for kids! :) ***";
+            echo "*** VAT updated for adults, from 17% to 16%! :) ***";
+
+            // VAT update -> 16% for adults
+            echo "*** Updating VAT to 16% for clothes and accessories ***<br/>";
+            $creations_to_be_updated = Creation::where('tva_value', '17')->get();
+
+            foreach ($creations_to_be_updated as $creation) {
+                $creation->tva_value = 16;
+                $creation->save();
+            }
+
+            echo "*** VAT updated from 17% to 16%! :) ***";
 
             // echo "*** validating existing variations... ***";
             // Article::where('checked', '1')->update(['to_be_validated' => '1']);
