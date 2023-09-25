@@ -89,7 +89,7 @@
 		</div>
 	</div>
 
-	<div class="participate-give__collect-box">
+	<div class="participate-give__collect-box" style="visibility: hidden;  display: none;">
 		<h3>
 			Jean-Marie Kieffer
 		</h3>
